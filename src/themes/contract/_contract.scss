@@ -111,7 +111,7 @@ $semantic-colors: (
 @use "../../props/colors" as colors;
 @use "../../components/components";
 
-@for $i from 1 through 10 {
+@for $i from 0 through 10 {
     .container-color-#{$i} {
         background-color: var(--#{prefixes.$palette-color-prefix}#{$i});
         color: var(--#{prefixes.$palette-accent-prefix}#{$i});

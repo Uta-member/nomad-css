@@ -1,6 +1,4 @@
 :root {
-  --neutral-h: 220;
-  --neutral-s: 5%;
   --neutral-accent-threshold: 50%;
   --neutral-0: hsl(var(--neutral-h), var(--neutral-s), 97%);
   --neutral-1: hsl(var(--neutral-h), var(--neutral-s), 93%);

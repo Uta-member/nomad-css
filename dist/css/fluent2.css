@@ -1,6 +1,4 @@
 :root {
-  --neutral-h: 220;
-  --neutral-s: 5%;
   --neutral-accent-threshold: 50%;
   --neutral-0: hsl(var(--neutral-h), var(--neutral-s), 97%);
   --neutral-1: hsl(var(--neutral-h), var(--neutral-s), 93%);
@@ -2122,6 +2120,11 @@
 
 .rounded-end-0 {
   border-radius: 0 inherit inherit 0;
+}
+
+.container-color-0 {
+  background-color: var(--palette-color-0);
+  color: var(--palette-accent-0);
 }
 
 .container-color-1 {

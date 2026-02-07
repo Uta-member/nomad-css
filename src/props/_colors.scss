@@ -150,7 +150,7 @@ $palette-lightness-list: (
 
 
 // ============================================
-// Nuetral Palette Definitions
+// Neutral Palette Definitions
 // ============================================
 $neutral-hue: 220 !default;
 $neutral-saturation: 5% !default;
@@ -161,8 +161,6 @@ $neutral-levels: $semantic-levels !default;
 // Neutral Palette Generation
 // ============================================
 :root {
-  --#{$neutral-hue-var}: #{$neutral-hue};
-  --#{$neutral-saturation-var}: #{$neutral-saturation};
   --#{$neutral-accent-threshold-var}: #{$neutral-threshold};
 
   @each $index, $lightness in $palette-lightness-list {
