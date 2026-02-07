@@ -29,7 +29,7 @@ $semantic-prefix: "" !default;
 // Semantic Level CSS Variable Prefix
 $semantic-level-prefix: #{$prefix}semantic-level- !default;
 
-// Palette Level Variable Names (クラス内で使用)
+// Palette Level Variable Names
 $palette-lighter: #{$palette-prefix}lighter !default;
 $palette-light: #{$palette-prefix}light !default;
 $palette-default: #{$palette-prefix}default !default;
@@ -45,7 +45,6 @@ $palette-darker-accent: #{$palette-prefix}darker-accent !default;
 
 // ============================================
 // Neutral Palette Definitions
-// クラスに依存しないニュートラルカラー
 // ============================================
 $neutral-prefix: #{$prefix}neutral- !default;
 $neutral-hue-var: #{$neutral-prefix}h !default;

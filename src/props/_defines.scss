@@ -1,9 +1,14 @@
+// ============================================
+// Color Definitions
+// ============================================
 @use "prefixes" as *;
 
+// Hue Definitions
 $hues: (
     // "hues name": (h: hue value, threshold: accent threshold)
 ) !default;
 
+// Semantic Color Definitions
 $semantic-colors: (
     /* "semantic name": (
     h: hue variable, 
@@ -23,14 +28,11 @@ $palette-accent-light: 97% !default;
 $palette-accent-dark: 10% !default;
 $palette-accent-threshold: 50% !default;
 
-// ============================================
-// Semantic Level Definitions
-// セマンティックカラーの5段階レベル → パレット番号のマッピング
-// ============================================
+// Default Levels for Semantic Colors
 $semantic-levels: (
   "lighter": 2,
   "light": 3,
   "default": 5,
   "dark": 7,
   "darker": 9
-) !default;
+);
