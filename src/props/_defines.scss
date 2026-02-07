@@ -17,7 +17,16 @@ $palette-hue-prefix: #{$palette-prefix}h !default;
 $palette-saturation-prefix: #{$palette-prefix}s !default;
 $palette-gray-saturation-prefix: #{$palette-prefix}gs !default;
 $palette-lightness-prefix: #{$palette-prefix}l- !default;
-$palette-accent-lightness-prefix: #{$palette-prefix}al- !default;
+
+// Accent Color Settings
+$palette-accent-light: 97% !default;
+$palette-accent-dark: 10% !default;
+$palette-accent-threshold: 50% !default;
+
+// Accent CSS Variable Prefixes
+$palette-accent-light-var: #{$palette-prefix}accent-light !default;
+$palette-accent-dark-var: #{$palette-prefix}accent-dark !default;
+$palette-accent-threshold-var: #{$palette-prefix}accent-threshold !default;
 
 // Semantic Prefix
 $semantic-prefix: "" !default;

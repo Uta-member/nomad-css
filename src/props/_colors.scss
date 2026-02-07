@@ -20,30 +20,14 @@ $palette-lightness-list: (
   10: 10%
 ) !default;
 
-// アクセント色の明度リスト
-// 明るい背景(0-4)には暗いアクセント、暗い背景(5-10)には明るいアクセント
-$palette-accent-lightness-list: (
-  0: 10%,
-  1: 10%,
-  2: 10%,
-  3: 10%,
-  4: 10%,
-  5: 97%,
-  6: 97%,
-  7: 97%,
-  8: 97%,
-  9: 97%,
-  10: 97%
-) !default;
+
 
 // パレットカラーを生成するmixin（内部用）
-@mixin _generate-palette-colors() {
+// $threshold: アクセントカラー切り替えの閾値
+@mixin _generate-palette-colors($threshold: $palette-accent-threshold) {
   // 明度CSS変数を定義（ランタイムで上書き可能）
   @each $index, $lightness in $palette-lightness-list {
     --#{$palette-lightness-prefix}#{$index}: #{$lightness};
-  }
-  @each $index, $lightness in $palette-accent-lightness-list {
-    --#{$palette-accent-lightness-prefix}#{$index}: #{$lightness};
   }
 
   // カラーパレット（明度CSS変数を参照）
@@ -54,35 +38,58 @@ $palette-accent-lightness-list: (
   @each $index, $lightness in $palette-lightness-list {
     --#{$palette-gray-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-lightness-prefix}#{$index}));
   }
-  // アクセントカラー（同じ色相の低彩度）
-  @each $index, $lightness in $palette-accent-lightness-list {
-    --#{$palette-accent-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-accent-lightness-prefix}#{$index}));
+  // アクセントカラー - 閾値に基づいて明るい/暗いを選択
+  @each $index, $lightness in $palette-lightness-list {
+    @if $lightness > $threshold {
+      // 明るい背景 → 暗いアクセント
+      --#{$palette-accent-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-accent-dark-var}));
+    } @else {
+      // 暗い背景 → 明るいアクセント
+      --#{$palette-accent-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-accent-light-var}));
+    }
   }
 }
 
 // ============================================
 // HUE生成mixin
-// $hues: ("red": 25, "blue": 240, ...)
+// $hues: ("red": 0, ...) または ("red": (h: 0, threshold: 60%), ...)
 // ============================================
-@mixin generate-hues($hues) {
+@mixin generate-hues($hues, $accent-light: $palette-accent-light, $accent-dark: $palette-accent-dark, $default-threshold: $palette-accent-threshold) {
   :root {
+    // HUE CSS変数
     @each $name, $value in $hues {
-      --#{$prefix}hue-#{$name}: #{$value};
+      @if type-of($value) == "map" {
+        --#{$prefix}hue-#{$name}: #{map-get($value, h)};
+      } @else {
+        --#{$prefix}hue-#{$name}: #{$value};
+      }
     }
+    // アクセント明度CSS変数（ランタイムで上書き可能）
+    --#{$palette-accent-light-var}: #{$accent-light};
+    --#{$palette-accent-dark-var}: #{$accent-dark};
+    --#{$palette-accent-threshold-var}: #{$default-threshold};
   }
 }
 
 // HUEクラスを生成するmixin
-// $hues: ("red": 25, "blue": 240, ...)
+// $hues: ("red": 0, ...) または ("red": (h: 0, threshold: 60%), ...)
 // $saturation: 彩度（デフォルト100%）
 // $gray-saturation: グレー用彩度（デフォルト5%）
-@mixin generate-hue-classes($hues, $saturation: 100%, $gray-saturation: 5%) {
+// $default-threshold: 閾値未指定の色に使用するデフォルト閾値
+@mixin generate-hue-classes($hues, $saturation: 100%, $gray-saturation: 5%, $default-threshold: $palette-accent-threshold) {
   @each $name, $value in $hues {
+    // 閾値を取得（マップなら個別閾値、なければデフォルト）
+    $threshold: $default-threshold;
+    @if type-of($value) == "map" and map-has-key($value, threshold) {
+      $threshold: map-get($value, threshold);
+    }
+
     .#{$prefix}#{$name} {
       --#{$palette-hue-prefix}: var(--#{$prefix}hue-#{$name});
       --#{$palette-saturation-prefix}: #{$saturation};
       --#{$palette-gray-saturation-prefix}: #{$gray-saturation};
-      @include _generate-palette-colors();
+      --#{$palette-accent-threshold-var}: #{$threshold};
+      @include _generate-palette-colors($threshold);
     }
   }
 }
@@ -90,8 +97,9 @@ $palette-accent-lightness-list: (
 // ============================================
 // セマンティックカラー生成mixin
 // $colors: ("primary": (h: var(--hue-blue), s: 100%), ...)
+// threshold キーを追加すると色ごとに閾値を変更可能
 // ============================================
-@mixin generate-semantic-colors($colors, $gray-saturation: 5%) {
+@mixin generate-semantic-colors($colors, $gray-saturation: 5%, $default-threshold: $palette-accent-threshold) {
   // 各セマンティックカラーのCSS変数を定義（ランタイムで変更可能）
   :root {
     @each $name, $values in $colors {
@@ -102,11 +110,18 @@ $palette-accent-lightness-list: (
 
   // クラスを適用すると、パレットの色相・彩度が切り替わり、色が再計算される
   @each $name, $values in $colors {
+    // 閾値を取得（マップにthresholdがあれば使用、なければデフォルト）
+    $threshold: $default-threshold;
+    @if map-has-key($values, threshold) {
+      $threshold: map-get($values, threshold);
+    }
+
     .#{$semantic-prefix}#{$name} {
       --#{$palette-hue-prefix}: var(--#{$semantic-prefix}#{$name}-h);
       --#{$palette-saturation-prefix}: var(--#{$semantic-prefix}#{$name}-s);
       --#{$palette-gray-saturation-prefix}: #{$gray-saturation};
-      @include _generate-palette-colors();
+      --#{$palette-accent-threshold-var}: #{$threshold};
+      @include _generate-palette-colors($threshold);
     }
   }
 }

@@ -5,33 +5,35 @@
 // ============================================
 // HUE定義
 // HSL色相環に基づく標準値
+// threshold: アクセントカラー切り替え閾値（省略時はデフォルト50%）
 // ============================================
 $hues: (
-  "red": 0,
-  "orange": 30,
-  "yellow": 50,
-  "lime": 90,
-  "green": 120,
-  "teal": 170,
-  "cyan": 190,
-  "blue": 220,
-  "indigo": 240,
-  "violet": 270,
-  "purple": 290,
-  "pink": 330
+  "red": (h: 0, threshold: 50%),
+  "orange": (h: 30, threshold: 40%),
+  "yellow": (h: 50, threshold: 30%),
+  "lime": (h: 90, threshold: 30%),
+  "green": (h: 125, threshold: 30%),
+  "teal": (h: 170, threshold: 40%),
+  "cyan": (h: 190, threshold: 40%),
+  "blue": (h: 220, threshold: 50%),
+  "indigo": (h: 240, threshold: 70%),
+  "violet": (h: 270, threshold: 70%),
+  "purple": (h: 290, threshold: 50%),
+  "pink": (h: 330, threshold: 55%)
 );
 
 // ============================================
 // セマンティックカラー定義
+// threshold: アクセントカラー切り替え閾値（省略時はデフォルト）
 // ============================================
 $semantic-colors: (
-  "primary": (h: var(--#{defs.$prefix}hue-blue), s: 80%),
-  "secondary": (h: var(--#{defs.$prefix}hue-pink), s: 80%),
-  "tertiary": (h: var(--#{defs.$prefix}hue-teal), s: 60%),
-  "success": (h: var(--#{defs.$prefix}hue-green), s: 60%),
-  "warning": (h: var(--#{defs.$prefix}hue-yellow), s: 80%),
-  "danger": (h: var(--#{defs.$prefix}hue-red), s: 80%),
-  "info": (h: var(--#{defs.$prefix}hue-cyan), s: 80%)
+  "primary": (h: var(--#{defs.$prefix}hue-blue), s: 80%, threshold: 50%),
+  "secondary": (h: var(--#{defs.$prefix}hue-pink), s: 80%, threshold: 55%),
+  "tertiary": (h: var(--#{defs.$prefix}hue-teal), s: 60%, threshold: 40%),
+  "success": (h: var(--#{defs.$prefix}hue-green), s: 60%, threshold: 40%),
+  "warning": (h: var(--#{defs.$prefix}hue-yellow), s: 80%, threshold: 40%),
+  "danger": (h: var(--#{defs.$prefix}hue-red), s: 80%, threshold: 50%),
+  "info": (h: var(--#{defs.$prefix}hue-cyan), s: 80%, threshold: 40%)
 );
 
 // ============================================
