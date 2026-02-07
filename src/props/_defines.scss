@@ -1,0 +1,20 @@
+// ============================================
+// Prefix Definitions
+// ============================================
+
+// Root Prefix
+$prefix: "" !default;
+
+// Font Prefix
+$font-prefix: #{$prefix}font- !default;
+
+// Palette Prefix
+$palette-prefix: #{$prefix}palette- !default;
+$palette-color-prefix: #{$prefix}palette-color- !default;
+$palette-gray-prefix: #{$prefix}palette-gray- !default;
+$palette-hue-prefix: #{$palette-prefix}h !default;
+$palette-saturation-prefix: #{$palette-prefix}s !default;
+$palette-gray-saturation-prefix: #{$palette-prefix}gs !default;
+
+// Semantic Prefix
+$semantic-prefix: "" !default;

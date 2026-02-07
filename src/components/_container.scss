@@ -1,0 +1,7 @@
+@use "../props/defines" as *;
+
+@for $i from 1 through 10 {
+    .container-color-#{$i} {
+        background-color: var(--#{$palette-color-prefix}#{$i});
+    }
+}

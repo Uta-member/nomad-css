@@ -1,0 +1,6 @@
+@use "../contract/_contract.scss";
+
+:root[data-theme="material3"] {
+    --primary-h: var(--hue-blue);
+    --primary-s: 70%;
+}

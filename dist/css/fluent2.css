@@ -1,0 +1,660 @@
+:root {
+  --font-weight-1: 100;
+  --font-weight-2: 200;
+  --font-weight-3: 300;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-6: 600;
+  --font-weight-7: 700;
+  --font-weight-8: 800;
+  --font-weight-9: 900;
+}
+
+:root {
+  --font-line-height-0: 1.1;
+  --font-line-height-1: 1.25;
+  --font-line-height-2: 1.375;
+  --font-line-height-3: 1.5;
+  --font-line-height-4: 1.75;
+  --font-line-height-5: 2;
+}
+
+:root {
+  --font-letter-spacing-0: -0.05em;
+  --font-letter-spacing-1: -0.025em;
+  --font-letter-spacing-2: 0.05em;
+  --font-letter-spacing-3: 0.075em;
+  --font-letter-spacing-4: 0.15em;
+  --font-letter-spacing-5: 0.5em;
+  --font-letter-spacing-6: 0.75em;
+  --font-letter-spacing-7: 1em;
+}
+
+:root {
+  --font-size-0: 0.75rem;
+  --font-size-1: 1rem;
+  --font-size-2: 1.1rem;
+  --font-size-3: 1.25rem;
+  --font-size-4: 1.5rem;
+  --font-size-5: 2rem;
+  --font-size-6: 2.5rem;
+  --font-size-7: 3rem;
+  --font-size-8: 3.5rem;
+}
+
+.button {
+  background-color: var(--palette-color-5);
+}
+
+.container-color-1 {
+  background-color: var(--palette-color-1);
+}
+
+.container-color-2 {
+  background-color: var(--palette-color-2);
+}
+
+.container-color-3 {
+  background-color: var(--palette-color-3);
+}
+
+.container-color-4 {
+  background-color: var(--palette-color-4);
+}
+
+.container-color-5 {
+  background-color: var(--palette-color-5);
+}
+
+.container-color-6 {
+  background-color: var(--palette-color-6);
+}
+
+.container-color-7 {
+  background-color: var(--palette-color-7);
+}
+
+.container-color-8 {
+  background-color: var(--palette-color-8);
+}
+
+.container-color-9 {
+  background-color: var(--palette-color-9);
+}
+
+.container-color-10 {
+  background-color: var(--palette-color-10);
+}
+
+:root {
+  --hue-red: 0;
+  --hue-orange: 30;
+  --hue-yellow: 50;
+  --hue-lime: 90;
+  --hue-green: 120;
+  --hue-teal: 170;
+  --hue-cyan: 190;
+  --hue-blue: 220;
+  --hue-indigo: 240;
+  --hue-violet: 270;
+  --hue-purple: 290;
+  --hue-pink: 330;
+}
+
+.red {
+  --palette-h: var(--hue-red);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.orange {
+  --palette-h: var(--hue-orange);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.yellow {
+  --palette-h: var(--hue-yellow);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.lime {
+  --palette-h: var(--hue-lime);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.green {
+  --palette-h: var(--hue-green);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.teal {
+  --palette-h: var(--hue-teal);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.cyan {
+  --palette-h: var(--hue-cyan);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.blue {
+  --palette-h: var(--hue-blue);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.indigo {
+  --palette-h: var(--hue-indigo);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.violet {
+  --palette-h: var(--hue-violet);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.purple {
+  --palette-h: var(--hue-purple);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.pink {
+  --palette-h: var(--hue-pink);
+  --palette-s: 100%;
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+:root {
+  --primary-h: var(--hue-blue);
+  --primary-s: 80%;
+  --secondary-h: var(--hue-pink);
+  --secondary-s: 80%;
+  --tertiary-h: var(--hue-teal);
+  --tertiary-s: 60%;
+  --success-h: var(--hue-green);
+  --success-s: 60%;
+  --warning-h: var(--hue-yellow);
+  --warning-s: 80%;
+  --danger-h: var(--hue-red);
+  --danger-s: 80%;
+  --info-h: var(--hue-cyan);
+  --info-s: 80%;
+}
+
+.primary {
+  --palette-h: var(--primary-h);
+  --palette-s: var(--primary-s);
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.secondary {
+  --palette-h: var(--secondary-h);
+  --palette-s: var(--secondary-s);
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.tertiary {
+  --palette-h: var(--tertiary-h);
+  --palette-s: var(--tertiary-s);
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.success {
+  --palette-h: var(--success-h);
+  --palette-s: var(--success-s);
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.warning {
+  --palette-h: var(--warning-h);
+  --palette-s: var(--warning-s);
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.danger {
+  --palette-h: var(--danger-h);
+  --palette-s: var(--danger-s);
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+.info {
+  --palette-h: var(--info-h);
+  --palette-s: var(--info-s);
+  --palette-gs: 5%;
+  --palette-color-0: hsl(var(--palette-h), var(--palette-s), 97%);
+  --palette-color-1: hsl(var(--palette-h), var(--palette-s), 93%);
+  --palette-color-2: hsl(var(--palette-h), var(--palette-s), 85%);
+  --palette-color-3: hsl(var(--palette-h), var(--palette-s), 75%);
+  --palette-color-4: hsl(var(--palette-h), var(--palette-s), 65%);
+  --palette-color-5: hsl(var(--palette-h), var(--palette-s), 50%);
+  --palette-color-6: hsl(var(--palette-h), var(--palette-s), 42%);
+  --palette-color-7: hsl(var(--palette-h), var(--palette-s), 34%);
+  --palette-color-8: hsl(var(--palette-h), var(--palette-s), 26%);
+  --palette-color-9: hsl(var(--palette-h), var(--palette-s), 18%);
+  --palette-color-10: hsl(var(--palette-h), var(--palette-s), 10%);
+  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), 97%);
+  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), 93%);
+  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), 85%);
+  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), 75%);
+  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), 65%);
+  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), 50%);
+  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), 42%);
+  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), 34%);
+  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), 26%);
+  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), 18%);
+  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), 10%);
+}
+
+:root[data-theme=fluent2] {
+  --primary-h: var(--hue-blue);
+  --primary-s: 70%;
+  --secondary-h: var(--hue-blue);
+  --secondary-s: 0%;
+  --tertiary-h: var(--hue-cyan);
+  --tertiary-s: 60%;
+}/*# sourceMappingURL=fluent2.css.map */

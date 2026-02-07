@@ -1,0 +1,82 @@
+@use "defines" as *;
+
+// ============================================
+// Color Mixins
+// mixinのみ定義。実際の値はthemes側で設定する
+// ============================================
+
+// パレットの明度リスト
+$palette-lightness-list: (
+  0: 97%,
+  1: 93%,
+  2: 85%,
+  3: 75%,
+  4: 65%,
+  5: 50%,
+  6: 42%,
+  7: 34%,
+  8: 26%,
+  9: 18%,
+  10: 10%
+) !default;
+
+// パレットカラーを生成するmixin（内部用）
+@mixin _generate-palette-colors() {
+  @each $index, $lightness in $palette-lightness-list {
+    --#{$palette-color-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-saturation-prefix}), #{$lightness});
+  }
+  @each $index, $lightness in $palette-lightness-list {
+    --#{$palette-gray-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), #{$lightness});
+  }
+}
+
+// ============================================
+// HUE生成mixin
+// $hues: ("red": 25, "blue": 240, ...)
+// ============================================
+@mixin generate-hues($hues) {
+  :root {
+    @each $name, $value in $hues {
+      --#{$prefix}hue-#{$name}: #{$value};
+    }
+  }
+}
+
+// HUEクラスを生成するmixin
+// $hues: ("red": 25, "blue": 240, ...)
+// $saturation: 彩度（デフォルト100%）
+// $gray-saturation: グレー用彩度（デフォルト5%）
+@mixin generate-hue-classes($hues, $saturation: 100%, $gray-saturation: 5%) {
+  @each $name, $value in $hues {
+    .#{$prefix}#{$name} {
+      --#{$palette-hue-prefix}: var(--#{$prefix}hue-#{$name});
+      --#{$palette-saturation-prefix}: #{$saturation};
+      --#{$palette-gray-saturation-prefix}: #{$gray-saturation};
+      @include _generate-palette-colors();
+    }
+  }
+}
+
+// ============================================
+// セマンティックカラー生成mixin
+// $colors: ("primary": (h: var(--hue-blue), s: 100%), ...)
+// ============================================
+@mixin generate-semantic-colors($colors, $gray-saturation: 5%) {
+  // 各セマンティックカラーのCSS変数を定義（ランタイムで変更可能）
+  :root {
+    @each $name, $values in $colors {
+      --#{$semantic-prefix}#{$name}-h: #{map-get($values, h)};
+      --#{$semantic-prefix}#{$name}-s: #{map-get($values, s)};
+    }
+  }
+
+  // クラスを適用すると、パレットの色相・彩度が切り替わり、色が再計算される
+  @each $name, $values in $colors {
+    .#{$semantic-prefix}#{$name} {
+      --#{$palette-hue-prefix}: var(--#{$semantic-prefix}#{$name}-h);
+      --#{$palette-saturation-prefix}: var(--#{$semantic-prefix}#{$name}-s);
+      --#{$palette-gray-saturation-prefix}: #{$gray-saturation};
+      @include _generate-palette-colors();
+    }
+  }
+}

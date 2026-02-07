@@ -1,0 +1,315 @@
+:root {
+  --primary-h: var(--contract-hue-blue);
+  --primary-s: 0.6;
+  --secondary-h: var(--contract-hue-pink);
+  --secondary-s: 0.6;
+  --tertiary-h: var(--contract-hue-teal);
+  --tertiary-s: 0.6;
+  --success-h: var(--contract-hue-green);
+  --success-s: 0.6;
+  --warning-h: var(--contract-hue-yellow);
+  --warning-s: 0.6;
+  --danger-h: var(--contract-hue-red);
+  --danger-s: 0.6;
+  --info-h: var(--contract-hue-cyan);
+  --info-s: 0.6;
+}
+
+.primary {
+  --contract-palette-h: var(--primary-h);
+  --contract-palette-s: var(--primary-s);
+  --contract-palette-gs: 5%;
+  --contract-palette-color-0: hsl(var(--contract-palette-h), var(--contract-palette-s), 97%);
+  --contract-palette-color-1: hsl(var(--contract-palette-h), var(--contract-palette-s), 93%);
+  --contract-palette-color-2: hsl(var(--contract-palette-h), var(--contract-palette-s), 85%);
+  --contract-palette-color-3: hsl(var(--contract-palette-h), var(--contract-palette-s), 75%);
+  --contract-palette-color-4: hsl(var(--contract-palette-h), var(--contract-palette-s), 65%);
+  --contract-palette-color-5: hsl(var(--contract-palette-h), var(--contract-palette-s), 50%);
+  --contract-palette-color-6: hsl(var(--contract-palette-h), var(--contract-palette-s), 42%);
+  --contract-palette-color-7: hsl(var(--contract-palette-h), var(--contract-palette-s), 34%);
+  --contract-palette-color-8: hsl(var(--contract-palette-h), var(--contract-palette-s), 26%);
+  --contract-palette-color-9: hsl(var(--contract-palette-h), var(--contract-palette-s), 18%);
+  --contract-palette-color-10: hsl(var(--contract-palette-h), var(--contract-palette-s), 10%);
+  --contract-palette-gray-0: hsl(var(--contract-palette-h), var(--contract-palette-gs), 97%);
+  --contract-palette-gray-1: hsl(var(--contract-palette-h), var(--contract-palette-gs), 93%);
+  --contract-palette-gray-2: hsl(var(--contract-palette-h), var(--contract-palette-gs), 85%);
+  --contract-palette-gray-3: hsl(var(--contract-palette-h), var(--contract-palette-gs), 75%);
+  --contract-palette-gray-4: hsl(var(--contract-palette-h), var(--contract-palette-gs), 65%);
+  --contract-palette-gray-5: hsl(var(--contract-palette-h), var(--contract-palette-gs), 50%);
+  --contract-palette-gray-6: hsl(var(--contract-palette-h), var(--contract-palette-gs), 42%);
+  --contract-palette-gray-7: hsl(var(--contract-palette-h), var(--contract-palette-gs), 34%);
+  --contract-palette-gray-8: hsl(var(--contract-palette-h), var(--contract-palette-gs), 26%);
+  --contract-palette-gray-9: hsl(var(--contract-palette-h), var(--contract-palette-gs), 18%);
+  --contract-palette-gray-10: hsl(var(--contract-palette-h), var(--contract-palette-gs), 10%);
+}
+
+.secondary {
+  --contract-palette-h: var(--secondary-h);
+  --contract-palette-s: var(--secondary-s);
+  --contract-palette-gs: 5%;
+  --contract-palette-color-0: hsl(var(--contract-palette-h), var(--contract-palette-s), 97%);
+  --contract-palette-color-1: hsl(var(--contract-palette-h), var(--contract-palette-s), 93%);
+  --contract-palette-color-2: hsl(var(--contract-palette-h), var(--contract-palette-s), 85%);
+  --contract-palette-color-3: hsl(var(--contract-palette-h), var(--contract-palette-s), 75%);
+  --contract-palette-color-4: hsl(var(--contract-palette-h), var(--contract-palette-s), 65%);
+  --contract-palette-color-5: hsl(var(--contract-palette-h), var(--contract-palette-s), 50%);
+  --contract-palette-color-6: hsl(var(--contract-palette-h), var(--contract-palette-s), 42%);
+  --contract-palette-color-7: hsl(var(--contract-palette-h), var(--contract-palette-s), 34%);
+  --contract-palette-color-8: hsl(var(--contract-palette-h), var(--contract-palette-s), 26%);
+  --contract-palette-color-9: hsl(var(--contract-palette-h), var(--contract-palette-s), 18%);
+  --contract-palette-color-10: hsl(var(--contract-palette-h), var(--contract-palette-s), 10%);
+  --contract-palette-gray-0: hsl(var(--contract-palette-h), var(--contract-palette-gs), 97%);
+  --contract-palette-gray-1: hsl(var(--contract-palette-h), var(--contract-palette-gs), 93%);
+  --contract-palette-gray-2: hsl(var(--contract-palette-h), var(--contract-palette-gs), 85%);
+  --contract-palette-gray-3: hsl(var(--contract-palette-h), var(--contract-palette-gs), 75%);
+  --contract-palette-gray-4: hsl(var(--contract-palette-h), var(--contract-palette-gs), 65%);
+  --contract-palette-gray-5: hsl(var(--contract-palette-h), var(--contract-palette-gs), 50%);
+  --contract-palette-gray-6: hsl(var(--contract-palette-h), var(--contract-palette-gs), 42%);
+  --contract-palette-gray-7: hsl(var(--contract-palette-h), var(--contract-palette-gs), 34%);
+  --contract-palette-gray-8: hsl(var(--contract-palette-h), var(--contract-palette-gs), 26%);
+  --contract-palette-gray-9: hsl(var(--contract-palette-h), var(--contract-palette-gs), 18%);
+  --contract-palette-gray-10: hsl(var(--contract-palette-h), var(--contract-palette-gs), 10%);
+}
+
+.tertiary {
+  --contract-palette-h: var(--tertiary-h);
+  --contract-palette-s: var(--tertiary-s);
+  --contract-palette-gs: 5%;
+  --contract-palette-color-0: hsl(var(--contract-palette-h), var(--contract-palette-s), 97%);
+  --contract-palette-color-1: hsl(var(--contract-palette-h), var(--contract-palette-s), 93%);
+  --contract-palette-color-2: hsl(var(--contract-palette-h), var(--contract-palette-s), 85%);
+  --contract-palette-color-3: hsl(var(--contract-palette-h), var(--contract-palette-s), 75%);
+  --contract-palette-color-4: hsl(var(--contract-palette-h), var(--contract-palette-s), 65%);
+  --contract-palette-color-5: hsl(var(--contract-palette-h), var(--contract-palette-s), 50%);
+  --contract-palette-color-6: hsl(var(--contract-palette-h), var(--contract-palette-s), 42%);
+  --contract-palette-color-7: hsl(var(--contract-palette-h), var(--contract-palette-s), 34%);
+  --contract-palette-color-8: hsl(var(--contract-palette-h), var(--contract-palette-s), 26%);
+  --contract-palette-color-9: hsl(var(--contract-palette-h), var(--contract-palette-s), 18%);
+  --contract-palette-color-10: hsl(var(--contract-palette-h), var(--contract-palette-s), 10%);
+  --contract-palette-gray-0: hsl(var(--contract-palette-h), var(--contract-palette-gs), 97%);
+  --contract-palette-gray-1: hsl(var(--contract-palette-h), var(--contract-palette-gs), 93%);
+  --contract-palette-gray-2: hsl(var(--contract-palette-h), var(--contract-palette-gs), 85%);
+  --contract-palette-gray-3: hsl(var(--contract-palette-h), var(--contract-palette-gs), 75%);
+  --contract-palette-gray-4: hsl(var(--contract-palette-h), var(--contract-palette-gs), 65%);
+  --contract-palette-gray-5: hsl(var(--contract-palette-h), var(--contract-palette-gs), 50%);
+  --contract-palette-gray-6: hsl(var(--contract-palette-h), var(--contract-palette-gs), 42%);
+  --contract-palette-gray-7: hsl(var(--contract-palette-h), var(--contract-palette-gs), 34%);
+  --contract-palette-gray-8: hsl(var(--contract-palette-h), var(--contract-palette-gs), 26%);
+  --contract-palette-gray-9: hsl(var(--contract-palette-h), var(--contract-palette-gs), 18%);
+  --contract-palette-gray-10: hsl(var(--contract-palette-h), var(--contract-palette-gs), 10%);
+}
+
+.success {
+  --contract-palette-h: var(--success-h);
+  --contract-palette-s: var(--success-s);
+  --contract-palette-gs: 5%;
+  --contract-palette-color-0: hsl(var(--contract-palette-h), var(--contract-palette-s), 97%);
+  --contract-palette-color-1: hsl(var(--contract-palette-h), var(--contract-palette-s), 93%);
+  --contract-palette-color-2: hsl(var(--contract-palette-h), var(--contract-palette-s), 85%);
+  --contract-palette-color-3: hsl(var(--contract-palette-h), var(--contract-palette-s), 75%);
+  --contract-palette-color-4: hsl(var(--contract-palette-h), var(--contract-palette-s), 65%);
+  --contract-palette-color-5: hsl(var(--contract-palette-h), var(--contract-palette-s), 50%);
+  --contract-palette-color-6: hsl(var(--contract-palette-h), var(--contract-palette-s), 42%);
+  --contract-palette-color-7: hsl(var(--contract-palette-h), var(--contract-palette-s), 34%);
+  --contract-palette-color-8: hsl(var(--contract-palette-h), var(--contract-palette-s), 26%);
+  --contract-palette-color-9: hsl(var(--contract-palette-h), var(--contract-palette-s), 18%);
+  --contract-palette-color-10: hsl(var(--contract-palette-h), var(--contract-palette-s), 10%);
+  --contract-palette-gray-0: hsl(var(--contract-palette-h), var(--contract-palette-gs), 97%);
+  --contract-palette-gray-1: hsl(var(--contract-palette-h), var(--contract-palette-gs), 93%);
+  --contract-palette-gray-2: hsl(var(--contract-palette-h), var(--contract-palette-gs), 85%);
+  --contract-palette-gray-3: hsl(var(--contract-palette-h), var(--contract-palette-gs), 75%);
+  --contract-palette-gray-4: hsl(var(--contract-palette-h), var(--contract-palette-gs), 65%);
+  --contract-palette-gray-5: hsl(var(--contract-palette-h), var(--contract-palette-gs), 50%);
+  --contract-palette-gray-6: hsl(var(--contract-palette-h), var(--contract-palette-gs), 42%);
+  --contract-palette-gray-7: hsl(var(--contract-palette-h), var(--contract-palette-gs), 34%);
+  --contract-palette-gray-8: hsl(var(--contract-palette-h), var(--contract-palette-gs), 26%);
+  --contract-palette-gray-9: hsl(var(--contract-palette-h), var(--contract-palette-gs), 18%);
+  --contract-palette-gray-10: hsl(var(--contract-palette-h), var(--contract-palette-gs), 10%);
+}
+
+.warning {
+  --contract-palette-h: var(--warning-h);
+  --contract-palette-s: var(--warning-s);
+  --contract-palette-gs: 5%;
+  --contract-palette-color-0: hsl(var(--contract-palette-h), var(--contract-palette-s), 97%);
+  --contract-palette-color-1: hsl(var(--contract-palette-h), var(--contract-palette-s), 93%);
+  --contract-palette-color-2: hsl(var(--contract-palette-h), var(--contract-palette-s), 85%);
+  --contract-palette-color-3: hsl(var(--contract-palette-h), var(--contract-palette-s), 75%);
+  --contract-palette-color-4: hsl(var(--contract-palette-h), var(--contract-palette-s), 65%);
+  --contract-palette-color-5: hsl(var(--contract-palette-h), var(--contract-palette-s), 50%);
+  --contract-palette-color-6: hsl(var(--contract-palette-h), var(--contract-palette-s), 42%);
+  --contract-palette-color-7: hsl(var(--contract-palette-h), var(--contract-palette-s), 34%);
+  --contract-palette-color-8: hsl(var(--contract-palette-h), var(--contract-palette-s), 26%);
+  --contract-palette-color-9: hsl(var(--contract-palette-h), var(--contract-palette-s), 18%);
+  --contract-palette-color-10: hsl(var(--contract-palette-h), var(--contract-palette-s), 10%);
+  --contract-palette-gray-0: hsl(var(--contract-palette-h), var(--contract-palette-gs), 97%);
+  --contract-palette-gray-1: hsl(var(--contract-palette-h), var(--contract-palette-gs), 93%);
+  --contract-palette-gray-2: hsl(var(--contract-palette-h), var(--contract-palette-gs), 85%);
+  --contract-palette-gray-3: hsl(var(--contract-palette-h), var(--contract-palette-gs), 75%);
+  --contract-palette-gray-4: hsl(var(--contract-palette-h), var(--contract-palette-gs), 65%);
+  --contract-palette-gray-5: hsl(var(--contract-palette-h), var(--contract-palette-gs), 50%);
+  --contract-palette-gray-6: hsl(var(--contract-palette-h), var(--contract-palette-gs), 42%);
+  --contract-palette-gray-7: hsl(var(--contract-palette-h), var(--contract-palette-gs), 34%);
+  --contract-palette-gray-8: hsl(var(--contract-palette-h), var(--contract-palette-gs), 26%);
+  --contract-palette-gray-9: hsl(var(--contract-palette-h), var(--contract-palette-gs), 18%);
+  --contract-palette-gray-10: hsl(var(--contract-palette-h), var(--contract-palette-gs), 10%);
+}
+
+.danger {
+  --contract-palette-h: var(--danger-h);
+  --contract-palette-s: var(--danger-s);
+  --contract-palette-gs: 5%;
+  --contract-palette-color-0: hsl(var(--contract-palette-h), var(--contract-palette-s), 97%);
+  --contract-palette-color-1: hsl(var(--contract-palette-h), var(--contract-palette-s), 93%);
+  --contract-palette-color-2: hsl(var(--contract-palette-h), var(--contract-palette-s), 85%);
+  --contract-palette-color-3: hsl(var(--contract-palette-h), var(--contract-palette-s), 75%);
+  --contract-palette-color-4: hsl(var(--contract-palette-h), var(--contract-palette-s), 65%);
+  --contract-palette-color-5: hsl(var(--contract-palette-h), var(--contract-palette-s), 50%);
+  --contract-palette-color-6: hsl(var(--contract-palette-h), var(--contract-palette-s), 42%);
+  --contract-palette-color-7: hsl(var(--contract-palette-h), var(--contract-palette-s), 34%);
+  --contract-palette-color-8: hsl(var(--contract-palette-h), var(--contract-palette-s), 26%);
+  --contract-palette-color-9: hsl(var(--contract-palette-h), var(--contract-palette-s), 18%);
+  --contract-palette-color-10: hsl(var(--contract-palette-h), var(--contract-palette-s), 10%);
+  --contract-palette-gray-0: hsl(var(--contract-palette-h), var(--contract-palette-gs), 97%);
+  --contract-palette-gray-1: hsl(var(--contract-palette-h), var(--contract-palette-gs), 93%);
+  --contract-palette-gray-2: hsl(var(--contract-palette-h), var(--contract-palette-gs), 85%);
+  --contract-palette-gray-3: hsl(var(--contract-palette-h), var(--contract-palette-gs), 75%);
+  --contract-palette-gray-4: hsl(var(--contract-palette-h), var(--contract-palette-gs), 65%);
+  --contract-palette-gray-5: hsl(var(--contract-palette-h), var(--contract-palette-gs), 50%);
+  --contract-palette-gray-6: hsl(var(--contract-palette-h), var(--contract-palette-gs), 42%);
+  --contract-palette-gray-7: hsl(var(--contract-palette-h), var(--contract-palette-gs), 34%);
+  --contract-palette-gray-8: hsl(var(--contract-palette-h), var(--contract-palette-gs), 26%);
+  --contract-palette-gray-9: hsl(var(--contract-palette-h), var(--contract-palette-gs), 18%);
+  --contract-palette-gray-10: hsl(var(--contract-palette-h), var(--contract-palette-gs), 10%);
+}
+
+.info {
+  --contract-palette-h: var(--info-h);
+  --contract-palette-s: var(--info-s);
+  --contract-palette-gs: 5%;
+  --contract-palette-color-0: hsl(var(--contract-palette-h), var(--contract-palette-s), 97%);
+  --contract-palette-color-1: hsl(var(--contract-palette-h), var(--contract-palette-s), 93%);
+  --contract-palette-color-2: hsl(var(--contract-palette-h), var(--contract-palette-s), 85%);
+  --contract-palette-color-3: hsl(var(--contract-palette-h), var(--contract-palette-s), 75%);
+  --contract-palette-color-4: hsl(var(--contract-palette-h), var(--contract-palette-s), 65%);
+  --contract-palette-color-5: hsl(var(--contract-palette-h), var(--contract-palette-s), 50%);
+  --contract-palette-color-6: hsl(var(--contract-palette-h), var(--contract-palette-s), 42%);
+  --contract-palette-color-7: hsl(var(--contract-palette-h), var(--contract-palette-s), 34%);
+  --contract-palette-color-8: hsl(var(--contract-palette-h), var(--contract-palette-s), 26%);
+  --contract-palette-color-9: hsl(var(--contract-palette-h), var(--contract-palette-s), 18%);
+  --contract-palette-color-10: hsl(var(--contract-palette-h), var(--contract-palette-s), 10%);
+  --contract-palette-gray-0: hsl(var(--contract-palette-h), var(--contract-palette-gs), 97%);
+  --contract-palette-gray-1: hsl(var(--contract-palette-h), var(--contract-palette-gs), 93%);
+  --contract-palette-gray-2: hsl(var(--contract-palette-h), var(--contract-palette-gs), 85%);
+  --contract-palette-gray-3: hsl(var(--contract-palette-h), var(--contract-palette-gs), 75%);
+  --contract-palette-gray-4: hsl(var(--contract-palette-h), var(--contract-palette-gs), 65%);
+  --contract-palette-gray-5: hsl(var(--contract-palette-h), var(--contract-palette-gs), 50%);
+  --contract-palette-gray-6: hsl(var(--contract-palette-h), var(--contract-palette-gs), 42%);
+  --contract-palette-gray-7: hsl(var(--contract-palette-h), var(--contract-palette-gs), 34%);
+  --contract-palette-gray-8: hsl(var(--contract-palette-h), var(--contract-palette-gs), 26%);
+  --contract-palette-gray-9: hsl(var(--contract-palette-h), var(--contract-palette-gs), 18%);
+  --contract-palette-gray-10: hsl(var(--contract-palette-h), var(--contract-palette-gs), 10%);
+}
+
+:root {
+  --contract-hue-red: 25;
+  --contract-hue-orange: 75;
+  --contract-hue-yellow: 100;
+  --contract-hue-lime: 125;
+  --contract-hue-green: 145;
+  --contract-hue-teal: 185;
+  --contract-hue-cyan: 210;
+  --contract-hue-blue: 240;
+  --contract-hue-indigo: 270;
+  --contract-hue-violet: 290;
+  --contract-hue-purple: 310;
+  --contract-hue-pink: 350;
+}
+
+:root {
+  --contract-font-weight-1: 100;
+  --contract-font-weight-2: 200;
+  --contract-font-weight-3: 300;
+  --contract-font-weight-4: 400;
+  --contract-font-weight-5: 500;
+  --contract-font-weight-6: 600;
+  --contract-font-weight-7: 700;
+  --contract-font-weight-8: 800;
+  --contract-font-weight-9: 900;
+}
+
+:root {
+  --contract-font-line-height-0: 1.1;
+  --contract-font-line-height-1: 1.25;
+  --contract-font-line-height-2: 1.375;
+  --contract-font-line-height-3: 1.5;
+  --contract-font-line-height-4: 1.75;
+  --contract-font-line-height-5: 2;
+}
+
+:root {
+  --contract-font-letter-spacing-0: -0.05em;
+  --contract-font-letter-spacing-1: -0.025em;
+  --contract-font-letter-spacing-2: 0.05em;
+  --contract-font-letter-spacing-3: 0.075em;
+  --contract-font-letter-spacing-4: 0.15em;
+  --contract-font-letter-spacing-5: 0.5em;
+  --contract-font-letter-spacing-6: 0.75em;
+  --contract-font-letter-spacing-7: 1em;
+}
+
+:root {
+  --contract-font-size-0: 0.75rem;
+  --contract-font-size-1: 1rem;
+  --contract-font-size-2: 1.1rem;
+  --contract-font-size-3: 1.25rem;
+  --contract-font-size-4: 1.5rem;
+  --contract-font-size-5: 2rem;
+  --contract-font-size-6: 2.5rem;
+  --contract-font-size-7: 3rem;
+  --contract-font-size-8: 3.5rem;
+}
+
+.button {
+  background-color: var(--contract-palette-color-5);
+}
+
+.container-color-1 {
+  background-color: var(--contract-palette-color-1);
+}
+
+.container-color-2 {
+  background-color: var(--contract-palette-color-2);
+}
+
+.container-color-3 {
+  background-color: var(--contract-palette-color-3);
+}
+
+.container-color-4 {
+  background-color: var(--contract-palette-color-4);
+}
+
+.container-color-5 {
+  background-color: var(--contract-palette-color-5);
+}
+
+.container-color-6 {
+  background-color: var(--contract-palette-color-6);
+}
+
+.container-color-7 {
+  background-color: var(--contract-palette-color-7);
+}
+
+.container-color-8 {
+  background-color: var(--contract-palette-color-8);
+}
+
+.container-color-9 {
+  background-color: var(--contract-palette-color-9);
+}
+
+.container-color-10 {
+  background-color: var(--contract-palette-color-10);
+}/*# sourceMappingURL=contract.css.map */

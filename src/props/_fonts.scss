@@ -1,0 +1,57 @@
+@use "defines" as *;
+
+// ============================================
+// Font Weight Definitions
+// ============================================
+:root {
+    --#{$font-prefix}weight-1: 100;
+    --#{$font-prefix}weight-2: 200;
+    --#{$font-prefix}weight-3: 300;
+    --#{$font-prefix}weight-4: 400;
+    --#{$font-prefix}weight-5: 500;
+    --#{$font-prefix}weight-6: 600;
+    --#{$font-prefix}weight-7: 700;
+    --#{$font-prefix}weight-8: 800;
+    --#{$font-prefix}weight-9: 900;
+}
+
+// ============================================
+// Font Line Height Definitions
+// ============================================
+:root {
+    --#{$font-prefix}line-height-0: 1.1;
+    --#{$font-prefix}line-height-1: 1.25;
+    --#{$font-prefix}line-height-2: 1.375;
+    --#{$font-prefix}line-height-3: 1.5;
+    --#{$font-prefix}line-height-4: 1.75;
+    --#{$font-prefix}line-height-5: 2;
+}
+
+// ============================================
+// Font Letter Spacing Definitions
+// ============================================
+:root {
+    --#{$font-prefix}letter-spacing-0: -0.05em;
+    --#{$font-prefix}letter-spacing-1: -0.025em;
+    --#{$font-prefix}letter-spacing-2: 0.05em;
+    --#{$font-prefix}letter-spacing-3: 0.075em;
+    --#{$font-prefix}letter-spacing-4: 0.15em;
+    --#{$font-prefix}letter-spacing-5: 0.5em;
+    --#{$font-prefix}letter-spacing-6: 0.75em;
+    --#{$font-prefix}letter-spacing-7: 1em;
+}
+
+// ============================================
+// Font Size Definitions
+// ============================================
+:root {
+    --#{$font-prefix}size-0: 0.75rem;
+    --#{$font-prefix}size-1: 1rem;
+    --#{$font-prefix}size-2: 1.1rem;
+    --#{$font-prefix}size-3: 1.25rem;
+    --#{$font-prefix}size-4: 1.5rem;
+    --#{$font-prefix}size-5: 2rem;
+    --#{$font-prefix}size-6: 2.5rem;
+    --#{$font-prefix}size-7: 3rem;
+    --#{$font-prefix}size-8: 3.5rem;
+}

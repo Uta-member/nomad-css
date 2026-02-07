@@ -1,0 +1,42 @@
+@use "../../props/defines" as defs;
+@use "../../props/colors" as colors;
+@use "../../components/components";
+
+// ============================================
+// HUE定義
+// HSL色相環に基づく標準値
+// ============================================
+$hues: (
+  "red": 0,
+  "orange": 30,
+  "yellow": 50,
+  "lime": 90,
+  "green": 120,
+  "teal": 170,
+  "cyan": 190,
+  "blue": 220,
+  "indigo": 240,
+  "violet": 270,
+  "purple": 290,
+  "pink": 330
+);
+
+// ============================================
+// セマンティックカラー定義
+// ============================================
+$semantic-colors: (
+  "primary": (h: var(--#{defs.$prefix}hue-blue), s: 80%),
+  "secondary": (h: var(--#{defs.$prefix}hue-pink), s: 80%),
+  "tertiary": (h: var(--#{defs.$prefix}hue-teal), s: 60%),
+  "success": (h: var(--#{defs.$prefix}hue-green), s: 60%),
+  "warning": (h: var(--#{defs.$prefix}hue-yellow), s: 80%),
+  "danger": (h: var(--#{defs.$prefix}hue-red), s: 80%),
+  "info": (h: var(--#{defs.$prefix}hue-cyan), s: 80%)
+);
+
+// ============================================
+// CSS生成
+// ============================================
+@include colors.generate-hues($hues);
+@include colors.generate-hue-classes($hues);
+@include colors.generate-semantic-colors($semantic-colors);

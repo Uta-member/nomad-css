@@ -1,0 +1,6 @@
+@use "defines" as *;
+@use "../props/defines" as *;
+
+.button {
+    background-color: var(--#{$palette-color-prefix}5);
+}
