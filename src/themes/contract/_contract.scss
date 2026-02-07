@@ -1,7 +1,4 @@
-@use "../../props/prefixes" as *;
-@use "../../props/defines" as *;
-@use "../../props/colors" as colors;
-@use "../../components/components";
+@use "../../props/prefixes" as prefixes;
 
 // ============================================
 // HUE定義
@@ -29,7 +26,7 @@ $hues: (
 // ============================================
 $semantic-colors: (
   "primary": (
-    h: var(--#{$prefix}hue-blue), 
+    h: var(--#{prefixes.$prefix}hue-blue), 
     s: 80%, 
     threshold: 50%,
     levels: (
@@ -40,7 +37,7 @@ $semantic-colors: (
       darker: 9
     )),
   "secondary": (
-    h: var(--#{$prefix}hue-pink), 
+    h: var(--#{prefixes.$prefix}hue-pink), 
     s: 80%, 
     threshold: 55%,
     levels: (
@@ -51,7 +48,7 @@ $semantic-colors: (
       darker: 9
     )),
   "tertiary": (
-    h: var(--#{$prefix}hue-teal),
+    h: var(--#{prefixes.$prefix}hue-teal),
     s: 60%,
     threshold: 40%,
     levels: (
@@ -62,7 +59,7 @@ $semantic-colors: (
       darker: 10
     )),
   "success": (
-    h: var(--#{$prefix}hue-green),
+    h: var(--#{prefixes.$prefix}hue-green),
     s: 60%,
     threshold: 40%,
     levels: (
@@ -73,7 +70,7 @@ $semantic-colors: (
       darker: 10
     )),
   "warning": (
-    h: var(--#{$prefix}hue-yellow),
+    h: var(--#{prefixes.$prefix}hue-yellow),
     s: 80%,
     threshold: 40%,
     levels: (
@@ -84,7 +81,7 @@ $semantic-colors: (
       darker: 9
     )),
   "danger": (
-    h: var(--#{$prefix}hue-red), 
+    h: var(--#{prefixes.$prefix}hue-red), 
     s: 80%, 
     threshold: 50%,
     levels: (
@@ -95,7 +92,7 @@ $semantic-colors: (
       darker: 9
     )),
   "info": (
-    h: var(--#{$prefix}hue-cyan), 
+    h: var(--#{prefixes.$prefix}hue-cyan), 
     s: 80%, 
     threshold: 40%,
     levels: (
@@ -107,38 +104,38 @@ $semantic-colors: (
     ))
 );
 
-// ============================================
-// CSS生成
-// ============================================
-@include colors.generate-hues($hues);
-@include colors.generate-hue-classes($hues);
-@include colors.generate-semantic-colors($semantic-colors);
+@use "../../props/defines" as defs with (
+    $semantic-colors: $semantic-colors,
+    $hues: $hues
+);
+@use "../../props/colors" as colors;
+@use "../../components/components";
 
 @for $i from 1 through 10 {
     .container-color-#{$i} {
-        background-color: var(--#{$palette-color-prefix}#{$i});
-        color: var(--#{$palette-accent-prefix}#{$i});
+        background-color: var(--#{prefixes.$palette-color-prefix}#{$i});
+        color: var(--#{prefixes.$palette-accent-prefix}#{$i});
     }
 }
 
 .container-semantic-color {
-    background-color: var(--#{$palette-default});
-    color: var(--#{$palette-default-accent});
+    background-color: var(--#{prefixes.$palette-default});
+    color: var(--#{prefixes.$palette-default-accent});
 
     &.lighter {
-        background-color: var(--#{$palette-lighter});
-        color: var(--#{$palette-lighter-accent});
+        background-color: var(--#{prefixes.$palette-lighter});
+        color: var(--#{prefixes.$palette-lighter-accent});
     }
     &.light {
-        background-color: var(--#{$palette-light});
-        color: var(--#{$palette-light-accent});
+        background-color: var(--#{prefixes.$palette-light});
+        color: var(--#{prefixes.$palette-light-accent});
     }
     &.dark {
-        background-color: var(--#{$palette-dark});
-        color: var(--#{$palette-dark-accent});
+        background-color: var(--#{prefixes.$palette-dark});
+        color: var(--#{prefixes.$palette-dark-accent});
     }
     &.darker {
-        background-color: var(--#{$palette-darker});
-        color: var(--#{$palette-darker-accent});
+        background-color: var(--#{prefixes.$palette-darker});
+        color: var(--#{prefixes.$palette-darker-accent});
     }
 }

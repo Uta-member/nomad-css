@@ -191,3 +191,7 @@ $neutral-levels: $semantic-levels !default;
     }
   }
 }
+
+@include generate-hues($hues);
+@include generate-hue-classes($hues);
+@include generate-semantic-colors($semantic-colors);

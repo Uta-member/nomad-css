@@ -27,6 +27,20 @@
 }
 
 :root {
+  --palette-accent-light: 97%;
+  --palette-accent-dark: 10%;
+  --palette-accent-threshold: 50%;
+}
+
+:root {
+  --semantic-level-lighter: 2;
+  --semantic-level-light: 3;
+  --semantic-level-default: 5;
+  --semantic-level-dark: 7;
+  --semantic-level-darker: 9;
+}
+
+:root {
   --font-weight-1: 100;
   --font-weight-2: 200;
   --font-weight-3: 300;

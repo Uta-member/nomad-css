@@ -1,5 +1,23 @@
 @use "prefixes" as *;
 
+$hues: (
+    // "hues name": (h: hue value, threshold: accent threshold)
+) !default;
+
+$semantic-colors: (
+    /* "semantic name": (
+    h: hue variable, 
+    s: saturation, 
+    threshold: accent threshold, 
+    levels: (
+        lighter: , 
+        light: , 
+        default: ,
+        dark: , 
+        darker: ))
+    */
+) !default;
+
 // Accent Color Settings
 $palette-accent-light: 97% !default;
 $palette-accent-dark: 10% !default;
