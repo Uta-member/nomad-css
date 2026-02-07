@@ -178,6 +178,15 @@ $neutral-levels: $semantic-levels !default;
   }
 }
 
+@include generate-semantic-colors((
+  "neutral": (
+    h: $neutral-hue,
+    s: $neutral-saturation,
+    threshold: $neutral-threshold,
+    levels: $neutral-levels
+  )
+));
+
 @include generate-hues($hues);
 @include generate-hue-classes($hues);
 @include generate-semantic-colors($semantic-colors);

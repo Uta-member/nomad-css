@@ -13,18 +13,48 @@
 // ============================================
 .border {
     border: 1px solid var(--border-color);
+    
+    @each $name, $values in $semantic-colors {
+        &.#{$semantic-prefix}#{$name} {
+            --border-color: var(--#{$palette-default});
+        }
+    }
 }
 .border-top {
     border-top: 1px solid var(--border-color);
+    
+    @each $name, $values in $semantic-colors {
+        &.#{$semantic-prefix}#{$name} {
+            --border-color: var(--#{$palette-default});
+        }
+    }
 }
 .border-bottom {
     border-bottom: 1px solid var(--border-color);
+    
+    @each $name, $values in $semantic-colors {
+        &.#{$semantic-prefix}#{$name} {
+            --border-color: var(--#{$palette-default});
+        }
+    }
 }
 .border-start {
     border-left: 1px solid var(--border-color);
+    
+    @each $name, $values in $semantic-colors {
+        &.#{$semantic-prefix}#{$name} {
+            --border-color: var(--#{$palette-default});
+        }
+    }
 }
 .border-end {
     border-right: 1px solid var(--border-color);
+    
+    @each $name, $values in $semantic-colors {
+        &.#{$semantic-prefix}#{$name} {
+            --border-color: var(--#{$palette-default});
+        }
+    }
 }
 // ============================================
 // Border Sizes
