@@ -15,6 +15,7 @@ Desktop.ini
 
 # VS Code (keep settings.json for team sharing if needed)
 # .vscode/
+.vs/*
 
 # Logs
 *.log
