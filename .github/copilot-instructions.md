@@ -1,8 +1,8 @@
-# CSS Standard Library - Copilot Instructions
+# nomad-css Library - Copilot Instructions
 
 ## プロジェクト概要
 
-CSS Standardは、フレームワーク非依存のプレーンなCSSライブラリです。以下の要件を満たすために開発されています：
+nomad-cssは、フレームワーク非依存のプレーンなCSSライブラリです。以下の要件を満たすために開発されています：
 
 - **マルチフレームワーク対応**: Node.js、ASP.NET Core、PHPなど様々なフレームワークで利用可能
 - **低依存性**: TailwindやBootstrapのようなライブラリへの高い依存を避ける
@@ -16,13 +16,13 @@ CSS Standardは、フレームワーク非依存のプレーンなCSSライブ�
 
 ```
 ┌─────────────────────────────────────┐
-│           テーマ層                   │  @css-std/theme-<theme-name>
+│           テーマ層                   │  @nomad-css/theme-<theme-name>
 │   (fluent2, material3, etc.)        │
 ├─────────────────────────────────────┤
-│       コアコンポーネント層            │  @css-std/core
+│       コアコンポーネント層            │  @nomad-css/core
 │   (button, container, border)       │
 ├─────────────────────────────────────┤
-│           トークン層                 │  @css-std/props
+│           トークン層                 │  @nomad-css/props
 │   (colors, fonts, prefixes)         │
 └─────────────────────────────────────┘
 ```
