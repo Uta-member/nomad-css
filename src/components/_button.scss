@@ -1,5 +1,6 @@
-@use "defines" as *;
+@use "../props/prefixes" as *;
 @use "../props/defines" as *;
+@use "defines" as *;
 
 .button {
     background-color: var(--#{$palette-default});
