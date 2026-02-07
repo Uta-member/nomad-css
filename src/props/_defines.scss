@@ -11,10 +11,13 @@ $font-prefix: #{$prefix}font- !default;
 // Palette Prefix
 $palette-prefix: #{$prefix}palette- !default;
 $palette-color-prefix: #{$prefix}palette-color- !default;
+$palette-accent-prefix: #{$prefix}palette-accent- !default;
 $palette-gray-prefix: #{$prefix}palette-gray- !default;
 $palette-hue-prefix: #{$palette-prefix}h !default;
 $palette-saturation-prefix: #{$palette-prefix}s !default;
 $palette-gray-saturation-prefix: #{$palette-prefix}gs !default;
+$palette-lightness-prefix: #{$palette-prefix}l- !default;
+$palette-accent-lightness-prefix: #{$palette-prefix}al- !default;
 
 // Semantic Prefix
 $semantic-prefix: "" !default;

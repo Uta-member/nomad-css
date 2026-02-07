@@ -3,5 +3,6 @@
 @for $i from 1 through 10 {
     .container-color-#{$i} {
         background-color: var(--#{$palette-color-prefix}#{$i});
+        color: var(--#{$palette-accent-prefix}#{$i});
     }
 }

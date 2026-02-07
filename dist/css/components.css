@@ -44,44 +44,55 @@
 
 .button {
   background-color: var(--palette-color-5);
+  color: var(--palette-accent-5);
 }
 
 .container-color-1 {
   background-color: var(--palette-color-1);
+  color: var(--palette-accent-1);
 }
 
 .container-color-2 {
   background-color: var(--palette-color-2);
+  color: var(--palette-accent-2);
 }
 
 .container-color-3 {
   background-color: var(--palette-color-3);
+  color: var(--palette-accent-3);
 }
 
 .container-color-4 {
   background-color: var(--palette-color-4);
+  color: var(--palette-accent-4);
 }
 
 .container-color-5 {
   background-color: var(--palette-color-5);
+  color: var(--palette-accent-5);
 }
 
 .container-color-6 {
   background-color: var(--palette-color-6);
+  color: var(--palette-accent-6);
 }
 
 .container-color-7 {
   background-color: var(--palette-color-7);
+  color: var(--palette-accent-7);
 }
 
 .container-color-8 {
   background-color: var(--palette-color-8);
+  color: var(--palette-accent-8);
 }
 
 .container-color-9 {
   background-color: var(--palette-color-9);
+  color: var(--palette-accent-9);
 }
 
 .container-color-10 {
   background-color: var(--palette-color-10);
+  color: var(--palette-accent-10);
 }/*# sourceMappingURL=components.css.map */

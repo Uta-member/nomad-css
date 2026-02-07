@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor directories and files
+*.swp
+*.swo
+*~
+
+# VS Code (keep settings.json for team sharing if needed)
+# .vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp

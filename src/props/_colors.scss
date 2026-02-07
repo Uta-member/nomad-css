@@ -20,13 +20,43 @@ $palette-lightness-list: (
   10: 10%
 ) !default;
 
+// アクセント色の明度リスト
+// 明るい背景(0-4)には暗いアクセント、暗い背景(5-10)には明るいアクセント
+$palette-accent-lightness-list: (
+  0: 10%,
+  1: 10%,
+  2: 10%,
+  3: 10%,
+  4: 10%,
+  5: 97%,
+  6: 97%,
+  7: 97%,
+  8: 97%,
+  9: 97%,
+  10: 97%
+) !default;
+
 // パレットカラーを生成するmixin（内部用）
 @mixin _generate-palette-colors() {
+  // 明度CSS変数を定義（ランタイムで上書き可能）
   @each $index, $lightness in $palette-lightness-list {
-    --#{$palette-color-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-saturation-prefix}), #{$lightness});
+    --#{$palette-lightness-prefix}#{$index}: #{$lightness};
   }
+  @each $index, $lightness in $palette-accent-lightness-list {
+    --#{$palette-accent-lightness-prefix}#{$index}: #{$lightness};
+  }
+
+  // カラーパレット（明度CSS変数を参照）
   @each $index, $lightness in $palette-lightness-list {
-    --#{$palette-gray-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), #{$lightness});
+    --#{$palette-color-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-saturation-prefix}), var(--#{$palette-lightness-prefix}#{$index}));
+  }
+  // グレーパレット
+  @each $index, $lightness in $palette-lightness-list {
+    --#{$palette-gray-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-lightness-prefix}#{$index}));
+  }
+  // アクセントカラー（同じ色相の低彩度）
+  @each $index, $lightness in $palette-accent-lightness-list {
+    --#{$palette-accent-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-accent-lightness-prefix}#{$index}));
   }
 }
 
