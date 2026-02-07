@@ -6,4 +6,15 @@
             "savePath": "/dist/css"
         }
     ],
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "日本語で記述してください。"
+        },
+        {
+            "text": "タイトルと内容という2つのセクションで構成してください。"
+        },
+        {
+            "text": "内容は箇条書きで簡潔に記述してください。"
+        }
+    ]
 }
