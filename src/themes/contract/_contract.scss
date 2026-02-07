@@ -27,13 +27,83 @@ $hues: (
 // threshold: アクセントカラー切り替え閾値（省略時はデフォルト）
 // ============================================
 $semantic-colors: (
-  "primary": (h: var(--#{defs.$prefix}hue-blue), s: 80%, threshold: 50%),
-  "secondary": (h: var(--#{defs.$prefix}hue-pink), s: 80%, threshold: 55%),
-  "tertiary": (h: var(--#{defs.$prefix}hue-teal), s: 60%, threshold: 40%),
-  "success": (h: var(--#{defs.$prefix}hue-green), s: 60%, threshold: 40%),
-  "warning": (h: var(--#{defs.$prefix}hue-yellow), s: 80%, threshold: 40%),
-  "danger": (h: var(--#{defs.$prefix}hue-red), s: 80%, threshold: 50%),
-  "info": (h: var(--#{defs.$prefix}hue-cyan), s: 80%, threshold: 40%)
+  "primary": (
+    h: var(--#{defs.$prefix}hue-blue), 
+    s: 80%, 
+    threshold: 50%,
+    levels: (
+      lighter: 2,
+      light: 3,
+      default: 6,
+      dark: 8,
+      darker: 9
+    )),
+  "secondary": (
+    h: var(--#{defs.$prefix}hue-pink), 
+    s: 80%, 
+    threshold: 55%,
+    levels: (
+      lighter: 2,
+      light: 3,
+      default: 5,
+      dark: 7,
+      darker: 9
+    )),
+  "tertiary": (
+    h: var(--#{defs.$prefix}hue-teal),
+    s: 60%,
+    threshold: 40%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 7,
+      dark: 9,
+      darker: 10
+    )),
+  "success": (
+    h: var(--#{defs.$prefix}hue-green),
+    s: 60%,
+    threshold: 40%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 7,
+      dark: 9,
+      darker: 10
+    )),
+  "warning": (
+    h: var(--#{defs.$prefix}hue-yellow),
+    s: 80%,
+    threshold: 40%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 6,
+      dark: 8,
+      darker: 9
+    )),
+  "danger": (
+    h: var(--#{defs.$prefix}hue-red), 
+    s: 80%, 
+    threshold: 50%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 6,
+      dark: 8,
+      darker: 9
+    )),
+  "info": (
+    h: var(--#{defs.$prefix}hue-cyan), 
+    s: 80%, 
+    threshold: 40%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 7,
+      dark: 8,
+      darker: 9
+    ))
 );
 
 // ============================================

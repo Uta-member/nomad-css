@@ -30,3 +30,32 @@ $palette-accent-threshold-var: #{$palette-prefix}accent-threshold !default;
 
 // Semantic Prefix
 $semantic-prefix: "" !default;
+
+// ============================================
+// Semantic Level Definitions
+// セマンティックカラーの5段階レベル → パレット番号のマッピング
+// ============================================
+$semantic-levels: (
+  "lighter": 2,
+  "light": 3,
+  "default": 5,
+  "dark": 7,
+  "darker": 9
+) !default;
+
+// Semantic Level CSS Variable Prefix
+$semantic-level-prefix: #{$prefix}semantic-level- !default;
+
+// Palette Level Variable Names (クラス内で使用)
+$palette-lighter: #{$palette-prefix}lighter !default;
+$palette-light: #{$palette-prefix}light !default;
+$palette-default: #{$palette-prefix}default !default;
+$palette-dark: #{$palette-prefix}dark !default;
+$palette-darker: #{$palette-prefix}darker !default;
+
+// Palette Level Accent Variable Names
+$palette-lighter-accent: #{$palette-prefix}lighter-accent !default;
+$palette-light-accent: #{$palette-prefix}light-accent !default;
+$palette-default-accent: #{$palette-prefix}default-accent !default;
+$palette-dark-accent: #{$palette-prefix}dark-accent !default;
+$palette-darker-accent: #{$palette-prefix}darker-accent !default;

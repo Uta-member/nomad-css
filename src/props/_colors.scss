@@ -96,12 +96,19 @@ $palette-lightness-list: (
 
 // ============================================
 // セマンティックカラー生成mixin
-// $colors: ("primary": (h: var(--hue-blue), s: 100%), ...)
-// threshold キーを追加すると色ごとに閾値を変更可能
+// $colors: ("primary": (h: var(--hue-blue), s: 100%, levels: (...)), ...)
+// threshold: アクセントカラー閾値
+// levels: レベル→パレット番号のマッピング（省略時はデフォルト使用）
 // ============================================
-@mixin generate-semantic-colors($colors, $gray-saturation: 5%, $default-threshold: $palette-accent-threshold) {
-  // 各セマンティックカラーのCSS変数を定義（ランタイムで変更可能）
+@mixin generate-semantic-colors($colors, $gray-saturation: 5%, $default-threshold: $palette-accent-threshold, $default-levels: $semantic-levels) {
+  // :root にグローバルデフォルトレベルとセマンティック色のH/Sを定義
   :root {
+    // グローバルデフォルトレベル（ランタイムで参照用）
+    @each $level-name, $palette-index in $default-levels {
+      --#{$semantic-level-prefix}#{$level-name}: #{$palette-index};
+    }
+
+    // 各セマンティックカラーのH/S
     @each $name, $values in $colors {
       --#{$semantic-prefix}#{$name}-h: #{map-get($values, h)};
       --#{$semantic-prefix}#{$name}-s: #{map-get($values, s)};
@@ -110,10 +117,19 @@ $palette-lightness-list: (
 
   // クラスを適用すると、パレットの色相・彩度が切り替わり、色が再計算される
   @each $name, $values in $colors {
-    // 閾値を取得（マップにthresholdがあれば使用、なければデフォルト）
+    // 閾値を取得
     $threshold: $default-threshold;
     @if map-has-key($values, threshold) {
       $threshold: map-get($values, threshold);
+    }
+
+    // レベルを取得（個別指定があればマージ）
+    $levels: $default-levels;
+    @if map-has-key($values, levels) {
+      $custom-levels: map-get($values, levels);
+      @each $level-name, $palette-index in $custom-levels {
+        $levels: map-merge($levels, ($level-name: $palette-index));
+      }
     }
 
     .#{$semantic-prefix}#{$name} {
@@ -122,6 +138,20 @@ $palette-lightness-list: (
       --#{$palette-gray-saturation-prefix}: #{$gray-saturation};
       --#{$palette-accent-threshold-var}: #{$threshold};
       @include _generate-palette-colors($threshold);
+
+      // セマンティックレベル色を出力（CSS変数で上書き可能）
+      --#{$palette-lighter}: var(--#{$palette-color-prefix}#{map-get($levels, "lighter")});
+      --#{$palette-light}: var(--#{$palette-color-prefix}#{map-get($levels, "light")});
+      --#{$palette-default}: var(--#{$palette-color-prefix}#{map-get($levels, "default")});
+      --#{$palette-dark}: var(--#{$palette-color-prefix}#{map-get($levels, "dark")});
+      --#{$palette-darker}: var(--#{$palette-color-prefix}#{map-get($levels, "darker")});
+
+      // アクセント付きレベル色
+      --#{$palette-lighter-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "lighter")});
+      --#{$palette-light-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "light")});
+      --#{$palette-default-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "default")});
+      --#{$palette-dark-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "dark")});
+      --#{$palette-darker-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "darker")});
     }
   }
 }

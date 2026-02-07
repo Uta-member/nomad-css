@@ -6,3 +6,25 @@
         color: var(--#{$palette-accent-prefix}#{$i});
     }
 }
+
+.container-semantic-color {
+    background-color: var(--#{$palette-default});
+    color: var(--#{$palette-default-accent});
+
+    &.lighter {
+        background-color: var(--#{$palette-lighter});
+        color: var(--#{$palette-lighter-accent});
+    }
+    &.light {
+        background-color: var(--#{$palette-light});
+        color: var(--#{$palette-light-accent});
+    }
+    &.dark {
+        background-color: var(--#{$palette-dark});
+        color: var(--#{$palette-dark-accent});
+    }
+    &.darker {
+        background-color: var(--#{$palette-darker});
+        color: var(--#{$palette-darker-accent});
+    }
+}

@@ -2,6 +2,6 @@
 @use "../props/defines" as *;
 
 .button {
-    background-color: var(--#{$palette-color-prefix}5);
-    color: var(--#{$palette-accent-prefix}5);
+    background-color: var(--#{$palette-default});
+    color: var(--#{$palette-default-accent});
 }

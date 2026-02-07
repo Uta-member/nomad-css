@@ -43,8 +43,8 @@
 }
 
 .button {
-  background-color: var(--palette-color-5);
-  color: var(--palette-accent-5);
+  background-color: var(--palette-default);
+  color: var(--palette-default-accent);
 }
 
 .container-color-1 {
@@ -95,4 +95,25 @@
 .container-color-10 {
   background-color: var(--palette-color-10);
   color: var(--palette-accent-10);
+}
+
+.container-semantic-color {
+  background-color: var(--palette-default);
+  color: var(--palette-default-accent);
+}
+.container-semantic-color.lighter {
+  background-color: var(--palette-lighter);
+  color: var(--palette-lighter-accent);
+}
+.container-semantic-color.light {
+  background-color: var(--palette-light);
+  color: var(--palette-light-accent);
+}
+.container-semantic-color.dark {
+  background-color: var(--palette-dark);
+  color: var(--palette-dark-accent);
+}
+.container-semantic-color.darker {
+  background-color: var(--palette-darker);
+  color: var(--palette-darker-accent);
 }/*# sourceMappingURL=components.css.map */
