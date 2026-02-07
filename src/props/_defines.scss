@@ -59,3 +59,12 @@ $palette-light-accent: #{$palette-prefix}light-accent !default;
 $palette-default-accent: #{$palette-prefix}default-accent !default;
 $palette-dark-accent: #{$palette-prefix}dark-accent !default;
 $palette-darker-accent: #{$palette-prefix}darker-accent !default;
+
+// ============================================
+// Neutral Palette Definitions
+// クラスに依存しないニュートラルカラー
+// ============================================
+$neutral-prefix: #{$prefix}neutral- !default;
+$neutral-hue-var: #{$neutral-prefix}h !default;
+$neutral-saturation-var: #{$neutral-prefix}s !default;
+$neutral-accent-threshold-var: #{$neutral-prefix}accent-threshold !default;

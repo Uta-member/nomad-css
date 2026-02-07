@@ -20,6 +20,14 @@ $palette-lightness-list: (
   10: 10%
 ) !default;
 
+// ============================================
+// ニュートラルパレット設定
+// @use "colors" with (...) で上書き可能
+// ============================================
+$neutral-hue: 220 !default;
+$neutral-saturation: 5% !default;
+$neutral-threshold: $palette-accent-threshold !default;
+$neutral-levels: $semantic-levels !default;
 
 
 // パレットカラーを生成するmixin（内部用）
@@ -152,6 +160,33 @@ $palette-lightness-list: (
       --#{$palette-default-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "default")});
       --#{$palette-dark-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "dark")});
       --#{$palette-darker-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "darker")});
+    }
+  }
+}
+
+// ============================================
+// ニュートラルパレット（自動出力）
+// :rootに固定で定義され、クラスで上書きされない
+// SCSS: @use "colors" with ($neutral-hue: 240, ...) で上書き
+// CSS: --neutral-h などの変数で上書き可能
+// ============================================
+:root {
+  // ニュートラルの色相・彩度・閾値（CSS変数で上書き可能）
+  --#{$neutral-hue-var}: #{$neutral-hue};
+  --#{$neutral-saturation-var}: #{$neutral-saturation};
+  --#{$neutral-accent-threshold-var}: #{$neutral-threshold};
+
+  // ニュートラルパレット0-10
+  @each $index, $lightness in $palette-lightness-list {
+    --#{$neutral-prefix}#{$index}: hsl(var(--#{$neutral-hue-var}), var(--#{$neutral-saturation-var}), #{$lightness});
+  }
+
+  // ニュートラルアクセント（閾値に応じて明/暗）
+  @each $index, $lightness in $palette-lightness-list {
+    @if $lightness > $neutral-threshold {
+      --#{$neutral-prefix}accent-#{$index}: hsl(var(--#{$neutral-hue-var}), var(--#{$neutral-saturation-var}), var(--#{$palette-accent-dark-var}));
+    } @else {
+      --#{$neutral-prefix}accent-#{$index}: hsl(var(--#{$neutral-hue-var}), var(--#{$neutral-saturation-var}), var(--#{$palette-accent-light-var}));
     }
   }
 }
