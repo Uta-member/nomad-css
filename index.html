@@ -955,6 +955,187 @@
             </div>
         </div>
     </div>
+
+    <!-- Select Basic -->
+    <div class="demo-row">
+        <div class="demo-label">Select (.select)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <select class="select">
+                <option value="">Select an option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <select class="select" disabled>
+                <option>Disabled select</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Select with Optgroup -->
+    <div class="demo-row">
+        <div class="demo-label">Select with Optgroup</div>
+        <div style="max-width: 400px;">
+            <select class="select">
+                <option value="">Select a fruit or vegetable</option>
+                <optgroup label="Fruits">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                </optgroup>
+                <optgroup label="Vegetables">
+                    <option value="carrot">Carrot</option>
+                    <option value="broccoli">Broccoli</option>
+                    <option value="spinach">Spinach</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+
+    <!-- Select Sizes -->
+    <div class="demo-row">
+        <div class="demo-label">Select Sizes</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <select class="select select-sm">
+                <option value="">Small select</option>
+                <option value="1">Option 1</option>
+            </select>
+            <select class="select">
+                <option value="">Default select</option>
+                <option value="1">Option 1</option>
+            </select>
+            <select class="select select-lg">
+                <option value="">Large select</option>
+                <option value="1">Option 1</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Select Variants -->
+    <div class="demo-row">
+        <div class="demo-label">Select Variants</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <select class="select">
+                <option value="">Default (outlined)</option>
+                <option value="1">Option 1</option>
+            </select>
+            <select class="select select-filled">
+                <option value="">Filled variant</option>
+                <option value="1">Option 1</option>
+            </select>
+            <select class="select select-underline">
+                <option value="">Underline variant</option>
+                <option value="1">Option 1</option>
+            </select>
+            <select class="select select-borderless">
+                <option value="">Borderless variant</option>
+                <option value="1">Option 1</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Select Semantic Colors -->
+    <div class="demo-row">
+        <div class="demo-label">Select Semantic Colors (focus to see)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <select class="select primary">
+                <option value="">Primary focus</option>
+                <option value="1">Option 1</option>
+            </select>
+            <select class="select success">
+                <option value="">Success focus</option>
+                <option value="1">Option 1</option>
+            </select>
+            <select class="select danger">
+                <option value="">Danger focus</option>
+                <option value="1">Option 1</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Multiple Select -->
+    <div class="demo-row">
+        <div class="demo-label">Multiple Select</div>
+        <div style="max-width: 400px;">
+            <select class="select" multiple size="5">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+            </select>
+            <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+                Ctrl+クリックで複数選択できます
+            </p>
+        </div>
+    </div>
+
+    <!-- Select with Icon -->
+    <div class="demo-row">
+        <div class="demo-label">Select with Icon (.select-icon)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="select-icon">
+                <span class="select-icon-left">🌐</span>
+                <select class="select">
+                    <option value="">Select language</option>
+                    <option value="ja">日本語</option>
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+            <div class="select-icon">
+                <span class="select-icon-left">📁</span>
+                <select class="select">
+                    <option value="">Select category</option>
+                    <option value="1">Documents</option>
+                    <option value="2">Images</option>
+                    <option value="3">Videos</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Select in Input Group -->
+    <div class="demo-row">
+        <div class="demo-label">Select in Input Group</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="input-group">
+                <span class="input-addon">Sort by</span>
+                <select class="select">
+                    <option value="name">Name</option>
+                    <option value="date">Date</option>
+                    <option value="size">Size</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <select class="select">
+                    <option value="http">http://</option>
+                    <option value="https">https://</option>
+                </select>
+                <input type="text" class="input" placeholder="example.com">
+            </div>
+        </div>
+    </div>
+
+    <!-- Select Validation States -->
+    <div class="demo-row">
+        <div class="demo-label">Select Validation States (Preview)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="form-group">
+                <select class="select is-valid">
+                    <option value="1" selected>Valid selection</option>
+                </select>
+                <span class="form-feedback form-feedback-valid">Good choice!</span>
+            </div>
+            <div class="form-group">
+                <select class="select is-invalid">
+                    <option value="">Please select an option</option>
+                </select>
+                <span class="form-feedback form-feedback-invalid">This field is required.</span>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- ============================================ -->
