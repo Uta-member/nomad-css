@@ -254,25 +254,32 @@ $semantic-colors: (
 // --------------------------------------------
 
 // Size Variants
+:root {
+  --#{prefixes.$input-prefix}height-sm: 2rem;
+  --#{prefixes.$input-prefix}height-lg: 3rem;
+  --#{prefixes.$select-prefix}height-sm: 2rem;
+  --#{prefixes.$select-prefix}height-lg: 3rem;
+}
+
 .input-sm, .select-sm {
-    --#{prefixes.$input-prefix}height: 2rem;
+    --#{prefixes.$input-prefix}height: var(--#{prefixes.$input-prefix}height-sm);
     --#{prefixes.$input-prefix}padding-x: 0.5rem;
     --#{prefixes.$input-prefix}padding-y: 0.25rem;
     --#{prefixes.$input-prefix}font-size: 0.875rem;
     
-    --#{prefixes.$select-prefix}height: 2rem;
+    --#{prefixes.$select-prefix}height: var(--#{prefixes.$select-prefix}height-sm);
     --#{prefixes.$select-prefix}padding-x: 0.5rem;
     --#{prefixes.$select-prefix}padding-y: 0.25rem;
     --#{prefixes.$select-prefix}font-size: 0.875rem;
 }
 
 .input-lg, .select-lg {
-    --#{prefixes.$input-prefix}height: 3rem;
+    --#{prefixes.$input-prefix}height: var(--#{prefixes.$input-prefix}height-lg);
     --#{prefixes.$input-prefix}padding-x: 1rem;
     --#{prefixes.$input-prefix}padding-y: 0.75rem;
     --#{prefixes.$input-prefix}font-size: 1.125rem;
     
-    --#{prefixes.$select-prefix}height: 3rem;
+    --#{prefixes.$select-prefix}height: var(--#{prefixes.$select-prefix}height-lg);
     --#{prefixes.$select-prefix}padding-x: 1rem;
     --#{prefixes.$select-prefix}padding-y: 0.75rem;
     --#{prefixes.$select-prefix}font-size: 1.125rem;
@@ -298,13 +305,37 @@ $semantic-colors: (
     --#{prefixes.$input-prefix}border-radius: 0;
     --#{prefixes.$select-prefix}border-radius: 0;
     
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-width: var(--#{prefixes.$input-prefix}border-width);
+    // Explicitly reset other borders to ensure only bottom border exists
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+// Enhance specificity to override base component styles (e.g. input.input:focus)
+.input.input-underline {
+    border-bottom: var(--#{prefixes.$input-prefix}border-width) solid var(--#{prefixes.$input-prefix}border-color);
     
+    &:hover {
+         border-bottom-color: var(--#{prefixes.$input-prefix}border-color-hover);
+    }
+
     &:focus {
-        box-shadow: 0 2px 0 0 var(--#{prefixes.$input-prefix}border-color-focus);
+        // Change border color and add shadow to simulate thickness (1px border + 1px shadow = 2px)
+        border-bottom-color: var(--#{prefixes.$input-prefix}border-color-focus);
+        box-shadow: 0 1px 0 0 var(--#{prefixes.$input-prefix}border-color-focus);
+    }
+}
+
+.select.select-underline {
+    border-bottom: var(--#{prefixes.$select-prefix}border-width) solid var(--#{prefixes.$select-prefix}border-color);
+    
+    &:hover {
+         border-bottom-color: var(--#{prefixes.$select-prefix}border-color-hover);
+    }
+
+    &:focus {
+        border-bottom-color: var(--#{prefixes.$select-prefix}border-color-focus);
+        box-shadow: 0 1px 0 0 var(--#{prefixes.$select-prefix}border-color-focus);
     }
 }
 

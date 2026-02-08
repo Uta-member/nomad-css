@@ -31,8 +31,10 @@
     --#{prefixes.$input-prefix}border-radius: 4px;
     --#{prefixes.$input-prefix}border-width: 1px;
     --#{prefixes.$input-prefix}height: 56px; // Standard M3 field height
+    --#{prefixes.$input-prefix}height-lg: 64px; // Large M3 field height
     --#{prefixes.$input-prefix}padding-x: 16px;
     
     --#{prefixes.$select-prefix}border-radius: 4px;
     --#{prefixes.$select-prefix}height: 56px;
+    --#{prefixes.$select-prefix}height-lg: 64px;
 }

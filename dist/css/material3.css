@@ -5438,23 +5438,30 @@ select.select[multiple] option:checked {
   --button-padding-y: 0.75rem;
 }
 
+:root {
+  --input-height-sm: 2rem;
+  --input-height-lg: 3rem;
+  --select-height-sm: 2rem;
+  --select-height-lg: 3rem;
+}
+
 .input-sm, .select-sm {
-  --input-height: 2rem;
+  --input-height: var(--input-height-sm);
   --input-padding-x: 0.5rem;
   --input-padding-y: 0.25rem;
   --input-font-size: 0.875rem;
-  --select-height: 2rem;
+  --select-height: var(--select-height-sm);
   --select-padding-x: 0.5rem;
   --select-padding-y: 0.25rem;
   --select-font-size: 0.875rem;
 }
 
 .input-lg, .select-lg {
-  --input-height: 3rem;
+  --input-height: var(--input-height-lg);
   --input-padding-x: 1rem;
   --input-padding-y: 0.75rem;
   --input-font-size: 1.125rem;
-  --select-height: 3rem;
+  --select-height: var(--select-height-lg);
   --select-padding-x: 1rem;
   --select-padding-y: 0.75rem;
   --select-font-size: 1.125rem;
@@ -5476,13 +5483,31 @@ select.select[multiple] option:checked {
 .input-underline, .select-underline {
   --input-border-radius: 0;
   --select-border-radius: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom-width: var(--input-border-width);
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
 }
-.input-underline:focus, .select-underline:focus {
-  box-shadow: 0 2px 0 0 var(--input-border-color-focus);
+
+.input.input-underline {
+  border-bottom: var(--input-border-width) solid var(--input-border-color);
+}
+.input.input-underline:hover {
+  border-bottom-color: var(--input-border-color-hover);
+}
+.input.input-underline:focus {
+  border-bottom-color: var(--input-border-color-focus);
+  box-shadow: 0 1px 0 0 var(--input-border-color-focus);
+}
+
+.select.select-underline {
+  border-bottom: var(--select-border-width) solid var(--select-border-color);
+}
+.select.select-underline:hover {
+  border-bottom-color: var(--select-border-color-hover);
+}
+.select.select-underline:focus {
+  border-bottom-color: var(--select-border-color-focus);
+  box-shadow: 0 1px 0 0 var(--select-border-color-focus);
 }
 
 .input-borderless, .select-borderless {
@@ -5512,7 +5537,9 @@ select.select[multiple] option:checked {
   --input-border-radius: 4px;
   --input-border-width: 1px;
   --input-height: 56px;
+  --input-height-lg: 64px;
   --input-padding-x: 16px;
   --select-border-radius: 4px;
   --select-height: 56px;
+  --select-height-lg: 64px;
 }/*# sourceMappingURL=material3.css.map */
