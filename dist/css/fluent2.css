@@ -5439,6 +5439,15 @@ select.select[multiple] option:checked {
   table-layout: auto;
 }
 
+:root {
+  --font-family-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-size-base: 16px;
+  --font-weight-normal: 400;
+  --font-line-height-normal: 1.5;
+}
+
 .container-color-0 {
   background-color: var(--palette-color-0);
   color: var(--palette-accent-0);
@@ -5522,4 +5531,18 @@ select.select[multiple] option:checked {
   --secondary-s: 0%;
   --tertiary-h: var(--hue-cyan);
   --tertiary-s: 60%;
+  --font-family-sans: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  --font-size-base: 14px;
+  --button-border-radius: 4px;
+  --button-border-width: 1px;
+  --button-font-weight: 600;
+  --button-padding-x: 12px;
+  --button-padding-y: 6px;
+  --input-border-radius: 4px;
+  --input-border-width: 1px;
+  --input-height: 32px;
+  --input-padding-y: 4px;
+  --select-border-radius: 4px;
+  --select-height: 32px;
+  --select-padding-y: 4px;
 }/*# sourceMappingURL=fluent2.css.map */
