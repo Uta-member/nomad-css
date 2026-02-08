@@ -1,5 +1,6 @@
 @use "../props/prefixes" as *;
 @use "../props/defines" as *;
+@use "../props/breakpoints" as bp;
 
 // ============================================
 // Display
@@ -596,4 +597,175 @@
 }
 .invisible {
     visibility: hidden !important;
+}
+
+// ============================================
+// Responsive Utilities
+// ============================================
+// Display レスポンシブ
+// 例: .d-sm-none, .d-md-flex, .d-lg-block
+@each $bp-name, $bp-value in bp.$breakpoints {
+    @if $bp-value > 0 {
+        @include bp.media-up($bp-name) {
+            .d-#{$bp-name}-block {
+                display: block;
+            }
+            .d-#{$bp-name}-inline {
+                display: inline;
+            }
+            .d-#{$bp-name}-inline-block {
+                display: inline-block;
+            }
+            .d-#{$bp-name}-flex {
+                display: flex;
+            }
+            .d-#{$bp-name}-inline-flex {
+                display: inline-flex;
+            }
+            .d-#{$bp-name}-grid {
+                display: grid;
+            }
+            .d-#{$bp-name}-inline-grid {
+                display: inline-grid;
+            }
+            .d-#{$bp-name}-none {
+                display: none;
+            }
+        }
+    }
+}
+
+// Flex Direction レスポンシブ
+// 例: .flex-sm-row, .flex-md-column
+@each $bp-name, $bp-value in bp.$breakpoints {
+    @if $bp-value > 0 {
+        @include bp.media-up($bp-name) {
+            .flex-#{$bp-name}-row {
+                flex-direction: row;
+            }
+            .flex-#{$bp-name}-row-reverse {
+                flex-direction: row-reverse;
+            }
+            .flex-#{$bp-name}-column {
+                flex-direction: column;
+            }
+            .flex-#{$bp-name}-column-reverse {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+// Flex Wrap レスポンシブ
+// 例: .flex-sm-wrap, .flex-md-nowrap
+@each $bp-name, $bp-value in bp.$breakpoints {
+    @if $bp-value > 0 {
+        @include bp.media-up($bp-name) {
+            .flex-#{$bp-name}-wrap {
+                flex-wrap: wrap;
+            }
+            .flex-#{$bp-name}-wrap-reverse {
+                flex-wrap: wrap-reverse;
+            }
+            .flex-#{$bp-name}-nowrap {
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}
+
+// Justify Content レスポンシブ
+// 例: .justify-sm-center, .justify-md-between
+@each $bp-name, $bp-value in bp.$breakpoints {
+    @if $bp-value > 0 {
+        @include bp.media-up($bp-name) {
+            .justify-#{$bp-name}-start {
+                justify-content: flex-start;
+            }
+            .justify-#{$bp-name}-end {
+                justify-content: flex-end;
+            }
+            .justify-#{$bp-name}-center {
+                justify-content: center;
+            }
+            .justify-#{$bp-name}-between {
+                justify-content: space-between;
+            }
+            .justify-#{$bp-name}-around {
+                justify-content: space-around;
+            }
+            .justify-#{$bp-name}-evenly {
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+
+// Align Items レスポンシブ
+// 例: .align-items-sm-center, .align-items-md-start
+@each $bp-name, $bp-value in bp.$breakpoints {
+    @if $bp-value > 0 {
+        @include bp.media-up($bp-name) {
+            .align-items-#{$bp-name}-start {
+                align-items: flex-start;
+            }
+            .align-items-#{$bp-name}-end {
+                align-items: flex-end;
+            }
+            .align-items-#{$bp-name}-center {
+                align-items: center;
+            }
+            .align-items-#{$bp-name}-baseline {
+                align-items: baseline;
+            }
+            .align-items-#{$bp-name}-stretch {
+                align-items: stretch;
+            }
+        }
+    }
+}
+
+// Gap レスポンシブ
+// 例: .gap-sm-0, .gap-md-3
+@each $bp-name, $bp-value in bp.$breakpoints {
+    @if $bp-value > 0 {
+        @include bp.media-up($bp-name) {
+            .gap-#{$bp-name}-0 {
+                gap: 0;
+            }
+            .gap-#{$bp-name}-1 {
+                gap: 0.25rem;
+            }
+            .gap-#{$bp-name}-2 {
+                gap: 0.5rem;
+            }
+            .gap-#{$bp-name}-3 {
+                gap: 1rem;
+            }
+            .gap-#{$bp-name}-4 {
+                gap: 1.5rem;
+            }
+            .gap-#{$bp-name}-5 {
+                gap: 3rem;
+            }
+        }
+    }
+}
+
+// Text Align レスポンシブ
+// 例: .text-sm-start, .text-md-center
+@each $bp-name, $bp-value in bp.$breakpoints {
+    @if $bp-value > 0 {
+        @include bp.media-up($bp-name) {
+            .text-#{$bp-name}-start {
+                text-align: start;
+            }
+            .text-#{$bp-name}-end {
+                text-align: end;
+            }
+            .text-#{$bp-name}-center {
+                text-align: center;
+            }
+        }
+    }
 }

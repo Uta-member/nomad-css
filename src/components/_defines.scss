@@ -1,2 +1,21 @@
 @use "../props/prefixes" as *;
 @use "../props/defines" as *;
+
+// ================================
+// Typography
+// ================================
+:root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1rem;
+    --font-weight-h1: 700;
+    --font-weight-h2: 700;
+    --font-weight-h3: 600;
+    --font-weight-h4: 600;
+    --font-weight-h5: 500;
+    --font-weight-h6: 500;
+    
+}
