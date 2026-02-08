@@ -2107,19 +2107,23 @@
 }
 
 .rounded-top-0 {
-  border-radius: 0 inherit inherit 0;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 
 .rounded-bottom-0 {
-  border-radius: 0 0 inherit inherit;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .rounded-start-0 {
-  border-radius: inherit 0 0 inherit;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .rounded-end-0 {
-  border-radius: 0 inherit inherit 0;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .container-color-0 {
