@@ -1790,6 +1790,243 @@ label {
   margin-right: 0.5rem;
 }
 
+:root {
+  --icon-size: 1.5rem;
+  --icon-size-xs: 0.75rem;
+  --icon-size-sm: 1rem;
+  --icon-size-md: 1.5rem;
+  --icon-size-lg: 2rem;
+  --icon-size-xl: 2.5rem;
+  --icon-size-2xl: 3rem;
+  --icon-gap: 0.5rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  font-size: var(--icon-size);
+  line-height: 1;
+  color: inherit;
+  flex-shrink: 0;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.icon > svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+.icon > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.icon-xs {
+  --icon-size: var(--icon-size-xs);
+}
+
+.icon-sm {
+  --icon-size: var(--icon-size-sm);
+}
+
+.icon-md {
+  --icon-size: var(--icon-size-md);
+}
+
+.icon-lg {
+  --icon-size: var(--icon-size-lg);
+}
+
+.icon-xl {
+  --icon-size: var(--icon-size-xl);
+}
+
+.icon-2xl {
+  --icon-size: var(--icon-size-2xl);
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.icon-spin {
+  animation: icon-spin 1s linear infinite;
+}
+
+@keyframes icon-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.icon-pulse {
+  animation: icon-pulse 1.5s ease-in-out infinite;
+}
+
+.icon-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.icon-flip-horizontal {
+  transform: scaleX(-1);
+}
+
+.icon-flip-vertical {
+  transform: scaleY(-1);
+}
+
+.icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--icon-gap);
+}
+
+.icon.primary {
+  color: var(--palette-default);
+}
+.icon.primary.lighter {
+  color: var(--palette-lighter);
+}
+.icon.primary.light {
+  color: var(--palette-light);
+}
+.icon.primary.dark {
+  color: var(--palette-dark);
+}
+.icon.primary.darker {
+  color: var(--palette-darker);
+}
+.icon.secondary {
+  color: var(--palette-default);
+}
+.icon.secondary.lighter {
+  color: var(--palette-lighter);
+}
+.icon.secondary.light {
+  color: var(--palette-light);
+}
+.icon.secondary.dark {
+  color: var(--palette-dark);
+}
+.icon.secondary.darker {
+  color: var(--palette-darker);
+}
+.icon.tertiary {
+  color: var(--palette-default);
+}
+.icon.tertiary.lighter {
+  color: var(--palette-lighter);
+}
+.icon.tertiary.light {
+  color: var(--palette-light);
+}
+.icon.tertiary.dark {
+  color: var(--palette-dark);
+}
+.icon.tertiary.darker {
+  color: var(--palette-darker);
+}
+.icon.success {
+  color: var(--palette-default);
+}
+.icon.success.lighter {
+  color: var(--palette-lighter);
+}
+.icon.success.light {
+  color: var(--palette-light);
+}
+.icon.success.dark {
+  color: var(--palette-dark);
+}
+.icon.success.darker {
+  color: var(--palette-darker);
+}
+.icon.warning {
+  color: var(--palette-default);
+}
+.icon.warning.lighter {
+  color: var(--palette-lighter);
+}
+.icon.warning.light {
+  color: var(--palette-light);
+}
+.icon.warning.dark {
+  color: var(--palette-dark);
+}
+.icon.warning.darker {
+  color: var(--palette-darker);
+}
+.icon.danger {
+  color: var(--palette-default);
+}
+.icon.danger.lighter {
+  color: var(--palette-lighter);
+}
+.icon.danger.light {
+  color: var(--palette-light);
+}
+.icon.danger.dark {
+  color: var(--palette-dark);
+}
+.icon.danger.darker {
+  color: var(--palette-darker);
+}
+.icon.info {
+  color: var(--palette-default);
+}
+.icon.info.lighter {
+  color: var(--palette-lighter);
+}
+.icon.info.light {
+  color: var(--palette-light);
+}
+.icon.info.dark {
+  color: var(--palette-dark);
+}
+.icon.info.darker {
+  color: var(--palette-darker);
+}
+
+.icon.neutral {
+  color: var(--neutral-5);
+}
+.icon.neutral.lighter {
+  color: var(--neutral-2);
+}
+.icon.neutral.light {
+  color: var(--neutral-3);
+}
+.icon.neutral.dark {
+  color: var(--neutral-7);
+}
+.icon.neutral.darker {
+  color: var(--neutral-9);
+}
+
 .button {
   background-color: var(--palette-default);
   color: var(--palette-default-accent);

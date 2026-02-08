@@ -10,6 +10,45 @@ nomad-cssは、フレームワーク非依存のプレーンなCSSライブラ�
 - **テーマ切り替え可能**: 複数のテーマを切り替えられる設計
 - **カスタマイズの制限**: テーマ確定後は大きなカスタマイズを制限
 
+## コンポーネント実装の方針
+
+このプロジェクトは特定のテーマに沿った実装を行うのではなく、**各テーマの実装に必要なプロパティ（CSS変数）を準備すること**が目的です。
+
+### 基本原則
+
+- **構造的な機能に注力**: コンポーネントの構造やレイアウトに関する機能を実装する
+- **汎用的なバリエーション**: filled, tonal, outlined, text などの一般的なスタイルパターンを提供する
+- **セマンティックカラーは不要**: コンポーネント層でprimary, secondary等のセマンティックバリエーションは定義しない（テーマ層の責務）
+- **拡張ポイントの提供**: テーマ層でカスタマイズできるようCSS変数で制御可能にする
+
+### コンポーネントの実装例
+
+#### ボタン
+
+```html
+<!-- 構造的なバリエーション（コアで実装） -->
+<button class="button filled">Filled</button>
+<button class="button tonal">Tonal</button>
+<button class="button outlined">Outlined</button>
+<button class="button text">Text</button>
+
+<!-- アイコン付きボタン（コアで実装） -->
+<button class="button"><span class="icon">★</span> With Icon</button>
+<button class="button icon-only"><span class="icon">★</span></button>
+
+<!-- セマンティックカラー（テーマ層で実装、コアでは不要） -->
+<button class="button primary">Primary</button>
+```
+
+### 実装すべき内容
+
+| コンポーネント | コア層で実装する内容 | テーマ層で実装する内容 |
+|--------------|-------------------|---------------------|
+| Button | filled, tonal, outlined, text, アイコン配置, サイズ | セマンティックカラー |
+| Input | サイズ, 状態（disabled, readonly）, アイコン配置 | ボーダースタイル, フォーカス効果 |
+| Card | レイアウト構造, elevation用CSS変数 | シャドウ, ボーダースタイル |
+| Table | 構造, striped, bordered, hover | カラーバリエーション |
+
 ## アーキテクチャ
 
 ### 階層構造
