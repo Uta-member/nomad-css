@@ -43,6 +43,23 @@
   --font-letter-spacing-wider: 0.05em;
   --font-letter-spacing-widest: 0.1em;
   --font-paragraph-margin-bottom: 1rem;
+  --table-cell-padding-y: 0.5rem;
+  --table-cell-padding-x: 0.75rem;
+  --table-cell-padding-y-sm: 0.25rem;
+  --table-cell-padding-x-sm: 0.5rem;
+  --table-bg: transparent;
+  --table-color: inherit;
+  --table-border-color: hsl(0, 0%, 85%);
+  --table-border-width: 1px;
+  --table-striped-bg: hsla(0, 0%, 0%, 0.05);
+  --table-striped-color: inherit;
+  --table-hover-bg: hsla(0, 0%, 0%, 0.075);
+  --table-hover-color: inherit;
+  --table-active-bg: hsla(0, 0%, 0%, 0.1);
+  --table-active-color: inherit;
+  --table-th-font-weight: 600;
+  --table-caption-color: hsl(0, 0%, 45%);
+  --table-group-separator-color: currentColor;
 }
 
 *,
@@ -2046,4 +2063,201 @@ label {
 .rounded-end-0 {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+.table {
+  --table-bg: var(--table-bg);
+  --table-color: var(--table-color);
+  --table-border-color: var(--table-border-color);
+  --table-striped-bg: var(--table-striped-bg);
+  --table-striped-color: var(--table-striped-color);
+  --table-hover-bg: var(--table-hover-bg);
+  --table-hover-color: var(--table-hover-color);
+  --table-active-bg: var(--table-active-bg);
+  --table-active-color: var(--table-active-color);
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: var(--table-border-color);
+  color: var(--table-color);
+  background-color: var(--table-bg);
+}
+.table > :not(caption) > * > * {
+  padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+  border-bottom-width: var(--table-border-width);
+  border-bottom-style: solid;
+  border-bottom-color: var(--table-border-color);
+}
+.table > thead > tr > th {
+  font-weight: var(--table-th-font-weight);
+  text-align: inherit;
+  vertical-align: bottom;
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > tbody > tr:last-child > * {
+  border-bottom-color: transparent;
+}
+
+.table-group-divider {
+  border-top: calc(var(--table-border-width) * 2) solid var(--table-group-separator-color);
+}
+
+.table > caption {
+  padding-top: var(--table-cell-padding-y);
+  padding-bottom: var(--table-cell-padding-y);
+  color: var(--table-caption-color);
+  text-align: left;
+  caption-side: bottom;
+}
+
+.caption-top {
+  caption-side: top;
+}
+
+.table-sm > :not(caption) > * > * {
+  padding: var(--table-cell-padding-y-sm) var(--table-cell-padding-x-sm);
+}
+
+.table-bordered > :not(caption) > * {
+  border-width: var(--table-border-width) 0;
+}
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 var(--table-border-width);
+  border-style: solid;
+  border-color: var(--table-border-color);
+}
+
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+.table-borderless > :not(:first-child) {
+  border-top-width: 0;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: var(--table-striped-bg);
+  color: var(--table-striped-color);
+}
+
+.table-striped-even > tbody > tr:nth-of-type(even) > * {
+  background-color: var(--table-striped-bg);
+  color: var(--table-striped-color);
+}
+
+.table-striped-columns > :not(caption) > tr > :nth-child(odd) {
+  background-color: var(--table-striped-bg);
+  color: var(--table-striped-color);
+}
+
+.table-striped-columns-even > :not(caption) > tr > :nth-child(even) {
+  background-color: var(--table-striped-bg);
+  color: var(--table-striped-color);
+}
+
+.table-hover > tbody > tr:hover > * {
+  background-color: var(--table-hover-bg);
+  color: var(--table-hover-color);
+}
+
+.table-active > * {
+  background-color: var(--table-active-bg);
+  color: var(--table-active-color);
+}
+
+.table > tbody > tr.active > *,
+.table > tbody > tr > td.active,
+.table > tbody > tr > th.active {
+  background-color: var(--table-active-bg);
+  color: var(--table-active-color);
+}
+
+.table-light {
+  --table-bg: var(--table-light-bg, hsl(0, 0%, 97%));
+  --table-color: var(--table-light-color, inherit);
+  --table-border-color: var(--table-light-border-color, hsl(0, 0%, 90%));
+  --table-striped-bg: var(--table-light-striped-bg, hsla(0, 0%, 0%, 0.05));
+  --table-hover-bg: var(--table-light-hover-bg, hsla(0, 0%, 0%, 0.075));
+}
+
+.table > tbody > tr.table-light > *,
+.table > tbody > tr > td.table-light,
+.table > tbody > tr > th.table-light {
+  background-color: var(--table-light-bg, hsl(0, 0%, 97%));
+}
+
+.table-dark {
+  --table-bg: var(--table-dark-bg, hsl(0, 0%, 20%));
+  --table-color: var(--table-dark-color, hsl(0, 0%, 95%));
+  --table-border-color: var(--table-dark-border-color, hsl(0, 0%, 35%));
+  --table-striped-bg: var(--table-dark-striped-bg, hsla(0, 0%, 100%, 0.05));
+  --table-hover-bg: var(--table-dark-hover-bg, hsla(0, 0%, 100%, 0.075));
+}
+
+.table > tbody > tr.table-dark > *,
+.table > tbody > tr > td.table-dark,
+.table > tbody > tr > th.table-dark {
+  background-color: var(--table-dark-bg, hsl(0, 0%, 20%));
+  color: var(--table-dark-color, hsl(0, 0%, 95%));
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .table-responsive-xxl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.table-align-top > :not(caption) > * > * {
+  vertical-align: top;
+}
+
+.table-align-middle > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+.table-align-bottom > :not(caption) > * > * {
+  vertical-align: bottom;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-auto {
+  table-layout: auto;
 }/*# sourceMappingURL=components.css.map */

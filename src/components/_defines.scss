@@ -61,4 +61,41 @@
 
     // Paragraph Margin
     --#{$font-prefix}paragraph-margin-bottom: 1rem;
+
+    // ================================
+    // Table CSS Variables
+    // ================================
+
+    // Cell Padding
+    --#{$table-prefix}cell-padding-y: 0.5rem;
+    --#{$table-prefix}cell-padding-x: 0.75rem;
+    --#{$table-prefix}cell-padding-y-sm: 0.25rem;
+    --#{$table-prefix}cell-padding-x-sm: 0.5rem;
+
+    // Colors
+    --#{$table-prefix}bg: transparent;
+    --#{$table-prefix}color: inherit;
+    --#{$table-prefix}border-color: hsl(0, 0%, 85%);
+    --#{$table-prefix}border-width: 1px;
+
+    // Striped
+    --#{$table-prefix}striped-bg: hsla(0, 0%, 0%, 0.05);
+    --#{$table-prefix}striped-color: inherit;
+
+    // Hover
+    --#{$table-prefix}hover-bg: hsla(0, 0%, 0%, 0.075);
+    --#{$table-prefix}hover-color: inherit;
+
+    // Active
+    --#{$table-prefix}active-bg: hsla(0, 0%, 0%, 0.1);
+    --#{$table-prefix}active-color: inherit;
+
+    // Header
+    --#{$table-prefix}th-font-weight: 600;
+
+    // Caption
+    --#{$table-prefix}caption-color: hsl(0, 0%, 45%);
+
+    // Group Separator
+    --#{$table-prefix}group-separator-color: currentColor;
 }
