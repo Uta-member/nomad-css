@@ -133,89 +133,29 @@
 }
 
 // ============================================
-// Filled Variant (default)
+// Filled Variant (Default)
 // ============================================
-.button.filled {
-    --#{$button-prefix}bg: var(--#{$palette-default});
-    --#{$button-prefix}bg-hover: var(--#{$palette-dark});
-    --#{$button-prefix}bg-active: var(--#{$palette-darker});
-    
-    --#{$button-prefix}color: var(--#{$palette-default-accent});
-    --#{$button-prefix}color-hover: var(--#{$palette-dark-accent});
-    --#{$button-prefix}color-active: var(--#{$palette-darker-accent});
-    
-    --#{$button-prefix}border-color: transparent;
-    --#{$button-prefix}border-color-hover: transparent;
-    --#{$button-prefix}border-color-active: transparent;
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Tonal Variant
 // ============================================
-.button.tonal {
-    --#{$button-prefix}bg: var(--#{$palette-lighter});
-    --#{$button-prefix}bg-hover: var(--#{$palette-light});
-    --#{$button-prefix}bg-active: var(--#{$palette-default});
-    
-    --#{$button-prefix}color: var(--#{$palette-darker});
-    --#{$button-prefix}color-hover: var(--#{$palette-darker});
-    --#{$button-prefix}color-active: var(--#{$palette-default-accent});
-    
-    --#{$button-prefix}border-color: transparent;
-    --#{$button-prefix}border-color-hover: transparent;
-    --#{$button-prefix}border-color-active: transparent;
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Outlined Variant
 // ============================================
-.button.outlined {
-    --#{$button-prefix}bg: transparent;
-    --#{$button-prefix}bg-hover: var(--#{$palette-lighter});
-    --#{$button-prefix}bg-active: var(--#{$palette-light});
-    
-    --#{$button-prefix}color: var(--#{$palette-default});
-    --#{$button-prefix}color-hover: var(--#{$palette-dark});
-    --#{$button-prefix}color-active: var(--#{$palette-darker});
-    
-    --#{$button-prefix}border-color: var(--#{$palette-default});
-    --#{$button-prefix}border-color-hover: var(--#{$palette-dark});
-    --#{$button-prefix}border-color-active: var(--#{$palette-darker});
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Text Variant
 // ============================================
-.button.text {
-    --#{$button-prefix}bg: transparent;
-    --#{$button-prefix}bg-hover: var(--#{$palette-lighter});
-    --#{$button-prefix}bg-active: var(--#{$palette-light});
-    
-    --#{$button-prefix}color: var(--#{$palette-default});
-    --#{$button-prefix}color-hover: var(--#{$palette-dark});
-    --#{$button-prefix}color-active: var(--#{$palette-darker});
-    
-    --#{$button-prefix}border-color: transparent;
-    --#{$button-prefix}border-color-hover: transparent;
-    --#{$button-prefix}border-color-active: transparent;
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Size Variants
 // ============================================
-.button.button-sm {
-    --#{$button-prefix}padding-x: 0.75rem;
-    --#{$button-prefix}padding-y: 0.25rem;
-    --#{$button-prefix}font-size: 0.75rem;
-    --#{$button-prefix}gap: 0.375rem;
-}
-
-.button.button-lg {
-    --#{$button-prefix}padding-x: 1.5rem;
-    --#{$button-prefix}padding-y: 0.75rem;
-    --#{$button-prefix}font-size: 1rem;
-    --#{$button-prefix}gap: 0.625rem;
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Icon-only Button
@@ -224,16 +164,6 @@
     --#{$button-prefix}padding-x: 0.5rem;
     --#{$button-prefix}padding-y: 0.5rem;
     aspect-ratio: 1;
-    
-    &.button-sm {
-        --#{$button-prefix}padding-x: 0.375rem;
-        --#{$button-prefix}padding-y: 0.375rem;
-    }
-    
-    &.button-lg {
-        --#{$button-prefix}padding-x: 0.75rem;
-        --#{$button-prefix}padding-y: 0.75rem;
-    }
 }
 
 // ============================================

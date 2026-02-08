@@ -154,3 +154,174 @@ $semantic-colors: (
         color: var(--#{prefixes.$palette-darker-accent});
     }
 }
+
+// ============================================
+// Shared Component Variants
+// ============================================
+
+// --------------------------------------------
+// Button Variants
+// --------------------------------------------
+
+// Filled Variant
+.button.filled {
+    --#{prefixes.$button-prefix}bg: var(--#{prefixes.$palette-default});
+    --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-dark});
+    --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-darker});
+    
+    --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default-accent});
+    --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-dark-accent});
+    --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-darker-accent});
+    
+    --#{prefixes.$button-prefix}border-color: transparent;
+    --#{prefixes.$button-prefix}border-color-hover: transparent;
+    --#{prefixes.$button-prefix}border-color-active: transparent;
+}
+
+// Tonal Variant
+.button.tonal {
+    --#{prefixes.$button-prefix}bg: var(--#{prefixes.$palette-lighter});
+    --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-light});
+    --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-default});
+    
+    --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-darker});
+    --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-darker});
+    --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-default-accent});
+    
+    --#{prefixes.$button-prefix}border-color: transparent;
+    --#{prefixes.$button-prefix}border-color-hover: transparent;
+    --#{prefixes.$button-prefix}border-color-active: transparent;
+}
+
+// Outlined Variant
+.button.outlined {
+    --#{prefixes.$button-prefix}bg: transparent;
+    --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-lighter});
+    --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-light});
+    
+    --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default});
+    --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-dark});
+    --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-darker});
+    
+    --#{prefixes.$button-prefix}border-color: var(--#{prefixes.$palette-default});
+    --#{prefixes.$button-prefix}border-color-hover: var(--#{prefixes.$palette-dark});
+    --#{prefixes.$button-prefix}border-color-active: var(--#{prefixes.$palette-darker});
+}
+
+// Text Variant
+.button.text {
+    --#{prefixes.$button-prefix}bg: transparent;
+    --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-lighter});
+    --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-light});
+    
+    --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default});
+    --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-dark});
+    --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-darker});
+    
+    --#{prefixes.$button-prefix}border-color: transparent;
+    --#{prefixes.$button-prefix}border-color-hover: transparent;
+    --#{prefixes.$button-prefix}border-color-active: transparent;
+}
+
+// Button Size Variants
+.button.button-sm {
+    --#{prefixes.$button-prefix}padding-x: 0.75rem;
+    --#{prefixes.$button-prefix}padding-y: 0.25rem;
+    --#{prefixes.$button-prefix}font-size: 0.75rem;
+    --#{prefixes.$button-prefix}gap: 0.375rem;
+}
+
+.button.button-lg {
+    --#{prefixes.$button-prefix}padding-x: 1.5rem;
+    --#{prefixes.$button-prefix}padding-y: 0.75rem;
+    --#{prefixes.$button-prefix}font-size: 1rem;
+    --#{prefixes.$button-prefix}gap: 0.625rem;
+}
+
+// Icon-only size adjustments
+.button.icon-only.button-sm {
+    --#{prefixes.$button-prefix}padding-x: 0.375rem;
+    --#{prefixes.$button-prefix}padding-y: 0.375rem;
+}
+
+.button.icon-only.button-lg {
+    --#{prefixes.$button-prefix}padding-x: 0.75rem;
+    --#{prefixes.$button-prefix}padding-y: 0.75rem;
+}
+
+// --------------------------------------------
+// Input & Select Variants
+// --------------------------------------------
+
+// Size Variants
+.input-sm, .select-sm {
+    --#{prefixes.$input-prefix}height: 2rem;
+    --#{prefixes.$input-prefix}padding-x: 0.5rem;
+    --#{prefixes.$input-prefix}padding-y: 0.25rem;
+    --#{prefixes.$input-prefix}font-size: 0.875rem;
+    
+    --#{prefixes.$select-prefix}height: 2rem;
+    --#{prefixes.$select-prefix}padding-x: 0.5rem;
+    --#{prefixes.$select-prefix}padding-y: 0.25rem;
+    --#{prefixes.$select-prefix}font-size: 0.875rem;
+}
+
+.input-lg, .select-lg {
+    --#{prefixes.$input-prefix}height: 3rem;
+    --#{prefixes.$input-prefix}padding-x: 1rem;
+    --#{prefixes.$input-prefix}padding-y: 0.75rem;
+    --#{prefixes.$input-prefix}font-size: 1.125rem;
+    
+    --#{prefixes.$select-prefix}height: 3rem;
+    --#{prefixes.$select-prefix}padding-x: 1rem;
+    --#{prefixes.$select-prefix}padding-y: 0.75rem;
+    --#{prefixes.$select-prefix}font-size: 1.125rem;
+}
+
+// Filled Variant
+.input-filled, .select-filled {
+    --#{prefixes.$input-prefix}bg: var(--#{prefixes.$neutral-prefix}2);
+    --#{prefixes.$input-prefix}bg-hover: var(--#{prefixes.$neutral-prefix}3);
+    --#{prefixes.$input-prefix}bg-focus: var(--#{prefixes.$neutral-prefix}1);
+    --#{prefixes.$input-prefix}border-color: transparent;
+    --#{prefixes.$input-prefix}border-color-hover: transparent;
+    
+    --#{prefixes.$select-prefix}bg: var(--#{prefixes.$neutral-prefix}2);
+    --#{prefixes.$select-prefix}bg-hover: var(--#{prefixes.$neutral-prefix}3);
+    --#{prefixes.$select-prefix}bg-focus: var(--#{prefixes.$neutral-prefix}1);
+    --#{prefixes.$select-prefix}border-color: transparent;
+    --#{prefixes.$select-prefix}border-color-hover: transparent;
+}
+
+// Underline Variant
+.input-underline, .select-underline {
+    --#{prefixes.$input-prefix}border-radius: 0;
+    --#{prefixes.$select-prefix}border-radius: 0;
+    
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: var(--#{prefixes.$input-prefix}border-width);
+    
+    &:focus {
+        box-shadow: 0 2px 0 0 var(--#{prefixes.$input-prefix}border-color-focus);
+    }
+}
+
+// Borderless Variant
+.input-borderless, .select-borderless {
+    --#{prefixes.$input-prefix}border-width: 0;
+    --#{prefixes.$select-prefix}border-width: 0;
+    
+    --#{prefixes.$input-prefix}border-color: transparent;
+    --#{prefixes.$input-prefix}border-color-hover: transparent;
+    --#{prefixes.$input-prefix}border-color-focus: transparent;
+    
+    --#{prefixes.$select-prefix}border-color: transparent;
+    --#{prefixes.$select-prefix}border-color-hover: transparent;
+    --#{prefixes.$select-prefix}border-color-focus: transparent;
+    
+    &:focus {
+        box-shadow: none;
+    }
+}

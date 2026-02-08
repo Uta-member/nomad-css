@@ -823,80 +823,10 @@ label {
   flex-shrink: 0;
 }
 
-.button.filled {
-  --button-bg: var(--palette-default);
-  --button-bg-hover: var(--palette-dark);
-  --button-bg-active: var(--palette-darker);
-  --button-color: var(--palette-default-accent);
-  --button-color-hover: var(--palette-dark-accent);
-  --button-color-active: var(--palette-darker-accent);
-  --button-border-color: transparent;
-  --button-border-color-hover: transparent;
-  --button-border-color-active: transparent;
-}
-
-.button.tonal {
-  --button-bg: var(--palette-lighter);
-  --button-bg-hover: var(--palette-light);
-  --button-bg-active: var(--palette-default);
-  --button-color: var(--palette-darker);
-  --button-color-hover: var(--palette-darker);
-  --button-color-active: var(--palette-default-accent);
-  --button-border-color: transparent;
-  --button-border-color-hover: transparent;
-  --button-border-color-active: transparent;
-}
-
-.button.outlined {
-  --button-bg: transparent;
-  --button-bg-hover: var(--palette-lighter);
-  --button-bg-active: var(--palette-light);
-  --button-color: var(--palette-default);
-  --button-color-hover: var(--palette-dark);
-  --button-color-active: var(--palette-darker);
-  --button-border-color: var(--palette-default);
-  --button-border-color-hover: var(--palette-dark);
-  --button-border-color-active: var(--palette-darker);
-}
-
-.button.text {
-  --button-bg: transparent;
-  --button-bg-hover: var(--palette-lighter);
-  --button-bg-active: var(--palette-light);
-  --button-color: var(--palette-default);
-  --button-color-hover: var(--palette-dark);
-  --button-color-active: var(--palette-darker);
-  --button-border-color: transparent;
-  --button-border-color-hover: transparent;
-  --button-border-color-active: transparent;
-}
-
-.button.button-sm {
-  --button-padding-x: 0.75rem;
-  --button-padding-y: 0.25rem;
-  --button-font-size: 0.75rem;
-  --button-gap: 0.375rem;
-}
-
-.button.button-lg {
-  --button-padding-x: 1.5rem;
-  --button-padding-y: 0.75rem;
-  --button-font-size: 1rem;
-  --button-gap: 0.625rem;
-}
-
 .button.icon-only {
   --button-padding-x: 0.5rem;
   --button-padding-y: 0.5rem;
   aspect-ratio: 1;
-}
-.button.icon-only.button-sm {
-  --button-padding-x: 0.375rem;
-  --button-padding-y: 0.375rem;
-}
-.button.icon-only.button-lg {
-  --button-padding-x: 0.75rem;
-  --button-padding-y: 0.75rem;
 }
 
 .button.button-block {
@@ -1577,48 +1507,6 @@ textarea.input-resize-both {
   resize: both;
 }
 
-.input-sm {
-  --input-height: 2rem;
-  --input-padding-x: 0.5rem;
-  --input-padding-y: 0.25rem;
-  --input-font-size: 0.875rem;
-}
-
-.input-lg {
-  --input-height: 3rem;
-  --input-padding-x: 1rem;
-  --input-padding-y: 0.75rem;
-  --input-font-size: 1.125rem;
-}
-
-.input-borderless {
-  --input-border-width: 0;
-  --input-border-color: transparent;
-  --input-border-color-hover: transparent;
-  --input-border-color-focus: transparent;
-}
-.input-borderless:focus {
-  box-shadow: none;
-}
-
-.input-underline {
-  --input-border-radius: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.input-underline:focus {
-  box-shadow: 0 2px 0 0 var(--input-border-color-focus);
-}
-
-.input-filled {
-  --input-bg: var(--neutral-2);
-  --input-bg-hover: var(--neutral-3);
-  --input-bg-focus: var(--neutral-1);
-  --input-border-color: transparent;
-  --input-border-color-hover: transparent;
-}
-
 .input-group {
   display: flex;
   align-items: stretch;
@@ -1907,52 +1795,6 @@ select.select[multiple] option {
 .select[multiple] option:checked,
 select.select[multiple] option:checked {
   background: linear-gradient(0deg, var(--neutral-3) 0%, var(--neutral-3) 100%);
-}
-
-.select-sm {
-  --select-height: 2rem;
-  --select-padding-x: 0.5rem;
-  --select-padding-y: 0.25rem;
-  --select-font-size: 0.875rem;
-  --select-arrow-size: 0.875em;
-  --select-arrow-padding: 2rem;
-}
-
-.select-lg {
-  --select-height: 3rem;
-  --select-padding-x: 1rem;
-  --select-padding-y: 0.75rem;
-  --select-font-size: 1.125rem;
-  --select-arrow-size: 1.125em;
-  --select-arrow-padding: 3rem;
-}
-
-.select-filled {
-  --select-bg: var(--neutral-2);
-  --select-bg-hover: var(--neutral-3);
-  --select-bg-focus: var(--neutral-1);
-  --select-border-color: transparent;
-  --select-border-color-hover: transparent;
-}
-
-.select-underline {
-  --select-border-radius: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.select-underline:focus {
-  box-shadow: 0 2px 0 0 var(--select-border-color-focus);
-}
-
-.select-borderless {
-  --select-border-width: 0;
-  --select-border-color: transparent;
-  --select-border-color-hover: transparent;
-  --select-border-color-focus: transparent;
-}
-.select-borderless:focus {
-  box-shadow: none;
 }
 
 .select-valid,

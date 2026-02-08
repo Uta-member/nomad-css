@@ -278,62 +278,22 @@ select.select[multiple] {
 // ============================================
 // Size Variants
 // ============================================
-.select-sm {
-    --#{$select-prefix}height: 2rem;
-    --#{$select-prefix}padding-x: 0.5rem;
-    --#{$select-prefix}padding-y: 0.25rem;
-    --#{$select-prefix}font-size: 0.875rem;
-    --#{$select-prefix}arrow-size: 0.875em;
-    --#{$select-prefix}arrow-padding: 2rem;
-}
-
-.select-lg {
-    --#{$select-prefix}height: 3rem;
-    --#{$select-prefix}padding-x: 1rem;
-    --#{$select-prefix}padding-y: 0.75rem;
-    --#{$select-prefix}font-size: 1.125rem;
-    --#{$select-prefix}arrow-size: 1.125em;
-    --#{$select-prefix}arrow-padding: 3rem;
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Filled Variant
 // ============================================
-.select-filled {
-    --#{$select-prefix}bg: var(--#{$neutral-prefix}2);
-    --#{$select-prefix}bg-hover: var(--#{$neutral-prefix}3);
-    --#{$select-prefix}bg-focus: var(--#{$neutral-prefix}1);
-    --#{$select-prefix}border-color: transparent;
-    --#{$select-prefix}border-color-hover: transparent;
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Underline Variant
 // ============================================
-.select-underline {
-    --#{$select-prefix}border-radius: 0;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    
-    &:focus {
-        box-shadow: 0 2px 0 0 var(--#{$select-prefix}border-color-focus);
-    }
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Borderless Variant
 // ============================================
-.select-borderless {
-    --#{$select-prefix}border-width: 0;
-    --#{$select-prefix}border-color: transparent;
-    --#{$select-prefix}border-color-hover: transparent;
-    --#{$select-prefix}border-color-focus: transparent;
-    
-    &:focus {
-        box-shadow: none;
-    }
-}
+// -> Managed in themes/contract
 
 // ============================================
 // Semantic Color Support (Focus Ring Color)
