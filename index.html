@@ -3,158 +3,718 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nomad-css</title>
+    <title>nomad-css Component Showcase</title>
     <link rel="stylesheet" href="dist/css/fluent2.css">
     <link rel="stylesheet" href="dist/css/material3.css">
+    <style>
+        .demo-section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .demo-section > h2 {
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #333;
+        }
+        .demo-row {
+            margin-bottom: 1rem;
+        }
+        .demo-label {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+        .demo-box {
+            padding: 1rem;
+            background: #f5f5f5;
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            z-index: 100;
+        }
+        nav a {
+            margin-right: 1rem;
+        }
+        .theme-switcher {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to nomad-css</h1>
-    <p>This is a sample page to demonstrate the nomad-css styles.</p>
-    <button class="button">Default Button</button>
-    <button class="button primary">Primary Button</button>
-    <button class="button secondary">Secondary Button</button>
-    <button class="button tertiary">Tertiary Button</button>
-    <button class="button success">Success Button</button>
-    <button class="button warning">Warning Button</button>
-    <button class="button danger">Danger Button</button>
-    <button class="button info">Info Button</button>
 
-    <section>
-        <h2>Semantic Colors</h2>
-        <div style="display: flex; gap: 20px;">
-            <div class="primary" style="width: 200px;">
-                <h3>Primary</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+<nav>
+    <strong>nomad-css</strong> |
+    <a href="#typography">Typography</a>
+    <a href="#buttons">Buttons</a>
+    <a href="#tables">Tables</a>
+    <a href="#layout">Layout</a>
+    <a href="#borders">Borders</a>
+    <a href="#colors">Colors</a>
+</nav>
+
+<main>
+
+<!-- Theme Switcher -->
+<div class="theme-switcher">
+    <strong>Theme:</strong>
+    <label><input type="radio" name="theme" value="fluent2" onchange="document.documentElement.dataset.theme='fluent2'"> Fluent 2</label>
+    <label><input type="radio" name="theme" value="material3" checked onchange="document.documentElement.dataset.theme='material3'"> Material 3</label>
+</div>
+
+<!-- ============================================ -->
+<!-- Typography -->
+<!-- ============================================ -->
+<section id="typography" class="demo-section">
+    <h2>Typography</h2>
+
+    <!-- Headings -->
+    <div class="demo-row">
+        <div class="demo-label">Heading Elements (h1-h6)</div>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    </div>
+
+    <!-- Heading Classes -->
+    <div class="demo-row">
+        <div class="demo-label">Heading Classes (.h1-.h6)</div>
+        <p class="h1">Class .h1</p>
+        <p class="h2">Class .h2</p>
+        <p class="h3">Class .h3</p>
+        <p class="h4">Class .h4</p>
+        <p class="h5">Class .h5</p>
+        <p class="h6">Class .h6</p>
+    </div>
+
+    <!-- Display Headings -->
+    <div class="demo-row">
+        <div class="demo-label">Display Headings (.display-1 to .display-6)</div>
+        <p class="display-6">Display 6</p>
+        <p class="display-5">Display 5</p>
+        <p class="display-4">Display 4</p>
+    </div>
+
+    <!-- Lead & Small -->
+    <div class="demo-row">
+        <div class="demo-label">Lead & Small Text</div>
+        <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+        <p>This is a normal paragraph with <small>small text</small> and <span class="small">.small class</span>.</p>
+    </div>
+
+    <!-- Text Alignment -->
+    <div class="demo-row">
+        <div class="demo-label">Text Alignment</div>
+        <p class="text-start demo-box">.text-start - Left aligned text</p>
+        <p class="text-center demo-box">.text-center - Center aligned text</p>
+        <p class="text-end demo-box">.text-end - Right aligned text</p>
+        <p class="text-justify demo-box">.text-justify - Justified text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <!-- Text Transform -->
+    <div class="demo-row">
+        <div class="demo-label">Text Transform</div>
+        <p class="text-lowercase">.text-lowercase - LOWERCASED TEXT</p>
+        <p class="text-uppercase">.text-uppercase - uppercased text</p>
+        <p class="text-capitalize">.text-capitalize - capitalized text example</p>
+    </div>
+
+    <!-- Font Weight -->
+    <div class="demo-row">
+        <div class="demo-label">Font Weight</div>
+        <p class="fw-thin">.fw-thin (100)</p>
+        <p class="fw-light">.fw-light (300)</p>
+        <p class="fw-normal">.fw-normal (400)</p>
+        <p class="fw-medium">.fw-medium (500)</p>
+        <p class="fw-semibold">.fw-semibold (600)</p>
+        <p class="fw-bold">.fw-bold (700)</p>
+        <p class="fw-black">.fw-black (900)</p>
+    </div>
+
+    <!-- Font Style -->
+    <div class="demo-row">
+        <div class="demo-label">Font Style</div>
+        <p class="fst-italic">.fst-italic - Italic text</p>
+        <p class="fst-normal">.fst-normal - Normal text</p>
+    </div>
+
+    <!-- Font Size -->
+    <div class="demo-row">
+        <div class="demo-label">Font Size</div>
+        <span class="fs-xs">.fs-xs</span>
+        <span class="fs-sm">.fs-sm</span>
+        <span class="fs-md">.fs-md</span>
+        <span class="fs-lg">.fs-lg</span>
+        <span class="fs-xl">.fs-xl</span>
+        <span class="fs-2xl">.fs-2xl</span>
+    </div>
+
+    <!-- Line Height -->
+    <div class="demo-row">
+        <div class="demo-label">Line Height</div>
+        <p class="lh-none demo-box" style="max-width:300px">.lh-none - Line height 1.</p>
+        <p class="lh-tight demo-box" style="max-width:300px">.lh-tight - Line height 1.25.</p>
+        <p class="lh-normal demo-box" style="max-width:300px">.lh-normal - Line height 1.5.</p>
+        <p class="lh-loose demo-box" style="max-width:300px">.lh-loose - Line height 2.</p>
+    </div>
+
+    <!-- Letter Spacing -->
+    <div class="demo-row">
+        <div class="demo-label">Letter Spacing</div>
+        <p class="ls-tighter">.ls-tighter - Tighter letter spacing</p>
+        <p class="ls-normal">.ls-normal - Normal letter spacing</p>
+        <p class="ls-wider">.ls-wider - Wider letter spacing</p>
+        <p class="ls-widest">.ls-widest - Widest letter spacing</p>
+    </div>
+
+    <!-- Text Decoration -->
+    <div class="demo-row">
+        <div class="demo-label">Text Decoration</div>
+        <p class="text-decoration-underline">.text-decoration-underline</p>
+        <p class="text-decoration-line-through">.text-decoration-line-through</p>
+        <a href="#" class="text-decoration-none">.text-decoration-none (link)</a>
+    </div>
+
+    <!-- Text Wrap -->
+    <div class="demo-row">
+        <div class="demo-label">Text Wrap & Overflow</div>
+        <p class="text-nowrap demo-box" style="width:200px;overflow:hidden">.text-nowrap - This text will not wrap</p>
+        <p class="text-truncate demo-box" style="width:200px">.text-truncate - This text will be truncated with ellipsis</p>
+    </div>
+
+    <!-- Font Family -->
+    <div class="demo-row">
+        <div class="demo-label">Font Family</div>
+        <p class="font-sans">.font-sans - Sans-serif font family</p>
+        <p class="font-serif">.font-serif - Serif font family</p>
+        <p class="font-mono">.font-mono - Monospace font family</p>
+    </div>
+
+    <!-- Blockquote -->
+    <div class="demo-row">
+        <div class="demo-label">Blockquote</div>
+        <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+    </div>
+
+    <!-- Lists -->
+    <div class="demo-row">
+        <div class="demo-label">List Styles</div>
+        <div class="d-flex" style="gap: 2rem;">
+            <div>
+                <p class="fw-semibold">Normal List</p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div>
+                <p class="fw-semibold">.list-unstyled</p>
+                <ul class="list-unstyled">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div>
+                <p class="fw-semibold">.list-inline</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">Item 1</li>
+                    <li class="list-inline-item">Item 2</li>
+                    <li class="list-inline-item">Item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mark -->
+    <div class="demo-row">
+        <div class="demo-label">Mark / Highlight</div>
+        <p>You can use the mark element or <mark>highlight text</mark> like this, or use the <span class="mark">.mark class</span>.</p>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Buttons -->
+<!-- ============================================ -->
+<section id="buttons" class="demo-section">
+    <h2>Buttons</h2>
+
+    <div class="demo-row">
+        <div class="demo-label">Semantic Color Buttons</div>
+        <button class="button">Default</button>
+        <button class="button primary">Primary</button>
+        <button class="button secondary">Secondary</button>
+        <button class="button tertiary">Tertiary</button>
+        <button class="button success">Success</button>
+        <button class="button warning">Warning</button>
+        <button class="button danger">Danger</button>
+        <button class="button info">Info</button>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Tables -->
+<!-- ============================================ -->
+<section id="tables" class="demo-section">
+    <h2>Tables</h2>
+
+    <!-- Basic Table -->
+    <div class="demo-row">
+        <div class="demo-label">Basic Table (.table)</div>
+        <table class="table">
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Email</th><th>Role</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>Admin</td></tr>
+                <tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>User</td></tr>
+                <tr><td>3</td><td>Bob Wilson</td><td>bob@example.com</td><td>Editor</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Striped Table -->
+    <div class="demo-row">
+        <div class="demo-label">Striped Table (.table.table-striped)</div>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Email</th><th>Role</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>Admin</td></tr>
+                <tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>User</td></tr>
+                <tr><td>3</td><td>Bob Wilson</td><td>bob@example.com</td><td>Editor</td></tr>
+                <tr><td>4</td><td>Alice Brown</td><td>alice@example.com</td><td>User</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bordered Table -->
+    <div class="demo-row">
+        <div class="demo-label">Bordered Table (.table.table-bordered)</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Email</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+                <tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Hover Table -->
+    <div class="demo-row">
+        <div class="demo-label">Hover Table (.table.table-hover)</div>
+        <table class="table table-hover">
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Email</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+                <tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+                <tr><td>3</td><td>Bob Wilson</td><td>bob@example.com</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Small Table -->
+    <div class="demo-row">
+        <div class="demo-label">Small Table (.table.table-sm)</div>
+        <table class="table table-sm">
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Email</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+                <tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Color Variants -->
+    <div class="demo-row">
+        <div class="demo-label">Table Color Variants</div>
+        <table class="table table-primary"><tr><td>.table-primary</td><td>Primary colored table</td></tr></table>
+        <table class="table table-secondary"><tr><td>.table-secondary</td><td>Secondary colored table</td></tr></table>
+        <table class="table table-success"><tr><td>.table-success</td><td>Success colored table</td></tr></table>
+        <table class="table table-warning"><tr><td>.table-warning</td><td>Warning colored table</td></tr></table>
+        <table class="table table-danger"><tr><td>.table-danger</td><td>Danger colored table</td></tr></table>
+        <table class="table table-info"><tr><td>.table-info</td><td>Info colored table</td></tr></table>
+        <table class="table table-light"><tr><td>.table-light</td><td>Light colored table</td></tr></table>
+        <table class="table table-dark"><tr><td>.table-dark</td><td>Dark colored table</td></tr></table>
+    </div>
+
+    <!-- Row Color Variants -->
+    <div class="demo-row">
+        <div class="demo-label">Row Color Variants</div>
+        <table class="table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr class="table-primary"><td>.table-primary</td><td>Primary row</td></tr>
+                <tr class="table-secondary"><td>.table-secondary</td><td>Secondary row</td></tr>
+                <tr class="table-success"><td>.table-success</td><td>Success row</td></tr>
+                <tr class="table-warning"><td>.table-warning</td><td>Warning row</td></tr>
+                <tr class="table-danger"><td>.table-danger</td><td>Danger row</td></tr>
+                <tr class="table-info"><td>.table-info</td><td>Info row</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Responsive Table -->
+    <div class="demo-row">
+        <div class="demo-label">Responsive Table (.table-responsive)</div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead><tr><th>Col 1</th><th>Col 2</th><th>Col 3</th><th>Col 4</th><th>Col 5</th><th>Col 6</th><th>Col 7</th><th>Col 8</th></tr></thead>
+                <tbody><tr><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td></tr></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Layout / Container -->
+<!-- ============================================ -->
+<section id="layout" class="demo-section">
+    <h2>Layout Utilities</h2>
+
+    <!-- Display -->
+    <div class="demo-row">
+        <div class="demo-label">Display</div>
+        <span class="d-block demo-box">.d-block</span>
+        <span class="d-inline demo-box">.d-inline</span>
+        <span class="d-inline-block demo-box">.d-inline-block</span>
+    </div>
+
+    <!-- Flexbox -->
+    <div class="demo-row">
+        <div class="demo-label">Flexbox (.d-flex)</div>
+        <div class="d-flex demo-box" style="gap: 0.5rem;">
+            <div class="demo-box">Item 1</div>
+            <div class="demo-box">Item 2</div>
+            <div class="demo-box">Item 3</div>
+        </div>
+    </div>
+
+    <!-- Flex Direction -->
+    <div class="demo-row">
+        <div class="demo-label">Flex Direction</div>
+        <div class="d-flex" style="gap: 1rem;">
+            <div>
+                <p class="small">.flex-row</p>
+                <div class="d-flex flex-row demo-box" style="gap:4px">
+                    <span class="demo-box">1</span><span class="demo-box">2</span><span class="demo-box">3</span>
+                </div>
+            </div>
+            <div>
+                <p class="small">.flex-column</p>
+                <div class="d-flex flex-column demo-box" style="gap:4px">
+                    <span class="demo-box">1</span><span class="demo-box">2</span><span class="demo-box">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Justify Content -->
+    <div class="demo-row">
+        <div class="demo-label">Justify Content</div>
+        <p class="small">.justify-start</p>
+        <div class="d-flex justify-start demo-box" style="gap:4px">
+            <span class="demo-box">1</span><span class="demo-box">2</span><span class="demo-box">3</span>
+        </div>
+        <p class="small">.justify-center</p>
+        <div class="d-flex justify-center demo-box" style="gap:4px">
+            <span class="demo-box">1</span><span class="demo-box">2</span><span class="demo-box">3</span>
+        </div>
+        <p class="small">.justify-end</p>
+        <div class="d-flex justify-end demo-box" style="gap:4px">
+            <span class="demo-box">1</span><span class="demo-box">2</span><span class="demo-box">3</span>
+        </div>
+        <p class="small">.justify-between</p>
+        <div class="d-flex justify-between demo-box">
+            <span class="demo-box">1</span><span class="demo-box">2</span><span class="demo-box">3</span>
+        </div>
+    </div>
+
+    <!-- Align Items -->
+    <div class="demo-row">
+        <div class="demo-label">Align Items</div>
+        <div class="d-flex" style="gap:1rem">
+            <div>
+                <p class="small">.align-items-start</p>
+                <div class="d-flex align-items-start demo-box" style="height:80px;gap:4px">
+                    <span class="demo-box">1</span><span class="demo-box" style="padding:1.5rem">2</span><span class="demo-box">3</span>
+                </div>
+            </div>
+            <div>
+                <p class="small">.align-items-center</p>
+                <div class="d-flex align-items-center demo-box" style="height:80px;gap:4px">
+                    <span class="demo-box">1</span><span class="demo-box" style="padding:1.5rem">2</span><span class="demo-box">3</span>
+                </div>
+            </div>
+            <div>
+                <p class="small">.align-items-end</p>
+                <div class="d-flex align-items-end demo-box" style="height:80px;gap:4px">
+                    <span class="demo-box">1</span><span class="demo-box" style="padding:1.5rem">2</span><span class="demo-box">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flex Wrap -->
+    <div class="demo-row">
+        <div class="demo-label">Flex Wrap (.flex-wrap)</div>
+        <div class="d-flex flex-wrap demo-box" style="width:300px;gap:4px">
+            <span class="demo-box">Item 1</span><span class="demo-box">Item 2</span><span class="demo-box">Item 3</span>
+            <span class="demo-box">Item 4</span><span class="demo-box">Item 5</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Borders -->
+<!-- ============================================ -->
+<section id="borders" class="demo-section">
+    <h2>Borders</h2>
+
+    <!-- Border -->
+    <div class="demo-row">
+        <div class="demo-label">Border</div>
+        <div class="d-flex" style="gap:1rem">
+            <span class="border demo-box">.border</span>
+            <span class="border-top demo-box">.border-top</span>
+            <span class="border-end demo-box">.border-end</span>
+            <span class="border-bottom demo-box">.border-bottom</span>
+            <span class="border-start demo-box">.border-start</span>
+        </div>
+    </div>
+
+    <!-- Border Color -->
+    <div class="demo-row">
+        <div class="demo-label">Border with Semantic Colors</div>
+        <div class="d-flex flex-wrap" style="gap:1rem">
+            <span class="border primary demo-box">.border.primary</span>
+            <span class="border secondary demo-box">.border.secondary</span>
+            <span class="border success demo-box">.border.success</span>
+            <span class="border warning demo-box">.border.warning</span>
+            <span class="border danger demo-box">.border.danger</span>
+            <span class="border info demo-box">.border.info</span>
+        </div>
+    </div>
+
+    <!-- Border Width -->
+    <div class="demo-row">
+        <div class="demo-label">Border Width</div>
+        <div class="d-flex" style="gap:1rem">
+            <span class="border border-1 demo-box">.border-1</span>
+            <span class="border border-2 demo-box">.border-2</span>
+            <span class="border border-3 demo-box">.border-3</span>
+            <span class="border border-4 demo-box">.border-4</span>
+            <span class="border border-5 demo-box">.border-5</span>
+        </div>
+    </div>
+
+    <!-- Border Radius -->
+    <div class="demo-row">
+        <div class="demo-label">Border Radius</div>
+        <div class="d-flex flex-wrap" style="gap:1rem">
+            <span class="border rounded-0 demo-box">.rounded-0</span>
+            <span class="border rounded-1 demo-box">.rounded-1</span>
+            <span class="border rounded-2 demo-box">.rounded-2</span>
+            <span class="border rounded-3 demo-box">.rounded-3</span>
+            <span class="border rounded-4 demo-box">.rounded-4</span>
+            <span class="border rounded-5 demo-box">.rounded-5</span>
+        </div>
+    </div>
+
+    <!-- Special Radius -->
+    <div class="demo-row">
+        <div class="demo-label">Special Border Radius</div>
+        <div class="d-flex flex-wrap" style="gap:1rem">
+            <span class="border rounded demo-box">.rounded</span>
+            <span class="border rounded-circle demo-box" style="width:80px;height:80px;display:flex;align-items:center;justify-content:center">.rounded-circle</span>
+            <span class="border rounded-pill demo-box" style="padding:1rem 2rem">.rounded-pill</span>
+        </div>
+    </div>
+
+    <!-- Directional Radius -->
+    <div class="demo-row">
+        <div class="demo-label">Directional Border Radius</div>
+        <div class="d-flex flex-wrap" style="gap:1rem">
+            <span class="border rounded-top demo-box">.rounded-top</span>
+            <span class="border rounded-end demo-box">.rounded-end</span>
+            <span class="border rounded-bottom demo-box">.rounded-bottom</span>
+            <span class="border rounded-start demo-box">.rounded-start</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Semantic Colors -->
+<!-- ============================================ -->
+<section id="colors" class="demo-section">
+    <h2>Semantic Colors</h2>
+
+    <div class="demo-row">
+        <div class="demo-label">Color Palettes (0-10)</div>
+        <div class="d-flex flex-wrap" style="gap: 20px;">
+            <div class="primary" style="width: 160px;">
+                <h4>Primary</h4>
+                <div class="container-color-0">0</div>
+                <div class="container-color-1">1</div>
+                <div class="container-color-2">2</div>
+                <div class="container-color-3">3</div>
+                <div class="container-color-4">4</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-6">6</div>
+                <div class="container-color-7">7</div>
+                <div class="container-color-8">8</div>
+                <div class="container-color-9">9</div>
+                <div class="container-color-10">10</div>
+            </div>
+            <div class="secondary" style="width: 160px;">
+                <h4>Secondary</h4>
+                <div class="container-color-0">0</div>
+                <div class="container-color-1">1</div>
+                <div class="container-color-2">2</div>
+                <div class="container-color-3">3</div>
+                <div class="container-color-4">4</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-6">6</div>
+                <div class="container-color-7">7</div>
+                <div class="container-color-8">8</div>
+                <div class="container-color-9">9</div>
+                <div class="container-color-10">10</div>
+            </div>
+            <div class="success" style="width: 160px;">
+                <h4>Success</h4>
+                <div class="container-color-0">0</div>
+                <div class="container-color-1">1</div>
+                <div class="container-color-2">2</div>
+                <div class="container-color-3">3</div>
+                <div class="container-color-4">4</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-6">6</div>
+                <div class="container-color-7">7</div>
+                <div class="container-color-8">8</div>
+                <div class="container-color-9">9</div>
+                <div class="container-color-10">10</div>
+            </div>
+            <div class="warning" style="width: 160px;">
+                <h4>Warning</h4>
+                <div class="container-color-0">0</div>
+                <div class="container-color-1">1</div>
+                <div class="container-color-2">2</div>
+                <div class="container-color-3">3</div>
+                <div class="container-color-4">4</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-6">6</div>
+                <div class="container-color-7">7</div>
+                <div class="container-color-8">8</div>
+                <div class="container-color-9">9</div>
+                <div class="container-color-10">10</div>
+            </div>
+            <div class="danger" style="width: 160px;">
+                <h4>Danger</h4>
+                <div class="container-color-0">0</div>
+                <div class="container-color-1">1</div>
+                <div class="container-color-2">2</div>
+                <div class="container-color-3">3</div>
+                <div class="container-color-4">4</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-6">6</div>
+                <div class="container-color-7">7</div>
+                <div class="container-color-8">8</div>
+                <div class="container-color-9">9</div>
+                <div class="container-color-10">10</div>
+            </div>
+            <div class="info" style="width: 160px;">
+                <h4>Info</h4>
+                <div class="container-color-0">0</div>
+                <div class="container-color-1">1</div>
+                <div class="container-color-2">2</div>
+                <div class="container-color-3">3</div>
+                <div class="container-color-4">4</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-6">6</div>
+                <div class="container-color-7">7</div>
+                <div class="container-color-8">8</div>
+                <div class="container-color-9">9</div>
+                <div class="container-color-10">10</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Semantic Levels -->
+    <div class="demo-row">
+        <div class="demo-label">Semantic Levels</div>
+        <div class="d-flex flex-wrap" style="gap: 20px;">
+            <div class="primary" style="width: 160px;">
+                <h4>Primary</h4>
                 <div class="container-semantic-color lighter">lighter</div>
                 <div class="container-semantic-color light">light</div>
                 <div class="container-semantic-color">default</div>
                 <div class="container-semantic-color dark">dark</div>
                 <div class="container-semantic-color darker">darker</div>
             </div>
-
-            <div class="secondary" style="width: 200px;">
-                <h3>Secondary</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="secondary" style="width: 160px;">
+                <h4>Secondary</h4>
                 <div class="container-semantic-color lighter">lighter</div>
                 <div class="container-semantic-color light">light</div>
                 <div class="container-semantic-color">default</div>
                 <div class="container-semantic-color dark">dark</div>
                 <div class="container-semantic-color darker">darker</div>
             </div>
-
-            <div class="tertiary" style="width: 200px;">
-                <h3>Tertiary</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="success" style="width: 160px;">
+                <h4>Success</h4>
                 <div class="container-semantic-color lighter">lighter</div>
                 <div class="container-semantic-color light">light</div>
                 <div class="container-semantic-color">default</div>
                 <div class="container-semantic-color dark">dark</div>
                 <div class="container-semantic-color darker">darker</div>
             </div>
-
-            <div class="success" style="width: 200px;">
-                <h3>Success</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="warning" style="width: 160px;">
+                <h4>Warning</h4>
                 <div class="container-semantic-color lighter">lighter</div>
                 <div class="container-semantic-color light">light</div>
                 <div class="container-semantic-color">default</div>
                 <div class="container-semantic-color dark">dark</div>
                 <div class="container-semantic-color darker">darker</div>
             </div>
-
-            <div class="warning" style="width: 200px;">
-                <h3>Warning</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="danger" style="width: 160px;">
+                <h4>Danger</h4>
                 <div class="container-semantic-color lighter">lighter</div>
                 <div class="container-semantic-color light">light</div>
                 <div class="container-semantic-color">default</div>
                 <div class="container-semantic-color dark">dark</div>
                 <div class="container-semantic-color darker">darker</div>
             </div>
-
-            <div class="danger" style="width: 200px;">
-                <h3>Danger</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
-                <div class="container-semantic-color lighter">lighter</div>
-                <div class="container-semantic-color light">light</div>
-                <div class="container-semantic-color">default</div>
-                <div class="container-semantic-color dark">dark</div>
-                <div class="container-semantic-color darker">darker</div>
-            </div>
-
-            <div class="info" style="width: 200px;">
-                <h3>Info</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="info" style="width: 160px;">
+                <h4>Info</h4>
                 <div class="container-semantic-color lighter">lighter</div>
                 <div class="container-semantic-color light">light</div>
                 <div class="container-semantic-color">default</div>
@@ -162,247 +722,95 @@
                 <div class="container-semantic-color darker">darker</div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>Common Colors</h2>
-        <div style="display: flex; gap: 20px;">
-            <div class="red" style="width: 200px;">
-                <h3>Red</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+    <!-- Common HUE Colors -->
+    <div class="demo-row">
+        <div class="demo-label">Common HUE Colors</div>
+        <div class="d-flex flex-wrap" style="gap: 20px;">
+            <div class="red" style="width: 100px;">
+                <h5>Red</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="orange" style="width: 200px;">
-                <h3>Orange</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="orange" style="width: 100px;">
+                <h5>Orange</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="yellow" style="width: 200px;">
-                <h3>Yellow</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="yellow" style="width: 100px;">
+                <h5>Yellow</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="lime" style="width: 200px;">
-                <h3>Lime</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="green" style="width: 100px;">
+                <h5>Green</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="green" style="width: 200px;">
-                <h3>Green</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="teal" style="width: 100px;">
+                <h5>Teal</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="teal" style="width: 200px;">
-                <h3>Teal</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="cyan" style="width: 100px;">
+                <h5>Cyan</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="cyan" style="width: 200px;">
-                <h3>Cyan</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="blue" style="width: 100px;">
+                <h5>Blue</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="blue" style="width: 200px;">
-                <h3>Blue</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="indigo" style="width: 100px;">
+                <h5>Indigo</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="indigo" style="width: 200px;">
-                <h3>Indigo</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="purple" style="width: 100px;">
+                <h5>Purple</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
-
-            <div class="violet" style="width: 200px;">
-                <h3>Violet</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
-            </div>
-
-            <div class="purple" style="width: 200px;">
-                <h3>Purple</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
-            </div>
-
-            <div class="pink" style="width: 200px;">
-                <h3>Pink</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
+            <div class="pink" style="width: 100px;">
+                <h5>Pink</h5>
+                <div class="container-color-3">3</div>
+                <div class="container-color-5">5</div>
+                <div class="container-color-7">7</div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>Neutral Colors</h2>
-        <div style="display: flex; gap: 20px;">
-            <div class="neutral" style="width: 200px;">
-                <h3>Neutral</h3>
-                <div class="container-color-0">color-0</div>
-                <div class="container-color-1">color-1</div>
-                <div class="container-color-2">color-2</div>
-                <div class="container-color-3">color-3</div>
-                <div class="container-color-4">color-4</div>
-                <div class="container-color-5">color-5</div>
-                <div class="container-color-6">color-6</div>
-                <div class="container-color-7">color-7</div>
-                <div class="container-color-8">color-8</div>
-                <div class="container-color-9">color-9</div>
-                <div class="container-color-10">color-10</div>
-            </div>
+    <!-- Neutral -->
+    <div class="demo-row">
+        <div class="demo-label">Neutral Palette</div>
+        <div class="neutral" style="width: 200px;">
+            <div class="container-color-0">0</div>
+            <div class="container-color-1">1</div>
+            <div class="container-color-2">2</div>
+            <div class="container-color-3">3</div>
+            <div class="container-color-4">4</div>
+            <div class="container-color-5">5</div>
+            <div class="container-color-6">6</div>
+            <div class="container-color-7">7</div>
+            <div class="container-color-8">8</div>
+            <div class="container-color-9">9</div>
+            <div class="container-color-10">10</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section>
-        <h2>Borders</h2>
-        <div class="d-flex flex-column gap-2">
-            <div class="border">
-                border
-            </div>
-            <div class="border primary">
-                border semantic color
-            </div>
-            <div class="border-top">
-                border partial
-            </div>
-            <div class="border border-top-0">
-                border minus
-            </div>
-            <div class="border primary border-top-0">
-                border minus color
-            </div>
-            <div class="border border-3 primary border-end-0">
-                border minus color weight
-            </div>
-            <div class="border rounded">
-                border rounded
-            </div>
-            <div class="border rounded-5">
-                border rounded
-            </div>
-            <div class="border rounded-circle">
-                border circle
-            </div>
-            <div class="border rounded-5 rounded-top-0 p-5">
-                border circle
-            </div>
-        </div>
-    </section>
+</main>
+
 </body>
 </html>

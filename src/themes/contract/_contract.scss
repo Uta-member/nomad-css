@@ -61,7 +61,7 @@ $semantic-colors: (
   "success": (
     h: var(--#{prefixes.$prefix}hue-green),
     s: 60%,
-    threshold: 40%,
+    threshold: 45%,
     levels: (
       lighter: 2,
       light: 4,
@@ -72,7 +72,7 @@ $semantic-colors: (
   "warning": (
     h: var(--#{prefixes.$prefix}hue-yellow),
     s: 80%,
-    threshold: 40%,
+    threshold: 45%,
     levels: (
       lighter: 2,
       light: 4,
