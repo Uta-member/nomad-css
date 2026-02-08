@@ -2485,6 +2485,459 @@ input[type=radio].radio:disabled {
 }
 
 :root {
+  --range-track-height: 0.5rem;
+  --range-track-bg: var(--neutral-3);
+  --range-track-bg-hover: var(--neutral-4);
+  --range-track-border-radius: 0.25rem;
+  --range-track-border-width: 0;
+  --range-track-border-color: transparent;
+  --range-track-fill-bg: var(--neutral-6);
+  --range-thumb-size: 1.25rem;
+  --range-thumb-bg: var(--neutral-0);
+  --range-thumb-bg-hover: var(--neutral-0);
+  --range-thumb-bg-active: var(--neutral-1);
+  --range-thumb-border-width: 2px;
+  --range-thumb-border-color: var(--neutral-5);
+  --range-thumb-border-color-hover: var(--neutral-6);
+  --range-thumb-border-color-active: var(--neutral-7);
+  --range-thumb-border-radius: 50%;
+  --range-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --range-thumb-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.15);
+  --range-thumb-shadow-active: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --range-focus-ring-width: 2px;
+  --range-focus-ring-offset: 2px;
+  --range-focus-ring-color: var(--neutral-5);
+  --range-disabled-opacity: 0.5;
+  --range-transition: background-color 0.15s ease-in-out,
+                                border-color 0.15s ease-in-out,
+                                box-shadow 0.15s ease-in-out;
+}
+
+.range,
+input[type=range].range {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: var(--range-thumb-size);
+  background: transparent;
+  cursor: pointer;
+  --range-fill-percent: 50%;
+}
+.range::-webkit-slider-runnable-track,
+input[type=range].range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: var(--range-track-height);
+  background: linear-gradient(to right, var(--range-track-fill-bg) 0%, var(--range-track-fill-bg) var(--range-fill-percent), var(--range-track-bg) var(--range-fill-percent), var(--range-track-bg) 100%);
+  border-radius: var(--range-track-border-radius);
+  border: var(--range-track-border-width) solid var(--range-track-border-color);
+  -webkit-transition: var(--range-transition);
+  transition: var(--range-transition);
+}
+.range::-moz-range-track,
+input[type=range].range::-moz-range-track {
+  width: 100%;
+  height: var(--range-track-height);
+  background: var(--range-track-bg);
+  border-radius: var(--range-track-border-radius);
+  border: var(--range-track-border-width) solid var(--range-track-border-color);
+  -moz-transition: var(--range-transition);
+  transition: var(--range-transition);
+}
+.range::-moz-range-progress,
+input[type=range].range::-moz-range-progress {
+  height: var(--range-track-height);
+  background: var(--range-track-fill-bg);
+  border-radius: var(--range-track-border-radius) 0 0 var(--range-track-border-radius);
+}
+.range::-webkit-slider-thumb,
+input[type=range].range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: var(--range-thumb-size);
+  height: var(--range-thumb-size);
+  background: var(--range-thumb-bg);
+  border: var(--range-thumb-border-width) solid var(--range-thumb-border-color);
+  border-radius: var(--range-thumb-border-radius);
+  box-shadow: var(--range-thumb-shadow);
+  margin-top: calc((var(--range-track-height) - var(--range-thumb-size)) / 2);
+  -webkit-transition: var(--range-transition);
+  transition: var(--range-transition);
+}
+.range::-moz-range-thumb,
+input[type=range].range::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  width: var(--range-thumb-size);
+  height: var(--range-thumb-size);
+  background: var(--range-thumb-bg);
+  border: var(--range-thumb-border-width) solid var(--range-thumb-border-color);
+  border-radius: var(--range-thumb-border-radius);
+  box-shadow: var(--range-thumb-shadow);
+  -moz-transition: var(--range-transition);
+  transition: var(--range-transition);
+}
+.range:hover:not(:disabled)::-webkit-slider-runnable-track,
+input[type=range].range:hover:not(:disabled)::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, var(--range-track-fill-bg) 0%, var(--range-track-fill-bg) var(--range-fill-percent), var(--range-track-bg-hover) var(--range-fill-percent), var(--range-track-bg-hover) 100%);
+}
+.range:hover:not(:disabled)::-moz-range-track,
+input[type=range].range:hover:not(:disabled)::-moz-range-track {
+  background: var(--range-track-bg-hover);
+}
+.range:hover:not(:disabled)::-webkit-slider-thumb,
+input[type=range].range:hover:not(:disabled)::-webkit-slider-thumb {
+  background: var(--range-thumb-bg-hover);
+  border-color: var(--range-thumb-border-color-hover);
+  box-shadow: var(--range-thumb-shadow-hover);
+}
+.range:hover:not(:disabled)::-moz-range-thumb,
+input[type=range].range:hover:not(:disabled)::-moz-range-thumb {
+  background: var(--range-thumb-bg-hover);
+  border-color: var(--range-thumb-border-color-hover);
+  box-shadow: var(--range-thumb-shadow-hover);
+}
+.range:active:not(:disabled)::-webkit-slider-thumb,
+input[type=range].range:active:not(:disabled)::-webkit-slider-thumb {
+  background: var(--range-thumb-bg-active);
+  border-color: var(--range-thumb-border-color-active);
+  box-shadow: var(--range-thumb-shadow-active);
+}
+.range:active:not(:disabled)::-moz-range-thumb,
+input[type=range].range:active:not(:disabled)::-moz-range-thumb {
+  background: var(--range-thumb-bg-active);
+  border-color: var(--range-thumb-border-color-active);
+  box-shadow: var(--range-thumb-shadow-active);
+}
+.range:focus,
+input[type=range].range:focus {
+  outline: none;
+}
+.range:focus-visible::-webkit-slider-thumb,
+input[type=range].range:focus-visible::-webkit-slider-thumb {
+  outline: var(--range-focus-ring-width) solid var(--range-focus-ring-color);
+  outline-offset: var(--range-focus-ring-offset);
+}
+.range:focus-visible::-moz-range-thumb,
+input[type=range].range:focus-visible::-moz-range-thumb {
+  outline: var(--range-focus-ring-width) solid var(--range-focus-ring-color);
+  outline-offset: var(--range-focus-ring-offset);
+}
+.range:disabled,
+input[type=range].range:disabled {
+  opacity: var(--range-disabled-opacity);
+  cursor: not-allowed;
+}
+
+.range-sm {
+  --range-track-height: 0.375rem;
+  --range-thumb-size: 1rem;
+}
+
+.range-lg {
+  --range-track-height: 0.625rem;
+  --range-thumb-size: 1.5rem;
+}
+
+.range.primary {
+  --range-track-fill-bg: var(--palette-default);
+  --range-thumb-border-color: var(--palette-default);
+  --range-thumb-border-color-hover: var(--palette-dark);
+  --range-thumb-border-color-active: var(--palette-darker);
+  --range-focus-ring-color: var(--palette-default);
+}
+.range.secondary {
+  --range-track-fill-bg: var(--palette-default);
+  --range-thumb-border-color: var(--palette-default);
+  --range-thumb-border-color-hover: var(--palette-dark);
+  --range-thumb-border-color-active: var(--palette-darker);
+  --range-focus-ring-color: var(--palette-default);
+}
+.range.tertiary {
+  --range-track-fill-bg: var(--palette-default);
+  --range-thumb-border-color: var(--palette-default);
+  --range-thumb-border-color-hover: var(--palette-dark);
+  --range-thumb-border-color-active: var(--palette-darker);
+  --range-focus-ring-color: var(--palette-default);
+}
+.range.success {
+  --range-track-fill-bg: var(--palette-default);
+  --range-thumb-border-color: var(--palette-default);
+  --range-thumb-border-color-hover: var(--palette-dark);
+  --range-thumb-border-color-active: var(--palette-darker);
+  --range-focus-ring-color: var(--palette-default);
+}
+.range.warning {
+  --range-track-fill-bg: var(--palette-default);
+  --range-thumb-border-color: var(--palette-default);
+  --range-thumb-border-color-hover: var(--palette-dark);
+  --range-thumb-border-color-active: var(--palette-darker);
+  --range-focus-ring-color: var(--palette-default);
+}
+.range.danger {
+  --range-track-fill-bg: var(--palette-default);
+  --range-thumb-border-color: var(--palette-default);
+  --range-thumb-border-color-hover: var(--palette-dark);
+  --range-thumb-border-color-active: var(--palette-darker);
+  --range-focus-ring-color: var(--palette-default);
+}
+.range.info {
+  --range-track-fill-bg: var(--palette-default);
+  --range-thumb-border-color: var(--palette-default);
+  --range-thumb-border-color-hover: var(--palette-dark);
+  --range-thumb-border-color-active: var(--palette-darker);
+  --range-focus-ring-color: var(--palette-default);
+}
+
+.range-flat::-webkit-slider-runnable-track {
+  background: var(--range-track-bg);
+}
+.range-flat:hover:not(:disabled)::-webkit-slider-runnable-track {
+  background: var(--range-track-bg-hover);
+}
+.range-flat::-moz-range-progress {
+  background: transparent;
+}
+
+:root {
+  --progress-height: 0.5rem;
+  --progress-bg: var(--neutral-3);
+  --progress-border-radius: 0.25rem;
+  --progress-border-width: 0;
+  --progress-border-color: transparent;
+  --progress-value-bg: var(--neutral-6);
+  --progress-value-border-radius: 0.25rem;
+  --progress-transition: width 0.3s ease-in-out;
+  --progress-indeterminate-duration: 1.5s;
+  --progress-indeterminate-width: 30%;
+}
+
+.progress,
+progress.progress {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  width: 100%;
+  height: var(--progress-height);
+  background: var(--progress-bg);
+  border: var(--progress-border-width) solid var(--progress-border-color);
+  border-radius: var(--progress-border-radius);
+  overflow: hidden;
+}
+.progress::-webkit-progress-bar,
+progress.progress::-webkit-progress-bar {
+  background: var(--progress-bg);
+  border-radius: var(--progress-border-radius);
+}
+.progress::-webkit-progress-value,
+progress.progress::-webkit-progress-value {
+  background: var(--progress-value-bg);
+  border-radius: var(--progress-value-border-radius);
+  -webkit-transition: var(--progress-transition);
+  transition: var(--progress-transition);
+}
+.progress::-moz-progress-bar,
+progress.progress::-moz-progress-bar {
+  background: var(--progress-value-bg);
+  border-radius: var(--progress-value-border-radius);
+  -moz-transition: var(--progress-transition);
+  transition: var(--progress-transition);
+}
+
+progress.progress:indeterminate::-webkit-progress-bar {
+  background: var(--progress-bg);
+}
+progress.progress:indeterminate::-webkit-progress-value {
+  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
+  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
+}
+progress.progress:indeterminate::-moz-progress-bar {
+  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
+  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
+}
+
+@keyframes progress-indeterminate {
+  0% {
+    margin-left: -30%;
+    width: var(--progress-indeterminate-width);
+  }
+  100% {
+    margin-left: 100%;
+    width: var(--progress-indeterminate-width);
+  }
+}
+.progress-bar {
+  display: flex;
+  width: 100%;
+  height: var(--progress-height);
+  background: var(--progress-bg);
+  border: var(--progress-border-width) solid var(--progress-border-color);
+  border-radius: var(--progress-border-radius);
+  overflow: hidden;
+}
+
+.progress-bar-value {
+  height: 100%;
+  background: var(--progress-value-bg);
+  border-radius: var(--progress-value-border-radius);
+  transition: var(--progress-transition);
+}
+
+.progress-bar.indeterminate .progress-bar-value {
+  width: var(--progress-indeterminate-width);
+  animation: progress-bar-indeterminate var(--progress-indeterminate-duration) ease-in-out infinite;
+}
+
+@keyframes progress-bar-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100% / var(--progress-indeterminate-width) * 100%));
+  }
+}
+.progress-bar.indeterminate-pulse .progress-bar-value {
+  width: 100%;
+  animation: progress-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.progress-striped .progress-bar-value {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.progress-striped.animated .progress-bar-value {
+  animation: progress-stripes 1s linear infinite;
+}
+
+@keyframes progress-stripes {
+  0% {
+    background-position: 1rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.progress-sm,
+.progress-bar-sm {
+  --progress-height: 0.25rem;
+}
+
+.progress-lg,
+.progress-bar-lg {
+  --progress-height: 0.75rem;
+}
+
+.progress-xl,
+.progress-bar-xl {
+  --progress-height: 1rem;
+}
+
+.progress-bar-labeled {
+  --progress-height: 1.5rem;
+}
+.progress-bar-labeled .progress-bar-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+}
+
+.progress-bar-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+}
+
+.progress-stacked .progress-bar-value {
+  border-radius: 0;
+}
+.progress-stacked .progress-bar-value:first-child {
+  border-radius: var(--progress-value-border-radius) 0 0 var(--progress-value-border-radius);
+}
+.progress-stacked .progress-bar-value:last-child {
+  border-radius: 0 var(--progress-value-border-radius) var(--progress-value-border-radius) 0;
+}
+.progress-stacked .progress-bar-value:only-child {
+  border-radius: var(--progress-value-border-radius);
+}
+
+.progress.primary::-webkit-progress-value {
+  background: var(--palette-default);
+}
+.progress.primary::-moz-progress-bar {
+  background: var(--palette-default);
+}
+.progress.secondary::-webkit-progress-value {
+  background: var(--palette-default);
+}
+.progress.secondary::-moz-progress-bar {
+  background: var(--palette-default);
+}
+.progress.tertiary::-webkit-progress-value {
+  background: var(--palette-default);
+}
+.progress.tertiary::-moz-progress-bar {
+  background: var(--palette-default);
+}
+.progress.success::-webkit-progress-value {
+  background: var(--palette-default);
+}
+.progress.success::-moz-progress-bar {
+  background: var(--palette-default);
+}
+.progress.warning::-webkit-progress-value {
+  background: var(--palette-default);
+}
+.progress.warning::-moz-progress-bar {
+  background: var(--palette-default);
+}
+.progress.danger::-webkit-progress-value {
+  background: var(--palette-default);
+}
+.progress.danger::-moz-progress-bar {
+  background: var(--palette-default);
+}
+.progress.info::-webkit-progress-value {
+  background: var(--palette-default);
+}
+.progress.info::-moz-progress-bar {
+  background: var(--palette-default);
+}
+
+.progress-bar-value.primary {
+  background: var(--palette-default);
+}
+.progress-bar-value.secondary {
+  background: var(--palette-default);
+}
+.progress-bar-value.tertiary {
+  background: var(--palette-default);
+}
+.progress-bar-value.success {
+  background: var(--palette-default);
+}
+.progress-bar-value.warning {
+  background: var(--palette-default);
+}
+.progress-bar-value.danger {
+  background: var(--palette-default);
+}
+.progress-bar-value.info {
+  background: var(--palette-default);
+}
+
+:root {
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

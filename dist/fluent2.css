@@ -1295,11 +1295,9 @@ p {
 }
 
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 
 address {
@@ -1827,8 +1825,7 @@ label {
 .icon > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .icon-xs {
@@ -2047,9 +2044,7 @@ label {
 }
 
 .button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
   background: none;
   cursor: pointer;
@@ -2531,7 +2526,6 @@ input[type=range].range::-webkit-slider-runnable-track {
   background: linear-gradient(to right, var(--range-track-fill-bg) 0%, var(--range-track-fill-bg) var(--range-fill-percent), var(--range-track-bg) var(--range-fill-percent), var(--range-track-bg) 100%);
   border-radius: var(--range-track-border-radius);
   border: var(--range-track-border-width) solid var(--range-track-border-color);
-  -webkit-transition: var(--range-transition);
   transition: var(--range-transition);
 }
 .range::-moz-range-track,
@@ -2541,7 +2535,6 @@ input[type=range].range::-moz-range-track {
   background: var(--range-track-bg);
   border-radius: var(--range-track-border-radius);
   border: var(--range-track-border-width) solid var(--range-track-border-color);
-  -moz-transition: var(--range-transition);
   transition: var(--range-transition);
 }
 .range::-moz-range-progress,
@@ -2561,20 +2554,17 @@ input[type=range].range::-webkit-slider-thumb {
   border-radius: var(--range-thumb-border-radius);
   box-shadow: var(--range-thumb-shadow);
   margin-top: calc((var(--range-track-height) - var(--range-thumb-size)) / 2);
-  -webkit-transition: var(--range-transition);
   transition: var(--range-transition);
 }
 .range::-moz-range-thumb,
 input[type=range].range::-moz-range-thumb {
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   width: var(--range-thumb-size);
   height: var(--range-thumb-size);
   background: var(--range-thumb-bg);
   border: var(--range-thumb-border-width) solid var(--range-thumb-border-color);
   border-radius: var(--range-thumb-border-radius);
   box-shadow: var(--range-thumb-shadow);
-  -moz-transition: var(--range-transition);
   transition: var(--range-transition);
 }
 .range:hover:not(:disabled)::-webkit-slider-runnable-track,
@@ -2734,14 +2724,12 @@ progress.progress::-webkit-progress-bar {
 progress.progress::-webkit-progress-value {
   background: var(--progress-value-bg);
   border-radius: var(--progress-value-border-radius);
-  -webkit-transition: var(--progress-transition);
   transition: var(--progress-transition);
 }
 .progress::-moz-progress-bar,
 progress.progress::-moz-progress-bar {
   background: var(--progress-value-bg);
   border-radius: var(--progress-value-border-radius);
-  -moz-transition: var(--progress-transition);
   transition: var(--progress-transition);
 }
 
@@ -4866,4 +4854,4 @@ progress.progress:indeterminate::-moz-progress-bar {
   --secondary-s: 0%;
   --tertiary-h: var(--hue-cyan);
   --tertiary-s: 60%;
-}/*# sourceMappingURL=fluent2.css.map */
+}

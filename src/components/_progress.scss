@@ -1,0 +1,331 @@
+// ============================================
+// Progress Component
+// ============================================
+// ブラウザのデフォルトスタイルをリセットし、
+// CSS変数でテーマ側からカスタマイズ可能にする
+// ============================================
+
+@use "../props/prefixes" as *;
+@use "../props/defines" as *;
+
+// ============================================
+// CSS Variables (defaults in :root)
+// ============================================
+:root {
+    // ----------------------------------------
+    // Container Variables
+    // ----------------------------------------
+    --#{$progress-prefix}height: 0.5rem;
+    --#{$progress-prefix}bg: var(--#{$neutral-prefix}3);
+    --#{$progress-prefix}border-radius: 0.25rem;
+    --#{$progress-prefix}border-width: 0;
+    --#{$progress-prefix}border-color: transparent;
+    
+    // ----------------------------------------
+    // Value Bar Variables
+    // ----------------------------------------
+    --#{$progress-prefix}value-bg: var(--#{$neutral-prefix}6);
+    --#{$progress-prefix}value-border-radius: 0.25rem;
+    
+    // ----------------------------------------
+    // Transition
+    // ----------------------------------------
+    --#{$progress-prefix}transition: width 0.3s ease-in-out;
+    
+    // ----------------------------------------
+    // Indeterminate Animation
+    // ----------------------------------------
+    --#{$progress-prefix}indeterminate-duration: 1.5s;
+    --#{$progress-prefix}indeterminate-width: 30%;
+}
+
+// ============================================
+// Base Progress Styles (native <progress>)
+// ============================================
+.progress,
+progress.progress {
+    // Reset browser default
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    // Size
+    display: block;
+    width: 100%;
+    height: var(--#{$progress-prefix}height);
+    
+    // For Firefox
+    background: var(--#{$progress-prefix}bg);
+    border: var(--#{$progress-prefix}border-width) solid var(--#{$progress-prefix}border-color);
+    border-radius: var(--#{$progress-prefix}border-radius);
+    
+    // Remove default styling
+    overflow: hidden;
+    
+    // ----------------------------------------
+    // WebKit Background (Chrome, Safari, Edge)
+    // ----------------------------------------
+    &::-webkit-progress-bar {
+        background: var(--#{$progress-prefix}bg);
+        border-radius: var(--#{$progress-prefix}border-radius);
+    }
+    
+    // ----------------------------------------
+    // WebKit Value (Chrome, Safari, Edge)
+    // ----------------------------------------
+    &::-webkit-progress-value {
+        background: var(--#{$progress-prefix}value-bg);
+        border-radius: var(--#{$progress-prefix}value-border-radius);
+        transition: var(--#{$progress-prefix}transition);
+    }
+    
+    // ----------------------------------------
+    // Mozilla Value (Firefox)
+    // ----------------------------------------
+    &::-moz-progress-bar {
+        background: var(--#{$progress-prefix}value-bg);
+        border-radius: var(--#{$progress-prefix}value-border-radius);
+        transition: var(--#{$progress-prefix}transition);
+    }
+}
+
+// ============================================
+// Indeterminate Progress (native <progress>)
+// ============================================
+// Note: Indeterminate state is applied when no value attribute is set
+// <progress class="progress"></progress>
+
+progress.progress:indeterminate {
+    // WebKit
+    &::-webkit-progress-bar {
+        background: var(--#{$progress-prefix}bg);
+    }
+    
+    &::-webkit-progress-value {
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            var(--#{$progress-prefix}value-bg) 50%,
+            transparent 100%
+        );
+        animation: progress-indeterminate var(--#{$progress-prefix}indeterminate-duration) linear infinite;
+    }
+    
+    // Firefox - uses different pseudo-element
+    &::-moz-progress-bar {
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            var(--#{$progress-prefix}value-bg) 50%,
+            transparent 100%
+        );
+        animation: progress-indeterminate var(--#{$progress-prefix}indeterminate-duration) linear infinite;
+    }
+}
+
+// ============================================
+// Indeterminate Animation Keyframes
+// ============================================
+@keyframes progress-indeterminate {
+    0% {
+        margin-left: -30%;
+        width: var(--#{$progress-prefix}indeterminate-width);
+    }
+    100% {
+        margin-left: 100%;
+        width: var(--#{$progress-prefix}indeterminate-width);
+    }
+}
+
+// ============================================
+// DIV-based Progress (for more control)
+// ============================================
+// Usage:
+// <div class="progress-bar">
+//     <div class="progress-bar-value" style="width: 50%"></div>
+// </div>
+
+.progress-bar {
+    display: flex;
+    width: 100%;
+    height: var(--#{$progress-prefix}height);
+    background: var(--#{$progress-prefix}bg);
+    border: var(--#{$progress-prefix}border-width) solid var(--#{$progress-prefix}border-color);
+    border-radius: var(--#{$progress-prefix}border-radius);
+    overflow: hidden;
+}
+
+.progress-bar-value {
+    height: 100%;
+    background: var(--#{$progress-prefix}value-bg);
+    border-radius: var(--#{$progress-prefix}value-border-radius);
+    transition: var(--#{$progress-prefix}transition);
+}
+
+// ----------------------------------------
+// DIV-based Indeterminate
+// ----------------------------------------
+.progress-bar.indeterminate .progress-bar-value {
+    width: var(--#{$progress-prefix}indeterminate-width);
+    animation: progress-bar-indeterminate var(--#{$progress-prefix}indeterminate-duration) ease-in-out infinite;
+}
+
+@keyframes progress-bar-indeterminate {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(calc(100% / var(--#{$progress-prefix}indeterminate-width) * 100%));
+    }
+}
+
+// Alternative animation for indeterminate (smoother)
+.progress-bar.indeterminate-pulse .progress-bar-value {
+    width: 100%;
+    animation: progress-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-pulse {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+// ============================================
+// Striped Variant
+// ============================================
+.progress-striped {
+    .progress-bar-value {
+        background-image: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    
+    &.animated .progress-bar-value {
+        animation: progress-stripes 1s linear infinite;
+    }
+}
+
+@keyframes progress-stripes {
+    0% {
+        background-position: 1rem 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+// ============================================
+// Size Variants
+// ============================================
+.progress-sm,
+.progress-bar-sm {
+    --#{$progress-prefix}height: 0.25rem;
+}
+
+.progress-lg,
+.progress-bar-lg {
+    --#{$progress-prefix}height: 0.75rem;
+}
+
+.progress-xl,
+.progress-bar-xl {
+    --#{$progress-prefix}height: 1rem;
+}
+
+// ============================================
+// With Label (DIV-based only)
+// ============================================
+// Usage:
+// <div class="progress-bar progress-bar-labeled">
+//     <div class="progress-bar-value" style="width: 75%">
+//         <span class="progress-bar-label">75%</span>
+//     </div>
+// </div>
+
+.progress-bar-labeled {
+    --#{$progress-prefix}height: 1.5rem;
+    
+    .progress-bar-value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+    }
+}
+
+.progress-bar-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+}
+
+// ============================================
+// Stacked Progress (multiple values)
+// ============================================
+// Usage:
+// <div class="progress-bar progress-stacked">
+//     <div class="progress-bar-value primary" style="width: 30%"></div>
+//     <div class="progress-bar-value success" style="width: 20%"></div>
+//     <div class="progress-bar-value warning" style="width: 15%"></div>
+// </div>
+
+.progress-stacked {
+    .progress-bar-value {
+        border-radius: 0;
+        
+        &:first-child {
+            border-radius: var(--#{$progress-prefix}value-border-radius) 0 0 var(--#{$progress-prefix}value-border-radius);
+        }
+        
+        &:last-child {
+            border-radius: 0 var(--#{$progress-prefix}value-border-radius) var(--#{$progress-prefix}value-border-radius) 0;
+        }
+        
+        &:only-child {
+            border-radius: var(--#{$progress-prefix}value-border-radius);
+        }
+    }
+}
+
+// ============================================
+// Semantic Color Support
+// ============================================
+// Usage: <progress class="progress primary" value="50" max="100">
+// or: <div class="progress-bar-value primary">
+
+// For native progress element
+.progress {
+    @each $name, $values in $semantic-colors {
+        &.#{$semantic-prefix}#{$name} {
+            &::-webkit-progress-value {
+                background: var(--#{$palette-default});
+            }
+            &::-moz-progress-bar {
+                background: var(--#{$palette-default});
+            }
+        }
+    }
+}
+
+// For DIV-based progress
+.progress-bar-value {
+    @each $name, $values in $semantic-colors {
+        &.#{$semantic-prefix}#{$name} {
+            background: var(--#{$palette-default});
+        }
+    }
+}

@@ -660,6 +660,154 @@
             <label class="form-check"><input type="radio" class="radio primary" name="radio-inline"> Option 3</label>
         </div>
     </div>
+
+    <!-- Range (Slider) -->
+    <div class="demo-row">
+        <div class="demo-label">Range / Slider (.range)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <input type="range" class="range" value="50">
+            <input type="range" class="range" value="75" disabled>
+        </div>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+            ※ デフォルトで0%から現在値までが塗りつぶされます（HTML標準と同様）。<br>
+            動的な更新にはJSが必要です（下記スクリプト参照）。
+        </p>
+    </div>
+
+    <!-- Range Sizes -->
+    <div class="demo-row">
+        <div class="demo-label">Range Sizes</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <input type="range" class="range range-sm" value="30">
+            <input type="range" class="range" value="50">
+            <input type="range" class="range range-lg" value="70">
+        </div>
+    </div>
+
+    <!-- Range Semantic Colors -->
+    <div class="demo-row">
+        <div class="demo-label">Range Semantic Colors</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <input type="range" class="range primary" value="50">
+            <input type="range" class="range secondary" value="50">
+            <input type="range" class="range success" value="50">
+            <input type="range" class="range warning" value="50">
+            <input type="range" class="range danger" value="50">
+            <input type="range" class="range info" value="50">
+        </div>
+    </div>
+
+    <!-- Range Flat Variant -->
+    <div class="demo-row">
+        <div class="demo-label">Range Flat (.range-flat)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <input type="range" class="range range-flat" value="50">
+            <input type="range" class="range range-flat primary" value="50">
+        </div>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+            塗りつぶしなしのフラットなトラック。JSなしで動作します。
+        </p>
+    </div>
+
+    <!-- Range JS Helper (external file) -->
+    <script src="src/components/js/range.js"></script>
+
+    <!-- Progress (Native) -->
+    <div class="demo-row">
+        <div class="demo-label">Progress (native &lt;progress&gt;)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <progress class="progress" value="30" max="100"></progress>
+            <progress class="progress" value="70" max="100"></progress>
+            <progress class="progress"></progress>
+        </div>
+    </div>
+
+    <!-- Progress Semantic Colors -->
+    <div class="demo-row">
+        <div class="demo-label">Progress Semantic Colors</div>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; max-width: 400px;">
+            <progress class="progress primary" value="60" max="100"></progress>
+            <progress class="progress secondary" value="60" max="100"></progress>
+            <progress class="progress success" value="60" max="100"></progress>
+            <progress class="progress warning" value="60" max="100"></progress>
+            <progress class="progress danger" value="60" max="100"></progress>
+            <progress class="progress info" value="60" max="100"></progress>
+        </div>
+    </div>
+
+    <!-- Progress Sizes -->
+    <div class="demo-row">
+        <div class="demo-label">Progress Sizes</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <progress class="progress progress-sm primary" value="50" max="100"></progress>
+            <progress class="progress primary" value="50" max="100"></progress>
+            <progress class="progress progress-lg primary" value="50" max="100"></progress>
+            <progress class="progress progress-xl primary" value="50" max="100"></progress>
+        </div>
+    </div>
+
+    <!-- Progress Bar (DIV-based) -->
+    <div class="demo-row">
+        <div class="demo-label">Progress Bar (DIV-based .progress-bar)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="progress-bar">
+                <div class="progress-bar-value primary" style="width: 40%"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-value success" style="width: 75%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar Indeterminate -->
+    <div class="demo-row">
+        <div class="demo-label">Progress Bar Indeterminate</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="progress-bar indeterminate">
+                <div class="progress-bar-value primary"></div>
+            </div>
+            <div class="progress-bar indeterminate-pulse">
+                <div class="progress-bar-value success"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar Striped -->
+    <div class="demo-row">
+        <div class="demo-label">Progress Bar Striped</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="progress-bar progress-striped">
+                <div class="progress-bar-value primary" style="width: 50%"></div>
+            </div>
+            <div class="progress-bar progress-striped animated">
+                <div class="progress-bar-value warning" style="width: 70%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar with Label -->
+    <div class="demo-row">
+        <div class="demo-label">Progress Bar with Label</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="progress-bar progress-bar-labeled">
+                <div class="progress-bar-value primary" style="width: 75%">
+                    <span class="progress-bar-label">75%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar Stacked -->
+    <div class="demo-row">
+        <div class="demo-label">Progress Bar Stacked (multiple values)</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px;">
+            <div class="progress-bar progress-stacked">
+                <div class="progress-bar-value primary" style="width: 30%"></div>
+                <div class="progress-bar-value success" style="width: 20%"></div>
+                <div class="progress-bar-value warning" style="width: 15%"></div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- ============================================ -->
