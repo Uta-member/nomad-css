@@ -1,8 +1,271 @@
+// ============================================
+// Button Component
+// ============================================
+// 形状: filled, tonal, outlined, text
+// 各状態の色をCSS変数で制御し、テーマ層でのカスタマイズを容易にする
+// ============================================
+
 @use "../props/prefixes" as *;
 @use "../props/defines" as *;
 @use "defines" as *;
 
+// ============================================
+// CSS Variables (defaults in :root)
+// ============================================
+:root {
+    // Base button properties
+    --#{$button-prefix}padding-x: 1rem;
+    --#{$button-prefix}padding-y: 0.5rem;
+    --#{$button-prefix}border-radius: 0.375rem;
+    --#{$button-prefix}border-width: 1px;
+    --#{$button-prefix}font-size: 0.875rem;
+    --#{$button-prefix}font-weight: 500;
+    --#{$button-prefix}line-height: 1.5;
+    --#{$button-prefix}gap: 0.5rem;
+    
+    // Transition
+    --#{$button-prefix}transition: background-color 0.15s ease-in-out, 
+                                   border-color 0.15s ease-in-out, 
+                                   color 0.15s ease-in-out,
+                                   box-shadow 0.15s ease-in-out;
+    
+    // Focus ring
+    --#{$button-prefix}focus-ring-width: 2px;
+    --#{$button-prefix}focus-ring-offset: 2px;
+    --#{$button-prefix}focus-ring-color: var(--#{$palette-default});
+    
+    // Disabled opacity
+    --#{$button-prefix}disabled-opacity: 0.5;
+}
+
+// ============================================
+// Base Button
+// ============================================
 .button {
-    background-color: var(--#{$palette-default});
-    color: var(--#{$palette-default-accent});
+    // Reset
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    
+    // Display
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--#{$button-prefix}gap);
+    
+    // Sizing
+    padding: var(--#{$button-prefix}padding-y) var(--#{$button-prefix}padding-x);
+    
+    // Typography
+    font-family: inherit;
+    font-size: var(--#{$button-prefix}font-size);
+    font-weight: var(--#{$button-prefix}font-weight);
+    line-height: var(--#{$button-prefix}line-height);
+    text-align: center;
+    white-space: nowrap;
+    
+    // Border
+    border-radius: var(--#{$button-prefix}border-radius);
+    border-width: var(--#{$button-prefix}border-width);
+    border-style: solid;
+    
+    // Transition
+    transition: var(--#{$button-prefix}transition);
+    
+    // ----------------------------------------
+    // State CSS Variables (for theme override)
+    // ----------------------------------------
+    // Background colors
+    --#{$button-prefix}bg: var(--#{$palette-default});
+    --#{$button-prefix}bg-hover: var(--#{$palette-dark});
+    --#{$button-prefix}bg-active: var(--#{$palette-darker});
+    
+    // Text colors
+    --#{$button-prefix}color: var(--#{$palette-default-accent});
+    --#{$button-prefix}color-hover: var(--#{$palette-dark-accent});
+    --#{$button-prefix}color-active: var(--#{$palette-darker-accent});
+    
+    // Border colors
+    --#{$button-prefix}border-color: transparent;
+    --#{$button-prefix}border-color-hover: transparent;
+    --#{$button-prefix}border-color-active: transparent;
+    
+    // ----------------------------------------
+    // Apply CSS Variables to Properties
+    // ----------------------------------------
+    background-color: var(--#{$button-prefix}bg);
+    color: var(--#{$button-prefix}color);
+    border-color: var(--#{$button-prefix}border-color);
+    
+    // ----------------------------------------
+    // States
+    // ----------------------------------------
+    &:hover {
+        background-color: var(--#{$button-prefix}bg-hover);
+        color: var(--#{$button-prefix}color-hover);
+        border-color: var(--#{$button-prefix}border-color-hover);
+    }
+    
+    &:active {
+        background-color: var(--#{$button-prefix}bg-active);
+        color: var(--#{$button-prefix}color-active);
+        border-color: var(--#{$button-prefix}border-color-active);
+    }
+    
+    &:focus-visible {
+        outline: var(--#{$button-prefix}focus-ring-width) solid var(--#{$button-prefix}focus-ring-color);
+        outline-offset: var(--#{$button-prefix}focus-ring-offset);
+    }
+    
+    &:disabled,
+    &.disabled {
+        opacity: var(--#{$button-prefix}disabled-opacity);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    
+    // Icon inside button
+    > .icon {
+        flex-shrink: 0;
+    }
+}
+
+// ============================================
+// Filled Variant (default)
+// ============================================
+.button.filled {
+    --#{$button-prefix}bg: var(--#{$palette-default});
+    --#{$button-prefix}bg-hover: var(--#{$palette-dark});
+    --#{$button-prefix}bg-active: var(--#{$palette-darker});
+    
+    --#{$button-prefix}color: var(--#{$palette-default-accent});
+    --#{$button-prefix}color-hover: var(--#{$palette-dark-accent});
+    --#{$button-prefix}color-active: var(--#{$palette-darker-accent});
+    
+    --#{$button-prefix}border-color: transparent;
+    --#{$button-prefix}border-color-hover: transparent;
+    --#{$button-prefix}border-color-active: transparent;
+}
+
+// ============================================
+// Tonal Variant
+// ============================================
+.button.tonal {
+    --#{$button-prefix}bg: var(--#{$palette-lighter});
+    --#{$button-prefix}bg-hover: var(--#{$palette-light});
+    --#{$button-prefix}bg-active: var(--#{$palette-default});
+    
+    --#{$button-prefix}color: var(--#{$palette-darker});
+    --#{$button-prefix}color-hover: var(--#{$palette-darker});
+    --#{$button-prefix}color-active: var(--#{$palette-default-accent});
+    
+    --#{$button-prefix}border-color: transparent;
+    --#{$button-prefix}border-color-hover: transparent;
+    --#{$button-prefix}border-color-active: transparent;
+}
+
+// ============================================
+// Outlined Variant
+// ============================================
+.button.outlined {
+    --#{$button-prefix}bg: transparent;
+    --#{$button-prefix}bg-hover: var(--#{$palette-lighter});
+    --#{$button-prefix}bg-active: var(--#{$palette-light});
+    
+    --#{$button-prefix}color: var(--#{$palette-default});
+    --#{$button-prefix}color-hover: var(--#{$palette-dark});
+    --#{$button-prefix}color-active: var(--#{$palette-darker});
+    
+    --#{$button-prefix}border-color: var(--#{$palette-default});
+    --#{$button-prefix}border-color-hover: var(--#{$palette-dark});
+    --#{$button-prefix}border-color-active: var(--#{$palette-darker});
+}
+
+// ============================================
+// Text Variant
+// ============================================
+.button.text {
+    --#{$button-prefix}bg: transparent;
+    --#{$button-prefix}bg-hover: var(--#{$palette-lighter});
+    --#{$button-prefix}bg-active: var(--#{$palette-light});
+    
+    --#{$button-prefix}color: var(--#{$palette-default});
+    --#{$button-prefix}color-hover: var(--#{$palette-dark});
+    --#{$button-prefix}color-active: var(--#{$palette-darker});
+    
+    --#{$button-prefix}border-color: transparent;
+    --#{$button-prefix}border-color-hover: transparent;
+    --#{$button-prefix}border-color-active: transparent;
+}
+
+// ============================================
+// Size Variants
+// ============================================
+.button.button-sm {
+    --#{$button-prefix}padding-x: 0.75rem;
+    --#{$button-prefix}padding-y: 0.25rem;
+    --#{$button-prefix}font-size: 0.75rem;
+    --#{$button-prefix}gap: 0.375rem;
+}
+
+.button.button-lg {
+    --#{$button-prefix}padding-x: 1.5rem;
+    --#{$button-prefix}padding-y: 0.75rem;
+    --#{$button-prefix}font-size: 1rem;
+    --#{$button-prefix}gap: 0.625rem;
+}
+
+// ============================================
+// Icon-only Button
+// ============================================
+.button.icon-only {
+    --#{$button-prefix}padding-x: 0.5rem;
+    --#{$button-prefix}padding-y: 0.5rem;
+    aspect-ratio: 1;
+    
+    &.button-sm {
+        --#{$button-prefix}padding-x: 0.375rem;
+        --#{$button-prefix}padding-y: 0.375rem;
+    }
+    
+    &.button-lg {
+        --#{$button-prefix}padding-x: 0.75rem;
+        --#{$button-prefix}padding-y: 0.75rem;
+    }
+}
+
+// ============================================
+// Full Width Button
+// ============================================
+.button.button-block {
+    display: flex;
+    width: 100%;
+}
+
+// ============================================
+// Button Group
+// ============================================
+.button-group {
+    display: inline-flex;
+    
+    > .button {
+        border-radius: 0;
+        
+        &:first-child {
+            border-top-left-radius: var(--#{$button-prefix}border-radius);
+            border-bottom-left-radius: var(--#{$button-prefix}border-radius);
+        }
+        
+        &:last-child {
+            border-top-right-radius: var(--#{$button-prefix}border-radius);
+            border-bottom-right-radius: var(--#{$button-prefix}border-radius);
+        }
+        
+        // Prevent double borders
+        &:not(:first-child) {
+            margin-left: calc(var(--#{$button-prefix}border-width) * -1);
+        }
+    }
 }
