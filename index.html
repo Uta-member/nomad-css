@@ -62,6 +62,8 @@
     <a href="#typography">Typography</a>
     <a href="#icons">Icons</a>
     <a href="#buttons">Buttons</a>
+    <a href="#form-controls">Form Controls</a>
+    <a href="#native-elements">Native Elements</a>
     <a href="#tables">Tables</a>
     <a href="#layout">Layout</a>
     <a href="#borders">Borders</a>
@@ -552,6 +554,479 @@
             <button class="button outlined primary">3</button>
         </div>
     </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Form Controls -->
+<!-- ============================================ -->
+<section id="form-controls" class="demo-section">
+    <h2>Form Controls</h2>
+
+    <!-- Checkbox -->
+    <div class="demo-row">
+        <div class="demo-label">Checkbox (.checkbox)</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <label class="form-check"><input type="checkbox" class="checkbox"> Unchecked</label>
+            <label class="form-check"><input type="checkbox" class="checkbox" checked> Checked</label>
+            <label class="form-check"><input type="checkbox" class="checkbox" id="styled-indeterminate"> Indeterminate</label>
+            <label class="form-check"><input type="checkbox" class="checkbox" disabled> Disabled</label>
+            <label class="form-check"><input type="checkbox" class="checkbox" checked disabled> Checked Disabled</label>
+        </div>
+        <script>document.getElementById('styled-indeterminate').indeterminate = true;</script>
+    </div>
+
+    <!-- Checkbox Sizes -->
+    <div class="demo-row">
+        <div class="demo-label">Checkbox Sizes</div>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+            <label class="form-check"><input type="checkbox" class="checkbox checkbox-sm" checked> Small</label>
+            <label class="form-check"><input type="checkbox" class="checkbox" checked> Default</label>
+            <label class="form-check"><input type="checkbox" class="checkbox checkbox-lg" checked> Large</label>
+        </div>
+    </div>
+
+    <!-- Checkbox Semantic Colors -->
+    <div class="demo-row">
+        <div class="demo-label">Checkbox Semantic Colors</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <label class="form-check"><input type="checkbox" class="checkbox primary" checked> Primary</label>
+            <label class="form-check"><input type="checkbox" class="checkbox secondary" checked> Secondary</label>
+            <label class="form-check"><input type="checkbox" class="checkbox tertiary" checked> Tertiary</label>
+            <label class="form-check"><input type="checkbox" class="checkbox success" checked> Success</label>
+            <label class="form-check"><input type="checkbox" class="checkbox warning" checked> Warning</label>
+            <label class="form-check"><input type="checkbox" class="checkbox danger" checked> Danger</label>
+            <label class="form-check"><input type="checkbox" class="checkbox info" checked> Info</label>
+        </div>
+    </div>
+
+    <!-- Radio -->
+    <div class="demo-row">
+        <div class="demo-label">Radio (.radio)</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <label class="form-check"><input type="radio" class="radio" name="styled-radio"> Option 1</label>
+            <label class="form-check"><input type="radio" class="radio" name="styled-radio" checked> Option 2</label>
+            <label class="form-check"><input type="radio" class="radio" name="styled-radio"> Option 3</label>
+            <label class="form-check"><input type="radio" class="radio" name="styled-radio-disabled" disabled> Disabled</label>
+        </div>
+    </div>
+
+    <!-- Radio Sizes -->
+    <div class="demo-row">
+        <div class="demo-label">Radio Sizes</div>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+            <label class="form-check"><input type="radio" class="radio radio-sm" name="radio-size" checked> Small</label>
+            <label class="form-check"><input type="radio" class="radio" name="radio-size"> Default</label>
+            <label class="form-check"><input type="radio" class="radio radio-lg" name="radio-size"> Large</label>
+        </div>
+    </div>
+
+    <!-- Radio Semantic Colors -->
+    <div class="demo-row">
+        <div class="demo-label">Radio Semantic Colors</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <label class="form-check"><input type="radio" class="radio primary" name="radio-color-primary" checked> Primary</label>
+            <label class="form-check"><input type="radio" class="radio secondary" name="radio-color-secondary" checked> Secondary</label>
+            <label class="form-check"><input type="radio" class="radio tertiary" name="radio-color-tertiary" checked> Tertiary</label>
+            <label class="form-check"><input type="radio" class="radio success" name="radio-color-success" checked> Success</label>
+            <label class="form-check"><input type="radio" class="radio warning" name="radio-color-warning" checked> Warning</label>
+            <label class="form-check"><input type="radio" class="radio danger" name="radio-color-danger" checked> Danger</label>
+            <label class="form-check"><input type="radio" class="radio info" name="radio-color-info" checked> Info</label>
+        </div>
+    </div>
+
+    <!-- Form Check Group -->
+    <div class="demo-row">
+        <div class="demo-label">Form Check Group (vertical)</div>
+        <div style="display: flex; gap: 3rem;">
+            <div class="form-check-group">
+                <label class="form-check"><input type="checkbox" class="checkbox primary" checked> Option A</label>
+                <label class="form-check"><input type="checkbox" class="checkbox primary"> Option B</label>
+                <label class="form-check"><input type="checkbox" class="checkbox primary"> Option C</label>
+            </div>
+            <div class="form-check-group">
+                <label class="form-check"><input type="radio" class="radio primary" name="radio-group" checked> Choice 1</label>
+                <label class="form-check"><input type="radio" class="radio primary" name="radio-group"> Choice 2</label>
+                <label class="form-check"><input type="radio" class="radio primary" name="radio-group"> Choice 3</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Check Inline -->
+    <div class="demo-row">
+        <div class="demo-label">Form Check Inline (horizontal)</div>
+        <div class="form-check-inline">
+            <label class="form-check"><input type="radio" class="radio primary" name="radio-inline" checked> Option 1</label>
+            <label class="form-check"><input type="radio" class="radio primary" name="radio-inline"> Option 2</label>
+            <label class="form-check"><input type="radio" class="radio primary" name="radio-inline"> Option 3</label>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Native HTML Elements (Plain State) -->
+<!-- ============================================ -->
+<section id="native-elements" class="demo-section">
+    <h2>Native HTML Elements (Plain State)</h2>
+    <p class="demo-label">These are browser default styles for reference. Priority for customization can be decided based on their plain appearance.</p>
+
+    <!-- Accordion (Details/Summary) -->
+    <div class="demo-row">
+        <div class="demo-label">Accordion (details, summary)</div>
+        <details>
+            <summary>Click to expand</summary>
+            <p>This is the hidden content that appears when the accordion is expanded. It can contain any HTML content.</p>
+        </details>
+        <details>
+            <summary>Another accordion item</summary>
+            <p>More hidden content here. The details/summary element provides native accordion functionality without JavaScript.</p>
+        </details>
+        <details open>
+            <summary>Open by default</summary>
+            <p>This accordion is open by default using the "open" attribute.</p>
+        </details>
+    </div>
+
+    <!-- Lists -->
+    <div class="demo-row">
+        <div class="demo-label">Lists (ul, ol, li)</div>
+        <div style="display: flex; gap: 3rem;">
+            <div>
+                <p><strong>Unordered List (ul)</strong></p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2
+                        <ul>
+                            <li>Nested item 2.1</li>
+                            <li>Nested item 2.2</li>
+                        </ul>
+                    </li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div>
+                <p><strong>Ordered List (ol)</strong></p>
+                <ol>
+                    <li>First item</li>
+                    <li>Second item
+                        <ol>
+                            <li>Nested 2.1</li>
+                            <li>Nested 2.2</li>
+                        </ol>
+                    </li>
+                    <li>Third item</li>
+                </ol>
+            </div>
+            <div>
+                <p><strong>Description List (dl)</strong></p>
+                <dl>
+                    <dt>Term 1</dt>
+                    <dd>Definition for term 1</dd>
+                    <dt>Term 2</dt>
+                    <dd>Definition for term 2</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="demo-row">
+        <div class="demo-label">Progress</div>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px;">
+            <label>Progress (30%): <progress value="30" max="100"></progress></label>
+            <label>Progress (70%): <progress value="70" max="100"></progress></label>
+            <label>Indeterminate: <progress></progress></label>
+        </div>
+    </div>
+
+    <!-- Meter -->
+    <div class="demo-row">
+        <div class="demo-label">Meter</div>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px;">
+            <label>Low value: <meter value="20" min="0" max="100" low="33" high="66" optimum="80"></meter></label>
+            <label>Medium value: <meter value="50" min="0" max="100" low="33" high="66" optimum="80"></meter></label>
+            <label>High value: <meter value="80" min="0" max="100" low="33" high="66" optimum="80"></meter></label>
+        </div>
+    </div>
+
+    <!-- Text Inputs -->
+    <div class="demo-row">
+        <div class="demo-label">Input - Text Types</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px;">
+            <div>
+                <label>Text<br><input type="text" placeholder="Enter text"></label>
+            </div>
+            <div>
+                <label>Email<br><input type="email" placeholder="email@example.com"></label>
+            </div>
+            <div>
+                <label>Password<br><input type="password" placeholder="Password"></label>
+            </div>
+            <div>
+                <label>URL<br><input type="url" placeholder="https://example.com"></label>
+            </div>
+            <div>
+                <label>Tel<br><input type="tel" placeholder="000-0000-0000"></label>
+            </div>
+            <div>
+                <label>Search<br><input type="search" placeholder="Search..."></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Number/Date Inputs -->
+    <div class="demo-row">
+        <div class="demo-label">Input - Number/Date Types</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px;">
+            <div>
+                <label>Number<br><input type="number" placeholder="0" min="0" max="100"></label>
+            </div>
+            <div>
+                <label>Date<br><input type="date"></label>
+            </div>
+            <div>
+                <label>Time<br><input type="time"></label>
+            </div>
+            <div>
+                <label>Datetime-local<br><input type="datetime-local"></label>
+            </div>
+            <div>
+                <label>Month<br><input type="month"></label>
+            </div>
+            <div>
+                <label>Week<br><input type="week"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Inputs -->
+    <div class="demo-row">
+        <div class="demo-label">Input - Other Types</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px;">
+            <div>
+                <label>Color<br><input type="color" value="#3b82f6"></label>
+            </div>
+            <div>
+                <label>File<br><input type="file"></label>
+            </div>
+            <div>
+                <label>Hidden (not visible)<br><input type="hidden" value="hidden value"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input States -->
+    <div class="demo-row">
+        <div class="demo-label">Input States</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px;">
+            <div>
+                <label>Normal<br><input type="text" value="Normal input"></label>
+            </div>
+            <div>
+                <label>Disabled<br><input type="text" value="Disabled input" disabled></label>
+            </div>
+            <div>
+                <label>Readonly<br><input type="text" value="Readonly input" readonly></label>
+            </div>
+            <div>
+                <label>Required<br><input type="text" placeholder="Required field" required></label>
+            </div>
+            <div>
+                <label>With pattern (numbers only)<br><input type="text" pattern="[0-9]+" placeholder="Numbers only"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="demo-row">
+        <div class="demo-label">Textarea</div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 600px;">
+            <div>
+                <label>Normal<br><textarea rows="3" placeholder="Enter multiple lines..."></textarea></label>
+            </div>
+            <div>
+                <label>Disabled<br><textarea rows="3" disabled>Disabled textarea</textarea></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Select -->
+    <div class="demo-row">
+        <div class="demo-label">Select</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px;">
+            <div>
+                <label>Single Select<br>
+                    <select>
+                        <option value="">Select an option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>With Optgroup<br>
+                    <select>
+                        <optgroup label="Group 1">
+                            <option value="1a">Option 1A</option>
+                            <option value="1b">Option 1B</option>
+                        </optgroup>
+                        <optgroup label="Group 2">
+                            <option value="2a">Option 2A</option>
+                            <option value="2b">Option 2B</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>Multiple Select<br>
+                    <select multiple size="4">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>Disabled<br>
+                    <select disabled>
+                        <option>Disabled select</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Datalist -->
+    <div class="demo-row">
+        <div class="demo-label">Input with Datalist (autocomplete)</div>
+        <label>Choose a browser:<br>
+            <input type="text" list="browsers" placeholder="Start typing...">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+                <option value="Opera">
+            </datalist>
+        </label>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="demo-row">
+        <div class="demo-label">Checkbox</div>
+        <div style="display: flex; gap: 2rem;">
+            <label><input type="checkbox"> Unchecked</label>
+            <label><input type="checkbox" checked> Checked</label>
+            <label><input type="checkbox" indeterminate id="indeterminate-cb"> Indeterminate</label>
+            <label><input type="checkbox" disabled> Disabled</label>
+            <label><input type="checkbox" checked disabled> Checked Disabled</label>
+        </div>
+        <script>document.getElementById('indeterminate-cb').indeterminate = true;</script>
+    </div>
+
+    <!-- Radio -->
+    <div class="demo-row">
+        <div class="demo-label">Radio</div>
+        <div style="display: flex; gap: 2rem;">
+            <label><input type="radio" name="radio-demo" value="1"> Option 1</label>
+            <label><input type="radio" name="radio-demo" value="2" checked> Option 2</label>
+            <label><input type="radio" name="radio-demo" value="3"> Option 3</label>
+            <label><input type="radio" name="radio-disabled" value="4" disabled> Disabled</label>
+        </div>
+    </div>
+
+    <!-- Range -->
+    <div class="demo-row">
+        <div class="demo-label">Range (Slider)</div>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px;">
+            <label>Normal: <input type="range" min="0" max="100" value="50"></label>
+            <label>With step (10): <input type="range" min="0" max="100" value="50" step="10"></label>
+            <label>Disabled: <input type="range" min="0" max="100" value="50" disabled></label>
+        </div>
+    </div>
+
+    <!-- Fieldset & Legend -->
+    <div class="demo-row">
+        <div class="demo-label">Fieldset & Legend</div>
+        <fieldset style="max-width: 400px;">
+            <legend>Personal Information</legend>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label>Name: <input type="text" placeholder="Your name"></label>
+                <label>Email: <input type="email" placeholder="your@email.com"></label>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Dialog -->
+    <div class="demo-row">
+        <div class="demo-label">Dialog (Native Modal)</div>
+        <button onclick="document.getElementById('demo-dialog').showModal()">Open Dialog</button>
+        <dialog id="demo-dialog">
+            <h3>Dialog Title</h3>
+            <p>This is a native HTML dialog element. It can be used as a modal.</p>
+            <form method="dialog">
+                <button>Close</button>
+            </form>
+        </dialog>
+    </div>
+
+    <!-- Output -->
+    <div class="demo-row">
+        <div class="demo-label">Output Element</div>
+        <form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
+            <input type="number" id="a" value="10" style="width: 60px;"> +
+            <input type="number" id="b" value="20" style="width: 60px;"> =
+            <output name="result" for="a b">30</output>
+        </form>
+    </div>
+
+    <!-- Kbd, Samp, Code, Var -->
+    <div class="demo-row">
+        <div class="demo-label">Keyboard, Sample, Code, Variable</div>
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
+        <p>Computer output: <samp>Hello, World!</samp></p>
+        <p>Inline code: <code>const x = 42;</code></p>
+        <p>Variable: <var>x</var> = <var>y</var> + 5</p>
+    </div>
+
+    <!-- Abbr, Time, Address -->
+    <div class="demo-row">
+        <div class="demo-label">Abbr, Time, Address</div>
+        <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language.</p>
+        <p>Event date: <time datetime="2026-02-08">February 8, 2026</time></p>
+        <address>
+            Written by John Doe.<br>
+            Visit us at: example.com<br>
+            Tokyo, Japan
+        </address>
+    </div>
+
+    <!-- Figure & Figcaption -->
+    <div class="demo-row">
+        <div class="demo-label">Figure & Figcaption</div>
+        <figure style="max-width: 300px;">
+            <div style="background: #ddd; height: 150px; display: flex; align-items: center; justify-content: center;">Image placeholder</div>
+            <figcaption>Figure 1: This is a caption for the figure.</figcaption>
+        </figure>
+    </div>
+
+    <!-- Ins & Del -->
+    <div class="demo-row">
+        <div class="demo-label">Ins (Insert) & Del (Delete)</div>
+        <p>This is <del>deleted text</del> and <ins>inserted text</ins>.</p>
+    </div>
+
+    <!-- Pre -->
+    <div class="demo-row">
+        <div class="demo-label">Pre (Preformatted Text)</div>
+        <pre>
+function hello() {
+    console.log("Hello, World!");
+}
+        </pre>
+    </div>
+
 </section>
 
 <!-- ============================================ -->
