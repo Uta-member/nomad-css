@@ -1,112 +1,81 @@
 // ============================================
-// Input & Textarea Component
+// Component variable names and defaults
 // ============================================
-// ブラウザのデフォルトスタイルをリセットし、
-// CSS変数でテーマ側からカスタマイズ可能にする
-// ============================================
-//
-// 使用方法:
-// <input type="text" class="input" placeholder="Enter text">
-// <textarea class="input" placeholder="Enter text"></textarea>
-//
-// サイズバリエーション:
-// <input type="text" class="input input-sm">
-// <input type="text" class="input input-lg">
-//
-// バリデーション（将来実装予定）:
-// CSS変数 --input-border-color-valid, --input-border-color-invalid 等を
-// 上書きすることで、バリデーション状態のスタイルを適用できます
-// ============================================
+$input-prefix: "input-" !default;
+$input-class-name: "input" !default;
 
-@use "../props/prefixes" as *;
-@use "../props/defines" as *;
+// CSS variable names (SCSS variables referencing CSS custom properties)
+$input-height-var: --#{$input-prefix}height !default;
+$input-padding-x-var: --#{$input-prefix}padding-x !default;
+$input-padding-y-var: --#{$input-prefix}padding-y !default;
+$input-font-size-var: --#{$input-prefix}font-size !default;
+$input-line-height-var: --#{$input-prefix}line-height !default;
+$input-bg-var: --#{$input-prefix}bg !default;
+$input-color-var: --#{$input-prefix}color !default;
+$input-border-color-var: --#{$input-prefix}border-color !default;
+$input-placeholder-color-var: --#{$input-prefix}placeholder-color !default;
+$input-bg-hover-var: --#{$input-prefix}bg-hover !default;
+$input-border-color-hover-var: --#{$input-prefix}border-color-hover !default;
+$input-bg-focus-var: --#{$input-prefix}bg-focus !default;
+$input-border-color-focus-var: --#{$input-prefix}border-color-focus !default;
+$input-focus-ring-width-var: --#{$input-prefix}focus-ring-width !default;
+$input-focus-ring-color-var: --#{$input-prefix}focus-ring-color !default;
+$input-bg-disabled-var: --#{$input-prefix}bg-disabled !default;
+$input-color-disabled-var: --#{$input-prefix}color-disabled !default;
+$input-border-color-disabled-var: --#{$input-prefix}border-color-disabled !default;
+$input-bg-readonly-var: --#{$input-prefix}bg-readonly !default;
+$input-color-readonly-var: --#{$input-prefix}color-readonly !default;
+$input-border-color-readonly-var: --#{$input-prefix}border-color-readonly !default;
+$input-border-width-var: --#{$input-prefix}border-width !default;
+$input-border-radius-var: --#{$input-prefix}border-radius !default;
+$input-transition-var: --#{$input-prefix}transition !default;
+$form-input-gap-var: --form-input-gap !default;
 
-// ============================================
-// CSS Variables (defaults in :root)
-// ============================================
-:root {
-  // ----------------------------------------
-  // Size Variables
-  // ----------------------------------------
-  --#{$input-prefix}height: 2.5rem;
-  --#{$input-prefix}padding-x: 0.75rem;
-  --#{$input-prefix}padding-y: 0.5rem;
-  --#{$input-prefix}font-size: 1rem;
-  --#{$input-prefix}line-height: 1.5;
+// Default CSS variable values attached to the component namespace
+.#{$input-class-name} {
+  #{$input-height-var}: 2.5rem;
+  #{$input-padding-x-var}: 0.75rem;
+  #{$input-padding-y-var}: 0.5rem;
+  #{$input-font-size-var}: 1rem;
+  #{$input-line-height-var}: 1.5;
 
-  // ----------------------------------------
-  // Color Variables - Normal State
-  // ----------------------------------------
-  --#{$input-prefix}bg: var(--#{$neutral-prefix}0);
-  --#{$input-prefix}color: var(--#{$neutral-prefix}10);
-  --#{$input-prefix}border-color: var(--#{$neutral-prefix}4);
-  --#{$input-prefix}placeholder-color: var(--#{$neutral-prefix}5);
+  // Colors
+  #{$input-bg-var}: var(--#{$neutral-prefix}0);
+  #{$input-color-var}: var(--#{$neutral-prefix}10);
+  #{$input-border-color-var}: var(--#{$neutral-prefix}4);
+  #{$input-placeholder-color-var}: var(--#{$neutral-prefix}5);
 
-  // ----------------------------------------
-  // Color Variables - Hover State
-  // ----------------------------------------
-  --#{$input-prefix}bg-hover: var(--#{$neutral-prefix}0);
-  --#{$input-prefix}border-color-hover: var(--#{$neutral-prefix}5);
+  #{$input-bg-hover-var}: var(--#{$neutral-prefix}0);
+  #{$input-border-color-hover-var}: var(--#{$neutral-prefix}5);
 
-  // ----------------------------------------
-  // Color Variables - Focus State
-  // ----------------------------------------
-  --#{$input-prefix}bg-focus: var(--#{$neutral-prefix}0);
-  --#{$input-prefix}border-color-focus: var(--#{$neutral-prefix}6);
-  --#{$input-prefix}focus-ring-width: 2px;
-  --#{$input-prefix}focus-ring-color: var(--#{$neutral-prefix}3);
+  #{$input-bg-focus-var}: var(--#{$neutral-prefix}0);
+  #{$input-border-color-focus-var}: var(--#{$neutral-prefix}6);
+  #{$input-focus-ring-width-var}: 2px;
+  #{$input-focus-ring-color-var}: var(--#{$neutral-prefix}3);
 
-  // ----------------------------------------
-  // Color Variables - Disabled State
-  // ----------------------------------------
-  --#{$input-prefix}bg-disabled: var(--#{$neutral-prefix}2);
-  --#{$input-prefix}color-disabled: var(--#{$neutral-prefix}5);
-  --#{$input-prefix}border-color-disabled: var(--#{$neutral-prefix}3);
+  #{$input-bg-disabled-var}: var(--#{$neutral-prefix}2);
+  #{$input-color-disabled-var}: var(--#{$neutral-prefix}5);
+  #{$input-border-color-disabled-var}: var(--#{$neutral-prefix}3);
 
-  // ----------------------------------------
-  // Color Variables - Readonly State
-  // ----------------------------------------
-  --#{$input-prefix}bg-readonly: var(--#{$neutral-prefix}1);
-  --#{$input-prefix}color-readonly: var(--#{$neutral-prefix}8);
-  --#{$input-prefix}border-color-readonly: var(--#{$neutral-prefix}3);
+  #{$input-bg-readonly-var}: var(--#{$neutral-prefix}1);
+  #{$input-color-readonly-var}: var(--#{$neutral-prefix}8);
+  #{$input-border-color-readonly-var}: var(--#{$neutral-prefix}3);
 
-  // ----------------------------------------
-  // Border Variables
-  // ----------------------------------------
-  --#{$input-prefix}border-width: 1px;
-  --#{$input-prefix}border-radius: 0.25rem;
+  #{$input-border-width-var}: 1px;
+  #{$input-border-radius-var}: 0.25rem;
 
-  // ----------------------------------------
-  // Transition
-  // ----------------------------------------
-  --#{$input-prefix}transition:
-    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  #{$input-transition-var}: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-  // ----------------------------------------
-  // Validation Variables (for future use)
-  // ----------------------------------------
-  // Valid state
-  --#{$input-prefix}border-color-valid: var(
-    --semantic-success-default,
-    #22c55e
-  );
-  --#{$input-prefix}focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
-
-  // Invalid state
-  --#{$input-prefix}border-color-invalid: var(
-    --semantic-danger-default,
-    #ef4444
-  );
-  --#{$input-prefix}focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
+  // Form wrapper gap
+  #{$form-input-gap-var}: 0.5rem;
 }
 
 // ============================================
 // Base Input Styles
 // ============================================
-.input,
-input.input,
-textarea.input {
+.#{$input-class-name},
+input.#{$input-class-name},
+textarea.#{$input-class-name} {
   // Reset
   appearance: none;
   -webkit-appearance: none;
@@ -117,22 +86,21 @@ textarea.input {
   width: 100%;
 
   // Size
-  height: var(--#{$input-prefix}height);
-  padding: var(--#{$input-prefix}padding-y) var(--#{$input-prefix}padding-x);
-  font-size: var(--#{$input-prefix}font-size);
-  line-height: var(--#{$input-prefix}line-height);
+  height: var(#{$input-height-var});
+  padding: var(#{$input-padding-y-var}) var(#{$input-padding-x-var});
+  font-size: var(#{$input-font-size-var});
+  line-height: var(#{$input-line-height-var});
 
   // Colors
-  background-color: var(--#{$input-prefix}bg);
-  color: var(--#{$input-prefix}color);
+  background-color: var(#{$input-bg-var});
+  color: var(#{$input-color-var});
 
   // Border
-  border: var(--#{$input-prefix}border-width) solid
-    var(--#{$input-prefix}border-color);
-  border-radius: var(--#{$input-prefix}border-radius);
+  border: var(#{$input-border-width-var}) solid var(#{$input-border-color-var});
+  border-radius: var(#{$input-border-radius-var});
 
   // Transition
-  transition: var(--#{$input-prefix}transition);
+  transition: var(#{$input-transition-var});
 
   // Font
   font-family: inherit;
@@ -141,7 +109,7 @@ textarea.input {
   // Placeholder
   // ----------------------------------------
   &::placeholder {
-    color: var(--#{$input-prefix}placeholder-color);
+    color: var(#{$input-placeholder-color-var});
     opacity: 1; // Firefox fix
   }
 
@@ -149,8 +117,8 @@ textarea.input {
   // Hover State
   // ----------------------------------------
   &:hover:not(:disabled):not(:read-only):not(:focus) {
-    background-color: var(--#{$input-prefix}bg-hover);
-    border-color: var(--#{$input-prefix}border-color-hover);
+    background-color: var(#{$input-bg-hover-var});
+    border-color: var(#{$input-border-color-hover-var});
   }
 
   // ----------------------------------------
@@ -158,19 +126,18 @@ textarea.input {
   // ----------------------------------------
   &:focus {
     outline: none;
-    background-color: var(--#{$input-prefix}bg-focus);
-    border-color: var(--#{$input-prefix}border-color-focus);
-    box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width)
-      var(--#{$input-prefix}focus-ring-color);
+    background-color: var(#{$input-bg-focus-var});
+    border-color: var(#{$input-border-color-focus-var});
+    box-shadow: 0 0 0 var(#{$input-focus-ring-width-var}) var(#{$input-focus-ring-color-var});
   }
 
   // ----------------------------------------
   // Disabled State
   // ----------------------------------------
   &:disabled {
-    background-color: var(--#{$input-prefix}bg-disabled);
-    color: var(--#{$input-prefix}color-disabled);
-    border-color: var(--#{$input-prefix}border-color-disabled);
+    background-color: var(#{$input-bg-disabled-var});
+    color: var(#{$input-color-disabled-var});
+    border-color: var(#{$input-border-color-disabled-var});
     cursor: not-allowed;
     opacity: 1; // Override browser default
   }
@@ -179,9 +146,9 @@ textarea.input {
   // Readonly State
   // ----------------------------------------
   &:read-only:not(:disabled) {
-    background-color: var(--#{$input-prefix}bg-readonly);
-    color: var(--#{$input-prefix}color-readonly);
-    border-color: var(--#{$input-prefix}border-color-readonly);
+    background-color: var(#{$input-bg-readonly-var});
+    color: var(#{$input-color-readonly-var});
+    border-color: var(#{$input-border-color-readonly-var});
     cursor: default;
   }
 }
@@ -189,9 +156,9 @@ textarea.input {
 // ============================================
 // Textarea Specific
 // ============================================
-textarea.input {
+textarea.#{$input-class-name} {
   height: auto;
-  min-height: calc(var(--#{$input-prefix}height) * 2);
+  min-height: calc(var(#{$input-height-var}) * 2);
   resize: vertical;
 }
 
@@ -210,35 +177,16 @@ textarea.input-resize-both {
   resize: both;
 }
 
-// ============================================
-// Size Variants
-// ============================================
-// -> Managed in themes/contract
-
-// ============================================
-// Borderless Variant
-// ============================================
-// -> Managed in themes/contract
-
-// ============================================
-// Underline Variant
-// ============================================
-// -> Managed in themes/contract
-
-// ============================================
-// Filled Variant (背景色ベースのスタイル)
-// ============================================
-// -> Managed in themes/contract
 
 // ============================================
 // Semantic Color Support (Focus Ring Color)
 // ============================================
 // Usage: <input type="text" class="input primary">
-.input {
+.#{$input-class-name} {
   @each $name, $values in $semantic-colors {
     &.#{$semantic-prefix}#{$name} {
-      --#{$input-prefix}border-color-focus: var(--#{$palette-default});
-      --#{$input-prefix}focus-ring-color: var(--#{$palette-lighter});
+      #{$input-border-color-focus-var}: var(--#{$palette-default});
+      #{$input-focus-ring-color-var}: var(--#{$palette-lighter});
     }
   }
 }
@@ -258,7 +206,7 @@ textarea.input-resize-both {
   width: 100%;
 
   // Reset border-radius for grouped elements
-  > .input {
+  > .#{$input-class-name} {
     flex: 1 1 auto;
     width: 1%; // Fix for flex items in some browsers
     min-width: 0;
@@ -278,28 +226,25 @@ textarea.input-resize-both {
 // ============================================
 // Input Addon
 // ============================================
-.input-addon {
+.#{$input-class-name}-addon {
   display: flex;
   align-items: center;
-  padding: var(--#{$input-prefix}padding-y) var(--#{$input-prefix}padding-x);
-  font-size: var(--#{$input-prefix}font-size);
-  line-height: var(--#{$input-prefix}line-height);
-  color: var(--#{$input-prefix}color);
+  padding: var(#{$input-padding-y-var}) var(#{$input-padding-x-var});
+  font-size: var(#{$input-font-size-var});
+  line-height: var(#{$input-line-height-var});
+  color: var(#{$input-color-var});
   background-color: var(--#{$neutral-prefix}2);
-  border: var(--#{$input-prefix}border-width) solid
-    var(--#{$input-prefix}border-color);
+  border: var(#{$input-border-width-var}) solid var(#{$input-border-color-var});
   white-space: nowrap;
 
   &:first-child {
     border-right: 0;
-    border-radius: var(--#{$input-prefix}border-radius) 0 0
-      var(--#{$input-prefix}border-radius);
+    border-radius: var(#{$input-border-radius-var}) 0 0 var(#{$input-border-radius-var});
   }
 
   &:last-child {
     border-left: 0;
-    border-radius: 0 var(--#{$input-prefix}border-radius)
-      var(--#{$input-prefix}border-radius) 0;
+    border-radius: 0 var(#{$input-border-radius-var}) var(#{$input-border-radius-var}) 0;
   }
 }
 
@@ -317,54 +262,49 @@ textarea.input-resize-both {
 //     <span class="input-icon-right">✓</span>
 // </div>
 
-.input-icon {
+.#{$input-class-name}-icon {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 
-  > .input {
+  > .#{$input-class-name} {
     width: 100%;
   }
 
   // Has left icon
-  &:has(.input-icon-left) > .input {
-    padding-left: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
+    &:has(.#{$input-class-name}-icon-left) > .#{$input-class-name} {
+    padding-left: calc(var(#{$input-padding-x-var}) * 2 + 1em);
   }
 
   // Has right icon
-  &:has(.input-icon-right) > .input {
-    padding-right: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
+  &:has(.#{$input-class-name}-icon-right) > .#{$input-class-name} {
+    padding-right: calc(var(#{$input-padding-x-var}) * 2 + 1em);
   }
 }
 
-.input-icon-left,
-.input-icon-right {
+.#{$input-class-name}-icon-left,
+.#{$input-class-name}-icon-right {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
-  color: var(--#{$input-prefix}placeholder-color);
+  width: calc(var(#{$input-padding-x-var}) * 2 + 1em);
+  color: var(#{$input-placeholder-color-var});
   pointer-events: none;
 }
 
-.input-icon-left {
-  left: 0;
-}
-
-.input-icon-right {
-  right: 0;
-}
+.#{$input-class-name}-icon-left { left: 0; }
+.#{$input-class-name}-icon-right { right: 0; }
 
 // Clickable icon (e.g., clear button, password toggle)
-.input-icon-clickable {
+.#{$input-class-name}-icon-clickable {
   pointer-events: auto;
   cursor: pointer;
 
   &:hover {
-    color: var(--#{$input-prefix}color);
+    color: var(#{$input-color-var});
   }
 }
 
@@ -374,9 +314,9 @@ textarea.input-resize-both {
 .form-label {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: var(--#{$input-prefix}font-size);
+  font-size: var(#{$input-font-size-var});
   font-weight: 500;
-  color: var(--#{$input-prefix}color);
+  color: var(#{$input-color-var});
 }
 
 // ============================================
@@ -386,7 +326,7 @@ textarea.input-resize-both {
   display: block;
   margin-top: 0.25rem;
   font-size: 0.875em;
-  color: var(--#{$input-prefix}placeholder-color);
+  color: var(#{$input-placeholder-color-var});
 }
 
 // ============================================
@@ -412,7 +352,7 @@ textarea.input-resize-both {
   align-items: center;
   gap: 0.5rem;
 
-  > .input {
+  > .#{$input-class-name} {
     width: auto;
     flex: 1 1 auto;
   }
@@ -422,47 +362,4 @@ textarea.input-resize-both {
   }
 }
 
-// ============================================
-// Validation States (prepared for future use)
-// ============================================
-// These classes can be added via JavaScript validation
-// or server-side rendering
-
-// Valid state
-.input-valid,
-.input.is-valid {
-  border-color: var(--#{$input-prefix}border-color-valid);
-
-  &:focus {
-    border-color: var(--#{$input-prefix}border-color-valid);
-    box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width)
-      var(--#{$input-prefix}focus-ring-color-valid);
-  }
-}
-
-// Invalid state
-.input-invalid,
-.input.is-invalid {
-  border-color: var(--#{$input-prefix}border-color-invalid);
-
-  &:focus {
-    border-color: var(--#{$input-prefix}border-color-invalid);
-    box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width)
-      var(--#{$input-prefix}focus-ring-color-invalid);
-  }
-}
-
-// Feedback text for validation
-.form-feedback {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 0.875em;
-}
-
-.form-feedback-valid {
-  color: var(--#{$input-prefix}border-color-valid);
-}
-
-.form-feedback-invalid {
-  color: var(--#{$input-prefix}border-color-invalid);
-}
+// Validation is handled at theme/application layer; core does not provide validation styles.
