@@ -1,8 +1,15 @@
+@use "sass:map";
+
 // ================================
-// Breakpoints
+// Overridable Variants
 // ================================
 
+// ================================
 // ブレークポイント定義
+// ================================
+// key: 名前
+// value: 値
+// ================================
 $breakpoints: (
   "xs": 0,
   "sm": 576px,
@@ -13,17 +20,20 @@ $breakpoints: (
 ) !default;
 
 // ================================
-// Media Query Mixins
+// Mixins
 // ================================
 
+// ================================
 /// min-width メディアクエリ（Mobile First）
+// ================================
 /// @param {String} $breakpoint - ブレークポイント名 (xs, sm, md, lg, xl, xxl)
 /// @example scss
 ///   @include media-up("md") {
 ///     .element { display: flex; }
 ///   }
+// ================================
 @mixin media-up($breakpoint) {
-  $min: map-get($breakpoints, $breakpoint);
+  $min: map.get($breakpoints, $breakpoint);
   @if $min == null {
     @error "Unknown breakpoint: #{$breakpoint}";
   }
@@ -36,14 +46,17 @@ $breakpoints: (
   }
 }
 
+// ================================
 /// max-width メディアクエリ
+// ================================
 /// @param {String} $breakpoint - ブレークポイント名
 /// @example scss
 ///   @include media-down("md") {
 ///     .element { display: none; }
 ///   }
+// ================================
 @mixin media-down($breakpoint) {
-  $max: map-get($breakpoints, $breakpoint);
+  $max: map.get($breakpoints, $breakpoint);
   @if $max == null {
     @error "Unknown breakpoint: #{$breakpoint}";
   }
@@ -54,16 +67,19 @@ $breakpoints: (
   }
 }
 
+// ================================
 /// 範囲指定メディアクエリ
+// ================================
 /// @param {String} $lower - 下限ブレークポイント名
 /// @param {String} $upper - 上限ブレークポイント名
 /// @example scss
 ///   @include media-between("sm", "lg") {
 ///     .element { padding: 1rem; }
 ///   }
+// ================================
 @mixin media-between($lower, $upper) {
-  $min: map-get($breakpoints, $lower);
-  $max: map-get($breakpoints, $upper);
+  $min: map.get($breakpoints, $lower);
+  $max: map.get($breakpoints, $upper);
   @if $min == null {
     @error "Unknown breakpoint: #{$lower}";
   }
@@ -75,21 +91,24 @@ $breakpoints: (
   }
 }
 
+// ================================
 /// 特定のブレークポイントのみ
+// ================================
 /// @param {String} $breakpoint - ブレークポイント名
+// ================================
 @mixin media-only($breakpoint) {
-  $names: map-keys($breakpoints);
+  $names: map.keys($breakpoints);
   $index: index($names, $breakpoint);
 
   @if $index == null {
     @error "Unknown breakpoint: #{$breakpoint}";
   }
 
-  $min: map-get($breakpoints, $breakpoint);
+  $min: map.get($breakpoints, $breakpoint);
 
   @if $index < length($names) {
     $next-name: nth($names, $index + 1);
-    $max: map-get($breakpoints, $next-name);
+    $max: map.get($breakpoints, $next-name);
 
     @if $min > 0 {
       @media (min-width: $min) and (max-width: ($max - 0.02px)) {
@@ -108,16 +127,15 @@ $breakpoints: (
 }
 
 // ================================
-// Responsive Class Generation Mixins
-// ================================
-
 /// レスポンシブユーティリティクラス生成
+// ================================
 /// @param {String} $class-name - クラス名
 /// @param {String} $property - CSSプロパティ
 /// @param {*} $value - 値
 /// @example scss
 ///   @include responsive-utility("d-none", "display", none);
 ///   // 出力: .d-none, .d-sm-none, .d-md-none, ...
+// ================================
 @mixin responsive-utility($class-name, $property, $value) {
   .#{$class-name} {
     #{$property}: $value;
@@ -134,13 +152,16 @@ $breakpoints: (
   }
 }
 
+// ================================
 /// 複数値のレスポンシブユーティリティクラス生成
+// ================================
 /// @param {String} $class-prefix - クラス名のプレフィックス
 /// @param {String} $property - CSSプロパティ
 /// @param {Map} $values - 値のマップ (キー: 値)
 /// @example scss
 ///   @include responsive-utilities("d", "display", ("block": block, "flex": flex));
 ///   // 出力: .d-block, .d-flex, .d-sm-block, .d-sm-flex, ...
+// ================================
 @mixin responsive-utilities($class-prefix, $property, $values) {
   // ベースクラス（ブレークポイントなし）
   @each $key, $value in $values {
@@ -163,12 +184,15 @@ $breakpoints: (
   }
 }
 
+// ================================
 /// カスタムコンテンツ付きレスポンシブMixin
+// ================================
 /// @param {String} $class-name - クラス名
 /// @example scss
 ///   @include responsive-class("text-center") {
 ///     text-align: center;
 ///   }
+// ================================
 @mixin responsive-class($class-name) {
   .#{$class-name} {
     @content;

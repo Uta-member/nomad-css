@@ -1,12 +1,17 @@
 @use "prefixes" as *;
-@use "defines" as *;
+@use "sass:map";
 
 // ============================================
-// Palette Color Definitions
+// Overridable Variants
 // ============================================
 
-// 明度リスト（0-10）
-$palette-lightness-list: (
+// ============================================
+// デフォルト明度リスト（0-10）
+// ============================================
+// key: 輝度名
+// value: 輝度値
+// ============================================
+$palette-default-lightness-list: (
   0: 97%,
   1: 93%,
   2: 85%,
@@ -21,239 +26,236 @@ $palette-lightness-list: (
 ) !default;
 
 // ============================================
+// デフォルトレベルリスト
+// ============================================
+// key: レベル名
+// value: 輝度名
+// ============================================
+$palette-default-level-list: (
+  "lighter": 2,
+  "light": 3,
+  "default": 5,
+  "dark": 7,
+  "darker": 9,
+) !default;
+
+// アクセント輝度（明）
+$palette-accent-light: 97% !default;
+// アクセント輝度（暗）
+$palette-accent-dark: 10% !default;
+// アクセント
+$palette-accent-default-threshold: 50% !default;
+// グレーの彩度
+$palette-gray-saturation: 5% !default;
+
+// ============================================
+// パレット定義リスト
+// ============================================
+// key: パレット名
+// value: パレットプロパティリスト
+//   h: 色相
+//   s: 彩度
+//   lightness-list: 輝度リスト
+//     key: 輝度名
+//     value: 輝度値
+//   threshold: アクセント切り替え輝度
+//   level-list: レベルリスト
+//     key: レベル名
+//     value: 輝度名
+// ============================================
+$palettes: (
+  "primary": (
+    h: 220,
+    s: 80%,
+    level-list: (
+      lighter: 2,
+      light: 3,
+      default: 6,
+      dark: 8,
+      darker: 9,
+    ),
+  ),
+  "secondary": (
+    h: 330,
+    s: 80%,
+    threshold: 55%,
+    levels: (
+      lighter: 2,
+      light: 3,
+      default: 5,
+      dark: 7,
+      darker: 9,
+    ),
+  ),
+  "tertiary": (
+    h: 170,
+    s: 60%,
+    threshold: 40%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 7,
+      dark: 9,
+      darker: 10,
+    ),
+  ),
+  "success": (
+    h: 125,
+    s: 60%,
+    threshold: 45%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 7,
+      dark: 9,
+      darker: 10,
+    ),
+  ),
+  "warning": (
+    h: 50,
+    s: 80%,
+    threshold: 45%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 6,
+      dark: 8,
+      darker: 9,
+    ),
+  ),
+  "danger": (
+    h: 0,
+    s: 80%,
+    threshold: 50%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 6,
+      dark: 8,
+      darker: 9,
+    ),
+  ),
+  "info": (
+    h: 190,
+    s: 80%,
+    threshold: 40%,
+    levels: (
+      lighter: 2,
+      light: 4,
+      default: 7,
+      dark: 8,
+      darker: 9,
+    ),
+  ),
+) !default;
+
+//=============================================
+// Mixins
+// ============================================
+
+// ============================================
 // Palette Color Generation Mixin
+// ============================================
+// $palette-lightness-list: 輝度リスト
+// $palette-level-list: レベルリスト
 // $threshold: Accent Color Threshold
 // ============================================
-@mixin _generate-palette-colors($threshold: $palette-accent-threshold) {
-  @each $index, $lightness in $palette-lightness-list {
-    --#{$palette-lightness-prefix}#{$index}: #{$lightness};
+@mixin _generate-palette-colors(
+  $palette-lightness-list,
+  $palette-level-list,
+  $threshold
+) {
+  // 輝度値のCSS変数定義
+  @each $key, $lightness in $palette-lightness-list {
+    @if type-of($lightness) == "map" {
+      @error "カラーパレット生成エラー: 輝度に連想配列を指定することはできません。";
+    }
+    --#{$palette-lightness-var}#{$key}: #{$lightness};
   }
 
-  @each $index, $lightness in $palette-lightness-list {
-    --#{$palette-color-prefix}#{$index}: hsl(
-      var(--#{$palette-hue-prefix}),
-      var(--#{$palette-saturation-prefix}),
-      var(--#{$palette-lightness-prefix}#{$index})
+  // 実際の色のCSS変数定義
+  @each $key, $lightness in $palette-lightness-list {
+    --#{$palette-color-prefix}#{$key}: hsl(
+      var(--#{$palette-hue-var}),
+      var(--#{$palette-saturation-var}),
+      var(--#{$palette-lightness-var}#{$key})
     );
   }
 
-  @each $index, $lightness in $palette-lightness-list {
-    --#{$palette-gray-prefix}#{$index}: hsl(
-      var(--#{$palette-hue-prefix}),
-      var(--#{$palette-gray-saturation-prefix}),
-      var(--#{$palette-lightness-prefix}#{$index})
+  // グレー色のCSS変数定義
+  @each $key, $lightness in $palette-lightness-list {
+    --#{$palette-gray-prefix}#{$key}: hsl(
+      var(--#{$palette-hue-var}),
+      var(--#{$palette-gray-saturation-var}),
+      var(--#{$palette-lightness-var}#{$key})
     );
   }
 
-  @each $index, $lightness in $palette-lightness-list {
+  // アクセント色のCSS変数定義
+  @each $key, $lightness in $palette-lightness-list {
+    @if type-of($threshold) == "map" {
+      @error "カラーパレット生成エラー: アクセントの輝度閾値に連想配列を指定することはできません。";
+    }
     @if $lightness > $threshold {
-      --#{$palette-accent-prefix}#{$index}: hsl(
-        var(--#{$palette-hue-prefix}),
-        var(--#{$palette-gray-saturation-prefix}),
+      --#{$palette-accent-prefix}#{$key}: hsl(
+        var(--#{$palette-hue-var}),
+        var(--#{$palette-gray-saturation-var}),
         var(--#{$palette-accent-dark-var})
       );
     } @else {
-      --#{$palette-accent-prefix}#{$index}: hsl(
-        var(--#{$palette-hue-prefix}),
-        var(--#{$palette-gray-saturation-prefix}),
+      --#{$palette-accent-prefix}#{$key}: hsl(
+        var(--#{$palette-hue-var}),
+        var(--#{$palette-gray-saturation-var}),
         var(--#{$palette-accent-light-var})
       );
     }
   }
-}
 
-// ============================================
-// HUE Color Generation Mixin
-// $hues: ("red": 0, ...)
-// $accent-light: Accent Lightness
-// $accent-dark: Accent Darkness
-// $default-threshold: Default Accent Threshold
-// ============================================
-@mixin generate-hues(
-  $hues,
-  $accent-light: $palette-accent-light,
-  $accent-dark: $palette-accent-dark,
-  $default-threshold: $palette-accent-threshold
-) {
-  :root {
-    @each $name, $value in $hues {
-      @if type-of($value) == "map" {
-        --#{$prefix}hue-#{$name}: #{map-get($value, h)};
-      } @else {
-        --#{$prefix}hue-#{$name}: #{$value};
-      }
+  // レベルリスト
+  @each $level-name, $step-key in $palette-level-list {
+    @if type-of($step-key) == "map" {
+      @error "カラーパレット生成エラー: レベルの輝度キーに連想配列を指定することはできません。";
+    }
+    @if not map.has-key($palette-lightness-list, $step-key) {
+      @error "カラーパレット生成エラー: レベル '#{$level-name}' に指定された輝度キー '#{$step-key}' は、輝度リストに存在しません。利用可能なキー: #{map.keys($palette-lightness-list)}";
     }
 
-    --#{$palette-accent-light-var}: #{$accent-light};
-    --#{$palette-accent-dark-var}: #{$accent-dark};
-    --#{$palette-accent-threshold-var}: #{$default-threshold};
-  }
-}
-
-// ============================================
-// HUE Class Generation Mixin
-// $hues: ("red": 0, ...)
-// $saturation: Saturation for HUE Classes
-// $gray-saturation: Gray Saturation for HUE Classes
-// $default-threshold: Default Accent Threshold
-// ============================================
-@mixin generate-hue-classes(
-  $hues,
-  $saturation: 100%,
-  $gray-saturation: 5%,
-  $default-threshold: $palette-accent-threshold
-) {
-  @each $name, $value in $hues {
-    $threshold: $default-threshold;
-    @if type-of($value) == "map" and map-has-key($value, threshold) {
-      $threshold: map-get($value, threshold);
-    }
-
-    .#{$prefix}#{$name} {
-      --#{$palette-hue-prefix}: var(--#{$prefix}hue-#{$name});
-      --#{$palette-saturation-prefix}: #{$saturation};
-      --#{$palette-gray-saturation-prefix}: #{$gray-saturation};
-      --#{$palette-accent-threshold-var}: #{$threshold};
-      @include _generate-palette-colors($threshold);
-    }
-  }
-}
-
-// ============================================
-// Semantic Color Generation Mixin
-// $colors: ( "primary": (h: , s: , threshold: , levels: ()), ... )
-// $gray-saturation: Gray Saturation for Semantic Colors
-// $default-threshold: Default Accent Threshold
-// $default-levels: Default Levels Mapping
-// ============================================
-@mixin generate-semantic-colors(
-  $colors,
-  $gray-saturation: 5%,
-  $default-threshold: $palette-accent-threshold,
-  $default-levels: $semantic-levels
-) {
-  :root {
-    @each $level-name, $palette-index in $default-levels {
-      --#{$semantic-level-prefix}#{$level-name}: #{$palette-index};
-    }
-
-    @each $name, $values in $colors {
-      --#{$semantic-prefix}#{$name}-h: #{map-get($values, h)};
-      --#{$semantic-prefix}#{$name}-s: #{map-get($values, s)};
-    }
-  }
-
-  @each $name, $values in $colors {
-    $threshold: $default-threshold;
-    @if map-has-key($values, threshold) {
-      $threshold: map-get($values, threshold);
-    }
-
-    $levels: $default-levels;
-    @if map-has-key($values, levels) {
-      $custom-levels: map-get($values, levels);
-      @each $level-name, $palette-index in $custom-levels {
-        $levels: map-merge(
-          $levels,
-          (
-            $level-name: $palette-index,
-          )
-        );
-      }
-    }
-
-    .#{$semantic-prefix}#{$name} {
-      --#{$palette-hue-prefix}: var(--#{$semantic-prefix}#{$name}-h);
-      --#{$palette-saturation-prefix}: var(--#{$semantic-prefix}#{$name}-s);
-      --#{$palette-gray-saturation-prefix}: #{$gray-saturation};
-      --#{$palette-accent-threshold-var}: #{$threshold};
-      @include _generate-palette-colors($threshold);
-
-      --#{$palette-lighter}: var(
-        --#{$palette-color-prefix}#{map-get($levels, "lighter")}
-      );
-      --#{$palette-light}: var(
-        --#{$palette-color-prefix}#{map-get($levels, "light")}
-      );
-      --#{$palette-default}: var(
-        --#{$palette-color-prefix}#{map-get($levels, "default")}
-      );
-      --#{$palette-dark}: var(
-        --#{$palette-color-prefix}#{map-get($levels, "dark")}
-      );
-      --#{$palette-darker}: var(
-        --#{$palette-color-prefix}#{map-get($levels, "darker")}
-      );
-
-      --#{$palette-lighter-accent}: var(
-        --#{$palette-accent-prefix}#{map-get($levels, "lighter")}
-      );
-      --#{$palette-light-accent}: var(
-        --#{$palette-accent-prefix}#{map-get($levels, "light")}
-      );
-      --#{$palette-default-accent}: var(
-        --#{$palette-accent-prefix}#{map-get($levels, "default")}
-      );
-      --#{$palette-dark-accent}: var(
-        --#{$palette-accent-prefix}#{map-get($levels, "dark")}
-      );
-      --#{$palette-darker-accent}: var(
-        --#{$palette-accent-prefix}#{map-get($levels, "darker")}
-      );
-    }
-  }
-}
-
-// ============================================
-// Neutral Palette Definitions
-// ============================================
-$neutral-hue: 220 !default;
-$neutral-saturation: 5% !default;
-$neutral-threshold: $palette-accent-threshold !default;
-$neutral-levels: $semantic-levels !default;
-
-// ============================================
-// Neutral Palette Generation
-// ============================================
-:root {
-  --#{$neutral-accent-threshold-var}: #{$neutral-threshold};
-
-  @each $index, $lightness in $palette-lightness-list {
-    --#{$neutral-prefix}#{$index}: hsl(
-      var(--#{$neutral-hue-var}),
-      var(--#{$neutral-saturation-var}),
-      #{$lightness}
+    --#{$palette-prefix}#{$level-name}: var(
+      --#{$palette-color-prefix}#{$step-key}
+    );
+    --#{$palette-prefix}#{$level-name}-accent: var(
+      --#{$palette-accent-prefix}#{$step-key}
     );
   }
-
-  @each $index, $lightness in $palette-lightness-list {
-    @if $lightness > $neutral-threshold {
-      --#{$neutral-prefix}accent-#{$index}: hsl(
-        var(--#{$neutral-hue-var}),
-        var(--#{$neutral-saturation-var}),
-        var(--#{$palette-accent-dark-var})
-      );
-    } @else {
-      --#{$neutral-prefix}accent-#{$index}: hsl(
-        var(--#{$neutral-hue-var}),
-        var(--#{$neutral-saturation-var}),
-        var(--#{$palette-accent-light-var})
-      );
-    }
-  }
 }
 
-@include generate-semantic-colors(
-  (
-    "neutral": (
-      h: $neutral-hue,
-      s: $neutral-saturation,
-      threshold: $neutral-threshold,
-      levels: $neutral-levels,
-    ),
-  )
-);
+//=============================================
+// Process
+// ============================================
+@each $name, $value in $palettes {
+  @if not type-of($value) == "map" {
+    @error "カラーパレット生成エラー: パレットの値には連想配列を指定してください。";
+  }
+  @if not map.has-key($value, h) {
+    @error "カラーパレット生成エラー: パレットの値に色相（h）が含まれていません。";
+  }
+  @if not map.has-key($value, s) {
+    @error "カラーパレット生成エラー: パレットの値に彩度（s）が含まれていません。";
+  }
+  .#{$prefix}#{$name} {
+    --#{$palette-hue-var}: #{map.get($value, h)};
+    --#{$palette-saturation-var}: #{map.get($value, s)};
+    --#{$palette-accent-light-var}: #{$palette-accent-light};
+    --#{$palette-accent-dark-var}: #{$palette-accent-dark};
+    --#{$palette-gray-saturation-var}: #{$palette-gray-saturation};
 
-@include generate-hues($hues);
-@include generate-hue-classes($hues);
-@include generate-semantic-colors($semantic-colors);
+    @include _generate-palette-colors(
+      $palette-lightness-list: map.get($value, lightness-list) or
+        $palette-default-lightness-list,
+      $palette-level-list: map.get($value, level-list) or
+        $palette-default-level-list,
+      $threshold: map.get($value, threshold) or
+        $palette-accent-default-threshold
+    );
+  }
+}
