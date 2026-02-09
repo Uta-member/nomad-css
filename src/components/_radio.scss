@@ -1,8 +1,8 @@
 // ============================================
 // Prefixes
 // ============================================
-$checkbox-prefix: "form-check-" !default;
-$checkbox-class-name: "form-check" !default;
+$radio-prefix: "radio-" !default;
+$radio-class-name: "radio" !default;
 
 // ============================================
 // Process
@@ -11,49 +11,7 @@ $checkbox-class-name: "form-check" !default;
 // ============================================
 // CSS Variables (defaults in :root)
 // ============================================
-.#{$checkbox-class-name} {
-  // ----------------------------------------
-  // Checkbox Variables
-  // ----------------------------------------
-  // Size
-  --#{$checkbox-prefix}size: 1.25rem;
-
-  // Border
-  --#{$checkbox-prefix}border-width: 2px;
-  --#{$checkbox-prefix}border-radius: 0.25rem;
-  --#{$checkbox-prefix}border-color: ;
-  --#{$checkbox-prefix}border-color-hover: ;
-  --#{$checkbox-prefix}border-color-checked: ;
-  --#{$checkbox-prefix}border-color-focus: ;
-
-  // Background
-  --#{$checkbox-prefix}bg: transparent;
-  --#{$checkbox-prefix}bg-hover: ;
-  --#{$checkbox-prefix}bg-checked: ;
-
-  // Checkmark
-  --#{$checkbox-prefix}checkmark-color: ;
-  --#{$checkbox-prefix}checkmark-width: 2px;
-
-  // Indeterminate
-  --#{$checkbox-prefix}indeterminate-color: ;
-
-  // Focus ring
-  --#{$checkbox-prefix}focus-ring-width: 2px;
-  --#{$checkbox-prefix}focus-ring-offset: 2px;
-  --#{$checkbox-prefix}focus-ring-color: ;
-
-  // Disabled
-  --#{$checkbox-prefix}disabled-opacity: 0.5;
-
-  // Transition
-  --#{$checkbox-prefix}transition:
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-
-  // ----------------------------------------
-  // Radio Variables
-  // ----------------------------------------
+.#{$radio-class-name} {
   // Size
   --#{$radio-prefix}size: 1.25rem;
 
@@ -87,116 +45,17 @@ $checkbox-class-name: "form-check" !default;
     box-shadow 0.15s ease-in-out;
 
   // ----------------------------------------
-  // Form Check (label wrapper) Variables
+  // Form Radio (label wrapper) Variables
   // ----------------------------------------
-  --form-check-gap: 0.5rem;
-  --form-check-label-color: inherit;
-}
-
-// ============================================
-// Checkbox
-// ============================================
-.#{$checkbox-class-name},
-input[type="checkbox"].#{$checkbox-class-name} {
-  // Reset browser default
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  margin: 0;
-
-  // Size
-  width: var(--#{$checkbox-prefix}size);
-  height: var(--#{$checkbox-prefix}size);
-  flex-shrink: 0;
-
-  // Display
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-
-  // Border
-  border: var(--#{$checkbox-prefix}border-width) solid
-    var(--#{$checkbox-prefix}border-color);
-  border-radius: var(--#{$checkbox-prefix}border-radius);
-
-  // Background
-  background-color: var(--#{$checkbox-prefix}bg);
-
-  // Cursor
-  cursor: pointer;
-
-  // Transition
-  transition: var(--#{$checkbox-prefix}transition);
-
-  // ----------------------------------------
-  // Hover State
-  // ----------------------------------------
-  &:hover:not(:disabled):not(:checked) {
-    background-color: var(--#{$checkbox-prefix}bg-hover);
-    border-color: var(--#{$checkbox-prefix}border-color-hover);
-  }
-
-  // ----------------------------------------
-  // Focus State
-  // ----------------------------------------
-  &:focus-visible {
-    outline: var(--#{$checkbox-prefix}focus-ring-width) solid
-      var(--#{$checkbox-prefix}focus-ring-color);
-    outline-offset: var(--#{$checkbox-prefix}focus-ring-offset);
-  }
-
-  // ----------------------------------------
-  // Checked State
-  // ----------------------------------------
-  &:checked {
-    background-color: var(--#{$checkbox-prefix}bg-checked);
-    border-color: var(--#{$checkbox-prefix}border-color-checked);
-
-    // Checkmark using pseudo-element
-    &::after {
-      content: "";
-      display: block;
-      width: calc(var(--#{$checkbox-prefix}size) * 0.3);
-      height: calc(var(--#{$checkbox-prefix}size) * 0.55);
-      border: solid var(--#{$checkbox-prefix}checkmark-color);
-      border-width: 0 var(--#{$checkbox-prefix}checkmark-width)
-        var(--#{$checkbox-prefix}checkmark-width) 0;
-      transform: rotate(45deg) translateX(-5%) translateY(-5%);
-    }
-  }
-
-  // ----------------------------------------
-  // Indeterminate State
-  // ----------------------------------------
-  &:indeterminate {
-    background-color: var(--#{$checkbox-prefix}bg-checked);
-    border-color: var(--#{$checkbox-prefix}border-color-checked);
-
-    // Horizontal line
-    &::after {
-      content: "";
-      display: block;
-      width: calc(var(--#{$checkbox-prefix}size) * 0.5);
-      height: var(--#{$checkbox-prefix}checkmark-width);
-      background-color: var(--#{$checkbox-prefix}indeterminate-color);
-    }
-  }
-
-  // ----------------------------------------
-  // Disabled State
-  // ----------------------------------------
-  &:disabled {
-    opacity: var(--#{$checkbox-prefix}disabled-opacity);
-    cursor: not-allowed;
-  }
+  --form-radio-gap: 0.5rem;
+  --form-radio-label-color: inherit;
 }
 
 // ============================================
 // Radio
 // ============================================
-.radio,
-input[type="radio"].radio {
+.#{$radio-class-name},
+input[type="radio"].#{$radio-class-name} {
   // Reset browser default
   appearance: none;
   -webkit-appearance: none;
@@ -270,39 +129,32 @@ input[type="radio"].radio {
     opacity: var(--#{$radio-prefix}disabled-opacity);
     cursor: not-allowed;
   }
-}
 
-// ============================================
-// Size Variants
-// ============================================
-.checkbox-sm,
-.radio-sm {
-  --#{$checkbox-prefix}size: 1rem;
-  --#{$radio-prefix}size: 1rem;
-  --#{$radio-prefix}dot-size: 0.375rem;
-}
+  &.sm {
+    --#{$radio-prefix}size: 1rem;
+    --#{$radio-prefix}dot-size: 0.375rem;
 
-.checkbox-lg,
-.radio-lg {
-  --#{$checkbox-prefix}size: 1.5rem;
-  --#{$radio-prefix}size: 1.5rem;
-  --#{$radio-prefix}dot-size: 0.625rem;
+    .lg {
+      --#{$radio-prefix}size: 1.5rem;
+      --#{$radio-prefix}dot-size: 0.625rem;
+    }
+  }
 }
 
 // ============================================
 // Form Check Wrapper
 // ============================================
 // Usage: <label class="form-check"><input type="checkbox" class="checkbox"> Label text</label>
-.form-check {
+.form-radio {
   display: inline-flex;
   align-items: center;
-  gap: var(--form-check-gap);
+  gap: var(--form-radio-gap);
   cursor: pointer;
-  color: var(--form-check-label-color);
+  color: var(--form-radio-label-color);
 
   // When disabled, style the whole label
   &:has(:disabled) {
-    opacity: var(--#{$checkbox-prefix}disabled-opacity);
+    opacity: var(--#{$radio-prefix}disabled-opacity);
     cursor: not-allowed;
   }
 }
@@ -310,7 +162,7 @@ input[type="radio"].radio {
 // ============================================
 // Form Check Group (vertical stack)
 // ============================================
-.form-check-group {
+.form-radio-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -319,35 +171,11 @@ input[type="radio"].radio {
 // ============================================
 // Form Check Inline (horizontal)
 // ============================================
-.form-check-inline {
+.form-radio-inline {
   display: inline-flex;
   gap: 1rem;
 
-  > .form-check {
+  > .form-radio {
     margin-right: 0;
-  }
-}
-
-// ============================================
-// Semantic Color Support
-// ============================================
-// Usage: <input type="checkbox" class="checkbox primary">
-.checkbox,
-.radio {
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      --#{$checkbox-prefix}border-color-checked: var(--#{$palette-default});
-      --#{$checkbox-prefix}bg-checked: var(--#{$palette-default});
-      --#{$checkbox-prefix}checkmark-color: var(--#{$palette-default-accent});
-      --#{$checkbox-prefix}focus-ring-color: var(--#{$palette-default});
-      --#{$checkbox-prefix}indeterminate-color: var(
-        --#{$palette-default-accent}
-      );
-
-      --#{$radio-prefix}border-color-checked: var(--#{$palette-default});
-      --#{$radio-prefix}bg-checked: var(--#{$palette-default});
-      --#{$radio-prefix}dot-color: var(--#{$palette-default-accent});
-      --#{$radio-prefix}focus-ring-color: var(--#{$palette-default});
-    }
   }
 }
