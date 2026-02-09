@@ -7,19 +7,17 @@
   --button-font-weight: 500;
   --button-line-height: 1.5;
   --button-gap: 0.5rem;
-  --button-transition:
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --button-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --button-focus-ring-width: 2px;
   --button-focus-ring-offset: 2px;
-  --button-focus-ring-color: ;
+  --button-focus-ring-color: transparent;
   --button-disabled-opacity: 0.5;
-  --button-bg: ;
-  --button-bg-hover: ;
-  --button-bg-active: ;
-  --button-color: ;
-  --button-color-hover: ;
-  --button-color-active: ;
+  --button-bg: default;
+  --button-bg-hover: transparent;
+  --button-bg-active: transparent;
+  --button-color: inherit;
+  --button-color-hover: inherit;
+  --button-color-active: inherit;
   --button-border-color: transparent;
   --button-border-color-hover: transparent;
   --button-border-color-active: transparent;
@@ -108,23 +106,21 @@
   --checkbox-size: 1.25rem;
   --checkbox-border-width: 2px;
   --checkbox-border-radius: 0.25rem;
-  --checkbox-border-color: ;
-  --checkbox-border-color-hover: ;
-  --checkbox-border-color-checked: ;
-  --checkbox-border-color-focus: ;
+  --checkbox-border-color: transparent;
+  --checkbox-border-color-hover: transparent;
+  --checkbox-border-color-checked: transparent;
+  --checkbox-border-color-focus: transparent;
   --checkbox-bg: transparent;
-  --checkbox-bg-hover: ;
-  --checkbox-bg-checked: ;
-  --checkbox-checkmark-color: ;
+  --checkbox-bg-hover: transparent;
+  --checkbox-bg-checked: transparent;
+  --checkbox-checkmark-color: inherit;
   --checkbox-checkmark-width: 2px;
-  --checkbox-indeterminate-color: ;
+  --checkbox-indeterminate-color: inherit;
   --checkbox-focus-ring-width: 2px;
   --checkbox-focus-ring-offset: 2px;
-  --checkbox-focus-ring-color: ;
+  --checkbox-focus-ring-color: transparent;
   --checkbox-disabled-opacity: 0.5;
-  --checkbox-transition:
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  --checkbox-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --form-check-gap: 0.5rem;
   --form-check-label-color: inherit;
 }
@@ -191,14 +187,6 @@ input[type=checkbox].checkbox:disabled {
   opacity: var(--checkbox-disabled-opacity);
   cursor: not-allowed;
 }
-.checkbox.sm,
-input[type=checkbox].checkbox.sm {
-  --checkbox-size: 1rem;
-}
-.checkbox.lg,
-input[type=checkbox].checkbox.lg {
-  --checkbox-size: 1.5rem;
-}
 
 .form-check {
   display: inline-flex;
@@ -229,22 +217,20 @@ input[type=checkbox].checkbox.lg {
 .radio {
   --radio-size: 1.25rem;
   --radio-border-width: 2px;
-  --radio-border-color: ;
-  --radio-border-color-hover: ;
-  --radio-border-color-checked: ;
-  --radio-border-color-focus: ;
+  --radio-border-color: transparent;
+  --radio-border-color-hover: transparent;
+  --radio-border-color-checked: transparent;
+  --radio-border-color-focus: transparent;
   --radio-bg: transparent;
-  --radio-bg-hover: ;
-  --radio-bg-checked: ;
+  --radio-bg-hover: transparent;
+  --radio-bg-checked: transparent;
   --radio-dot-size: 0.5rem;
-  --radio-dot-color: ;
+  --radio-dot-color: inherit;
   --radio-focus-ring-width: 2px;
   --radio-focus-ring-offset: 2px;
-  --radio-focus-ring-color: ;
+  --radio-focus-ring-color: transparent;
   --radio-disabled-opacity: 0.5;
-  --radio-transition:
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  --radio-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --form-radio-gap: 0.5rem;
   --form-radio-label-color: inherit;
 }
@@ -297,16 +283,6 @@ input[type=radio].radio:disabled {
   opacity: var(--radio-disabled-opacity);
   cursor: not-allowed;
 }
-.radio.sm,
-input[type=radio].radio.sm {
-  --radio-size: 1rem;
-  --radio-dot-size: 0.375rem;
-}
-.radio.sm .lg,
-input[type=radio].radio.sm .lg {
-  --radio-size: 1.5rem;
-  --radio-dot-size: 0.625rem;
-}
 
 .form-radio {
   display: inline-flex;
@@ -332,4 +308,477 @@ input[type=radio].radio.sm .lg {
 }
 .form-radio-inline > .form-radio {
   margin-right: 0;
+}
+
+.input {
+  --input-height: 2.5rem;
+  --input-padding-x: 0.75rem;
+  --input-padding-y: 0.5rem;
+  --input-font-size: 1rem;
+  --input-line-height: 1.5;
+  --input-bg: transparent;
+  --input-color: inherit;
+  --input-border-color: transparent;
+  --input-placeholder-color: inherit;
+  --input-bg-hover: transparent;
+  --input-border-color-hover: inherit;
+  --input-bg-focus: transparent;
+  --input-border-color-focus: transparent;
+  --input-focus-ring-width: 2px;
+  --input-focus-ring-color: inherit;
+  --input-bg-disabled: transparent;
+  --input-color-disabled: inherit;
+  --input-border-color-disabled: transparent;
+  --input-bg-readonly: transparent;
+  --input-color-readonly: inherit;
+  --input-border-color-readonly: transparent;
+  --input-border-width: 1px;
+  --input-border-radius: 0.25rem;
+  --input-transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --form-input-gap: 0.5rem;
+}
+
+.input,
+input.input,
+textarea.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  width: 100%;
+  height: var(--input-height);
+  padding: var(--input-padding-y) var(--input-padding-x);
+  font-size: var(--input-font-size);
+  line-height: var(--input-line-height);
+  background-color: var(--input-bg);
+  color: var(--input-color);
+  border: var(--input-border-width) solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  transition: var(--input-transition);
+  font-family: inherit;
+}
+.input::-moz-placeholder, input.input::-moz-placeholder, textarea.input::-moz-placeholder {
+  color: var(--input-placeholder-color);
+  opacity: 1;
+}
+.input::placeholder,
+input.input::placeholder,
+textarea.input::placeholder {
+  color: var(--input-placeholder-color);
+  opacity: 1;
+}
+.input:hover:not(:disabled):not(:-moz-read-only):not(:focus), input.input:hover:not(:disabled):not(:-moz-read-only):not(:focus), textarea.input:hover:not(:disabled):not(:-moz-read-only):not(:focus) {
+  background-color: var(--input-bg-hover);
+  border-color: var(--input-border-color-hover);
+}
+.input:hover:not(:disabled):not(:read-only):not(:focus),
+input.input:hover:not(:disabled):not(:read-only):not(:focus),
+textarea.input:hover:not(:disabled):not(:read-only):not(:focus) {
+  background-color: var(--input-bg-hover);
+  border-color: var(--input-border-color-hover);
+}
+.input:focus,
+input.input:focus,
+textarea.input:focus {
+  outline: none;
+  background-color: var(--input-bg-focus);
+  border-color: var(--input-border-color-focus);
+  box-shadow: 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+}
+.input:disabled,
+input.input:disabled,
+textarea.input:disabled {
+  background-color: var(--input-bg-disabled);
+  color: var(--input-color-disabled);
+  border-color: var(--input-border-color-disabled);
+  cursor: not-allowed;
+  opacity: 1;
+}
+.input:-moz-read-only:not(:disabled), input.input:-moz-read-only:not(:disabled), textarea.input:-moz-read-only:not(:disabled) {
+  background-color: var(--input-bg-readonly);
+  color: var(--input-color-readonly);
+  border-color: var(--input-border-color-readonly);
+  cursor: default;
+}
+.input:read-only:not(:disabled),
+input.input:read-only:not(:disabled),
+textarea.input:read-only:not(:disabled) {
+  background-color: var(--input-bg-readonly);
+  color: var(--input-color-readonly);
+  border-color: var(--input-border-color-readonly);
+  cursor: default;
+}
+
+textarea.input {
+  height: auto;
+  min-height: calc(var(--input-height) * 2);
+  resize: vertical;
+}
+
+textarea.input-no-resize {
+  resize: none;
+}
+
+textarea.input-resize-horizontal {
+  resize: horizontal;
+}
+
+textarea.input-resize-both {
+  resize: both;
+}
+
+.input-group {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group > .input {
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+.input-group > .input:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group > .input:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-addon {
+  display: flex;
+  align-items: center;
+  padding: var(--input-padding-y) var(--input-padding-x);
+  font-size: var(--input-font-size);
+  line-height: var(--input-line-height);
+  color: var(--input-color);
+  background-color: transparent;
+  border: var(--input-border-width) solid var(--input-border-color);
+  white-space: nowrap;
+}
+.input-addon:first-child {
+  border-right: 0;
+  border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
+}
+.input-addon:last-child {
+  border-left: 0;
+  border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.input-icon > .input {
+  width: 100%;
+}
+.input-icon:has(.input-icon-left) > .input {
+  padding-left: calc(var(--input-padding-x) * 2 + 1em);
+}
+.input-icon:has(.input-icon-right) > .input {
+  padding-right: calc(var(--input-padding-x) * 2 + 1em);
+}
+
+.input-icon-left,
+.input-icon-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: calc(var(--input-padding-x) * 2 + 1em);
+  color: var(--input-placeholder-color);
+  pointer-events: none;
+}
+
+.input-icon-left {
+  left: 0;
+}
+
+.input-icon-right {
+  right: 0;
+}
+
+.input-icon-clickable {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.input-icon-clickable:hover {
+  color: var(--input-color);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: var(--input-font-size);
+  font-weight: 500;
+  color: var(--input-color);
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: var(--input-placeholder-color);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-inline > .input {
+  width: auto;
+  flex: 1 1 auto;
+}
+.form-inline > .form-label {
+  margin-bottom: 0;
+}
+
+.icon {
+  --icon-size: 1.5rem;
+  --icon-gap: 0.5rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  font-size: var(--icon-size);
+  line-height: 1;
+  color: inherit;
+  flex-shrink: 0;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.icon > svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+.icon > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.icon-spin {
+  animation: icon-spin 1s linear infinite;
+}
+
+@keyframes icon-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.icon-pulse {
+  animation: icon-pulse 1.5s ease-in-out infinite;
+}
+
+.icon-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.icon-flip-horizontal {
+  transform: scaleX(-1);
+}
+
+.icon-flip-vertical {
+  transform: scaleY(-1);
+}
+
+.icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--icon-gap);
+}
+
+.progress {
+  --progress-height: 0.5rem;
+  --progress-bg: #e5e7eb;
+  --progress-border-radius: 0.25rem;
+  --progress-border-width: 0;
+  --progress-border-color: transparent;
+  --progress-value-bg: #3b82f6;
+  --progress-value-border-radius: 0.25rem;
+  --progress-transition: width 0.3s ease-in-out;
+  --progress-indeterminate-duration: 1.5s;
+  --progress-indeterminate-width: 30%;
+}
+
+.progress,
+progress.progress {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  width: 100%;
+  height: var(--progress-height);
+  background: var(--progress-bg);
+  border: var(--progress-border-width) solid var(--progress-border-color);
+  border-radius: var(--progress-border-radius);
+  overflow: hidden;
+}
+.progress::-webkit-progress-bar,
+progress.progress::-webkit-progress-bar {
+  background: var(--progress-bg);
+  border-radius: var(--progress-border-radius);
+}
+.progress::-webkit-progress-value,
+progress.progress::-webkit-progress-value {
+  background: var(--progress-value-bg);
+  border-radius: var(--progress-value-border-radius);
+  -webkit-transition: var(--progress-transition);
+  transition: var(--progress-transition);
+}
+.progress::-moz-progress-bar,
+progress.progress::-moz-progress-bar {
+  background: var(--progress-value-bg);
+  border-radius: var(--progress-value-border-radius);
+  -moz-transition: var(--progress-transition);
+  transition: var(--progress-transition);
+}
+
+progress.progress:indeterminate::-webkit-progress-bar {
+  background: var(--progress-bg);
+}
+progress.progress:indeterminate::-webkit-progress-value {
+  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
+  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
+}
+progress.progress:indeterminate::-moz-progress-bar {
+  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
+  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
+}
+
+@keyframes progress-indeterminate {
+  0% {
+    margin-left: -30%;
+    width: var(--progress-indeterminate-width);
+  }
+  100% {
+    margin-left: 100%;
+    width: var(--progress-indeterminate-width);
+  }
+}
+.progress-bar {
+  display: flex;
+  width: 100%;
+  height: var(--progress-height);
+  background: var(--progress-bg);
+  border: var(--progress-border-width) solid var(--progress-border-color);
+  border-radius: var(--progress-border-radius);
+  overflow: hidden;
+}
+
+.progress-bar-value {
+  height: 100%;
+  background: var(--progress-value-bg);
+  border-radius: var(--progress-value-border-radius);
+  transition: var(--progress-transition);
+}
+
+.progress-bar.indeterminate .progress-bar-value {
+  width: var(--progress-indeterminate-width);
+  animation: progress-bar-indeterminate var(--progress-indeterminate-duration) ease-in-out infinite;
+}
+
+@keyframes progress-bar-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100% / var(--progress-indeterminate-width) * 100%));
+  }
+}
+.progress-bar.indeterminate-pulse .progress-bar-value {
+  width: 100%;
+  animation: progress-pulse var(--progress-indeterminate-duration) ease-in-out infinite;
+}
+
+@keyframes progress-pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.progress-striped .progress-bar-value {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.progress-striped.animated .progress-bar-value {
+  animation: progress-stripes 1s linear infinite;
+}
+
+@keyframes progress-stripes {
+  0% {
+    background-position: 1rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.progress-bar-labeled .progress-bar-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+}
+
+.progress-bar-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+}
+
+.progress-stacked .progress-bar-value {
+  border-radius: 0;
+}
+.progress-stacked .progress-bar-value:first-child {
+  border-radius: var(--progress-value-border-radius) 0 0 var(--progress-value-border-radius);
+}
+.progress-stacked .progress-bar-value:last-child {
+  border-radius: 0 var(--progress-value-border-radius) var(--progress-value-border-radius) 0;
+}
+.progress-stacked .progress-bar-value:only-child {
+  border-radius: var(--progress-value-border-radius);
 }/*# sourceMappingURL=components.css.map */

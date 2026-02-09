@@ -40,26 +40,26 @@ $form-input-gap-var: --form-input-gap !default;
   #{$input-line-height-var}: 1.5;
 
   // Colors
-  #{$input-bg-var}: var(--#{$neutral-prefix}0);
-  #{$input-color-var}: var(--#{$neutral-prefix}10);
-  #{$input-border-color-var}: var(--#{$neutral-prefix}4);
-  #{$input-placeholder-color-var}: var(--#{$neutral-prefix}5);
+  #{$input-bg-var}: transparent;
+  #{$input-color-var}: inherit;
+  #{$input-border-color-var}: transparent;
+  #{$input-placeholder-color-var}: inherit;
 
-  #{$input-bg-hover-var}: var(--#{$neutral-prefix}0);
-  #{$input-border-color-hover-var}: var(--#{$neutral-prefix}5);
+  #{$input-bg-hover-var}: transparent;
+  #{$input-border-color-hover-var}: inherit;
 
-  #{$input-bg-focus-var}: var(--#{$neutral-prefix}0);
-  #{$input-border-color-focus-var}: var(--#{$neutral-prefix}6);
+  #{$input-bg-focus-var}: transparent;
+  #{$input-border-color-focus-var}: transparent;
   #{$input-focus-ring-width-var}: 2px;
-  #{$input-focus-ring-color-var}: var(--#{$neutral-prefix}3);
+  #{$input-focus-ring-color-var}: inherit;
 
-  #{$input-bg-disabled-var}: var(--#{$neutral-prefix}2);
-  #{$input-color-disabled-var}: var(--#{$neutral-prefix}5);
-  #{$input-border-color-disabled-var}: var(--#{$neutral-prefix}3);
+  #{$input-bg-disabled-var}: transparent;
+  #{$input-color-disabled-var}: inherit;
+  #{$input-border-color-disabled-var}: transparent;
 
-  #{$input-bg-readonly-var}: var(--#{$neutral-prefix}1);
-  #{$input-color-readonly-var}: var(--#{$neutral-prefix}8);
-  #{$input-border-color-readonly-var}: var(--#{$neutral-prefix}3);
+  #{$input-bg-readonly-var}: transparent;
+  #{$input-color-readonly-var}: inherit;
+  #{$input-border-color-readonly-var}: transparent;
 
   #{$input-border-width-var}: 1px;
   #{$input-border-radius-var}: 0.25rem;
@@ -177,20 +177,6 @@ textarea.input-resize-both {
   resize: both;
 }
 
-
-// ============================================
-// Semantic Color Support (Focus Ring Color)
-// ============================================
-// Usage: <input type="text" class="input primary">
-.#{$input-class-name} {
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      #{$input-border-color-focus-var}: var(--#{$palette-default});
-      #{$input-focus-ring-color-var}: var(--#{$palette-lighter});
-    }
-  }
-}
-
 // ============================================
 // Input Group (for icons, addons, etc.)
 // ============================================
@@ -233,7 +219,7 @@ textarea.input-resize-both {
   font-size: var(#{$input-font-size-var});
   line-height: var(#{$input-line-height-var});
   color: var(#{$input-color-var});
-  background-color: var(--#{$neutral-prefix}2);
+  background-color: transparent;
   border: var(#{$input-border-width-var}) solid var(#{$input-border-color-var});
   white-space: nowrap;
 
