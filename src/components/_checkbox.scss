@@ -4,6 +4,28 @@
 $checkbox-prefix: "checkbox-" !default;
 $checkbox-class-name: "checkbox" !default;
 
+// Variables
+$checkbox-size-var: --#{$checkbox-prefix}size !default;
+$checkbox-border-width-var: --#{$checkbox-prefix}border-width !default;
+$checkbox-border-radius-var: --#{$checkbox-prefix}border-radius !default;
+$checkbox-border-color-var: --#{$checkbox-prefix}border-color !default;
+$checkbox-border-color-hover-var: --#{$checkbox-prefix}border-color-hover !default;
+$checkbox-border-color-checked-var: --#{$checkbox-prefix}border-color-checked !default;
+$checkbox-border-color-focus-var: --#{$checkbox-prefix}border-color-focus !default;
+$checkbox-bg-var: --#{$checkbox-prefix}bg !default;
+$checkbox-bg-hover-var: --#{$checkbox-prefix}bg-hover !default;
+$checkbox-bg-checked-var: --#{$checkbox-prefix}bg-checked !default;
+$checkbox-checkmark-color-var: --#{$checkbox-prefix}checkmark-color !default;
+$checkbox-checkmark-width-var: --#{$checkbox-prefix}checkmark-width !default;
+$checkbox-indeterminate-color-var: --#{$checkbox-prefix}indeterminate-color !default;
+$checkbox-focus-ring-width-var: --#{$checkbox-prefix}focus-ring-width !default;
+$checkbox-focus-ring-offset-var: --#{$checkbox-prefix}focus-ring-offset !default;
+$checkbox-focus-ring-color-var: --#{$checkbox-prefix}focus-ring-color !default;
+$checkbox-disabled-opacity-var: --#{$checkbox-prefix}disabled-opacity !default;
+$checkbox-transition-var: --#{$checkbox-prefix}transition !default;
+$form-check-gap-var: --form-check-gap !default;
+$form-check-label-color-var: --form-check-label-color !default;
+
 // ============================================
 // Process
 // ============================================
@@ -13,46 +35,46 @@ $checkbox-class-name: "checkbox" !default;
 // ============================================
 .#{$checkbox-class-name} {
   // Size
-  --#{$checkbox-prefix}size: 1.25rem;
+  #{$checkbox-size-var}: 1.25rem;
 
   // Border
-  --#{$checkbox-prefix}border-width: 2px;
-  --#{$checkbox-prefix}border-radius: 0.25rem;
-  --#{$checkbox-prefix}border-color: ;
-  --#{$checkbox-prefix}border-color-hover: ;
-  --#{$checkbox-prefix}border-color-checked: ;
-  --#{$checkbox-prefix}border-color-focus: ;
+  #{$checkbox-border-width-var}: 2px;
+  #{$checkbox-border-radius-var}: 0.25rem;
+  #{$checkbox-border-color-var}: transparent;
+  #{$checkbox-border-color-hover-var}: transparent;
+  #{$checkbox-border-color-checked-var}: transparent;
+  #{$checkbox-border-color-focus-var}: transparent;
 
   // Background
-  --#{$checkbox-prefix}bg: transparent;
-  --#{$checkbox-prefix}bg-hover: ;
-  --#{$checkbox-prefix}bg-checked: ;
+  #{$checkbox-bg-var}: transparent;
+  #{$checkbox-bg-hover-var}: transparent;
+  #{$checkbox-bg-checked-var}: transparent;
 
   // Checkmark
-  --#{$checkbox-prefix}checkmark-color: ;
-  --#{$checkbox-prefix}checkmark-width: 2px;
+  #{$checkbox-checkmark-color-var}: inherit;
+  #{$checkbox-checkmark-width-var}: 2px;
 
   // Indeterminate
-  --#{$checkbox-prefix}indeterminate-color: ;
+  #{$checkbox-indeterminate-color-var}: inherit;
 
   // Focus ring
-  --#{$checkbox-prefix}focus-ring-width: 2px;
-  --#{$checkbox-prefix}focus-ring-offset: 2px;
-  --#{$checkbox-prefix}focus-ring-color: ;
+  #{$checkbox-focus-ring-width-var}: 2px;
+  #{$checkbox-focus-ring-offset-var}: 2px;
+  #{$checkbox-focus-ring-color-var}: transparent;
 
   // Disabled
-  --#{$checkbox-prefix}disabled-opacity: 0.5;
+  #{$checkbox-disabled-opacity-var}: 0.5;
 
   // Transition
-  --#{$checkbox-prefix}transition:
+  #{$checkbox-transition-var}:
     background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 
   // ----------------------------------------
   // Form Check (label wrapper) Variables
   // ----------------------------------------
-  --form-check-gap: 0.5rem;
-  --form-check-label-color: inherit;
+  #{$form-check-gap-var}: 0.5rem;
+  #{$form-check-label-color-var}: inherit;
 }
 
 // ============================================
@@ -67,8 +89,8 @@ input[type="checkbox"].#{$checkbox-class-name} {
   margin: 0;
 
   // Size
-  width: var(--#{$checkbox-prefix}size);
-  height: var(--#{$checkbox-prefix}size);
+  width: var(#{$checkbox-size-var});
+  height: var(#{$checkbox-size-var});
   flex-shrink: 0;
 
   // Display
@@ -78,52 +100,52 @@ input[type="checkbox"].#{$checkbox-class-name} {
   vertical-align: middle;
 
   // Border
-  border: var(--#{$checkbox-prefix}border-width) solid
-    var(--#{$checkbox-prefix}border-color);
-  border-radius: var(--#{$checkbox-prefix}border-radius);
+  border: var(#{$checkbox-border-width-var}) solid
+    var(#{$checkbox-border-color-var});
+  border-radius: var(#{$checkbox-border-radius-var});
 
   // Background
-  background-color: var(--#{$checkbox-prefix}bg);
+  background-color: var(#{$checkbox-bg-var});
 
   // Cursor
   cursor: pointer;
 
   // Transition
-  transition: var(--#{$checkbox-prefix}transition);
+  transition: var(#{$checkbox-transition-var});
 
   // ----------------------------------------
   // Hover State
   // ----------------------------------------
   &:hover:not(:disabled):not(:checked) {
-    background-color: var(--#{$checkbox-prefix}bg-hover);
-    border-color: var(--#{$checkbox-prefix}border-color-hover);
+    background-color: var(#{$checkbox-bg-hover-var});
+    border-color: var(#{$checkbox-border-color-hover-var});
   }
 
   // ----------------------------------------
   // Focus State
   // ----------------------------------------
   &:focus-visible {
-    outline: var(--#{$checkbox-prefix}focus-ring-width) solid
-      var(--#{$checkbox-prefix}focus-ring-color);
-    outline-offset: var(--#{$checkbox-prefix}focus-ring-offset);
+    outline: var(#{$checkbox-focus-ring-width-var}) solid
+      var(#{$checkbox-focus-ring-color-var});
+    outline-offset: var(#{$checkbox-focus-ring-offset-var});
   }
 
   // ----------------------------------------
   // Checked State
   // ----------------------------------------
   &:checked {
-    background-color: var(--#{$checkbox-prefix}bg-checked);
-    border-color: var(--#{$checkbox-prefix}border-color-checked);
+    background-color: var(#{$checkbox-bg-checked-var});
+    border-color: var(#{$checkbox-border-color-checked-var});
 
     // Checkmark using pseudo-element
     &::after {
       content: "";
       display: block;
-      width: calc(var(--#{$checkbox-prefix}size) * 0.3);
-      height: calc(var(--#{$checkbox-prefix}size) * 0.55);
-      border: solid var(--#{$checkbox-prefix}checkmark-color);
-      border-width: 0 var(--#{$checkbox-prefix}checkmark-width)
-        var(--#{$checkbox-prefix}checkmark-width) 0;
+      width: calc(var(#{$checkbox-size-var}) * 0.3);
+      height: calc(var(#{$checkbox-size-var}) * 0.55);
+      border: solid var(#{$checkbox-checkmark-color-var});
+      border-width: 0 var(#{$checkbox-checkmark-width-var})
+        var(#{$checkbox-checkmark-width-var}) 0;
       transform: rotate(45deg) translateX(-5%) translateY(-5%);
     }
   }
@@ -132,16 +154,16 @@ input[type="checkbox"].#{$checkbox-class-name} {
   // Indeterminate State
   // ----------------------------------------
   &:indeterminate {
-    background-color: var(--#{$checkbox-prefix}bg-checked);
-    border-color: var(--#{$checkbox-prefix}border-color-checked);
+    background-color: var(#{$checkbox-bg-checked-var});
+    border-color: var(#{$checkbox-border-color-checked-var});
 
     // Horizontal line
     &::after {
       content: "";
       display: block;
-      width: calc(var(--#{$checkbox-prefix}size) * 0.5);
-      height: var(--#{$checkbox-prefix}checkmark-width);
-      background-color: var(--#{$checkbox-prefix}indeterminate-color);
+      width: calc(var(#{$checkbox-size-var}) * 0.5);
+      height: var(#{$checkbox-checkmark-width-var});
+      background-color: var(#{$checkbox-indeterminate-color-var});
     }
   }
 
@@ -149,16 +171,16 @@ input[type="checkbox"].#{$checkbox-class-name} {
   // Disabled State
   // ----------------------------------------
   &:disabled {
-    opacity: var(--#{$checkbox-prefix}disabled-opacity);
+    opacity: var(#{$checkbox-disabled-opacity-var});
     cursor: not-allowed;
   }
 
   &.sm {
-    --#{$checkbox-prefix}size: 1rem;
+    #{$checkbox-size-var}: 1rem;
   }
 
   &.lg {
-    --#{$checkbox-prefix}size: 1.5rem;
+    #{$checkbox-size-var}: 1.5rem;
   }
 }
 
@@ -169,13 +191,13 @@ input[type="checkbox"].#{$checkbox-class-name} {
 .form-check {
   display: inline-flex;
   align-items: center;
-  gap: var(--form-check-gap);
+  gap: var(#{$form-check-gap-var});
   cursor: pointer;
-  color: var(--form-check-label-color);
+  color: var(#{$form-check-label-color-var});
 
   // When disabled, style the whole label
   &:has(:disabled) {
-    opacity: var(--#{$checkbox-prefix}disabled-opacity);
+    opacity: var(#{$checkbox-disabled-opacity-var});
     cursor: not-allowed;
   }
 }
