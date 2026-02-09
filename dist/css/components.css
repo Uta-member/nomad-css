@@ -606,23 +606,6 @@ label {
   content: "— ";
 }
 
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline-item {
-  display: inline-block;
-}
-.list-inline-item:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
 :root {
   --icon-size: 1.5rem;
   --icon-size-xs: 0.75rem;
@@ -1913,15 +1896,6 @@ select.select[multiple] option:checked {
 .input-group > .select:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-:root {
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1400px;
 }
 
 .d-block {
@@ -3226,15 +3200,17 @@ select.select[multiple] option:checked {
   }
 }
 :root {
-  --border-color: var(--neutral-5);
+  --border-prefixwidth: 1px;
+  --border-prefixstyle: solid;
+  --border-prefixcolor: var(--neutral-5);
 }
 
 .border {
-  border: 1px solid var(--border-color);
+  border: --border-prefixwidth --border-prefixstyle var(--border-prefixcolor);
 }
 
 .border-top {
-  border-top: 1px solid var(--border-color);
+  border-top: --border-prefixwidth --border-prefixstyle var(--border-prefixcolor);
 }
 
 .border-bottom {

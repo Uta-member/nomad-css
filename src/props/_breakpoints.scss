@@ -2,7 +2,7 @@
 // Breakpoints
 // ================================
 
-// ブレークポイント定義（Bootstrap互換）
+// ブレークポイント定義
 $breakpoints: (
   "xs": 0,
   "sm": 576px,
@@ -11,19 +11,6 @@ $breakpoints: (
   "xl": 1200px,
   "xxl": 1400px,
 ) !default;
-
-// ブレークポイント名のリスト（レスポンシブクラス生成用）
-$breakpoint-names: "xs", "sm", "md", "lg", "xl", "xxl";
-
-// CSS変数としても公開（JavaScript連携用）
-:root {
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1400px;
-}
 
 // ================================
 // Media Query Mixins
@@ -91,21 +78,18 @@ $breakpoint-names: "xs", "sm", "md", "lg", "xl", "xxl";
 /// 特定のブレークポイントのみ
 /// @param {String} $breakpoint - ブレークポイント名
 @mixin media-only($breakpoint) {
-  $breakpoint-index: index($breakpoint-names, $breakpoint);
-  @if $breakpoint-index == null {
+  $names: map-keys($breakpoints);
+  $index: index($names, $breakpoint);
+
+  @if $index == null {
     @error "Unknown breakpoint: #{$breakpoint}";
   }
 
   $min: map-get($breakpoints, $breakpoint);
 
-  // 最後のブレークポイントの場合
-  @if $breakpoint-index == length($breakpoint-names) {
-    @include media-up($breakpoint) {
-      @content;
-    }
-  } @else {
-    $next-breakpoint: nth($breakpoint-names, $breakpoint-index + 1);
-    $max: map-get($breakpoints, $next-breakpoint);
+  @if $index < length($names) {
+    $next-name: nth($names, $index + 1);
+    $max: map-get($breakpoints, $next-name);
 
     @if $min > 0 {
       @media (min-width: $min) and (max-width: ($max - 0.02px)) {
@@ -115,6 +99,10 @@ $breakpoint-names: "xs", "sm", "md", "lg", "xl", "xxl";
       @media (max-width: ($max - 0.02px)) {
         @content;
       }
+    }
+  } @else {
+    @include media-up($breakpoint) {
+      @content;
     }
   }
 }

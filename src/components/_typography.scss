@@ -415,25 +415,3 @@
     content: "\2014\00A0"; // em dash + space
   }
 }
-
-// =============================================================================
-// List Styles
-// =============================================================================
-
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline-item {
-  display: inline-block;
-
-  &:not(:last-child) {
-    margin-right: 0.5rem;
-  }
-}

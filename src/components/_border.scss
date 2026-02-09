@@ -1,60 +1,50 @@
-@use "../props/prefixes" as *;
-@use "../props/defines" as *;
-
 // ============================================
 // Border Styles
 // ============================================
+@use "../props/prefixes" as *;
+@use "../props/defines" as *;
+
 :root {
-  --border-color: var(--#{$neutral-prefix}5);
+  --#{border-prefix}width: 1px;
+  --#{border-prefix}style: solid;
+  --#{border-prefix}color: var(--#{$neutral-prefix}5);
 }
 
+// ============================================
+// Border Semantic Color
+// ============================================
+@each $name, $values in $semantic-colors {
+  .border-#{$semantic-prefix}#{$name} {
+    &.#{$semantic-prefix}#{$name} {
+      --border-color: var(--#{$palette-default});
+    }
+    &.#{$semantic-prefix}#{$name}-light {
+      --border-color: var(--#{$palette-light});
+    }
+    &.#{$semantic-prefix}#{$name}-dark {
+      --border-color: var(--#{$palette-dark});
+    }
+  }
+}
 // ============================================
 // Border
 // ============================================
 .border {
-  border: 1px solid var(--border-color);
-
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      --border-color: var(--#{$palette-default});
-    }
-  }
+  border: --#{border-prefix}width --#{border-prefix}style
+    var(--#{border-prefix}color);
 }
 .border-top {
-  border-top: 1px solid var(--border-color);
-
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      --border-color: var(--#{$palette-default});
-    }
-  }
+  border-top: --#{border-prefix}width --#{border-prefix}style
+    var(--#{border-prefix}color);
 }
 .border-bottom {
   border-bottom: 1px solid var(--border-color);
-
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      --border-color: var(--#{$palette-default});
-    }
-  }
 }
 .border-start {
   border-left: 1px solid var(--border-color);
-
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      --border-color: var(--#{$palette-default});
-    }
-  }
 }
 .border-end {
   border-right: 1px solid var(--border-color);
-
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      --border-color: var(--#{$palette-default});
-    }
-  }
 }
 // ============================================
 // Border Sizes
