@@ -159,4 +159,45 @@ Inputコンポーネントと同様のクラスが使用可能です。
     --primary-h: 0; /* Red Hue */
     --primary-s: 80%;
 }
+---
+
+## **Components 実装ガイド**
+
+- **目的**: コンポーネント層は構造とレイアウト、及び最小限の公開CSS変数（サイズ・色・トランジション等）を提供します。セマンティックカラーやサイズバリアントはテーマ層で定義してください。
+
+- **共通構造**:
+    - 各コンポーネントはSCSSで `$<name>-prefix` と `$<name>-class-name` を持ちます（例: `$select-prefix`, `$select-class-name`）。
+    - CSSカスタムプロパティは直接散らさず、`$<component>-<prop>-var` をラップして使います。参照は `var(#{$<component>-<prop>-var})`。実例: [src/components/_select.scss](src/components/_select.scss)。
+    - デフォルト値はグローバル `:root` ではなく `.#{$<component>-class-name}` の中に置きます。テーマは `:root[data-theme="..."]` で上書きします。
+
+- **命名規約（推奨）**:
+    - プレフィックス: `$<component>-prefix: "<prefix>-"`。
+    - クラス名: `$<component>-class-name: "<name>"`。
+    - CSS変数ラッパー: `$<component>-<prop>-var: --#{$<component>-prefix}<prop>`。
+
+- **状態・擬似要素の扱い**:
+    - `:hover`, `:active`, `:focus`, `:disabled` 等はコンポーネント内でCSS変数を参照して記述し、実際の色/サイズはテーマで設定します。
+    - ブラウザ差異のための擬似要素（例: `::-webkit-slider-thumb`）はそのまま維持し、色/サイズのみ変数参照化してください（例: [src/components/_range.scss](src/components/_range.scss)）。
+
+- **実装手順（新コンポーネント追加）**:
+    1. `src/components/_newcomponent.scss` を作成。
+    2. `$new-prefix` と `$new-class-name` を定義。
+    3. 必要な `$new-*-var` を列挙し、`.#{$new-class-name}` にデフォルトを置く。
+    4. スタイル中は `var(#{$new-*-var})` を使用する（直接ハードコードしない）。
+    5. サイズ/semantic/validation ロジックはコアに入れずテーマ/アプリ層で実装すること。
+
+- **既存コンポーネントの参照例**:
+    - Select: [src/components/_select.scss](src/components/_select.scss)
+    - Range: [src/components/_range.scss](src/components/_range.scss)
+    - Progress / Input: `src/components/_progress.scss`, `src/components/_input.scss`
+
+- **テスト / ビルドの確認**:
+    - Sass をビルドして（`npm run build` 等）スタイルがコンパイルされることを確認してください。
+    - ブラウザで主要コントロールの見た目・キーボード操作を検証してください。
+
+- **次の推奨作業**:
+    - 各テーマ（`fluent2`, `material3`）へサイズ（sm/lg等）とセマンティック色の具体値を追加する。
+    - コンポーネント単位のアクセシビリティチェックリストを整備する（キーボード操作、フォーカス、コントラストなど）。
+
+(注) このガイドはコア方針に合わせて随時更新してください。
 ```
