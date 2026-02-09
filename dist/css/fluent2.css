@@ -5266,6 +5266,34 @@ select.select[multiple] option:checked {
 }
 
 :root {
+  --shadow-none: none;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.shadow-none {
+  box-shadow: var(--shadow-none) !important;
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow {
+  box-shadow: var(--shadow-) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.shadow-inset {
+  box-shadow: var(--shadow-inset) !important;
+}
+
+:root {
   --font-family-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
   --font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
