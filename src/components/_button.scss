@@ -1,15 +1,17 @@
 // ============================================
-// Button Component
+// Prefixes
 // ============================================
-@use "../props/prefixes" as *;
-@use "../props/defines" as *;
-@use "defines" as *;
+$button-prefix: "button-" !default;
+$button-class-name: "button" !default;
 
 // ============================================
-// CSS Variables (defaults in :root)
+// Process
 // ============================================
-:root {
-  // Base button properties
+
+// ============================================
+// CSS Variables
+// ============================================
+.#{$button-class-name} {
   --#{$button-prefix}padding-x: 1rem;
   --#{$button-prefix}padding-y: 0.5rem;
   --#{$button-prefix}border-radius: 0.375rem;
@@ -18,7 +20,6 @@
   --#{$button-prefix}font-weight: 500;
   --#{$button-prefix}line-height: 1.5;
   --#{$button-prefix}gap: 0.5rem;
-
   // Transition
   --#{$button-prefix}transition:
     background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
@@ -27,16 +28,28 @@
   // Focus ring
   --#{$button-prefix}focus-ring-width: 2px;
   --#{$button-prefix}focus-ring-offset: 2px;
-  --#{$button-prefix}focus-ring-color: var(--#{$palette-default});
+  --#{$button-prefix}focus-ring-color: ;
 
   // Disabled opacity
   --#{$button-prefix}disabled-opacity: 0.5;
+
+  // Background colors
+  --#{$button-prefix}bg: ;
+  --#{$button-prefix}bg-hover: ;
+  --#{$button-prefix}bg-active: ;
+
+  // Text colors
+  --#{$button-prefix}color: ;
+  --#{$button-prefix}color-hover: ;
+  --#{$button-prefix}color-active: ;
+
+  // Border colors
+  --#{$button-prefix}border-color: transparent;
+  --#{$button-prefix}border-color-hover: transparent;
+  --#{$button-prefix}border-color-active: transparent;
 }
 
-// ============================================
-// Base Button
-// ============================================
-.button {
+.#{$button-class-name} {
   // Reset
   appearance: none;
   border: none;
@@ -69,34 +82,10 @@
   // Transition
   transition: var(--#{$button-prefix}transition);
 
-  // ----------------------------------------
-  // State CSS Variables (for theme override)
-  // ----------------------------------------
-  // Background colors
-  --#{$button-prefix}bg: var(--#{$palette-default});
-  --#{$button-prefix}bg-hover: var(--#{$palette-dark});
-  --#{$button-prefix}bg-active: var(--#{$palette-darker});
-
-  // Text colors
-  --#{$button-prefix}color: var(--#{$palette-default-accent});
-  --#{$button-prefix}color-hover: var(--#{$palette-dark-accent});
-  --#{$button-prefix}color-active: var(--#{$palette-darker-accent});
-
-  // Border colors
-  --#{$button-prefix}border-color: transparent;
-  --#{$button-prefix}border-color-hover: transparent;
-  --#{$button-prefix}border-color-active: transparent;
-
-  // ----------------------------------------
-  // Apply CSS Variables to Properties
-  // ----------------------------------------
   background-color: var(--#{$button-prefix}bg);
   color: var(--#{$button-prefix}color);
   border-color: var(--#{$button-prefix}border-color);
 
-  // ----------------------------------------
-  // States
-  // ----------------------------------------
   &:hover {
     background-color: var(--#{$button-prefix}bg-hover);
     color: var(--#{$button-prefix}color-hover);
