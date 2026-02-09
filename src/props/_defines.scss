@@ -4,7 +4,9 @@
 @use "prefixes" as *;
 
 // Hue Definitions
-$hues: (// "hues name": (h: hue value, threshold: accent threshold)) !default;
+$hues: (
+  /* "hues name": (h: hue value, threshold: accent threshold) */
+) !default;
 
 // Semantic Color Definitions
 $semantic-colors: (

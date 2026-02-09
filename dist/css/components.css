@@ -1,8 +1,12 @@
 @charset "UTF-8";
 :root {
-  --font-family-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-sans:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
   --font-family-serif: Georgia, "Times New Roman", serif;
-  --font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-mono:
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
   --font-size-base: 1rem;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -82,7 +86,12 @@ body {
   line-height: var(--font-line-height-normal);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: var(--font-weight-semibold);
@@ -754,10 +763,9 @@ label {
   --button-font-weight: 500;
   --button-line-height: 1.5;
   --button-gap: 0.5rem;
-  --button-transition: background-color 0.15s ease-in-out,
-                                 border-color 0.15s ease-in-out,
-                                 color 0.15s ease-in-out,
-                                 box-shadow 0.15s ease-in-out;
+  --button-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --button-focus-ring-width: 2px;
   --button-focus-ring-offset: 2px;
   --button-focus-ring-color: var(--palette-default);
@@ -870,9 +878,9 @@ label {
   --checkbox-focus-ring-offset: 2px;
   --checkbox-focus-ring-color: var(--neutral-5);
   --checkbox-disabled-opacity: 0.5;
-  --checkbox-transition: background-color 0.15s ease-in-out,
-                                   border-color 0.15s ease-in-out,
-                                   box-shadow 0.15s ease-in-out;
+  --checkbox-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   --radio-size: 1.25rem;
   --radio-border-width: 2px;
   --radio-border-color: var(--neutral-5);
@@ -888,9 +896,9 @@ label {
   --radio-focus-ring-offset: 2px;
   --radio-focus-ring-color: var(--neutral-5);
   --radio-disabled-opacity: 0.5;
-  --radio-transition: background-color 0.15s ease-in-out,
-                                border-color 0.15s ease-in-out,
-                                box-shadow 0.15s ease-in-out;
+  --radio-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   --form-check-gap: 0.5rem;
   --form-check-label-color: inherit;
 }
@@ -1071,9 +1079,9 @@ input[type=radio].radio:disabled {
   --range-focus-ring-offset: 2px;
   --range-focus-ring-color: var(--neutral-5);
   --range-disabled-opacity: 0.5;
-  --range-transition: background-color 0.15s ease-in-out,
-                                border-color 0.15s ease-in-out,
-                                box-shadow 0.15s ease-in-out;
+  --range-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 .range,
@@ -1409,12 +1417,18 @@ progress.progress:indeterminate::-moz-progress-bar {
   --input-border-color-readonly: var(--neutral-3);
   --input-border-width: 1px;
   --input-border-radius: 0.25rem;
-  --input-transition: border-color 0.15s ease-in-out,
-                                background-color 0.15s ease-in-out,
-                                box-shadow 0.15s ease-in-out;
-  --input-border-color-valid: var(--semantic-success-default, #22c55e);
+  --input-transition:
+    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  --input-border-color-valid: var(
+    --semantic-success-default,
+    #22c55e
+  );
   --input-focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
-  --input-border-color-invalid: var(--semantic-danger-default, #ef4444);
+  --input-border-color-invalid: var(
+    --semantic-danger-default,
+    #ef4444
+  );
   --input-focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
 }
 
@@ -1682,12 +1696,18 @@ textarea.input-resize-both {
   --select-arrow-color-hover: var(--neutral-7);
   --select-arrow-color-disabled: var(--neutral-4);
   --select-arrow-padding: 2.5rem;
-  --select-transition: border-color 0.15s ease-in-out,
-                                 background-color 0.15s ease-in-out,
-                                 box-shadow 0.15s ease-in-out;
-  --select-border-color-valid: var(--semantic-success-default, #22c55e);
+  --select-transition:
+    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  --select-border-color-valid: var(
+    --semantic-success-default,
+    #22c55e
+  );
   --select-focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
-  --select-border-color-invalid: var(--semantic-danger-default, #ef4444);
+  --select-border-color-invalid: var(
+    --semantic-danger-default,
+    #ef4444
+  );
   --select-focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
   --select-multiple-min-height: 6rem;
   --select-option-padding: 0.5rem 0.75rem;
@@ -3436,9 +3456,18 @@ select.select[multiple] option:checked {
 .table-light {
   --table-bg: var(--table-light-bg, hsl(0, 0%, 97%));
   --table-color: var(--table-light-color, inherit);
-  --table-border-color: var(--table-light-border-color, hsl(0, 0%, 90%));
-  --table-striped-bg: var(--table-light-striped-bg, hsla(0, 0%, 0%, 0.05));
-  --table-hover-bg: var(--table-light-hover-bg, hsla(0, 0%, 0%, 0.075));
+  --table-border-color: var(
+    --table-light-border-color,
+    hsl(0, 0%, 90%)
+  );
+  --table-striped-bg: var(
+    --table-light-striped-bg,
+    hsla(0, 0%, 0%, 0.05)
+  );
+  --table-hover-bg: var(
+    --table-light-hover-bg,
+    hsla(0, 0%, 0%, 0.075)
+  );
 }
 
 .table > tbody > tr.table-light > *,
@@ -3450,9 +3479,18 @@ select.select[multiple] option:checked {
 .table-dark {
   --table-bg: var(--table-dark-bg, hsl(0, 0%, 20%));
   --table-color: var(--table-dark-color, hsl(0, 0%, 95%));
-  --table-border-color: var(--table-dark-border-color, hsl(0, 0%, 35%));
-  --table-striped-bg: var(--table-dark-striped-bg, hsla(0, 0%, 100%, 0.05));
-  --table-hover-bg: var(--table-dark-hover-bg, hsla(0, 0%, 100%, 0.075));
+  --table-border-color: var(
+    --table-dark-border-color,
+    hsl(0, 0%, 35%)
+  );
+  --table-striped-bg: var(
+    --table-dark-striped-bg,
+    hsla(0, 0%, 100%, 0.05)
+  );
+  --table-hover-bg: var(
+    --table-dark-hover-bg,
+    hsla(0, 0%, 100%, 0.075)
+  );
 }
 
 .table > tbody > tr.table-dark > *,

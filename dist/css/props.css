@@ -1,27 +1,115 @@
 :root {
   --neutral-accent-threshold: 50%;
-  --neutral-0: hsl(var(--neutral-h), var(--neutral-s), 97%);
-  --neutral-1: hsl(var(--neutral-h), var(--neutral-s), 93%);
-  --neutral-2: hsl(var(--neutral-h), var(--neutral-s), 85%);
-  --neutral-3: hsl(var(--neutral-h), var(--neutral-s), 75%);
-  --neutral-4: hsl(var(--neutral-h), var(--neutral-s), 65%);
-  --neutral-5: hsl(var(--neutral-h), var(--neutral-s), 50%);
-  --neutral-6: hsl(var(--neutral-h), var(--neutral-s), 42%);
-  --neutral-7: hsl(var(--neutral-h), var(--neutral-s), 34%);
-  --neutral-8: hsl(var(--neutral-h), var(--neutral-s), 26%);
-  --neutral-9: hsl(var(--neutral-h), var(--neutral-s), 18%);
-  --neutral-10: hsl(var(--neutral-h), var(--neutral-s), 10%);
-  --neutral-accent-0: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-dark));
-  --neutral-accent-1: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-dark));
-  --neutral-accent-2: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-dark));
-  --neutral-accent-3: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-dark));
-  --neutral-accent-4: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-dark));
-  --neutral-accent-5: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-light));
-  --neutral-accent-6: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-light));
-  --neutral-accent-7: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-light));
-  --neutral-accent-8: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-light));
-  --neutral-accent-9: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-light));
-  --neutral-accent-10: hsl(var(--neutral-h), var(--neutral-s), var(--palette-accent-light));
+  --neutral-0: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    97%
+  );
+  --neutral-1: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    93%
+  );
+  --neutral-2: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    85%
+  );
+  --neutral-3: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    75%
+  );
+  --neutral-4: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    65%
+  );
+  --neutral-5: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    50%
+  );
+  --neutral-6: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    42%
+  );
+  --neutral-7: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    34%
+  );
+  --neutral-8: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    26%
+  );
+  --neutral-9: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    18%
+  );
+  --neutral-10: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    10%
+  );
+  --neutral-accent-0: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-dark)
+  );
+  --neutral-accent-1: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-dark)
+  );
+  --neutral-accent-2: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-dark)
+  );
+  --neutral-accent-3: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-dark)
+  );
+  --neutral-accent-4: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-dark)
+  );
+  --neutral-accent-5: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-light)
+  );
+  --neutral-accent-6: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-light)
+  );
+  --neutral-accent-7: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-light)
+  );
+  --neutral-accent-8: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-light)
+  );
+  --neutral-accent-9: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-light)
+  );
+  --neutral-accent-10: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--palette-accent-light)
+  );
 }
 
 :root {
@@ -50,49 +138,201 @@
   --palette-l-8: 26%;
   --palette-l-9: 18%;
   --palette-l-10: 10%;
-  --palette-color-0: hsl(var(--palette-h), var(--palette-s), var(--palette-l-0));
-  --palette-color-1: hsl(var(--palette-h), var(--palette-s), var(--palette-l-1));
-  --palette-color-2: hsl(var(--palette-h), var(--palette-s), var(--palette-l-2));
-  --palette-color-3: hsl(var(--palette-h), var(--palette-s), var(--palette-l-3));
-  --palette-color-4: hsl(var(--palette-h), var(--palette-s), var(--palette-l-4));
-  --palette-color-5: hsl(var(--palette-h), var(--palette-s), var(--palette-l-5));
-  --palette-color-6: hsl(var(--palette-h), var(--palette-s), var(--palette-l-6));
-  --palette-color-7: hsl(var(--palette-h), var(--palette-s), var(--palette-l-7));
-  --palette-color-8: hsl(var(--palette-h), var(--palette-s), var(--palette-l-8));
-  --palette-color-9: hsl(var(--palette-h), var(--palette-s), var(--palette-l-9));
-  --palette-color-10: hsl(var(--palette-h), var(--palette-s), var(--palette-l-10));
-  --palette-gray-0: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-0));
-  --palette-gray-1: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-1));
-  --palette-gray-2: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-2));
-  --palette-gray-3: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-3));
-  --palette-gray-4: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-4));
-  --palette-gray-5: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-5));
-  --palette-gray-6: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-6));
-  --palette-gray-7: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-7));
-  --palette-gray-8: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-8));
-  --palette-gray-9: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-9));
-  --palette-gray-10: hsl(var(--palette-h), var(--palette-gs), var(--palette-l-10));
-  --palette-accent-0: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-dark));
-  --palette-accent-1: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-dark));
-  --palette-accent-2: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-dark));
-  --palette-accent-3: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-dark));
-  --palette-accent-4: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-dark));
-  --palette-accent-5: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-light));
-  --palette-accent-6: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-light));
-  --palette-accent-7: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-light));
-  --palette-accent-8: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-light));
-  --palette-accent-9: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-light));
-  --palette-accent-10: hsl(var(--palette-h), var(--palette-gs), var(--palette-accent-light));
-  --palette-lighter: var(--palette-color-2);
-  --palette-light: var(--palette-color-3);
-  --palette-default: var(--palette-color-5);
-  --palette-dark: var(--palette-color-7);
-  --palette-darker: var(--palette-color-9);
-  --palette-lighter-accent: var(--palette-accent-2);
-  --palette-light-accent: var(--palette-accent-3);
-  --palette-default-accent: var(--palette-accent-5);
-  --palette-dark-accent: var(--palette-accent-7);
-  --palette-darker-accent: var(--palette-accent-9);
+  --palette-color-0: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-0)
+  );
+  --palette-color-1: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-1)
+  );
+  --palette-color-2: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-2)
+  );
+  --palette-color-3: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-3)
+  );
+  --palette-color-4: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-4)
+  );
+  --palette-color-5: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-5)
+  );
+  --palette-color-6: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-6)
+  );
+  --palette-color-7: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-7)
+  );
+  --palette-color-8: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-8)
+  );
+  --palette-color-9: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-9)
+  );
+  --palette-color-10: hsl(
+    var(--palette-h),
+    var(--palette-s),
+    var(--palette-l-10)
+  );
+  --palette-gray-0: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-0)
+  );
+  --palette-gray-1: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-1)
+  );
+  --palette-gray-2: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-2)
+  );
+  --palette-gray-3: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-3)
+  );
+  --palette-gray-4: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-4)
+  );
+  --palette-gray-5: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-5)
+  );
+  --palette-gray-6: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-6)
+  );
+  --palette-gray-7: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-7)
+  );
+  --palette-gray-8: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-8)
+  );
+  --palette-gray-9: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-9)
+  );
+  --palette-gray-10: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-l-10)
+  );
+  --palette-accent-0: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-dark)
+  );
+  --palette-accent-1: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-dark)
+  );
+  --palette-accent-2: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-dark)
+  );
+  --palette-accent-3: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-dark)
+  );
+  --palette-accent-4: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-dark)
+  );
+  --palette-accent-5: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-light)
+  );
+  --palette-accent-6: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-light)
+  );
+  --palette-accent-7: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-light)
+  );
+  --palette-accent-8: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-light)
+  );
+  --palette-accent-9: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-light)
+  );
+  --palette-accent-10: hsl(
+    var(--palette-h),
+    var(--palette-gs),
+    var(--palette-accent-light)
+  );
+  --palette-lighter: var(
+    --palette-color-2
+  );
+  --palette-light: var(
+    --palette-color-3
+  );
+  --palette-default: var(
+    --palette-color-5
+  );
+  --palette-dark: var(
+    --palette-color-7
+  );
+  --palette-darker: var(
+    --palette-color-9
+  );
+  --palette-lighter-accent: var(
+    --palette-accent-2
+  );
+  --palette-light-accent: var(
+    --palette-accent-3
+  );
+  --palette-default-accent: var(
+    --palette-accent-5
+  );
+  --palette-dark-accent: var(
+    --palette-accent-7
+  );
+  --palette-darker-accent: var(
+    --palette-accent-9
+  );
 }
 
 :root {
