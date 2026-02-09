@@ -4,17 +4,17 @@
 // ブラウザのデフォルトスタイルをリセットし、
 // CSS変数でテーマ側からカスタマイズ可能にする
 // ============================================
-// 
+//
 // 使用方法:
 // デフォルトでは0%から現在値までの部分が塗りつぶされます（HTML標準と同様）
 // 動的に値を反映するには付属のJSファイルを読み込んでください:
-// 
+//
 // <script src="components/js/range.js"></script>
-// 
+//
 // 手動で初期化する場合:
 // nomadRange.initRange(element);  // 単一要素
 // nomadRange.initAll();           // すべての.range
-// 
+//
 // フラットな表示（塗りつぶしなし）が必要な場合は .range-flat を使用
 // ============================================
 
@@ -25,53 +25,53 @@
 // CSS Variables (defaults in :root)
 // ============================================
 :root {
-    // ----------------------------------------
-    // Track Variables
-    // ----------------------------------------
-    --#{$range-prefix}track-height: 0.5rem;
-    --#{$range-prefix}track-bg: var(--#{$neutral-prefix}3);
-    --#{$range-prefix}track-bg-hover: var(--#{$neutral-prefix}4);
-    --#{$range-prefix}track-border-radius: 0.25rem;
-    --#{$range-prefix}track-border-width: 0;
-    --#{$range-prefix}track-border-color: transparent;
-    
-    // Filled track (the portion before the thumb)
-    --#{$range-prefix}track-fill-bg: var(--#{$neutral-prefix}6);
-    
-    // ----------------------------------------
-    // Thumb Variables
-    // ----------------------------------------
-    --#{$range-prefix}thumb-size: 1.25rem;
-    --#{$range-prefix}thumb-bg: var(--#{$neutral-prefix}0);
-    --#{$range-prefix}thumb-bg-hover: var(--#{$neutral-prefix}0);
-    --#{$range-prefix}thumb-bg-active: var(--#{$neutral-prefix}1);
-    --#{$range-prefix}thumb-border-width: 2px;
-    --#{$range-prefix}thumb-border-color: var(--#{$neutral-prefix}5);
-    --#{$range-prefix}thumb-border-color-hover: var(--#{$neutral-prefix}6);
-    --#{$range-prefix}thumb-border-color-active: var(--#{$neutral-prefix}7);
-    --#{$range-prefix}thumb-border-radius: 50%;
-    --#{$range-prefix}thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --#{$range-prefix}thumb-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.15);
-    --#{$range-prefix}thumb-shadow-active: 0 1px 2px rgba(0, 0, 0, 0.1);
-    
-    // ----------------------------------------
-    // Focus Ring
-    // ----------------------------------------
-    --#{$range-prefix}focus-ring-width: 2px;
-    --#{$range-prefix}focus-ring-offset: 2px;
-    --#{$range-prefix}focus-ring-color: var(--#{$neutral-prefix}5);
-    
-    // ----------------------------------------
-    // Disabled
-    // ----------------------------------------
-    --#{$range-prefix}disabled-opacity: 0.5;
-    
-    // ----------------------------------------
-    // Transition
-    // ----------------------------------------
-    --#{$range-prefix}transition: background-color 0.15s ease-in-out,
-                                  border-color 0.15s ease-in-out,
-                                  box-shadow 0.15s ease-in-out;
+  // ----------------------------------------
+  // Track Variables
+  // ----------------------------------------
+  --#{$range-prefix}track-height: 0.5rem;
+  --#{$range-prefix}track-bg: var(--#{$neutral-prefix}3);
+  --#{$range-prefix}track-bg-hover: var(--#{$neutral-prefix}4);
+  --#{$range-prefix}track-border-radius: 0.25rem;
+  --#{$range-prefix}track-border-width: 0;
+  --#{$range-prefix}track-border-color: transparent;
+
+  // Filled track (the portion before the thumb)
+  --#{$range-prefix}track-fill-bg: var(--#{$neutral-prefix}6);
+
+  // ----------------------------------------
+  // Thumb Variables
+  // ----------------------------------------
+  --#{$range-prefix}thumb-size: 1.25rem;
+  --#{$range-prefix}thumb-bg: var(--#{$neutral-prefix}0);
+  --#{$range-prefix}thumb-bg-hover: var(--#{$neutral-prefix}0);
+  --#{$range-prefix}thumb-bg-active: var(--#{$neutral-prefix}1);
+  --#{$range-prefix}thumb-border-width: 2px;
+  --#{$range-prefix}thumb-border-color: var(--#{$neutral-prefix}5);
+  --#{$range-prefix}thumb-border-color-hover: var(--#{$neutral-prefix}6);
+  --#{$range-prefix}thumb-border-color-active: var(--#{$neutral-prefix}7);
+  --#{$range-prefix}thumb-border-radius: 50%;
+  --#{$range-prefix}thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --#{$range-prefix}thumb-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.15);
+  --#{$range-prefix}thumb-shadow-active: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  // ----------------------------------------
+  // Focus Ring
+  // ----------------------------------------
+  --#{$range-prefix}focus-ring-width: 2px;
+  --#{$range-prefix}focus-ring-offset: 2px;
+  --#{$range-prefix}focus-ring-color: var(--#{$neutral-prefix}5);
+
+  // ----------------------------------------
+  // Disabled
+  // ----------------------------------------
+  --#{$range-prefix}disabled-opacity: 0.5;
+
+  // ----------------------------------------
+  // Transition
+  // ----------------------------------------
+  --#{$range-prefix}transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 // ============================================
@@ -81,175 +81,189 @@
 // --range-fill-percent をJSで更新して動的に反映
 .range,
 input[type="range"].range {
-    // Reset browser default
+  // Reset browser default
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // Size
+  width: 100%;
+  height: var(--#{$range-prefix}thumb-size);
+
+  // Background (for some browsers)
+  background: transparent;
+
+  // Cursor
+  cursor: pointer;
+
+  // Fill percent (default 50%, update via JS)
+  --range-fill-percent: 50%;
+
+  // ----------------------------------------
+  // WebKit Track (Chrome, Safari, Edge)
+  // ----------------------------------------
+  // 塗りつぶしトラック（linear-gradientで実現）
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: var(--#{$range-prefix}track-height);
+    background: linear-gradient(
+      to right,
+      var(--#{$range-prefix}track-fill-bg) 0%,
+      var(--#{$range-prefix}track-fill-bg) var(--range-fill-percent),
+      var(--#{$range-prefix}track-bg) var(--range-fill-percent),
+      var(--#{$range-prefix}track-bg) 100%
+    );
+    border-radius: var(--#{$range-prefix}track-border-radius);
+    border: var(--#{$range-prefix}track-border-width) solid
+      var(--#{$range-prefix}track-border-color);
+    transition: var(--#{$range-prefix}transition);
+  }
+
+  // ----------------------------------------
+  // Mozilla Track (Firefox)
+  // ----------------------------------------
+  &::-moz-range-track {
+    width: 100%;
+    height: var(--#{$range-prefix}track-height);
+    background: var(--#{$range-prefix}track-bg);
+    border-radius: var(--#{$range-prefix}track-border-radius);
+    border: var(--#{$range-prefix}track-border-width) solid
+      var(--#{$range-prefix}track-border-color);
+    transition: var(--#{$range-prefix}transition);
+  }
+
+  // Firefox filled portion (progress) - ネイティブサポート
+  &::-moz-range-progress {
+    height: var(--#{$range-prefix}track-height);
+    background: var(--#{$range-prefix}track-fill-bg);
+    border-radius: var(--#{$range-prefix}track-border-radius) 0 0
+      var(--#{$range-prefix}track-border-radius);
+  }
+
+  // ----------------------------------------
+  // WebKit Thumb (Chrome, Safari, Edge)
+  // ----------------------------------------
+  &::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    // Size
-    width: 100%;
+    width: var(--#{$range-prefix}thumb-size);
     height: var(--#{$range-prefix}thumb-size);
-    
-    // Background (for some browsers)
-    background: transparent;
-    
-    // Cursor
-    cursor: pointer;
-    
-    // Fill percent (default 50%, update via JS)
-    --range-fill-percent: 50%;
-    
-    // ----------------------------------------
-    // WebKit Track (Chrome, Safari, Edge)
-    // ----------------------------------------
-    // 塗りつぶしトラック（linear-gradientで実現）
+    background: var(--#{$range-prefix}thumb-bg);
+    border: var(--#{$range-prefix}thumb-border-width) solid
+      var(--#{$range-prefix}thumb-border-color);
+    border-radius: var(--#{$range-prefix}thumb-border-radius);
+    box-shadow: var(--#{$range-prefix}thumb-shadow);
+    // Center thumb vertically on track
+    margin-top: calc(
+      (
+          var(--#{$range-prefix}track-height) - var(
+              --#{$range-prefix}thumb-size
+            )
+        ) /
+        2
+    );
+    transition: var(--#{$range-prefix}transition);
+  }
+
+  // ----------------------------------------
+  // Mozilla Thumb (Firefox)
+  // ----------------------------------------
+  &::-moz-range-thumb {
+    appearance: none;
+    width: var(--#{$range-prefix}thumb-size);
+    height: var(--#{$range-prefix}thumb-size);
+    background: var(--#{$range-prefix}thumb-bg);
+    border: var(--#{$range-prefix}thumb-border-width) solid
+      var(--#{$range-prefix}thumb-border-color);
+    border-radius: var(--#{$range-prefix}thumb-border-radius);
+    box-shadow: var(--#{$range-prefix}thumb-shadow);
+    transition: var(--#{$range-prefix}transition);
+  }
+
+  // ----------------------------------------
+  // Hover State
+  // ----------------------------------------
+  &:hover:not(:disabled) {
     &::-webkit-slider-runnable-track {
-        width: 100%;
-        height: var(--#{$range-prefix}track-height);
-        background: linear-gradient(
-            to right,
-            var(--#{$range-prefix}track-fill-bg) 0%,
-            var(--#{$range-prefix}track-fill-bg) var(--range-fill-percent),
-            var(--#{$range-prefix}track-bg) var(--range-fill-percent),
-            var(--#{$range-prefix}track-bg) 100%
-        );
-        border-radius: var(--#{$range-prefix}track-border-radius);
-        border: var(--#{$range-prefix}track-border-width) solid var(--#{$range-prefix}track-border-color);
-        transition: var(--#{$range-prefix}transition);
+      background: linear-gradient(
+        to right,
+        var(--#{$range-prefix}track-fill-bg) 0%,
+        var(--#{$range-prefix}track-fill-bg) var(--range-fill-percent),
+        var(--#{$range-prefix}track-bg-hover) var(--range-fill-percent),
+        var(--#{$range-prefix}track-bg-hover) 100%
+      );
     }
-    
-    // ----------------------------------------
-    // Mozilla Track (Firefox)
-    // ----------------------------------------
     &::-moz-range-track {
-        width: 100%;
-        height: var(--#{$range-prefix}track-height);
-        background: var(--#{$range-prefix}track-bg);
-        border-radius: var(--#{$range-prefix}track-border-radius);
-        border: var(--#{$range-prefix}track-border-width) solid var(--#{$range-prefix}track-border-color);
-        transition: var(--#{$range-prefix}transition);
+      background: var(--#{$range-prefix}track-bg-hover);
     }
-    
-    // Firefox filled portion (progress) - ネイティブサポート
-    &::-moz-range-progress {
-        height: var(--#{$range-prefix}track-height);
-        background: var(--#{$range-prefix}track-fill-bg);
-        border-radius: var(--#{$range-prefix}track-border-radius) 0 0 var(--#{$range-prefix}track-border-radius);
-    }
-    
-    // ----------------------------------------
-    // WebKit Thumb (Chrome, Safari, Edge)
-    // ----------------------------------------
     &::-webkit-slider-thumb {
-        appearance: none;
-        -webkit-appearance: none;
-        width: var(--#{$range-prefix}thumb-size);
-        height: var(--#{$range-prefix}thumb-size);
-        background: var(--#{$range-prefix}thumb-bg);
-        border: var(--#{$range-prefix}thumb-border-width) solid var(--#{$range-prefix}thumb-border-color);
-        border-radius: var(--#{$range-prefix}thumb-border-radius);
-        box-shadow: var(--#{$range-prefix}thumb-shadow);
-        // Center thumb vertically on track
-        margin-top: calc((var(--#{$range-prefix}track-height) - var(--#{$range-prefix}thumb-size)) / 2);
-        transition: var(--#{$range-prefix}transition);
+      background: var(--#{$range-prefix}thumb-bg-hover);
+      border-color: var(--#{$range-prefix}thumb-border-color-hover);
+      box-shadow: var(--#{$range-prefix}thumb-shadow-hover);
     }
-    
-    // ----------------------------------------
-    // Mozilla Thumb (Firefox)
-    // ----------------------------------------
     &::-moz-range-thumb {
-        appearance: none;
-        width: var(--#{$range-prefix}thumb-size);
-        height: var(--#{$range-prefix}thumb-size);
-        background: var(--#{$range-prefix}thumb-bg);
-        border: var(--#{$range-prefix}thumb-border-width) solid var(--#{$range-prefix}thumb-border-color);
-        border-radius: var(--#{$range-prefix}thumb-border-radius);
-        box-shadow: var(--#{$range-prefix}thumb-shadow);
-        transition: var(--#{$range-prefix}transition);
+      background: var(--#{$range-prefix}thumb-bg-hover);
+      border-color: var(--#{$range-prefix}thumb-border-color-hover);
+      box-shadow: var(--#{$range-prefix}thumb-shadow-hover);
     }
-    
-    // ----------------------------------------
-    // Hover State
-    // ----------------------------------------
-    &:hover:not(:disabled) {
-        &::-webkit-slider-runnable-track {
-            background: linear-gradient(
-                to right,
-                var(--#{$range-prefix}track-fill-bg) 0%,
-                var(--#{$range-prefix}track-fill-bg) var(--range-fill-percent),
-                var(--#{$range-prefix}track-bg-hover) var(--range-fill-percent),
-                var(--#{$range-prefix}track-bg-hover) 100%
-            );
-        }
-        &::-moz-range-track {
-            background: var(--#{$range-prefix}track-bg-hover);
-        }
-        &::-webkit-slider-thumb {
-            background: var(--#{$range-prefix}thumb-bg-hover);
-            border-color: var(--#{$range-prefix}thumb-border-color-hover);
-            box-shadow: var(--#{$range-prefix}thumb-shadow-hover);
-        }
-        &::-moz-range-thumb {
-            background: var(--#{$range-prefix}thumb-bg-hover);
-            border-color: var(--#{$range-prefix}thumb-border-color-hover);
-            box-shadow: var(--#{$range-prefix}thumb-shadow-hover);
-        }
+  }
+
+  // ----------------------------------------
+  // Active State
+  // ----------------------------------------
+  &:active:not(:disabled) {
+    &::-webkit-slider-thumb {
+      background: var(--#{$range-prefix}thumb-bg-active);
+      border-color: var(--#{$range-prefix}thumb-border-color-active);
+      box-shadow: var(--#{$range-prefix}thumb-shadow-active);
     }
-    
-    // ----------------------------------------
-    // Active State
-    // ----------------------------------------
-    &:active:not(:disabled) {
-        &::-webkit-slider-thumb {
-            background: var(--#{$range-prefix}thumb-bg-active);
-            border-color: var(--#{$range-prefix}thumb-border-color-active);
-            box-shadow: var(--#{$range-prefix}thumb-shadow-active);
-        }
-        &::-moz-range-thumb {
-            background: var(--#{$range-prefix}thumb-bg-active);
-            border-color: var(--#{$range-prefix}thumb-border-color-active);
-            box-shadow: var(--#{$range-prefix}thumb-shadow-active);
-        }
+    &::-moz-range-thumb {
+      background: var(--#{$range-prefix}thumb-bg-active);
+      border-color: var(--#{$range-prefix}thumb-border-color-active);
+      box-shadow: var(--#{$range-prefix}thumb-shadow-active);
     }
-    
-    // ----------------------------------------
-    // Focus State
-    // ----------------------------------------
-    &:focus {
-        outline: none;
+  }
+
+  // ----------------------------------------
+  // Focus State
+  // ----------------------------------------
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    &::-webkit-slider-thumb {
+      outline: var(--#{$range-prefix}focus-ring-width) solid
+        var(--#{$range-prefix}focus-ring-color);
+      outline-offset: var(--#{$range-prefix}focus-ring-offset);
     }
-    
-    &:focus-visible {
-        &::-webkit-slider-thumb {
-            outline: var(--#{$range-prefix}focus-ring-width) solid var(--#{$range-prefix}focus-ring-color);
-            outline-offset: var(--#{$range-prefix}focus-ring-offset);
-        }
-        &::-moz-range-thumb {
-            outline: var(--#{$range-prefix}focus-ring-width) solid var(--#{$range-prefix}focus-ring-color);
-            outline-offset: var(--#{$range-prefix}focus-ring-offset);
-        }
+    &::-moz-range-thumb {
+      outline: var(--#{$range-prefix}focus-ring-width) solid
+        var(--#{$range-prefix}focus-ring-color);
+      outline-offset: var(--#{$range-prefix}focus-ring-offset);
     }
-    
-    // ----------------------------------------
-    // Disabled State
-    // ----------------------------------------
-    &:disabled {
-        opacity: var(--#{$range-prefix}disabled-opacity);
-        cursor: not-allowed;
-    }
+  }
+
+  // ----------------------------------------
+  // Disabled State
+  // ----------------------------------------
+  &:disabled {
+    opacity: var(--#{$range-prefix}disabled-opacity);
+    cursor: not-allowed;
+  }
 }
 
 // ============================================
 // Size Variants
 // ============================================
 .range-sm {
-    --#{$range-prefix}track-height: 0.375rem;
-    --#{$range-prefix}thumb-size: 1rem;
+  --#{$range-prefix}track-height: 0.375rem;
+  --#{$range-prefix}thumb-size: 1rem;
 }
 
 .range-lg {
-    --#{$range-prefix}track-height: 0.625rem;
-    --#{$range-prefix}thumb-size: 1.5rem;
+  --#{$range-prefix}track-height: 0.625rem;
+  --#{$range-prefix}thumb-size: 1.5rem;
 }
 
 // ============================================
@@ -257,15 +271,15 @@ input[type="range"].range {
 // ============================================
 // Usage: <input type="range" class="range primary">
 .range {
-    @each $name, $values in $semantic-colors {
-        &.#{$semantic-prefix}#{$name} {
-            --#{$range-prefix}track-fill-bg: var(--#{$palette-default});
-            --#{$range-prefix}thumb-border-color: var(--#{$palette-default});
-            --#{$range-prefix}thumb-border-color-hover: var(--#{$palette-dark});
-            --#{$range-prefix}thumb-border-color-active: var(--#{$palette-darker});
-            --#{$range-prefix}focus-ring-color: var(--#{$palette-default});
-        }
+  @each $name, $values in $semantic-colors {
+    &.#{$semantic-prefix}#{$name} {
+      --#{$range-prefix}track-fill-bg: var(--#{$palette-default});
+      --#{$range-prefix}thumb-border-color: var(--#{$palette-default});
+      --#{$range-prefix}thumb-border-color-hover: var(--#{$palette-dark});
+      --#{$range-prefix}thumb-border-color-active: var(--#{$palette-darker});
+      --#{$range-prefix}focus-ring-color: var(--#{$palette-default});
     }
+  }
 }
 
 // ============================================
@@ -274,16 +288,16 @@ input[type="range"].range {
 // Usage: <input type="range" class="range range-flat">
 // 塗りつぶしなしのフラットなトラック（JSなしで動作）
 .range-flat {
-    &::-webkit-slider-runnable-track {
-        background: var(--#{$range-prefix}track-bg);
-    }
-    
-    &:hover:not(:disabled)::-webkit-slider-runnable-track {
-        background: var(--#{$range-prefix}track-bg-hover);
-    }
-    
-    // Firefoxでも塗りつぶしを無効化
-    &::-moz-range-progress {
-        background: transparent;
-    }
+  &::-webkit-slider-runnable-track {
+    background: var(--#{$range-prefix}track-bg);
+  }
+
+  &:hover:not(:disabled)::-webkit-slider-runnable-track {
+    background: var(--#{$range-prefix}track-bg-hover);
+  }
+
+  // Firefoxでも塗りつぶしを無効化
+  &::-moz-range-progress {
+    background: transparent;
+  }
 }

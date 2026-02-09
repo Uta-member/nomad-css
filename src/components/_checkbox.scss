@@ -12,85 +12,85 @@
 // CSS Variables (defaults in :root)
 // ============================================
 :root {
-    // ----------------------------------------
-    // Checkbox Variables
-    // ----------------------------------------
-    // Size
-    --#{$checkbox-prefix}size: 1.25rem;
-    
-    // Border
-    --#{$checkbox-prefix}border-width: 2px;
-    --#{$checkbox-prefix}border-radius: 0.25rem;
-    --#{$checkbox-prefix}border-color: var(--#{$neutral-prefix}5);
-    --#{$checkbox-prefix}border-color-hover: var(--#{$neutral-prefix}6);
-    --#{$checkbox-prefix}border-color-checked: var(--#{$neutral-prefix}7);
-    --#{$checkbox-prefix}border-color-focus: var(--#{$neutral-prefix}6);
-    
-    // Background
-    --#{$checkbox-prefix}bg: transparent;
-    --#{$checkbox-prefix}bg-hover: var(--#{$neutral-prefix}1);
-    --#{$checkbox-prefix}bg-checked: var(--#{$neutral-prefix}7);
-    
-    // Checkmark
-    --#{$checkbox-prefix}checkmark-color: var(--#{$neutral-prefix}accent-7);
-    --#{$checkbox-prefix}checkmark-width: 2px;
-    
-    // Indeterminate
-    --#{$checkbox-prefix}indeterminate-color: var(--#{$neutral-prefix}accent-7);
-    
-    // Focus ring
-    --#{$checkbox-prefix}focus-ring-width: 2px;
-    --#{$checkbox-prefix}focus-ring-offset: 2px;
-    --#{$checkbox-prefix}focus-ring-color: var(--#{$neutral-prefix}5);
-    
-    // Disabled
-    --#{$checkbox-prefix}disabled-opacity: 0.5;
-    
-    // Transition
-    --#{$checkbox-prefix}transition: background-color 0.15s ease-in-out,
-                                     border-color 0.15s ease-in-out,
-                                     box-shadow 0.15s ease-in-out;
-    
-    // ----------------------------------------
-    // Radio Variables
-    // ----------------------------------------
-    // Size
-    --#{$radio-prefix}size: 1.25rem;
-    
-    // Border
-    --#{$radio-prefix}border-width: 2px;
-    --#{$radio-prefix}border-color: var(--#{$neutral-prefix}5);
-    --#{$radio-prefix}border-color-hover: var(--#{$neutral-prefix}6);
-    --#{$radio-prefix}border-color-checked: var(--#{$neutral-prefix}7);
-    --#{$radio-prefix}border-color-focus: var(--#{$neutral-prefix}6);
-    
-    // Background
-    --#{$radio-prefix}bg: transparent;
-    --#{$radio-prefix}bg-hover: var(--#{$neutral-prefix}1);
-    --#{$radio-prefix}bg-checked: var(--#{$neutral-prefix}7);
-    
-    // Dot
-    --#{$radio-prefix}dot-size: 0.5rem;
-    --#{$radio-prefix}dot-color: var(--#{$neutral-prefix}accent-7);
-    
-    // Focus ring
-    --#{$radio-prefix}focus-ring-width: 2px;
-    --#{$radio-prefix}focus-ring-offset: 2px;
-    --#{$radio-prefix}focus-ring-color: var(--#{$neutral-prefix}5);
-    
-    // Disabled
-    --#{$radio-prefix}disabled-opacity: 0.5;
-    
-    // Transition
-    --#{$radio-prefix}transition: background-color 0.15s ease-in-out,
-                                  border-color 0.15s ease-in-out,
-                                  box-shadow 0.15s ease-in-out;
-    
-    // ----------------------------------------
-    // Form Check (label wrapper) Variables
-    // ----------------------------------------
-    --form-check-gap: 0.5rem;
-    --form-check-label-color: inherit;
+  // ----------------------------------------
+  // Checkbox Variables
+  // ----------------------------------------
+  // Size
+  --#{$checkbox-prefix}size: 1.25rem;
+
+  // Border
+  --#{$checkbox-prefix}border-width: 2px;
+  --#{$checkbox-prefix}border-radius: 0.25rem;
+  --#{$checkbox-prefix}border-color: var(--#{$neutral-prefix}5);
+  --#{$checkbox-prefix}border-color-hover: var(--#{$neutral-prefix}6);
+  --#{$checkbox-prefix}border-color-checked: var(--#{$neutral-prefix}7);
+  --#{$checkbox-prefix}border-color-focus: var(--#{$neutral-prefix}6);
+
+  // Background
+  --#{$checkbox-prefix}bg: transparent;
+  --#{$checkbox-prefix}bg-hover: var(--#{$neutral-prefix}1);
+  --#{$checkbox-prefix}bg-checked: var(--#{$neutral-prefix}7);
+
+  // Checkmark
+  --#{$checkbox-prefix}checkmark-color: var(--#{$neutral-prefix}accent-7);
+  --#{$checkbox-prefix}checkmark-width: 2px;
+
+  // Indeterminate
+  --#{$checkbox-prefix}indeterminate-color: var(--#{$neutral-prefix}accent-7);
+
+  // Focus ring
+  --#{$checkbox-prefix}focus-ring-width: 2px;
+  --#{$checkbox-prefix}focus-ring-offset: 2px;
+  --#{$checkbox-prefix}focus-ring-color: var(--#{$neutral-prefix}5);
+
+  // Disabled
+  --#{$checkbox-prefix}disabled-opacity: 0.5;
+
+  // Transition
+  --#{$checkbox-prefix}transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  // ----------------------------------------
+  // Radio Variables
+  // ----------------------------------------
+  // Size
+  --#{$radio-prefix}size: 1.25rem;
+
+  // Border
+  --#{$radio-prefix}border-width: 2px;
+  --#{$radio-prefix}border-color: var(--#{$neutral-prefix}5);
+  --#{$radio-prefix}border-color-hover: var(--#{$neutral-prefix}6);
+  --#{$radio-prefix}border-color-checked: var(--#{$neutral-prefix}7);
+  --#{$radio-prefix}border-color-focus: var(--#{$neutral-prefix}6);
+
+  // Background
+  --#{$radio-prefix}bg: transparent;
+  --#{$radio-prefix}bg-hover: var(--#{$neutral-prefix}1);
+  --#{$radio-prefix}bg-checked: var(--#{$neutral-prefix}7);
+
+  // Dot
+  --#{$radio-prefix}dot-size: 0.5rem;
+  --#{$radio-prefix}dot-color: var(--#{$neutral-prefix}accent-7);
+
+  // Focus ring
+  --#{$radio-prefix}focus-ring-width: 2px;
+  --#{$radio-prefix}focus-ring-offset: 2px;
+  --#{$radio-prefix}focus-ring-color: var(--#{$neutral-prefix}5);
+
+  // Disabled
+  --#{$radio-prefix}disabled-opacity: 0.5;
+
+  // Transition
+  --#{$radio-prefix}transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  // ----------------------------------------
+  // Form Check (label wrapper) Variables
+  // ----------------------------------------
+  --form-check-gap: 0.5rem;
+  --form-check-label-color: inherit;
 }
 
 // ============================================
@@ -98,95 +98,98 @@
 // ============================================
 .checkbox,
 input[type="checkbox"].checkbox {
-    // Reset browser default
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    margin: 0;
-    
-    // Size
-    width: var(--#{$checkbox-prefix}size);
-    height: var(--#{$checkbox-prefix}size);
-    flex-shrink: 0;
-    
-    // Display
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    
-    // Border
-    border: var(--#{$checkbox-prefix}border-width) solid var(--#{$checkbox-prefix}border-color);
-    border-radius: var(--#{$checkbox-prefix}border-radius);
-    
-    // Background
-    background-color: var(--#{$checkbox-prefix}bg);
-    
-    // Cursor
-    cursor: pointer;
-    
-    // Transition
-    transition: var(--#{$checkbox-prefix}transition);
-    
-    // ----------------------------------------
-    // Hover State
-    // ----------------------------------------
-    &:hover:not(:disabled):not(:checked) {
-        background-color: var(--#{$checkbox-prefix}bg-hover);
-        border-color: var(--#{$checkbox-prefix}border-color-hover);
+  // Reset browser default
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+
+  // Size
+  width: var(--#{$checkbox-prefix}size);
+  height: var(--#{$checkbox-prefix}size);
+  flex-shrink: 0;
+
+  // Display
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  // Border
+  border: var(--#{$checkbox-prefix}border-width) solid
+    var(--#{$checkbox-prefix}border-color);
+  border-radius: var(--#{$checkbox-prefix}border-radius);
+
+  // Background
+  background-color: var(--#{$checkbox-prefix}bg);
+
+  // Cursor
+  cursor: pointer;
+
+  // Transition
+  transition: var(--#{$checkbox-prefix}transition);
+
+  // ----------------------------------------
+  // Hover State
+  // ----------------------------------------
+  &:hover:not(:disabled):not(:checked) {
+    background-color: var(--#{$checkbox-prefix}bg-hover);
+    border-color: var(--#{$checkbox-prefix}border-color-hover);
+  }
+
+  // ----------------------------------------
+  // Focus State
+  // ----------------------------------------
+  &:focus-visible {
+    outline: var(--#{$checkbox-prefix}focus-ring-width) solid
+      var(--#{$checkbox-prefix}focus-ring-color);
+    outline-offset: var(--#{$checkbox-prefix}focus-ring-offset);
+  }
+
+  // ----------------------------------------
+  // Checked State
+  // ----------------------------------------
+  &:checked {
+    background-color: var(--#{$checkbox-prefix}bg-checked);
+    border-color: var(--#{$checkbox-prefix}border-color-checked);
+
+    // Checkmark using pseudo-element
+    &::after {
+      content: "";
+      display: block;
+      width: calc(var(--#{$checkbox-prefix}size) * 0.3);
+      height: calc(var(--#{$checkbox-prefix}size) * 0.55);
+      border: solid var(--#{$checkbox-prefix}checkmark-color);
+      border-width: 0 var(--#{$checkbox-prefix}checkmark-width)
+        var(--#{$checkbox-prefix}checkmark-width) 0;
+      transform: rotate(45deg) translateX(-5%) translateY(-5%);
     }
-    
-    // ----------------------------------------
-    // Focus State
-    // ----------------------------------------
-    &:focus-visible {
-        outline: var(--#{$checkbox-prefix}focus-ring-width) solid var(--#{$checkbox-prefix}focus-ring-color);
-        outline-offset: var(--#{$checkbox-prefix}focus-ring-offset);
+  }
+
+  // ----------------------------------------
+  // Indeterminate State
+  // ----------------------------------------
+  &:indeterminate {
+    background-color: var(--#{$checkbox-prefix}bg-checked);
+    border-color: var(--#{$checkbox-prefix}border-color-checked);
+
+    // Horizontal line
+    &::after {
+      content: "";
+      display: block;
+      width: calc(var(--#{$checkbox-prefix}size) * 0.5);
+      height: var(--#{$checkbox-prefix}checkmark-width);
+      background-color: var(--#{$checkbox-prefix}indeterminate-color);
     }
-    
-    // ----------------------------------------
-    // Checked State
-    // ----------------------------------------
-    &:checked {
-        background-color: var(--#{$checkbox-prefix}bg-checked);
-        border-color: var(--#{$checkbox-prefix}border-color-checked);
-        
-        // Checkmark using pseudo-element
-        &::after {
-            content: "";
-            display: block;
-            width: calc(var(--#{$checkbox-prefix}size) * 0.3);
-            height: calc(var(--#{$checkbox-prefix}size) * 0.55);
-            border: solid var(--#{$checkbox-prefix}checkmark-color);
-            border-width: 0 var(--#{$checkbox-prefix}checkmark-width) var(--#{$checkbox-prefix}checkmark-width) 0;
-            transform: rotate(45deg) translateX(-5%) translateY(-5%);
-        }
-    }
-    
-    // ----------------------------------------
-    // Indeterminate State
-    // ----------------------------------------
-    &:indeterminate {
-        background-color: var(--#{$checkbox-prefix}bg-checked);
-        border-color: var(--#{$checkbox-prefix}border-color-checked);
-        
-        // Horizontal line
-        &::after {
-            content: "";
-            display: block;
-            width: calc(var(--#{$checkbox-prefix}size) * 0.5);
-            height: var(--#{$checkbox-prefix}checkmark-width);
-            background-color: var(--#{$checkbox-prefix}indeterminate-color);
-        }
-    }
-    
-    // ----------------------------------------
-    // Disabled State
-    // ----------------------------------------
-    &:disabled {
-        opacity: var(--#{$checkbox-prefix}disabled-opacity);
-        cursor: not-allowed;
-    }
+  }
+
+  // ----------------------------------------
+  // Disabled State
+  // ----------------------------------------
+  &:disabled {
+    opacity: var(--#{$checkbox-prefix}disabled-opacity);
+    cursor: not-allowed;
+  }
 }
 
 // ============================================
@@ -194,77 +197,79 @@ input[type="checkbox"].checkbox {
 // ============================================
 .radio,
 input[type="radio"].radio {
-    // Reset browser default
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    margin: 0;
-    
-    // Size
-    width: var(--#{$radio-prefix}size);
-    height: var(--#{$radio-prefix}size);
-    flex-shrink: 0;
-    
-    // Display
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    
-    // Border (always circular for radio)
-    border: var(--#{$radio-prefix}border-width) solid var(--#{$radio-prefix}border-color);
-    border-radius: 50%;
-    
-    // Background
-    background-color: var(--#{$radio-prefix}bg);
-    
-    // Cursor
-    cursor: pointer;
-    
-    // Transition
-    transition: var(--#{$radio-prefix}transition);
-    
-    // ----------------------------------------
-    // Hover State
-    // ----------------------------------------
-    &:hover:not(:disabled):not(:checked) {
-        background-color: var(--#{$radio-prefix}bg-hover);
-        border-color: var(--#{$radio-prefix}border-color-hover);
+  // Reset browser default
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+
+  // Size
+  width: var(--#{$radio-prefix}size);
+  height: var(--#{$radio-prefix}size);
+  flex-shrink: 0;
+
+  // Display
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  // Border (always circular for radio)
+  border: var(--#{$radio-prefix}border-width) solid
+    var(--#{$radio-prefix}border-color);
+  border-radius: 50%;
+
+  // Background
+  background-color: var(--#{$radio-prefix}bg);
+
+  // Cursor
+  cursor: pointer;
+
+  // Transition
+  transition: var(--#{$radio-prefix}transition);
+
+  // ----------------------------------------
+  // Hover State
+  // ----------------------------------------
+  &:hover:not(:disabled):not(:checked) {
+    background-color: var(--#{$radio-prefix}bg-hover);
+    border-color: var(--#{$radio-prefix}border-color-hover);
+  }
+
+  // ----------------------------------------
+  // Focus State
+  // ----------------------------------------
+  &:focus-visible {
+    outline: var(--#{$radio-prefix}focus-ring-width) solid
+      var(--#{$radio-prefix}focus-ring-color);
+    outline-offset: var(--#{$radio-prefix}focus-ring-offset);
+  }
+
+  // ----------------------------------------
+  // Checked State
+  // ----------------------------------------
+  &:checked {
+    background-color: var(--#{$radio-prefix}bg-checked);
+    border-color: var(--#{$radio-prefix}border-color-checked);
+
+    // Inner dot using pseudo-element
+    &::after {
+      content: "";
+      display: block;
+      width: var(--#{$radio-prefix}dot-size);
+      height: var(--#{$radio-prefix}dot-size);
+      border-radius: 50%;
+      background-color: var(--#{$radio-prefix}dot-color);
     }
-    
-    // ----------------------------------------
-    // Focus State
-    // ----------------------------------------
-    &:focus-visible {
-        outline: var(--#{$radio-prefix}focus-ring-width) solid var(--#{$radio-prefix}focus-ring-color);
-        outline-offset: var(--#{$radio-prefix}focus-ring-offset);
-    }
-    
-    // ----------------------------------------
-    // Checked State
-    // ----------------------------------------
-    &:checked {
-        background-color: var(--#{$radio-prefix}bg-checked);
-        border-color: var(--#{$radio-prefix}border-color-checked);
-        
-        // Inner dot using pseudo-element
-        &::after {
-            content: "";
-            display: block;
-            width: var(--#{$radio-prefix}dot-size);
-            height: var(--#{$radio-prefix}dot-size);
-            border-radius: 50%;
-            background-color: var(--#{$radio-prefix}dot-color);
-        }
-    }
-    
-    // ----------------------------------------
-    // Disabled State
-    // ----------------------------------------
-    &:disabled {
-        opacity: var(--#{$radio-prefix}disabled-opacity);
-        cursor: not-allowed;
-    }
+  }
+
+  // ----------------------------------------
+  // Disabled State
+  // ----------------------------------------
+  &:disabled {
+    opacity: var(--#{$radio-prefix}disabled-opacity);
+    cursor: not-allowed;
+  }
 }
 
 // ============================================
@@ -272,16 +277,16 @@ input[type="radio"].radio {
 // ============================================
 .checkbox-sm,
 .radio-sm {
-    --#{$checkbox-prefix}size: 1rem;
-    --#{$radio-prefix}size: 1rem;
-    --#{$radio-prefix}dot-size: 0.375rem;
+  --#{$checkbox-prefix}size: 1rem;
+  --#{$radio-prefix}size: 1rem;
+  --#{$radio-prefix}dot-size: 0.375rem;
 }
 
 .checkbox-lg,
 .radio-lg {
-    --#{$checkbox-prefix}size: 1.5rem;
-    --#{$radio-prefix}size: 1.5rem;
-    --#{$radio-prefix}dot-size: 0.625rem;
+  --#{$checkbox-prefix}size: 1.5rem;
+  --#{$radio-prefix}size: 1.5rem;
+  --#{$radio-prefix}dot-size: 0.625rem;
 }
 
 // ============================================
@@ -289,38 +294,38 @@ input[type="radio"].radio {
 // ============================================
 // Usage: <label class="form-check"><input type="checkbox" class="checkbox"> Label text</label>
 .form-check {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--form-check-gap);
-    cursor: pointer;
-    color: var(--form-check-label-color);
-    
-    // When disabled, style the whole label
-    &:has(:disabled) {
-        opacity: var(--#{$checkbox-prefix}disabled-opacity);
-        cursor: not-allowed;
-    }
+  display: inline-flex;
+  align-items: center;
+  gap: var(--form-check-gap);
+  cursor: pointer;
+  color: var(--form-check-label-color);
+
+  // When disabled, style the whole label
+  &:has(:disabled) {
+    opacity: var(--#{$checkbox-prefix}disabled-opacity);
+    cursor: not-allowed;
+  }
 }
 
 // ============================================
 // Form Check Group (vertical stack)
 // ============================================
 .form-check-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 // ============================================
 // Form Check Inline (horizontal)
 // ============================================
 .form-check-inline {
-    display: inline-flex;
-    gap: 1rem;
-    
-    > .form-check {
-        margin-right: 0;
-    }
+  display: inline-flex;
+  gap: 1rem;
+
+  > .form-check {
+    margin-right: 0;
+  }
 }
 
 // ============================================
@@ -329,18 +334,20 @@ input[type="radio"].radio {
 // Usage: <input type="checkbox" class="checkbox primary">
 .checkbox,
 .radio {
-    @each $name, $values in $semantic-colors {
-        &.#{$semantic-prefix}#{$name} {
-            --#{$checkbox-prefix}border-color-checked: var(--#{$palette-default});
-            --#{$checkbox-prefix}bg-checked: var(--#{$palette-default});
-            --#{$checkbox-prefix}checkmark-color: var(--#{$palette-default-accent});
-            --#{$checkbox-prefix}focus-ring-color: var(--#{$palette-default});
-            --#{$checkbox-prefix}indeterminate-color: var(--#{$palette-default-accent});
-            
-            --#{$radio-prefix}border-color-checked: var(--#{$palette-default});
-            --#{$radio-prefix}bg-checked: var(--#{$palette-default});
-            --#{$radio-prefix}dot-color: var(--#{$palette-default-accent});
-            --#{$radio-prefix}focus-ring-color: var(--#{$palette-default});
-        }
+  @each $name, $values in $semantic-colors {
+    &.#{$semantic-prefix}#{$name} {
+      --#{$checkbox-prefix}border-color-checked: var(--#{$palette-default});
+      --#{$checkbox-prefix}bg-checked: var(--#{$palette-default});
+      --#{$checkbox-prefix}checkmark-color: var(--#{$palette-default-accent});
+      --#{$checkbox-prefix}focus-ring-color: var(--#{$palette-default});
+      --#{$checkbox-prefix}indeterminate-color: var(
+        --#{$palette-default-accent}
+      );
+
+      --#{$radio-prefix}border-color-checked: var(--#{$palette-default});
+      --#{$radio-prefix}bg-checked: var(--#{$palette-default});
+      --#{$radio-prefix}dot-color: var(--#{$palette-default-accent});
+      --#{$radio-prefix}focus-ring-color: var(--#{$palette-default});
     }
+  }
 }

@@ -25,74 +25,80 @@
 // CSS Variables (defaults in :root)
 // ============================================
 :root {
-    // ----------------------------------------
-    // Size Variables
-    // ----------------------------------------
-    --#{$input-prefix}height: 2.5rem;
-    --#{$input-prefix}padding-x: 0.75rem;
-    --#{$input-prefix}padding-y: 0.5rem;
-    --#{$input-prefix}font-size: 1rem;
-    --#{$input-prefix}line-height: 1.5;
-    
-    // ----------------------------------------
-    // Color Variables - Normal State
-    // ----------------------------------------
-    --#{$input-prefix}bg: var(--#{$neutral-prefix}0);
-    --#{$input-prefix}color: var(--#{$neutral-prefix}10);
-    --#{$input-prefix}border-color: var(--#{$neutral-prefix}4);
-    --#{$input-prefix}placeholder-color: var(--#{$neutral-prefix}5);
-    
-    // ----------------------------------------
-    // Color Variables - Hover State
-    // ----------------------------------------
-    --#{$input-prefix}bg-hover: var(--#{$neutral-prefix}0);
-    --#{$input-prefix}border-color-hover: var(--#{$neutral-prefix}5);
-    
-    // ----------------------------------------
-    // Color Variables - Focus State
-    // ----------------------------------------
-    --#{$input-prefix}bg-focus: var(--#{$neutral-prefix}0);
-    --#{$input-prefix}border-color-focus: var(--#{$neutral-prefix}6);
-    --#{$input-prefix}focus-ring-width: 2px;
-    --#{$input-prefix}focus-ring-color: var(--#{$neutral-prefix}3);
-    
-    // ----------------------------------------
-    // Color Variables - Disabled State
-    // ----------------------------------------
-    --#{$input-prefix}bg-disabled: var(--#{$neutral-prefix}2);
-    --#{$input-prefix}color-disabled: var(--#{$neutral-prefix}5);
-    --#{$input-prefix}border-color-disabled: var(--#{$neutral-prefix}3);
-    
-    // ----------------------------------------
-    // Color Variables - Readonly State
-    // ----------------------------------------
-    --#{$input-prefix}bg-readonly: var(--#{$neutral-prefix}1);
-    --#{$input-prefix}color-readonly: var(--#{$neutral-prefix}8);
-    --#{$input-prefix}border-color-readonly: var(--#{$neutral-prefix}3);
-    
-    // ----------------------------------------
-    // Border Variables
-    // ----------------------------------------
-    --#{$input-prefix}border-width: 1px;
-    --#{$input-prefix}border-radius: 0.25rem;
-    
-    // ----------------------------------------
-    // Transition
-    // ----------------------------------------
-    --#{$input-prefix}transition: border-color 0.15s ease-in-out,
-                                  background-color 0.15s ease-in-out,
-                                  box-shadow 0.15s ease-in-out;
-    
-    // ----------------------------------------
-    // Validation Variables (for future use)
-    // ----------------------------------------
-    // Valid state
-    --#{$input-prefix}border-color-valid: var(--semantic-success-default, #22c55e);
-    --#{$input-prefix}focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
-    
-    // Invalid state
-    --#{$input-prefix}border-color-invalid: var(--semantic-danger-default, #ef4444);
-    --#{$input-prefix}focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
+  // ----------------------------------------
+  // Size Variables
+  // ----------------------------------------
+  --#{$input-prefix}height: 2.5rem;
+  --#{$input-prefix}padding-x: 0.75rem;
+  --#{$input-prefix}padding-y: 0.5rem;
+  --#{$input-prefix}font-size: 1rem;
+  --#{$input-prefix}line-height: 1.5;
+
+  // ----------------------------------------
+  // Color Variables - Normal State
+  // ----------------------------------------
+  --#{$input-prefix}bg: var(--#{$neutral-prefix}0);
+  --#{$input-prefix}color: var(--#{$neutral-prefix}10);
+  --#{$input-prefix}border-color: var(--#{$neutral-prefix}4);
+  --#{$input-prefix}placeholder-color: var(--#{$neutral-prefix}5);
+
+  // ----------------------------------------
+  // Color Variables - Hover State
+  // ----------------------------------------
+  --#{$input-prefix}bg-hover: var(--#{$neutral-prefix}0);
+  --#{$input-prefix}border-color-hover: var(--#{$neutral-prefix}5);
+
+  // ----------------------------------------
+  // Color Variables - Focus State
+  // ----------------------------------------
+  --#{$input-prefix}bg-focus: var(--#{$neutral-prefix}0);
+  --#{$input-prefix}border-color-focus: var(--#{$neutral-prefix}6);
+  --#{$input-prefix}focus-ring-width: 2px;
+  --#{$input-prefix}focus-ring-color: var(--#{$neutral-prefix}3);
+
+  // ----------------------------------------
+  // Color Variables - Disabled State
+  // ----------------------------------------
+  --#{$input-prefix}bg-disabled: var(--#{$neutral-prefix}2);
+  --#{$input-prefix}color-disabled: var(--#{$neutral-prefix}5);
+  --#{$input-prefix}border-color-disabled: var(--#{$neutral-prefix}3);
+
+  // ----------------------------------------
+  // Color Variables - Readonly State
+  // ----------------------------------------
+  --#{$input-prefix}bg-readonly: var(--#{$neutral-prefix}1);
+  --#{$input-prefix}color-readonly: var(--#{$neutral-prefix}8);
+  --#{$input-prefix}border-color-readonly: var(--#{$neutral-prefix}3);
+
+  // ----------------------------------------
+  // Border Variables
+  // ----------------------------------------
+  --#{$input-prefix}border-width: 1px;
+  --#{$input-prefix}border-radius: 0.25rem;
+
+  // ----------------------------------------
+  // Transition
+  // ----------------------------------------
+  --#{$input-prefix}transition:
+    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  // ----------------------------------------
+  // Validation Variables (for future use)
+  // ----------------------------------------
+  // Valid state
+  --#{$input-prefix}border-color-valid: var(
+    --semantic-success-default,
+    #22c55e
+  );
+  --#{$input-prefix}focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
+
+  // Invalid state
+  --#{$input-prefix}border-color-invalid: var(
+    --semantic-danger-default,
+    #ef4444
+  );
+  --#{$input-prefix}focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
 }
 
 // ============================================
@@ -101,105 +107,107 @@
 .input,
 input.input,
 textarea.input {
-    // Reset
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    // Display
-    display: block;
-    width: 100%;
-    
-    // Size
-    height: var(--#{$input-prefix}height);
-    padding: var(--#{$input-prefix}padding-y) var(--#{$input-prefix}padding-x);
-    font-size: var(--#{$input-prefix}font-size);
-    line-height: var(--#{$input-prefix}line-height);
-    
-    // Colors
-    background-color: var(--#{$input-prefix}bg);
-    color: var(--#{$input-prefix}color);
-    
-    // Border
-    border: var(--#{$input-prefix}border-width) solid var(--#{$input-prefix}border-color);
-    border-radius: var(--#{$input-prefix}border-radius);
-    
-    // Transition
-    transition: var(--#{$input-prefix}transition);
-    
-    // Font
-    font-family: inherit;
-    
-    // ----------------------------------------
-    // Placeholder
-    // ----------------------------------------
-    &::placeholder {
-        color: var(--#{$input-prefix}placeholder-color);
-        opacity: 1; // Firefox fix
-    }
-    
-    // ----------------------------------------
-    // Hover State
-    // ----------------------------------------
-    &:hover:not(:disabled):not(:read-only):not(:focus) {
-        background-color: var(--#{$input-prefix}bg-hover);
-        border-color: var(--#{$input-prefix}border-color-hover);
-    }
-    
-    // ----------------------------------------
-    // Focus State
-    // ----------------------------------------
-    &:focus {
-        outline: none;
-        background-color: var(--#{$input-prefix}bg-focus);
-        border-color: var(--#{$input-prefix}border-color-focus);
-        box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width) var(--#{$input-prefix}focus-ring-color);
-    }
-    
-    // ----------------------------------------
-    // Disabled State
-    // ----------------------------------------
-    &:disabled {
-        background-color: var(--#{$input-prefix}bg-disabled);
-        color: var(--#{$input-prefix}color-disabled);
-        border-color: var(--#{$input-prefix}border-color-disabled);
-        cursor: not-allowed;
-        opacity: 1; // Override browser default
-    }
-    
-    // ----------------------------------------
-    // Readonly State
-    // ----------------------------------------
-    &:read-only:not(:disabled) {
-        background-color: var(--#{$input-prefix}bg-readonly);
-        color: var(--#{$input-prefix}color-readonly);
-        border-color: var(--#{$input-prefix}border-color-readonly);
-        cursor: default;
-    }
+  // Reset
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // Display
+  display: block;
+  width: 100%;
+
+  // Size
+  height: var(--#{$input-prefix}height);
+  padding: var(--#{$input-prefix}padding-y) var(--#{$input-prefix}padding-x);
+  font-size: var(--#{$input-prefix}font-size);
+  line-height: var(--#{$input-prefix}line-height);
+
+  // Colors
+  background-color: var(--#{$input-prefix}bg);
+  color: var(--#{$input-prefix}color);
+
+  // Border
+  border: var(--#{$input-prefix}border-width) solid
+    var(--#{$input-prefix}border-color);
+  border-radius: var(--#{$input-prefix}border-radius);
+
+  // Transition
+  transition: var(--#{$input-prefix}transition);
+
+  // Font
+  font-family: inherit;
+
+  // ----------------------------------------
+  // Placeholder
+  // ----------------------------------------
+  &::placeholder {
+    color: var(--#{$input-prefix}placeholder-color);
+    opacity: 1; // Firefox fix
+  }
+
+  // ----------------------------------------
+  // Hover State
+  // ----------------------------------------
+  &:hover:not(:disabled):not(:read-only):not(:focus) {
+    background-color: var(--#{$input-prefix}bg-hover);
+    border-color: var(--#{$input-prefix}border-color-hover);
+  }
+
+  // ----------------------------------------
+  // Focus State
+  // ----------------------------------------
+  &:focus {
+    outline: none;
+    background-color: var(--#{$input-prefix}bg-focus);
+    border-color: var(--#{$input-prefix}border-color-focus);
+    box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width)
+      var(--#{$input-prefix}focus-ring-color);
+  }
+
+  // ----------------------------------------
+  // Disabled State
+  // ----------------------------------------
+  &:disabled {
+    background-color: var(--#{$input-prefix}bg-disabled);
+    color: var(--#{$input-prefix}color-disabled);
+    border-color: var(--#{$input-prefix}border-color-disabled);
+    cursor: not-allowed;
+    opacity: 1; // Override browser default
+  }
+
+  // ----------------------------------------
+  // Readonly State
+  // ----------------------------------------
+  &:read-only:not(:disabled) {
+    background-color: var(--#{$input-prefix}bg-readonly);
+    color: var(--#{$input-prefix}color-readonly);
+    border-color: var(--#{$input-prefix}border-color-readonly);
+    cursor: default;
+  }
 }
 
 // ============================================
 // Textarea Specific
 // ============================================
 textarea.input {
-    height: auto;
-    min-height: calc(var(--#{$input-prefix}height) * 2);
-    resize: vertical;
+  height: auto;
+  min-height: calc(var(--#{$input-prefix}height) * 2);
+  resize: vertical;
 }
 
 // Textarea with no resize
 textarea.input-no-resize {
-    resize: none;
+  resize: none;
 }
 
 // Textarea with horizontal resize
 textarea.input-resize-horizontal {
-    resize: horizontal;
+  resize: horizontal;
 }
 
 // Textarea with both resize
 textarea.input-resize-both {
-    resize: both;
+  resize: both;
 }
 
 // ============================================
@@ -227,12 +235,12 @@ textarea.input-resize-both {
 // ============================================
 // Usage: <input type="text" class="input primary">
 .input {
-    @each $name, $values in $semantic-colors {
-        &.#{$semantic-prefix}#{$name} {
-            --#{$input-prefix}border-color-focus: var(--#{$palette-default});
-            --#{$input-prefix}focus-ring-color: var(--#{$palette-lighter});
-        }
+  @each $name, $values in $semantic-colors {
+    &.#{$semantic-prefix}#{$name} {
+      --#{$input-prefix}border-color-focus: var(--#{$palette-default});
+      --#{$input-prefix}focus-ring-color: var(--#{$palette-lighter});
     }
+  }
 }
 
 // ============================================
@@ -245,51 +253,54 @@ textarea.input-resize-both {
 // </div>
 
 .input-group {
-    display: flex;
-    align-items: stretch;
-    width: 100%;
-    
-    // Reset border-radius for grouped elements
-    > .input {
-        flex: 1 1 auto;
-        width: 1%; // Fix for flex items in some browsers
-        min-width: 0;
-        
-        &:not(:first-child) {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-        
-        &:not(:last-child) {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+
+  // Reset border-radius for grouped elements
+  > .input {
+    flex: 1 1 auto;
+    width: 1%; // Fix for flex items in some browsers
+    min-width: 0;
+
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
 }
 
 // ============================================
 // Input Addon
 // ============================================
 .input-addon {
-    display: flex;
-    align-items: center;
-    padding: var(--#{$input-prefix}padding-y) var(--#{$input-prefix}padding-x);
-    font-size: var(--#{$input-prefix}font-size);
-    line-height: var(--#{$input-prefix}line-height);
-    color: var(--#{$input-prefix}color);
-    background-color: var(--#{$neutral-prefix}2);
-    border: var(--#{$input-prefix}border-width) solid var(--#{$input-prefix}border-color);
-    white-space: nowrap;
-    
-    &:first-child {
-        border-right: 0;
-        border-radius: var(--#{$input-prefix}border-radius) 0 0 var(--#{$input-prefix}border-radius);
-    }
-    
-    &:last-child {
-        border-left: 0;
-        border-radius: 0 var(--#{$input-prefix}border-radius) var(--#{$input-prefix}border-radius) 0;
-    }
+  display: flex;
+  align-items: center;
+  padding: var(--#{$input-prefix}padding-y) var(--#{$input-prefix}padding-x);
+  font-size: var(--#{$input-prefix}font-size);
+  line-height: var(--#{$input-prefix}line-height);
+  color: var(--#{$input-prefix}color);
+  background-color: var(--#{$neutral-prefix}2);
+  border: var(--#{$input-prefix}border-width) solid
+    var(--#{$input-prefix}border-color);
+  white-space: nowrap;
+
+  &:first-child {
+    border-right: 0;
+    border-radius: var(--#{$input-prefix}border-radius) 0 0
+      var(--#{$input-prefix}border-radius);
+  }
+
+  &:last-child {
+    border-left: 0;
+    border-radius: 0 var(--#{$input-prefix}border-radius)
+      var(--#{$input-prefix}border-radius) 0;
+  }
 }
 
 // ============================================
@@ -307,75 +318,75 @@ textarea.input-resize-both {
 // </div>
 
 .input-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  > .input {
     width: 100%;
-    
-    > .input {
-        width: 100%;
-    }
-    
-    // Has left icon
-    &:has(.input-icon-left) > .input {
-        padding-left: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
-    }
-    
-    // Has right icon
-    &:has(.input-icon-right) > .input {
-        padding-right: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
-    }
+  }
+
+  // Has left icon
+  &:has(.input-icon-left) > .input {
+    padding-left: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
+  }
+
+  // Has right icon
+  &:has(.input-icon-right) > .input {
+    padding-right: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
+  }
 }
 
 .input-icon-left,
 .input-icon-right {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
-    color: var(--#{$input-prefix}placeholder-color);
-    pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: calc(var(--#{$input-prefix}padding-x) * 2 + 1em);
+  color: var(--#{$input-prefix}placeholder-color);
+  pointer-events: none;
 }
 
 .input-icon-left {
-    left: 0;
+  left: 0;
 }
 
 .input-icon-right {
-    right: 0;
+  right: 0;
 }
 
 // Clickable icon (e.g., clear button, password toggle)
 .input-icon-clickable {
-    pointer-events: auto;
-    cursor: pointer;
-    
-    &:hover {
-        color: var(--#{$input-prefix}color);
-    }
+  pointer-events: auto;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--#{$input-prefix}color);
+  }
 }
 
 // ============================================
 // Form Label
 // ============================================
 .form-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: var(--#{$input-prefix}font-size);
-    font-weight: 500;
-    color: var(--#{$input-prefix}color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: var(--#{$input-prefix}font-size);
+  font-weight: 500;
+  color: var(--#{$input-prefix}color);
 }
 
 // ============================================
 // Form Text (helper text)
 // ============================================
 .form-text {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: 0.875em;
-    color: var(--#{$input-prefix}placeholder-color);
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: var(--#{$input-prefix}placeholder-color);
 }
 
 // ============================================
@@ -389,26 +400,26 @@ textarea.input-resize-both {
 // </div>
 
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 // ============================================
 // Inline Form
 // ============================================
 .form-inline {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-    
-    > .input {
-        width: auto;
-        flex: 1 1 auto;
-    }
-    
-    > .form-label {
-        margin-bottom: 0;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+
+  > .input {
+    width: auto;
+    flex: 1 1 auto;
+  }
+
+  > .form-label {
+    margin-bottom: 0;
+  }
 }
 
 // ============================================
@@ -420,36 +431,38 @@ textarea.input-resize-both {
 // Valid state
 .input-valid,
 .input.is-valid {
+  border-color: var(--#{$input-prefix}border-color-valid);
+
+  &:focus {
     border-color: var(--#{$input-prefix}border-color-valid);
-    
-    &:focus {
-        border-color: var(--#{$input-prefix}border-color-valid);
-        box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width) var(--#{$input-prefix}focus-ring-color-valid);
-    }
+    box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width)
+      var(--#{$input-prefix}focus-ring-color-valid);
+  }
 }
 
 // Invalid state
 .input-invalid,
 .input.is-invalid {
+  border-color: var(--#{$input-prefix}border-color-invalid);
+
+  &:focus {
     border-color: var(--#{$input-prefix}border-color-invalid);
-    
-    &:focus {
-        border-color: var(--#{$input-prefix}border-color-invalid);
-        box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width) var(--#{$input-prefix}focus-ring-color-invalid);
-    }
+    box-shadow: 0 0 0 var(--#{$input-prefix}focus-ring-width)
+      var(--#{$input-prefix}focus-ring-color-invalid);
+  }
 }
 
 // Feedback text for validation
 .form-feedback {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: 0.875em;
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
 }
 
 .form-feedback-valid {
-    color: var(--#{$input-prefix}border-color-valid);
+  color: var(--#{$input-prefix}border-color-valid);
 }
 
 .form-feedback-invalid {
-    color: var(--#{$input-prefix}border-color-invalid);
+  color: var(--#{$input-prefix}border-color-invalid);
 }

@@ -12,149 +12,150 @@
 // CSS Variables (for theme customization)
 // ============================================
 :root {
-    // Default icon size
-    --#{$icon-prefix}size: 1.5rem;
-    
-    // Size variants
-    --#{$icon-prefix}size-xs: 0.75rem;
-    --#{$icon-prefix}size-sm: 1rem;
-    --#{$icon-prefix}size-md: 1.5rem;
-    --#{$icon-prefix}size-lg: 2rem;
-    --#{$icon-prefix}size-xl: 2.5rem;
-    --#{$icon-prefix}size-2xl: 3rem;
-    
-    // Gap between icon and text (used in buttons, etc.)
-    --#{$icon-prefix}gap: 0.5rem;
+  // Default icon size
+  --#{$icon-prefix}size: 1.5rem;
+
+  // Size variants
+  --#{$icon-prefix}size-xs: 0.75rem;
+  --#{$icon-prefix}size-sm: 1rem;
+  --#{$icon-prefix}size-md: 1.5rem;
+  --#{$icon-prefix}size-lg: 2rem;
+  --#{$icon-prefix}size-xl: 2.5rem;
+  --#{$icon-prefix}size-2xl: 3rem;
+
+  // Gap between icon and text (used in buttons, etc.)
+  --#{$icon-prefix}gap: 0.5rem;
 }
 
 // ============================================
 // Base Icon Class
 // ============================================
 .icon {
-    // Display properties
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    
-    // Size
-    width: var(--#{$icon-prefix}size);
-    height: var(--#{$icon-prefix}size);
-    font-size: var(--#{$icon-prefix}size);
-    line-height: 1;
-    
-    // Inherit color from parent
-    color: inherit;
-    
-    // Prevent shrinking in flex containers
-    flex-shrink: 0;
-    
-    // Text properties (for icon fonts)
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    
-    // For SVG icons
-    > svg {
-        width: 100%;
-        height: 100%;
-        fill: currentColor;
-    }
-    
-    // For img icons
-    > img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+  // Display properties
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  // Size
+  width: var(--#{$icon-prefix}size);
+  height: var(--#{$icon-prefix}size);
+  font-size: var(--#{$icon-prefix}size);
+  line-height: 1;
+
+  // Inherit color from parent
+  color: inherit;
+
+  // Prevent shrinking in flex containers
+  flex-shrink: 0;
+
+  // Text properties (for icon fonts)
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+
+  // For SVG icons
+  > svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+
+  // For img icons
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 // ============================================
 // Size Variants
 // ============================================
 .icon-xs {
-    --#{$icon-prefix}size: var(--#{$icon-prefix}size-xs);
+  --#{$icon-prefix}size: var(--#{$icon-prefix}size-xs);
 }
 
 .icon-sm {
-    --#{$icon-prefix}size: var(--#{$icon-prefix}size-sm);
+  --#{$icon-prefix}size: var(--#{$icon-prefix}size-sm);
 }
 
 .icon-md {
-    --#{$icon-prefix}size: var(--#{$icon-prefix}size-md);
+  --#{$icon-prefix}size: var(--#{$icon-prefix}size-md);
 }
 
 .icon-lg {
-    --#{$icon-prefix}size: var(--#{$icon-prefix}size-lg);
+  --#{$icon-prefix}size: var(--#{$icon-prefix}size-lg);
 }
 
 .icon-xl {
-    --#{$icon-prefix}size: var(--#{$icon-prefix}size-xl);
+  --#{$icon-prefix}size: var(--#{$icon-prefix}size-xl);
 }
 
 .icon-2xl {
-    --#{$icon-prefix}size: var(--#{$icon-prefix}size-2xl);
+  --#{$icon-prefix}size: var(--#{$icon-prefix}size-2xl);
 }
 
 // ============================================
 // Icon Spin Animation
 // ============================================
 @keyframes icon-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .icon-spin {
-    animation: icon-spin 1s linear infinite;
+  animation: icon-spin 1s linear infinite;
 }
 
 // ============================================
 // Icon Pulse Animation
 // ============================================
 @keyframes icon-pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .icon-pulse {
-    animation: icon-pulse 1.5s ease-in-out infinite;
+  animation: icon-pulse 1.5s ease-in-out infinite;
 }
 
 // ============================================
 // Icon Rotation Utilities
 // ============================================
 .icon-rotate-90 {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .icon-rotate-180 {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .icon-rotate-270 {
-    transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 // ============================================
 // Icon Flip Utilities
 // ============================================
 .icon-flip-horizontal {
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .icon-flip-vertical {
-    transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 // ============================================
@@ -162,9 +163,9 @@
 // ============================================
 // Use inside flex containers for proper icon-text alignment
 .icon-text {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--#{$icon-prefix}gap);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--#{$icon-prefix}gap);
 }
 
 // ============================================
@@ -173,25 +174,25 @@
 // Usage: <span class="icon primary">★</span>
 // Colors are inherited from semantic color palette
 .icon {
-    @each $name, $values in $semantic-colors {
-        &.#{$semantic-prefix}#{$name} {
-            color: var(--#{$palette-default});
-            
-            // Semantic level variants
-            &.lighter {
-                color: var(--#{$palette-lighter});
-            }
-            &.light {
-                color: var(--#{$palette-light});
-            }
-            &.dark {
-                color: var(--#{$palette-dark});
-            }
-            &.darker {
-                color: var(--#{$palette-darker});
-            }
-        }
+  @each $name, $values in $semantic-colors {
+    &.#{$semantic-prefix}#{$name} {
+      color: var(--#{$palette-default});
+
+      // Semantic level variants
+      &.lighter {
+        color: var(--#{$palette-lighter});
+      }
+      &.light {
+        color: var(--#{$palette-light});
+      }
+      &.dark {
+        color: var(--#{$palette-dark});
+      }
+      &.darker {
+        color: var(--#{$palette-darker});
+      }
     }
+  }
 }
 
 // ============================================
@@ -199,18 +200,18 @@
 // ============================================
 // Usage: <span class="icon neutral">★</span>
 .icon.neutral {
-    color: var(--#{$neutral-prefix}5);
-    
-    &.lighter {
-        color: var(--#{$neutral-prefix}2);
-    }
-    &.light {
-        color: var(--#{$neutral-prefix}3);
-    }
-    &.dark {
-        color: var(--#{$neutral-prefix}7);
-    }
-    &.darker {
-        color: var(--#{$neutral-prefix}9);
-    }
+  color: var(--#{$neutral-prefix}5);
+
+  &.lighter {
+    color: var(--#{$neutral-prefix}2);
+  }
+  &.light {
+    color: var(--#{$neutral-prefix}3);
+  }
+  &.dark {
+    color: var(--#{$neutral-prefix}7);
+  }
+  &.darker {
+    color: var(--#{$neutral-prefix}9);
+  }
 }

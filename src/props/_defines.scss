@@ -4,13 +4,11 @@
 @use "prefixes" as *;
 
 // Hue Definitions
-$hues: (
-    // "hues name": (h: hue value, threshold: accent threshold)
-) !default;
+$hues: (// "hues name": (h: hue value, threshold: accent threshold)) !default;
 
 // Semantic Color Definitions
 $semantic-colors: (
-    /* "semantic name": (
+  /* "semantic name": (
     h: hue variable, 
     s: saturation, 
     threshold: accent threshold, 
@@ -34,5 +32,5 @@ $semantic-levels: (
   "light": 3,
   "default": 5,
   "dark": 7,
-  "darker": 9
+  "darker": 9,
 );

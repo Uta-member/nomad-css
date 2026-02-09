@@ -17,7 +17,7 @@ $palette-lightness-list: (
   7: 34%,
   8: 26%,
   9: 18%,
-  10: 10%
+  10: 10%,
 ) !default;
 
 // ============================================
@@ -30,18 +30,34 @@ $palette-lightness-list: (
   }
 
   @each $index, $lightness in $palette-lightness-list {
-    --#{$palette-color-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-saturation-prefix}), var(--#{$palette-lightness-prefix}#{$index}));
+    --#{$palette-color-prefix}#{$index}: hsl(
+      var(--#{$palette-hue-prefix}),
+      var(--#{$palette-saturation-prefix}),
+      var(--#{$palette-lightness-prefix}#{$index})
+    );
   }
 
   @each $index, $lightness in $palette-lightness-list {
-    --#{$palette-gray-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-lightness-prefix}#{$index}));
+    --#{$palette-gray-prefix}#{$index}: hsl(
+      var(--#{$palette-hue-prefix}),
+      var(--#{$palette-gray-saturation-prefix}),
+      var(--#{$palette-lightness-prefix}#{$index})
+    );
   }
 
   @each $index, $lightness in $palette-lightness-list {
     @if $lightness > $threshold {
-      --#{$palette-accent-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-accent-dark-var}));
+      --#{$palette-accent-prefix}#{$index}: hsl(
+        var(--#{$palette-hue-prefix}),
+        var(--#{$palette-gray-saturation-prefix}),
+        var(--#{$palette-accent-dark-var})
+      );
     } @else {
-      --#{$palette-accent-prefix}#{$index}: hsl(var(--#{$palette-hue-prefix}), var(--#{$palette-gray-saturation-prefix}), var(--#{$palette-accent-light-var}));
+      --#{$palette-accent-prefix}#{$index}: hsl(
+        var(--#{$palette-hue-prefix}),
+        var(--#{$palette-gray-saturation-prefix}),
+        var(--#{$palette-accent-light-var})
+      );
     }
   }
 }
@@ -53,7 +69,12 @@ $palette-lightness-list: (
 // $accent-dark: Accent Darkness
 // $default-threshold: Default Accent Threshold
 // ============================================
-@mixin generate-hues($hues, $accent-light: $palette-accent-light, $accent-dark: $palette-accent-dark, $default-threshold: $palette-accent-threshold) {
+@mixin generate-hues(
+  $hues,
+  $accent-light: $palette-accent-light,
+  $accent-dark: $palette-accent-dark,
+  $default-threshold: $palette-accent-threshold
+) {
   :root {
     @each $name, $value in $hues {
       @if type-of($value) == "map" {
@@ -76,7 +97,12 @@ $palette-lightness-list: (
 // $gray-saturation: Gray Saturation for HUE Classes
 // $default-threshold: Default Accent Threshold
 // ============================================
-@mixin generate-hue-classes($hues, $saturation: 100%, $gray-saturation: 5%, $default-threshold: $palette-accent-threshold) {
+@mixin generate-hue-classes(
+  $hues,
+  $saturation: 100%,
+  $gray-saturation: 5%,
+  $default-threshold: $palette-accent-threshold
+) {
   @each $name, $value in $hues {
     $threshold: $default-threshold;
     @if type-of($value) == "map" and map-has-key($value, threshold) {
@@ -100,7 +126,12 @@ $palette-lightness-list: (
 // $default-threshold: Default Accent Threshold
 // $default-levels: Default Levels Mapping
 // ============================================
-@mixin generate-semantic-colors($colors, $gray-saturation: 5%, $default-threshold: $palette-accent-threshold, $default-levels: $semantic-levels) {
+@mixin generate-semantic-colors(
+  $colors,
+  $gray-saturation: 5%,
+  $default-threshold: $palette-accent-threshold,
+  $default-levels: $semantic-levels
+) {
   :root {
     @each $level-name, $palette-index in $default-levels {
       --#{$semantic-level-prefix}#{$level-name}: #{$palette-index};
@@ -122,7 +153,12 @@ $palette-lightness-list: (
     @if map-has-key($values, levels) {
       $custom-levels: map-get($values, levels);
       @each $level-name, $palette-index in $custom-levels {
-        $levels: map-merge($levels, ($level-name: $palette-index));
+        $levels: map-merge(
+          $levels,
+          (
+            $level-name: $palette-index,
+          )
+        );
       }
     }
 
@@ -133,21 +169,40 @@ $palette-lightness-list: (
       --#{$palette-accent-threshold-var}: #{$threshold};
       @include _generate-palette-colors($threshold);
 
-      --#{$palette-lighter}: var(--#{$palette-color-prefix}#{map-get($levels, "lighter")});
-      --#{$palette-light}: var(--#{$palette-color-prefix}#{map-get($levels, "light")});
-      --#{$palette-default}: var(--#{$palette-color-prefix}#{map-get($levels, "default")});
-      --#{$palette-dark}: var(--#{$palette-color-prefix}#{map-get($levels, "dark")});
-      --#{$palette-darker}: var(--#{$palette-color-prefix}#{map-get($levels, "darker")});
+      --#{$palette-lighter}: var(
+        --#{$palette-color-prefix}#{map-get($levels, "lighter")}
+      );
+      --#{$palette-light}: var(
+        --#{$palette-color-prefix}#{map-get($levels, "light")}
+      );
+      --#{$palette-default}: var(
+        --#{$palette-color-prefix}#{map-get($levels, "default")}
+      );
+      --#{$palette-dark}: var(
+        --#{$palette-color-prefix}#{map-get($levels, "dark")}
+      );
+      --#{$palette-darker}: var(
+        --#{$palette-color-prefix}#{map-get($levels, "darker")}
+      );
 
-      --#{$palette-lighter-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "lighter")});
-      --#{$palette-light-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "light")});
-      --#{$palette-default-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "default")});
-      --#{$palette-dark-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "dark")});
-      --#{$palette-darker-accent}: var(--#{$palette-accent-prefix}#{map-get($levels, "darker")});
+      --#{$palette-lighter-accent}: var(
+        --#{$palette-accent-prefix}#{map-get($levels, "lighter")}
+      );
+      --#{$palette-light-accent}: var(
+        --#{$palette-accent-prefix}#{map-get($levels, "light")}
+      );
+      --#{$palette-default-accent}: var(
+        --#{$palette-accent-prefix}#{map-get($levels, "default")}
+      );
+      --#{$palette-dark-accent}: var(
+        --#{$palette-accent-prefix}#{map-get($levels, "dark")}
+      );
+      --#{$palette-darker-accent}: var(
+        --#{$palette-accent-prefix}#{map-get($levels, "darker")}
+      );
     }
   }
 }
-
 
 // ============================================
 // Neutral Palette Definitions
@@ -164,26 +219,40 @@ $neutral-levels: $semantic-levels !default;
   --#{$neutral-accent-threshold-var}: #{$neutral-threshold};
 
   @each $index, $lightness in $palette-lightness-list {
-    --#{$neutral-prefix}#{$index}: hsl(var(--#{$neutral-hue-var}), var(--#{$neutral-saturation-var}), #{$lightness});
+    --#{$neutral-prefix}#{$index}: hsl(
+      var(--#{$neutral-hue-var}),
+      var(--#{$neutral-saturation-var}),
+      #{$lightness}
+    );
   }
 
   @each $index, $lightness in $palette-lightness-list {
     @if $lightness > $neutral-threshold {
-      --#{$neutral-prefix}accent-#{$index}: hsl(var(--#{$neutral-hue-var}), var(--#{$neutral-saturation-var}), var(--#{$palette-accent-dark-var}));
+      --#{$neutral-prefix}accent-#{$index}: hsl(
+        var(--#{$neutral-hue-var}),
+        var(--#{$neutral-saturation-var}),
+        var(--#{$palette-accent-dark-var})
+      );
     } @else {
-      --#{$neutral-prefix}accent-#{$index}: hsl(var(--#{$neutral-hue-var}), var(--#{$neutral-saturation-var}), var(--#{$palette-accent-light-var}));
+      --#{$neutral-prefix}accent-#{$index}: hsl(
+        var(--#{$neutral-hue-var}),
+        var(--#{$neutral-saturation-var}),
+        var(--#{$palette-accent-light-var})
+      );
     }
   }
 }
 
-@include generate-semantic-colors((
-  "neutral": (
-    h: $neutral-hue,
-    s: $neutral-saturation,
-    threshold: $neutral-threshold,
-    levels: $neutral-levels
+@include generate-semantic-colors(
+  (
+    "neutral": (
+      h: $neutral-hue,
+      s: $neutral-saturation,
+      threshold: $neutral-threshold,
+      levels: $neutral-levels,
+    ),
   )
-));
+);
 
 @include generate-hues($hues);
 @include generate-hue-classes($hues);

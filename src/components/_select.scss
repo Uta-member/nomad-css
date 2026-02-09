@@ -30,79 +30,85 @@
 // CSS Variables (defaults in :root)
 // ============================================
 :root {
-    // ----------------------------------------
-    // Size Variables
-    // ----------------------------------------
-    --#{$select-prefix}height: 2.5rem;
-    --#{$select-prefix}padding-x: 0.75rem;
-    --#{$select-prefix}padding-y: 0.5rem;
-    --#{$select-prefix}font-size: 1rem;
-    --#{$select-prefix}line-height: 1.5;
-    
-    // ----------------------------------------
-    // Color Variables - Normal State
-    // ----------------------------------------
-    --#{$select-prefix}bg: var(--#{$neutral-prefix}0);
-    --#{$select-prefix}color: var(--#{$neutral-prefix}10);
-    --#{$select-prefix}border-color: var(--#{$neutral-prefix}4);
-    
-    // ----------------------------------------
-    // Color Variables - Hover State
-    // ----------------------------------------
-    --#{$select-prefix}bg-hover: var(--#{$neutral-prefix}0);
-    --#{$select-prefix}border-color-hover: var(--#{$neutral-prefix}5);
-    
-    // ----------------------------------------
-    // Color Variables - Focus State
-    // ----------------------------------------
-    --#{$select-prefix}bg-focus: var(--#{$neutral-prefix}0);
-    --#{$select-prefix}border-color-focus: var(--#{$neutral-prefix}6);
-    --#{$select-prefix}focus-ring-width: 2px;
-    --#{$select-prefix}focus-ring-color: var(--#{$neutral-prefix}3);
-    
-    // ----------------------------------------
-    // Color Variables - Disabled State
-    // ----------------------------------------
-    --#{$select-prefix}bg-disabled: var(--#{$neutral-prefix}2);
-    --#{$select-prefix}color-disabled: var(--#{$neutral-prefix}5);
-    --#{$select-prefix}border-color-disabled: var(--#{$neutral-prefix}3);
-    
-    // ----------------------------------------
-    // Border Variables
-    // ----------------------------------------
-    --#{$select-prefix}border-width: 1px;
-    --#{$select-prefix}border-radius: 0.25rem;
-    
-    // ----------------------------------------
-    // Arrow/Indicator Variables
-    // ----------------------------------------
-    --#{$select-prefix}arrow-size: 1em;
-    --#{$select-prefix}arrow-color: var(--#{$neutral-prefix}6);
-    --#{$select-prefix}arrow-color-hover: var(--#{$neutral-prefix}7);
-    --#{$select-prefix}arrow-color-disabled: var(--#{$neutral-prefix}4);
-    // Padding for arrow area
-    --#{$select-prefix}arrow-padding: 2.5rem;
-    
-    // ----------------------------------------
-    // Transition
-    // ----------------------------------------
-    --#{$select-prefix}transition: border-color 0.15s ease-in-out,
-                                   background-color 0.15s ease-in-out,
-                                   box-shadow 0.15s ease-in-out;
-    
-    // ----------------------------------------
-    // Validation Variables (for future use)
-    // ----------------------------------------
-    --#{$select-prefix}border-color-valid: var(--semantic-success-default, #22c55e);
-    --#{$select-prefix}focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
-    --#{$select-prefix}border-color-invalid: var(--semantic-danger-default, #ef4444);
-    --#{$select-prefix}focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
-    
-    // ----------------------------------------
-    // Multiple Select Variables
-    // ----------------------------------------
-    --#{$select-prefix}multiple-min-height: 6rem;
-    --#{$select-prefix}option-padding: 0.5rem 0.75rem;
+  // ----------------------------------------
+  // Size Variables
+  // ----------------------------------------
+  --#{$select-prefix}height: 2.5rem;
+  --#{$select-prefix}padding-x: 0.75rem;
+  --#{$select-prefix}padding-y: 0.5rem;
+  --#{$select-prefix}font-size: 1rem;
+  --#{$select-prefix}line-height: 1.5;
+
+  // ----------------------------------------
+  // Color Variables - Normal State
+  // ----------------------------------------
+  --#{$select-prefix}bg: var(--#{$neutral-prefix}0);
+  --#{$select-prefix}color: var(--#{$neutral-prefix}10);
+  --#{$select-prefix}border-color: var(--#{$neutral-prefix}4);
+
+  // ----------------------------------------
+  // Color Variables - Hover State
+  // ----------------------------------------
+  --#{$select-prefix}bg-hover: var(--#{$neutral-prefix}0);
+  --#{$select-prefix}border-color-hover: var(--#{$neutral-prefix}5);
+
+  // ----------------------------------------
+  // Color Variables - Focus State
+  // ----------------------------------------
+  --#{$select-prefix}bg-focus: var(--#{$neutral-prefix}0);
+  --#{$select-prefix}border-color-focus: var(--#{$neutral-prefix}6);
+  --#{$select-prefix}focus-ring-width: 2px;
+  --#{$select-prefix}focus-ring-color: var(--#{$neutral-prefix}3);
+
+  // ----------------------------------------
+  // Color Variables - Disabled State
+  // ----------------------------------------
+  --#{$select-prefix}bg-disabled: var(--#{$neutral-prefix}2);
+  --#{$select-prefix}color-disabled: var(--#{$neutral-prefix}5);
+  --#{$select-prefix}border-color-disabled: var(--#{$neutral-prefix}3);
+
+  // ----------------------------------------
+  // Border Variables
+  // ----------------------------------------
+  --#{$select-prefix}border-width: 1px;
+  --#{$select-prefix}border-radius: 0.25rem;
+
+  // ----------------------------------------
+  // Arrow/Indicator Variables
+  // ----------------------------------------
+  --#{$select-prefix}arrow-size: 1em;
+  --#{$select-prefix}arrow-color: var(--#{$neutral-prefix}6);
+  --#{$select-prefix}arrow-color-hover: var(--#{$neutral-prefix}7);
+  --#{$select-prefix}arrow-color-disabled: var(--#{$neutral-prefix}4);
+  // Padding for arrow area
+  --#{$select-prefix}arrow-padding: 2.5rem;
+
+  // ----------------------------------------
+  // Transition
+  // ----------------------------------------
+  --#{$select-prefix}transition:
+    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  // ----------------------------------------
+  // Validation Variables (for future use)
+  // ----------------------------------------
+  --#{$select-prefix}border-color-valid: var(
+    --semantic-success-default,
+    #22c55e
+  );
+  --#{$select-prefix}focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
+  --#{$select-prefix}border-color-invalid: var(
+    --semantic-danger-default,
+    #ef4444
+  );
+  --#{$select-prefix}focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
+
+  // ----------------------------------------
+  // Multiple Select Variables
+  // ----------------------------------------
+  --#{$select-prefix}multiple-min-height: 6rem;
+  --#{$select-prefix}option-padding: 0.5rem 0.75rem;
 }
 
 // ============================================
@@ -113,8 +119,8 @@
 
 // Function to generate arrow background
 @function select-arrow($color: "%236b7280") {
-    // URL-encoded SVG chevron
-    @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  // URL-encoded SVG chevron
+  @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 // ============================================
@@ -122,101 +128,105 @@
 // ============================================
 .select,
 select.select {
-    // Reset
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    // Display
-    display: block;
-    width: 100%;
-    
-    // Size
-    height: var(--#{$select-prefix}height);
-    padding: var(--#{$select-prefix}padding-y) var(--#{$select-prefix}arrow-padding) var(--#{$select-prefix}padding-y) var(--#{$select-prefix}padding-x);
-    font-size: var(--#{$select-prefix}font-size);
-    line-height: var(--#{$select-prefix}line-height);
-    
-    // Colors
-    background-color: var(--#{$select-prefix}bg);
-    color: var(--#{$select-prefix}color);
-    
-    // Border
-    border: var(--#{$select-prefix}border-width) solid var(--#{$select-prefix}border-color);
-    border-radius: var(--#{$select-prefix}border-radius);
-    
-    // Arrow icon
-    background-image: #{select-arrow()};
-    background-repeat: no-repeat;
-    background-position: right var(--#{$select-prefix}padding-x) center;
-    background-size: var(--#{$select-prefix}arrow-size);
-    
-    // Transition
-    transition: var(--#{$select-prefix}transition);
-    
-    // Font
-    font-family: inherit;
-    
-    // Cursor
-    cursor: pointer;
-    
-    // Text overflow
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    
-    // ----------------------------------------
-    // Hover State
-    // ----------------------------------------
-    &:hover:not(:disabled):not(:focus) {
-        background-color: var(--#{$select-prefix}bg-hover);
-        border-color: var(--#{$select-prefix}border-color-hover);
-    }
-    
-    // ----------------------------------------
-    // Focus State
-    // ----------------------------------------
-    &:focus {
-        outline: none;
-        background-color: var(--#{$select-prefix}bg-focus);
-        border-color: var(--#{$select-prefix}border-color-focus);
-        box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width) var(--#{$select-prefix}focus-ring-color);
-    }
-    
-    // ----------------------------------------
-    // Disabled State
-    // ----------------------------------------
-    &:disabled {
-        background-color: var(--#{$select-prefix}bg-disabled);
-        color: var(--#{$select-prefix}color-disabled);
-        border-color: var(--#{$select-prefix}border-color-disabled);
-        background-image: #{select-arrow("%239ca3af")};
-        cursor: not-allowed;
-        opacity: 1;
-    }
-    
-    // ----------------------------------------
-    // Placeholder option (first empty option)
-    // ----------------------------------------
-    &:invalid,
-    &:required:invalid {
-        color: var(--#{$neutral-prefix}5);
-    }
-    
-    // ----------------------------------------
-    // Firefox specific: remove default arrow
-    // ----------------------------------------
-    &:-moz-focusring {
-        color: transparent;
-        text-shadow: 0 0 0 var(--#{$select-prefix}color);
-    }
-    
-    // ----------------------------------------
-    // IE specific: remove default arrow
-    // ----------------------------------------
-    &::-ms-expand {
-        display: none;
-    }
+  // Reset
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // Display
+  display: block;
+  width: 100%;
+
+  // Size
+  height: var(--#{$select-prefix}height);
+  padding: var(--#{$select-prefix}padding-y)
+    var(--#{$select-prefix}arrow-padding) var(--#{$select-prefix}padding-y)
+    var(--#{$select-prefix}padding-x);
+  font-size: var(--#{$select-prefix}font-size);
+  line-height: var(--#{$select-prefix}line-height);
+
+  // Colors
+  background-color: var(--#{$select-prefix}bg);
+  color: var(--#{$select-prefix}color);
+
+  // Border
+  border: var(--#{$select-prefix}border-width) solid
+    var(--#{$select-prefix}border-color);
+  border-radius: var(--#{$select-prefix}border-radius);
+
+  // Arrow icon
+  background-image: #{select-arrow()};
+  background-repeat: no-repeat;
+  background-position: right var(--#{$select-prefix}padding-x) center;
+  background-size: var(--#{$select-prefix}arrow-size);
+
+  // Transition
+  transition: var(--#{$select-prefix}transition);
+
+  // Font
+  font-family: inherit;
+
+  // Cursor
+  cursor: pointer;
+
+  // Text overflow
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  // ----------------------------------------
+  // Hover State
+  // ----------------------------------------
+  &:hover:not(:disabled):not(:focus) {
+    background-color: var(--#{$select-prefix}bg-hover);
+    border-color: var(--#{$select-prefix}border-color-hover);
+  }
+
+  // ----------------------------------------
+  // Focus State
+  // ----------------------------------------
+  &:focus {
+    outline: none;
+    background-color: var(--#{$select-prefix}bg-focus);
+    border-color: var(--#{$select-prefix}border-color-focus);
+    box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width)
+      var(--#{$select-prefix}focus-ring-color);
+  }
+
+  // ----------------------------------------
+  // Disabled State
+  // ----------------------------------------
+  &:disabled {
+    background-color: var(--#{$select-prefix}bg-disabled);
+    color: var(--#{$select-prefix}color-disabled);
+    border-color: var(--#{$select-prefix}border-color-disabled);
+    background-image: #{select-arrow("%239ca3af")};
+    cursor: not-allowed;
+    opacity: 1;
+  }
+
+  // ----------------------------------------
+  // Placeholder option (first empty option)
+  // ----------------------------------------
+  &:invalid,
+  &:required:invalid {
+    color: var(--#{$neutral-prefix}5);
+  }
+
+  // ----------------------------------------
+  // Firefox specific: remove default arrow
+  // ----------------------------------------
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--#{$select-prefix}color);
+  }
+
+  // ----------------------------------------
+  // IE specific: remove default arrow
+  // ----------------------------------------
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 // ============================================
@@ -227,26 +237,26 @@ select.select {
 
 .select option,
 select.select option {
-    padding: var(--#{$select-prefix}option-padding);
-    background-color: var(--#{$select-prefix}bg);
-    color: var(--#{$select-prefix}color);
-    
-    &:disabled {
-        color: var(--#{$select-prefix}color-disabled);
-    }
-    
-    &:checked {
-        background-color: var(--#{$neutral-prefix}2);
-    }
+  padding: var(--#{$select-prefix}option-padding);
+  background-color: var(--#{$select-prefix}bg);
+  color: var(--#{$select-prefix}color);
+
+  &:disabled {
+    color: var(--#{$select-prefix}color-disabled);
+  }
+
+  &:checked {
+    background-color: var(--#{$neutral-prefix}2);
+  }
 }
 
 // Optgroup styling
 .select optgroup,
 select.select optgroup {
-    font-weight: 600;
-    font-style: normal;
-    color: var(--#{$select-prefix}color);
-    background-color: var(--#{$neutral-prefix}1);
+  font-weight: 600;
+  font-style: normal;
+  color: var(--#{$select-prefix}color);
+  background-color: var(--#{$neutral-prefix}1);
 }
 
 // ============================================
@@ -254,25 +264,29 @@ select.select optgroup {
 // ============================================
 .select[multiple],
 select.select[multiple] {
-    height: auto;
-    min-height: var(--#{$select-prefix}multiple-min-height);
-    padding: var(--#{$select-prefix}padding-y) var(--#{$select-prefix}padding-x);
-    
-    // Remove arrow for multiple select
-    background-image: none;
-    
-    // Allow vertical scrolling
-    overflow-y: auto;
-    
-    option {
-        padding: var(--#{$select-prefix}option-padding);
-        border-radius: calc(var(--#{$select-prefix}border-radius) / 2);
-        margin-bottom: 2px;
-        
-        &:checked {
-            background: linear-gradient(0deg, var(--#{$neutral-prefix}3) 0%, var(--#{$neutral-prefix}3) 100%);
-        }
+  height: auto;
+  min-height: var(--#{$select-prefix}multiple-min-height);
+  padding: var(--#{$select-prefix}padding-y) var(--#{$select-prefix}padding-x);
+
+  // Remove arrow for multiple select
+  background-image: none;
+
+  // Allow vertical scrolling
+  overflow-y: auto;
+
+  option {
+    padding: var(--#{$select-prefix}option-padding);
+    border-radius: calc(var(--#{$select-prefix}border-radius) / 2);
+    margin-bottom: 2px;
+
+    &:checked {
+      background: linear-gradient(
+        0deg,
+        var(--#{$neutral-prefix}3) 0%,
+        var(--#{$neutral-prefix}3) 100%
+      );
     }
+  }
 }
 
 // ============================================
@@ -299,12 +313,12 @@ select.select[multiple] {
 // Semantic Color Support (Focus Ring Color)
 // ============================================
 .select {
-    @each $name, $values in $semantic-colors {
-        &.#{$semantic-prefix}#{$name} {
-            --#{$select-prefix}border-color-focus: var(--#{$palette-default});
-            --#{$select-prefix}focus-ring-color: var(--#{$palette-lighter});
-        }
+  @each $name, $values in $semantic-colors {
+    &.#{$semantic-prefix}#{$name} {
+      --#{$select-prefix}border-color-focus: var(--#{$palette-default});
+      --#{$select-prefix}focus-ring-color: var(--#{$palette-lighter});
     }
+  }
 }
 
 // ============================================
@@ -312,22 +326,24 @@ select.select[multiple] {
 // ============================================
 .select-valid,
 .select.is-valid {
+  border-color: var(--#{$select-prefix}border-color-valid);
+
+  &:focus {
     border-color: var(--#{$select-prefix}border-color-valid);
-    
-    &:focus {
-        border-color: var(--#{$select-prefix}border-color-valid);
-        box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width) var(--#{$select-prefix}focus-ring-color-valid);
-    }
+    box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width)
+      var(--#{$select-prefix}focus-ring-color-valid);
+  }
 }
 
 .select-invalid,
 .select.is-invalid {
+  border-color: var(--#{$select-prefix}border-color-invalid);
+
+  &:focus {
     border-color: var(--#{$select-prefix}border-color-invalid);
-    
-    &:focus {
-        border-color: var(--#{$select-prefix}border-color-invalid);
-        box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width) var(--#{$select-prefix}focus-ring-color-invalid);
-    }
+    box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width)
+      var(--#{$select-prefix}focus-ring-color-invalid);
+  }
 }
 
 // ============================================
@@ -342,40 +358,40 @@ select.select[multiple] {
 // custom arrow positioning or additional decorations
 
 .select-wrapper {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
+  width: 100%;
+
+  > .select {
     width: 100%;
-    
-    > .select {
-        width: 100%;
-    }
+  }
 }
 
 // Custom arrow using wrapper (alternative approach)
 .select-wrapper-custom-arrow {
-    > .select {
-        background-image: none;
-        padding-right: var(--#{$select-prefix}arrow-padding);
-    }
-    
-    &::after {
-        content: "";
-        position: absolute;
-        right: var(--#{$select-prefix}padding-x);
-        top: 50%;
-        transform: translateY(-50%);
-        width: var(--#{$select-prefix}arrow-size);
-        height: var(--#{$select-prefix}arrow-size);
-        background-image: #{select-arrow()};
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        pointer-events: none;
-    }
-    
-    &:has(.select:disabled)::after {
-        background-image: #{select-arrow("%239ca3af")};
-    }
+  > .select {
+    background-image: none;
+    padding-right: var(--#{$select-prefix}arrow-padding);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: var(--#{$select-prefix}padding-x);
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--#{$select-prefix}arrow-size);
+    height: var(--#{$select-prefix}arrow-size);
+    background-image: #{select-arrow()};
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  &:has(.select:disabled)::after {
+    background-image: #{select-arrow("%239ca3af")};
+  }
 }
 
 // ============================================
@@ -388,30 +404,30 @@ select.select[multiple] {
 // </div>
 
 .select-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  > .select {
     width: 100%;
-    
-    > .select {
-        width: 100%;
-    }
-    
-    &:has(.select-icon-left) > .select {
-        padding-left: calc(var(--#{$select-prefix}padding-x) * 2 + 1em);
-    }
+  }
+
+  &:has(.select-icon-left) > .select {
+    padding-left: calc(var(--#{$select-prefix}padding-x) * 2 + 1em);
+  }
 }
 
 .select-icon-left {
-    position: absolute;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: calc(var(--#{$select-prefix}padding-x) * 2 + 1em);
-    color: var(--#{$select-prefix}arrow-color);
-    pointer-events: none;
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: calc(var(--#{$select-prefix}padding-x) * 2 + 1em);
+  color: var(--#{$select-prefix}arrow-color);
+  pointer-events: none;
 }
 
 // ============================================
@@ -421,11 +437,11 @@ select.select[multiple] {
 // but with minor enhancements
 
 .select-native {
-    appearance: auto;
-    -webkit-appearance: auto;
-    -moz-appearance: auto;
-    background-image: none;
-    padding-right: var(--#{$select-prefix}padding-x);
+  appearance: auto;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  background-image: none;
+  padding-right: var(--#{$select-prefix}padding-x);
 }
 
 // ============================================
@@ -434,17 +450,17 @@ select.select[multiple] {
 // Select can be used within input-group
 
 .input-group > .select {
-    flex: 1 1 auto;
-    width: 1%;
-    min-width: 0;
-    
-    &:not(:first-child) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-    
-    &:not(:last-child) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+
+  &:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }

@@ -7,12 +7,17 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:fluent2": "sass src/themes/fluent2/fluent2.scss:dist/css/fluent2.css --style=expanded",
+    "build:material3": "sass src/themes/material3/material3.scss:dist/css/material3.css --style=expanded",
+    "build": "npm run build:fluent2 && npm run build:material3",
+    "watch": "sass --watch src:dist/css",
+    "format": "prettier --write \"**/*.{scss,html,js,json}\""
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^3.8.1",
     "sass": "^1.97.3"
   }
 }

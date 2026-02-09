@@ -6,47 +6,48 @@
 // =============================================================================
 
 .table {
-    --table-bg: var(--#{$table-prefix}bg);
-    --table-color: var(--#{$table-prefix}color);
-    --table-border-color: var(--#{$table-prefix}border-color);
-    --table-striped-bg: var(--#{$table-prefix}striped-bg);
-    --table-striped-color: var(--#{$table-prefix}striped-color);
-    --table-hover-bg: var(--#{$table-prefix}hover-bg);
-    --table-hover-color: var(--#{$table-prefix}hover-color);
-    --table-active-bg: var(--#{$table-prefix}active-bg);
-    --table-active-color: var(--#{$table-prefix}active-color);
+  --table-bg: var(--#{$table-prefix}bg);
+  --table-color: var(--#{$table-prefix}color);
+  --table-border-color: var(--#{$table-prefix}border-color);
+  --table-striped-bg: var(--#{$table-prefix}striped-bg);
+  --table-striped-color: var(--#{$table-prefix}striped-color);
+  --table-hover-bg: var(--#{$table-prefix}hover-bg);
+  --table-hover-color: var(--#{$table-prefix}hover-color);
+  --table-active-bg: var(--#{$table-prefix}active-bg);
+  --table-active-color: var(--#{$table-prefix}active-color);
 
-    width: 100%;
-    margin-bottom: 1rem;
-    vertical-align: top;
-    border-color: var(--table-border-color);
-    color: var(--table-color);
-    background-color: var(--table-bg);
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: var(--table-border-color);
+  color: var(--table-color);
+  background-color: var(--table-bg);
 
-    // Table cells
-    > :not(caption) > * > * {
-        padding: var(--#{$table-prefix}cell-padding-y) var(--#{$table-prefix}cell-padding-x);
-        border-bottom-width: var(--#{$table-prefix}border-width);
-        border-bottom-style: solid;
-        border-bottom-color: var(--table-border-color);
-    }
+  // Table cells
+  > :not(caption) > * > * {
+    padding: var(--#{$table-prefix}cell-padding-y)
+      var(--#{$table-prefix}cell-padding-x);
+    border-bottom-width: var(--#{$table-prefix}border-width);
+    border-bottom-style: solid;
+    border-bottom-color: var(--table-border-color);
+  }
 
-    // Header cells
-    > thead > tr > th {
-        font-weight: var(--#{$table-prefix}th-font-weight);
-        text-align: inherit;
-        vertical-align: bottom;
-    }
+  // Header cells
+  > thead > tr > th {
+    font-weight: var(--#{$table-prefix}th-font-weight);
+    text-align: inherit;
+    vertical-align: bottom;
+  }
 
-    // Body cells
-    > tbody {
-        vertical-align: inherit;
-    }
+  // Body cells
+  > tbody {
+    vertical-align: inherit;
+  }
 
-    // Ensure proper border handling for nested tables
-    > tbody > tr:last-child > * {
-        border-bottom-color: transparent;
-    }
+  // Ensure proper border handling for nested tables
+  > tbody > tr:last-child > * {
+    border-bottom-color: transparent;
+  }
 }
 
 // =============================================================================
@@ -54,7 +55,8 @@
 // =============================================================================
 
 .table-group-divider {
-    border-top: calc(var(--#{$table-prefix}border-width) * 2) solid var(--#{$table-prefix}group-separator-color);
+  border-top: calc(var(--#{$table-prefix}border-width) * 2) solid
+    var(--#{$table-prefix}group-separator-color);
 }
 
 // =============================================================================
@@ -62,15 +64,15 @@
 // =============================================================================
 
 .table > caption {
-    padding-top: var(--#{$table-prefix}cell-padding-y);
-    padding-bottom: var(--#{$table-prefix}cell-padding-y);
-    color: var(--#{$table-prefix}caption-color);
-    text-align: left;
-    caption-side: bottom;
+  padding-top: var(--#{$table-prefix}cell-padding-y);
+  padding-bottom: var(--#{$table-prefix}cell-padding-y);
+  color: var(--#{$table-prefix}caption-color);
+  text-align: left;
+  caption-side: bottom;
 }
 
 .caption-top {
-    caption-side: top;
+  caption-side: top;
 }
 
 // =============================================================================
@@ -78,9 +80,10 @@
 // =============================================================================
 
 .table-sm {
-    > :not(caption) > * > * {
-        padding: var(--#{$table-prefix}cell-padding-y-sm) var(--#{$table-prefix}cell-padding-x-sm);
-    }
+  > :not(caption) > * > * {
+    padding: var(--#{$table-prefix}cell-padding-y-sm)
+      var(--#{$table-prefix}cell-padding-x-sm);
+  }
 }
 
 // =============================================================================
@@ -88,15 +91,15 @@
 // =============================================================================
 
 .table-bordered {
-    > :not(caption) > * {
-        border-width: var(--#{$table-prefix}border-width) 0;
+  > :not(caption) > * {
+    border-width: var(--#{$table-prefix}border-width) 0;
 
-        > * {
-            border-width: 0 var(--#{$table-prefix}border-width);
-            border-style: solid;
-            border-color: var(--table-border-color);
-        }
+    > * {
+      border-width: 0 var(--#{$table-prefix}border-width);
+      border-style: solid;
+      border-color: var(--table-border-color);
     }
+  }
 }
 
 // =============================================================================
@@ -104,13 +107,13 @@
 // =============================================================================
 
 .table-borderless {
-    > :not(caption) > * > * {
-        border-bottom-width: 0;
-    }
+  > :not(caption) > * > * {
+    border-bottom-width: 0;
+  }
 
-    > :not(:first-child) {
-        border-top-width: 0;
-    }
+  > :not(:first-child) {
+    border-top-width: 0;
+  }
 }
 
 // =============================================================================
@@ -118,17 +121,17 @@
 // =============================================================================
 
 .table-striped {
-    > tbody > tr:nth-of-type(odd) > * {
-        background-color: var(--table-striped-bg);
-        color: var(--table-striped-color);
-    }
+  > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--table-striped-bg);
+    color: var(--table-striped-color);
+  }
 }
 
 .table-striped-even {
-    > tbody > tr:nth-of-type(even) > * {
-        background-color: var(--table-striped-bg);
-        color: var(--table-striped-color);
-    }
+  > tbody > tr:nth-of-type(even) > * {
+    background-color: var(--table-striped-bg);
+    color: var(--table-striped-color);
+  }
 }
 
 // =============================================================================
@@ -136,17 +139,17 @@
 // =============================================================================
 
 .table-striped-columns {
-    > :not(caption) > tr > :nth-child(odd) {
-        background-color: var(--table-striped-bg);
-        color: var(--table-striped-color);
-    }
+  > :not(caption) > tr > :nth-child(odd) {
+    background-color: var(--table-striped-bg);
+    color: var(--table-striped-color);
+  }
 }
 
 .table-striped-columns-even {
-    > :not(caption) > tr > :nth-child(even) {
-        background-color: var(--table-striped-bg);
-        color: var(--table-striped-color);
-    }
+  > :not(caption) > tr > :nth-child(even) {
+    background-color: var(--table-striped-bg);
+    color: var(--table-striped-color);
+  }
 }
 
 // =============================================================================
@@ -154,10 +157,10 @@
 // =============================================================================
 
 .table-hover {
-    > tbody > tr:hover > * {
-        background-color: var(--table-hover-bg);
-        color: var(--table-hover-color);
-    }
+  > tbody > tr:hover > * {
+    background-color: var(--table-hover-bg);
+    color: var(--table-hover-color);
+  }
 }
 
 // =============================================================================
@@ -165,18 +168,18 @@
 // =============================================================================
 
 .table-active {
-    > * {
-        background-color: var(--table-active-bg);
-        color: var(--table-active-color);
-    }
+  > * {
+    background-color: var(--table-active-bg);
+    color: var(--table-active-color);
+  }
 }
 
 // Row/Cell active state
 .table > tbody > tr.active > *,
 .table > tbody > tr > td.active,
 .table > tbody > tr > th.active {
-    background-color: var(--#{$table-prefix}active-bg);
-    color: var(--#{$table-prefix}active-color);
+  background-color: var(--#{$table-prefix}active-bg);
+  color: var(--#{$table-prefix}active-color);
 }
 
 // =============================================================================
@@ -186,20 +189,45 @@
 // =============================================================================
 
 @each $name, $values in $semantic-colors {
-    .table-#{$name} {
-        --table-bg: hsla(var(--#{$semantic-prefix}#{$name}-h), var(--#{$semantic-prefix}#{$name}-s), 50%, 0.15);
-        --table-color: inherit;
-        --table-border-color: hsla(var(--#{$semantic-prefix}#{$name}-h), var(--#{$semantic-prefix}#{$name}-s), 50%, 0.3);
-        --table-striped-bg: hsla(var(--#{$semantic-prefix}#{$name}-h), var(--#{$semantic-prefix}#{$name}-s), 50%, 0.25);
-        --table-hover-bg: hsla(var(--#{$semantic-prefix}#{$name}-h), var(--#{$semantic-prefix}#{$name}-s), 50%, 0.35);
-    }
+  .table-#{$name} {
+    --table-bg: hsla(
+      var(--#{$semantic-prefix}#{$name}-h),
+      var(--#{$semantic-prefix}#{$name}-s),
+      50%,
+      0.15
+    );
+    --table-color: inherit;
+    --table-border-color: hsla(
+      var(--#{$semantic-prefix}#{$name}-h),
+      var(--#{$semantic-prefix}#{$name}-s),
+      50%,
+      0.3
+    );
+    --table-striped-bg: hsla(
+      var(--#{$semantic-prefix}#{$name}-h),
+      var(--#{$semantic-prefix}#{$name}-s),
+      50%,
+      0.25
+    );
+    --table-hover-bg: hsla(
+      var(--#{$semantic-prefix}#{$name}-h),
+      var(--#{$semantic-prefix}#{$name}-s),
+      50%,
+      0.35
+    );
+  }
 
-    // Row/Cell variants
-    .table > tbody > tr.table-#{$name} > *,
-    .table > tbody > tr > td.table-#{$name},
-    .table > tbody > tr > th.table-#{$name} {
-        background-color: hsla(var(--#{$semantic-prefix}#{$name}-h), var(--#{$semantic-prefix}#{$name}-s), 50%, 0.15);
-    }
+  // Row/Cell variants
+  .table > tbody > tr.table-#{$name} > *,
+  .table > tbody > tr > td.table-#{$name},
+  .table > tbody > tr > th.table-#{$name} {
+    background-color: hsla(
+      var(--#{$semantic-prefix}#{$name}-h),
+      var(--#{$semantic-prefix}#{$name}-s),
+      50%,
+      0.15
+    );
+  }
 }
 
 // =============================================================================
@@ -208,32 +236,50 @@
 // =============================================================================
 
 .table-light {
-    --table-bg: var(--#{$table-prefix}light-bg, hsl(0, 0%, 97%));
-    --table-color: var(--#{$table-prefix}light-color, inherit);
-    --table-border-color: var(--#{$table-prefix}light-border-color, hsl(0, 0%, 90%));
-    --table-striped-bg: var(--#{$table-prefix}light-striped-bg, hsla(0, 0%, 0%, 0.05));
-    --table-hover-bg: var(--#{$table-prefix}light-hover-bg, hsla(0, 0%, 0%, 0.075));
+  --table-bg: var(--#{$table-prefix}light-bg, hsl(0, 0%, 97%));
+  --table-color: var(--#{$table-prefix}light-color, inherit);
+  --table-border-color: var(
+    --#{$table-prefix}light-border-color,
+    hsl(0, 0%, 90%)
+  );
+  --table-striped-bg: var(
+    --#{$table-prefix}light-striped-bg,
+    hsla(0, 0%, 0%, 0.05)
+  );
+  --table-hover-bg: var(
+    --#{$table-prefix}light-hover-bg,
+    hsla(0, 0%, 0%, 0.075)
+  );
 }
 
 .table > tbody > tr.table-light > *,
 .table > tbody > tr > td.table-light,
 .table > tbody > tr > th.table-light {
-    background-color: var(--#{$table-prefix}light-bg, hsl(0, 0%, 97%));
+  background-color: var(--#{$table-prefix}light-bg, hsl(0, 0%, 97%));
 }
 
 .table-dark {
-    --table-bg: var(--#{$table-prefix}dark-bg, hsl(0, 0%, 20%));
-    --table-color: var(--#{$table-prefix}dark-color, hsl(0, 0%, 95%));
-    --table-border-color: var(--#{$table-prefix}dark-border-color, hsl(0, 0%, 35%));
-    --table-striped-bg: var(--#{$table-prefix}dark-striped-bg, hsla(0, 0%, 100%, 0.05));
-    --table-hover-bg: var(--#{$table-prefix}dark-hover-bg, hsla(0, 0%, 100%, 0.075));
+  --table-bg: var(--#{$table-prefix}dark-bg, hsl(0, 0%, 20%));
+  --table-color: var(--#{$table-prefix}dark-color, hsl(0, 0%, 95%));
+  --table-border-color: var(
+    --#{$table-prefix}dark-border-color,
+    hsl(0, 0%, 35%)
+  );
+  --table-striped-bg: var(
+    --#{$table-prefix}dark-striped-bg,
+    hsla(0, 0%, 100%, 0.05)
+  );
+  --table-hover-bg: var(
+    --#{$table-prefix}dark-hover-bg,
+    hsla(0, 0%, 100%, 0.075)
+  );
 }
 
 .table > tbody > tr.table-dark > *,
 .table > tbody > tr > td.table-dark,
 .table > tbody > tr > th.table-dark {
-    background-color: var(--#{$table-prefix}dark-bg, hsl(0, 0%, 20%));
-    color: var(--#{$table-prefix}dark-color, hsl(0, 0%, 95%));
+  background-color: var(--#{$table-prefix}dark-bg, hsl(0, 0%, 20%));
+  color: var(--#{$table-prefix}dark-color, hsl(0, 0%, 95%));
 }
 
 // =============================================================================
@@ -241,45 +287,45 @@
 // =============================================================================
 
 .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 // Responsive breakpoint variants
 // These can be customized per theme or used with breakpoint mixins
 .table-responsive-sm {
-    @media (max-width: 575.98px) {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+  @media (max-width: 575.98px) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .table-responsive-md {
-    @media (max-width: 767.98px) {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+  @media (max-width: 767.98px) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .table-responsive-lg {
-    @media (max-width: 991.98px) {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+  @media (max-width: 991.98px) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .table-responsive-xl {
-    @media (max-width: 1199.98px) {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+  @media (max-width: 1199.98px) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .table-responsive-xxl {
-    @media (max-width: 1399.98px) {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+  @media (max-width: 1399.98px) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 // =============================================================================
@@ -287,21 +333,21 @@
 // =============================================================================
 
 .table-align-top {
-    > :not(caption) > * > * {
-        vertical-align: top;
-    }
+  > :not(caption) > * > * {
+    vertical-align: top;
+  }
 }
 
 .table-align-middle {
-    > :not(caption) > * > * {
-        vertical-align: middle;
-    }
+  > :not(caption) > * > * {
+    vertical-align: middle;
+  }
 }
 
 .table-align-bottom {
-    > :not(caption) > * > * {
-        vertical-align: bottom;
-    }
+  > :not(caption) > * > * {
+    vertical-align: bottom;
+  }
 }
 
 // =============================================================================
@@ -309,7 +355,7 @@
 // =============================================================================
 
 .table-fixed {
-    table-layout: fixed;
+  table-layout: fixed;
 }
 
 // =============================================================================
@@ -317,5 +363,5 @@
 // =============================================================================
 
 .table-auto {
-    table-layout: auto;
+  table-layout: auto;
 }
