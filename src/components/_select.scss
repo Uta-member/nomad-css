@@ -1,114 +1,80 @@
-// ============================================
-// Select Component
-// ============================================
-// ブラウザのデフォルトスタイルをリセットし、
-// CSS変数でテーマ側からカスタマイズ可能にする
-// ============================================
-//
-// 注意事項:
-// - ネイティブ<select>のドロップダウンメニュー内の<option>は
-//   ブラウザ依存のため、スタイリングに大きな制限があります
-// - 完全なカスタマイズが必要な場合は、JavaScript製の
-//   カスタムセレクトコンポーネントを検討してください
-// - このコンポーネントは、ネイティブ<select>の範囲内で
-//   可能な限りのカスタマイズ性を提供します
-//
-// 使用方法:
-// <select class="select">
-//     <option value="">Select an option</option>
-//     <option value="1">Option 1</option>
-// </select>
-//
-// バリデーション（将来実装予定）:
-// .is-valid, .is-invalid クラスで状態を表示できます
-// ============================================
+$select-prefix: "select-" !default;
+$select-class-name: "select" !default;
 
-@use "../props/prefixes" as *;
-@use "../props/defines" as *;
+// CSS variable name wrappers
+$select-height-var: --#{$select-prefix}height !default;
+$select-padding-x-var: --#{$select-prefix}padding-x !default;
+$select-padding-y-var: --#{$select-prefix}padding-y !default;
+$select-font-size-var: --#{$select-prefix}font-size !default;
+$select-line-height-var: --#{$select-prefix}line-height !default;
 
-// ============================================
-// CSS Variables (defaults in :root)
-// ============================================
-:root {
-  // ----------------------------------------
-  // Size Variables
-  // ----------------------------------------
-  --#{$select-prefix}height: 2.5rem;
-  --#{$select-prefix}padding-x: 0.75rem;
-  --#{$select-prefix}padding-y: 0.5rem;
-  --#{$select-prefix}font-size: 1rem;
-  --#{$select-prefix}line-height: 1.5;
+$select-bg-var: --#{$select-prefix}bg !default;
+$select-color-var: --#{$select-prefix}color !default;
+$select-border-color-var: --#{$select-prefix}border-color !default;
 
-  // ----------------------------------------
-  // Color Variables - Normal State
-  // ----------------------------------------
-  --#{$select-prefix}bg: var(--#{$neutral-prefix}0);
-  --#{$select-prefix}color: var(--#{$neutral-prefix}10);
-  --#{$select-prefix}border-color: var(--#{$neutral-prefix}4);
+$select-bg-hover-var: --#{$select-prefix}bg-hover !default;
+$select-border-color-hover-var: --#{$select-prefix}border-color-hover !default;
 
-  // ----------------------------------------
-  // Color Variables - Hover State
-  // ----------------------------------------
-  --#{$select-prefix}bg-hover: var(--#{$neutral-prefix}0);
-  --#{$select-prefix}border-color-hover: var(--#{$neutral-prefix}5);
+$select-bg-focus-var: --#{$select-prefix}bg-focus !default;
+$select-border-color-focus-var: --#{$select-prefix}border-color-focus !default;
+$select-focus-ring-width-var: --#{$select-prefix}focus-ring-width !default;
+$select-focus-ring-color-var: --#{$select-prefix}focus-ring-color !default;
 
-  // ----------------------------------------
-  // Color Variables - Focus State
-  // ----------------------------------------
-  --#{$select-prefix}bg-focus: var(--#{$neutral-prefix}0);
-  --#{$select-prefix}border-color-focus: var(--#{$neutral-prefix}6);
-  --#{$select-prefix}focus-ring-width: 2px;
-  --#{$select-prefix}focus-ring-color: var(--#{$neutral-prefix}3);
+$select-bg-disabled-var: --#{$select-prefix}bg-disabled !default;
+$select-color-disabled-var: --#{$select-prefix}color-disabled !default;
+$select-border-color-disabled-var: --#{$select-prefix}border-color-disabled !default;
 
-  // ----------------------------------------
-  // Color Variables - Disabled State
-  // ----------------------------------------
-  --#{$select-prefix}bg-disabled: var(--#{$neutral-prefix}2);
-  --#{$select-prefix}color-disabled: var(--#{$neutral-prefix}5);
-  --#{$select-prefix}border-color-disabled: var(--#{$neutral-prefix}3);
+$select-border-width-var: --#{$select-prefix}border-width !default;
+$select-border-radius-var: --#{$select-prefix}border-radius !default;
 
-  // ----------------------------------------
-  // Border Variables
-  // ----------------------------------------
-  --#{$select-prefix}border-width: 1px;
-  --#{$select-prefix}border-radius: 0.25rem;
+$select-arrow-size-var: --#{$select-prefix}arrow-size !default;
+$select-arrow-color-var: --#{$select-prefix}arrow-color !default;
+$select-arrow-color-hover-var: --#{$select-prefix}arrow-color-hover !default;
+$select-arrow-color-disabled-var: --#{$select-prefix}arrow-color-disabled !default;
+$select-arrow-padding-var: --#{$select-prefix}arrow-padding !default;
 
-  // ----------------------------------------
-  // Arrow/Indicator Variables
-  // ----------------------------------------
-  --#{$select-prefix}arrow-size: 1em;
-  --#{$select-prefix}arrow-color: var(--#{$neutral-prefix}6);
-  --#{$select-prefix}arrow-color-hover: var(--#{$neutral-prefix}7);
-  --#{$select-prefix}arrow-color-disabled: var(--#{$neutral-prefix}4);
-  // Padding for arrow area
-  --#{$select-prefix}arrow-padding: 2.5rem;
+$select-transition-var: --#{$select-prefix}transition !default;
 
-  // ----------------------------------------
-  // Transition
-  // ----------------------------------------
-  --#{$select-prefix}transition:
-    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+$select-multiple-min-height-var: --#{$select-prefix}multiple-min-height !default;
+$select-option-padding-var: --#{$select-prefix}option-padding !default;
 
-  // ----------------------------------------
-  // Validation Variables (for future use)
-  // ----------------------------------------
-  --#{$select-prefix}border-color-valid: var(
-    --semantic-success-default,
-    #22c55e
-  );
-  --#{$select-prefix}focus-ring-color-valid: hsla(142, 71%, 45%, 0.25);
-  --#{$select-prefix}border-color-invalid: var(
-    --semantic-danger-default,
-    #ef4444
-  );
-  --#{$select-prefix}focus-ring-color-invalid: hsla(0, 84%, 60%, 0.25);
+// Component defaults (themes should override these)
+.#{$select-class-name} {
+  #{$select-height-var}: 2.5rem;
+  #{$select-padding-x-var}: 0.75rem;
+  #{$select-padding-y-var}: 0.5rem;
+  #{$select-font-size-var}: 1rem;
+  #{$select-line-height-var}: 1.5;
 
-  // ----------------------------------------
-  // Multiple Select Variables
-  // ----------------------------------------
-  --#{$select-prefix}multiple-min-height: 6rem;
-  --#{$select-prefix}option-padding: 0.5rem 0.75rem;
+  #{$select-bg-var}: #ffffff;
+  #{$select-color-var}: #111827;
+  #{$select-border-color-var}: #d1d5db;
+
+  #{$select-bg-hover-var}: #ffffff;
+  #{$select-border-color-hover-var}: #cbd5e1;
+
+  #{$select-bg-focus-var}: #ffffff;
+  #{$select-border-color-focus-var}: #60a5fa;
+  #{$select-focus-ring-width-var}: 2px;
+  #{$select-focus-ring-color-var}: rgba(96,165,250,0.25);
+
+  #{$select-bg-disabled-var}: #f3f4f6;
+  #{$select-color-disabled-var}: #9ca3af;
+  #{$select-border-color-disabled-var}: #e5e7eb;
+
+  #{$select-border-width-var}: 1px;
+  #{$select-border-radius-var}: 0.25rem;
+
+  #{$select-arrow-size-var}: 1em;
+  #{$select-arrow-color-var}: #6b7280;
+  #{$select-arrow-color-hover-var}: #4b5563;
+  #{$select-arrow-color-disabled-var}: #9ca3af;
+  #{$select-arrow-padding-var}: 2.5rem;
+
+  #{$select-transition-var}: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  #{$select-multiple-min-height-var}: 6rem;
+  #{$select-option-padding-var}: 0.5rem 0.75rem;
 }
 
 // ============================================
@@ -138,30 +104,27 @@ select.select {
   width: 100%;
 
   // Size
-  height: var(--#{$select-prefix}height);
-  padding: var(--#{$select-prefix}padding-y)
-    var(--#{$select-prefix}arrow-padding) var(--#{$select-prefix}padding-y)
-    var(--#{$select-prefix}padding-x);
-  font-size: var(--#{$select-prefix}font-size);
-  line-height: var(--#{$select-prefix}line-height);
+  height: var(#{$select-height-var});
+  padding: var(#{$select-padding-y-var}) var(#{$select-arrow-padding-var}) var(#{$select-padding-y-var}) var(#{$select-padding-x-var});
+  font-size: var(#{$select-font-size-var});
+  line-height: var(#{$select-line-height-var});
 
   // Colors
-  background-color: var(--#{$select-prefix}bg);
-  color: var(--#{$select-prefix}color);
+  background-color: var(#{$select-bg-var});
+  color: var(#{$select-color-var});
 
   // Border
-  border: var(--#{$select-prefix}border-width) solid
-    var(--#{$select-prefix}border-color);
-  border-radius: var(--#{$select-prefix}border-radius);
+  border: var(#{$select-border-width-var}) solid var(#{$select-border-color-var});
+  border-radius: var(#{$select-border-radius-var});
 
   // Arrow icon
   background-image: #{select-arrow()};
   background-repeat: no-repeat;
-  background-position: right var(--#{$select-prefix}padding-x) center;
-  background-size: var(--#{$select-prefix}arrow-size);
+  background-position: right var(#{$select-padding-x-var}) center;
+  background-size: var(#{$select-arrow-size-var});
 
   // Transition
-  transition: var(--#{$select-prefix}transition);
+  transition: var(#{$select-transition-var});
 
   // Font
   font-family: inherit;
@@ -178,8 +141,8 @@ select.select {
   // Hover State
   // ----------------------------------------
   &:hover:not(:disabled):not(:focus) {
-    background-color: var(--#{$select-prefix}bg-hover);
-    border-color: var(--#{$select-prefix}border-color-hover);
+    background-color: var(#{$select-bg-hover-var});
+    border-color: var(#{$select-border-color-hover-var});
   }
 
   // ----------------------------------------
@@ -187,19 +150,18 @@ select.select {
   // ----------------------------------------
   &:focus {
     outline: none;
-    background-color: var(--#{$select-prefix}bg-focus);
-    border-color: var(--#{$select-prefix}border-color-focus);
-    box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width)
-      var(--#{$select-prefix}focus-ring-color);
+    background-color: var(#{$select-bg-focus-var});
+    border-color: var(#{$select-border-color-focus-var});
+    box-shadow: 0 0 0 var(#{$select-focus-ring-width-var}) var(#{$select-focus-ring-color-var});
   }
 
   // ----------------------------------------
   // Disabled State
   // ----------------------------------------
   &:disabled {
-    background-color: var(--#{$select-prefix}bg-disabled);
-    color: var(--#{$select-prefix}color-disabled);
-    border-color: var(--#{$select-prefix}border-color-disabled);
+    background-color: var(#{$select-bg-disabled-var});
+    color: var(#{$select-color-disabled-var});
+    border-color: var(#{$select-border-color-disabled-var});
     background-image: #{select-arrow("%239ca3af")};
     cursor: not-allowed;
     opacity: 1;
@@ -210,7 +172,7 @@ select.select {
   // ----------------------------------------
   &:invalid,
   &:required:invalid {
-    color: var(--#{$neutral-prefix}5);
+    color: var(#{$select-color-disabled-var});
   }
 
   // ----------------------------------------
@@ -218,7 +180,7 @@ select.select {
   // ----------------------------------------
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 var(--#{$select-prefix}color);
+    text-shadow: 0 0 0 var(#{$select-color-var});
   }
 
   // ----------------------------------------
@@ -237,16 +199,16 @@ select.select {
 
 .select option,
 select.select option {
-  padding: var(--#{$select-prefix}option-padding);
-  background-color: var(--#{$select-prefix}bg);
-  color: var(--#{$select-prefix}color);
+  padding: var(#{$select-option-padding-var});
+  background-color: var(#{$select-bg-var});
+  color: var(#{$select-color-var});
 
   &:disabled {
-    color: var(--#{$select-prefix}color-disabled);
+    color: var(#{$select-color-disabled-var});
   }
 
   &:checked {
-    background-color: var(--#{$neutral-prefix}2);
+    background-color: #f3f4f6;
   }
 }
 
@@ -255,8 +217,8 @@ select.select option {
 select.select optgroup {
   font-weight: 600;
   font-style: normal;
-  color: var(--#{$select-prefix}color);
-  background-color: var(--#{$neutral-prefix}1);
+  color: var(#{$select-color-var});
+  background-color: #f8fafc;
 }
 
 // ============================================
@@ -265,8 +227,8 @@ select.select optgroup {
 .select[multiple],
 select.select[multiple] {
   height: auto;
-  min-height: var(--#{$select-prefix}multiple-min-height);
-  padding: var(--#{$select-prefix}padding-y) var(--#{$select-prefix}padding-x);
+  min-height: var(#{$select-multiple-min-height-var});
+  padding: var(#{$select-padding-y-var}) var(#{$select-padding-x-var});
 
   // Remove arrow for multiple select
   background-image: none;
@@ -275,16 +237,12 @@ select.select[multiple] {
   overflow-y: auto;
 
   option {
-    padding: var(--#{$select-prefix}option-padding);
-    border-radius: calc(var(--#{$select-prefix}border-radius) / 2);
+    padding: var(#{$select-option-padding-var});
+    border-radius: calc(var(#{$select-border-radius-var}) / 2);
     margin-bottom: 2px;
 
     &:checked {
-      background: linear-gradient(
-        0deg,
-        var(--#{$neutral-prefix}3) 0%,
-        var(--#{$neutral-prefix}3) 100%
-      );
+      background: var(#{$select-bg-var});
     }
   }
 }
@@ -309,42 +267,7 @@ select.select[multiple] {
 // ============================================
 // -> Managed in themes/contract
 
-// ============================================
-// Semantic Color Support (Focus Ring Color)
-// ============================================
-.select {
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      --#{$select-prefix}border-color-focus: var(--#{$palette-default});
-      --#{$select-prefix}focus-ring-color: var(--#{$palette-lighter});
-    }
-  }
-}
-
-// ============================================
-// Validation States (prepared for future use)
-// ============================================
-.select-valid,
-.select.is-valid {
-  border-color: var(--#{$select-prefix}border-color-valid);
-
-  &:focus {
-    border-color: var(--#{$select-prefix}border-color-valid);
-    box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width)
-      var(--#{$select-prefix}focus-ring-color-valid);
-  }
-}
-
-.select-invalid,
-.select.is-invalid {
-  border-color: var(--#{$select-prefix}border-color-invalid);
-
-  &:focus {
-    border-color: var(--#{$select-prefix}border-color-invalid);
-    box-shadow: 0 0 0 var(--#{$select-prefix}focus-ring-width)
-      var(--#{$select-prefix}focus-ring-color-invalid);
-  }
-}
+// Semantic color classes and validation states are intentionally left to theme or app layers.
 
 // ============================================
 // Select Wrapper (for additional customization)
@@ -371,17 +294,17 @@ select.select[multiple] {
 .select-wrapper-custom-arrow {
   > .select {
     background-image: none;
-    padding-right: var(--#{$select-prefix}arrow-padding);
+    padding-right: var(#{$select-arrow-padding-var});
   }
 
   &::after {
     content: "";
     position: absolute;
-    right: var(--#{$select-prefix}padding-x);
+    right: var(#{$select-padding-x-var});
     top: 50%;
     transform: translateY(-50%);
-    width: var(--#{$select-prefix}arrow-size);
-    height: var(--#{$select-prefix}arrow-size);
+    width: var(#{$select-arrow-size-var});
+    height: var(#{$select-arrow-size-var});
     background-image: #{select-arrow()};
     background-repeat: no-repeat;
     background-position: center;
@@ -414,7 +337,7 @@ select.select[multiple] {
   }
 
   &:has(.select-icon-left) > .select {
-    padding-left: calc(var(--#{$select-prefix}padding-x) * 2 + 1em);
+    padding-left: calc(var(#{$select-padding-x-var}) * 2 + 1em);
   }
 }
 
@@ -425,8 +348,8 @@ select.select[multiple] {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: calc(var(--#{$select-prefix}padding-x) * 2 + 1em);
-  color: var(--#{$select-prefix}arrow-color);
+  width: calc(var(#{$select-padding-x-var}) * 2 + 1em);
+  color: var(#{$select-arrow-color-var});
   pointer-events: none;
 }
 
@@ -441,7 +364,7 @@ select.select[multiple] {
   -webkit-appearance: auto;
   -moz-appearance: auto;
   background-image: none;
-  padding-right: var(--#{$select-prefix}padding-x);
+  padding-right: var(#{$select-padding-x-var});
 }
 
 // ============================================
