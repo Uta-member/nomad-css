@@ -27,8 +27,8 @@
 
 .button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   background: none;
   cursor: pointer;
@@ -66,7 +66,8 @@
   outline: var(--button-focus-ring-width) solid var(--button-focus-ring-color);
   outline-offset: var(--button-focus-ring-offset);
 }
-.button:disabled, .button.disabled {
+.button:disabled,
+.button.disabled {
   opacity: var(--button-disabled-opacity);
   cursor: not-allowed;
   pointer-events: none;
@@ -102,4 +103,128 @@
 }
 .button-group > .button:not(:first-child) {
   margin-left: calc(var(--button-border-width) * -1);
-}/*# sourceMappingURL=components.css.map */
+}
+
+.checkbox {
+  --checkbox-size: 1.25rem;
+  --checkbox-border-width: 2px;
+  --checkbox-border-radius: 0.25rem;
+  --checkbox-border-color: ;
+  --checkbox-border-color-hover: ;
+  --checkbox-border-color-checked: ;
+  --checkbox-border-color-focus: ;
+  --checkbox-bg: transparent;
+  --checkbox-bg-hover: ;
+  --checkbox-bg-checked: ;
+  --checkbox-checkmark-color: ;
+  --checkbox-checkmark-width: 2px;
+  --checkbox-indeterminate-color: ;
+  --checkbox-focus-ring-width: 2px;
+  --checkbox-focus-ring-offset: 2px;
+  --checkbox-focus-ring-color: ;
+  --checkbox-disabled-opacity: 0.5;
+  --checkbox-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  --form-check-gap: 0.5rem;
+  --form-check-label-color: inherit;
+}
+
+.checkbox,
+input[type="checkbox"].checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  border: var(--checkbox-border-width) solid var(--checkbox-border-color);
+  border-radius: var(--checkbox-border-radius);
+  background-color: var(--checkbox-bg);
+  cursor: pointer;
+  transition: var(--checkbox-transition);
+}
+.checkbox:hover:not(:disabled):not(:checked),
+input[type="checkbox"].checkbox:hover:not(:disabled):not(:checked) {
+  background-color: var(--checkbox-bg-hover);
+  border-color: var(--checkbox-border-color-hover);
+}
+.checkbox:focus-visible,
+input[type="checkbox"].checkbox:focus-visible {
+  outline: var(--checkbox-focus-ring-width) solid
+    var(--checkbox-focus-ring-color);
+  outline-offset: var(--checkbox-focus-ring-offset);
+}
+.checkbox:checked,
+input[type="checkbox"].checkbox:checked {
+  background-color: var(--checkbox-bg-checked);
+  border-color: var(--checkbox-border-color-checked);
+}
+.checkbox:checked::after,
+input[type="checkbox"].checkbox:checked::after {
+  content: "";
+  display: block;
+  width: calc(var(--checkbox-size) * 0.3);
+  height: calc(var(--checkbox-size) * 0.55);
+  border: solid var(--checkbox-checkmark-color);
+  border-width: 0 var(--checkbox-checkmark-width)
+    var(--checkbox-checkmark-width) 0;
+  transform: rotate(45deg) translateX(-5%) translateY(-5%);
+}
+.checkbox:indeterminate,
+input[type="checkbox"].checkbox:indeterminate {
+  background-color: var(--checkbox-bg-checked);
+  border-color: var(--checkbox-border-color-checked);
+}
+.checkbox:indeterminate::after,
+input[type="checkbox"].checkbox:indeterminate::after {
+  content: "";
+  display: block;
+  width: calc(var(--checkbox-size) * 0.5);
+  height: var(--checkbox-checkmark-width);
+  background-color: var(--checkbox-indeterminate-color);
+}
+.checkbox:disabled,
+input[type="checkbox"].checkbox:disabled {
+  opacity: var(--checkbox-disabled-opacity);
+  cursor: not-allowed;
+}
+.checkbox.sm,
+input[type="checkbox"].checkbox.sm {
+  --checkbox-size: 1rem;
+}
+.checkbox.lg,
+input[type="checkbox"].checkbox.lg {
+  --checkbox-size: 1.5rem;
+}
+
+.form-check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--form-check-gap);
+  cursor: pointer;
+  color: var(--form-check-label-color);
+}
+.form-check:has(:disabled) {
+  opacity: var(--checkbox-disabled-opacity);
+  cursor: not-allowed;
+}
+
+.form-check-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-check-inline {
+  display: inline-flex;
+  gap: 1rem;
+}
+.form-check-inline > .form-check {
+  margin-right: 0;
+} /*# sourceMappingURL=components.css.map */
