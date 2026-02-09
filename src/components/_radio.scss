@@ -149,16 +149,6 @@ input[type="radio"].#{$radio-class-name} {
     opacity: var(#{$radio-disabled-opacity-var});
     cursor: not-allowed;
   }
-
-  &.sm {
-    #{$radio-size-var}: 1rem;
-    #{$radio-dot-size-var}: 0.375rem;
-
-    .lg {
-      #{$radio-size-var}: 1.5rem;
-      #{$radio-dot-size-var}: 0.625rem;
-    }
-  }
 }
 
 // ============================================

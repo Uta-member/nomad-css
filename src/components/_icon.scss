@@ -1,45 +1,33 @@
 // ============================================
-// Icon Component
+// Prefixes / class names / CSS variable names
 // ============================================
-// アイコンを適切に表示するための基本コンポーネント
-// アイコンフォント（Material Icons, Font Awesome等）やSVGに対応
-// ============================================
+$icon-prefix: "icon-" !default;
+$icon-class-name: "icon" !default;
+$icon-size-var: --#{$icon-prefix}size !default;
+$icon-gap-var: --#{$icon-prefix}gap !default;
 
-@use "../props/prefixes" as *;
-@use "../props/defines" as *;
-
-// ============================================
-// CSS Variables (for theme customization)
-// ============================================
-:root {
+// Default CSS variable values (attached to the component namespace)
+.#{$icon-class-name} {
   // Default icon size
-  --#{$icon-prefix}size: 1.5rem;
-
-  // Size variants
-  --#{$icon-prefix}size-xs: 0.75rem;
-  --#{$icon-prefix}size-sm: 1rem;
-  --#{$icon-prefix}size-md: 1.5rem;
-  --#{$icon-prefix}size-lg: 2rem;
-  --#{$icon-prefix}size-xl: 2.5rem;
-  --#{$icon-prefix}size-2xl: 3rem;
+  #{$icon-size-var}: 1.5rem;
 
   // Gap between icon and text (used in buttons, etc.)
-  --#{$icon-prefix}gap: 0.5rem;
+  #{$icon-gap-var}: 0.5rem;
 }
 
 // ============================================
 // Base Icon Class
 // ============================================
-.icon {
+.#{$icon-class-name} {
   // Display properties
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   // Size
-  width: var(--#{$icon-prefix}size);
-  height: var(--#{$icon-prefix}size);
-  font-size: var(--#{$icon-prefix}size);
+  width: var(#{$icon-size-var});
+  height: var(#{$icon-size-var});
+  font-size: var(#{$icon-size-var});
   line-height: 1;
 
   // Inherit color from parent
@@ -72,32 +60,7 @@
   }
 }
 
-// ============================================
-// Size Variants
-// ============================================
-.icon-xs {
-  --#{$icon-prefix}size: var(--#{$icon-prefix}size-xs);
-}
-
-.icon-sm {
-  --#{$icon-prefix}size: var(--#{$icon-prefix}size-sm);
-}
-
-.icon-md {
-  --#{$icon-prefix}size: var(--#{$icon-prefix}size-md);
-}
-
-.icon-lg {
-  --#{$icon-prefix}size: var(--#{$icon-prefix}size-lg);
-}
-
-.icon-xl {
-  --#{$icon-prefix}size: var(--#{$icon-prefix}size-xl);
-}
-
-.icon-2xl {
-  --#{$icon-prefix}size: var(--#{$icon-prefix}size-2xl);
-}
+// Size variants are defined in theme layer; core exposes a single size variable
 
 // ============================================
 // Icon Spin Animation
@@ -111,7 +74,7 @@
   }
 }
 
-.icon-spin {
+.#{$icon-class-name}-spin {
   animation: icon-spin 1s linear infinite;
 }
 
@@ -128,33 +91,33 @@
   }
 }
 
-.icon-pulse {
+.#{$icon-class-name}-pulse {
   animation: icon-pulse 1.5s ease-in-out infinite;
 }
 
 // ============================================
 // Icon Rotation Utilities
 // ============================================
-.icon-rotate-90 {
+.#{$icon-class-name}-rotate-90 {
   transform: rotate(90deg);
 }
 
-.icon-rotate-180 {
+.#{$icon-class-name}-rotate-180 {
   transform: rotate(180deg);
 }
 
-.icon-rotate-270 {
+.#{$icon-class-name}-rotate-270 {
   transform: rotate(270deg);
 }
 
 // ============================================
 // Icon Flip Utilities
 // ============================================
-.icon-flip-horizontal {
+.#{$icon-class-name}-flip-horizontal {
   transform: scaleX(-1);
 }
 
-.icon-flip-vertical {
+.#{$icon-class-name}-flip-vertical {
   transform: scaleY(-1);
 }
 
@@ -162,56 +125,8 @@
 // Icon + Text Alignment Helper
 // ============================================
 // Use inside flex containers for proper icon-text alignment
-.icon-text {
+.#{$icon-class-name}-text {
   display: inline-flex;
   align-items: center;
-  gap: var(--#{$icon-prefix}gap);
-}
-
-// ============================================
-// Icon Colors (Semantic Colors)
-// ============================================
-// Usage: <span class="icon primary">★</span>
-// Colors are inherited from semantic color palette
-.icon {
-  @each $name, $values in $semantic-colors {
-    &.#{$semantic-prefix}#{$name} {
-      color: var(--#{$palette-default});
-
-      // Semantic level variants
-      &.lighter {
-        color: var(--#{$palette-lighter});
-      }
-      &.light {
-        color: var(--#{$palette-light});
-      }
-      &.dark {
-        color: var(--#{$palette-dark});
-      }
-      &.darker {
-        color: var(--#{$palette-darker});
-      }
-    }
-  }
-}
-
-// ============================================
-// Icon Neutral Color Variants
-// ============================================
-// Usage: <span class="icon neutral">★</span>
-.icon.neutral {
-  color: var(--#{$neutral-prefix}5);
-
-  &.lighter {
-    color: var(--#{$neutral-prefix}2);
-  }
-  &.light {
-    color: var(--#{$neutral-prefix}3);
-  }
-  &.dark {
-    color: var(--#{$neutral-prefix}7);
-  }
-  &.darker {
-    color: var(--#{$neutral-prefix}9);
-  }
+  gap: var(#{$icon-gap-var});
 }

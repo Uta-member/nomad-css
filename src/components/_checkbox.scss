@@ -175,13 +175,6 @@ input[type="checkbox"].#{$checkbox-class-name} {
     cursor: not-allowed;
   }
 
-  &.sm {
-    #{$checkbox-size-var}: 1rem;
-  }
-
-  &.lg {
-    #{$checkbox-size-var}: 1.5rem;
-  }
 }
 
 // ============================================
