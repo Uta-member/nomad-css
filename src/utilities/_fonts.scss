@@ -4,63 +4,172 @@
 // Prefixes
 // ============================================
 // Prefixes
-$font-prefix: #{prefix}-font;
+$font-prefix: #{prefix}-font-;
+
+// heading
+$font-h1-prefix: #{$font-prefix}h1;
+$font-h2-prefix: #{$font-prefix}h2;
+$font-h3-prefix: #{$font-prefix}h3;
+$font-h4-prefix: #{$font-prefix}h4;
+$font-h5-prefix: #{$font-prefix}h5;
+$font-h6-prefix: #{$font-prefix}h6;
+
+// Variable Names
+// heading
+$font-h1-size-var: --#{font-h1-prefix}-size;
+$font-h2-size-var: --#{font-h2-prefix}-size;
+$font-h3-size-var: --#{font-h3-prefix}-size;
+$font-h4-size-var: --#{font-h4-prefix}-size;
+$font-h5-size-var: --#{font-h5-prefix}-size;
+$font-h6-size-var: --#{font-h6-prefix}-size;
+
+$font-h1-weight-var: --#{font-h1-prefix}-weight;
+$font-h2-weight-var: --#{font-h2-prefix}-weight;
+$font-h3-weight-var: --#{font-h3-prefix}-weight;
+$font-h4-weight-var: --#{font-h4-prefix}-weight;
+$font-h5-weight-var: --#{font-h5-prefix}-weight;
+$font-h6-weight-var: --#{font-h6-prefix}-weight;
 
 // ============================================
 // Process
 // ============================================
 // ============================================
-// Font Weight Definitions
+// CSS Variables
+// ============================================
+// ============================================
+// Heading
 // ============================================
 :root {
-  --#{$font-prefix}weight-1: 100;
-  --#{$font-prefix}weight-2: 200;
-  --#{$font-prefix}weight-3: 300;
-  --#{$font-prefix}weight-4: 400;
-  --#{$font-prefix}weight-5: 500;
-  --#{$font-prefix}weight-6: 600;
-  --#{$font-prefix}weight-7: 700;
-  --#{$font-prefix}weight-8: 800;
-  --#{$font-prefix}weight-9: 900;
+  // Sizes
+  #{$font-h1-size-var}: 2.5rem;
+  #{$font-h2-size-var}: 2rem;
+  #{$font-h3-size-var}: 1.75rem;
+  #{$font-h4-size-var}: 1.5rem;
+  #{$font-h5-size-var}: 1.25rem;
+  #{$font-h6-size-var}: 1rem;
+
+  // Weights
+  #{$font-h1-weight-var}: 500;
+  #{$font-h2-weight-var}: 500;
+  #{$font-h3-weight-var}: 500;
+  #{$font-h4-weight-var}: 500;
+  #{$font-h5-weight-var}: 500;
+  #{$font-h6-weight-var}: 500;
 }
 
 // ============================================
-// Font Line Height Definitions
+// Classes
 // ============================================
-:root {
-  --#{$font-prefix}line-height-0: 1.1;
-  --#{$font-prefix}line-height-1: 1.25;
-  --#{$font-prefix}line-height-2: 1.375;
-  --#{$font-prefix}line-height-3: 1.5;
-  --#{$font-prefix}line-height-4: 1.75;
-  --#{$font-prefix}line-height-5: 2;
+// ============================================
+// Heading
+// ============================================
+h1,
+.h1 {
+  font-size: var(#{$font-h1-size-var});
+  font-weight: var(#{$font-h1-weight-var});
+}
+h2,
+.h2 {
+  font-size: var(#{$font-h2-size-var});
+  font-weight: var(#{$font-h2-weight-var});
+}
+h3,
+.h3 {
+  font-size: var(#{$font-h3-size-var});
+  font-weight: var(#{$font-h3-weight-var});
+}
+h4,
+.h4 {
+  font-size: var(#{$font-h4-size-var});
+  font-weight: var(#{$font-h4-weight-var});
+}
+h5,
+.h5 {
+  font-size: var(#{$font-h5-size-var});
+  font-weight: var(#{$font-h5-weight-var});
+}
+h6,
+.h6 {
+  font-size: var(#{$font-h6-size-var});
+  font-weight: var(#{$font-h6-weight-var});
 }
 
 // ============================================
-// Font Letter Spacing Definitions
+// Text Align
 // ============================================
-:root {
-  --#{$font-prefix}letter-spacing-0: -0.05em;
-  --#{$font-prefix}letter-spacing-1: -0.025em;
-  --#{$font-prefix}letter-spacing-2: 0.05em;
-  --#{$font-prefix}letter-spacing-3: 0.075em;
-  --#{$font-prefix}letter-spacing-4: 0.15em;
-  --#{$font-prefix}letter-spacing-5: 0.5em;
-  --#{$font-prefix}letter-spacing-6: 0.75em;
-  --#{$font-prefix}letter-spacing-7: 1em;
+.text-start {
+  text-align: start;
+}
+.text-end {
+  text-align: end;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
 }
 
 // ============================================
-// Font Size Definitions
+// Text Transform
 // ============================================
-:root {
-  --#{$font-prefix}size-0: 0.75rem;
-  --#{$font-prefix}size-1: 1rem;
-  --#{$font-prefix}size-2: 1.1rem;
-  --#{$font-prefix}size-3: 1.25rem;
-  --#{$font-prefix}size-4: 1.5rem;
-  --#{$font-prefix}size-5: 2rem;
-  --#{$font-prefix}size-6: 2.5rem;
-  --#{$font-prefix}size-7: 3rem;
-  --#{$font-prefix}size-8: 3.5rem;
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// ============================================
+// Font Style
+// ============================================
+.fst-italic {
+  font-style: italic;
+}
+.fst-normal {
+  font-style: normal;
+}
+
+// ============================================
+// Text Decoration
+// ============================================
+.text-decoration-underline {
+  text-decoration: underline;
+}
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+.text-decoration-none {
+  text-decoration: none;
+}
+
+// ============================================
+// Text Wrap
+// ============================================
+.text-wrap-nowrap {
+  text-wrap: nowrap;
+}
+.text-wrap-wrap {
+  text-wrap: wrap;
+}
+.text-wrap-balance {
+  text-wrap: balance;
+}
+.text-wrap-pretty {
+  text-wrap: pretty;
+}
+.text-wrap-stable {
+  text-wrap: stable;
+}
+
+// ============================================
+// Text Overflow
+// ============================================
+.text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

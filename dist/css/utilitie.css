@@ -1,0 +1,124 @@
+.border {
+  --border-prefixwidth: 1px;
+  --border-prefixstyle: solid;
+  --border-prefixcolor: gray;
+}
+
+.border {
+  border: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+}
+
+.border-top {
+  border-top: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+}
+
+.border-bottom {
+  border-bottom: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+}
+
+.border-start {
+  border-left: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+}
+
+.border-end {
+  border-right: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+}
+
+.border-top-0 {
+  border-top: none;
+}
+
+.border-bottom-0 {
+  border-bottom: none;
+}
+
+.border-start-0 {
+  border-left: none;
+}
+
+.border-end-0 {
+  border-right: none;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.rounded-pill {
+  border-radius: 50rem;
+}
+
+.rounded-top-0 {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.rounded-bottom-0 {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.rounded-start-0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.rounded-end-0 {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+:root {
+  --font-h1-prefix-size: 2.5rem;
+  --font-h2-prefix-size: 2rem;
+  --font-h3-prefix-size: 1.75rem;
+  --font-h4-prefix-size: 1.5rem;
+  --font-h5-prefix-size: 1.25rem;
+  --font-h6-prefix-size: 1rem;
+  --font-h1-prefix-weight: 500;
+  --font-h2-prefix-weight: 500;
+  --font-h3-prefix-weight: 500;
+  --font-h4-prefix-weight: 500;
+  --font-h5-prefix-weight: 500;
+  --font-h6-prefix-weight: 500;
+}
+
+h1,
+.h1 {
+  font-size: var(--font-h1-prefix-size);
+  font-weight: var(--font-h1-prefix-weight);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-h2-prefix-size);
+  font-weight: var(--font-h2-prefix-weight);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-h3-prefix-size);
+  font-weight: var(--font-h3-prefix-weight);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-h4-prefix-size);
+  font-weight: var(--font-h4-prefix-weight);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-h5-prefix-size);
+  font-weight: var(--font-h5-prefix-weight);
+}
+
+h6,
+.h6 {
+  font-size: var(--font-h6-prefix-size);
+  font-weight: var(--font-h6-prefix-weight);
+}/*# sourceMappingURL=utilitie.css.map */

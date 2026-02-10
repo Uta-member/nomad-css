@@ -8,6 +8,7 @@
   $palettes: map.merge(hue-colors.$hues, semantics.$semantic-colors)
 );
 @use "../../components/components";
+@use "../../utilities/utilities";
 
 // ============================================
 // Common Contract Variables
