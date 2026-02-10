@@ -170,24 +170,24 @@ $palettes: (
     @if type-of($lightness) == "map" {
       @error "カラーパレット生成エラー: 輝度に連想配列を指定することはできません。";
     }
-    --#{$palette-lightness-var}#{$key}: #{$lightness};
+    --#{$palette-lightness-prefix}#{$key}: #{$lightness};
   }
 
   // 実際の色のCSS変数定義
   @each $key, $lightness in $palette-lightness-list {
     --#{$palette-color-prefix}#{$key}: hsl(
-      var(--#{$palette-hue-var}),
-      var(--#{$palette-saturation-var}),
-      var(--#{$palette-lightness-var}#{$key})
+      var(#{$palette-hue-var}),
+      var(#{$palette-saturation-var}),
+      var(--#{$palette-lightness-prefix}#{$key})
     );
   }
 
   // グレー色のCSS変数定義
   @each $key, $lightness in $palette-lightness-list {
     --#{$palette-gray-prefix}#{$key}: hsl(
-      var(--#{$palette-hue-var}),
-      var(--#{$palette-gray-saturation-var}),
-      var(--#{$palette-lightness-var}#{$key})
+      var(#{$palette-hue-var}),
+      var(#{$palette-gray-saturation-var}),
+      var(--#{$palette-lightness-prefix}#{$key})
     );
   }
 
@@ -198,15 +198,15 @@ $palettes: (
     }
     @if $lightness > $threshold {
       --#{$palette-accent-prefix}#{$key}: hsl(
-        var(--#{$palette-hue-var}),
-        var(--#{$palette-gray-saturation-var}),
-        var(--#{$palette-accent-dark-lightness-var})
+        var(#{$palette-hue-var}),
+        var(#{$palette-gray-saturation-var}),
+        var(#{$palette-accent-dark-lightness-var})
       );
     } @else {
       --#{$palette-accent-prefix}#{$key}: hsl(
-        var(--#{$palette-hue-var}),
-        var(--#{$palette-gray-saturation-var}),
-        var(--#{$palette-accent-light-lightness-var})
+        var(#{$palette-hue-var}),
+        var(#{$palette-gray-saturation-var}),
+        var(#{$palette-accent-light-lightness-var})
       );
     }
   }
@@ -243,11 +243,11 @@ $palettes: (
     @error "カラーパレット生成エラー: パレットの値に彩度（s）が含まれていません。";
   }
   .#{$prefix}#{$name} {
-    --#{$palette-hue-var}: #{map.get($value, h)};
-    --#{$palette-saturation-var}: #{map.get($value, s)};
-    --#{$palette-accent-light-lightness-var}: #{$palette-accent-light-lightness};
-    --#{$palette-accent-dark-lightness-var}: #{$palette-accent-dark-lightness};
-    --#{$palette-gray-saturation-var}: #{$palette-gray-saturation};
+    #{$palette-hue-var}: #{map.get($value, h)};
+    #{$palette-saturation-var}: #{map.get($value, s)};
+    #{$palette-accent-light-lightness-var}: #{$palette-accent-light-lightness};
+    #{$palette-accent-dark-lightness-var}: #{$palette-accent-dark-lightness};
+    #{$palette-gray-saturation-var}: #{$palette-gray-saturation};
 
     @include _generate-palette-colors(
       $palette-lightness-list: map.get($value, lightness-list) or

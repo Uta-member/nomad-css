@@ -17,7 +17,9 @@ $button-outlined-class-name: outlined;
 $button-text-class-name: text;
 
 // Variant Names
+// --------------------------------------------
 // Filled
+// --------------------------------------------
 $button-filled-bg-var: --#{$button-filled-prefix}bg;
 $button-filled-bg-hover-var: --#{$button-filled-prefix}bg-hover;
 $button-filled-bg-active-var: --#{$button-filled-prefix}bg-active;
@@ -28,7 +30,9 @@ $button-filled-border-color-var: --#{$button-filled-prefix}border-color;
 $button-filled-border-color-hover-var: --#{$button-filled-prefix}border-color-hover;
 $button-filled-border-color-active-var: --#{$button-filled-prefix}border-color-active;
 
+// --------------------------------------------
 // Tonal
+// --------------------------------------------
 $button-tonal-bg-var: --#{$button-tonal-prefix}bg;
 $button-tonal-bg-hover-var: --#{$button-tonal-prefix}bg-hover;
 $button-tonal-bg-active-var: --#{$button-tonal-prefix}bg-active;
@@ -39,7 +43,9 @@ $button-tonal-border-color-var: --#{$button-tonal-prefix}border-color;
 $button-tonal-border-color-hover-var: --#{$button-tonal-prefix}border-color-hover;
 $button-tonal-border-color-active-var: --#{$button-tonal-prefix}border-color-active;
 
+// --------------------------------------------
 // Outlined
+// --------------------------------------------
 $button-outlined-bg-var: --#{$button-outlined-prefix}bg;
 $button-outlined-bg-hover-var: --#{$button-outlined-prefix}bg-hover;
 $button-outlined-bg-active-var: --#{$button-outlined-prefix}bg-active;
@@ -50,7 +56,9 @@ $button-outlined-border-color-var: --#{$button-outlined-prefix}border-color;
 $button-outlined-border-color-hover-var: --#{$button-outlined-prefix}border-color-hover;
 $button-outlined-border-color-active-var: --#{$button-outlined-prefix}border-color-active;
 
+// --------------------------------------------
 // Text
+// --------------------------------------------
 $button-text-bg-var: --#{$button-text-prefix}bg;
 $button-text-bg-hover-var: --#{$button-text-prefix}bg-hover;
 $button-text-bg-active-var: --#{$button-text-prefix}bg-active;

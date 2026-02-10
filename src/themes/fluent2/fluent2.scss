@@ -1,16 +1,15 @@
 @use "../contract/_contract.scss";
 @use "../../props/prefixes" as prefixes;
+@use "../contract/components/button" as buttons;
+@use "../contract/semantics" as semantics;
 
 :root[data-theme="fluent2"] {
-  // // ============================================
-  // // Theme Colors
-  // // ============================================
-  // --primary-h: var(--hue-blue);
-  // --primary-s: 70%;
-  // --secondary-h: var(--hue-blue);
-  // --secondary-s: 0%;
-  // --tertiary-h: var(--hue-cyan);
-  // --tertiary-s: 60%;
+  // ============================================
+  // Theme Colors
+  // ============================================
+  .#{semantics.$semantic-primary-class-name} {
+    //#{prefix.$palette-hue-var}: 220;
+  }
 
   // // ============================================
   // // Typography
