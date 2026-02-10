@@ -13,6 +13,12 @@ $border-width-var: --#{border-prefix}width;
 $border-style-var: --#{border-prefix}style;
 $border-color-var: --#{border-prefix}color;
 
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
 .#{$border-class-name} {
   #{$border-width-var}: 1px;
   #{$border-style-var}: solid;
