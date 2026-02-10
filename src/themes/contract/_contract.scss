@@ -1,426 +1,281 @@
+@use "sass:map";
+
 @use "../../props/prefixes" as prefixes;
+@use "hue-colors" as hue-colors;
+@use "semantics" as semantics;
 
-// ============================================
-// HUE定義
-// HSL色相環に基づく標準値
-// threshold: アクセントカラー切り替え閾値（省略時はデフォルト50%）
-// ============================================
-$hues: (
-  "red": (
-    h: 0,
-    threshold: 50%,
-  ),
-  "orange": (
-    h: 30,
-    threshold: 40%,
-  ),
-  "yellow": (
-    h: 50,
-    threshold: 30%,
-  ),
-  "lime": (
-    h: 90,
-    threshold: 30%,
-  ),
-  "green": (
-    h: 125,
-    threshold: 30%,
-  ),
-  "teal": (
-    h: 170,
-    threshold: 40%,
-  ),
-  "cyan": (
-    h: 190,
-    threshold: 40%,
-  ),
-  "blue": (
-    h: 220,
-    threshold: 50%,
-  ),
-  "indigo": (
-    h: 240,
-    threshold: 70%,
-  ),
-  "violet": (
-    h: 270,
-    threshold: 70%,
-  ),
-  "purple": (
-    h: 290,
-    threshold: 50%,
-  ),
-  "pink": (
-    h: 330,
-    threshold: 55%,
-  ),
+@use "../../props/colors" as colors with (
+  $palettes: map.merge(hue-colors.$hues, semantics.$semantic-colors)
 );
-
-// ============================================
-// セマンティックカラー定義
-// threshold: アクセントカラー切り替え閾値（省略時はデフォルト）
-// ============================================
-$semantic-colors: (
-  "primary": (
-    h: var(--#{prefixes.$prefix}hue-blue),
-    s: 80%,
-    threshold: 50%,
-    levels: (
-      lighter: 2,
-      light: 3,
-      default: 6,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-  "secondary": (
-    h: var(--#{prefixes.$prefix}hue-pink),
-    s: 80%,
-    threshold: 55%,
-    levels: (
-      lighter: 2,
-      light: 3,
-      default: 5,
-      dark: 7,
-      darker: 9,
-    ),
-  ),
-  "tertiary": (
-    h: var(--#{prefixes.$prefix}hue-teal),
-    s: 60%,
-    threshold: 40%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 7,
-      dark: 9,
-      darker: 10,
-    ),
-  ),
-  "success": (
-    h: var(--#{prefixes.$prefix}hue-green),
-    s: 60%,
-    threshold: 45%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 7,
-      dark: 9,
-      darker: 10,
-    ),
-  ),
-  "warning": (
-    h: var(--#{prefixes.$prefix}hue-yellow),
-    s: 80%,
-    threshold: 45%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 6,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-  "danger": (
-    h: var(--#{prefixes.$prefix}hue-red),
-    s: 80%,
-    threshold: 50%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 6,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-  "info": (
-    h: var(--#{prefixes.$prefix}hue-cyan),
-    s: 80%,
-    threshold: 40%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 7,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-);
-
-@use "../../props/defines" as defs with (
-  $semantic-colors: $semantic-colors,
-  $hues: $hues
-);
-@use "../../props/colors" as colors;
 @use "../../components/components";
 
 // ============================================
 // Common Contract Variables
 // ============================================
-:root {
-  // Default Font Family
-  --#{prefixes.$font-prefix}family-sans:
-    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    sans-serif;
-  --#{prefixes.$font-prefix}family-serif:
-    Georgia, Cambria, "Times New Roman", Times, serif;
-  --#{prefixes.$font-prefix}family-mono:
-    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// :root {
+//   // Default Font Family
+//   --#{prefixes.$font-prefix}family-sans:
+//     system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+//     sans-serif;
+//   --#{prefixes.$font-prefix}family-serif:
+//     Georgia, Cambria, "Times New Roman", Times, serif;
+//   --#{prefixes.$font-prefix}family-mono:
+//     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-  // Base Font Config
-  --#{prefixes.$font-prefix}size-base: 16px;
-  --#{prefixes.$font-prefix}weight-normal: 400;
-  --#{prefixes.$font-prefix}line-height-normal: 1.5;
-}
+//   // Base Font Config
+//   --#{prefixes.$font-prefix}size-base: 16px;
+//   --#{prefixes.$font-prefix}weight-normal: 400;
+//   --#{prefixes.$font-prefix}line-height-normal: 1.5;
+// }
 
-@for $i from 0 through 10 {
-  .container-color-#{$i} {
-    background-color: var(--#{prefixes.$palette-color-prefix}#{$i});
-    color: var(--#{prefixes.$palette-accent-prefix}#{$i});
-  }
-}
+// @for $i from 0 through 10 {
+//   .container-color-#{$i} {
+//     background-color: var(--#{prefixes.$palette-color-prefix}#{$i});
+//     color: var(--#{prefixes.$palette-accent-prefix}#{$i});
+//   }
+// }
 
-.container-semantic-color {
-  background-color: var(--#{prefixes.$palette-default});
-  color: var(--#{prefixes.$palette-default-accent});
+// .container-semantic-color {
+//   background-color: var(--#{prefixes.$palette-default});
+//   color: var(--#{prefixes.$palette-default-accent});
 
-  &.lighter {
-    background-color: var(--#{prefixes.$palette-lighter});
-    color: var(--#{prefixes.$palette-lighter-accent});
-  }
-  &.light {
-    background-color: var(--#{prefixes.$palette-light});
-    color: var(--#{prefixes.$palette-light-accent});
-  }
-  &.dark {
-    background-color: var(--#{prefixes.$palette-dark});
-    color: var(--#{prefixes.$palette-dark-accent});
-  }
-  &.darker {
-    background-color: var(--#{prefixes.$palette-darker});
-    color: var(--#{prefixes.$palette-darker-accent});
-  }
-}
+//   &.lighter {
+//     background-color: var(--#{prefixes.$palette-lighter});
+//     color: var(--#{prefixes.$palette-lighter-accent});
+//   }
+//   &.light {
+//     background-color: var(--#{prefixes.$palette-light});
+//     color: var(--#{prefixes.$palette-light-accent});
+//   }
+//   &.dark {
+//     background-color: var(--#{prefixes.$palette-dark});
+//     color: var(--#{prefixes.$palette-dark-accent});
+//   }
+//   &.darker {
+//     background-color: var(--#{prefixes.$palette-darker});
+//     color: var(--#{prefixes.$palette-darker-accent});
+//   }
+// }
 
-// ============================================
-// Shared Component Variants
-// ============================================
+// // ============================================
+// // Shared Component Variants
+// // ============================================
 
-// --------------------------------------------
-// Button Variants
-// --------------------------------------------
+// // --------------------------------------------
+// // Button Variants
+// // --------------------------------------------
 
-// Filled Variant
-.button.filled {
-  --#{prefixes.$button-prefix}bg: var(--#{prefixes.$palette-default});
-  --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-dark});
-  --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-darker});
+// // Filled Variant
+// .button.filled {
+//   --#{prefixes.$button-prefix}bg: var(--#{prefixes.$palette-default});
+//   --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-dark});
+//   --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-darker});
 
-  --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default-accent});
-  --#{prefixes.$button-prefix}color-hover: var(
-    --#{prefixes.$palette-dark-accent}
-  );
-  --#{prefixes.$button-prefix}color-active: var(
-    --#{prefixes.$palette-darker-accent}
-  );
+//   --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default-accent});
+//   --#{prefixes.$button-prefix}color-hover: var(
+//     --#{prefixes.$palette-dark-accent}
+//   );
+//   --#{prefixes.$button-prefix}color-active: var(
+//     --#{prefixes.$palette-darker-accent}
+//   );
 
-  --#{prefixes.$button-prefix}border-color: transparent;
-  --#{prefixes.$button-prefix}border-color-hover: transparent;
-  --#{prefixes.$button-prefix}border-color-active: transparent;
-}
+//   --#{prefixes.$button-prefix}border-color: transparent;
+//   --#{prefixes.$button-prefix}border-color-hover: transparent;
+//   --#{prefixes.$button-prefix}border-color-active: transparent;
+// }
 
-// Tonal Variant
-.button.tonal {
-  --#{prefixes.$button-prefix}bg: var(--#{prefixes.$palette-lighter});
-  --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-light});
-  --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-default});
+// // Tonal Variant
+// .button.tonal {
+//   --#{prefixes.$button-prefix}bg: var(--#{prefixes.$palette-lighter});
+//   --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-light});
+//   --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-default});
 
-  --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-darker});
-  --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-darker});
-  --#{prefixes.$button-prefix}color-active: var(
-    --#{prefixes.$palette-default-accent}
-  );
+//   --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-darker});
+//   --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-darker});
+//   --#{prefixes.$button-prefix}color-active: var(
+//     --#{prefixes.$palette-default-accent}
+//   );
 
-  --#{prefixes.$button-prefix}border-color: transparent;
-  --#{prefixes.$button-prefix}border-color-hover: transparent;
-  --#{prefixes.$button-prefix}border-color-active: transparent;
-}
+//   --#{prefixes.$button-prefix}border-color: transparent;
+//   --#{prefixes.$button-prefix}border-color-hover: transparent;
+//   --#{prefixes.$button-prefix}border-color-active: transparent;
+// }
 
-// Outlined Variant
-.button.outlined {
-  --#{prefixes.$button-prefix}bg: transparent;
-  --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-lighter});
-  --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-light});
+// // Outlined Variant
+// .button.outlined {
+//   --#{prefixes.$button-prefix}bg: transparent;
+//   --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-lighter});
+//   --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-light});
 
-  --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default});
-  --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-dark});
-  --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-darker});
+//   --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default});
+//   --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-dark});
+//   --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-darker});
 
-  --#{prefixes.$button-prefix}border-color: var(--#{prefixes.$palette-default});
-  --#{prefixes.$button-prefix}border-color-hover: var(
-    --#{prefixes.$palette-dark}
-  );
-  --#{prefixes.$button-prefix}border-color-active: var(
-    --#{prefixes.$palette-darker}
-  );
-}
+//   --#{prefixes.$button-prefix}border-color: var(--#{prefixes.$palette-default});
+//   --#{prefixes.$button-prefix}border-color-hover: var(
+//     --#{prefixes.$palette-dark}
+//   );
+//   --#{prefixes.$button-prefix}border-color-active: var(
+//     --#{prefixes.$palette-darker}
+//   );
+// }
 
-// Text Variant
-.button.text {
-  --#{prefixes.$button-prefix}bg: transparent;
-  --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-lighter});
-  --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-light});
+// // Text Variant
+// .button.text {
+//   --#{prefixes.$button-prefix}bg: transparent;
+//   --#{prefixes.$button-prefix}bg-hover: var(--#{prefixes.$palette-lighter});
+//   --#{prefixes.$button-prefix}bg-active: var(--#{prefixes.$palette-light});
 
-  --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default});
-  --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-dark});
-  --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-darker});
+//   --#{prefixes.$button-prefix}color: var(--#{prefixes.$palette-default});
+//   --#{prefixes.$button-prefix}color-hover: var(--#{prefixes.$palette-dark});
+//   --#{prefixes.$button-prefix}color-active: var(--#{prefixes.$palette-darker});
 
-  --#{prefixes.$button-prefix}border-color: transparent;
-  --#{prefixes.$button-prefix}border-color-hover: transparent;
-  --#{prefixes.$button-prefix}border-color-active: transparent;
-}
+//   --#{prefixes.$button-prefix}border-color: transparent;
+//   --#{prefixes.$button-prefix}border-color-hover: transparent;
+//   --#{prefixes.$button-prefix}border-color-active: transparent;
+// }
 
-// Button Size Variants
-.button.button-sm {
-  --#{prefixes.$button-prefix}padding-x: 0.75rem;
-  --#{prefixes.$button-prefix}padding-y: 0.25rem;
-  --#{prefixes.$button-prefix}font-size: 0.75rem;
-  --#{prefixes.$button-prefix}gap: 0.375rem;
-}
+// // Button Size Variants
+// .button.button-sm {
+//   --#{prefixes.$button-prefix}padding-x: 0.75rem;
+//   --#{prefixes.$button-prefix}padding-y: 0.25rem;
+//   --#{prefixes.$button-prefix}font-size: 0.75rem;
+//   --#{prefixes.$button-prefix}gap: 0.375rem;
+// }
 
-.button.button-lg {
-  --#{prefixes.$button-prefix}padding-x: 1.5rem;
-  --#{prefixes.$button-prefix}padding-y: 0.75rem;
-  --#{prefixes.$button-prefix}font-size: 1rem;
-  --#{prefixes.$button-prefix}gap: 0.625rem;
-}
+// .button.button-lg {
+//   --#{prefixes.$button-prefix}padding-x: 1.5rem;
+//   --#{prefixes.$button-prefix}padding-y: 0.75rem;
+//   --#{prefixes.$button-prefix}font-size: 1rem;
+//   --#{prefixes.$button-prefix}gap: 0.625rem;
+// }
 
-// Icon-only size adjustments
-.button.icon-only.button-sm {
-  --#{prefixes.$button-prefix}padding-x: 0.375rem;
-  --#{prefixes.$button-prefix}padding-y: 0.375rem;
-}
+// // Icon-only size adjustments
+// .button.icon-only.button-sm {
+//   --#{prefixes.$button-prefix}padding-x: 0.375rem;
+//   --#{prefixes.$button-prefix}padding-y: 0.375rem;
+// }
 
-.button.icon-only.button-lg {
-  --#{prefixes.$button-prefix}padding-x: 0.75rem;
-  --#{prefixes.$button-prefix}padding-y: 0.75rem;
-}
+// .button.icon-only.button-lg {
+//   --#{prefixes.$button-prefix}padding-x: 0.75rem;
+//   --#{prefixes.$button-prefix}padding-y: 0.75rem;
+// }
 
-// --------------------------------------------
-// Input & Select Variants
-// --------------------------------------------
+// // --------------------------------------------
+// // Input & Select Variants
+// // --------------------------------------------
 
-// Size Variants
-:root {
-  --#{prefixes.$input-prefix}height-sm: 2rem;
-  --#{prefixes.$input-prefix}height-lg: 3rem;
-  --#{prefixes.$select-prefix}height-sm: 2rem;
-  --#{prefixes.$select-prefix}height-lg: 3rem;
-}
+// // Size Variants
+// :root {
+//   --#{prefixes.$input-prefix}height-sm: 2rem;
+//   --#{prefixes.$input-prefix}height-lg: 3rem;
+//   --#{prefixes.$select-prefix}height-sm: 2rem;
+//   --#{prefixes.$select-prefix}height-lg: 3rem;
+// }
 
-.input-sm,
-.select-sm {
-  --#{prefixes.$input-prefix}height: var(--#{prefixes.$input-prefix}height-sm);
-  --#{prefixes.$input-prefix}padding-x: 0.5rem;
-  --#{prefixes.$input-prefix}padding-y: 0.25rem;
-  --#{prefixes.$input-prefix}font-size: 0.875rem;
+// .input-sm,
+// .select-sm {
+//   --#{prefixes.$input-prefix}height: var(--#{prefixes.$input-prefix}height-sm);
+//   --#{prefixes.$input-prefix}padding-x: 0.5rem;
+//   --#{prefixes.$input-prefix}padding-y: 0.25rem;
+//   --#{prefixes.$input-prefix}font-size: 0.875rem;
 
-  --#{prefixes.$select-prefix}height: var(
-    --#{prefixes.$select-prefix}height-sm
-  );
-  --#{prefixes.$select-prefix}padding-x: 0.5rem;
-  --#{prefixes.$select-prefix}padding-y: 0.25rem;
-  --#{prefixes.$select-prefix}font-size: 0.875rem;
-}
+//   --#{prefixes.$select-prefix}height: var(
+//     --#{prefixes.$select-prefix}height-sm
+//   );
+//   --#{prefixes.$select-prefix}padding-x: 0.5rem;
+//   --#{prefixes.$select-prefix}padding-y: 0.25rem;
+//   --#{prefixes.$select-prefix}font-size: 0.875rem;
+// }
 
-.input-lg,
-.select-lg {
-  --#{prefixes.$input-prefix}height: var(--#{prefixes.$input-prefix}height-lg);
-  --#{prefixes.$input-prefix}padding-x: 1rem;
-  --#{prefixes.$input-prefix}padding-y: 0.75rem;
-  --#{prefixes.$input-prefix}font-size: 1.125rem;
+// .input-lg,
+// .select-lg {
+//   --#{prefixes.$input-prefix}height: var(--#{prefixes.$input-prefix}height-lg);
+//   --#{prefixes.$input-prefix}padding-x: 1rem;
+//   --#{prefixes.$input-prefix}padding-y: 0.75rem;
+//   --#{prefixes.$input-prefix}font-size: 1.125rem;
 
-  --#{prefixes.$select-prefix}height: var(
-    --#{prefixes.$select-prefix}height-lg
-  );
-  --#{prefixes.$select-prefix}padding-x: 1rem;
-  --#{prefixes.$select-prefix}padding-y: 0.75rem;
-  --#{prefixes.$select-prefix}font-size: 1.125rem;
-}
+//   --#{prefixes.$select-prefix}height: var(
+//     --#{prefixes.$select-prefix}height-lg
+//   );
+//   --#{prefixes.$select-prefix}padding-x: 1rem;
+//   --#{prefixes.$select-prefix}padding-y: 0.75rem;
+//   --#{prefixes.$select-prefix}font-size: 1.125rem;
+// }
 
-// Filled Variant
-.input-filled,
-.select-filled {
-  --#{prefixes.$input-prefix}bg: var(--#{prefixes.$neutral-prefix}2);
-  --#{prefixes.$input-prefix}bg-hover: var(--#{prefixes.$neutral-prefix}3);
-  --#{prefixes.$input-prefix}bg-focus: var(--#{prefixes.$neutral-prefix}1);
-  --#{prefixes.$input-prefix}border-color: transparent;
-  --#{prefixes.$input-prefix}border-color-hover: transparent;
+// // Filled Variant
+// .input-filled,
+// .select-filled {
+//   --#{prefixes.$input-prefix}bg: var(--#{prefixes.$neutral-prefix}2);
+//   --#{prefixes.$input-prefix}bg-hover: var(--#{prefixes.$neutral-prefix}3);
+//   --#{prefixes.$input-prefix}bg-focus: var(--#{prefixes.$neutral-prefix}1);
+//   --#{prefixes.$input-prefix}border-color: transparent;
+//   --#{prefixes.$input-prefix}border-color-hover: transparent;
 
-  --#{prefixes.$select-prefix}bg: var(--#{prefixes.$neutral-prefix}2);
-  --#{prefixes.$select-prefix}bg-hover: var(--#{prefixes.$neutral-prefix}3);
-  --#{prefixes.$select-prefix}bg-focus: var(--#{prefixes.$neutral-prefix}1);
-  --#{prefixes.$select-prefix}border-color: transparent;
-  --#{prefixes.$select-prefix}border-color-hover: transparent;
-}
+//   --#{prefixes.$select-prefix}bg: var(--#{prefixes.$neutral-prefix}2);
+//   --#{prefixes.$select-prefix}bg-hover: var(--#{prefixes.$neutral-prefix}3);
+//   --#{prefixes.$select-prefix}bg-focus: var(--#{prefixes.$neutral-prefix}1);
+//   --#{prefixes.$select-prefix}border-color: transparent;
+//   --#{prefixes.$select-prefix}border-color-hover: transparent;
+// }
 
-// Underline Variant
-.input-underline,
-.select-underline {
-  --#{prefixes.$input-prefix}border-radius: 0;
-  --#{prefixes.$select-prefix}border-radius: 0;
+// // Underline Variant
+// .input-underline,
+// .select-underline {
+//   --#{prefixes.$input-prefix}border-radius: 0;
+//   --#{prefixes.$select-prefix}border-radius: 0;
 
-  // Explicitly reset other borders to ensure only bottom border exists
-  border-top: 0 !important;
-  border-left: 0 !important;
-  border-right: 0 !important;
-}
+//   // Explicitly reset other borders to ensure only bottom border exists
+//   border-top: 0 !important;
+//   border-left: 0 !important;
+//   border-right: 0 !important;
+// }
 
-// Enhance specificity to override base component styles (e.g. input.input:focus)
-.input.input-underline {
-  border-bottom: var(--#{prefixes.$input-prefix}border-width) solid
-    var(--#{prefixes.$input-prefix}border-color);
+// // Enhance specificity to override base component styles (e.g. input.input:focus)
+// .input.input-underline {
+//   border-bottom: var(--#{prefixes.$input-prefix}border-width) solid
+//     var(--#{prefixes.$input-prefix}border-color);
 
-  &:hover {
-    border-bottom-color: var(--#{prefixes.$input-prefix}border-color-hover);
-  }
+//   &:hover {
+//     border-bottom-color: var(--#{prefixes.$input-prefix}border-color-hover);
+//   }
 
-  &:focus {
-    // Change border color and add shadow to simulate thickness (1px border + 1px shadow = 2px)
-    border-bottom-color: var(--#{prefixes.$input-prefix}border-color-focus);
-    box-shadow: 0 1px 0 0 var(--#{prefixes.$input-prefix}border-color-focus);
-  }
-}
+//   &:focus {
+//     // Change border color and add shadow to simulate thickness (1px border + 1px shadow = 2px)
+//     border-bottom-color: var(--#{prefixes.$input-prefix}border-color-focus);
+//     box-shadow: 0 1px 0 0 var(--#{prefixes.$input-prefix}border-color-focus);
+//   }
+// }
 
-.select.select-underline {
-  border-bottom: var(--#{prefixes.$select-prefix}border-width) solid
-    var(--#{prefixes.$select-prefix}border-color);
+// .select.select-underline {
+//   border-bottom: var(--#{prefixes.$select-prefix}border-width) solid
+//     var(--#{prefixes.$select-prefix}border-color);
 
-  &:hover {
-    border-bottom-color: var(--#{prefixes.$select-prefix}border-color-hover);
-  }
+//   &:hover {
+//     border-bottom-color: var(--#{prefixes.$select-prefix}border-color-hover);
+//   }
 
-  &:focus {
-    border-bottom-color: var(--#{prefixes.$select-prefix}border-color-focus);
-    box-shadow: 0 1px 0 0 var(--#{prefixes.$select-prefix}border-color-focus);
-  }
-}
+//   &:focus {
+//     border-bottom-color: var(--#{prefixes.$select-prefix}border-color-focus);
+//     box-shadow: 0 1px 0 0 var(--#{prefixes.$select-prefix}border-color-focus);
+//   }
+// }
 
-// Borderless Variant
-.input-borderless,
-.select-borderless {
-  --#{prefixes.$input-prefix}border-width: 0;
-  --#{prefixes.$select-prefix}border-width: 0;
+// // Borderless Variant
+// .input-borderless,
+// .select-borderless {
+//   --#{prefixes.$input-prefix}border-width: 0;
+//   --#{prefixes.$select-prefix}border-width: 0;
 
-  --#{prefixes.$input-prefix}border-color: transparent;
-  --#{prefixes.$input-prefix}border-color-hover: transparent;
-  --#{prefixes.$input-prefix}border-color-focus: transparent;
+//   --#{prefixes.$input-prefix}border-color: transparent;
+//   --#{prefixes.$input-prefix}border-color-hover: transparent;
+//   --#{prefixes.$input-prefix}border-color-focus: transparent;
 
-  --#{prefixes.$select-prefix}border-color: transparent;
-  --#{prefixes.$select-prefix}border-color-hover: transparent;
-  --#{prefixes.$select-prefix}border-color-focus: transparent;
+//   --#{prefixes.$select-prefix}border-color: transparent;
+//   --#{prefixes.$select-prefix}border-color-hover: transparent;
+//   --#{prefixes.$select-prefix}border-color-focus: transparent;
 
-  &:focus {
-    box-shadow: none;
-  }
-}
+//   &:focus {
+//     box-shadow: none;
+//   }
+// }

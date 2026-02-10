@@ -1,0 +1,106 @@
+@use "sass:map";
+@use "../../props/prefixes" as prefixes;
+
+// ============================================
+// Prefixes
+// ============================================
+$hue-red-var: --#{prefixes.$prefix}hue-red;
+$hue-orange-var: --#{prefixes.$prefix}hue-orange;
+$hue-yellow-var: --#{prefixes.$prefix}hue-yellow;
+$hue-lime-var: --#{prefixes.$prefix}hue-lime;
+$hue-green-var: --#{prefixes.$prefix}hue-green;
+$hue-teal-var: --#{prefixes.$prefix}hue-teal;
+$hue-cyan-var: --#{prefixes.$prefix}hue-cyan;
+$hue-blue-var: --#{prefixes.$prefix}hue-blue;
+$hue-indigo-var: --#{prefixes.$prefix}hue-indigo;
+$hue-violet-var: --#{prefixes.$prefix}hue-violet;
+$hue-purple-var: --#{prefixes.$prefix}hue-purple;
+$hue-pink-var: --#{prefixes.$prefix}hue-pink;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// HUE定義
+// HSL色相環に基づく標準値
+// threshold: アクセントカラー切り替え閾値（省略時はデフォルト50%）
+// ============================================
+$hues: (
+  "red": (
+    h: 0,
+    s: 100%,
+    threshold: 50%,
+    variant-name: #{$hue-red-var},
+  ),
+  "orange": (
+    h: 30,
+    s: 100%,
+    threshold: 40%,
+    variant-name: #{$hue-orange-var},
+  ),
+  "yellow": (
+    h: 50,
+    s: 100%,
+    threshold: 30%,
+    variant-name: #{$hue-yellow-var},
+  ),
+  "lime": (
+    h: 90,
+    s: 100%,
+    threshold: 30%,
+    variant-name: #{$hue-lime-var},
+  ),
+  "green": (
+    h: 125,
+    s: 100%,
+    threshold: 30%,
+    variant-name: #{$hue-green-var},
+  ),
+  "teal": (
+    h: 170,
+    s: 100%,
+    threshold: 40%,
+    variant-name: #{$hue-teal-var},
+  ),
+  "cyan": (
+    h: 190,
+    s: 100%,
+    threshold: 40%,
+    variant-name: #{$hue-cyan-var},
+  ),
+  "blue": (
+    h: 220,
+    s: 100%,
+    threshold: 50%,
+    variant-name: #{$hue-blue-var},
+  ),
+  "indigo": (
+    h: 240,
+    s: 100%,
+    threshold: 70%,
+    variant-name: #{$hue-indigo-var},
+  ),
+  "violet": (
+    h: 270,
+    s: 100%,
+    threshold: 70%,
+    variant-name: #{$hue-violet-var},
+  ),
+  "purple": (
+    h: 290,
+    s: 100%,
+    threshold: 50%,
+    variant-name: #{$hue-purple-var},
+  ),
+  "pink": (
+    h: 330,
+    s: 100%,
+    threshold: 55%,
+    variant-name: #{$hue-pink-var},
+  ),
+);
+:root {
+  @each $key, $value in $hues {
+    #{map.get($value, variant-name)}: #{map.get($value, h)};
+  }
+}
