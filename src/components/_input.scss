@@ -64,7 +64,10 @@ $form-input-gap-var: --form-input-gap !default;
   #{$input-border-width-var}: 1px;
   #{$input-border-radius-var}: 0.25rem;
 
-  #{$input-transition-var}: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  #{$input-transition-var}:
+    border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   // Form wrapper gap
   #{$form-input-gap-var}: 0.5rem;
@@ -128,7 +131,8 @@ textarea.#{$input-class-name} {
     outline: none;
     background-color: var(#{$input-bg-focus-var});
     border-color: var(#{$input-border-color-focus-var});
-    box-shadow: 0 0 0 var(#{$input-focus-ring-width-var}) var(#{$input-focus-ring-color-var});
+    box-shadow: 0 0 0 var(#{$input-focus-ring-width-var})
+      var(#{$input-focus-ring-color-var});
   }
 
   // ----------------------------------------
@@ -225,12 +229,14 @@ textarea.input-resize-both {
 
   &:first-child {
     border-right: 0;
-    border-radius: var(#{$input-border-radius-var}) 0 0 var(#{$input-border-radius-var});
+    border-radius: var(#{$input-border-radius-var}) 0 0
+      var(#{$input-border-radius-var});
   }
 
   &:last-child {
     border-left: 0;
-    border-radius: 0 var(#{$input-border-radius-var}) var(#{$input-border-radius-var}) 0;
+    border-radius: 0 var(#{$input-border-radius-var})
+      var(#{$input-border-radius-var}) 0;
   }
 }
 
@@ -259,7 +265,7 @@ textarea.input-resize-both {
   }
 
   // Has left icon
-    &:has(.#{$input-class-name}-icon-left) > .#{$input-class-name} {
+  &:has(.#{$input-class-name}-icon-left) > .#{$input-class-name} {
     padding-left: calc(var(#{$input-padding-x-var}) * 2 + 1em);
   }
 
@@ -281,8 +287,12 @@ textarea.input-resize-both {
   pointer-events: none;
 }
 
-.#{$input-class-name}-icon-left { left: 0; }
-.#{$input-class-name}-icon-right { right: 0; }
+.#{$input-class-name}-icon-left {
+  left: 0;
+}
+.#{$input-class-name}-icon-right {
+  right: 0;
+}
 
 // Clickable icon (e.g., clear button, password toggle)
 .#{$input-class-name}-icon-clickable {

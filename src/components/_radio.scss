@@ -61,7 +61,8 @@ $form-radio-label-color-var: --form-radio-label-color !default;
 
   // Transition
   #{$radio-transition-var}:
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 
   // ----------------------------------------
@@ -94,8 +95,7 @@ input[type="radio"].#{$radio-class-name} {
   vertical-align: middle;
 
   // Border (always circular for radio)
-  border: var(#{$radio-border-width-var}) solid
-    var(#{$radio-border-color-var});
+  border: var(#{$radio-border-width-var}) solid var(#{$radio-border-color-var});
   border-radius: 50%;
 
   // Background

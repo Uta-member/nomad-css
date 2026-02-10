@@ -56,7 +56,7 @@ $select-option-padding-var: --#{$select-prefix}option-padding !default;
   #{$select-bg-focus-var}: #ffffff;
   #{$select-border-color-focus-var}: #60a5fa;
   #{$select-focus-ring-width-var}: 2px;
-  #{$select-focus-ring-color-var}: rgba(96,165,250,0.25);
+  #{$select-focus-ring-color-var}: rgba(96, 165, 250, 0.25);
 
   #{$select-bg-disabled-var}: #f3f4f6;
   #{$select-color-disabled-var}: #9ca3af;
@@ -71,7 +71,10 @@ $select-option-padding-var: --#{$select-prefix}option-padding !default;
   #{$select-arrow-color-disabled-var}: #9ca3af;
   #{$select-arrow-padding-var}: 2.5rem;
 
-  #{$select-transition-var}: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  #{$select-transition-var}:
+    border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   #{$select-multiple-min-height-var}: 6rem;
   #{$select-option-padding-var}: 0.5rem 0.75rem;
@@ -105,7 +108,8 @@ select.select {
 
   // Size
   height: var(#{$select-height-var});
-  padding: var(#{$select-padding-y-var}) var(#{$select-arrow-padding-var}) var(#{$select-padding-y-var}) var(#{$select-padding-x-var});
+  padding: var(#{$select-padding-y-var}) var(#{$select-arrow-padding-var})
+    var(#{$select-padding-y-var}) var(#{$select-padding-x-var});
   font-size: var(#{$select-font-size-var});
   line-height: var(#{$select-line-height-var});
 
@@ -114,7 +118,8 @@ select.select {
   color: var(#{$select-color-var});
 
   // Border
-  border: var(#{$select-border-width-var}) solid var(#{$select-border-color-var});
+  border: var(#{$select-border-width-var}) solid
+    var(#{$select-border-color-var});
   border-radius: var(#{$select-border-radius-var});
 
   // Arrow icon
@@ -152,7 +157,8 @@ select.select {
     outline: none;
     background-color: var(#{$select-bg-focus-var});
     border-color: var(#{$select-border-color-focus-var});
-    box-shadow: 0 0 0 var(#{$select-focus-ring-width-var}) var(#{$select-focus-ring-color-var});
+    box-shadow: 0 0 0 var(#{$select-focus-ring-width-var})
+      var(#{$select-focus-ring-color-var});
   }
 
   // ----------------------------------------

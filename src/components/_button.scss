@@ -49,8 +49,10 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
   #{$button-gap-var}: 0.5rem;
   // Transition
   #{$button-transition-var}:
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   // Focus ring
   #{$button-focus-ring-width-var}: 2px;

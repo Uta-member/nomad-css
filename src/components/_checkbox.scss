@@ -67,7 +67,8 @@ $form-check-label-color-var: --form-check-label-color !default;
 
   // Transition
   #{$checkbox-transition-var}:
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 
   // ----------------------------------------
@@ -174,7 +175,6 @@ input[type="checkbox"].#{$checkbox-class-name} {
     opacity: var(#{$checkbox-disabled-opacity-var});
     cursor: not-allowed;
   }
-
 }
 
 // ============================================
