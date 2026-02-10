@@ -1,0 +1,88 @@
+@use "../props/prefixes" as *;
+// ============================================
+// Prefixes
+// ============================================
+// Prefixes
+$border-prefix: #{prefix}-border-;
+
+// Class Name
+$border-class-name: "border";
+
+// Variable Name
+$border-width-var: --#{border-prefix}width;
+$border-style-var: --#{border-prefix}style;
+$border-color-var: --#{border-prefix}color;
+
+.#{$border-class-name} {
+  #{$border-width-var}: 1px;
+  #{$border-style-var}: solid;
+  #{$border-color-var}: gray;
+}
+
+// ============================================
+// Border
+// ============================================
+.border {
+  border: var(#{$border-width-var}) var(#{$border-style-var})
+    var(#{$border-color-var});
+}
+.border-top {
+  border-top: var(#{$border-width-var}) var(#{$border-style-var})
+    var(#{$border-color-var});
+}
+.border-bottom {
+  border-bottom: var(#{$border-width-var}) var(#{$border-style-var})
+    var(#{$border-color-var});
+}
+.border-start {
+  border-left: var(#{$border-width-var}) var(#{$border-style-var})
+    var(#{$border-color-var});
+}
+.border-end {
+  border-right: var(#{$border-width-var}) var(#{$border-style-var})
+    var(#{$border-color-var});
+}
+// ============================================
+// Border Sizes
+// ============================================
+.border-top-0 {
+  border-top: none;
+}
+.border-bottom-0 {
+  border-bottom: none;
+}
+.border-start-0 {
+  border-left: none;
+}
+.border-end-0 {
+  border-right: none;
+}
+
+// ============================================
+// Border Radius
+// ============================================
+.rounded {
+  border-radius: 4px;
+}
+.rounded-circle {
+  border-radius: 50%;
+}
+.rounded-pill {
+  border-radius: 50rem;
+}
+.rounded-top-0 {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.rounded-bottom-0 {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.rounded-start-0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.rounded-end-0 {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
