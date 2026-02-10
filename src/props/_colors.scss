@@ -40,9 +40,9 @@ $palette-default-level-list: (
 ) !default;
 
 // アクセント輝度（明）
-$palette-accent-light: 97% !default;
+$palette-accent-light-lightness: 97% !default;
 // アクセント輝度（暗）
-$palette-accent-dark: 10% !default;
+$palette-accent-dark-lightness: 10% !default;
 // アクセント
 $palette-accent-default-threshold: 50% !default;
 // グレーの彩度
@@ -200,13 +200,13 @@ $palettes: (
       --#{$palette-accent-prefix}#{$key}: hsl(
         var(--#{$palette-hue-var}),
         var(--#{$palette-gray-saturation-var}),
-        var(--#{$palette-accent-dark-var})
+        var(--#{$palette-accent-dark-lightness-var})
       );
     } @else {
       --#{$palette-accent-prefix}#{$key}: hsl(
         var(--#{$palette-hue-var}),
         var(--#{$palette-gray-saturation-var}),
-        var(--#{$palette-accent-light-var})
+        var(--#{$palette-accent-light-lightness-var})
       );
     }
   }
@@ -223,7 +223,7 @@ $palettes: (
     --#{$palette-prefix}#{$level-name}: var(
       --#{$palette-color-prefix}#{$step-key}
     );
-    --#{$palette-prefix}#{$level-name}-accent: var(
+    --#{$palette-accent-prefix}#{$level-name}: var(
       --#{$palette-accent-prefix}#{$step-key}
     );
   }
@@ -245,8 +245,8 @@ $palettes: (
   .#{$prefix}#{$name} {
     --#{$palette-hue-var}: #{map.get($value, h)};
     --#{$palette-saturation-var}: #{map.get($value, s)};
-    --#{$palette-accent-light-var}: #{$palette-accent-light};
-    --#{$palette-accent-dark-var}: #{$palette-accent-dark};
+    --#{$palette-accent-light-lightness-var}: #{$palette-accent-light-lightness};
+    --#{$palette-accent-dark-lightness-var}: #{$palette-accent-dark-lightness};
     --#{$palette-gray-saturation-var}: #{$palette-gray-saturation};
 
     @include _generate-palette-colors(

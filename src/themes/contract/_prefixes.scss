@@ -1,0 +1,17 @@
+@use "../../props/prefixes" as prefixes;
+
+// ============================================
+// Palette Prefix
+// ============================================
+// Variant Names
+$palette-lighter-var: --#{prefixes.$palette-prefix}lighter;
+$palette-light-var: --#{prefixes.$palette-prefix}light;
+$palette-default-var: --#{prefixes.$palette-prefix}default;
+$palette-dark-var: --#{prefixes.$palette-prefix}dark;
+$palette-darker-var: --#{prefixes.$palette-prefix}darker;
+
+$palette-lighter-accent-var: --#{prefixes.$palette-accent-prefix}lighter;
+$palette-light-accent-var: --#{prefixes.$palette-accent-prefix}light;
+$palette-default-accent-var: --#{prefixes.$palette-accent-prefix}default;
+$palette-dark-accent-var: --#{prefixes.$palette-accent-prefix}dark;
+$palette-darker-accent-var: --#{prefixes.$palette-accent-prefix}darker;

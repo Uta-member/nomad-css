@@ -20,4 +20,6 @@ $palette-lightness-var: #{$palette-prefix}l- !default;
 $palette-gray-saturation-var: #{$palette-prefix}gs !default;
 $palette-accent-light-var: #{$palette-prefix}accent-light !default;
 $palette-accent-dark-var: #{$palette-prefix}accent-dark !default;
+$palette-accent-light-lightness-var: #{$palette-prefix}accent-light-l !default;
+$palette-accent-dark-lightness-var: #{$palette-prefix}accent-dark-l !default;
 $palette-accent-threshold-var: #{$palette-prefix}accent-threshold !default;

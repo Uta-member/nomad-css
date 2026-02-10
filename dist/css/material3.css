@@ -16,8 +16,8 @@
 .red {
   --palette-h: 0;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -143,86 +143,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -230,8 +230,8 @@
 .orange {
   --palette-h: 30;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -357,86 +357,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -444,8 +444,8 @@
 .yellow {
   --palette-h: 50;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -571,86 +571,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -658,8 +658,8 @@
 .lime {
   --palette-h: 90;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -785,86 +785,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -872,8 +872,8 @@
 .green {
   --palette-h: 125;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -999,86 +999,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -1086,8 +1086,8 @@
 .teal {
   --palette-h: 170;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -1213,86 +1213,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -1300,8 +1300,8 @@
 .cyan {
   --palette-h: 190;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -1427,86 +1427,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -1514,8 +1514,8 @@
 .blue {
   --palette-h: 220;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -1641,86 +1641,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -1728,8 +1728,8 @@
 .indigo {
   --palette-h: 240;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -1855,86 +1855,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -1942,8 +1942,8 @@
 .violet {
   --palette-h: 270;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -2069,86 +2069,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -2156,8 +2156,8 @@
 .purple {
   --palette-h: 290;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -2283,86 +2283,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -2370,8 +2370,8 @@
 .pink {
   --palette-h: 330;
   --palette-s: 100%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -2497,86 +2497,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -2584,8 +2584,8 @@
 .primary {
   --palette-h: var(--hue-blue);
   --palette-s: 80%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -2711,86 +2711,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -2798,8 +2798,8 @@
 .secondary {
   --palette-h: var(--hue-pink);
   --palette-s: 80%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -2925,86 +2925,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -3012,8 +3012,8 @@
 .tertiary {
   --palette-h: var(--hue-teal);
   --palette-s: 60%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -3139,86 +3139,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -3226,8 +3226,8 @@
 .success {
   --palette-h: var(--hue-green);
   --palette-s: 60%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -3353,86 +3353,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -3440,8 +3440,8 @@
 .warning {
   --palette-h: var(--hue-yellow);
   --palette-s: 80%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -3567,86 +3567,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -3654,8 +3654,8 @@
 .danger {
   --palette-h: var(--hue-red);
   --palette-s: 80%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -3781,86 +3781,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -3868,8 +3868,8 @@
 .info {
   --palette-h: var(--hue-cyan);
   --palette-s: 80%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -3995,86 +3995,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -4082,8 +4082,8 @@
 .neutral {
   --palette-h: var(--hue-blue);
   --palette-s: 5%;
-  --palette-accent-light: 97%;
-  --palette-accent-dark: 10%;
+  --palette-accent-light-l: 97%;
+  --palette-accent-dark-l: 10%;
   --palette-gs: 5%;
   --palette-l-0: 97%;
   --palette-l-1: 93%;
@@ -4209,86 +4209,86 @@
   --palette-accent-0: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-1: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-2: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-3: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-4: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-dark)
+    var(--palette-accent-dark-l)
   );
   --palette-accent-5: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-6: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-7: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-8: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-9: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-accent-10: hsl(
     var(--palette-h),
     var(--palette-gs),
-    var(--palette-accent-light)
+    var(--palette-accent-light-l)
   );
   --palette-lighter: var(
     --palette-color-2
   );
-  --palette-lighter-accent: var(
+  --palette-accent-lighter: var(
     --palette-accent-2
   );
   --palette-light: var(
     --palette-color-3
   );
-  --palette-light-accent: var(
+  --palette-accent-light: var(
     --palette-accent-3
   );
   --palette-default: var(
     --palette-color-5
   );
-  --palette-default-accent: var(
+  --palette-accent-default: var(
     --palette-accent-5
   );
   --palette-dark: var(
     --palette-color-7
   );
-  --palette-dark-accent: var(
+  --palette-accent-dark: var(
     --palette-accent-7
   );
   --palette-darker: var(
     --palette-color-9
   );
-  --palette-darker-accent: var(
+  --palette-accent-darker: var(
     --palette-accent-9
   );
 }
@@ -5736,4 +5736,101 @@ h6,
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.button {
+  --button-filled-bg: var(--palette-default);
+  --button-filled-bg-hover: var(--palette-dark);
+  --button-filled-bg-active: var(--palette-darker);
+  --button-filled-color: var(--palette-accent-default);
+  --button-filled-color-hover: var(--palette-accent-dark);
+  --button-filled-color-active: var(--palette-accent-darker);
+  --button-filled-border-color: transparent;
+  --button-filled-border-color-hover: transparent;
+  --button-filled-border-color-active: transparent;
+}
+
+.button {
+  --button-tonal-bg: var(--palette-lighter);
+  --button-tonal-bg-hover: var(--palette-light);
+  --button-tonal-bg-active: var(--palette-default);
+  --button-tonal-color: var(--palette-darker);
+  --button-tonal-color-hover: var(--palette-darker);
+  --button-tonal-color-active: var(--palette-accent-default);
+  --button-tonal-border-color: transparent;
+  --button-tonal-border-color-hover: transparent;
+  --button-tonal-border-color-active: transparent;
+}
+
+.button {
+  --button-outlined-bg: transparent;
+  --button-outlined-bg-hover: var(--palette-lighter);
+  --button-outlined-bg-active: var(--palette-light);
+  --button-outlined-color: var(--palette-default);
+  --button-outlined-color-hover: var(--palette-default);
+  --button-outlined-color-active: var(--palette-default);
+  --button-outlined-border-color: var(--palette-default);
+  --button-outlined-border-color-hover: var(--palette-default);
+  --button-outlined-border-color-active: var(--palette-default);
+}
+
+.button {
+  --button-text-bg: transparent;
+  --button-text-bg-hover: var(--palette-lighter);
+  --button-text-bg-active: var(--palette-light);
+  --button-text-color: var(--palette-default);
+  --button-text-color-hover: var(--palette-default);
+  --button-text-color-active: var(--palette-accent-light);
+  --button-text-border-color: transparent;
+  --button-text-border-color-hover: transparent;
+  --button-text-border-color-active: transparent;
+}
+
+.button,
+.button.filled {
+  --button-bg: var(--button-filled-bg);
+  --button-bg-hover: var(--button-filled-bg-hover);
+  --button-bg-active: var(--button-filled-bg-active);
+  --button-color: var(--button-filled-color);
+  --button-color-hover: var(--button-filled-color-hover);
+  --button-color-active: var(--button-filled-color-active);
+  --button-border-color: var(--button-filled-border-color);
+  --button-border-color-hover: var(--button-filled-border-color-hover);
+  --button-border-color-active: var(--button-filled-border-color-active);
+}
+
+.button.tonal {
+  --button-bg: var(--button-tonal-bg);
+  --button-bg-hover: var(--button-tonal-bg-hover);
+  --button-bg-active: var(--button-tonal-bg-active);
+  --button-color: var(--button-tonal-color);
+  --button-color-hover: var(--button-tonal-color-hover);
+  --button-color-active: var(--button-tonal-color-active);
+  --button-border-color: var(--button-tonal-border-color);
+  --button-border-color-hover: var(--button-tonal-border-color-hover);
+  --button-border-color-active: var(--button-tonal-border-color-active);
+}
+
+.button.outlined {
+  --button-bg: var(--button-outlined-bg);
+  --button-bg-hover: var(--button-outlined-bg-hover);
+  --button-bg-active: var(--button-outlined-bg-active);
+  --button-color: var(--button-outlined-color);
+  --button-color-hover: var(--button-outlined-color-hover);
+  --button-color-active: var(--button-outlined-color-active);
+  --button-border-color: var(--button-outlined-border-color);
+  --button-border-color-hover: var(--button-outlined-border-color-hover);
+  --button-border-color-active: var(--button-outlined-border-color-active);
+}
+
+.button.text {
+  --button-bg: var(--button-text-bg);
+  --button-bg-hover: var(--button-text-bg-hover);
+  --button-bg-active: var(--button-text-bg-active);
+  --button-color: var(--button-text-color);
+  --button-color-hover: var(--button-text-color-hover);
+  --button-color-active: var(--button-text-color-active);
+  --button-border-color: var(--button-text-border-color);
+  --button-border-color-hover: var(--button-text-border-color-hover);
+  --button-border-color-active: var(--button-text-border-color-active);
 }/*# sourceMappingURL=material3.css.map */

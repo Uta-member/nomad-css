@@ -1,0 +1,220 @@
+@use "../../../components/button" as buttons;
+@use "../../contract/prefixes" as prefixes;
+
+// ============================================
+// Prefixes
+// ============================================
+// Prefixes
+$button-filled-prefix: #{buttons.$button-prefix}filled-;
+$button-tonal-prefix: #{buttons.$button-prefix}tonal-;
+$button-outlined-prefix: #{buttons.$button-prefix}outlined-;
+$button-text-prefix: #{buttons.$button-prefix}text-;
+
+// Class Names
+$button-filled-class-name: filled;
+$button-tonal-class-name: tonal;
+$button-outlined-class-name: outlined;
+$button-text-class-name: text;
+
+// Variant Names
+// Filled
+$button-filled-bg-var: --#{$button-filled-prefix}bg;
+$button-filled-bg-hover-var: --#{$button-filled-prefix}bg-hover;
+$button-filled-bg-active-var: --#{$button-filled-prefix}bg-active;
+$button-filled-color-var: --#{$button-filled-prefix}color;
+$button-filled-color-hover-var: --#{$button-filled-prefix}color-hover;
+$button-filled-color-active-var: --#{$button-filled-prefix}color-active;
+$button-filled-border-color-var: --#{$button-filled-prefix}border-color;
+$button-filled-border-color-hover-var: --#{$button-filled-prefix}border-color-hover;
+$button-filled-border-color-active-var: --#{$button-filled-prefix}border-color-active;
+
+// Tonal
+$button-tonal-bg-var: --#{$button-tonal-prefix}bg;
+$button-tonal-bg-hover-var: --#{$button-tonal-prefix}bg-hover;
+$button-tonal-bg-active-var: --#{$button-tonal-prefix}bg-active;
+$button-tonal-color-var: --#{$button-tonal-prefix}color;
+$button-tonal-color-hover-var: --#{$button-tonal-prefix}color-hover;
+$button-tonal-color-active-var: --#{$button-tonal-prefix}color-active;
+$button-tonal-border-color-var: --#{$button-tonal-prefix}border-color;
+$button-tonal-border-color-hover-var: --#{$button-tonal-prefix}border-color-hover;
+$button-tonal-border-color-active-var: --#{$button-tonal-prefix}border-color-active;
+
+// Outlined
+$button-outlined-bg-var: --#{$button-outlined-prefix}bg;
+$button-outlined-bg-hover-var: --#{$button-outlined-prefix}bg-hover;
+$button-outlined-bg-active-var: --#{$button-outlined-prefix}bg-active;
+$button-outlined-color-var: --#{$button-outlined-prefix}color;
+$button-outlined-color-hover-var: --#{$button-outlined-prefix}color-hover;
+$button-outlined-color-active-var: --#{$button-outlined-prefix}color-active;
+$button-outlined-border-color-var: --#{$button-outlined-prefix}border-color;
+$button-outlined-border-color-hover-var: --#{$button-outlined-prefix}border-color-hover;
+$button-outlined-border-color-active-var: --#{$button-outlined-prefix}border-color-active;
+
+// Text
+$button-text-bg-var: --#{$button-text-prefix}bg;
+$button-text-bg-hover-var: --#{$button-text-prefix}bg-hover;
+$button-text-bg-active-var: --#{$button-text-prefix}bg-active;
+$button-text-color-var: --#{$button-text-prefix}color;
+$button-text-color-hover-var: --#{$button-text-prefix}color-hover;
+$button-text-color-active-var: --#{$button-text-prefix}color-active;
+$button-text-border-color-var: --#{$button-text-prefix}border-color;
+$button-text-border-color-hover-var: --#{$button-text-prefix}border-color-hover;
+$button-text-border-color-active-var: --#{$button-text-prefix}border-color-active;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variants
+// ============================================
+// --------------------------------------------
+// Filled
+// --------------------------------------------
+.#{buttons.$button-class-name} {
+  #{$button-filled-bg-var}: var(#{prefixes.$palette-default-var});
+  #{$button-filled-bg-hover-var}: var(#{prefixes.$palette-dark-var});
+  #{$button-filled-bg-active-var}: var(#{prefixes.$palette-darker-var});
+  #{$button-filled-color-var}: var(#{prefixes.$palette-default-accent-var});
+  #{$button-filled-color-hover-var}: var(#{prefixes.$palette-dark-accent-var});
+  #{$button-filled-color-active-var}: var(
+    #{prefixes.$palette-darker-accent-var}
+  );
+  #{$button-filled-border-color-var}: transparent;
+  #{$button-filled-border-color-hover-var}: transparent;
+  #{$button-filled-border-color-active-var}: transparent;
+}
+
+// --------------------------------------------
+// Tonal
+// --------------------------------------------
+.#{buttons.$button-class-name} {
+  #{$button-tonal-bg-var}: var(#{prefixes.$palette-lighter-var});
+  #{$button-tonal-bg-hover-var}: var(#{prefixes.$palette-light-var});
+  #{$button-tonal-bg-active-var}: var(#{prefixes.$palette-default-var});
+  #{$button-tonal-color-var}: var(#{prefixes.$palette-darker-var});
+  #{$button-tonal-color-hover-var}: var(#{prefixes.$palette-darker-var});
+  #{$button-tonal-color-active-var}: var(
+    #{prefixes.$palette-default-accent-var}
+  );
+  #{$button-tonal-border-color-var}: transparent;
+  #{$button-tonal-border-color-hover-var}: transparent;
+  #{$button-tonal-border-color-active-var}: transparent;
+}
+
+// --------------------------------------------
+// Outlined
+// --------------------------------------------
+.#{buttons.$button-class-name} {
+  #{$button-outlined-bg-var}: transparent;
+  #{$button-outlined-bg-hover-var}: var(#{prefixes.$palette-lighter-var});
+  #{$button-outlined-bg-active-var}: var(#{prefixes.$palette-light-var});
+  #{$button-outlined-color-var}: var(#{prefixes.$palette-default-var});
+  #{$button-outlined-color-hover-var}: var(#{prefixes.$palette-default-var});
+  #{$button-outlined-color-active-var}: var(#{prefixes.$palette-default-var});
+  #{$button-outlined-border-color-var}: var(#{prefixes.$palette-default-var});
+  #{$button-outlined-border-color-hover-var}: var(
+    #{prefixes.$palette-default-var}
+  );
+  #{$button-outlined-border-color-active-var}: var(
+    #{prefixes.$palette-default-var}
+  );
+}
+
+// --------------------------------------------
+// Text
+// --------------------------------------------
+.#{buttons.$button-class-name} {
+  #{$button-text-bg-var}: transparent;
+  #{$button-text-bg-hover-var}: var(#{prefixes.$palette-lighter-var});
+  #{$button-text-bg-active-var}: var(#{prefixes.$palette-light-var});
+  #{$button-text-color-var}: var(#{prefixes.$palette-default-var});
+  #{$button-text-color-hover-var}: var(#{prefixes.$palette-default-var});
+  #{$button-text-color-active-var}: var(#{prefixes.$palette-light-accent-var});
+  #{$button-text-border-color-var}: transparent;
+  #{$button-text-border-color-hover-var}: transparent;
+  #{$button-text-border-color-active-var}: transparent;
+}
+
+// ============================================
+// Classes
+// ============================================
+// --------------------------------------------
+// Filled
+// --------------------------------------------
+.#{buttons.$button-class-name},
+.#{buttons.$button-class-name}.#{$button-filled-class-name} {
+  #{buttons.$button-bg-var}: var(#{$button-filled-bg-var});
+  #{buttons.$button-bg-hover-var}: var(#{$button-filled-bg-hover-var});
+  #{buttons.$button-bg-active-var}: var(#{$button-filled-bg-active-var});
+  #{buttons.$button-color-var}: var(#{$button-filled-color-var});
+  #{buttons.$button-color-hover-var}: var(#{$button-filled-color-hover-var});
+  #{buttons.$button-color-active-var}: var(#{$button-filled-color-active-var});
+  #{buttons.$button-border-color-var}: var(#{$button-filled-border-color-var});
+  #{buttons.$button-border-color-hover-var}: var(
+    #{$button-filled-border-color-hover-var}
+  );
+  #{buttons.$button-border-color-active-var}: var(
+    #{$button-filled-border-color-active-var}
+  );
+}
+
+// --------------------------------------------
+// Tonal
+// --------------------------------------------
+.#{buttons.$button-class-name}.#{$button-tonal-class-name} {
+  #{buttons.$button-bg-var}: var(#{$button-tonal-bg-var});
+  #{buttons.$button-bg-hover-var}: var(#{$button-tonal-bg-hover-var});
+  #{buttons.$button-bg-active-var}: var(#{$button-tonal-bg-active-var});
+  #{buttons.$button-color-var}: var(#{$button-tonal-color-var});
+  #{buttons.$button-color-hover-var}: var(#{$button-tonal-color-hover-var});
+  #{buttons.$button-color-active-var}: var(#{$button-tonal-color-active-var});
+  #{buttons.$button-border-color-var}: var(#{$button-tonal-border-color-var});
+  #{buttons.$button-border-color-hover-var}: var(
+    #{$button-tonal-border-color-hover-var}
+  );
+  #{buttons.$button-border-color-active-var}: var(
+    #{$button-tonal-border-color-active-var}
+  );
+}
+
+// --------------------------------------------
+// Outlined
+// --------------------------------------------
+.#{buttons.$button-class-name}.#{$button-outlined-class-name} {
+  #{buttons.$button-bg-var}: var(#{$button-outlined-bg-var});
+  #{buttons.$button-bg-hover-var}: var(#{$button-outlined-bg-hover-var});
+  #{buttons.$button-bg-active-var}: var(#{$button-outlined-bg-active-var});
+  #{buttons.$button-color-var}: var(#{$button-outlined-color-var});
+  #{buttons.$button-color-hover-var}: var(#{$button-outlined-color-hover-var});
+  #{buttons.$button-color-active-var}: var(
+    #{$button-outlined-color-active-var}
+  );
+  #{buttons.$button-border-color-var}: var(
+    #{$button-outlined-border-color-var}
+  );
+  #{buttons.$button-border-color-hover-var}: var(
+    #{$button-outlined-border-color-hover-var}
+  );
+  #{buttons.$button-border-color-active-var}: var(
+    #{$button-outlined-border-color-active-var}
+  );
+}
+
+// --------------------------------------------
+// Text
+// --------------------------------------------
+.#{buttons.$button-class-name}.#{$button-text-class-name} {
+  #{buttons.$button-bg-var}: var(#{$button-text-bg-var});
+  #{buttons.$button-bg-hover-var}: var(#{$button-text-bg-hover-var});
+  #{buttons.$button-bg-active-var}: var(#{$button-text-bg-active-var});
+  #{buttons.$button-color-var}: var(#{$button-text-color-var});
+  #{buttons.$button-color-hover-var}: var(#{$button-text-color-hover-var});
+  #{buttons.$button-color-active-var}: var(#{$button-text-color-active-var});
+  #{buttons.$button-border-color-var}: var(#{$button-text-border-color-var});
+  #{buttons.$button-border-color-hover-var}: var(
+    #{$button-text-border-color-hover-var}
+  );
+  #{buttons.$button-border-color-active-var}: var(
+    #{$button-text-border-color-active-var}
+  );
+}

@@ -7,8 +7,9 @@
 @use "../../props/colors" as colors with (
   $palettes: map.merge(hue-colors.$hues, semantics.$semantic-colors)
 );
-@use "../../components/components";
+@use "../../components/components" as core-components;
 @use "../../utilities/utilities";
+@use "components/components" as components;
 
 // ============================================
 // Common Contract Variables
