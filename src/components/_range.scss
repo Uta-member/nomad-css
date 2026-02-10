@@ -1,11 +1,15 @@
+@use "../props/prefixes" as *;
+
 // ============================================
-// Range: SCSS-configurable class and CSS variable names
-// Core exposes minimal CSS variables; themes/apps override them.
+// Prefixes
 // ============================================
-$range-prefix: "range-" !default;
+// Prefixes
+$range-prefix: #{$prefix}range- !default;
+
+// Class Names
 $range-class-name: "range" !default;
 
-// CSS variable names
+// Variable Names
 $range-size-var: --#{$range-prefix}size !default;
 $range-track-height-var: --#{$range-prefix}track-height !default;
 $range-track-bg-var: --#{$range-prefix}track-bg !default;
@@ -35,7 +39,12 @@ $range-focus-ring-color-var: --#{$range-prefix}focus-ring-color !default;
 $range-disabled-opacity-var: --#{$range-prefix}disabled-opacity !default;
 $range-transition-var: --#{$range-prefix}transition !default;
 
-// Default values attached to component namespace
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
 .#{$range-class-name} {
   #{$range-size-var}: 1.25rem;
   #{$range-track-height-var}: calc(var(#{$range-size-var}) * 0.4);
@@ -72,7 +81,7 @@ $range-transition-var: --#{$range-prefix}transition !default;
 }
 
 // ============================================
-// Base Range Styles
+// Range
 // ============================================
 // デフォルトで0%から現在値までの塗りつぶしを表示（HTML標準と同様）
 // --range-fill-percent をJSで更新して動的に反映

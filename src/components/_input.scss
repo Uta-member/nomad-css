@@ -1,10 +1,15 @@
+@use "../props/prefixes" as *;
+
 // ============================================
-// Component variable names and defaults
+// Prefixes
 // ============================================
-$input-prefix: "input-" !default;
+// Prefixes
+$input-prefix: #{$prefix}input- !default;
+
+// Class Names
 $input-class-name: "input" !default;
 
-// CSS variable names (SCSS variables referencing CSS custom properties)
+// Variable Names
 $input-height-var: --#{$input-prefix}height !default;
 $input-padding-x-var: --#{$input-prefix}padding-x !default;
 $input-padding-y-var: --#{$input-prefix}padding-y !default;
@@ -31,7 +36,12 @@ $input-border-radius-var: --#{$input-prefix}border-radius !default;
 $input-transition-var: --#{$input-prefix}transition !default;
 $form-input-gap-var: --form-input-gap !default;
 
-// Default CSS variable values attached to the component namespace
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
 .#{$input-class-name} {
   #{$input-height-var}: 2.5rem;
   #{$input-padding-x-var}: 0.75rem;
@@ -74,7 +84,7 @@ $form-input-gap-var: --form-input-gap !default;
 }
 
 // ============================================
-// Base Input Styles
+// Input
 // ============================================
 .#{$input-class-name},
 input.#{$input-class-name},
@@ -158,7 +168,7 @@ textarea.#{$input-class-name} {
 }
 
 // ============================================
-// Textarea Specific
+// Textarea
 // ============================================
 textarea.#{$input-class-name} {
   height: auto;
@@ -182,7 +192,7 @@ textarea.input-resize-both {
 }
 
 // ============================================
-// Input Group (for icons, addons, etc.)
+// Input Group
 // ============================================
 // Usage:
 // <div class="input-group">
@@ -357,5 +367,3 @@ textarea.input-resize-both {
     margin-bottom: 0;
   }
 }
-
-// Validation is handled at theme/application layer; core does not provide validation styles.

@@ -1,37 +1,75 @@
-// =============================================================================
-// Base Table
-// =============================================================================
+@use "../props/prefixes" as *;
 
-.table {
-  --table-bg: var(--#{$table-prefix}bg);
-  --table-color: var(--#{$table-prefix}color);
-  --table-border-color: var(--#{$table-prefix}border-color);
-  --table-striped-bg: var(--#{$table-prefix}striped-bg);
-  --table-striped-color: var(--#{$table-prefix}striped-color);
-  --table-hover-bg: var(--#{$table-prefix}hover-bg);
-  --table-hover-color: var(--#{$table-prefix}hover-color);
-  --table-active-bg: var(--#{$table-prefix}active-bg);
-  --table-active-color: var(--#{$table-prefix}active-color);
+// ============================================
+// Prefixes
+// ============================================
+// Prefixes
+$table-prefix: #{$prefix}table-;
 
+// Class Names
+$table-class-name: "table";
+
+// Variable Names
+$table-bg-var: --#{$table-prefix}bg;
+$table-color-var: --#{table-prefix}color;
+$table-border-color-var: --#{table-prefix}border-color;
+$table-striped-bg-var: --#{table-prefix}striped-bg;
+$table-striped-color-var: --#{table-prefix}striped-color;
+$table-hover-bg-var: --#{table-prefix}hover-bg;
+$table-hover-color-var: --#{table-prefix}hover-color;
+$table-active-bg-var: --#{table-prefix}active-bg;
+$table-active-color-var: --#{table-prefix}active-color;
+$table-cell-padding-x-var: --#{$table-prefix}cell-padding-x;
+$table-cell-padding-y-var: --#{$table-prefix}cell-padding-y;
+$table-border-width-var: --#{$table-prefix}border-width;
+$table-th-font-weight-var: --#{$table-prefix}th-font-weight;
+$table-group-separator-colot-var: --#{$table-prefix}group-separator-color;
+$table-caption-color-var: --#{$table-prefix}caption-color;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$table-class-name} {
+  #{$table-bg-var}: transparent;
+  #{$table-color-var}: inherit;
+  #{$table-border-color-var}: transparent;
+  #{$table-hover-bg-var}: transparent;
+  #{$table-hover-color-var}: inherit;
+  #{$table-active-bg-var}: transparent;
+  #{$table-active-color-var}: inherit;
+  #{$table-cell-padding-x-var}: 10px;
+  #{$table-cell-padding-y-var}: 20px;
+  #{$table-border-width-var}: 1px;
+  #{$table-th-font-weight-var}: 300;
+  #{$table-group-separator-colot-var}: transparent;
+  #{table-caption-color-var}: inherit;
+}
+
+// ============================================
+// Table
+// ============================================
+.#{$table-class-name} {
   width: 100%;
   margin-bottom: 1rem;
   vertical-align: top;
-  border-color: var(--table-border-color);
-  color: var(--table-color);
-  background-color: var(--table-bg);
+  border-color: var(#{$table-border-color-var});
+  color: var(#{$table-color-var});
+  background-color: var(#{$table-bg-var});
 
   // Table cells
   > :not(caption) > * > * {
-    padding: var(--#{$table-prefix}cell-padding-y)
-      var(--#{$table-prefix}cell-padding-x);
-    border-bottom-width: var(--#{$table-prefix}border-width);
+    padding: var(#{$table-cell-padding-y-var}) var(#{$table-cell-padding-x-var});
+    border-bottom-width: var(#{$table-border-width-var});
     border-bottom-style: solid;
-    border-bottom-color: var(--table-border-color);
+    border-bottom-color: var(#{$table-border-color-var});
   }
 
   // Header cells
   > thead > tr > th {
-    font-weight: var(--#{$table-prefix}th-font-weight);
+    font-weight: var(#{$table-th-font-weight-var});
     text-align: inherit;
     vertical-align: bottom;
   }
@@ -52,8 +90,8 @@
 // =============================================================================
 
 .table-group-divider {
-  border-top: calc(var(--#{$table-prefix}border-width) * 2) solid
-    var(--#{$table-prefix}group-separator-color);
+  border-top: calc(var(#{$table-border-width-var}) * 2) solid
+    var(#{$table-group-separator-colot-var});
 }
 
 // =============================================================================
@@ -61,9 +99,9 @@
 // =============================================================================
 
 .table > caption {
-  padding-top: var(--#{$table-prefix}cell-padding-y);
-  padding-bottom: var(--#{$table-prefix}cell-padding-y);
-  color: var(--#{$table-prefix}caption-color);
+  padding-top: var(#{$table-cell-padding-y-var});
+  padding-bottom: var(#{$table-cell-padding-y-var});
+  color: var(#{$table-caption-color-var});
   text-align: left;
   caption-side: bottom;
 }
@@ -73,90 +111,13 @@
 }
 
 // =============================================================================
-// Small Table
-// =============================================================================
-
-.table-sm {
-  > :not(caption) > * > * {
-    padding: var(--#{$table-prefix}cell-padding-y-sm)
-      var(--#{$table-prefix}cell-padding-x-sm);
-  }
-}
-
-// =============================================================================
-// Bordered Table
-// =============================================================================
-
-.table-bordered {
-  > :not(caption) > * {
-    border-width: var(--#{$table-prefix}border-width) 0;
-
-    > * {
-      border-width: 0 var(--#{$table-prefix}border-width);
-      border-style: solid;
-      border-color: var(--table-border-color);
-    }
-  }
-}
-
-// =============================================================================
-// Borderless Table
-// =============================================================================
-
-.table-borderless {
-  > :not(caption) > * > * {
-    border-bottom-width: 0;
-  }
-
-  > :not(:first-child) {
-    border-top-width: 0;
-  }
-}
-
-// =============================================================================
-// Striped Rows
-// =============================================================================
-
-.table-striped {
-  > tbody > tr:nth-of-type(odd) > * {
-    background-color: var(--table-striped-bg);
-    color: var(--table-striped-color);
-  }
-}
-
-.table-striped-even {
-  > tbody > tr:nth-of-type(even) > * {
-    background-color: var(--table-striped-bg);
-    color: var(--table-striped-color);
-  }
-}
-
-// =============================================================================
-// Striped Columns
-// =============================================================================
-
-.table-striped-columns {
-  > :not(caption) > tr > :nth-child(odd) {
-    background-color: var(--table-striped-bg);
-    color: var(--table-striped-color);
-  }
-}
-
-.table-striped-columns-even {
-  > :not(caption) > tr > :nth-child(even) {
-    background-color: var(--table-striped-bg);
-    color: var(--table-striped-color);
-  }
-}
-
-// =============================================================================
 // Hover Effect
 // =============================================================================
 
 .table-hover {
   > tbody > tr:hover > * {
-    background-color: var(--table-hover-bg);
-    color: var(--table-hover-color);
+    background-color: var(#{$table-hover-bg-var});
+    color: var(#{table-hover-color-var});
   }
 }
 
@@ -166,8 +127,8 @@
 
 .table-active {
   > * {
-    background-color: var(--table-active-bg);
-    color: var(--table-active-color);
+    background-color: var(#{$table-active-bg-var});
+    color: var(#{$table-active-color-var});
   }
 }
 
@@ -175,154 +136,8 @@
 .table > tbody > tr.active > *,
 .table > tbody > tr > td.active,
 .table > tbody > tr > th.active {
-  background-color: var(--#{$table-prefix}active-bg);
-  color: var(--#{$table-prefix}active-color);
-}
-
-// =============================================================================
-// Semantic Color Variants
-// These use $semantic-colors defined in props/_defines.scss.
-// The actual semantic color definitions are injected from the theme layer.
-// =============================================================================
-
-@each $name, $values in $semantic-colors {
-  .table-#{$name} {
-    --table-bg: hsla(
-      var(--#{$semantic-prefix}#{$name}-h),
-      var(--#{$semantic-prefix}#{$name}-s),
-      50%,
-      0.15
-    );
-    --table-color: inherit;
-    --table-border-color: hsla(
-      var(--#{$semantic-prefix}#{$name}-h),
-      var(--#{$semantic-prefix}#{$name}-s),
-      50%,
-      0.3
-    );
-    --table-striped-bg: hsla(
-      var(--#{$semantic-prefix}#{$name}-h),
-      var(--#{$semantic-prefix}#{$name}-s),
-      50%,
-      0.25
-    );
-    --table-hover-bg: hsla(
-      var(--#{$semantic-prefix}#{$name}-h),
-      var(--#{$semantic-prefix}#{$name}-s),
-      50%,
-      0.35
-    );
-  }
-
-  // Row/Cell variants
-  .table > tbody > tr.table-#{$name} > *,
-  .table > tbody > tr > td.table-#{$name},
-  .table > tbody > tr > th.table-#{$name} {
-    background-color: hsla(
-      var(--#{$semantic-prefix}#{$name}-h),
-      var(--#{$semantic-prefix}#{$name}-s),
-      50%,
-      0.15
-    );
-  }
-}
-
-// =============================================================================
-// Neutral Variants (Light/Dark)
-// These also use CSS variables for theme flexibility
-// =============================================================================
-
-.table-light {
-  --table-bg: var(--#{$table-prefix}light-bg, hsl(0, 0%, 97%));
-  --table-color: var(--#{$table-prefix}light-color, inherit);
-  --table-border-color: var(
-    --#{$table-prefix}light-border-color,
-    hsl(0, 0%, 90%)
-  );
-  --table-striped-bg: var(
-    --#{$table-prefix}light-striped-bg,
-    hsla(0, 0%, 0%, 0.05)
-  );
-  --table-hover-bg: var(
-    --#{$table-prefix}light-hover-bg,
-    hsla(0, 0%, 0%, 0.075)
-  );
-}
-
-.table > tbody > tr.table-light > *,
-.table > tbody > tr > td.table-light,
-.table > tbody > tr > th.table-light {
-  background-color: var(--#{$table-prefix}light-bg, hsl(0, 0%, 97%));
-}
-
-.table-dark {
-  --table-bg: var(--#{$table-prefix}dark-bg, hsl(0, 0%, 20%));
-  --table-color: var(--#{$table-prefix}dark-color, hsl(0, 0%, 95%));
-  --table-border-color: var(
-    --#{$table-prefix}dark-border-color,
-    hsl(0, 0%, 35%)
-  );
-  --table-striped-bg: var(
-    --#{$table-prefix}dark-striped-bg,
-    hsla(0, 0%, 100%, 0.05)
-  );
-  --table-hover-bg: var(
-    --#{$table-prefix}dark-hover-bg,
-    hsla(0, 0%, 100%, 0.075)
-  );
-}
-
-.table > tbody > tr.table-dark > *,
-.table > tbody > tr > td.table-dark,
-.table > tbody > tr > th.table-dark {
-  background-color: var(--#{$table-prefix}dark-bg, hsl(0, 0%, 20%));
-  color: var(--#{$table-prefix}dark-color, hsl(0, 0%, 95%));
-}
-
-// =============================================================================
-// Responsive Tables
-// =============================================================================
-
-.table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-// Responsive breakpoint variants
-// These can be customized per theme or used with breakpoint mixins
-.table-responsive-sm {
-  @media (max-width: 575.98px) {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-.table-responsive-md {
-  @media (max-width: 767.98px) {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-.table-responsive-lg {
-  @media (max-width: 991.98px) {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-.table-responsive-xl {
-  @media (max-width: 1199.98px) {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-.table-responsive-xxl {
-  @media (max-width: 1399.98px) {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+  background-color: var(#{$table-active-bg-var});
+  color: var(#{$table-active-color-var});
 }
 
 // =============================================================================

@@ -1,22 +1,31 @@
+@use "../props/prefixes" as *;
+
 // ============================================
-// Prefixes / class names / CSS variable names
+// Prefixes
 // ============================================
-$icon-prefix: "icon-" !default;
+// Prefixes
+$icon-prefix: #{$prefix}icon- !default;
+
+// Class Names
 $icon-class-name: "icon" !default;
+
+// Variable Names
 $icon-size-var: --#{$icon-prefix}size !default;
 $icon-gap-var: --#{$icon-prefix}gap !default;
 
-// Default CSS variable values (attached to the component namespace)
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
 .#{$icon-class-name} {
-  // Default icon size
   #{$icon-size-var}: 1.5rem;
-
-  // Gap between icon and text (used in buttons, etc.)
   #{$icon-gap-var}: 0.5rem;
 }
 
 // ============================================
-// Base Icon Class
+// Icon
 // ============================================
 .#{$icon-class-name} {
   // Display properties
@@ -59,8 +68,6 @@ $icon-gap-var: --#{$icon-prefix}gap !default;
     object-fit: contain;
   }
 }
-
-// Size variants are defined in theme layer; core exposes a single size variable
 
 // ============================================
 // Icon Spin Animation
@@ -124,7 +131,6 @@ $icon-gap-var: --#{$icon-prefix}gap !default;
 // ============================================
 // Icon + Text Alignment Helper
 // ============================================
-// Use inside flex containers for proper icon-text alignment
 .#{$icon-class-name}-text {
   display: inline-flex;
   align-items: center;

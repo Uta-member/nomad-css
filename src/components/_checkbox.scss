@@ -1,10 +1,15 @@
+@use "../props/prefixes" as *;
+
 // ============================================
 // Prefixes
 // ============================================
-$checkbox-prefix: "checkbox-" !default;
+// Prefixes
+$checkbox-prefix: #{$prefix}checkbox- !default;
+
+// Class Names
 $checkbox-class-name: "checkbox" !default;
 
-// Variables
+// Variable Names
 $checkbox-size-var: --#{$checkbox-prefix}size !default;
 $checkbox-border-width-var: --#{$checkbox-prefix}border-width !default;
 $checkbox-border-radius-var: --#{$checkbox-prefix}border-radius !default;
@@ -29,9 +34,8 @@ $form-check-label-color-var: --form-check-label-color !default;
 // ============================================
 // Process
 // ============================================
-
 // ============================================
-// CSS Variables (defaults in :root)
+// CSS Variant
 // ============================================
 .#{$checkbox-class-name} {
   // Size
@@ -71,9 +75,7 @@ $form-check-label-color-var: --form-check-label-color !default;
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 
-  // ----------------------------------------
   // Form Check (label wrapper) Variables
-  // ----------------------------------------
   #{$form-check-gap-var}: 0.5rem;
   #{$form-check-label-color-var}: inherit;
 }

@@ -7,7 +7,9 @@
   --button-font-weight: 500;
   --button-line-height: 1.5;
   --button-gap: 0.5rem;
-  --button-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --button-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --button-focus-ring-width: 2px;
   --button-focus-ring-offset: 2px;
   --button-focus-ring-color: transparent;
@@ -25,8 +27,8 @@
 
 .button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   background: none;
   cursor: pointer;
@@ -64,7 +66,8 @@
   outline: var(--button-focus-ring-width) solid var(--button-focus-ring-color);
   outline-offset: var(--button-focus-ring-offset);
 }
-.button:disabled, .button.disabled {
+.button:disabled,
+.button.disabled {
   opacity: var(--button-disabled-opacity);
   cursor: not-allowed;
   pointer-events: none;
@@ -120,13 +123,15 @@
   --checkbox-focus-ring-offset: 2px;
   --checkbox-focus-ring-color: transparent;
   --checkbox-disabled-opacity: 0.5;
-  --checkbox-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --checkbox-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   --form-check-gap: 0.5rem;
   --form-check-label-color: inherit;
 }
 
 .checkbox,
-input[type=checkbox].checkbox {
+input[type="checkbox"].checkbox {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -145,37 +150,39 @@ input[type=checkbox].checkbox {
   transition: var(--checkbox-transition);
 }
 .checkbox:hover:not(:disabled):not(:checked),
-input[type=checkbox].checkbox:hover:not(:disabled):not(:checked) {
+input[type="checkbox"].checkbox:hover:not(:disabled):not(:checked) {
   background-color: var(--checkbox-bg-hover);
   border-color: var(--checkbox-border-color-hover);
 }
 .checkbox:focus-visible,
-input[type=checkbox].checkbox:focus-visible {
-  outline: var(--checkbox-focus-ring-width) solid var(--checkbox-focus-ring-color);
+input[type="checkbox"].checkbox:focus-visible {
+  outline: var(--checkbox-focus-ring-width) solid
+    var(--checkbox-focus-ring-color);
   outline-offset: var(--checkbox-focus-ring-offset);
 }
 .checkbox:checked,
-input[type=checkbox].checkbox:checked {
+input[type="checkbox"].checkbox:checked {
   background-color: var(--checkbox-bg-checked);
   border-color: var(--checkbox-border-color-checked);
 }
 .checkbox:checked::after,
-input[type=checkbox].checkbox:checked::after {
+input[type="checkbox"].checkbox:checked::after {
   content: "";
   display: block;
   width: calc(var(--checkbox-size) * 0.3);
   height: calc(var(--checkbox-size) * 0.55);
   border: solid var(--checkbox-checkmark-color);
-  border-width: 0 var(--checkbox-checkmark-width) var(--checkbox-checkmark-width) 0;
+  border-width: 0 var(--checkbox-checkmark-width)
+    var(--checkbox-checkmark-width) 0;
   transform: rotate(45deg) translateX(-5%) translateY(-5%);
 }
 .checkbox:indeterminate,
-input[type=checkbox].checkbox:indeterminate {
+input[type="checkbox"].checkbox:indeterminate {
   background-color: var(--checkbox-bg-checked);
   border-color: var(--checkbox-border-color-checked);
 }
 .checkbox:indeterminate::after,
-input[type=checkbox].checkbox:indeterminate::after {
+input[type="checkbox"].checkbox:indeterminate::after {
   content: "";
   display: block;
   width: calc(var(--checkbox-size) * 0.5);
@@ -183,7 +190,7 @@ input[type=checkbox].checkbox:indeterminate::after {
   background-color: var(--checkbox-indeterminate-color);
 }
 .checkbox:disabled,
-input[type=checkbox].checkbox:disabled {
+input[type="checkbox"].checkbox:disabled {
   opacity: var(--checkbox-disabled-opacity);
   cursor: not-allowed;
 }
@@ -230,13 +237,15 @@ input[type=checkbox].checkbox:disabled {
   --radio-focus-ring-offset: 2px;
   --radio-focus-ring-color: transparent;
   --radio-disabled-opacity: 0.5;
-  --radio-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --radio-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   --form-radio-gap: 0.5rem;
   --form-radio-label-color: inherit;
 }
 
 .radio,
-input[type=radio].radio {
+input[type="radio"].radio {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -255,22 +264,22 @@ input[type=radio].radio {
   transition: var(--radio-transition);
 }
 .radio:hover:not(:disabled):not(:checked),
-input[type=radio].radio:hover:not(:disabled):not(:checked) {
+input[type="radio"].radio:hover:not(:disabled):not(:checked) {
   background-color: var(--radio-bg-hover);
   border-color: var(--radio-border-color-hover);
 }
 .radio:focus-visible,
-input[type=radio].radio:focus-visible {
+input[type="radio"].radio:focus-visible {
   outline: var(--radio-focus-ring-width) solid var(--radio-focus-ring-color);
   outline-offset: var(--radio-focus-ring-offset);
 }
 .radio:checked,
-input[type=radio].radio:checked {
+input[type="radio"].radio:checked {
   background-color: var(--radio-bg-checked);
   border-color: var(--radio-border-color-checked);
 }
 .radio:checked::after,
-input[type=radio].radio:checked::after {
+input[type="radio"].radio:checked::after {
   content: "";
   display: block;
   width: var(--radio-dot-size);
@@ -279,7 +288,7 @@ input[type=radio].radio:checked::after {
   background-color: var(--radio-dot-color);
 }
 .radio:disabled,
-input[type=radio].radio:disabled {
+input[type="radio"].radio:disabled {
   opacity: var(--radio-disabled-opacity);
   cursor: not-allowed;
 }
@@ -334,7 +343,9 @@ input[type=radio].radio:disabled {
   --input-border-color-readonly: transparent;
   --input-border-width: 1px;
   --input-border-radius: 0.25rem;
-  --input-transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --input-transition:
+    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   --form-input-gap: 0.5rem;
 }
 
@@ -357,7 +368,9 @@ textarea.input {
   transition: var(--input-transition);
   font-family: inherit;
 }
-.input::-moz-placeholder, input.input::-moz-placeholder, textarea.input::-moz-placeholder {
+.input::-moz-placeholder,
+input.input::-moz-placeholder,
+textarea.input::-moz-placeholder {
   color: var(--input-placeholder-color);
   opacity: 1;
 }
@@ -367,7 +380,9 @@ textarea.input::placeholder {
   color: var(--input-placeholder-color);
   opacity: 1;
 }
-.input:hover:not(:disabled):not(:-moz-read-only):not(:focus), input.input:hover:not(:disabled):not(:-moz-read-only):not(:focus), textarea.input:hover:not(:disabled):not(:-moz-read-only):not(:focus) {
+.input:hover:not(:disabled):not(:-moz-read-only):not(:focus),
+input.input:hover:not(:disabled):not(:-moz-read-only):not(:focus),
+textarea.input:hover:not(:disabled):not(:-moz-read-only):not(:focus) {
   background-color: var(--input-bg-hover);
   border-color: var(--input-border-color-hover);
 }
@@ -394,7 +409,9 @@ textarea.input:disabled {
   cursor: not-allowed;
   opacity: 1;
 }
-.input:-moz-read-only:not(:disabled), input.input:-moz-read-only:not(:disabled), textarea.input:-moz-read-only:not(:disabled) {
+.input:-moz-read-only:not(:disabled),
+input.input:-moz-read-only:not(:disabled),
+textarea.input:-moz-read-only:not(:disabled) {
   background-color: var(--input-bg-readonly);
   color: var(--input-color-readonly);
   border-color: var(--input-border-color-readonly);
@@ -575,7 +592,7 @@ textarea.input-resize-both {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 @keyframes icon-spin {
@@ -591,7 +608,8 @@ textarea.input-resize-both {
 }
 
 @keyframes icon-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -678,12 +696,24 @@ progress.progress:indeterminate::-webkit-progress-bar {
   background: var(--progress-bg);
 }
 progress.progress:indeterminate::-webkit-progress-value {
-  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
-  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--progress-value-bg) 50%,
+    transparent 100%
+  );
+  animation: progress-indeterminate var(--progress-indeterminate-duration)
+    linear infinite;
 }
 progress.progress:indeterminate::-moz-progress-bar {
-  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
-  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--progress-value-bg) 50%,
+    transparent 100%
+  );
+  animation: progress-indeterminate var(--progress-indeterminate-duration)
+    linear infinite;
 }
 
 @keyframes progress-indeterminate {
@@ -715,7 +745,8 @@ progress.progress:indeterminate::-moz-progress-bar {
 
 .progress-bar.indeterminate .progress-bar-value {
   width: var(--progress-indeterminate-width);
-  animation: progress-bar-indeterminate var(--progress-indeterminate-duration) ease-in-out infinite;
+  animation: progress-bar-indeterminate var(--progress-indeterminate-duration)
+    ease-in-out infinite;
 }
 
 @keyframes progress-bar-indeterminate {
@@ -723,16 +754,20 @@ progress.progress:indeterminate::-moz-progress-bar {
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(calc(100% / var(--progress-indeterminate-width) * 100%));
+    transform: translateX(
+      calc(100% / var(--progress-indeterminate-width) * 100%)
+    );
   }
 }
 .progress-bar.indeterminate-pulse .progress-bar-value {
   width: 100%;
-  animation: progress-pulse var(--progress-indeterminate-duration) ease-in-out infinite;
+  animation: progress-pulse var(--progress-indeterminate-duration) ease-in-out
+    infinite;
 }
 
 @keyframes progress-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.3;
   }
   50% {
@@ -740,7 +775,16 @@ progress.progress:indeterminate::-moz-progress-bar {
   }
 }
 .progress-striped .progress-bar-value {
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
   background-size: 1rem 1rem;
 }
 .progress-striped.animated .progress-bar-value {
@@ -774,10 +818,12 @@ progress.progress:indeterminate::-moz-progress-bar {
   border-radius: 0;
 }
 .progress-stacked .progress-bar-value:first-child {
-  border-radius: var(--progress-value-border-radius) 0 0 var(--progress-value-border-radius);
+  border-radius: var(--progress-value-border-radius) 0 0
+    var(--progress-value-border-radius);
 }
 .progress-stacked .progress-bar-value:last-child {
-  border-radius: 0 var(--progress-value-border-radius) var(--progress-value-border-radius) 0;
+  border-radius: 0 var(--progress-value-border-radius)
+    var(--progress-value-border-radius) 0;
 }
 .progress-stacked .progress-bar-value:only-child {
   border-radius: var(--progress-value-border-radius);
@@ -808,11 +854,13 @@ progress.progress:indeterminate::-moz-progress-bar {
   --range-focus-ring-offset: 2px;
   --range-focus-ring-color: #6b7280;
   --range-disabled-opacity: 0.5;
-  --range-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --range-transition:
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 .range,
-input[type=range].range {
+input[type="range"].range {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -823,17 +871,23 @@ input[type=range].range {
   --range-fill-percent: 50%;
 }
 .range::-webkit-slider-runnable-track,
-input[type=range].range::-webkit-slider-runnable-track {
+input[type="range"].range::-webkit-slider-runnable-track {
   width: 100%;
   height: var(--range-track-height);
-  background: linear-gradient(to right, var(--range-track-fill-bg) 0%, var(--range-track-fill-bg) var(--range-fill-percent), var(--range-track-bg) var(--range-fill-percent), var(--range-track-bg) 100%);
+  background: linear-gradient(
+    to right,
+    var(--range-track-fill-bg) 0%,
+    var(--range-track-fill-bg) var(--range-fill-percent),
+    var(--range-track-bg) var(--range-fill-percent),
+    var(--range-track-bg) 100%
+  );
   border-radius: var(--range-track-border-radius);
   border: var(--range-track-border-width) solid var(--range-track-border-color);
   -webkit-transition: var(--range-transition);
   transition: var(--range-transition);
 }
 .range::-moz-range-track,
-input[type=range].range::-moz-range-track {
+input[type="range"].range::-moz-range-track {
   width: 100%;
   height: var(--range-track-height);
   background: var(--range-track-bg);
@@ -843,13 +897,14 @@ input[type=range].range::-moz-range-track {
   transition: var(--range-transition);
 }
 .range::-moz-range-progress,
-input[type=range].range::-moz-range-progress {
+input[type="range"].range::-moz-range-progress {
   height: var(--range-track-height);
   background: var(--range-track-fill-bg);
-  border-radius: var(--range-track-border-radius) 0 0 var(--range-track-border-radius);
+  border-radius: var(--range-track-border-radius) 0 0
+    var(--range-track-border-radius);
 }
 .range::-webkit-slider-thumb,
-input[type=range].range::-webkit-slider-thumb {
+input[type="range"].range::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
   width: var(--range-thumb-size);
@@ -863,9 +918,9 @@ input[type=range].range::-webkit-slider-thumb {
   transition: var(--range-transition);
 }
 .range::-moz-range-thumb,
-input[type=range].range::-moz-range-thumb {
+input[type="range"].range::-moz-range-thumb {
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   width: var(--range-thumb-size);
   height: var(--range-thumb-size);
   background: var(--range-thumb-bg);
@@ -876,53 +931,59 @@ input[type=range].range::-moz-range-thumb {
   transition: var(--range-transition);
 }
 .range:hover:not(:disabled)::-webkit-slider-runnable-track,
-input[type=range].range:hover:not(:disabled)::-webkit-slider-runnable-track {
-  background: linear-gradient(to right, var(--range-track-fill-bg) 0%, var(--range-track-fill-bg) var(--range-fill-percent), var(--range-track-bg-hover) var(--range-fill-percent), var(--range-track-bg-hover) 100%);
+input[type="range"].range:hover:not(:disabled)::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--range-track-fill-bg) 0%,
+    var(--range-track-fill-bg) var(--range-fill-percent),
+    var(--range-track-bg-hover) var(--range-fill-percent),
+    var(--range-track-bg-hover) 100%
+  );
 }
 .range:hover:not(:disabled)::-moz-range-track,
-input[type=range].range:hover:not(:disabled)::-moz-range-track {
+input[type="range"].range:hover:not(:disabled)::-moz-range-track {
   background: var(--range-track-bg-hover);
 }
 .range:hover:not(:disabled)::-webkit-slider-thumb,
-input[type=range].range:hover:not(:disabled)::-webkit-slider-thumb {
+input[type="range"].range:hover:not(:disabled)::-webkit-slider-thumb {
   background: var(--range-thumb-bg-hover);
   border-color: var(--range-thumb-border-color-hover);
   box-shadow: var(--range-thumb-shadow-hover);
 }
 .range:hover:not(:disabled)::-moz-range-thumb,
-input[type=range].range:hover:not(:disabled)::-moz-range-thumb {
+input[type="range"].range:hover:not(:disabled)::-moz-range-thumb {
   background: var(--range-thumb-bg-hover);
   border-color: var(--range-thumb-border-color-hover);
   box-shadow: var(--range-thumb-shadow-hover);
 }
 .range:active:not(:disabled)::-webkit-slider-thumb,
-input[type=range].range:active:not(:disabled)::-webkit-slider-thumb {
+input[type="range"].range:active:not(:disabled)::-webkit-slider-thumb {
   background: var(--range-thumb-bg-active);
   border-color: var(--range-thumb-border-color-active);
   box-shadow: var(--range-thumb-shadow-active);
 }
 .range:active:not(:disabled)::-moz-range-thumb,
-input[type=range].range:active:not(:disabled)::-moz-range-thumb {
+input[type="range"].range:active:not(:disabled)::-moz-range-thumb {
   background: var(--range-thumb-bg-active);
   border-color: var(--range-thumb-border-color-active);
   box-shadow: var(--range-thumb-shadow-active);
 }
 .range:focus,
-input[type=range].range:focus {
+input[type="range"].range:focus {
   outline: none;
 }
 .range:focus-visible::-webkit-slider-thumb,
-input[type=range].range:focus-visible::-webkit-slider-thumb {
+input[type="range"].range:focus-visible::-webkit-slider-thumb {
   outline: var(--range-focus-ring-width) solid var(--range-focus-ring-color);
   outline-offset: var(--range-focus-ring-offset);
 }
 .range:focus-visible::-moz-range-thumb,
-input[type=range].range:focus-visible::-moz-range-thumb {
+input[type="range"].range:focus-visible::-moz-range-thumb {
   outline: var(--range-focus-ring-width) solid var(--range-focus-ring-color);
   outline-offset: var(--range-focus-ring-offset);
 }
 .range:disabled,
-input[type=range].range:disabled {
+input[type="range"].range:disabled {
   opacity: var(--range-disabled-opacity);
   cursor: not-allowed;
 }
@@ -962,7 +1023,9 @@ input[type=range].range:disabled {
   --select-arrow-color-hover: #4b5563;
   --select-arrow-color-disabled: #9ca3af;
   --select-arrow-padding: 2.5rem;
-  --select-transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --select-transition:
+    border-color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   --select-multiple-min-height: 6rem;
   --select-option-padding: 0.5rem 0.75rem;
 }
@@ -975,7 +1038,8 @@ select.select {
   display: block;
   width: 100%;
   height: var(--select-height);
-  padding: var(--select-padding-y) var(--select-arrow-padding) var(--select-padding-y) var(--select-padding-x);
+  padding: var(--select-padding-y) var(--select-arrow-padding)
+    var(--select-padding-y) var(--select-padding-x);
   font-size: var(--select-font-size);
   line-height: var(--select-line-height);
   background-color: var(--select-bg);
@@ -1003,7 +1067,8 @@ select.select:focus {
   outline: none;
   background-color: var(--select-bg-focus);
   border-color: var(--select-border-color-focus);
-  box-shadow: 0 0 0 var(--select-focus-ring-width) var(--select-focus-ring-color);
+  box-shadow: 0 0 0 var(--select-focus-ring-width)
+    var(--select-focus-ring-color);
 }
 .select:disabled,
 select.select:disabled {
@@ -1014,7 +1079,8 @@ select.select:disabled {
   cursor: not-allowed;
   opacity: 1;
 }
-.select:invalid, .select:required:invalid,
+.select:invalid,
+.select:required:invalid,
 select.select:invalid,
 select.select:required:invalid {
   color: var(--select-color-disabled);
@@ -1147,4 +1213,100 @@ select.select[multiple] option:checked {
 .input-group > .select:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-}/*# sourceMappingURL=components.css.map */
+}
+
+.table {
+  --table-bg: transparent;
+  --table-prefixcolor: inherit;
+  --table-prefixborder-color: transparent;
+  --table-prefixhover-bg: transparent;
+  --table-prefixhover-color: inherit;
+  --table-prefixactive-bg: transparent;
+  --table-prefixactive-color: inherit;
+  --table-cell-padding-x: 10px;
+  --table-cell-padding-y: 20px;
+  --table-border-width: 1px;
+  --table-th-font-weight: 300;
+  --table-group-separator-color: transparent;
+  table-caption-color-var: inherit;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: var(--table-prefixborder-color);
+  color: var(--table-prefixcolor);
+  background-color: var(--table-bg);
+}
+.table > :not(caption) > * > * {
+  padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+  border-bottom-width: var(--table-border-width);
+  border-bottom-style: solid;
+  border-bottom-color: var(--table-prefixborder-color);
+}
+.table > thead > tr > th {
+  font-weight: var(--table-th-font-weight);
+  text-align: inherit;
+  vertical-align: bottom;
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > tbody > tr:last-child > * {
+  border-bottom-color: transparent;
+}
+
+.table-group-divider {
+  border-top: calc(var(--table-border-width) * 2) solid
+    var(--table-group-separator-color);
+}
+
+.table > caption {
+  padding-top: var(--table-cell-padding-y);
+  padding-bottom: var(--table-cell-padding-y);
+  color: var(--table-caption-color);
+  text-align: left;
+  caption-side: bottom;
+}
+
+.caption-top {
+  caption-side: top;
+}
+
+.table-hover > tbody > tr:hover > * {
+  background-color: var(--table-prefixhover-bg);
+  color: var(table-hover-color-var);
+}
+
+.table-active > * {
+  background-color: var(--table-prefixactive-bg);
+  color: var(--table-prefixactive-color);
+}
+
+.table > tbody > tr.active > *,
+.table > tbody > tr > td.active,
+.table > tbody > tr > th.active {
+  background-color: var(--table-prefixactive-bg);
+  color: var(--table-prefixactive-color);
+}
+
+.table-align-top > :not(caption) > * > * {
+  vertical-align: top;
+}
+
+.table-align-middle > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+.table-align-bottom > :not(caption) > * > * {
+  vertical-align: bottom;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-auto {
+  table-layout: auto;
+} /*# sourceMappingURL=components.css.map */

@@ -1,13 +1,15 @@
+@use "../props/prefixes" as *;
+
 // ============================================
 // Prefixes
 // ============================================
 // Prefixes
-$button-prefix: "button-" !default;
+$button-prefix: #{$prefix}button- !default;
 
 // Class Names
 $button-class-name: "button" !default;
 
-// Variables
+// Variable Names
 $button-padding-x-var: --#{$button-prefix}padding-x !default;
 $button-padding-y-var: --#{$button-prefix}padding-y !default;
 $button-border-radius-var: --#{$button-prefix}border-radius !default;
@@ -47,6 +49,7 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
   #{$button-font-weight-var}: 500;
   #{$button-line-height-var}: 1.5;
   #{$button-gap-var}: 0.5rem;
+
   // Transition
   #{$button-transition-var}:
     background-color 0.15s ease-in-out,
@@ -78,6 +81,9 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
   #{$button-border-color-active-var}: transparent;
 }
 
+// ============================================
+// Button
+// ============================================
 .#{$button-class-name} {
   // Reset
   appearance: none;

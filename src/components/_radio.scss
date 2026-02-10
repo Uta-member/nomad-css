@@ -1,10 +1,15 @@
+@use "../props/prefixes" as *;
+
 // ============================================
 // Prefixes
 // ============================================
-$radio-prefix: "radio-" !default;
+// Prefixes
+$radio-prefix: #{$prefix}radio- !default;
+
+// Class Names
 $radio-class-name: "radio" !default;
 
-// Variables
+// Variable Names
 $radio-size-var: --#{$radio-prefix}size !default;
 $radio-border-width-var: --#{$radio-prefix}border-width !default;
 $radio-border-color-var: --#{$radio-prefix}border-color !default;
@@ -29,7 +34,7 @@ $form-radio-label-color-var: --form-radio-label-color !default;
 // ============================================
 
 // ============================================
-// CSS Variables (defaults in :root)
+// CSS Variables
 // ============================================
 .#{$radio-class-name} {
   // Size

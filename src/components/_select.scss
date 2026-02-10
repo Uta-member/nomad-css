@@ -1,7 +1,15 @@
-$select-prefix: "select-" !default;
+@use "../props/prefixes" as *;
+
+// ============================================
+// Prefixes
+// ============================================
+// Prefixes
+$select-prefix: #{$prefix}select- !default;
+
+// Class Names
 $select-class-name: "select" !default;
 
-// CSS variable name wrappers
+// Variable Names
 $select-height-var: --#{$select-prefix}height !default;
 $select-padding-x-var: --#{$select-prefix}padding-x !default;
 $select-padding-y-var: --#{$select-prefix}padding-y !default;
@@ -38,7 +46,12 @@ $select-transition-var: --#{$select-prefix}transition !default;
 $select-multiple-min-height-var: --#{$select-prefix}multiple-min-height !default;
 $select-option-padding-var: --#{$select-prefix}option-padding !default;
 
-// Component defaults (themes should override these)
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
 .#{$select-class-name} {
   #{$select-height-var}: 2.5rem;
   #{$select-padding-x-var}: 0.75rem;
@@ -93,7 +106,7 @@ $select-option-padding-var: --#{$select-prefix}option-padding !default;
 }
 
 // ============================================
-// Base Select Styles
+// Select
 // ============================================
 .select,
 select.select {
@@ -252,28 +265,6 @@ select.select[multiple] {
     }
   }
 }
-
-// ============================================
-// Size Variants
-// ============================================
-// -> Managed in themes/contract
-
-// ============================================
-// Filled Variant
-// ============================================
-// -> Managed in themes/contract
-
-// ============================================
-// Underline Variant
-// ============================================
-// -> Managed in themes/contract
-
-// ============================================
-// Borderless Variant
-// ============================================
-// -> Managed in themes/contract
-
-// Semantic color classes and validation states are intentionally left to theme or app layers.
 
 // ============================================
 // Select Wrapper (for additional customization)

@@ -1,11 +1,15 @@
+@use "../props/prefixes" as *;
+
 // ============================================
-// Progress: SCSS-configurable class and CSS variable names
-// Core exposes minimal CSS variables; themes/apps override them.
+// Prefixes
 // ============================================
-$progress-prefix: "progress-" !default;
+// Prefixes
+$progress-prefix: #{$prefix}progress- !default;
+
+// Class Names
 $progress-class-name: "progress" !default;
 
-// CSS variable names (SCSS variables referencing CSS custom properties)
+// Variable Names
 $progress-height-var: --#{$progress-prefix}height !default;
 $progress-bg-var: --#{$progress-prefix}bg !default;
 $progress-border-radius-var: --#{$progress-prefix}border-radius !default;
@@ -17,7 +21,12 @@ $progress-transition-var: --#{$progress-prefix}transition !default;
 $progress-indeterminate-duration-var: --#{$progress-prefix}indeterminate-duration !default;
 $progress-indeterminate-width-var: --#{$progress-prefix}indeterminate-width !default;
 
-// Default values attached to component namespace (override in themes)
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
 .#{$progress-class-name} {
   #{$progress-height-var}: 0.5rem;
   #{$progress-bg-var}: #e5e7eb;
@@ -34,7 +43,7 @@ $progress-indeterminate-width-var: --#{$progress-prefix}indeterminate-width !def
 }
 
 // ============================================
-// Base Progress Styles (native <progress>)
+// Progress
 // ============================================
 .#{$progress-class-name},
 progress.#{$progress-class-name} {
@@ -285,5 +294,3 @@ progress.#{$progress-class-name}:indeterminate {
     }
   }
 }
-
-// Semantic and neutral palettes are handled in theme layer; core uses simple variable-driven colors.
