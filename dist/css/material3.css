@@ -5854,4 +5854,8 @@ h6,
 }
 .checkbox.lg {
   --checkbox-size: var(--checkbox-size-lg);
+}
+
+.checkbox {
+  --checkbox-bg-checked: var(--palette-default, hsl(var(--primary-h, 220), var(--primary-s, 70%), var(--primary-l, 50%)));
 }/*# sourceMappingURL=material3.css.map */

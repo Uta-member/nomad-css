@@ -33,6 +33,9 @@ $checkbox-size-lg-var: --#{checkbox.$checkbox-prefix}size-lg !default;
     #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-md-var});
 }
 
+// ============================================
+// Sizes
+// ============================================
 .#{checkbox.$checkbox-class-name} {
     &.sm {
         #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-sm-var});
@@ -43,4 +46,11 @@ $checkbox-size-lg-var: --#{checkbox.$checkbox-prefix}size-lg !default;
     &.lg {
         #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-lg-var});
     }
+}
+
+// ============================================
+// Semantics
+// ============================================
+.#{checkbox.$checkbox-class-name} {
+    #{checkbox.$checkbox-bg-checked-var}: var(#{contract_prefixes.$palette-default-var}, hsl(var(--primary-h, 220) var(--primary-s, 70%) var(--primary-l, 50%)));
 }
