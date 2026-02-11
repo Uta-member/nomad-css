@@ -5834,4 +5834,24 @@ h6,
   --button-border-color: var(--button-text-border-color);
   --button-border-color-hover: var(--button-text-border-color-hover);
   --button-border-color-active: var(--button-text-border-color-active);
+}
+
+:root {
+  --checkbox-size-sm: 1rem;
+  --checkbox-size-md: 1.25rem;
+  --checkbox-size-lg: 1.75rem;
+}
+
+:root {
+  --checkbox-size: var(--checkbox-size-md);
+}
+
+.checkbox.sm {
+  --checkbox-size: var(--checkbox-size-sm);
+}
+.checkbox.md {
+  --checkbox-size: var(--checkbox-size-md);
+}
+.checkbox.lg {
+  --checkbox-size: var(--checkbox-size-lg);
 }/*# sourceMappingURL=material3.css.map */

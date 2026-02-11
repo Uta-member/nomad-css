@@ -10,7 +10,9 @@
 // Class Names
 
 // Variant Names
-
+$checkbox-size-sm-var: --#{checkbox.$checkbox-prefix}size-sm !default;
+$checkbox-size-md-var: --#{checkbox.$checkbox-prefix}size-md !default;
+$checkbox-size-lg-var: --#{checkbox.$checkbox-prefix}size-lg !default;
 
 // ============================================
 // Process
@@ -18,5 +20,27 @@
 // ============================================
 // CSS Variants
 // ============================================
+:root {
+    #{$checkbox-size-sm-var}: 1rem;
+    #{$checkbox-size-md-var}: 1.25rem;
+    #{$checkbox-size-lg-var}: 1.75rem;
+}
+
+// ============================================
+// Overrides
+// ============================================
+:root {
+    #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-md-var});
+}
+
 .#{checkbox.$checkbox-class-name} {
+    &.sm {
+        #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-sm-var});
+    }
+    &.md {
+        #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-md-var});
+    }
+    &.lg {
+        #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-lg-var});
+    }
 }
