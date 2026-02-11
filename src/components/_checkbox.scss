@@ -43,7 +43,8 @@ $form-check-label-color-var: --form-check-label-color !default;
   #{$checkbox-size-var}: 1.25rem;
 
   // Border
-  #{$checkbox-border-width-var}: 2px;
+  // border width scales with size (adjust ratio as needed)
+  #{$checkbox-border-width-var}: calc(var(#{$checkbox-size-var}) * 0.08);
   #{$checkbox-border-radius-var}: 0.25rem;
   #{$checkbox-border-color-var}: gray;
   #{$checkbox-border-color-hover-var}: gray;
@@ -57,10 +58,11 @@ $form-check-label-color-var: --form-check-label-color !default;
 
   // Checkmark
   #{$checkbox-checkmark-color-var}: white;
-  #{$checkbox-checkmark-width-var}: 2.5px;
+  // checkmark thickness scales with size (adjust ratio as needed)
+  #{$checkbox-checkmark-width-var}: calc(var(#{$checkbox-size-var}) * 0.18);
 
   // Indeterminate width (defaults to checkmark width)
-  #{$checkbox-indeterminate-width-var}: 2px;
+  #{$checkbox-indeterminate-width-var}: calc(var(#{$checkbox-checkmark-width-var}) * 0.8);
 
   // Indeterminate
   #{$checkbox-indeterminate-color-var}: white;

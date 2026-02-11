@@ -4399,7 +4399,7 @@
 
 :root {
   --checkbox-size: 1.25rem;
-  --checkbox-border-width: 2px;
+  --checkbox-border-width: calc(var(--checkbox-size) * 0.08);
   --checkbox-border-radius: 0.25rem;
   --checkbox-border-color: gray;
   --checkbox-border-color-hover: gray;
@@ -4409,8 +4409,8 @@
   --checkbox-bg-hover: lightgray;
   --checkbox-bg-checked: blue;
   --checkbox-checkmark-color: white;
-  --checkbox-checkmark-width: 2.5px;
-  --checkbox-indeterminate-width: 2px;
+  --checkbox-checkmark-width: calc(var(--checkbox-size) * 0.18);
+  --checkbox-indeterminate-width: calc(var(--checkbox-checkmark-width) * 0.8);
   --checkbox-indeterminate-color: white;
   --checkbox-focus-ring-width: 2px;
   --checkbox-focus-ring-offset: 2px;
