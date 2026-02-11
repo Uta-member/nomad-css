@@ -4410,6 +4410,7 @@
   --checkbox-bg-checked: blue;
   --checkbox-checkmark-color: white;
   --checkbox-checkmark-width: 2.5px;
+  --checkbox-indeterminate-width: 2px;
   --checkbox-indeterminate-color: white;
   --checkbox-focus-ring-width: 2px;
   --checkbox-focus-ring-offset: 2px;
@@ -4474,7 +4475,7 @@ input[type=checkbox].checkbox:indeterminate::after {
   content: "";
   display: block;
   width: calc(var(--checkbox-size) * 0.5);
-  height: var(--checkbox-checkmark-width);
+  height: var(--checkbox-indeterminate-width);
   background-color: var(--checkbox-indeterminate-color);
 }
 .checkbox:disabled,

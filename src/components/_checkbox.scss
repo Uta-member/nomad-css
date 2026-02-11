@@ -23,6 +23,7 @@ $checkbox-bg-checked-var: --#{$checkbox-prefix}bg-checked !default;
 $checkbox-checkmark-color-var: --#{$checkbox-prefix}checkmark-color !default;
 $checkbox-checkmark-width-var: --#{$checkbox-prefix}checkmark-width !default;
 $checkbox-indeterminate-color-var: --#{$checkbox-prefix}indeterminate-color !default;
+$checkbox-indeterminate-width-var: --#{$checkbox-prefix}indeterminate-width !default;
 $checkbox-focus-ring-width-var: --#{$checkbox-prefix}focus-ring-width !default;
 $checkbox-focus-ring-offset-var: --#{$checkbox-prefix}focus-ring-offset !default;
 $checkbox-focus-ring-color-var: --#{$checkbox-prefix}focus-ring-color !default;
@@ -57,6 +58,9 @@ $form-check-label-color-var: --form-check-label-color !default;
   // Checkmark
   #{$checkbox-checkmark-color-var}: white;
   #{$checkbox-checkmark-width-var}: 2.5px;
+
+  // Indeterminate width (defaults to checkmark width)
+  #{$checkbox-indeterminate-width-var}: 2px;
 
   // Indeterminate
   #{$checkbox-indeterminate-color-var}: white;
@@ -165,7 +169,7 @@ input[type="checkbox"].#{$checkbox-class-name} {
       content: "";
       display: block;
       width: calc(var(#{$checkbox-size-var}) * 0.5);
-      height: var(#{$checkbox-checkmark-width-var});
+      height: var(#{$checkbox-indeterminate-width-var});
       background-color: var(#{$checkbox-indeterminate-color-var});
     }
   }
