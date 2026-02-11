@@ -37,34 +37,34 @@ $form-check-label-color-var: --form-check-label-color !default;
 // ============================================
 // CSS Variant
 // ============================================
-.#{$checkbox-class-name} {
+:root {
   // Size
   #{$checkbox-size-var}: 1.25rem;
 
   // Border
   #{$checkbox-border-width-var}: 2px;
   #{$checkbox-border-radius-var}: 0.25rem;
-  #{$checkbox-border-color-var}: transparent;
-  #{$checkbox-border-color-hover-var}: transparent;
-  #{$checkbox-border-color-checked-var}: transparent;
-  #{$checkbox-border-color-focus-var}: transparent;
+  #{$checkbox-border-color-var}: gray;
+  #{$checkbox-border-color-hover-var}: gray;
+  #{$checkbox-border-color-checked-var}: gray;
+  #{$checkbox-border-color-focus-var}: gray;
 
   // Background
   #{$checkbox-bg-var}: transparent;
-  #{$checkbox-bg-hover-var}: transparent;
-  #{$checkbox-bg-checked-var}: transparent;
+  #{$checkbox-bg-hover-var}: lightgray;
+  #{$checkbox-bg-checked-var}: blue;
 
   // Checkmark
-  #{$checkbox-checkmark-color-var}: inherit;
-  #{$checkbox-checkmark-width-var}: 2px;
+  #{$checkbox-checkmark-color-var}: white;
+  #{$checkbox-checkmark-width-var}: 2.5px;
 
   // Indeterminate
-  #{$checkbox-indeterminate-color-var}: inherit;
+  #{$checkbox-indeterminate-color-var}: white;
 
   // Focus ring
   #{$checkbox-focus-ring-width-var}: 2px;
   #{$checkbox-focus-ring-offset-var}: 2px;
-  #{$checkbox-focus-ring-color-var}: transparent;
+  #{$checkbox-focus-ring-color-var}: black;
 
   // Disabled
   #{$checkbox-disabled-opacity-var}: 0.5;
@@ -119,7 +119,7 @@ input[type="checkbox"].#{$checkbox-class-name} {
   // ----------------------------------------
   // Hover State
   // ----------------------------------------
-  &:hover:not(:disabled):not(:checked) {
+  &:hover:not(:disabled):not(:checked):not(:indeterminate) {
     background-color: var(#{$checkbox-bg-hover-var});
     border-color: var(#{$checkbox-border-color-hover-var});
   }
@@ -144,12 +144,12 @@ input[type="checkbox"].#{$checkbox-class-name} {
     &::after {
       content: "";
       display: block;
-      width: calc(var(#{$checkbox-size-var}) * 0.3);
-      height: calc(var(#{$checkbox-size-var}) * 0.55);
+      width: calc(var(#{$checkbox-size-var}) * 0.2);
+      height: calc(var(#{$checkbox-size-var}) * 0.4);
       border: solid var(#{$checkbox-checkmark-color-var});
       border-width: 0 var(#{$checkbox-checkmark-width-var})
         var(#{$checkbox-checkmark-width-var}) 0;
-      transform: rotate(45deg) translateX(-5%) translateY(-5%);
+      transform: rotate(45deg) translateX(-10%) translateY(-10%);
     }
   }
 

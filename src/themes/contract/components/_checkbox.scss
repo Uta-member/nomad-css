@@ -1,0 +1,22 @@
+@use "../../../components/checkbox" as checkbox;
+@use "../../../props/prefixes" as prefixes;
+@use "../../contract/prefixes" as contract_prefixes;
+
+// ============================================
+// Prefixes
+// ============================================
+// Prefixes
+
+// Class Names
+
+// Variant Names
+
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variants
+// ============================================
+.#{checkbox.$checkbox-class-name} {
+}

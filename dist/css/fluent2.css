@@ -4397,23 +4397,23 @@
   margin-left: calc(var(--button-border-width) * -1);
 }
 
-.checkbox {
+:root {
   --checkbox-size: 1.25rem;
   --checkbox-border-width: 2px;
   --checkbox-border-radius: 0.25rem;
-  --checkbox-border-color: transparent;
-  --checkbox-border-color-hover: transparent;
-  --checkbox-border-color-checked: transparent;
-  --checkbox-border-color-focus: transparent;
+  --checkbox-border-color: gray;
+  --checkbox-border-color-hover: gray;
+  --checkbox-border-color-checked: gray;
+  --checkbox-border-color-focus: gray;
   --checkbox-bg: transparent;
-  --checkbox-bg-hover: transparent;
-  --checkbox-bg-checked: transparent;
-  --checkbox-checkmark-color: inherit;
-  --checkbox-checkmark-width: 2px;
-  --checkbox-indeterminate-color: inherit;
+  --checkbox-bg-hover: lightgray;
+  --checkbox-bg-checked: blue;
+  --checkbox-checkmark-color: white;
+  --checkbox-checkmark-width: 2.5px;
+  --checkbox-indeterminate-color: white;
   --checkbox-focus-ring-width: 2px;
   --checkbox-focus-ring-offset: 2px;
-  --checkbox-focus-ring-color: transparent;
+  --checkbox-focus-ring-color: black;
   --checkbox-disabled-opacity: 0.5;
   --checkbox-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --form-check-gap: 0.5rem;
@@ -4439,8 +4439,8 @@ input[type=checkbox].checkbox {
   cursor: pointer;
   transition: var(--checkbox-transition);
 }
-.checkbox:hover:not(:disabled):not(:checked),
-input[type=checkbox].checkbox:hover:not(:disabled):not(:checked) {
+.checkbox:hover:not(:disabled):not(:checked):not(:indeterminate),
+input[type=checkbox].checkbox:hover:not(:disabled):not(:checked):not(:indeterminate) {
   background-color: var(--checkbox-bg-hover);
   border-color: var(--checkbox-border-color-hover);
 }
@@ -4458,11 +4458,11 @@ input[type=checkbox].checkbox:checked {
 input[type=checkbox].checkbox:checked::after {
   content: "";
   display: block;
-  width: calc(var(--checkbox-size) * 0.3);
-  height: calc(var(--checkbox-size) * 0.55);
+  width: calc(var(--checkbox-size) * 0.2);
+  height: calc(var(--checkbox-size) * 0.4);
   border: solid var(--checkbox-checkmark-color);
   border-width: 0 var(--checkbox-checkmark-width) var(--checkbox-checkmark-width) 0;
-  transform: rotate(45deg) translateX(-5%) translateY(-5%);
+  transform: rotate(45deg) translateX(-10%) translateY(-10%);
 }
 .checkbox:indeterminate,
 input[type=checkbox].checkbox:indeterminate {
