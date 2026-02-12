@@ -788,27 +788,13 @@ textarea.input-resize-both {
 .range {
   --range-size: 1.25rem;
   --range-track-height: calc(var(--range-size) * 0.4);
-  --range-track-bg: #e5e7eb;
-  --range-track-bg-hover: #d1d5db;
   --range-track-border-radius: 0.25rem;
   --range-track-border-width: 0;
-  --range-track-border-color: transparent;
-  --range-track-fill-bg: #3b82f6;
   --range-thumb-size: var(--range-size);
-  --range-thumb-bg: #ffffff;
-  --range-thumb-bg-hover: #ffffff;
-  --range-thumb-bg-active: #f3f4f6;
   --range-thumb-border-width: 2px;
-  --range-thumb-border-color: #6b7280;
-  --range-thumb-border-color-hover: #4b5563;
-  --range-thumb-border-color-active: #374151;
   --range-thumb-border-radius: 50%;
-  --range-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --range-thumb-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.15);
-  --range-thumb-shadow-active: 0 1px 2px rgba(0, 0, 0, 0.1);
   --range-focus-ring-width: 2px;
   --range-focus-ring-offset: 2px;
-  --range-focus-ring-color: #6b7280;
   --range-disabled-opacity: 0.5;
   --range-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
