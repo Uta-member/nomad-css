@@ -4,6 +4,26 @@
 @use "../../contract/semantics" as semantics;
 
 // ============================================
+// Prefixes
+// ============================================
+// Variant Names
+$progress-height-sm-var: --#{progress.$progress-prefix}height-sm !default;
+$progress-height-md-var: --#{progress.$progress-prefix}height-md !default;
+$progress-height-lg-var: --#{progress.$progress-prefix}height-lg !default;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variants
+// ============================================
+:root {
+  #{$progress-height-sm-var}: 0.375rem;
+  #{$progress-height-md-var}: 0.5rem;
+  #{$progress-height-lg-var}: 0.75rem;
+}
+
+// ============================================
 // Overrides
 // ============================================
 .#{progress.$progress-class-name} {
@@ -13,4 +33,19 @@
 
   // Value color (uses semantic palette)
   #{progress.$progress-value-bg-var}: var(#{contract_prefixes.$palette-default-var});
+}
+
+// ============================================
+// Sizes
+// ============================================
+.#{progress.$progress-class-name} {
+  &.sm {
+    #{progress.$progress-height-var}: var(#{$progress-height-sm-var});
+  }
+  &.md {
+    #{progress.$progress-height-var}: var(#{$progress-height-md-var});
+  }
+  &.lg {
+    #{progress.$progress-height-var}: var(#{$progress-height-lg-var});
+  }
 }

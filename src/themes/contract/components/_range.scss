@@ -4,6 +4,26 @@
 @use "../../contract/semantics" as semantics;
 
 // ============================================
+// Prefixes
+// ============================================
+// Variant Names
+$range-size-sm-var: --#{range.$range-prefix}size-sm !default;
+$range-size-md-var: --#{range.$range-prefix}size-md !default;
+$range-size-lg-var: --#{range.$range-prefix}size-lg !default;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variants
+// ============================================
+:root {
+  #{$range-size-sm-var}: 1rem;
+  #{$range-size-md-var}: 1.25rem;
+  #{$range-size-lg-var}: 1.75rem;
+}
+
+// ============================================
 // Overrides
 // ============================================
 .#{range.$range-class-name} {
@@ -32,4 +52,19 @@
 
   // Focus ring color (uses semantic palette)
   #{range.$range-focus-ring-color-var}: var(#{contract_prefixes.$palette-default-var});
+}
+
+// ============================================
+// Sizes
+// ============================================
+.#{range.$range-class-name} {
+  &.sm {
+    #{range.$range-size-var}: var(#{$range-size-sm-var});
+  }
+  &.md {
+    #{range.$range-size-var}: var(#{$range-size-md-var});
+  }
+  &.lg {
+    #{range.$range-size-var}: var(#{$range-size-lg-var});
+  }
 }
