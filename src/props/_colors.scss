@@ -229,33 +229,38 @@ $palettes: (
   }
 }
 
+@mixin generate-palette-variants($palette) {
+  @if not type-of($palette) == "map" {
+    @error "カラーパレット生成エラー: パレットの値には連想配列を指定してください。";
+  }
+  @if not map.has-key($palette, h) {
+    @error "カラーパレット生成エラー: パレットの値に色相（h）が含まれていません。";
+  }
+  @if not map.has-key($palette, s) {
+    @error "カラーパレット生成エラー: パレットの値に彩度（s）が含まれていません。";
+  }
+
+  #{$palette-hue-var}: #{map.get($palette, h)};
+  #{$palette-saturation-var}: #{map.get($palette, s)};
+  #{$palette-accent-light-lightness-var}: #{$palette-accent-light-lightness};
+  #{$palette-accent-dark-lightness-var}: #{$palette-accent-dark-lightness};
+  #{$palette-gray-saturation-var}: #{$palette-gray-saturation};
+
+  @include _generate-palette-colors(
+    $palette-lightness-list: map.get($palette, lightness-list) or
+      $palette-default-lightness-list,
+    $palette-level-list: map.get($palette, level-list) or
+      $palette-default-level-list,
+    $threshold: map.get($palette, threshold) or
+      $palette-accent-default-threshold
+  );
+}
+
 //=============================================
 // Process
 // ============================================
 @each $name, $value in $palettes {
-  @if not type-of($value) == "map" {
-    @error "カラーパレット生成エラー: パレットの値には連想配列を指定してください。";
-  }
-  @if not map.has-key($value, h) {
-    @error "カラーパレット生成エラー: パレットの値に色相（h）が含まれていません。";
-  }
-  @if not map.has-key($value, s) {
-    @error "カラーパレット生成エラー: パレットの値に彩度（s）が含まれていません。";
-  }
   .#{$prefix}#{$name} {
-    #{$palette-hue-var}: #{map.get($value, h)};
-    #{$palette-saturation-var}: #{map.get($value, s)};
-    #{$palette-accent-light-lightness-var}: #{$palette-accent-light-lightness};
-    #{$palette-accent-dark-lightness-var}: #{$palette-accent-dark-lightness};
-    #{$palette-gray-saturation-var}: #{$palette-gray-saturation};
-
-    @include _generate-palette-colors(
-      $palette-lightness-list: map.get($value, lightness-list) or
-        $palette-default-lightness-list,
-      $palette-level-list: map.get($value, level-list) or
-        $palette-default-level-list,
-      $threshold: map.get($value, threshold) or
-        $palette-accent-default-threshold
-    );
+    @include generate-palette-variants($value);
   }
 }

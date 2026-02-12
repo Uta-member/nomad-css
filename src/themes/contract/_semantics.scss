@@ -22,101 +22,110 @@ $semantic-neutral-class-name: #{$semantic-prefix}neutral;
 // セマンティックカラー定義
 // threshold: アクセントカラー切り替え閾値（省略時はデフォルト）
 // ============================================
+$semantic-primary: (
+  h: var(#{hue-colors.$hue-blue-var}),
+  s: 80%,
+  threshold: 50%,
+  levels: (
+    lighter: 2,
+    light: 3,
+    default: 6,
+    dark: 8,
+    darker: 9,
+  ),
+);
+$semantic-secondary: (
+  h: var(#{hue-colors.$hue-pink-var}),
+  s: 80%,
+  threshold: 55%,
+  levels: (
+    lighter: 2,
+    light: 3,
+    default: 5,
+    dark: 7,
+    darker: 9,
+  ),
+);
+$semantic-tertiary: (
+  h: var(#{hue-colors.$hue-teal-var}),
+  s: 60%,
+  threshold: 40%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 7,
+    dark: 9,
+    darker: 10,
+  ),
+);
+$semantic-success: (
+  h: var(#{hue-colors.$hue-green-var}),
+  s: 60%,
+  threshold: 45%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 7,
+    dark: 9,
+    darker: 10,
+  ),
+);
+$semantic-warning: (
+  h: var(#{hue-colors.$hue-yellow-var}),
+  s: 80%,
+  threshold: 45%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 6,
+    dark: 8,
+    darker: 9,
+  ),
+);
+$semantic-danger: (
+  h: var(#{hue-colors.$hue-red-var}),
+  s: 80%,
+  threshold: 50%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 6,
+    dark: 8,
+    darker: 9,
+  ),
+);
+$semantic-info: (
+  h: var(#{hue-colors.$hue-cyan-var}),
+  s: 80%,
+  threshold: 40%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 7,
+    dark: 8,
+    darker: 9,
+  ),
+);
+$semantic-neutral: (
+  h: var(#{hue-colors.$hue-blue-var}),
+  s: 5%,
+  threshold: 50%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 7,
+    dark: 8,
+    darker: 9,
+  ),
+);
+
 $semantic-colors: (
-  $semantic-primary-class-name: (
-    h: var(#{hue-colors.$hue-blue-var}),
-    s: 80%,
-    threshold: 50%,
-    levels: (
-      lighter: 2,
-      light: 3,
-      default: 6,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-  $semantic-secondary-class-name: (
-    h: var(#{hue-colors.$hue-pink-var}),
-    s: 80%,
-    threshold: 55%,
-    levels: (
-      lighter: 2,
-      light: 3,
-      default: 5,
-      dark: 7,
-      darker: 9,
-    ),
-  ),
-  $semantic-tertiary-class-name: (
-    h: var(#{hue-colors.$hue-teal-var}),
-    s: 60%,
-    threshold: 40%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 7,
-      dark: 9,
-      darker: 10,
-    ),
-  ),
-  $semantic-success-class-name: (
-    h: var(#{hue-colors.$hue-green-var}),
-    s: 60%,
-    threshold: 45%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 7,
-      dark: 9,
-      darker: 10,
-    ),
-  ),
-  $semantic-warning-class-name: (
-    h: var(#{hue-colors.$hue-yellow-var}),
-    s: 80%,
-    threshold: 45%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 6,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-  $semantic-danger-class-name: (
-    h: var(#{hue-colors.$hue-red-var}),
-    s: 80%,
-    threshold: 50%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 6,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-  $semantic-info-class-name: (
-    h: var(#{hue-colors.$hue-cyan-var}),
-    s: 80%,
-    threshold: 40%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 7,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
-  $semantic-neutral-class-name: (
-    h: var(#{hue-colors.$hue-blue-var}),
-    s: 5%,
-    threshold: 50%,
-    levels: (
-      lighter: 2,
-      light: 4,
-      default: 7,
-      dark: 8,
-      darker: 9,
-    ),
-  ),
+  $semantic-primary-class-name: $semantic-primary,
+  $semantic-secondary-class-name: $semantic-secondary,
+  $semantic-tertiary-class-name: $semantic-tertiary,
+  $semantic-success-class-name: $semantic-success,
+  $semantic-warning-class-name: $semantic-warning,
+  $semantic-danger-class-name: $semantic-danger,
+  $semantic-info-class-name: $semantic-info,
+  $semantic-neutral-class-name: $semantic-neutral,
 );

@@ -1,15 +1,24 @@
 @use "sass:map";
-
 @use "../../props/prefixes" as prefixes;
 @use "hue-colors" as hue-colors;
 @use "semantics" as semantics;
-
 @use "../../props/colors" as colors with (
   $palettes: map.merge(hue-colors.$hues, semantics.$semantic-colors)
 );
 @use "../../components/components" as core-components;
 @use "../../utilities/utilities";
 @use "components/components" as components;
+// ============================================
+// Overridable Variants
+// ============================================
+$default-palette: semantics.$semantic-primary !default;
+
+// ============================================
+// Process
+// ============================================
+:root {
+  @include colors.generate-palette-variants($default-palette);
+}
 
 // ============================================
 // Common Contract Variables
