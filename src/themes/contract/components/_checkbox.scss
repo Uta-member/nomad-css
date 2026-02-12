@@ -31,6 +31,22 @@ $checkbox-size-lg-var: --#{checkbox.$checkbox-prefix}size-lg !default;
 // ============================================
 :root {
   #{checkbox.$checkbox-size-var}: var(#{$checkbox-size-md-var});
+
+  #{checkbox.$checkbox-border-color-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{checkbox.$checkbox-border-color-hover-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{checkbox.$checkbox-border-color-checked-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{checkbox.$checkbox-border-color-focus-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{checkbox.$checkbox-bg-hover-var}: var(
+    #{contract_prefixes.$neutral-lighter-var}
+  );
 }
 
 // ============================================
@@ -52,6 +68,7 @@ $checkbox-size-lg-var: --#{checkbox.$checkbox-prefix}size-lg !default;
 // Semantics
 // ============================================
 .#{checkbox.$checkbox-class-name} {
+  // checked background remains semantic default
   #{checkbox.$checkbox-bg-checked-var}: var(
     #{contract_prefixes.$palette-default-var}
   );

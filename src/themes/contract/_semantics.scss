@@ -13,7 +13,6 @@ $semantic-success-class-name: #{$semantic-prefix}success;
 $semantic-warning-class-name: #{$semantic-prefix}warning;
 $semantic-danger-class-name: #{$semantic-prefix}danger;
 $semantic-info-class-name: #{$semantic-prefix}info;
-$semantic-neutral-class-name: #{$semantic-prefix}neutral;
 
 // ============================================
 // Prefixes
@@ -106,18 +105,6 @@ $semantic-info: (
     darker: 9,
   ),
 );
-$semantic-neutral: (
-  h: var(#{hue-colors.$hue-blue-var}),
-  s: 5%,
-  threshold: 50%,
-  levels: (
-    lighter: 2,
-    light: 4,
-    default: 7,
-    dark: 8,
-    darker: 9,
-  ),
-);
 
 $semantic-colors: (
   $semantic-primary-class-name: $semantic-primary,
@@ -127,5 +114,4 @@ $semantic-colors: (
   $semantic-warning-class-name: $semantic-warning,
   $semantic-danger-class-name: $semantic-danger,
   $semantic-info-class-name: $semantic-info,
-  $semantic-neutral-class-name: $semantic-neutral,
 );

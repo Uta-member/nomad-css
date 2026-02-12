@@ -21,11 +21,20 @@ $default-palette: semantics.$semantic-primary !default;
   @include colors.generate-palette-variants($default-palette);
 }
 
-// Generate a theme-local neutral palette (keeps neutral in themes layer only)
-// Delegate to props/colors generic generator so logic stays unified.
+$semantic-neutral: (
+  h: var(#{hue-colors.$hue-blue-var}),
+  s: 5%,
+  threshold: 50%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 7,
+    dark: 8,
+    darker: 9,
+  ),
+);
 :root {
-  $neutral-palette: map.get(semantics.$semantic-neutral, null) or
-    semantics.$semantic-neutral;
+  $neutral-palette: map.get($semantic-neutral, null) or $semantic-neutral;
 
   $neutral-names: (
     lightness-prefix: neutral-l-,
