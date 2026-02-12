@@ -370,7 +370,7 @@ progress.progress:indeterminate::-moz-progress-bar {
   border-radius: var(--progress-value-border-radius);
 }
 
-.radio {
+:root {
   --radio-size: 1.25rem;
   --radio-border-width: 2px;
   --radio-border-color: transparent;
@@ -380,7 +380,7 @@ progress.progress:indeterminate::-moz-progress-bar {
   --radio-bg: transparent;
   --radio-bg-hover: transparent;
   --radio-bg-checked: transparent;
-  --radio-dot-size: 0.5rem;
+  --radio-dot-size: calc(var(--radio-size) * 0.4);
   --radio-dot-color: inherit;
   --radio-focus-ring-width: 2px;
   --radio-focus-ring-offset: 2px;
@@ -410,8 +410,8 @@ input[type=radio].radio {
   cursor: pointer;
   transition: var(--radio-transition);
 }
-.radio:hover:not(:disabled):not(:checked),
-input[type=radio].radio:hover:not(:disabled):not(:checked) {
+.radio:hover:not(:disabled),
+input[type=radio].radio:hover:not(:disabled) {
   background-color: var(--radio-bg-hover);
   border-color: var(--radio-border-color-hover);
 }
@@ -422,7 +422,7 @@ input[type=radio].radio:focus-visible {
 }
 .radio:checked,
 input[type=radio].radio:checked {
-  background-color: var(--radio-bg-checked);
+  background-color: var(--radio-bg);
   border-color: var(--radio-border-color-checked);
 }
 .radio:checked::after,

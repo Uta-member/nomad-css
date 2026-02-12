@@ -1,0 +1,75 @@
+@use "../../../components/radio" as radio;
+@use "../../../props/prefixes" as prefixes;
+@use "../../contract/prefixes" as contract_prefixes;
+
+// ============================================
+// Prefixes
+// ============================================
+// Variant Names
+$radio-size-sm-var: --#{radio.$radio-prefix}size-sm !default;
+$radio-size-md-var: --#{radio.$radio-prefix}size-md !default;
+$radio-size-lg-var: --#{radio.$radio-prefix}size-lg !default;
+
+// ============================================
+// Process
+// ============================================
+// CSS Variants
+:root {
+  #{$radio-size-sm-var}: 1rem;
+  #{$radio-size-md-var}: 1.25rem;
+  #{$radio-size-lg-var}: 1.75rem;
+}
+
+// ============================================
+// Overrides
+// ============================================
+:root {
+  #{radio.$radio-size-var}: var(#{$radio-size-md-var});
+
+  #{radio.$radio-bg-var}: transparent;
+
+  #{radio.$radio-dot-color-var}: var(
+    #{contract_prefixes.$palette-default-var}
+  );
+  
+  #{radio.$radio-border-color-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{radio.$radio-border-color-hover-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{radio.$radio-border-color-checked-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{radio.$radio-border-color-focus-var}: var(
+    #{contract_prefixes.$neutral-light-var}
+  );
+  #{radio.$radio-bg-hover-var}: var(
+    #{contract_prefixes.$neutral-lighter-var}
+  );
+}
+
+// ============================================
+// Sizes
+// ============================================
+.#{radio.$radio-class-name} {
+  &.sm {
+    #{radio.$radio-size-var}: var(#{$radio-size-sm-var});
+  }
+  &.md {
+    #{radio.$radio-size-var}: var(#{$radio-size-md-var});
+  }
+  &.lg {
+    #{radio.$radio-size-var}: var(#{$radio-size-lg-var});
+  }
+}
+
+// ============================================
+// Semantics
+// ============================================
+.#{radio.$radio-class-name} {
+  // checked background remains semantic default
+  #{radio.$radio-dot-color-var}: var(
+    #{contract_prefixes.$palette-default-var}
+  );
+}

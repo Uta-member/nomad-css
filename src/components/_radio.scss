@@ -34,9 +34,9 @@ $form-radio-label-color-var: --form-radio-label-color !default;
 // ============================================
 
 // ============================================
-// CSS Variables
+// CSS Variables (defaults live in :root so theme overrides win)
 // ============================================
-.#{$radio-class-name} {
+:root {
   // Size
   #{$radio-size-var}: 1.25rem;
 
@@ -52,8 +52,8 @@ $form-radio-label-color-var: --form-radio-label-color !default;
   #{$radio-bg-hover-var}: transparent;
   #{$radio-bg-checked-var}: transparent;
 
-  // Dot
-  #{$radio-dot-size-var}: 0.5rem;
+  // Dot (scale relative to radio size to ensure gap from border)
+  #{$radio-dot-size-var}: calc(var(#{$radio-size-var}) * 0.4);
   #{$radio-dot-color-var}: inherit;
 
   // Focus ring
@@ -115,7 +115,7 @@ input[type="radio"].#{$radio-class-name} {
   // ----------------------------------------
   // Hover State
   // ----------------------------------------
-  &:hover:not(:disabled):not(:checked) {
+  &:hover:not(:disabled) {
     background-color: var(#{$radio-bg-hover-var});
     border-color: var(#{$radio-border-color-hover-var});
   }
@@ -133,7 +133,7 @@ input[type="radio"].#{$radio-class-name} {
   // Checked State
   // ----------------------------------------
   &:checked {
-    background-color: var(#{$radio-bg-checked-var});
+    background-color: var(#{$radio-bg-var});
     border-color: var(#{$radio-border-color-checked-var});
 
     // Inner dot using pseudo-element
