@@ -140,8 +140,9 @@ input[type="radio"].#{$radio-class-name} {
     &::after {
       content: "";
       display: block;
-      width: var(#{$radio-dot-size-var});
-      height: var(#{$radio-dot-size-var});
+      /* Use percentage so dot scales with the radio element size */
+      width: 50%;
+      height: 50%;
       border-radius: 50%;
       background-color: var(#{$radio-dot-color-var});
     }

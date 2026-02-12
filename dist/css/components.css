@@ -429,8 +429,9 @@ input[type=radio].radio:checked {
 input[type=radio].radio:checked::after {
   content: "";
   display: block;
-  width: var(--radio-dot-size);
-  height: var(--radio-dot-size);
+  /* Use percentage so dot scales with the radio element size */
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
   background-color: var(--radio-dot-color);
 }
