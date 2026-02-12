@@ -21,6 +21,28 @@ $default-palette: semantics.$semantic-primary !default;
   @include colors.generate-palette-variants($default-palette);
 }
 
+// Generate a theme-local neutral palette (keeps neutral in themes layer only)
+// Delegate to props/colors generic generator so logic stays unified.
+:root {
+  $neutral-palette: map.get(semantics.$semantic-neutral, null) or
+    semantics.$semantic-neutral;
+
+  $neutral-names: (
+    lightness-prefix: neutral-l-,
+    color-prefix: neutral-color-,
+    accent-prefix: neutral-accent-,
+    gray-prefix: neutral-gray-,
+    prefix: neutral-,
+    hue-var: --neutral-h,
+    saturation-var: --neutral-s,
+  );
+
+  @include colors.generate-palette-with-prefixes(
+    $neutral-palette,
+    $neutral-names
+  );
+}
+
 // ============================================
 // Common Contract Variables
 // ============================================

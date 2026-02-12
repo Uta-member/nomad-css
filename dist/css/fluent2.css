@@ -6348,4 +6348,195 @@ h6,
   --palette-accent-darker: var(
     --palette-accent-9
   );
+}
+
+:root {
+  --neutral-h: var(--hue-blue);
+  --neutral-s: 5%;
+  --neutral-l-0: 97%;
+  --neutral-l-1: 93%;
+  --neutral-l-2: 85%;
+  --neutral-l-3: 75%;
+  --neutral-l-4: 65%;
+  --neutral-l-5: 50%;
+  --neutral-l-6: 42%;
+  --neutral-l-7: 34%;
+  --neutral-l-8: 26%;
+  --neutral-l-9: 18%;
+  --neutral-l-10: 10%;
+  --neutral-color-0: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-0)
+  );
+  --neutral-color-1: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-1)
+  );
+  --neutral-color-2: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-2)
+  );
+  --neutral-color-3: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-3)
+  );
+  --neutral-color-4: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-4)
+  );
+  --neutral-color-5: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-5)
+  );
+  --neutral-color-6: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-6)
+  );
+  --neutral-color-7: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-7)
+  );
+  --neutral-color-8: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-8)
+  );
+  --neutral-color-9: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-9)
+  );
+  --neutral-color-10: hsl(
+    var(--neutral-h),
+    var(--neutral-s),
+    var(--neutral-l-10)
+  );
+  --neutral-gray-0: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-0)
+  );
+  --neutral-gray-1: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-1)
+  );
+  --neutral-gray-2: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-2)
+  );
+  --neutral-gray-3: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-3)
+  );
+  --neutral-gray-4: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-4)
+  );
+  --neutral-gray-5: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-5)
+  );
+  --neutral-gray-6: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-6)
+  );
+  --neutral-gray-7: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-7)
+  );
+  --neutral-gray-8: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-8)
+  );
+  --neutral-gray-9: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-9)
+  );
+  --neutral-gray-10: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--neutral-l-10)
+  );
+  --neutral-accent-0: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-dark-l)
+  );
+  --neutral-accent-1: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-dark-l)
+  );
+  --neutral-accent-2: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-dark-l)
+  );
+  --neutral-accent-3: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-dark-l)
+  );
+  --neutral-accent-4: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-dark-l)
+  );
+  --neutral-accent-5: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-light-l)
+  );
+  --neutral-accent-6: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-light-l)
+  );
+  --neutral-accent-7: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-light-l)
+  );
+  --neutral-accent-8: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-light-l)
+  );
+  --neutral-accent-9: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-light-l)
+  );
+  --neutral-accent-10: hsl(
+    var(--neutral-h),
+    var(--palette-gs),
+    var(--palette-accent-light-l)
+  );
+  --neutral-lighter: var(--neutral-color-2);
+  --neutral-accent-lighter: var(--neutral-accent-2);
+  --neutral-light: var(--neutral-color-3);
+  --neutral-accent-light: var(--neutral-accent-3);
+  --neutral-default: var(--neutral-color-5);
+  --neutral-accent-default: var(--neutral-accent-5);
+  --neutral-dark: var(--neutral-color-7);
+  --neutral-accent-dark: var(--neutral-accent-7);
+  --neutral-darker: var(--neutral-color-9);
+  --neutral-accent-darker: var(--neutral-accent-9);
 }/*# sourceMappingURL=fluent2.css.map */

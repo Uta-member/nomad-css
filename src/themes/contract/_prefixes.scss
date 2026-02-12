@@ -15,3 +15,19 @@ $palette-light-accent-var: --#{prefixes.$palette-accent-prefix}light;
 $palette-default-accent-var: --#{prefixes.$palette-accent-prefix}default;
 $palette-dark-accent-var: --#{prefixes.$palette-accent-prefix}dark;
 $palette-darker-accent-var: --#{prefixes.$palette-accent-prefix}darker;
+
+// ============================================
+// Neutral Palette Variant Names (theme-local)
+// These live in the theme layer only so props layer remains unchanged.
+// ============================================
+$neutral-lighter-var: --neutral-lighter;
+$neutral-light-var: --neutral-light;
+$neutral-default-var: --neutral-default;
+$neutral-dark-var: --neutral-dark;
+$neutral-darker-var: --neutral-darker;
+
+$neutral-lighter-accent-var: --neutral-accent-lighter;
+$neutral-light-accent-var: --neutral-accent-light;
+$neutral-default-accent-var: --neutral-accent-default;
+$neutral-dark-accent-var: --neutral-accent-dark;
+$neutral-darker-accent-var: --neutral-accent-darker;

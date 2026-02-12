@@ -256,6 +256,96 @@ $palettes: (
   );
 }
 
+// Generic palette generator that allows overriding the variable name prefixes.
+// $names is a map with optional keys:
+//   lightness-prefix, color-prefix, accent-prefix, gray-prefix, prefix (base),
+//   hue-var, saturation-var, gray-saturation-var,
+//   accent-light-lightness-var, accent-dark-lightness-var,
+//   threshold, lightness-list, level-list
+@mixin generate-palette-with-prefixes($palette, $names) {
+  @if not type-of($palette) == "map" {
+    @error "カラーパレット生成エラー: パレットの値には連想配列を指定してください。";
+  }
+
+  // resolve prefixes and var names (fall back to defaults used by props)
+  $lightness-prefix: map.get($names, lightness-prefix) or
+    $palette-lightness-prefix;
+  $color-prefix: map.get($names, color-prefix) or $palette-color-prefix;
+  $accent-prefix: map.get($names, accent-prefix) or $palette-accent-prefix;
+  $gray-prefix: map.get($names, gray-prefix) or $palette-gray-prefix;
+  $base-prefix: map.get($names, prefix) or $palette-prefix;
+
+  $hue-var: map.get($names, hue-var) or $palette-hue-var;
+  $saturation-var: map.get($names, saturation-var) or $palette-saturation-var;
+  $gray-sat-var: map.get($names, gray-saturation-var) or
+    $palette-gray-saturation-var;
+  $accent-light-l-var: map.get($names, accent-light-lightness-var) or
+    $palette-accent-light-lightness-var;
+  $accent-dark-l-var: map.get($names, accent-dark-lightness-var) or
+    $palette-accent-dark-lightness-var;
+
+  // local lightness/levels
+  $lightness-list: map.get($names, lightness-list) or
+    map.get($palette, lightness-list) or $palette-default-lightness-list;
+  $level-list: map.get($names, level-list) or map.get($palette, level-list) or
+    $palette-default-level-list;
+  $threshold: map.get($names, threshold) or map.get($palette, threshold) or
+    $palette-accent-default-threshold;
+
+  // write hue/saturation vars (use provided var names or defaults)
+  // if $hue-var is a string like "--neutral-h" we want to emit that variable
+  // with the palette's h value. But if $hue-var is already a var reference
+  // (e.g. --palette-h) it's fine.
+  #{unquote($hue-var)}: #{map.get($palette, h)};
+  #{unquote($saturation-var)}: #{map.get($palette, s)};
+
+  // generate lightness variables
+  @each $key, $lightness in $lightness-list {
+    --#{$lightness-prefix}#{$key}: #{$lightness};
+  }
+
+  // colors
+  @each $key, $lightness in $lightness-list {
+    --#{$color-prefix}#{$key}: hsl(
+      var(#{$hue-var}),
+      var(#{$saturation-var}),
+      var(--#{$lightness-prefix}#{$key})
+    );
+  }
+
+  // gray variants
+  @each $key, $lightness in $lightness-list {
+    --#{$gray-prefix}#{$key}: hsl(
+      var(#{$hue-var}),
+      var(#{$gray-sat-var}),
+      var(--#{$lightness-prefix}#{$key})
+    );
+  }
+
+  // accents
+  @each $key, $lightness in $lightness-list {
+    @if $lightness > $threshold {
+      --#{$accent-prefix}#{$key}: hsl(
+        var(#{$hue-var}),
+        var(#{$gray-sat-var}),
+        var(#{$accent-dark-l-var})
+      );
+    } @else {
+      --#{$accent-prefix}#{$key}: hsl(
+        var(#{$hue-var}),
+        var(#{$gray-sat-var}),
+        var(#{$accent-light-l-var})
+      );
+    }
+  }
+
+  // level shortcuts
+  @each $level-name, $step-key in $level-list {
+    --#{$base-prefix}#{$level-name}: var(--#{$color-prefix}#{$step-key});
+    --#{$accent-prefix}#{$level-name}: var(--#{$accent-prefix}#{$step-key});
+  }
+}
+
 //=============================================
 // Process
 // ============================================
