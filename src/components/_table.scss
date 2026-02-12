@@ -4,27 +4,27 @@
 // Prefixes
 // ============================================
 // Prefixes
-$table-prefix: #{$prefix}table-;
+$table-prefix: #{$prefix}table- !default;
 
 // Class Names
-$table-class-name: "table";
+$table-class-name: "table" !default;
 
 // Variable Names
-$table-bg-var: --#{$table-prefix}bg;
-$table-color-var: --#{table-prefix}color;
-$table-border-color-var: --#{table-prefix}border-color;
-$table-striped-bg-var: --#{table-prefix}striped-bg;
-$table-striped-color-var: --#{table-prefix}striped-color;
-$table-hover-bg-var: --#{table-prefix}hover-bg;
-$table-hover-color-var: --#{table-prefix}hover-color;
-$table-active-bg-var: --#{table-prefix}active-bg;
-$table-active-color-var: --#{table-prefix}active-color;
-$table-cell-padding-x-var: --#{$table-prefix}cell-padding-x;
-$table-cell-padding-y-var: --#{$table-prefix}cell-padding-y;
-$table-border-width-var: --#{$table-prefix}border-width;
-$table-th-font-weight-var: --#{$table-prefix}th-font-weight;
-$table-group-separator-colot-var: --#{$table-prefix}group-separator-color;
-$table-caption-color-var: --#{$table-prefix}caption-color;
+$table-bg-var: --#{$table-prefix}bg !default;
+$table-color-var: --#{table-prefix}color !default;
+$table-border-color-var: --#{table-prefix}border-color !default;
+$table-striped-bg-var: --#{table-prefix}striped-bg !default;
+$table-striped-color-var: --#{table-prefix}striped-color !default;
+$table-hover-bg-var: --#{table-prefix}hover-bg !default;
+$table-hover-color-var: --#{table-prefix}hover-color !default;
+$table-active-bg-var: --#{table-prefix}active-bg !default;
+$table-active-color-var: --#{table-prefix}active-color !default;
+$table-cell-padding-x-var: --#{$table-prefix}cell-padding-x !default;
+$table-cell-padding-y-var: --#{$table-prefix}cell-padding-y !default;
+$table-border-width-var: --#{$table-prefix}border-width !default;
+$table-th-font-weight-var: --#{$table-prefix}th-font-weight !default;
+$table-group-separator-colot-var: --#{$table-prefix}group-separator-color !default;
+$table-caption-color-var: --#{$table-prefix}caption-color !default;
 
 // ============================================
 // Process
