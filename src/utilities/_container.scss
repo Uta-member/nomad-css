@@ -251,22 +251,22 @@ $min-viewport-height-values: (
 // Width
 // ============================================
 @each $name, $value in $width-values {
-  #{$width-class-name}-#{$name} {
+  .#{$width-class-name}-#{$name} {
     width: #{$value};
   }
 }
 @each $name, $value in $max-width-values {
-  #{$max-width-class-name}-#{$name} {
+  .#{$max-width-class-name}-#{$name} {
     max-width: #{$value};
   }
 }
 @each $name, $value in $viewport-width-values {
-  #{$viewport-width-class-name}-#{$name} {
+  .#{$viewport-width-class-name}-#{$name} {
     width: #{$value};
   }
 }
 @each $name, $value in $min-viewport-width-values {
-  #{$min-viewport-width-class-name}-#{$name} {
+  .#{$min-viewport-width-class-name}-#{$name} {
     min-width: #{$value};
   }
 }
@@ -275,22 +275,22 @@ $min-viewport-height-values: (
 // Height
 // ============================================
 @each $name, $value in $height-values {
-  #{$height-class-name}-#{$name} {
+  .#{$height-class-name}-#{$name} {
     height: #{$value};
   }
 }
 @each $name, $value in $max-height-values {
-  #{$max-height-class-name}-#{$name} {
+  .#{$max-height-class-name}-#{$name} {
     max-height: #{$value};
   }
 }
 @each $name, $value in $viewport-height-values {
-  #{$viewport-height-class-name}-#{$name} {
+  .#{$viewport-height-class-name}-#{$name} {
     height: #{$value};
   }
 }
 @each $name, $value in $min-viewport-height-values {
-  #{$min-viewport-height-class-name}-#{$name} {
+  .#{$min-viewport-height-class-name}-#{$name} {
     min-height: #{$value};
   }
 }
