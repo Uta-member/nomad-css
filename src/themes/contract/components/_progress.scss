@@ -1,0 +1,16 @@
+@use "../../../components/progress" as progress;
+@use "../../../props/prefixes" as prefixes;
+@use "../../contract/prefixes" as contract_prefixes;
+@use "../../contract/semantics" as semantics;
+
+// ============================================
+// Overrides
+// ============================================
+.#{progress.$progress-class-name} {
+  // Background colors
+  #{progress.$progress-bg-var}: var(#{contract_prefixes.$neutral-lighter-var});
+  #{progress.$progress-border-color-var}: transparent;
+
+  // Value color (uses semantic palette)
+  #{progress.$progress-value-bg-var}: var(#{contract_prefixes.$palette-default-var});
+}

@@ -4298,11 +4298,8 @@ input[type=checkbox].checkbox:disabled {
 
 .progress {
   --progress-height: 0.5rem;
-  --progress-bg: #e5e7eb;
   --progress-border-radius: 0.25rem;
   --progress-border-width: 0;
-  --progress-border-color: transparent;
-  --progress-value-bg: #3b82f6;
   --progress-value-border-radius: 0.25rem;
   --progress-transition: width 0.3s ease-in-out;
   --progress-indeterminate-duration: 1.5s;
@@ -5960,6 +5957,12 @@ h6,
   --range-thumb-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.15);
   --range-thumb-shadow-active: 0 1px 2px rgba(0, 0, 0, 0.1);
   --range-focus-ring-color: var(--palette-default);
+}
+
+.progress {
+  --progress-bg: var(--neutral-lighter);
+  --progress-border-color: transparent;
+  --progress-value-bg: var(--palette-default);
 }
 
 :root {

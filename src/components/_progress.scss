@@ -29,14 +29,9 @@ $progress-indeterminate-width-var: --#{$progress-prefix}indeterminate-width !def
 // ============================================
 .#{$progress-class-name} {
   #{$progress-height-var}: 0.5rem;
-  #{$progress-bg-var}: #e5e7eb;
   #{$progress-border-radius-var}: 0.25rem;
   #{$progress-border-width-var}: 0;
-  #{$progress-border-color-var}: transparent;
-
-  #{$progress-value-bg-var}: #3b82f6;
   #{$progress-value-border-radius-var}: 0.25rem;
-
   #{$progress-transition-var}: width 0.3s ease-in-out;
   #{$progress-indeterminate-duration-var}: 1.5s;
   #{$progress-indeterminate-width-var}: 30%;
