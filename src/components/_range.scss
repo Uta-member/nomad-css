@@ -18,6 +18,8 @@ $range-track-border-radius-var: --#{$range-prefix}track-border-radius !default;
 $range-track-border-width-var: --#{$range-prefix}track-border-width !default;
 $range-track-border-color-var: --#{$range-prefix}track-border-color !default;
 $range-track-fill-bg-var: --#{$range-prefix}track-fill-bg !default;
+$range-fill-percent-var: --#{$range-prefix}fill-percent !default;
+$range-flat-fill-percent-var: --#{$range-prefix}flat-fill-percent !default;
 
 $range-thumb-size-var: --#{$range-prefix}thumb-size !default;
 $range-thumb-bg-var: --#{$range-prefix}thumb-bg !default;
@@ -60,6 +62,7 @@ $range-transition-var: --#{$range-prefix}transition !default;
     background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
+  #{$range-flat-fill-percent-var}: 0%;
 }
 
 // ============================================
@@ -84,8 +87,8 @@ input[type="range"].#{$range-class-name} {
   // Cursor
   cursor: pointer;
 
-  // Fill percent (default 50%, update via JS)
-  --range-fill-percent: 50%;
+  // Fill percent (default 0%, update via JS)
+  #{$range-fill-percent-var}: 0%;
 
   // ----------------------------------------
   // WebKit Track (Chrome, Safari, Edge)
@@ -97,8 +100,8 @@ input[type="range"].#{$range-class-name} {
     background: linear-gradient(
       to right,
       var(#{$range-track-fill-bg-var}) 0%,
-      var(#{$range-track-fill-bg-var}) var(--range-fill-percent),
-      var(#{$range-track-bg-var}) var(--range-fill-percent),
+      var(#{$range-track-fill-bg-var}) var(#{$range-fill-percent-var}),
+      var(#{$range-track-bg-var}) var(#{$range-fill-percent-var}),
       var(#{$range-track-bg-var}) 100%
     );
     border-radius: var(#{$range-track-border-radius-var});
@@ -171,8 +174,8 @@ input[type="range"].#{$range-class-name} {
       background: linear-gradient(
         to right,
         var(#{$range-track-fill-bg-var}) 0%,
-        var(#{$range-track-fill-bg-var}) var(--range-fill-percent),
-        var(#{$range-track-bg-hover-var}) var(--range-fill-percent),
+        var(#{$range-track-fill-bg-var}) var(#{$range-fill-percent-var}),
+        var(#{$range-track-bg-hover-var}) var(#{$range-fill-percent-var}),
         var(#{$range-track-bg-hover-var}) 100%
       );
     }
@@ -245,17 +248,7 @@ input[type="range"].#{$range-class-name} {
 // ============================================
 // Usage: <input type="range" class="range range-flat">
 // 塗りつぶしなしのフラットなトラック（JSなしで動作）
-.range-flat {
-  &::-webkit-slider-runnable-track {
-    background: var(--#{$range-prefix}track-bg);
-  }
-
-  &:hover:not(:disabled)::-webkit-slider-runnable-track {
-    background: var(--#{$range-prefix}track-bg-hover);
-  }
-
-  // Firefoxでも塗りつぶしを無効化
-  &::-moz-range-progress {
-    background: transparent;
-  }
+.#{$range-class-name}.range-flat,
+input[type="range"].#{$range-class-name}.range-flat {
+  #{$range-fill-percent-var}: var(#{$range-flat-fill-percent-var});
 }

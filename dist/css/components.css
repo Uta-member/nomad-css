@@ -794,6 +794,7 @@ textarea.input-resize-both {
   --range-focus-ring-offset: 2px;
   --range-disabled-opacity: 0.5;
   --range-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --range-flat-fill-percent: 0%;
 }
 
 .range,
@@ -805,7 +806,7 @@ input[type=range].range {
   height: var(--range-thumb-size);
   background: transparent;
   cursor: pointer;
-  --range-fill-percent: 50%;
+  --range-fill-percent: 0%;
 }
 .range::-webkit-slider-runnable-track,
 input[type=range].range::-webkit-slider-runnable-track {
@@ -912,14 +913,9 @@ input[type=range].range:disabled {
   cursor: not-allowed;
 }
 
-.range-flat::-webkit-slider-runnable-track {
-  background: var(--range-track-bg);
-}
-.range-flat:hover:not(:disabled)::-webkit-slider-runnable-track {
-  background: var(--range-track-bg-hover);
-}
-.range-flat::-moz-range-progress {
-  background: transparent;
+.range.range-flat,
+input[type=range].range.range-flat {
+  --range-fill-percent: var(--range-flat-fill-percent);
 }
 
 .select {
