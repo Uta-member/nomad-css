@@ -6003,6 +6003,7 @@ h6,
   --input-border-color: var(--neutral-lighter);
   --input-border-color-hover: var(--neutral-lighter);
   --input-border-color-focus: transparent;
+  border-radius: var(--input-border-radius) var(--input-border-radius) 0 0;
   --input-focus-ring-enabled: 0;
   --input-focus-underline-enabled: 1;
   --input-focus-underline-color: var(--palette-default);

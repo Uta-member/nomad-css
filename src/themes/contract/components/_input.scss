@@ -64,6 +64,8 @@ $input-size-lg-var: --#{input.$input-prefix}height-lg !default;
     #{input.$input-border-color-var}: var(#{prefixes.$neutral-lighter-var});
     #{input.$input-border-color-hover-var}: var(#{prefixes.$neutral-lighter-var});
     #{input.$input-border-color-focus-var}: transparent;
+    // Top-only rounded corners: keep top corners rounded, bottom corners square
+    border-radius: var(#{input.$input-border-radius-var}) var(#{input.$input-border-radius-var}) 0 0;
 
     // Use underline-only focus (disable ring, enable underline)
     #{input.$input-focus-ring-enabled-var}: 0;
