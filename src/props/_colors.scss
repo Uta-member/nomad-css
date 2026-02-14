@@ -59,7 +59,7 @@ $palette-gray-saturation: 5% !default;
 //     key: 輝度名
 //     value: 輝度値
 //   threshold: アクセント切り替え輝度
-//   level-list: レベルリスト
+//   levels: レベルリスト
 //     key: レベル名
 //     value: 輝度名
 // ============================================
@@ -67,7 +67,7 @@ $palettes: (
   "primary": (
     h: 220,
     s: 80%,
-    level-list: (
+    levels: (
       lighter: 2,
       light: 3,
       default: 6,
@@ -249,7 +249,7 @@ $palettes: (
   @include _generate-palette-colors(
     $palette-lightness-list: map.get($palette, lightness-list) or
       $palette-default-lightness-list,
-    $palette-level-list: map.get($palette, level-list) or
+    $palette-level-list: map.get($palette, levels) or
       $palette-default-level-list,
     $threshold: map.get($palette, threshold) or
       $palette-accent-default-threshold
@@ -261,7 +261,7 @@ $palettes: (
 //   lightness-prefix, color-prefix, accent-prefix, gray-prefix, prefix (base),
 //   hue-var, saturation-var, gray-saturation-var,
 //   accent-light-lightness-var, accent-dark-lightness-var,
-//   threshold, lightness-list, level-list
+//   threshold, lightness-list, levels
 @mixin generate-palette-with-prefixes($palette, $names) {
   @if not type-of($palette) == "map" {
     @error "カラーパレット生成エラー: パレットの値には連想配列を指定してください。";
@@ -288,7 +288,8 @@ $palettes: (
   $lightness-list: map.get($names, lightness-list) or
     map.get($palette, lightness-list) or $palette-default-lightness-list;
   $level-list: map.get($names, level-list) or map.get($palette, level-list) or
-    $palette-default-level-list;
+    // Support legacy 'levels' key as well
+    map.get($palette, levels) or $palette-default-level-list;
   $threshold: map.get($names, threshold) or map.get($palette, threshold) or
     $palette-accent-default-threshold;
 

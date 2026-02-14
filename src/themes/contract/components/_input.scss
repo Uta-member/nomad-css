@@ -1,0 +1,91 @@
+@use "../../../components/input" as input;
+@use "../../contract/_prefixes" as prefixes;
+@use "../semantics" as semantics;
+
+// ============================================
+// Size variables
+// ============================================
+$input-size-sm-var: --#{input.$input-prefix}height-sm !default;
+$input-size-md-var: --#{input.$input-prefix}height-md !default;
+$input-size-lg-var: --#{input.$input-prefix}height-lg !default;
+
+// ============================================
+// Root overrides (defaults for the contract theme)
+// ============================================
+:root {
+  // Sizes
+  #{$input-size-sm-var}: 2rem;
+  #{$input-size-md-var}: 2.5rem;
+  #{$input-size-lg-var}: 3rem;
+
+  // Map core input vars to contract palette / neutral tokens
+  #{input.$input-height-var}: var(#{$input-size-md-var});
+  #{input.$input-padding-x-var}: 0.75rem;
+  #{input.$input-padding-y-var}: 0.5rem;
+  #{input.$input-font-size-var}: 1rem;
+
+  // Colors / borders
+  #{input.$input-border-color-var}: var(#{prefixes.$neutral-light-var});
+  #{input.$input-border-color-hover-var}: var(#{prefixes.$neutral-light-var});
+  #{input.$input-border-color-focus-var}: var(#{prefixes.$neutral-default-var});
+  #{input.$input-focus-ring-color-var}: var(#{prefixes.$palette-default-accent-var});
+
+  #{input.$input-bg-disabled-var}: var(#{prefixes.$neutral-lighter-var});
+  #{input.$input-color-disabled-var}: var(#{prefixes.$neutral-dark-var});
+  #{input.$input-placeholder-color-var}: var(#{prefixes.$neutral-dark-var});
+}
+
+// ============================================
+// Size classes
+// ============================================
+.#{input.$input-class-name} {
+  &.sm {
+    #{input.$input-height-var}: var(#{$input-size-sm-var});
+    #{input.$input-font-size-var}: 0.875rem;
+    #{input.$input-padding-y-var}: 0.25rem;
+
+  }
+
+  &.lg {
+    #{input.$input-height-var}: var(#{$input-size-lg-var});
+    #{input.$input-font-size-var}: 1.125rem;
+    #{input.$input-padding-y-var}: 0.75rem;
+  }
+}
+
+// ============================================
+// Variants
+// ============================================
+.#{input.$input-class-name} {
+  // Filled variant: filled background and less visible border
+  &.filled {
+    #{input.$input-bg-var}: var(#{prefixes.$neutral-lighter-var});
+    #{input.$input-border-color-var}: var(#{prefixes.$neutral-lighter-var});
+    #{input.$input-border-color-hover-var}: var(#{prefixes.$neutral-lighter-var});;
+    #{input.$input-border-color-focus-var}: var(#{prefixes.$palette-default-var});
+  }
+
+  // Underline variant: remove full border, use bottom border only
+  &.underline {
+    border: 0;
+    border-bottom: var(#{input.$input-border-width-var}) solid var(#{prefixes.$neutral-light-var});
+    border-radius: 0;
+  }
+}
+
+// ============================================
+// Semantic focus / accent mapping
+// (use palette-default-accent which themes will map per semantic class)
+// ============================================
+.#{input.$input-class-name} {
+  &.primary,
+  &.secondary,
+  &.tertiary,
+  &.success,
+  &.warning,
+  &.danger,
+  &.info {
+    #{input.$input-border-color-focus-var}: var(#{prefixes.$palette-default-var});
+    #{input.$input-focus-ring-color-var}: var(#{prefixes.$palette-default-var});
+  }
+}
