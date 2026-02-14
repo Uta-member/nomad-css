@@ -91,36 +91,32 @@ progress.#{$progress-class-name} {
 // ============================================
 // Indeterminate Progress (native <progress>)
 // ============================================
-// Note: Indeterminate state is applied when no value attribute is set
-// <progress class="progress"></progress>
+// Note: Use .indeterminate class instead of :indeterminate pseudo-class
+// <progress class="progress indeterminate"></progress>
 
-progress.#{$progress-class-name}:indeterminate {
-  // WebKit
+progress.#{$progress-class-name}.indeterminate {
+  // Override background to show animated gradient
+  background: linear-gradient(
+    90deg,
+    var(#{$progress-bg-var}) 0%,
+    var(#{$progress-bg-var}) 33%,
+    var(#{$progress-value-bg-var}) 50%,
+    var(#{$progress-bg-var}) 67%,
+    var(#{$progress-bg-var}) 100%
+  );
+  background-size: 300% 100%;
+  animation: progress-indeterminate
+    var(#{$progress-indeterminate-duration-var}) linear infinite;
+
+  // Make internal pseudo-elements transparent so the animated background shows through
   &::-webkit-progress-bar {
-    background: var(#{$progress-bg-var});
+    background: transparent;
   }
-
   &::-webkit-progress-value {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      var(#{$progress-value-bg-var}) 50%,
-      transparent 100%
-    );
-    animation: progress-indeterminate
-      var(#{$progress-indeterminate-duration-var}) linear infinite;
+    background: transparent;
   }
-
-  // Firefox - uses different pseudo-element
   &::-moz-progress-bar {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      var(#{$progress-value-bg-var}) 50%,
-      transparent 100%
-    );
-    animation: progress-indeterminate
-      var(#{$progress-indeterminate-duration-var}) linear infinite;
+    background: transparent;
   }
 }
 
@@ -129,12 +125,10 @@ progress.#{$progress-class-name}:indeterminate {
 // ============================================
 @keyframes progress-indeterminate {
   0% {
-    margin-left: -30%;
-    width: var(#{$progress-indeterminate-width-var});
+    background-position: 100% 0;
   }
   100% {
-    margin-left: 100%;
-    width: var(#{$progress-indeterminate-width-var});
+    background-position: 0% 0;
   }
 }
 

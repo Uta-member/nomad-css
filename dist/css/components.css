@@ -258,26 +258,27 @@ progress.progress::-moz-progress-bar {
   transition: var(--progress-transition);
 }
 
-progress.progress:indeterminate::-webkit-progress-bar {
-  background: var(--progress-bg);
-}
-progress.progress:indeterminate::-webkit-progress-value {
-  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
+progress.progress.indeterminate {
+  background: linear-gradient(90deg, var(--progress-bg) 0%, var(--progress-bg) 33%, var(--progress-value-bg) 50%, var(--progress-bg) 67%, var(--progress-bg) 100%);
+  background-size: 300% 100%;
   animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
 }
-progress.progress:indeterminate::-moz-progress-bar {
-  background: linear-gradient(90deg, transparent 0%, var(--progress-value-bg) 50%, transparent 100%);
-  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
+progress.progress.indeterminate::-webkit-progress-bar {
+  background: transparent;
+}
+progress.progress.indeterminate::-webkit-progress-value {
+  background: transparent;
+}
+progress.progress.indeterminate::-moz-progress-bar {
+  background: transparent;
 }
 
 @keyframes progress-indeterminate {
   0% {
-    margin-left: -30%;
-    width: var(--progress-indeterminate-width);
+    background-position: 100% 0;
   }
   100% {
-    margin-left: 100%;
-    width: var(--progress-indeterminate-width);
+    background-position: 0% 0;
   }
 }
 .progress-bar {
