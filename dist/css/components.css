@@ -419,20 +419,20 @@ input[type=radio].radio:disabled {
   --input-line-height: 1.5;
   --input-bg: transparent;
   --input-color: inherit;
-  --input-border-color: transparent;
-  --input-placeholder-color: inherit;
+  --input-border-color: lightgray;
+  --input-placeholder-color: gray;
   --input-bg-hover: transparent;
-  --input-border-color-hover: inherit;
+  --input-border-color-hover: gray;
   --input-bg-focus: transparent;
-  --input-border-color-focus: transparent;
+  --input-border-color-focus: gray;
   --input-focus-ring-width: 2px;
-  --input-focus-ring-color: inherit;
-  --input-bg-disabled: transparent;
-  --input-color-disabled: inherit;
-  --input-border-color-disabled: transparent;
+  --input-focus-ring-color: blue;
+  --input-bg-disabled: lightgray;
+  --input-color-disabled: gray;
+  --input-border-color-disabled: gray;
   --input-bg-readonly: transparent;
   --input-color-readonly: inherit;
-  --input-border-color-readonly: transparent;
+  --input-border-color-readonly: lightgray;
   --input-border-width: 1px;
   --input-border-radius: 0.25rem;
   --input-transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -478,13 +478,27 @@ textarea.input:hover:not(:disabled):not(:read-only):not(:focus) {
   background-color: var(--input-bg-hover);
   border-color: var(--input-border-color-hover);
 }
-.input:focus,
-input.input:focus,
-textarea.input:focus {
+.input:focus:not(:-moz-read-only), input.input:focus:not(:-moz-read-only), textarea.input:focus:not(:-moz-read-only) {
   outline: none;
   background-color: var(--input-bg-focus);
   border-color: var(--input-border-color-focus);
   box-shadow: 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+}
+.input:focus:not(:read-only),
+input.input:focus:not(:read-only),
+textarea.input:focus:not(:read-only) {
+  outline: none;
+  background-color: var(--input-bg-focus);
+  border-color: var(--input-border-color-focus);
+  box-shadow: 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+}
+.input:focus:-moz-read-only, input.input:focus:-moz-read-only, textarea.input:focus:-moz-read-only {
+  outline: none;
+}
+.input:focus:read-only,
+input.input:focus:read-only,
+textarea.input:focus:read-only {
+  outline: none;
 }
 .input:disabled,
 input.input:disabled,

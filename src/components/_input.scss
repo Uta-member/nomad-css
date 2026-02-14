@@ -52,24 +52,24 @@ $form-input-gap-var: --form-input-gap !default;
   // Colors
   #{$input-bg-var}: transparent;
   #{$input-color-var}: inherit;
-  #{$input-border-color-var}: transparent;
-  #{$input-placeholder-color-var}: inherit;
+  #{$input-border-color-var}: lightgray;
+  #{$input-placeholder-color-var}: gray;
 
   #{$input-bg-hover-var}: transparent;
-  #{$input-border-color-hover-var}: inherit;
+  #{$input-border-color-hover-var}: gray;
 
   #{$input-bg-focus-var}: transparent;
-  #{$input-border-color-focus-var}: transparent;
+  #{$input-border-color-focus-var}: gray;
   #{$input-focus-ring-width-var}: 2px;
-  #{$input-focus-ring-color-var}: inherit;
+  #{$input-focus-ring-color-var}: blue;
 
-  #{$input-bg-disabled-var}: transparent;
-  #{$input-color-disabled-var}: inherit;
-  #{$input-border-color-disabled-var}: transparent;
+  #{$input-bg-disabled-var}: lightgray;
+  #{$input-color-disabled-var}: gray;
+  #{$input-border-color-disabled-var}: gray;
 
   #{$input-bg-readonly-var}: transparent;
   #{$input-color-readonly-var}: inherit;
-  #{$input-border-color-readonly-var}: transparent;
+  #{$input-border-color-readonly-var}: lightgray;
 
   #{$input-border-width-var}: 1px;
   #{$input-border-radius-var}: 0.25rem;
@@ -137,12 +137,16 @@ textarea.#{$input-class-name} {
   // ----------------------------------------
   // Focus State
   // ----------------------------------------
-  &:focus {
+  &:focus:not(:read-only) {
     outline: none;
     background-color: var(#{$input-bg-focus-var});
     border-color: var(#{$input-border-color-focus-var});
     box-shadow: 0 0 0 var(#{$input-focus-ring-width-var})
       var(#{$input-focus-ring-color-var});
+  }
+
+  &:focus:read-only {
+    outline: none;
   }
 
   // ----------------------------------------
