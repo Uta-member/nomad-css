@@ -4517,6 +4517,10 @@ input[type=radio].radio:disabled {
   --input-border-width: 1px;
   --input-border-radius: 0.25rem;
   --input-transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --input-focus-ring-enabled: 1;
+  --input-focus-underline-enabled: 0;
+  --input-focus-underline-width: 2px;
+  --input-focus-underline-color: var(--input-focus-ring-color);
   --form-input-gap: 0.5rem;
 }
 
@@ -4563,7 +4567,12 @@ textarea.input:hover:not(:disabled):not(:read-only):not(:focus) {
   outline: none;
   background-color: var(--input-bg-focus);
   border-color: var(--input-border-color-focus);
-  box-shadow: 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+  /*
+    Combined focus styles:
+    - Ring: outer ring controlled by --*-focus-ring-enabled (1/0) and width/color vars
+    - Underline: inset bottom line controlled by --*-focus-underline-enabled (1/0) and width/color vars
+  */
+  box-shadow: 0 0 0 calc(var(--input-focus-ring-width) * var(--input-focus-ring-enabled)) var(--input-focus-ring-color), inset 0 calc(-1 * var(--input-focus-underline-width) * var(--input-focus-underline-enabled)) 0 0 var(--input-focus-underline-color);
 }
 .input:focus:not(:read-only),
 input.input:focus:not(:read-only),
@@ -4571,7 +4580,12 @@ textarea.input:focus:not(:read-only) {
   outline: none;
   background-color: var(--input-bg-focus);
   border-color: var(--input-border-color-focus);
-  box-shadow: 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+  /*
+    Combined focus styles:
+    - Ring: outer ring controlled by --*-focus-ring-enabled (1/0) and width/color vars
+    - Underline: inset bottom line controlled by --*-focus-underline-enabled (1/0) and width/color vars
+  */
+  box-shadow: 0 0 0 calc(var(--input-focus-ring-width) * var(--input-focus-ring-enabled)) var(--input-focus-ring-color), inset 0 calc(-1 * var(--input-focus-underline-width) * var(--input-focus-underline-enabled)) 0 0 var(--input-focus-underline-color);
 }
 .input:focus:-moz-read-only, input.input:focus:-moz-read-only, textarea.input:focus:-moz-read-only {
   outline: none;
@@ -5984,14 +5998,23 @@ h6,
 
 .input.filled {
   --input-bg: var(--neutral-lighter);
+  --input-bg-hover: var(--neutral-lighter);
+  --input-bg-focus: var(--neutral-lighter);
   --input-border-color: var(--neutral-lighter);
   --input-border-color-hover: var(--neutral-lighter);
-  --input-border-color-focus: var(--palette-default);
+  --input-border-color-focus: transparent;
+  --input-focus-ring-enabled: 0;
+  --input-focus-underline-enabled: 1;
+  --input-focus-underline-color: var(--palette-default);
 }
 .input.underline {
   border: 0;
   border-bottom: var(--input-border-width) solid var(--neutral-light);
   border-radius: 0;
+  --input-border-color-focus: transparent;
+  --input-focus-ring-enabled: 0;
+  --input-focus-underline-enabled: 1;
+  --input-focus-underline-color: var(--palette-default);
 }
 
 .input.primary, .input.secondary, .input.tertiary, .input.success, .input.warning, .input.danger, .input.info {

@@ -36,6 +36,12 @@ $input-border-radius-var: --#{$input-prefix}border-radius !default;
 $input-transition-var: --#{$input-prefix}transition !default;
 $form-input-gap-var: --form-input-gap !default;
 
+// Focus mode (control via CSS variables)
+$input-focus-ring-enabled-var: --#{$input-prefix}focus-ring-enabled !default;
+$input-focus-underline-enabled-var: --#{$input-prefix}focus-underline-enabled !default;
+$input-focus-underline-width-var: --#{$input-prefix}focus-underline-width !default;
+$input-focus-underline-color-var: --#{$input-prefix}focus-underline-color !default;
+
 // ============================================
 // Process
 // ============================================
@@ -78,6 +84,12 @@ $form-input-gap-var: --form-input-gap !default;
     border-color 0.15s ease-in-out,
     background-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
+
+  // Focus mode defaults
+  #{$input-focus-ring-enabled-var}: 1; // 1 = ring enabled, 0 = disabled
+  #{$input-focus-underline-enabled-var}: 0; // 1 = underline enabled, 0 = disabled
+  #{$input-focus-underline-width-var}: 2px;
+  #{$input-focus-underline-color-var}: var(#{$input-focus-ring-color-var});
 
   // Form wrapper gap
   #{$form-input-gap-var}: 0.5rem;
@@ -141,8 +153,15 @@ textarea.#{$input-class-name} {
     outline: none;
     background-color: var(#{$input-bg-focus-var});
     border-color: var(#{$input-border-color-focus-var});
-    box-shadow: 0 0 0 var(#{$input-focus-ring-width-var})
-      var(#{$input-focus-ring-color-var});
+
+    /*
+      Combined focus styles:
+      - Ring: outer ring controlled by --*-focus-ring-enabled (1/0) and width/color vars
+      - Underline: inset bottom line controlled by --*-focus-underline-enabled (1/0) and width/color vars
+    */
+    box-shadow:
+      0 0 0 calc(var(#{$input-focus-ring-width-var}) * var(#{$input-focus-ring-enabled-var})) var(#{$input-focus-ring-color-var}),
+      inset 0 calc(-1 * var(#{$input-focus-underline-width-var}) * var(#{$input-focus-underline-enabled-var})) 0 0 var(#{$input-focus-underline-color-var});
   }
 
   &:focus:read-only {

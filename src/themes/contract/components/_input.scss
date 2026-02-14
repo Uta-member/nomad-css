@@ -57,19 +57,30 @@ $input-size-lg-var: --#{input.$input-prefix}height-lg !default;
 // Variants
 // ============================================
 .#{input.$input-class-name} {
-  // Filled variant: filled background and less visible border
   &.filled {
     #{input.$input-bg-var}: var(#{prefixes.$neutral-lighter-var});
+    #{input.$input-bg-hover-var}: var(#{prefixes.$neutral-lighter-var});
+    #{input.$input-bg-focus-var}: var(#{prefixes.$neutral-lighter-var});
     #{input.$input-border-color-var}: var(#{prefixes.$neutral-lighter-var});
-    #{input.$input-border-color-hover-var}: var(#{prefixes.$neutral-lighter-var});;
-    #{input.$input-border-color-focus-var}: var(#{prefixes.$palette-default-var});
+    #{input.$input-border-color-hover-var}: var(#{prefixes.$neutral-lighter-var});
+    #{input.$input-border-color-focus-var}: transparent;
+
+    // Use underline-only focus (disable ring, enable underline)
+    #{input.$input-focus-ring-enabled-var}: 0;
+    #{input.$input-focus-underline-enabled-var}: 1;
+    #{input.$input-focus-underline-color-var}: var(#{prefixes.$palette-default-var});
   }
 
-  // Underline variant: remove full border, use bottom border only
   &.underline {
     border: 0;
     border-bottom: var(#{input.$input-border-width-var}) solid var(#{prefixes.$neutral-light-var});
     border-radius: 0;
+    #{input.$input-border-color-focus-var}: transparent;
+
+    // Underline variant: ensure focus shows underline-only
+    #{input.$input-focus-ring-enabled-var}: 0;
+    #{input.$input-focus-underline-enabled-var}: 1;
+    #{input.$input-focus-underline-color-var}: var(#{prefixes.$palette-default-var});
   }
 }
 
