@@ -50,7 +50,7 @@ progress.#{$progress-class-name} {
   // Size
   display: block;
   width: 100%;
-  height: var(#{$progress-height-var});
+  height: var(#{$progress-height-var}, 0.5rem);
 
   // For Firefox
   background: var(#{$progress-bg-var});
@@ -135,15 +135,23 @@ progress.#{$progress-class-name}.indeterminate {
 // ============================================
 // DIV-based Progress (for more control)
 // ============================================
-// Usage:
-// <div class="progress-bar">
-//     <div class="progress-bar-value" style="width: 50%"></div>
-// </div>
+// Two supported markup patterns:
+// 1) Existing project pattern (outer `.progress-bar`, inner `.progress-bar-value`):
+//    <div class="progress-bar">
+//      <div class="progress-bar-value" style="width:50%"></div>
+//    </div>
+// 2) Bootstrap-like pattern (outer `.progress`, inner `.progress-bar`):
+//    <div class="progress">
+//      <div class="progress-bar" style="width:50%"></div>
+//    </div>
 
-.progress-bar {
+/* Inner bar element: use `.progress > .progress-bar` for DIV-based progress.
+   This keeps implementation simple: outer `.progress` (or native `<progress>`) and
+   inner `.progress-bar` element for the filled portion. */
+:not(progress).#{$progress-class-name} {
   display: flex;
   width: 100%;
-  height: var(#{$progress-height-var});
+  height: var(#{$progress-height-var}, 0.5rem);
   background: var(#{$progress-bg-var});
   border: var(#{$progress-border-width-var}) solid
     var(#{$progress-border-color-var});
@@ -151,7 +159,7 @@ progress.#{$progress-class-name}.indeterminate {
   overflow: hidden;
 }
 
-.progress-bar-value {
+:not(progress).#{$progress-class-name} > .progress-bar {
   height: 100%;
   background: var(#{$progress-value-bg-var});
   border-radius: var(#{$progress-value-border-radius-var});
@@ -161,7 +169,7 @@ progress.#{$progress-class-name}.indeterminate {
 // ----------------------------------------
 // DIV-based Indeterminate
 // ----------------------------------------
-.progress-bar.indeterminate .progress-bar-value {
+:not(progress).#{$progress-class-name}.indeterminate > .progress-bar {
   width: var(#{$progress-indeterminate-width-var});
   animation: progress-bar-indeterminate
     var(#{$progress-indeterminate-duration-var}) ease-in-out infinite;
@@ -175,111 +183,5 @@ progress.#{$progress-class-name}.indeterminate {
     transform: translateX(
       calc(100% / var(#{$progress-indeterminate-width-var}) * 100%)
     );
-  }
-}
-
-// Alternative animation for indeterminate (smoother)
-.progress-bar.indeterminate-pulse .progress-bar-value {
-  width: 100%;
-  animation: progress-pulse var(#{$progress-indeterminate-duration-var})
-    ease-in-out infinite;
-}
-
-@keyframes progress-pulse {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-// ============================================
-// Striped Variant
-// ============================================
-.progress-striped {
-  .progress-bar-value {
-    background-image: linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.15) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, 0.15) 50%,
-      rgba(255, 255, 255, 0.15) 75%,
-      transparent 75%,
-      transparent
-    );
-    background-size: 1rem 1rem;
-  }
-
-  &.animated .progress-bar-value {
-    animation: progress-stripes 1s linear infinite;
-  }
-}
-
-@keyframes progress-stripes {
-  0% {
-    background-position: 1rem 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-// Size variants belong in theme layer; core exposes single height variable.
-
-// ============================================
-// With Label (DIV-based only)
-// ============================================
-// Usage:
-// <div class="progress-bar progress-bar-labeled">
-//     <div class="progress-bar-value" style="width: 75%">
-//         <span class="progress-bar-label">75%</span>
-//     </div>
-// </div>
-
-.progress-bar-labeled {
-  .progress-bar-value {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2rem;
-  }
-}
-
-.progress-bar-label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: white;
-  padding: 0 0.5rem;
-  white-space: nowrap;
-}
-
-// ============================================
-// Stacked Progress (multiple values)
-// ============================================
-// Usage:
-// <div class="progress-bar progress-stacked">
-//     <div class="progress-bar-value primary" style="width: 30%"></div>
-//     <div class="progress-bar-value success" style="width: 20%"></div>
-//     <div class="progress-bar-value warning" style="width: 15%"></div>
-// </div>
-
-.progress-stacked {
-  .progress-bar-value {
-    border-radius: 0;
-
-    &:first-child {
-      border-radius: var(#{$progress-value-border-radius-var}) 0 0
-        var(#{$progress-value-border-radius-var});
-    }
-    &:last-child {
-      border-radius: 0 var(#{$progress-value-border-radius-var})
-        var(#{$progress-value-border-radius-var}) 0;
-    }
-    &:only-child {
-      border-radius: var(#{$progress-value-border-radius-var});
-    }
   }
 }
