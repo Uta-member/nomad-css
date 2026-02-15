@@ -4107,7 +4107,6 @@
   --button-font-weight: 500;
   --button-line-height: 1.5;
   --button-gap: 0.5rem;
-  --button-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --button-focus-ring-width: 2px;
   --button-focus-ring-offset: 2px;
   --button-focus-ring-color: transparent;
@@ -4145,7 +4144,6 @@
   border-radius: var(--button-border-radius);
   border-width: var(--button-border-width);
   border-style: solid;
-  transition: var(--button-transition);
   background-color: var(--button-bg);
   color: var(--button-color);
   border-color: var(--button-border-color);

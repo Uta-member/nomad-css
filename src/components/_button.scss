@@ -18,7 +18,6 @@ $button-font-size-var: --#{$button-prefix}font-size !default;
 $button-font-weight-var: --#{$button-prefix}font-weight !default;
 $button-line-height-var: --#{$button-prefix}line-height !default;
 $button-gap-var: --#{$button-prefix}gap !default;
-$button-transition-var: --#{$button-prefix}transition !default;
 $button-focus-ring-width-var: --#{$button-prefix}focus-ring-width !default;
 $button-focus-ring-offset-var: --#{$button-prefix}focus-ring-offset !default;
 $button-focus-ring-color-var: --#{$button-prefix}focus-ring-color !default;
@@ -49,13 +48,6 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
   #{$button-font-weight-var}: 500;
   #{$button-line-height-var}: 1.5;
   #{$button-gap-var}: 0.5rem;
-
-  // Transition
-  #{$button-transition-var}:
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
 
   // Focus ring
   #{$button-focus-ring-width-var}: 2px;
@@ -113,9 +105,6 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
   border-radius: var(#{$button-border-radius-var});
   border-width: var(#{$button-border-width-var});
   border-style: solid;
-
-  // Transition
-  transition: var(#{$button-transition-var});
 
   background-color: var(#{$button-bg-var});
   color: var(#{$button-color-var});
