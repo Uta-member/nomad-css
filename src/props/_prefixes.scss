@@ -3,23 +3,3 @@
 // ============================================
 // Prefixes
 $prefix: "" !default;
-
-// ============================================
-// Palette Prefix
-// ============================================
-// Prefixes
-$palette-prefix: #{$prefix}palette- !default;
-$palette-color-prefix: #{$palette-prefix}color- !default;
-$palette-accent-prefix: #{$palette-prefix}accent- !default;
-$palette-gray-prefix: #{$palette-prefix}gray- !default;
-$palette-lightness-prefix: #{$palette-prefix}l- !default;
-
-// VarNames
-$palette-hue-var: --#{$palette-prefix}h !default;
-$palette-saturation-var: --#{$palette-prefix}s !default;
-$palette-gray-saturation-var: --#{$palette-prefix}gs !default;
-$palette-accent-light-var: --#{$palette-prefix}accent-light !default;
-$palette-accent-dark-var: --#{$palette-prefix}accent-dark !default;
-$palette-accent-light-lightness-var: --#{$palette-prefix}accent-light-l !default;
-$palette-accent-dark-lightness-var: --#{$palette-prefix}accent-dark-l !default;
-$palette-accent-threshold-var: --#{$palette-prefix}accent-threshold !default;

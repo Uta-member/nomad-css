@@ -22,9 +22,9 @@ $semantic-info-class-name: #{$semantic-prefix}info;
 // threshold: アクセントカラー切り替え閾値（省略時はデフォルト）
 // ============================================
 $semantic-primary: (
-  h: var(#{hue-colors.$hue-blue-var}),
-  s: 80%,
-  threshold: 50%,
+  hue: var(#{hue-colors.$hue-blue-var}),
+  saturation: 80%,
+  accent-threshold: 50%,
   levels: (
     lighter: 2,
     light: 3,
@@ -34,9 +34,9 @@ $semantic-primary: (
   ),
 );
 $semantic-secondary: (
-  h: var(#{hue-colors.$hue-pink-var}),
-  s: 80%,
-  threshold: 55%,
+  hue: var(#{hue-colors.$hue-pink-var}),
+  saturation: 80%,
+  accent-threshold: 55%,
   levels: (
     lighter: 2,
     light: 3,
@@ -46,9 +46,9 @@ $semantic-secondary: (
   ),
 );
 $semantic-tertiary: (
-  h: var(#{hue-colors.$hue-teal-var}),
-  s: 60%,
-  threshold: 40%,
+  hue: var(#{hue-colors.$hue-teal-var}),
+  saturation: 60%,
+  accent-threshold: 40%,
   levels: (
     lighter: 2,
     light: 4,
@@ -58,9 +58,9 @@ $semantic-tertiary: (
   ),
 );
 $semantic-success: (
-  h: var(#{hue-colors.$hue-green-var}),
-  s: 60%,
-  threshold: 45%,
+  hue: var(#{hue-colors.$hue-green-var}),
+  saturation: 60%,
+  accent-threshold: 45%,
   levels: (
     lighter: 2,
     light: 4,
@@ -70,9 +70,9 @@ $semantic-success: (
   ),
 );
 $semantic-warning: (
-  h: var(#{hue-colors.$hue-yellow-var}),
-  s: 80%,
-  threshold: 45%,
+  hue: var(#{hue-colors.$hue-yellow-var}),
+  saturation: 80%,
+  accent-threshold: 45%,
   levels: (
     lighter: 2,
     light: 4,
@@ -82,9 +82,9 @@ $semantic-warning: (
   ),
 );
 $semantic-danger: (
-  h: var(#{hue-colors.$hue-red-var}),
-  s: 80%,
-  threshold: 50%,
+  hue: var(#{hue-colors.$hue-red-var}),
+  saturation: 80%,
+  accent-threshold: 50%,
   levels: (
     lighter: 2,
     light: 4,
@@ -94,9 +94,9 @@ $semantic-danger: (
   ),
 );
 $semantic-info: (
-  h: var(#{hue-colors.$hue-cyan-var}),
-  s: 80%,
-  threshold: 40%,
+  hue: var(#{hue-colors.$hue-cyan-var}),
+  saturation: 80%,
+  accent-threshold: 40%,
   levels: (
     lighter: 2,
     light: 4,
@@ -107,11 +107,11 @@ $semantic-info: (
 );
 
 $semantic-colors: (
-  $semantic-primary-class-name: $semantic-primary,
-  $semantic-secondary-class-name: $semantic-secondary,
-  $semantic-tertiary-class-name: $semantic-tertiary,
-  $semantic-success-class-name: $semantic-success,
-  $semantic-warning-class-name: $semantic-warning,
-  $semantic-danger-class-name: $semantic-danger,
-  $semantic-info-class-name: $semantic-info,
+  ".#{$semantic-primary-class-name}": $semantic-primary,
+  ".#{$semantic-secondary-class-name}": $semantic-secondary,
+  ".#{$semantic-tertiary-class-name}": $semantic-tertiary,
+  ".#{$semantic-success-class-name}": $semantic-success,
+  ".#{$semantic-warning-class-name}": $semantic-warning,
+  ".#{$semantic-danger-class-name}": $semantic-danger,
+  ".#{$semantic-info-class-name}": $semantic-info,
 );

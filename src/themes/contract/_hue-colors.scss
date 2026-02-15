@@ -26,81 +26,81 @@ $hue-pink-var: --#{prefixes.$prefix}hue-pink;
 // threshold: アクセントカラー切り替え閾値（省略時はデフォルト50%）
 // ============================================
 $hues: (
-  "red": (
-    h: 0,
-    s: 100%,
-    threshold: 50%,
+  ".red": (
+    hue: 0,
+    saturation: 100%,
+    accent-threshold: 50%,
     variant-name: #{$hue-red-var},
   ),
-  "orange": (
-    h: 30,
-    s: 100%,
-    threshold: 40%,
+  ".orange": (
+    hue: 30,
+    saturation: 100%,
+    accent-threshold: 40%,
     variant-name: #{$hue-orange-var},
   ),
-  "yellow": (
-    h: 50,
-    s: 100%,
-    threshold: 30%,
+  ".yellow": (
+    hue: 50,
+    saturation: 100%,
+    accent-threshold: 30%,
     variant-name: #{$hue-yellow-var},
   ),
-  "lime": (
-    h: 90,
-    s: 100%,
-    threshold: 30%,
+  ".lime": (
+    hue: 90,
+    saturation: 100%,
+    accent-threshold: 30%,
     variant-name: #{$hue-lime-var},
   ),
-  "green": (
-    h: 125,
-    s: 100%,
-    threshold: 30%,
+  ".green": (
+    hue: 125,
+    saturation: 100%,
+    accent-threshold: 30%,
     variant-name: #{$hue-green-var},
   ),
-  "teal": (
-    h: 170,
-    s: 100%,
-    threshold: 40%,
+  ".teal": (
+    hue: 170,
+    saturation: 100%,
+    accent-threshold: 40%,
     variant-name: #{$hue-teal-var},
   ),
-  "cyan": (
-    h: 190,
-    s: 100%,
-    threshold: 40%,
+  ".cyan": (
+    hue: 190,
+    saturation: 100%,
+    accent-threshold: 40%,
     variant-name: #{$hue-cyan-var},
   ),
-  "blue": (
-    h: 220,
-    s: 100%,
-    threshold: 50%,
+  ".blue": (
+    hue: 220,
+    saturation: 100%,
+    accent-threshold: 50%,
     variant-name: #{$hue-blue-var},
   ),
-  "indigo": (
-    h: 240,
-    s: 100%,
-    threshold: 70%,
+  ".indigo": (
+    hue: 240,
+    saturation: 100%,
+    accent-threshold: 70%,
     variant-name: #{$hue-indigo-var},
   ),
-  "violet": (
-    h: 270,
-    s: 100%,
-    threshold: 70%,
+  ".violet": (
+    hue: 270,
+    saturation: 100%,
+    accent-threshold: 70%,
     variant-name: #{$hue-violet-var},
   ),
-  "purple": (
-    h: 290,
-    s: 100%,
-    threshold: 50%,
+  ".purple": (
+    hue: 290,
+    saturation: 100%,
+    accent-threshold: 50%,
     variant-name: #{$hue-purple-var},
   ),
-  "pink": (
-    h: 330,
-    s: 100%,
-    threshold: 55%,
+  ".pink": (
+    hue: 330,
+    saturation: 100%,
+    accent-threshold: 55%,
     variant-name: #{$hue-pink-var},
   ),
 );
 :root {
   @each $key, $value in $hues {
-    #{map.get($value, variant-name)}: #{map.get($value, h)};
+    #{map.get($value, variant-name)}: #{map.get($value, hue)};
   }
 }

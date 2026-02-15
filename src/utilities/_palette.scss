@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "sass:meta";
 @use "../props/prefixes" as prefixes;
 
 // ============================================
@@ -6,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$palette-prefix: #{$prefix}palette- !default;
+$palette-prefix: #{prefixes.$prefix}palette- !default;
 $palette-color-prefix: #{$palette-prefix}color- !default;
 $palette-accent-prefix: #{$palette-prefix}accent- !default;
 $palette-gray-prefix: #{$palette-prefix}gray- !default;
@@ -88,7 +90,7 @@ $palette-gray-saturation-default: 5% !default;
 //   palette-prefix: パレットのベースprefix
 // ============================================
 $palettes: (
-  ".#{$prefix}primary": (
+  ".#{prefixes.$prefix}primary": (
     hue: 220,
     saturation: 80%,
     lightnesses: (
@@ -129,19 +131,19 @@ $palettes: (
       palette-accent-threshold-var: #{$palette-accent-threshold-var},
     ),
   ),
-);
+) !default;
 
 // ============================================
 // Mixins
 // ============================================
 @mixin generate-palette($palette) {
-  @if not type-of($palettes) == "map" {
+  @if not meta.type-of($palette) == "map" {
     @error "カラーパレット生成エラー: パレットの値には連想配列を指定してください。";
   }
-  @if not map.has-key($palettes, hue) {
+  @if not map.has-key($palette, hue) {
     @error "カラーパレット生成エラー: パレットの値には色相 (hue) を指定してください。";
   }
-  @if not map.has-key($palettes, saturation) {
+  @if not map.has-key($palette, saturation) {
     @error "カラーパレット生成エラー: パレットの値には彩度 (saturation) を指定してください。";
   }
 
@@ -176,14 +178,14 @@ $palettes: (
   #{$gray-saturation-var}: #{$gray-saturation};
   // lightnesses
    @each $key, $lightness in $lightnesses {
-     @if type-of($lightness) == "map" {
+     @if meta.type-of($lightness) == "map" {
        @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
      }
      --#{$lightness-prefix}#{$key}: #{$lightness};
    }
   // colors
   @each $key, $lightness in $lightnesses {
-    @if type-of($lightness) == "map" {
+    @if meta.type-of($lightness) == "map" {
       @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
     }
     --#{$color-prefix}#{$key}: hsl(
@@ -194,7 +196,7 @@ $palettes: (
   }
   // grays
   @each $key, $lightness in $lightnesses {
-    @if type-of($lightness) == "map" {
+    @if meta.type-of($lightness) == "map" {
       @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
     }
     --#{$gray-prefix}#{$key}: hsl(
@@ -205,7 +207,7 @@ $palettes: (
   }
   // accents
   @each $key, $lightness in $lightnesses {
-    @if type-of($lightness) == "map" {
+    @if meta.type-of($lightness) == "map" {
       @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
     }
     @if $lightness > $accent-threshold {
@@ -224,7 +226,7 @@ $palettes: (
   }
   // levels
   @each $level-name, $step-key in $levels {
-    @if type-of($step-key) == "map" {
+    @if meta.type-of($step-key) == "map" {
       @error "カラーパレット生成エラー: レベルリストの値に連想配列を指定することはできません。";
     }
     @if not map.has-key($lightnesses, $step-key) {

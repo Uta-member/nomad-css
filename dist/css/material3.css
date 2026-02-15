@@ -14,186 +14,187 @@
 }
 
 .red {
-  --palette-h: 0;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 0;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 50%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -228,186 +229,187 @@
 }
 
 .orange {
-  --palette-h: 30;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 30;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 40%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -442,186 +444,187 @@
 }
 
 .yellow {
-  --palette-h: 50;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 50;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 30%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -656,186 +659,187 @@
 }
 
 .lime {
-  --palette-h: 90;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 90;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 30%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -870,186 +874,187 @@
 }
 
 .green {
-  --palette-h: 125;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 125;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 30%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -1084,186 +1089,187 @@
 }
 
 .teal {
-  --palette-h: 170;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 170;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 40%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -1298,186 +1304,187 @@
 }
 
 .cyan {
-  --palette-h: 190;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 190;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 40%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -1512,186 +1519,187 @@
 }
 
 .blue {
-  --palette-h: 220;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 220;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 50%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -1726,186 +1734,187 @@
 }
 
 .indigo {
-  --palette-h: 240;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 240;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 70%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -1940,186 +1949,187 @@
 }
 
 .violet {
-  --palette-h: 270;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 270;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 70%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -2154,186 +2164,187 @@
 }
 
 .purple {
-  --palette-h: 290;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 290;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 50%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -2368,186 +2379,187 @@
 }
 
 .pink {
-  --palette-h: 330;
-  --palette-s: 100%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: 330;
+  --palette-saturation: 100%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 55%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -2582,186 +2594,187 @@
 }
 
 .primary {
-  --palette-h: var(--hue-blue);
-  --palette-s: 80%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-blue);
+  --palette-saturation: 80%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 50%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -2796,186 +2809,187 @@
 }
 
 .secondary {
-  --palette-h: var(--hue-pink);
-  --palette-s: 80%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-pink);
+  --palette-saturation: 80%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 55%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -3010,186 +3024,187 @@
 }
 
 .tertiary {
-  --palette-h: var(--hue-teal);
-  --palette-s: 60%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-teal);
+  --palette-saturation: 60%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 40%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -3224,186 +3239,187 @@
 }
 
 .success {
-  --palette-h: var(--hue-green);
-  --palette-s: 60%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-green);
+  --palette-saturation: 60%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 45%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -3438,186 +3454,187 @@
 }
 
 .warning {
-  --palette-h: var(--hue-yellow);
-  --palette-s: 80%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-yellow);
+  --palette-saturation: 80%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 45%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -3652,186 +3669,187 @@
 }
 
 .danger {
-  --palette-h: var(--hue-red);
-  --palette-s: 80%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-red);
+  --palette-saturation: 80%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 50%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -3866,186 +3884,187 @@
 }
 
 .info {
-  --palette-h: var(--hue-cyan);
-  --palette-s: 80%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-cyan);
+  --palette-saturation: 80%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 40%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -6024,186 +6043,187 @@ h6,
 }
 
 :root {
-  --palette-h: var(--hue-blue);
-  --palette-s: 80%;
-  --palette-accent-light-l: 97%;
-  --palette-accent-dark-l: 10%;
-  --palette-gs: 5%;
-  --palette-l-0: 97%;
-  --palette-l-1: 93%;
-  --palette-l-2: 85%;
-  --palette-l-3: 75%;
-  --palette-l-4: 65%;
-  --palette-l-5: 50%;
-  --palette-l-6: 42%;
-  --palette-l-7: 34%;
-  --palette-l-8: 26%;
-  --palette-l-9: 18%;
-  --palette-l-10: 10%;
+  --palette-hue: var(--hue-blue);
+  --palette-saturation: 80%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 50%;
+  --palette-gray-saturation: 5%;
+  --palette-lightness-0: 97%;
+  --palette-lightness-1: 93%;
+  --palette-lightness-2: 85%;
+  --palette-lightness-3: 75%;
+  --palette-lightness-4: 65%;
+  --palette-lightness-5: 50%;
+  --palette-lightness-6: 42%;
+  --palette-lightness-7: 34%;
+  --palette-lightness-8: 26%;
+  --palette-lightness-9: 18%;
+  --palette-lightness-10: 10%;
   --palette-color-0: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-0)
   );
   --palette-color-1: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-1)
   );
   --palette-color-2: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-2)
   );
   --palette-color-3: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-3)
   );
   --palette-color-4: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-4)
   );
   --palette-color-5: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-5)
   );
   --palette-color-6: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-6)
   );
   --palette-color-7: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-7)
   );
   --palette-color-8: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-8)
   );
   --palette-color-9: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-9)
   );
   --palette-color-10: hsl(
-    var(--palette-h),
-    var(--palette-s),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-saturation),
+    var(--palette-lightness-10)
   );
   --palette-gray-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-0)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-0)
   );
   --palette-gray-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-1)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-1)
   );
   --palette-gray-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-2)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-2)
   );
   --palette-gray-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-3)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-3)
   );
   --palette-gray-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-4)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-4)
   );
   --palette-gray-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-5)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-5)
   );
   --palette-gray-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-6)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-6)
   );
   --palette-gray-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-7)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-7)
   );
   --palette-gray-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-8)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-8)
   );
   --palette-gray-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-9)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-9)
   );
   --palette-gray-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-l-10)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-lightness-10)
   );
   --palette-accent-0: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-1: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-2: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-3: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-4: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --palette-accent-5: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-6: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-7: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-8: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-9: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-accent-10: hsl(
-    var(--palette-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --palette-lighter: var(
     --palette-color-2
@@ -6240,6 +6260,10 @@ h6,
 :root {
   --neutral-h: var(--hue-blue);
   --neutral-s: 5%;
+  --palette-accent-light-lightness: 97%;
+  --palette-accent-dark-lightness: 10%;
+  --palette-accent-threshold: 50%;
+  --palette-gray-saturation: 5%;
   --neutral-l-0: 97%;
   --neutral-l-1: 93%;
   --neutral-l-2: 85%;
@@ -6308,122 +6332,142 @@ h6,
   );
   --neutral-gray-0: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-0)
   );
   --neutral-gray-1: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-1)
   );
   --neutral-gray-2: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-2)
   );
   --neutral-gray-3: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-3)
   );
   --neutral-gray-4: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-4)
   );
   --neutral-gray-5: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-5)
   );
   --neutral-gray-6: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-6)
   );
   --neutral-gray-7: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-7)
   );
   --neutral-gray-8: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-8)
   );
   --neutral-gray-9: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-9)
   );
   --neutral-gray-10: hsl(
     var(--neutral-h),
-    var(--palette-gs),
+    var(--palette-gray-saturation),
     var(--neutral-l-10)
   );
   --neutral-accent-0: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --neutral-accent-1: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --neutral-accent-2: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --neutral-accent-3: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --neutral-accent-4: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-dark-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-dark-lightness)
   );
   --neutral-accent-5: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --neutral-accent-6: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --neutral-accent-7: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --neutral-accent-8: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --neutral-accent-9: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
   --neutral-accent-10: hsl(
     var(--neutral-h),
-    var(--palette-gs),
-    var(--palette-accent-light-l)
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
   );
-  --neutral-lighter: var(--neutral-color-1);
-  --neutral-accent-lighter: var(--neutral-accent-1);
-  --neutral-light: var(--neutral-color-3);
-  --neutral-accent-light: var(--neutral-accent-3);
-  --neutral-default: var(--neutral-color-5);
-  --neutral-accent-default: var(--neutral-accent-5);
-  --neutral-dark: var(--neutral-color-7);
-  --neutral-accent-dark: var(--neutral-accent-7);
-  --neutral-darker: var(--neutral-color-9);
-  --neutral-accent-darker: var(--neutral-accent-9);
+  --neutral-lighter: var(
+    --neutral-color-1
+  );
+  --neutral-accent-lighter: var(
+    --neutral-accent-1
+  );
+  --neutral-light: var(
+    --neutral-color-3
+  );
+  --neutral-accent-light: var(
+    --neutral-accent-3
+  );
+  --neutral-default: var(
+    --neutral-color-5
+  );
+  --neutral-accent-default: var(
+    --neutral-accent-5
+  );
+  --neutral-dark: var(
+    --neutral-color-7
+  );
+  --neutral-accent-dark: var(
+    --neutral-accent-7
+  );
+  --neutral-darker: var(
+    --neutral-color-9
+  );
+  --neutral-accent-darker: var(
+    --neutral-accent-9
+  );
 }/*# sourceMappingURL=material3.css.map */
