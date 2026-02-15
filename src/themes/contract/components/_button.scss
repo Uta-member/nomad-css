@@ -23,12 +23,19 @@ $button-text-class-name: text;
 $button-filled-bg-var: --#{$button-filled-prefix}bg;
 $button-filled-bg-hover-var: --#{$button-filled-prefix}bg-hover;
 $button-filled-bg-active-var: --#{$button-filled-prefix}bg-active;
+$button-filled-bg-disabled-var: --#{$button-filled-prefix}bg-disabled;
 $button-filled-color-var: --#{$button-filled-prefix}color;
 $button-filled-color-hover-var: --#{$button-filled-prefix}color-hover;
 $button-filled-color-active-var: --#{$button-filled-prefix}color-active;
+$button-filled-color-disabled-var: --#{$button-filled-prefix}color-disabled;
 $button-filled-border-color-var: --#{$button-filled-prefix}border-color;
 $button-filled-border-color-hover-var: --#{$button-filled-prefix}border-color-hover;
 $button-filled-border-color-active-var: --#{$button-filled-prefix}border-color-active;
+$button-filled-border-color-disabled-var: --#{$button-filled-prefix}border-color-disabled;
+$button-filled-opacity-var: --#{$button-filled-prefix}opacity;
+$button-filled-opacity-hover-var: --#{$button-filled-prefix}opacity-hover;
+$button-filled-opacity-active-var: --#{$button-filled-prefix}opacity-active;
+$button-filled-opacity-disabled-var: --#{$button-filled-prefix}opacity-disabled;
 
 // --------------------------------------------
 // Tonal
@@ -36,12 +43,19 @@ $button-filled-border-color-active-var: --#{$button-filled-prefix}border-color-a
 $button-tonal-bg-var: --#{$button-tonal-prefix}bg;
 $button-tonal-bg-hover-var: --#{$button-tonal-prefix}bg-hover;
 $button-tonal-bg-active-var: --#{$button-tonal-prefix}bg-active;
+$button-tonal-bg-disabled-var: --#{$button-tonal-prefix}bg-disabled;
 $button-tonal-color-var: --#{$button-tonal-prefix}color;
 $button-tonal-color-hover-var: --#{$button-tonal-prefix}color-hover;
 $button-tonal-color-active-var: --#{$button-tonal-prefix}color-active;
+$button-tonal-color-disabled-var: --#{$button-tonal-prefix}color-disabled;
 $button-tonal-border-color-var: --#{$button-tonal-prefix}border-color;
 $button-tonal-border-color-hover-var: --#{$button-tonal-prefix}border-color-hover;
 $button-tonal-border-color-active-var: --#{$button-tonal-prefix}border-color-active;
+$button-tonal-border-color-disabled-var: --#{$button-tonal-prefix}border-color-disabled;
+$button-tonal-opacity-var: --#{$button-tonal-prefix}opacity;
+$button-tonal-opacity-hover-var: --#{$button-tonal-prefix}opacity-hover;
+$button-tonal-opacity-active-var: --#{$button-tonal-prefix}opacity-active;
+$button-tonal-opacity-disabled-var: --#{$button-tonal-prefix}opacity-disabled;
 
 // --------------------------------------------
 // Outlined
@@ -49,12 +63,19 @@ $button-tonal-border-color-active-var: --#{$button-tonal-prefix}border-color-act
 $button-outlined-bg-var: --#{$button-outlined-prefix}bg;
 $button-outlined-bg-hover-var: --#{$button-outlined-prefix}bg-hover;
 $button-outlined-bg-active-var: --#{$button-outlined-prefix}bg-active;
+$button-outlined-bg-disabled-var: --#{$button-outlined-prefix}bg-disabled;
 $button-outlined-color-var: --#{$button-outlined-prefix}color;
 $button-outlined-color-hover-var: --#{$button-outlined-prefix}color-hover;
 $button-outlined-color-active-var: --#{$button-outlined-prefix}color-active;
+$button-outlined-color-disabled-var: --#{$button-outlined-prefix}color-disabled;
 $button-outlined-border-color-var: --#{$button-outlined-prefix}border-color;
 $button-outlined-border-color-hover-var: --#{$button-outlined-prefix}border-color-hover;
 $button-outlined-border-color-active-var: --#{$button-outlined-prefix}border-color-active;
+$button-outlined-border-color-disabled-var: --#{$button-outlined-prefix}border-color-disabled;
+$button-outlined-opacity-var: --#{$button-outlined-prefix}opacity;
+$button-outlined-opacity-hover-var: --#{$button-outlined-prefix}opacity-hover;
+$button-outlined-opacity-active-var: --#{$button-outlined-prefix}opacity-active;
+$button-outlined-opacity-disabled-var: --#{$button-outlined-prefix}opacity-disabled;
 
 // --------------------------------------------
 // Text
@@ -62,12 +83,19 @@ $button-outlined-border-color-active-var: --#{$button-outlined-prefix}border-col
 $button-text-bg-var: --#{$button-text-prefix}bg;
 $button-text-bg-hover-var: --#{$button-text-prefix}bg-hover;
 $button-text-bg-active-var: --#{$button-text-prefix}bg-active;
+$button-text-bg-disabled-var: --#{$button-text-prefix}bg-disabled;
 $button-text-color-var: --#{$button-text-prefix}color;
 $button-text-color-hover-var: --#{$button-text-prefix}color-hover;
 $button-text-color-active-var: --#{$button-text-prefix}color-active;
+$button-text-color-disabled-var: --#{$button-text-prefix}color-disabled;
 $button-text-border-color-var: --#{$button-text-prefix}border-color;
 $button-text-border-color-hover-var: --#{$button-text-prefix}border-color-hover;
 $button-text-border-color-active-var: --#{$button-text-prefix}border-color-active;
+$button-text-border-color-disabled-var: --#{$button-text-prefix}border-color-disabled;
+$button-text-opacity-var: --#{$button-text-prefix}opacity;
+$button-text-opacity-hover-var: --#{$button-text-prefix}opacity-hover;
+$button-text-opacity-active-var: --#{$button-text-prefix}opacity-active;
+$button-text-opacity-disabled-var: --#{$button-text-prefix}opacity-disabled;
 
 // ============================================
 // Process
@@ -82,14 +110,21 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{$button-filled-bg-var}: var(#{prefixes.$palette-default-var});
   #{$button-filled-bg-hover-var}: var(#{prefixes.$palette-dark-var});
   #{$button-filled-bg-active-var}: var(#{prefixes.$palette-darker-var});
+  #{$button-filled-bg-disabled-var}: var(#{$button-filled-bg-var});
   #{$button-filled-color-var}: var(#{prefixes.$palette-default-accent-var});
   #{$button-filled-color-hover-var}: var(#{prefixes.$palette-dark-accent-var});
   #{$button-filled-color-active-var}: var(
     #{prefixes.$palette-darker-accent-var}
   );
+  #{$button-filled-color-disabled-var}: var(#{$button-filled-color-var});
   #{$button-filled-border-color-var}: transparent;
   #{$button-filled-border-color-hover-var}: transparent;
   #{$button-filled-border-color-active-var}: transparent;
+  #{$button-filled-border-color-disabled-var}: transparent;
+  #{$button-filled-opacity-var}: 1;
+  #{$button-filled-opacity-hover-var}: 1;
+  #{$button-filled-opacity-active-var}: 1;
+  #{$button-filled-opacity-disabled-var}: 0.5;
 }
 
 // --------------------------------------------
@@ -99,14 +134,21 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{$button-tonal-bg-var}: var(#{prefixes.$palette-lighter-var});
   #{$button-tonal-bg-hover-var}: var(#{prefixes.$palette-light-var});
   #{$button-tonal-bg-active-var}: var(#{prefixes.$palette-default-var});
+  #{$button-tonal-bg-disabled-var}: var(#{$button-tonal-bg-var});
   #{$button-tonal-color-var}: var(#{prefixes.$palette-darker-var});
   #{$button-tonal-color-hover-var}: var(#{prefixes.$palette-darker-var});
   #{$button-tonal-color-active-var}: var(
     #{prefixes.$palette-default-accent-var}
   );
+  #{$button-tonal-color-disabled-var}: var(#{$button-tonal-color-var});
   #{$button-tonal-border-color-var}: transparent;
   #{$button-tonal-border-color-hover-var}: transparent;
   #{$button-tonal-border-color-active-var}: transparent;
+  #{$button-tonal-border-color-disabled-var}: transparent;
+  #{$button-tonal-opacity-var}: 1;
+  #{$button-tonal-opacity-hover-var}: 1;
+  #{$button-tonal-opacity-active-var}: 1;
+  #{$button-tonal-opacity-disabled-var}: 0.5;
 }
 
 // --------------------------------------------
@@ -116,9 +158,11 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{$button-outlined-bg-var}: transparent;
   #{$button-outlined-bg-hover-var}: var(#{prefixes.$palette-lighter-var});
   #{$button-outlined-bg-active-var}: var(#{prefixes.$palette-light-var});
+  #{$button-outlined-bg-disabled-var}: transparent;
   #{$button-outlined-color-var}: var(#{prefixes.$palette-default-var});
   #{$button-outlined-color-hover-var}: var(#{prefixes.$palette-default-var});
   #{$button-outlined-color-active-var}: var(#{prefixes.$palette-default-var});
+  #{$button-outlined-color-disabled-var}: var(#{$button-outlined-color-var});
   #{$button-outlined-border-color-var}: var(#{prefixes.$palette-default-var});
   #{$button-outlined-border-color-hover-var}: var(
     #{prefixes.$palette-default-var}
@@ -126,6 +170,13 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{$button-outlined-border-color-active-var}: var(
     #{prefixes.$palette-default-var}
   );
+  #{$button-outlined-border-color-disabled-var}: var(
+    #{$button-outlined-border-color-var}
+  );
+  #{$button-outlined-opacity-var}: 1;
+  #{$button-outlined-opacity-hover-var}: 1;
+  #{$button-outlined-opacity-active-var}: 1;
+  #{$button-outlined-opacity-disabled-var}: 0.5;
 }
 
 // --------------------------------------------
@@ -135,12 +186,19 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{$button-text-bg-var}: transparent;
   #{$button-text-bg-hover-var}: var(#{prefixes.$palette-lighter-var});
   #{$button-text-bg-active-var}: var(#{prefixes.$palette-light-var});
+  #{$button-text-bg-disabled-var}: transparent;
   #{$button-text-color-var}: var(#{prefixes.$palette-default-var});
   #{$button-text-color-hover-var}: var(#{prefixes.$palette-default-var});
   #{$button-text-color-active-var}: var(#{prefixes.$palette-light-accent-var});
+  #{$button-text-color-disabled-var}: var(#{$button-text-color-var});
   #{$button-text-border-color-var}: transparent;
   #{$button-text-border-color-hover-var}: transparent;
   #{$button-text-border-color-active-var}: transparent;
+  #{$button-text-border-color-disabled-var}: transparent;
+  #{$button-text-opacity-var}: 1;
+  #{$button-text-opacity-hover-var}: 1;
+  #{$button-text-opacity-active-var}: 1;
+  #{$button-text-opacity-disabled-var}: 0.5;
 }
 
 // ============================================
@@ -154,9 +212,11 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-bg-var}: var(#{$button-filled-bg-var});
   #{button.$button-bg-hover-var}: var(#{$button-filled-bg-hover-var});
   #{button.$button-bg-active-var}: var(#{$button-filled-bg-active-var});
+  #{button.$button-bg-disabled-var}: var(#{$button-filled-bg-disabled-var});
   #{button.$button-color-var}: var(#{$button-filled-color-var});
   #{button.$button-color-hover-var}: var(#{$button-filled-color-hover-var});
   #{button.$button-color-active-var}: var(#{$button-filled-color-active-var});
+  #{button.$button-color-disabled-var}: var(#{$button-filled-color-disabled-var});
   #{button.$button-border-color-var}: var(#{$button-filled-border-color-var});
   #{button.$button-border-color-hover-var}: var(
     #{$button-filled-border-color-hover-var}
@@ -164,6 +224,13 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-border-color-active-var}: var(
     #{$button-filled-border-color-active-var}
   );
+  #{button.$button-border-color-disabled-var}: var(
+    #{$button-filled-border-color-disabled-var}
+  );
+  #{button.$button-opacity-var}: var(#{$button-filled-opacity-var});
+  #{button.$button-opacity-hover-var}: var(#{$button-filled-opacity-hover-var});
+  #{button.$button-opacity-active-var}: var(#{$button-filled-opacity-active-var});
+  #{button.$button-opacity-disabled-var}: var(#{$button-filled-opacity-disabled-var});
 }
 
 // --------------------------------------------
@@ -173,9 +240,11 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-bg-var}: var(#{$button-tonal-bg-var});
   #{button.$button-bg-hover-var}: var(#{$button-tonal-bg-hover-var});
   #{button.$button-bg-active-var}: var(#{$button-tonal-bg-active-var});
+  #{button.$button-bg-disabled-var}: var(#{$button-tonal-bg-disabled-var});
   #{button.$button-color-var}: var(#{$button-tonal-color-var});
   #{button.$button-color-hover-var}: var(#{$button-tonal-color-hover-var});
   #{button.$button-color-active-var}: var(#{$button-tonal-color-active-var});
+  #{button.$button-color-disabled-var}: var(#{$button-tonal-color-disabled-var});
   #{button.$button-border-color-var}: var(#{$button-tonal-border-color-var});
   #{button.$button-border-color-hover-var}: var(
     #{$button-tonal-border-color-hover-var}
@@ -183,6 +252,13 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-border-color-active-var}: var(
     #{$button-tonal-border-color-active-var}
   );
+  #{button.$button-border-color-disabled-var}: var(
+    #{$button-tonal-border-color-disabled-var}
+  );
+  #{button.$button-opacity-var}: var(#{$button-tonal-opacity-var});
+  #{button.$button-opacity-hover-var}: var(#{$button-tonal-opacity-hover-var});
+  #{button.$button-opacity-active-var}: var(#{$button-tonal-opacity-active-var});
+  #{button.$button-opacity-disabled-var}: var(#{$button-tonal-opacity-disabled-var});
 }
 
 // --------------------------------------------
@@ -192,9 +268,11 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-bg-var}: var(#{$button-outlined-bg-var});
   #{button.$button-bg-hover-var}: var(#{$button-outlined-bg-hover-var});
   #{button.$button-bg-active-var}: var(#{$button-outlined-bg-active-var});
+  #{button.$button-bg-disabled-var}: var(#{$button-outlined-bg-disabled-var});
   #{button.$button-color-var}: var(#{$button-outlined-color-var});
   #{button.$button-color-hover-var}: var(#{$button-outlined-color-hover-var});
   #{button.$button-color-active-var}: var(#{$button-outlined-color-active-var});
+  #{button.$button-color-disabled-var}: var(#{$button-outlined-color-disabled-var});
   #{button.$button-border-color-var}: var(#{$button-outlined-border-color-var});
   #{button.$button-border-color-hover-var}: var(
     #{$button-outlined-border-color-hover-var}
@@ -202,8 +280,14 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-border-color-active-var}: var(
     #{$button-outlined-border-color-active-var}
   );
+  #{button.$button-border-color-disabled-var}: var(
+    #{$button-outlined-border-color-disabled-var}
+  );
+  #{button.$button-opacity-var}: var(#{$button-outlined-opacity-var});
+  #{button.$button-opacity-hover-var}: var(#{$button-outlined-opacity-hover-var});
+  #{button.$button-opacity-active-var}: var(#{$button-outlined-opacity-active-var});
+  #{button.$button-opacity-disabled-var}: var(#{$button-outlined-opacity-disabled-var});
 }
-
 // --------------------------------------------
 // Text
 // --------------------------------------------
@@ -211,9 +295,11 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-bg-var}: var(#{$button-text-bg-var});
   #{button.$button-bg-hover-var}: var(#{$button-text-bg-hover-var});
   #{button.$button-bg-active-var}: var(#{$button-text-bg-active-var});
+  #{button.$button-bg-disabled-var}: var(#{$button-text-bg-disabled-var});
   #{button.$button-color-var}: var(#{$button-text-color-var});
   #{button.$button-color-hover-var}: var(#{$button-text-color-hover-var});
   #{button.$button-color-active-var}: var(#{$button-text-color-active-var});
+  #{button.$button-color-disabled-var}: var(#{$button-text-color-disabled-var});
   #{button.$button-border-color-var}: var(#{$button-text-border-color-var});
   #{button.$button-border-color-hover-var}: var(
     #{$button-text-border-color-hover-var}
@@ -221,4 +307,11 @@ $button-text-border-color-active-var: --#{$button-text-prefix}border-color-activ
   #{button.$button-border-color-active-var}: var(
     #{$button-text-border-color-active-var}
   );
+  #{button.$button-border-color-disabled-var}: var(
+    #{$button-text-border-color-disabled-var}
+  );
+  #{button.$button-opacity-var}: var(#{$button-text-opacity-var});
+  #{button.$button-opacity-hover-var}: var(#{$button-text-opacity-hover-var});
+  #{button.$button-opacity-active-var}: var(#{$button-text-opacity-active-var});
+  #{button.$button-opacity-disabled-var}: var(#{$button-text-opacity-disabled-var});
 }

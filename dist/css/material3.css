@@ -4110,16 +4110,22 @@
   --button-focus-ring-width: 2px;
   --button-focus-ring-offset: 2px;
   --button-focus-ring-color: transparent;
-  --button-disabled-opacity: 0.5;
-  --button-bg: default;
+  --button-opacity: 1;
+  --button-opacity-hover: 1;
+  --button-opacity-active: 1;
+  --button-opacity-disabled: 1;
+  --button-bg: transparent;
   --button-bg-hover: transparent;
   --button-bg-active: transparent;
+  --button-bg-disabled: transparent;
   --button-color: inherit;
   --button-color-hover: inherit;
   --button-color-active: inherit;
+  --button-color-disabled: inherit;
   --button-border-color: transparent;
   --button-border-color-hover: transparent;
   --button-border-color-active: transparent;
+  --button-border-color-disabled: transparent;
 }
 
 .button {
@@ -4147,25 +4153,31 @@
   background-color: var(--button-bg);
   color: var(--button-color);
   border-color: var(--button-border-color);
+  opacity: var(--button-opacity);
 }
 .button:hover {
   background-color: var(--button-bg-hover);
   color: var(--button-color-hover);
   border-color: var(--button-border-color-hover);
+  opacity: var(--button-opacity-hover);
 }
 .button:active {
   background-color: var(--button-bg-active);
   color: var(--button-color-active);
   border-color: var(--button-border-color-active);
+  opacity: var(--button-opacity-active);
 }
 .button:focus-visible {
   outline: var(--button-focus-ring-width) solid var(--button-focus-ring-color);
   outline-offset: var(--button-focus-ring-offset);
 }
 .button:disabled, .button.disabled {
-  opacity: var(--button-disabled-opacity);
+  opacity: var(--button-opacity-disabled);
   cursor: not-allowed;
   pointer-events: none;
+  background-color: var(--button-bg-disabled);
+  color: var(--button-color-disabled);
+  border-color: var(--button-border-color-disabled);
 }
 .button > .icon {
   flex-shrink: 0;
@@ -5777,48 +5789,76 @@ h6,
   --button-filled-bg: var(--palette-default);
   --button-filled-bg-hover: var(--palette-dark);
   --button-filled-bg-active: var(--palette-darker);
+  --button-filled-bg-disabled: var(--button-filled-bg);
   --button-filled-color: var(--palette-accent-default);
   --button-filled-color-hover: var(--palette-accent-dark);
   --button-filled-color-active: var(--palette-accent-darker);
+  --button-filled-color-disabled: var(--button-filled-color);
   --button-filled-border-color: transparent;
   --button-filled-border-color-hover: transparent;
   --button-filled-border-color-active: transparent;
+  --button-filled-border-color-disabled: transparent;
+  --button-filled-opacity: 1;
+  --button-filled-opacity-hover: 1;
+  --button-filled-opacity-active: 1;
+  --button-filled-opacity-disabled: 0.5;
 }
 
 .button {
   --button-tonal-bg: var(--palette-lighter);
   --button-tonal-bg-hover: var(--palette-light);
   --button-tonal-bg-active: var(--palette-default);
+  --button-tonal-bg-disabled: var(--button-tonal-bg);
   --button-tonal-color: var(--palette-darker);
   --button-tonal-color-hover: var(--palette-darker);
   --button-tonal-color-active: var(--palette-accent-default);
+  --button-tonal-color-disabled: var(--button-tonal-color);
   --button-tonal-border-color: transparent;
   --button-tonal-border-color-hover: transparent;
   --button-tonal-border-color-active: transparent;
+  --button-tonal-border-color-disabled: transparent;
+  --button-tonal-opacity: 1;
+  --button-tonal-opacity-hover: 1;
+  --button-tonal-opacity-active: 1;
+  --button-tonal-opacity-disabled: 0.5;
 }
 
 .button {
   --button-outlined-bg: transparent;
   --button-outlined-bg-hover: var(--palette-lighter);
   --button-outlined-bg-active: var(--palette-light);
+  --button-outlined-bg-disabled: transparent;
   --button-outlined-color: var(--palette-default);
   --button-outlined-color-hover: var(--palette-default);
   --button-outlined-color-active: var(--palette-default);
+  --button-outlined-color-disabled: var(--button-outlined-color);
   --button-outlined-border-color: var(--palette-default);
   --button-outlined-border-color-hover: var(--palette-default);
   --button-outlined-border-color-active: var(--palette-default);
+  --button-outlined-border-color-disabled: var(--button-outlined-border-color);
+  --button-outlined-opacity: 1;
+  --button-outlined-opacity-hover: 1;
+  --button-outlined-opacity-active: 1;
+  --button-outlined-opacity-disabled: 0.5;
 }
 
 .button {
   --button-text-bg: transparent;
   --button-text-bg-hover: var(--palette-lighter);
   --button-text-bg-active: var(--palette-light);
+  --button-text-bg-disabled: transparent;
   --button-text-color: var(--palette-default);
   --button-text-color-hover: var(--palette-default);
   --button-text-color-active: var(--palette-accent-light);
+  --button-text-color-disabled: var(--button-text-color);
   --button-text-border-color: transparent;
   --button-text-border-color-hover: transparent;
   --button-text-border-color-active: transparent;
+  --button-text-border-color-disabled: transparent;
+  --button-text-opacity: 1;
+  --button-text-opacity-hover: 1;
+  --button-text-opacity-active: 1;
+  --button-text-opacity-disabled: 0.5;
 }
 
 .button,
@@ -5826,48 +5866,76 @@ h6,
   --button-bg: var(--button-filled-bg);
   --button-bg-hover: var(--button-filled-bg-hover);
   --button-bg-active: var(--button-filled-bg-active);
+  --button-bg-disabled: var(--button-filled-bg-disabled);
   --button-color: var(--button-filled-color);
   --button-color-hover: var(--button-filled-color-hover);
   --button-color-active: var(--button-filled-color-active);
+  --button-color-disabled: var(--button-filled-color-disabled);
   --button-border-color: var(--button-filled-border-color);
   --button-border-color-hover: var(--button-filled-border-color-hover);
   --button-border-color-active: var(--button-filled-border-color-active);
+  --button-border-color-disabled: var(--button-filled-border-color-disabled);
+  --button-opacity: var(--button-filled-opacity);
+  --button-opacity-hover: var(--button-filled-opacity-hover);
+  --button-opacity-active: var(--button-filled-opacity-active);
+  --button-opacity-disabled: var(--button-filled-opacity-disabled);
 }
 
 .button.tonal {
   --button-bg: var(--button-tonal-bg);
   --button-bg-hover: var(--button-tonal-bg-hover);
   --button-bg-active: var(--button-tonal-bg-active);
+  --button-bg-disabled: var(--button-tonal-bg-disabled);
   --button-color: var(--button-tonal-color);
   --button-color-hover: var(--button-tonal-color-hover);
   --button-color-active: var(--button-tonal-color-active);
+  --button-color-disabled: var(--button-tonal-color-disabled);
   --button-border-color: var(--button-tonal-border-color);
   --button-border-color-hover: var(--button-tonal-border-color-hover);
   --button-border-color-active: var(--button-tonal-border-color-active);
+  --button-border-color-disabled: var(--button-tonal-border-color-disabled);
+  --button-opacity: var(--button-tonal-opacity);
+  --button-opacity-hover: var(--button-tonal-opacity-hover);
+  --button-opacity-active: var(--button-tonal-opacity-active);
+  --button-opacity-disabled: var(--button-tonal-opacity-disabled);
 }
 
 .button.outlined {
   --button-bg: var(--button-outlined-bg);
   --button-bg-hover: var(--button-outlined-bg-hover);
   --button-bg-active: var(--button-outlined-bg-active);
+  --button-bg-disabled: var(--button-outlined-bg-disabled);
   --button-color: var(--button-outlined-color);
   --button-color-hover: var(--button-outlined-color-hover);
   --button-color-active: var(--button-outlined-color-active);
+  --button-color-disabled: var(--button-outlined-color-disabled);
   --button-border-color: var(--button-outlined-border-color);
   --button-border-color-hover: var(--button-outlined-border-color-hover);
   --button-border-color-active: var(--button-outlined-border-color-active);
+  --button-border-color-disabled: var(--button-outlined-border-color-disabled);
+  --button-opacity: var(--button-outlined-opacity);
+  --button-opacity-hover: var(--button-outlined-opacity-hover);
+  --button-opacity-active: var(--button-outlined-opacity-active);
+  --button-opacity-disabled: var(--button-outlined-opacity-disabled);
 }
 
 .button.text {
   --button-bg: var(--button-text-bg);
   --button-bg-hover: var(--button-text-bg-hover);
   --button-bg-active: var(--button-text-bg-active);
+  --button-bg-disabled: var(--button-text-bg-disabled);
   --button-color: var(--button-text-color);
   --button-color-hover: var(--button-text-color-hover);
   --button-color-active: var(--button-text-color-active);
+  --button-color-disabled: var(--button-text-color-disabled);
   --button-border-color: var(--button-text-border-color);
   --button-border-color-hover: var(--button-text-border-color-hover);
   --button-border-color-active: var(--button-text-border-color-active);
+  --button-border-color-disabled: var(--button-text-border-color-disabled);
+  --button-opacity: var(--button-text-opacity);
+  --button-opacity-hover: var(--button-text-opacity-hover);
+  --button-opacity-active: var(--button-text-opacity-active);
+  --button-opacity-disabled: var(--button-text-opacity-disabled);
 }
 
 :root {

@@ -21,16 +21,22 @@ $button-gap-var: --#{$button-prefix}gap !default;
 $button-focus-ring-width-var: --#{$button-prefix}focus-ring-width !default;
 $button-focus-ring-offset-var: --#{$button-prefix}focus-ring-offset !default;
 $button-focus-ring-color-var: --#{$button-prefix}focus-ring-color !default;
-$button-disabled-opacity-var: --#{$button-prefix}disabled-opacity !default;
+$button-opacity-var: --#{$button-prefix}opacity !default;
+$button-opacity-hover-var: --#{$button-prefix}opacity-hover !default;
+$button-opacity-active-var: --#{$button-prefix}opacity-active !default;
+$button-opacity-disabled-var: --#{$button-prefix}opacity-disabled !default;
 $button-bg-var: --#{$button-prefix}bg !default;
 $button-bg-hover-var: --#{$button-prefix}bg-hover !default;
 $button-bg-active-var: --#{$button-prefix}bg-active !default;
+$button-bg-disabled-var: --#{$button-prefix}bg-disabled !default;
 $button-color-var: --#{$button-prefix}color !default;
 $button-color-hover-var: --#{$button-prefix}color-hover !default;
 $button-color-active-var: --#{$button-prefix}color-active !default;
+$button-color-disabled-var: --#{$button-prefix}color-disabled !default;
 $button-border-color-var: --#{$button-prefix}border-color !default;
 $button-border-color-hover-var: --#{$button-prefix}border-color-hover !default;
 $button-border-color-active-var: --#{$button-prefix}border-color-active !default;
+$button-border-color-disabled-var: --#{$button-prefix}border-color-disabled !default;
 
 // ============================================
 // Process
@@ -55,22 +61,28 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
   #{$button-focus-ring-color-var}: transparent;
 
   // Disabled opacity
-  #{$button-disabled-opacity-var}: 0.5;
+  #{$button-opacity-var}: 1;
+  #{$button-opacity-hover-var}: 1;
+  #{$button-opacity-active-var}: 1;
+  #{$button-opacity-disabled-var}: 1;
 
   // Background colors
-  #{$button-bg-var}: default;
+  #{$button-bg-var}: transparent;
   #{$button-bg-hover-var}: transparent;
   #{$button-bg-active-var}: transparent;
+  #{$button-bg-disabled-var}: transparent;
 
   // Text colors
   #{$button-color-var}: inherit;
   #{$button-color-hover-var}: inherit;
   #{$button-color-active-var}: inherit;
+  #{$button-color-disabled-var}: inherit;
 
   // Border colors
   #{$button-border-color-var}: transparent;
   #{$button-border-color-hover-var}: transparent;
   #{$button-border-color-active-var}: transparent;
+  #{$button-border-color-disabled-var}: transparent;
 }
 
 // ============================================
@@ -110,16 +122,20 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
   color: var(#{$button-color-var});
   border-color: var(#{$button-border-color-var});
 
+  opacity: var(#{$button-opacity-var});
+
   &:hover {
     background-color: var(#{$button-bg-hover-var});
     color: var(#{$button-color-hover-var});
     border-color: var(#{$button-border-color-hover-var});
+    opacity: var(#{$button-opacity-hover-var});
   }
 
   &:active {
     background-color: var(#{$button-bg-active-var});
     color: var(#{$button-color-active-var});
     border-color: var(#{$button-border-color-active-var});
+    opacity: var(#{$button-opacity-active-var});
   }
 
   &:focus-visible {
@@ -130,9 +146,12 @@ $button-border-color-active-var: --#{$button-prefix}border-color-active !default
 
   &:disabled,
   &.disabled {
-    opacity: var(#{$button-disabled-opacity-var});
+    opacity: var(#{$button-opacity-disabled-var});
     cursor: not-allowed;
     pointer-events: none;
+    background-color: var(#{$button-bg-disabled-var});
+    color: var(#{$button-color-disabled-var});
+    border-color: var(#{$button-border-color-disabled-var});
   }
 
   // Icon inside button
