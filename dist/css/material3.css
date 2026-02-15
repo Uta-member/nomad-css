@@ -5861,6 +5861,15 @@ h6,
   --button-text-opacity-disabled: 0.5;
 }
 
+.button {
+  --button-size-lg-padding-x: 1.5rem;
+  --button-size-lg-padding-y: 0.75rem;
+  --button-size-sm-padding-x: 0.75rem;
+  --button-size-sm-padding-y: 0.375rem;
+  --button-size-lg-font-size: 1rem;
+  --button-size-sm-font-size: 0.75rem;
+}
+
 .button,
 .button.filled {
   --button-bg: var(--button-filled-bg);
@@ -5936,6 +5945,18 @@ h6,
   --button-opacity-hover: var(--button-text-opacity-hover);
   --button-opacity-active: var(--button-text-opacity-active);
   --button-opacity-disabled: var(--button-text-opacity-disabled);
+}
+
+.button.lg {
+  --button-padding-x: var(--button-size-lg-padding-x);
+  --button-padding-y: var(--button-size-lg-padding-y);
+  --button-font-size: var(--button-size-lg-font-size);
+}
+
+.button.sm {
+  --button-padding-x: var(--button-size-sm-padding-x);
+  --button-padding-y: var(--button-size-sm-padding-y);
+  --button-font-size: var(--button-size-sm-font-size);
 }
 
 :root {

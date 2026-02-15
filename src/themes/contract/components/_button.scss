@@ -97,6 +97,16 @@ $button-text-opacity-hover-var: --#{$button-text-prefix}opacity-hover;
 $button-text-opacity-active-var: --#{$button-text-prefix}opacity-active;
 $button-text-opacity-disabled-var: --#{$button-text-prefix}opacity-disabled;
 
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$button-size-lg-padding-x-var: --#{button.$button-prefix}size-lg-padding-x;
+$button-size-lg-padding-y-var: --#{button.$button-prefix}size-lg-padding-y;
+$button-size-sm-padding-x-var: --#{button.$button-prefix}size-sm-padding-x;
+$button-size-sm-padding-y-var: --#{button.$button-prefix}size-sm-padding-y;
+$button-size-lg-font-size-var: --#{button.$button-prefix}size-lg-font-size;
+$button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
+
 // ============================================
 // Process
 // ============================================
@@ -199,6 +209,18 @@ $button-text-opacity-disabled-var: --#{$button-text-prefix}opacity-disabled;
   #{$button-text-opacity-hover-var}: 1;
   #{$button-text-opacity-active-var}: 1;
   #{$button-text-opacity-disabled-var}: 0.5;
+}
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+.#{button.$button-class-name} {
+  #{$button-size-lg-padding-x-var}: 1.5rem;
+  #{$button-size-lg-padding-y-var}: 0.75rem;
+  #{$button-size-sm-padding-x-var}: 0.75rem;
+  #{$button-size-sm-padding-y-var}: 0.375rem;
+  #{$button-size-lg-font-size-var}: 1rem;
+  #{$button-size-sm-font-size-var}: 0.75rem;
 }
 
 // ============================================
@@ -314,4 +336,18 @@ $button-text-opacity-disabled-var: --#{$button-text-prefix}opacity-disabled;
   #{button.$button-opacity-hover-var}: var(#{$button-text-opacity-hover-var});
   #{button.$button-opacity-active-var}: var(#{$button-text-opacity-active-var});
   #{button.$button-opacity-disabled-var}: var(#{$button-text-opacity-disabled-var});
+}
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+.#{button.$button-class-name}.lg {
+  #{button.$button-padding-x-var}: var(#{$button-size-lg-padding-x-var});
+  #{button.$button-padding-y-var}: var(#{$button-size-lg-padding-y-var});
+  #{button.$button-font-size-var}: var(#{$button-size-lg-font-size-var});
+}
+.#{button.$button-class-name}.sm {
+  #{button.$button-padding-x-var}: var(#{$button-size-sm-padding-x-var});
+  #{button.$button-padding-y-var}: var(#{$button-size-sm-padding-y-var});
+  #{button.$button-font-size-var}: var(#{$button-size-sm-font-size-var});
 }
