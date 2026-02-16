@@ -62,7 +62,9 @@ $form-check-label-color-var: --form-check-label-color !default;
   #{$checkbox-checkmark-width-var}: calc(var(#{$checkbox-size-var}) * 0.18);
 
   // Indeterminate width (defaults to checkmark width)
-  #{$checkbox-indeterminate-width-var}: calc(var(#{$checkbox-checkmark-width-var}) * 0.8);
+  #{$checkbox-indeterminate-width-var}: calc(
+    var(#{$checkbox-checkmark-width-var}) * 0.8
+  );
 
   // Indeterminate
   #{$checkbox-indeterminate-color-var}: white;

@@ -130,7 +130,7 @@ $palettes: (
   //     palette-accent-dark-lightness-var: #{$palette-accent-dark-lightness-var},
   //     palette-accent-threshold-var: #{$palette-accent-threshold-var},
   //   ),
-  // ),
+   // ),
 ) !default;
 
 // ============================================
@@ -151,21 +151,35 @@ $palettes: (
   $names: map.get($palette, names) or ();
   $base-prefix: map.get($names, palette-prefix) or $palette-prefix;
   $color-prefix: map.get($names, palette-color-prefix) or $palette-color-prefix;
-  $accent-prefix: map.get($names, palette-accent-prefix) or $palette-accent-prefix;
+  $accent-prefix: map.get($names, palette-accent-prefix) or
+    $palette-accent-prefix;
   $gray-prefix: map.get($names, palette-gray-prefix) or $palette-gray-prefix;
-  $lightness-prefix: map.get($names, palette-lightness-prefix) or $palette-lightness-prefix;
+  $lightness-prefix: map.get($names, palette-lightness-prefix) or
+    $palette-lightness-prefix;
   $hue-var: map.get($names, palette-hue-var) or $palette-hue-var;
-  $saturation-var: map.get($names, palette-saturation-var) or $palette-saturation-var;
-  $gray-saturation-var: map.get($names, palette-gray-saturation-var) or $palette-gray-saturation-var;
-  $accent-light-lightness-var: map.get($names, palette-accent-light-lightness-var) or $palette-accent-light-lightness-var;
-  $accent-dark-lightness-var: map.get($names, palette-accent-dark-lightness-var) or $palette-accent-dark-lightness-var;
-  $accent-threshold-var: map.get($names, palette-accent-threshold-var) or $palette-accent-threshold-var;
+  $saturation-var: map.get($names, palette-saturation-var) or
+    $palette-saturation-var;
+  $gray-saturation-var: map.get($names, palette-gray-saturation-var) or
+    $palette-gray-saturation-var;
+  $accent-light-lightness-var: map.get(
+      $names,
+      palette-accent-light-lightness-var
+    )
+    or $palette-accent-light-lightness-var;
+  $accent-dark-lightness-var: map.get($names, palette-accent-dark-lightness-var)
+    or $palette-accent-dark-lightness-var;
+  $accent-threshold-var: map.get($names, palette-accent-threshold-var) or
+    $palette-accent-threshold-var;
 
   // SASS変数の定義
-  $accent-light-lightness: map.get($palette, accent-light-lightness) or $palette-accent-light-lightness-default;
-  $accent-dark-lightness: map.get($palette, accent-dark-lightness) or $palette-accent-dark-lightness-default;
-  $accent-threshold: map.get($palette, accent-threshold) or $palette-accent-threshold-default;
-  $gray-saturation: map.get($palette, gray-saturation) or $palette-gray-saturation-default;
+  $accent-light-lightness: map.get($palette, accent-light-lightness) or
+    $palette-accent-light-lightness-default;
+  $accent-dark-lightness: map.get($palette, accent-dark-lightness) or
+    $palette-accent-dark-lightness-default;
+  $accent-threshold: map.get($palette, accent-threshold) or
+    $palette-accent-threshold-default;
+  $gray-saturation: map.get($palette, gray-saturation) or
+    $palette-gray-saturation-default;
   $lightnesses: map.get($palette, lightnesses) or $palette-lightnesses-default;
   $levels: map.get($palette, levels) or $palette-levels-default;
 
@@ -177,12 +191,12 @@ $palettes: (
   #{$accent-threshold-var}: #{$accent-threshold};
   #{$gray-saturation-var}: #{$gray-saturation};
   // lightnesses
-   @each $key, $lightness in $lightnesses {
-     @if meta.type-of($lightness) == "map" {
-       @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
-     }
-     --#{$lightness-prefix}#{$key}: #{$lightness};
-   }
+  @each $key, $lightness in $lightnesses {
+    @if meta.type-of($lightness) == "map" {
+      @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
+    }
+    --#{$lightness-prefix}#{$key}: #{$lightness};
+  }
   // colors
   @each $key, $lightness in $lightnesses {
     @if meta.type-of($lightness) == "map" {
@@ -233,12 +247,8 @@ $palettes: (
       @error "カラーパレット生成エラー: レベル '#{$level-name}' に指定された輝度キー '#{$step-key}' は、輝度リストに存在しません。利用可能なキー: #{map.keys($lightnesses)}";
     }
 
-    --#{$base-prefix}#{$level-name}: var(
-      --#{$color-prefix}#{$step-key}
-    );
-    --#{$accent-prefix}#{$level-name}: var(
-      --#{$accent-prefix}#{$step-key}
-    );
+    --#{$base-prefix}#{$level-name}: var(--#{$color-prefix}#{$step-key});
+    --#{$accent-prefix}#{$level-name}: var(--#{$accent-prefix}#{$step-key});
   }
 }
 

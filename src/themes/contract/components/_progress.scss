@@ -32,7 +32,9 @@ $progress-height-lg-var: --#{progress.$progress-prefix}height-lg !default;
   #{progress.$progress-border-color-var}: transparent;
 
   // Value color (uses semantic palette)
-  #{progress.$progress-value-bg-var}: var(#{contract_prefixes.$palette-default-var});
+  #{progress.$progress-value-bg-var}: var(
+    #{contract_prefixes.$palette-default-var}
+  );
 }
 
 // ============================================

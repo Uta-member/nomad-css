@@ -105,8 +105,8 @@ progress.#{$progress-class-name}.indeterminate {
     var(#{$progress-bg-var}) 100%
   );
   background-size: 300% 100%;
-  animation: progress-indeterminate
-    var(#{$progress-indeterminate-duration-var}) linear infinite;
+  animation: progress-indeterminate var(#{$progress-indeterminate-duration-var})
+    linear infinite;
 
   // Make internal pseudo-elements transparent so the animated background shows through
   &::-webkit-progress-bar {

@@ -28,10 +28,8 @@ $radio-size-lg-var: --#{radio.$radio-prefix}size-lg !default;
 
   #{radio.$radio-bg-var}: transparent;
 
-  #{radio.$radio-dot-color-var}: var(
-    #{contract_prefixes.$palette-default-var}
-  );
-  
+  #{radio.$radio-dot-color-var}: var(#{contract_prefixes.$palette-default-var});
+
   #{radio.$radio-border-color-var}: var(
     #{contract_prefixes.$neutral-light-var}
   );
@@ -44,9 +42,7 @@ $radio-size-lg-var: --#{radio.$radio-prefix}size-lg !default;
   #{radio.$radio-border-color-focus-var}: var(
     #{contract_prefixes.$neutral-light-var}
   );
-  #{radio.$radio-bg-hover-var}: var(
-    #{contract_prefixes.$neutral-lighter-var}
-  );
+  #{radio.$radio-bg-hover-var}: var(#{contract_prefixes.$neutral-lighter-var});
 }
 
 // ============================================
@@ -69,7 +65,5 @@ $radio-size-lg-var: --#{radio.$radio-prefix}size-lg !default;
 // ============================================
 .#{radio.$radio-class-name} {
   // checked background remains semantic default
-  #{radio.$radio-dot-color-var}: var(
-    #{contract_prefixes.$palette-default-var}
-  );
+  #{radio.$radio-dot-color-var}: var(#{contract_prefixes.$palette-default-var});
 }

@@ -196,36 +196,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .orange {
@@ -411,36 +391,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .yellow {
@@ -626,36 +586,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .lime {
@@ -841,36 +781,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .green {
@@ -1056,36 +976,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .teal {
@@ -1271,36 +1171,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .cyan {
@@ -1486,36 +1366,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .blue {
@@ -1701,36 +1561,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .indigo {
@@ -1916,36 +1756,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .violet {
@@ -2131,36 +1951,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .purple {
@@ -2346,36 +2146,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .pink {
@@ -2561,36 +2341,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .primary {
@@ -2776,36 +2536,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-6
-  );
-  --palette-accent-default: var(
-    --palette-accent-6
-  );
-  --palette-dark: var(
-    --palette-color-8
-  );
-  --palette-accent-dark: var(
-    --palette-accent-8
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-6);
+  --palette-accent-default: var(--palette-accent-6);
+  --palette-dark: var(--palette-color-8);
+  --palette-accent-dark: var(--palette-accent-8);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .secondary {
@@ -2991,36 +2731,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-5
-  );
-  --palette-accent-default: var(
-    --palette-accent-5
-  );
-  --palette-dark: var(
-    --palette-color-7
-  );
-  --palette-accent-dark: var(
-    --palette-accent-7
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-5);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .tertiary {
@@ -3206,36 +2926,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-4
-  );
-  --palette-accent-light: var(
-    --palette-accent-4
-  );
-  --palette-default: var(
-    --palette-color-7
-  );
-  --palette-accent-default: var(
-    --palette-accent-7
-  );
-  --palette-dark: var(
-    --palette-color-9
-  );
-  --palette-accent-dark: var(
-    --palette-accent-9
-  );
-  --palette-darker: var(
-    --palette-color-10
-  );
-  --palette-accent-darker: var(
-    --palette-accent-10
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-4);
+  --palette-accent-light: var(--palette-accent-4);
+  --palette-default: var(--palette-color-7);
+  --palette-accent-default: var(--palette-accent-7);
+  --palette-dark: var(--palette-color-9);
+  --palette-accent-dark: var(--palette-accent-9);
+  --palette-darker: var(--palette-color-10);
+  --palette-accent-darker: var(--palette-accent-10);
 }
 
 .success {
@@ -3421,36 +3121,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-4
-  );
-  --palette-accent-light: var(
-    --palette-accent-4
-  );
-  --palette-default: var(
-    --palette-color-7
-  );
-  --palette-accent-default: var(
-    --palette-accent-7
-  );
-  --palette-dark: var(
-    --palette-color-9
-  );
-  --palette-accent-dark: var(
-    --palette-accent-9
-  );
-  --palette-darker: var(
-    --palette-color-10
-  );
-  --palette-accent-darker: var(
-    --palette-accent-10
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-4);
+  --palette-accent-light: var(--palette-accent-4);
+  --palette-default: var(--palette-color-7);
+  --palette-accent-default: var(--palette-accent-7);
+  --palette-dark: var(--palette-color-9);
+  --palette-accent-dark: var(--palette-accent-9);
+  --palette-darker: var(--palette-color-10);
+  --palette-accent-darker: var(--palette-accent-10);
 }
 
 .warning {
@@ -3636,36 +3316,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-4
-  );
-  --palette-accent-light: var(
-    --palette-accent-4
-  );
-  --palette-default: var(
-    --palette-color-6
-  );
-  --palette-accent-default: var(
-    --palette-accent-6
-  );
-  --palette-dark: var(
-    --palette-color-8
-  );
-  --palette-accent-dark: var(
-    --palette-accent-8
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-4);
+  --palette-accent-light: var(--palette-accent-4);
+  --palette-default: var(--palette-color-6);
+  --palette-accent-default: var(--palette-accent-6);
+  --palette-dark: var(--palette-color-8);
+  --palette-accent-dark: var(--palette-accent-8);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .danger {
@@ -3851,36 +3511,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-4
-  );
-  --palette-accent-light: var(
-    --palette-accent-4
-  );
-  --palette-default: var(
-    --palette-color-6
-  );
-  --palette-accent-default: var(
-    --palette-accent-6
-  );
-  --palette-dark: var(
-    --palette-color-8
-  );
-  --palette-accent-dark: var(
-    --palette-accent-8
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-4);
+  --palette-accent-light: var(--palette-accent-4);
+  --palette-default: var(--palette-color-6);
+  --palette-accent-default: var(--palette-accent-6);
+  --palette-dark: var(--palette-color-8);
+  --palette-accent-dark: var(--palette-accent-8);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .info {
@@ -4066,36 +3706,16 @@
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-4
-  );
-  --palette-accent-light: var(
-    --palette-accent-4
-  );
-  --palette-default: var(
-    --palette-color-7
-  );
-  --palette-accent-default: var(
-    --palette-accent-7
-  );
-  --palette-dark: var(
-    --palette-color-8
-  );
-  --palette-accent-dark: var(
-    --palette-accent-8
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-4);
+  --palette-accent-light: var(--palette-accent-4);
+  --palette-default: var(--palette-color-7);
+  --palette-accent-default: var(--palette-accent-7);
+  --palette-dark: var(--palette-color-8);
+  --palette-accent-dark: var(--palette-accent-8);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 .button {
@@ -6312,36 +5932,16 @@ h6,
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --palette-lighter: var(
-    --palette-color-2
-  );
-  --palette-accent-lighter: var(
-    --palette-accent-2
-  );
-  --palette-light: var(
-    --palette-color-3
-  );
-  --palette-accent-light: var(
-    --palette-accent-3
-  );
-  --palette-default: var(
-    --palette-color-6
-  );
-  --palette-accent-default: var(
-    --palette-accent-6
-  );
-  --palette-dark: var(
-    --palette-color-8
-  );
-  --palette-accent-dark: var(
-    --palette-accent-8
-  );
-  --palette-darker: var(
-    --palette-color-9
-  );
-  --palette-accent-darker: var(
-    --palette-accent-9
-  );
+  --palette-lighter: var(--palette-color-2);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-light: var(--palette-color-3);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-default: var(--palette-color-6);
+  --palette-accent-default: var(--palette-accent-6);
+  --palette-dark: var(--palette-color-8);
+  --palette-accent-dark: var(--palette-accent-8);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
 }
 
 :root {
@@ -6527,34 +6127,14 @@ h6,
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --neutral-lighter: var(
-    --neutral-color-1
-  );
-  --neutral-accent-lighter: var(
-    --neutral-accent-1
-  );
-  --neutral-light: var(
-    --neutral-color-3
-  );
-  --neutral-accent-light: var(
-    --neutral-accent-3
-  );
-  --neutral-default: var(
-    --neutral-color-5
-  );
-  --neutral-accent-default: var(
-    --neutral-accent-5
-  );
-  --neutral-dark: var(
-    --neutral-color-7
-  );
-  --neutral-accent-dark: var(
-    --neutral-accent-7
-  );
-  --neutral-darker: var(
-    --neutral-color-9
-  );
-  --neutral-accent-darker: var(
-    --neutral-accent-9
-  );
+  --neutral-lighter: var(--neutral-color-1);
+  --neutral-accent-lighter: var(--neutral-accent-1);
+  --neutral-light: var(--neutral-color-3);
+  --neutral-accent-light: var(--neutral-accent-3);
+  --neutral-default: var(--neutral-color-5);
+  --neutral-accent-default: var(--neutral-accent-5);
+  --neutral-dark: var(--neutral-color-7);
+  --neutral-accent-dark: var(--neutral-accent-7);
+  --neutral-darker: var(--neutral-color-9);
+  --neutral-accent-darker: var(--neutral-accent-9);
 }/*# sourceMappingURL=material3.css.map */

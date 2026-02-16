@@ -238,7 +238,9 @@ $button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
   #{button.$button-color-var}: var(#{$button-filled-color-var});
   #{button.$button-color-hover-var}: var(#{$button-filled-color-hover-var});
   #{button.$button-color-active-var}: var(#{$button-filled-color-active-var});
-  #{button.$button-color-disabled-var}: var(#{$button-filled-color-disabled-var});
+  #{button.$button-color-disabled-var}: var(
+    #{$button-filled-color-disabled-var}
+  );
   #{button.$button-border-color-var}: var(#{$button-filled-border-color-var});
   #{button.$button-border-color-hover-var}: var(
     #{$button-filled-border-color-hover-var}
@@ -251,8 +253,12 @@ $button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
   );
   #{button.$button-opacity-var}: var(#{$button-filled-opacity-var});
   #{button.$button-opacity-hover-var}: var(#{$button-filled-opacity-hover-var});
-  #{button.$button-opacity-active-var}: var(#{$button-filled-opacity-active-var});
-  #{button.$button-opacity-disabled-var}: var(#{$button-filled-opacity-disabled-var});
+  #{button.$button-opacity-active-var}: var(
+    #{$button-filled-opacity-active-var}
+  );
+  #{button.$button-opacity-disabled-var}: var(
+    #{$button-filled-opacity-disabled-var}
+  );
 }
 
 // --------------------------------------------
@@ -266,7 +272,9 @@ $button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
   #{button.$button-color-var}: var(#{$button-tonal-color-var});
   #{button.$button-color-hover-var}: var(#{$button-tonal-color-hover-var});
   #{button.$button-color-active-var}: var(#{$button-tonal-color-active-var});
-  #{button.$button-color-disabled-var}: var(#{$button-tonal-color-disabled-var});
+  #{button.$button-color-disabled-var}: var(
+    #{$button-tonal-color-disabled-var}
+  );
   #{button.$button-border-color-var}: var(#{$button-tonal-border-color-var});
   #{button.$button-border-color-hover-var}: var(
     #{$button-tonal-border-color-hover-var}
@@ -279,8 +287,12 @@ $button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
   );
   #{button.$button-opacity-var}: var(#{$button-tonal-opacity-var});
   #{button.$button-opacity-hover-var}: var(#{$button-tonal-opacity-hover-var});
-  #{button.$button-opacity-active-var}: var(#{$button-tonal-opacity-active-var});
-  #{button.$button-opacity-disabled-var}: var(#{$button-tonal-opacity-disabled-var});
+  #{button.$button-opacity-active-var}: var(
+    #{$button-tonal-opacity-active-var}
+  );
+  #{button.$button-opacity-disabled-var}: var(
+    #{$button-tonal-opacity-disabled-var}
+  );
 }
 
 // --------------------------------------------
@@ -294,7 +306,9 @@ $button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
   #{button.$button-color-var}: var(#{$button-outlined-color-var});
   #{button.$button-color-hover-var}: var(#{$button-outlined-color-hover-var});
   #{button.$button-color-active-var}: var(#{$button-outlined-color-active-var});
-  #{button.$button-color-disabled-var}: var(#{$button-outlined-color-disabled-var});
+  #{button.$button-color-disabled-var}: var(
+    #{$button-outlined-color-disabled-var}
+  );
   #{button.$button-border-color-var}: var(#{$button-outlined-border-color-var});
   #{button.$button-border-color-hover-var}: var(
     #{$button-outlined-border-color-hover-var}
@@ -306,9 +320,15 @@ $button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
     #{$button-outlined-border-color-disabled-var}
   );
   #{button.$button-opacity-var}: var(#{$button-outlined-opacity-var});
-  #{button.$button-opacity-hover-var}: var(#{$button-outlined-opacity-hover-var});
-  #{button.$button-opacity-active-var}: var(#{$button-outlined-opacity-active-var});
-  #{button.$button-opacity-disabled-var}: var(#{$button-outlined-opacity-disabled-var});
+  #{button.$button-opacity-hover-var}: var(
+    #{$button-outlined-opacity-hover-var}
+  );
+  #{button.$button-opacity-active-var}: var(
+    #{$button-outlined-opacity-active-var}
+  );
+  #{button.$button-opacity-disabled-var}: var(
+    #{$button-outlined-opacity-disabled-var}
+  );
 }
 // --------------------------------------------
 // Text
@@ -335,7 +355,9 @@ $button-size-sm-font-size-var: --#{button.$button-prefix}size-sm-font-size;
   #{button.$button-opacity-var}: var(#{$button-text-opacity-var});
   #{button.$button-opacity-hover-var}: var(#{$button-text-opacity-hover-var});
   #{button.$button-opacity-active-var}: var(#{$button-text-opacity-active-var});
-  #{button.$button-opacity-disabled-var}: var(#{$button-text-opacity-disabled-var});
+  #{button.$button-opacity-disabled-var}: var(
+    #{$button-text-opacity-disabled-var}
+  );
 }
 
 // --------------------------------------------

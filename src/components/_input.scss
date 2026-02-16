@@ -160,8 +160,18 @@ textarea.#{$input-class-name} {
       - Underline: inset bottom line controlled by --*-focus-underline-enabled (1/0) and width/color vars
     */
     box-shadow:
-      0 0 0 calc(var(#{$input-focus-ring-width-var}) * var(#{$input-focus-ring-enabled-var})) var(#{$input-focus-ring-color-var}),
-      inset 0 calc(-1 * var(#{$input-focus-underline-width-var}) * var(#{$input-focus-underline-enabled-var})) 0 0 var(#{$input-focus-underline-color-var});
+      0 0 0
+        calc(
+          var(#{$input-focus-ring-width-var}) *
+            var(#{$input-focus-ring-enabled-var})
+        )
+        var(#{$input-focus-ring-color-var}),
+      inset 0
+        calc(
+          -1 * var(#{$input-focus-underline-width-var}) *
+            var(#{$input-focus-underline-enabled-var})
+        )
+        0 0 var(#{$input-focus-underline-color-var});
   }
 
   &:focus:read-only {
