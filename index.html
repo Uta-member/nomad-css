@@ -922,6 +922,7 @@
           >
             <input type="range" class="range primary" value="50" />
             <input type="range" class="range secondary" value="50" />
+            <input type="range" class="range tertiary" value="50" />
             <input type="range" class="range success" value="50" />
             <input type="range" class="range warning" value="50" />
             <input type="range" class="range danger" value="50" />
@@ -1000,6 +1001,7 @@
               value="60"
               max="100"
             ></progress>
+            <progress class="progress tertiary" value="60" max="100"></progress>
             <progress class="progress success" value="60" max="100"></progress>
             <progress class="progress warning" value="60" max="100"></progress>
             <progress class="progress danger" value="60" max="100"></progress>
@@ -1067,6 +1069,12 @@
                 "
               >
                 <div class="progress primary">
+                  <div class="progress-bar" style="width: 40%"></div>
+                </div>
+                <div class="progress secondary">
+                  <div class="progress-bar" style="width: 40%"></div>
+                </div>
+                <div class="progress tertiary">
                   <div class="progress-bar" style="width: 40%"></div>
                 </div>
                 <div class="progress success">
@@ -1222,6 +1230,11 @@
               type="text"
               class="input secondary"
               placeholder="Secondary focus"
+            />
+            <input
+              type="text"
+              class="input tertiary"
+              placeholder="Tertiary focus"
             />
             <input
               type="text"
@@ -1495,12 +1508,28 @@ Disabled textarea</textarea
               <option value="">Primary focus</option>
               <option value="1">Option 1</option>
             </select>
+            <select class="select secondary">
+              <option value="">Secondary focus</option>
+              <option value="1">Option 1</option>
+            </select>
+            <select class="select tertiary">
+              <option value="">Tertiary focus</option>
+              <option value="1">Option 1</option>
+            </select>
             <select class="select success">
               <option value="">Success focus</option>
               <option value="1">Option 1</option>
             </select>
+            <select class="select warning">
+              <option value="">Warning focus</option>
+              <option value="1">Option 1</option>
+            </select>
             <select class="select danger">
               <option value="">Danger focus</option>
+              <option value="1">Option 1</option>
+            </select>
+            <select class="select info">
+              <option value="">Info focus</option>
               <option value="1">Option 1</option>
             </select>
           </div>
