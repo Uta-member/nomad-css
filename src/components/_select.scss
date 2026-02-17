@@ -21,12 +21,15 @@ $select-color-var: --#{$select-prefix}color !default;
 $select-border-color-var: --#{$select-prefix}border-color !default;
 
 $select-bg-hover-var: --#{$select-prefix}bg-hover !default;
+$select-color-hover-var: --#{$select-prefix}color-hover !default;
 $select-border-color-hover-var: --#{$select-prefix}border-color-hover !default;
 
 $select-bg-focus-var: --#{$select-prefix}bg-focus !default;
+$select-color-focus-var: --#{$select-prefix}color-focus !default;
 $select-border-color-focus-var: --#{$select-prefix}border-color-focus !default;
 $select-focus-ring-width-var: --#{$select-prefix}focus-ring-width !default;
 $select-focus-ring-color-var: --#{$select-prefix}focus-ring-color !default;
+$select-focus-ring-offset-var: --#{$select-prefix}focus-ring-offset !default;
 
 $select-bg-disabled-var: --#{$select-prefix}bg-disabled !default;
 $select-color-disabled-var: --#{$select-prefix}color-disabled !default;
@@ -34,12 +37,6 @@ $select-border-color-disabled-var: --#{$select-prefix}border-color-disabled !def
 
 $select-border-width-var: --#{$select-prefix}border-width !default;
 $select-border-radius-var: --#{$select-prefix}border-radius !default;
-
-$select-arrow-size-var: --#{$select-prefix}arrow-size !default;
-$select-arrow-color-var: --#{$select-prefix}arrow-color !default;
-$select-arrow-color-hover-var: --#{$select-prefix}arrow-color-hover !default;
-$select-arrow-color-disabled-var: --#{$select-prefix}arrow-color-disabled !default;
-$select-arrow-padding-var: --#{$select-prefix}arrow-padding !default;
 
 $select-transition-var: --#{$select-prefix}transition !default;
 
@@ -54,74 +51,47 @@ $select-option-padding-var: --#{$select-prefix}option-padding !default;
 // ============================================
 .#{$select-class-name} {
   #{$select-height-var}: 2.5rem;
-  #{$select-padding-x-var}: 0.75rem;
-  #{$select-padding-y-var}: 0.5rem;
+  #{$select-padding-x-var}: 0.625rem;
+  #{$select-padding-y-var}: 0;
   #{$select-font-size-var}: 1rem;
   #{$select-line-height-var}: 1.5;
 
-  #{$select-bg-var}: #ffffff;
-  #{$select-color-var}: #111827;
-  #{$select-border-color-var}: #d1d5db;
+  #{$select-bg-var}: white;
+  #{$select-color-var}: black;
+  #{$select-border-color-var}: lightgray;
 
-  #{$select-bg-hover-var}: #ffffff;
-  #{$select-border-color-hover-var}: #cbd5e1;
+  #{$select-bg-hover-var}: white;
+  #{$select-color-hover-var}: black;
+  #{$select-border-color-hover-var}: lightgray;
 
-  #{$select-bg-focus-var}: #ffffff;
-  #{$select-border-color-focus-var}: #60a5fa;
+  #{$select-bg-focus-var}: white;
+  #{$select-color-focus-var}: black;
+  #{$select-border-color-focus-var}: lightgray;
   #{$select-focus-ring-width-var}: 2px;
-  #{$select-focus-ring-color-var}: rgba(96, 165, 250, 0.25);
-
-  #{$select-bg-disabled-var}: #f3f4f6;
-  #{$select-color-disabled-var}: #9ca3af;
-  #{$select-border-color-disabled-var}: #e5e7eb;
+  #{$select-focus-ring-color-var}: black;
+  #{$select-focus-ring-offset-var}: 0px;
+  #{$select-bg-disabled-var}: ghostwhite;
+  #{$select-color-disabled-var}: gray;
+  #{$select-border-color-disabled-var}: lightgray;
 
   #{$select-border-width-var}: 1px;
   #{$select-border-radius-var}: 0.25rem;
 
-  #{$select-arrow-size-var}: 1em;
-  #{$select-arrow-color-var}: #6b7280;
-  #{$select-arrow-color-hover-var}: #4b5563;
-  #{$select-arrow-color-disabled-var}: #9ca3af;
-  #{$select-arrow-padding-var}: 2.5rem;
-
-  #{$select-transition-var}:
-    border-color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  #{$select-transition-var}: none;
 
   #{$select-multiple-min-height-var}: 6rem;
   #{$select-option-padding-var}: 0.5rem 0.75rem;
 }
 
 // ============================================
-// Arrow Icon (SVG as data URI)
-// ============================================
-// Chevron down icon - can be overridden via CSS variable
-// Using a simple chevron that works at small sizes
-
-// Function to generate arrow background
-@function select-arrow($color: "%236b7280") {
-  // URL-encoded SVG chevron
-  @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-}
-
-// ============================================
 // Select
 // ============================================
-.select,
-select.select {
-  // Reset
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  // Display
-  display: block;
+.#{$select-class-name} {
   width: 100%;
 
   // Size
   height: var(#{$select-height-var});
-  padding: var(#{$select-padding-y-var}) var(#{$select-arrow-padding-var})
+  padding: var(#{$select-padding-y-var}) var(#{$select-padding-x-var})
     var(#{$select-padding-y-var}) var(#{$select-padding-x-var});
   font-size: var(#{$select-font-size-var});
   line-height: var(#{$select-line-height-var});
@@ -134,12 +104,6 @@ select.select {
   border: var(#{$select-border-width-var}) solid
     var(#{$select-border-color-var});
   border-radius: var(#{$select-border-radius-var});
-
-  // Arrow icon
-  background-image: #{select-arrow()};
-  background-repeat: no-repeat;
-  background-position: right var(#{$select-padding-x-var}) center;
-  background-size: var(#{$select-arrow-size-var});
 
   // Transition
   transition: var(#{$select-transition-var});
@@ -160,6 +124,7 @@ select.select {
   // ----------------------------------------
   &:hover:not(:disabled):not(:focus) {
     background-color: var(#{$select-bg-hover-var});
+    color: var(#{$select-color-hover-var});
     border-color: var(#{$select-border-color-hover-var});
   }
 
@@ -167,11 +132,13 @@ select.select {
   // Focus State
   // ----------------------------------------
   &:focus {
-    outline: none;
+    outline-width: var(#{$select-focus-ring-width-var});
+    outline-color: var(#{$select-focus-ring-color-var});
+    outline-style: solid;
+    outline-offset: var(#{$select-focus-ring-offset-var});
     background-color: var(#{$select-bg-focus-var});
+    color: var(#{$select-color-focus-var});
     border-color: var(#{$select-border-color-focus-var});
-    box-shadow: 0 0 0 var(#{$select-focus-ring-width-var})
-      var(#{$select-focus-ring-color-var});
   }
 
   // ----------------------------------------
@@ -181,8 +148,6 @@ select.select {
     background-color: var(#{$select-bg-disabled-var});
     color: var(#{$select-color-disabled-var});
     border-color: var(#{$select-border-color-disabled-var});
-    background-image: #{select-arrow("%239ca3af")};
-    cursor: not-allowed;
     opacity: 1;
   }
 
@@ -193,58 +158,20 @@ select.select {
   &:required:invalid {
     color: var(#{$select-color-disabled-var});
   }
-
-  // ----------------------------------------
-  // Firefox specific: remove default arrow
-  // ----------------------------------------
-  &:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(#{$select-color-var});
-  }
-
-  // ----------------------------------------
-  // IE specific: remove default arrow
-  // ----------------------------------------
-  &::-ms-expand {
-    display: none;
-  }
-}
-
-// ============================================
-// Option Styling (Limited browser support)
-// ============================================
-// Note: Option styling is very limited in most browsers
-// These styles may only work in Firefox and partially in other browsers
-
-.select option,
-select.select option {
-  padding: var(#{$select-option-padding-var});
-  background-color: var(#{$select-bg-var});
-  color: var(#{$select-color-var});
-
-  &:disabled {
-    color: var(#{$select-color-disabled-var});
-  }
-
-  &:checked {
-    background-color: #f3f4f6;
-  }
 }
 
 // Optgroup styling
-.select optgroup,
-select.select optgroup {
+.#{$select-class-name} optgroup {
   font-weight: 600;
   font-style: normal;
   color: var(#{$select-color-var});
-  background-color: #f8fafc;
+  background-color: var(#{$select-bg-var});
 }
 
 // ============================================
 // Multiple Select
 // ============================================
-.select[multiple],
-select.select[multiple] {
+.#{$select-class-name}[multiple] {
   height: auto;
   min-height: var(#{$select-multiple-min-height-var});
   padding: var(#{$select-padding-y-var}) var(#{$select-padding-x-var});
@@ -263,124 +190,5 @@ select.select[multiple] {
     &:checked {
       background: var(#{$select-bg-var});
     }
-  }
-}
-
-// ============================================
-// Select Wrapper (for additional customization)
-// ============================================
-// Usage:
-// <div class="select-wrapper">
-//     <select class="select">...</select>
-// </div>
-//
-// This wrapper allows for more advanced styling like
-// custom arrow positioning or additional decorations
-
-.select-wrapper {
-  position: relative;
-  display: block;
-  width: 100%;
-
-  > .select {
-    width: 100%;
-  }
-}
-
-// Custom arrow using wrapper (alternative approach)
-.select-wrapper-custom-arrow {
-  > .select {
-    background-image: none;
-    padding-right: var(#{$select-arrow-padding-var});
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: var(#{$select-padding-x-var});
-    top: 50%;
-    transform: translateY(-50%);
-    width: var(#{$select-arrow-size-var});
-    height: var(#{$select-arrow-size-var});
-    background-image: #{select-arrow()};
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    pointer-events: none;
-  }
-
-  &:has(.select:disabled)::after {
-    background-image: #{select-arrow("%239ca3af")};
-  }
-}
-
-// ============================================
-// Select with Icon
-// ============================================
-// Usage:
-// <div class="select-icon">
-//     <span class="select-icon-left">🌐</span>
-//     <select class="select">...</select>
-// </div>
-
-.select-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-
-  > .select {
-    width: 100%;
-  }
-
-  &:has(.select-icon-left) > .select {
-    padding-left: calc(var(#{$select-padding-x-var}) * 2 + 1em);
-  }
-}
-
-.select-icon-left {
-  position: absolute;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: calc(var(#{$select-padding-x-var}) * 2 + 1em);
-  color: var(#{$select-arrow-color-var});
-  pointer-events: none;
-}
-
-// ============================================
-// Native-like Select (minimal styling)
-// ============================================
-// For cases where near-native appearance is preferred
-// but with minor enhancements
-
-.select-native {
-  appearance: auto;
-  -webkit-appearance: auto;
-  -moz-appearance: auto;
-  background-image: none;
-  padding-right: var(#{$select-padding-x-var});
-}
-
-// ============================================
-// Input Group Integration
-// ============================================
-// Select can be used within input-group
-
-.input-group > .select {
-  flex: 1 1 auto;
-  width: 1%;
-  min-width: 0;
-
-  &:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  &:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
   }
 }

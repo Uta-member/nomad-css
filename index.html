@@ -102,7 +102,7 @@
 
         <!-- Headings -->
         <div class="demo-row">
-          <div class="demo-label">Heading Elements (h1-h6)</div>
+          <div class="demo-label">Heading Elements (h1-h6) NotStyled</div>
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
           <h3>Heading 3</h3>
@@ -394,6 +394,13 @@
       <section id="buttons" class="demo-section">
         <h2>Buttons</h2>
 
+        <!-- Button NotStyled -->
+        <div class="demo-row">
+          <div class="demo-label">Button NotStyled</div>
+          <button>Default</button>
+          <button disabled>Disabled</button>
+        </div>
+
         <!-- Button Variants -->
         <div class="demo-row">
           <div class="demo-label">Button Variants</div>
@@ -538,6 +545,32 @@
 
         <!-- Checkbox -->
         <div class="demo-row">
+          <div class="demo-label">Checkbox (NotStyled)</div>
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+            <label class="form-check"
+              ><input type="checkbox" /> Unchecked</label
+            >
+            <label class="form-check"
+              ><input type="checkbox" checked /> Checked</label
+            >
+            <label class="form-check"
+              ><input type="checkbox" id="not-styled-indeterminate" />
+              Indeterminate</label
+            >
+            <label class="form-check"
+              ><input type="checkbox" disabled /> Disabled</label
+            >
+            <label class="form-check"
+              ><input type="checkbox" checked disabled /> Checked
+              Disabled</label
+            >
+          </div>
+          <script>
+            document.getElementById("not-styled-indeterminate").indeterminate =
+              true;
+          </script>
+        </div>
+        <div class="demo-row">
           <div class="demo-label">Checkbox (.checkbox)</div>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
             <label class="form-check"
@@ -623,6 +656,26 @@
         </div>
 
         <!-- Radio -->
+        <div class="demo-row">
+          <div class="demo-label">Radio (NotStyled)</div>
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+            <label class="form-check"
+              ><input type="radio" name="not-styled-radio" /> Option 1</label
+            >
+            <label class="form-check"
+              ><input type="radio" name="not-styled-radio" checked /> Option
+              2</label
+            >
+            <label class="form-check"
+              ><input type="radio" name="not-styled-radio" /> Option 3</label
+            >
+            <label class="form-check"
+              ><input type="radio" name="not-styled-radio-disabled" disabled />
+              Disabled</label
+            >
+          </div>
+        </div>
+
         <div class="demo-row">
           <div class="demo-label">Radio (.radio)</div>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
@@ -805,6 +858,21 @@
 
         <!-- Range (Slider) -->
         <div class="demo-row">
+          <div class="demo-label">Range / Slider (NotStyled)</div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              max-width: 400px;
+            "
+          >
+            <input type="range" value="50" />
+            <input type="range" value="75" disabled />
+          </div>
+        </div>
+
+        <div class="demo-row">
           <div class="demo-label">Range / Slider (.range)</div>
           <div
             style="
@@ -883,6 +951,22 @@
         <script src="src/components/js/range.js"></script>
 
         <!-- Progress (Native) -->
+        <div class="demo-row">
+          <div class="demo-label">Progress (NotStyled)</div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              max-width: 400px;
+            "
+          >
+            <progress value="30" max="100"></progress>
+            <progress value="70" max="100"></progress>
+            <progress></progress>
+          </div>
+        </div>
+
         <div class="demo-row">
           <div class="demo-label">Progress (native &lt;progress&gt;)</div>
           <div
@@ -1024,6 +1108,24 @@
           </div>
         </div>
 
+        <div class="demo-row">
+          <div class="demo-label">Input (NotStyled)</div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              max-width: 400px;
+            "
+          >
+            <input type="text" placeholder="Enter text" />
+            <input type="email" placeholder="Enter email" />
+            <input type="password" placeholder="Enter password" />
+            <input type="number" placeholder="Enter number" />
+            <input type="text" placeholder="Disabled input" disabled />
+            <input type="text" placeholder="Readonly input" readonly />
+          </div>
+        </div>
         <div class="demo-row">
           <div class="demo-label">Input (.input)</div>
           <div
@@ -1260,6 +1362,29 @@ Disabled textarea</textarea
           </div>
         </div>
 
+        <!-- Select NotStyled -->
+        <div class="demo-row">
+          <div class="demo-label">Select (NotStyled)</div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              max-width: 400px;
+            "
+          >
+            <select>
+              <option value="">Select an option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <select disabled>
+              <option>Disabled select</option>
+            </select>
+          </div>
+        </div>
+
         <!-- Select Basic -->
         <div class="demo-row">
           <div class="demo-label">Select (.select)</div>
@@ -1314,7 +1439,7 @@ Disabled textarea</textarea
               max-width: 400px;
             "
           >
-            <select class="select select-sm">
+            <select class="select sm">
               <option value="">Small select</option>
               <option value="1">Option 1</option>
             </select>
@@ -1322,7 +1447,7 @@ Disabled textarea</textarea
               <option value="">Default select</option>
               <option value="1">Option 1</option>
             </select>
-            <select class="select select-lg">
+            <select class="select lg">
               <option value="">Large select</option>
               <option value="1">Option 1</option>
             </select>
@@ -1344,16 +1469,12 @@ Disabled textarea</textarea
               <option value="">Default (outlined)</option>
               <option value="1">Option 1</option>
             </select>
-            <select class="select select-filled">
+            <select class="select filled">
               <option value="">Filled variant</option>
               <option value="1">Option 1</option>
             </select>
-            <select class="select select-underline">
+            <select class="select underline">
               <option value="">Underline variant</option>
-              <option value="1">Option 1</option>
-            </select>
-            <select class="select select-borderless">
-              <option value="">Borderless variant</option>
               <option value="1">Option 1</option>
             </select>
           </div>
