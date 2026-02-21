@@ -1,10 +1,10 @@
-@use "../props/prefixes" as *;
+@use "prefixes" as prefixes;
 
 // ============================================
 // Prefixes
 // ============================================
 // Prefixes
-$font-prefix: #{prefix}-font-;
+$font-prefix: #{prefixes.$prefix}-font-;
 
 // heading
 $font-h1-prefix: #{$font-prefix}h1;
@@ -16,19 +16,19 @@ $font-h6-prefix: #{$font-prefix}h6;
 
 // Variable Names
 // heading
-$font-h1-size-var: --#{font-h1-prefix}-size;
-$font-h2-size-var: --#{font-h2-prefix}-size;
-$font-h3-size-var: --#{font-h3-prefix}-size;
-$font-h4-size-var: --#{font-h4-prefix}-size;
-$font-h5-size-var: --#{font-h5-prefix}-size;
-$font-h6-size-var: --#{font-h6-prefix}-size;
+$font-h1-size-var: --#{$font-h1-prefix}-size;
+$font-h2-size-var: --#{$font-h2-prefix}-size;
+$font-h3-size-var: --#{$font-h3-prefix}-size;
+$font-h4-size-var: --#{$font-h4-prefix}-size;
+$font-h5-size-var: --#{$font-h5-prefix}-size;
+$font-h6-size-var: --#{$font-h6-prefix}-size;
 
-$font-h1-weight-var: --#{font-h1-prefix}-weight;
-$font-h2-weight-var: --#{font-h2-prefix}-weight;
-$font-h3-weight-var: --#{font-h3-prefix}-weight;
-$font-h4-weight-var: --#{font-h4-prefix}-weight;
-$font-h5-weight-var: --#{font-h5-prefix}-weight;
-$font-h6-weight-var: --#{font-h6-prefix}-weight;
+$font-h1-weight-var: --#{$font-h1-prefix}-weight;
+$font-h2-weight-var: --#{$font-h2-prefix}-weight;
+$font-h3-weight-var: --#{$font-h3-prefix}-weight;
+$font-h4-weight-var: --#{$font-h4-prefix}-weight;
+$font-h5-weight-var: --#{$font-h5-prefix}-weight;
+$font-h6-weight-var: --#{$font-h6-prefix}-weight;
 
 // ============================================
 // Process

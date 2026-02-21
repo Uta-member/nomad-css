@@ -1,42 +1,4 @@
-@use "../contract/_contract.scss";
-@use "../../props/prefixes" as prefixes;
+@use "../../nomad-css-ui/nomad-css-ui.scss";
 
 :root[data-theme="material3"] {
-  // // ============================================
-  // // Theme Colors
-  // // ============================================
-  // --primary-h: var(--hue-blue);
-  // --primary-s: 70%;
-
-  // // ============================================
-  // // Typography
-  // // ============================================
-  // --#{prefixes.$font-prefix}family-sans:
-  //   "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
-  //   Arial, sans-serif;
-  // --#{prefixes.$font-prefix}size-base: 16px;
-
-  // // ============================================
-  // // Button Component
-  // // Material 3 buttons are often pill-shaped (fully rounded)
-  // // ============================================
-  // --#{prefixes.$button-prefix}border-radius: 1.25rem; // 20px
-  // --#{prefixes.$button-prefix}padding-x: 24px;
-  // --#{prefixes.$button-prefix}padding-y: 10px;
-  // --#{prefixes.$button-prefix}font-weight: 500;
-  // --#{prefixes.$button-prefix}line-height: 1.25;
-
-  // // ============================================
-  // // Input & Select Components
-  // // M3 Outlined fields usually have small radius
-  // // ============================================
-  // --#{prefixes.$input-prefix}border-radius: 4px;
-  // --#{prefixes.$input-prefix}border-width: 1px;
-  // --#{prefixes.$input-prefix}height: 56px; // Standard M3 field height
-  // --#{prefixes.$input-prefix}height-lg: 64px; // Large M3 field height
-  // --#{prefixes.$input-prefix}padding-x: 16px;
-
-  // --#{prefixes.$select-prefix}border-radius: 4px;
-  // --#{prefixes.$select-prefix}height: 56px;
-  // --#{prefixes.$select-prefix}height-lg: 64px;
 }

@@ -1,9 +1,10 @@
-@use "../props/prefixes" as *;
+@use "prefixes" as prefixes;
+
 // ============================================
 // Prefixes
 // ============================================
 // Prefixes
-$border-prefix: #{prefix}-border-;
+$border-prefix: #{prefixes.$prefix}-border-;
 
 // Class Name
 $border-class-name: "border";

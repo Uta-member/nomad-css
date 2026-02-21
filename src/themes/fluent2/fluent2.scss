@@ -1,42 +1,4 @@
-@use "../contract/_contract.scss";
-@use "../../props/prefixes" as prefixes;
-@use "../contract/components/button" as buttons;
-@use "../contract/semantics" as semantics;
+@use "../../nomad-css-ui/nomad-css-ui.scss";
 
 :root[data-theme="fluent2"] {
-  // ============================================
-  // Theme Colors
-  // ============================================
-  .#{semantics.$semantic-primary-class-name} {
-    //#{prefix.$palette-hue-var}: 220;
-  }
-
-  // // ============================================
-  // // Typography
-  // // ============================================
-  // --#{prefixes.$font-prefix}family-sans:
-  //   "Segoe UI", "Segoe UI Web (West European)", -apple-system,
-  //   BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  // --#{prefixes.$font-prefix}size-base: 14px; // Fluent usually uses 14px base
-
-  // // ============================================
-  // // Button Component
-  // // ============================================
-  // --#{prefixes.$button-prefix}border-radius: 4px;
-  // --#{prefixes.$button-prefix}border-width: 1px;
-  // --#{prefixes.$button-prefix}font-weight: 600;
-  // --#{prefixes.$button-prefix}padding-x: 12px;
-  // --#{prefixes.$button-prefix}padding-y: 6px;
-
-  // // ============================================
-  // // Input & Select Components
-  // // ============================================
-  // --#{prefixes.$input-prefix}border-radius: 4px;
-  // --#{prefixes.$input-prefix}border-width: 1px;
-  // --#{prefixes.$input-prefix}height: 32px; // Compact height
-  // --#{prefixes.$input-prefix}padding-y: 4px; // Reduced padding to fit 32px height
-
-  // --#{prefixes.$select-prefix}border-radius: 4px;
-  // --#{prefixes.$select-prefix}height: 32px;
-  // --#{prefixes.$select-prefix}padding-y: 4px; // Reduced padding to fit 32px height
 }

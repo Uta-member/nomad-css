@@ -1,0 +1,45 @@
+@use "sass:map";
+@use "../utilities/prefixes" as prefixes;
+@use "./utilities/hue-colors" as hue-colors;
+@use "./utilities/semantics" as semantics;
+@use "../utilities/palette" as palette with (
+  $palettes: map.merge(hue-colors.$hues, semantics.$semantic-colors)
+);
+
+// ============================================
+// Overridable Variants
+// ============================================
+$default-palette: semantics.$semantic-primary !default;
+
+// ============================================
+// Process
+// ============================================
+:root {
+  @include palette.generate-palette($default-palette);
+}
+
+$semantic-neutral: (
+  hue: var(#{hue-colors.$hue-blue-var}),
+  saturation: 5%,
+  accent-threshold: 50%,
+  levels: (
+    lighter: 1,
+    light: 3,
+    default: 5,
+    dark: 7,
+    darker: 9,
+  ),
+  names: (
+    palette-prefix: neutral-,
+    palette-color-prefix: neutral-color-,
+    palette-accent-prefix: neutral-accent-,
+    palette-gray-prefix: neutral-gray-,
+    palette-lightness-prefix: neutral-l-,
+    palette-hue-var: --neutral-h,
+    palette-saturation-var: --neutral-s,
+  ),
+);
+
+:root {
+  @include palette.generate-palette($semantic-neutral);
+}
