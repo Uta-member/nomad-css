@@ -10,35 +10,7 @@ $range-prefix: #{$prefix}range- !default;
 $range-class-name: "range" !default;
 
 // Variable Names
-$range-size-var: --#{$range-prefix}size !default;
-$range-track-height-var: --#{$range-prefix}track-height !default;
-$range-track-bg-var: --#{$range-prefix}track-bg !default;
-$range-track-bg-hover-var: --#{$range-prefix}track-bg-hover !default;
-$range-track-border-radius-var: --#{$range-prefix}track-border-radius !default;
-$range-track-border-width-var: --#{$range-prefix}track-border-width !default;
-$range-track-border-color-var: --#{$range-prefix}track-border-color !default;
-$range-track-fill-bg-var: --#{$range-prefix}track-fill-bg !default;
-$range-fill-percent-var: --#{$range-prefix}fill-percent !default;
-$range-flat-fill-percent-var: --#{$range-prefix}flat-fill-percent !default;
-
-$range-thumb-size-var: --#{$range-prefix}thumb-size !default;
-$range-thumb-bg-var: --#{$range-prefix}thumb-bg !default;
-$range-thumb-bg-hover-var: --#{$range-prefix}thumb-bg-hover !default;
-$range-thumb-bg-active-var: --#{$range-prefix}thumb-bg-active !default;
-$range-thumb-border-width-var: --#{$range-prefix}thumb-border-width !default;
-$range-thumb-border-color-var: --#{$range-prefix}thumb-border-color !default;
-$range-thumb-border-color-hover-var: --#{$range-prefix}thumb-border-color-hover !default;
-$range-thumb-border-color-active-var: --#{$range-prefix}thumb-border-color-active !default;
-$range-thumb-border-radius-var: --#{$range-prefix}thumb-border-radius !default;
-$range-thumb-shadow-var: --#{$range-prefix}thumb-shadow !default;
-$range-thumb-shadow-hover-var: --#{$range-prefix}thumb-shadow-hover !default;
-$range-thumb-shadow-active-var: --#{$range-prefix}thumb-shadow-active !default;
-
-$range-focus-ring-width-var: --#{$range-prefix}focus-ring-width !default;
-$range-focus-ring-offset-var: --#{$range-prefix}focus-ring-offset !default;
-$range-focus-ring-color-var: --#{$range-prefix}focus-ring-color !default;
-
-$range-disabled-opacity-var: --#{$range-prefix}disabled-opacity !default;
+$range-accent-color-var: --#{$range-prefix}accent-color !default;
 $range-transition-var: --#{$range-prefix}transition !default;
 
 // ============================================
@@ -48,207 +20,17 @@ $range-transition-var: --#{$range-prefix}transition !default;
 // CSS Variables
 // ============================================
 .#{$range-class-name} {
-  #{$range-size-var}: 1.25rem;
-  #{$range-track-height-var}: calc(var(#{$range-size-var}) * 0.4);
-  #{$range-track-border-radius-var}: 0.25rem;
-  #{$range-track-border-width-var}: 0;
-  #{$range-thumb-size-var}: var(#{$range-size-var});
-  #{$range-thumb-border-width-var}: 2px;
-  #{$range-thumb-border-radius-var}: 50%;
-  #{$range-focus-ring-width-var}: 2px;
-  #{$range-focus-ring-offset-var}: 2px;
-  #{$range-disabled-opacity-var}: 0.5;
   #{$range-transition-var}:
     background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-  #{$range-flat-fill-percent-var}: 0%;
+  #{$range-accent-color-var}: blue;
 }
 
 // ============================================
 // Range
 // ============================================
-// デフォルトで0%から現在値までの塗りつぶしを表示（HTML標準と同様）
-// --range-fill-percent をJSで更新して動的に反映
-.#{$range-class-name},
 input[type="range"].#{$range-class-name} {
-  // Reset browser default
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  // Size
   width: 100%;
-  height: var(#{$range-thumb-size-var});
-
-  // Background (for some browsers)
-  background: transparent;
-
-  // Cursor
-  cursor: pointer;
-
-  // Fill percent (default 0%, update via JS)
-  #{$range-fill-percent-var}: 0%;
-
-  // ----------------------------------------
-  // WebKit Track (Chrome, Safari, Edge)
-  // ----------------------------------------
-  // 塗りつぶしトラック（linear-gradientで実現）
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    height: var(#{$range-track-height-var});
-    background: linear-gradient(
-      to right,
-      var(#{$range-track-fill-bg-var}) 0%,
-      var(#{$range-track-fill-bg-var}) var(#{$range-fill-percent-var}),
-      var(#{$range-track-bg-var}) var(#{$range-fill-percent-var}),
-      var(#{$range-track-bg-var}) 100%
-    );
-    border-radius: var(#{$range-track-border-radius-var});
-    border: var(#{$range-track-border-width-var}) solid
-      var(#{$range-track-border-color-var});
-    transition: var(#{$range-transition-var});
-  }
-
-  // ----------------------------------------
-  // Mozilla Track (Firefox)
-  // ----------------------------------------
-  &::-moz-range-track {
-    width: 100%;
-    height: var(#{$range-track-height-var});
-    background: var(#{$range-track-bg-var});
-    border-radius: var(#{$range-track-border-radius-var});
-    border: var(#{$range-track-border-width-var}) solid
-      var(#{$range-track-border-color-var});
-    transition: var(#{$range-transition-var});
-  }
-
-  // Firefox filled portion (progress) - ネイティブサポート
-  &::-moz-range-progress {
-    height: var(#{$range-track-height-var});
-    background: var(#{$range-track-fill-bg-var});
-    border-radius: var(#{$range-track-border-radius-var}) 0 0
-      var(#{$range-track-border-radius-var});
-  }
-
-  // ----------------------------------------
-  // WebKit Thumb (Chrome, Safari, Edge)
-  // ----------------------------------------
-  &::-webkit-slider-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-    width: var(#{$range-thumb-size-var});
-    height: var(#{$range-thumb-size-var});
-    background: var(#{$range-thumb-bg-var});
-    border: var(#{$range-thumb-border-width-var}) solid
-      var(#{$range-thumb-border-color-var});
-    border-radius: var(#{$range-thumb-border-radius-var});
-    box-shadow: var(#{$range-thumb-shadow-var});
-    // Center thumb vertically on track
-    margin-top: calc(
-      (var(#{$range-track-height-var}) - var(#{$range-thumb-size-var})) / 2
-    );
-    transition: var(#{$range-transition-var});
-  }
-
-  // ----------------------------------------
-  // Mozilla Thumb (Firefox)
-  // ----------------------------------------
-  &::-moz-range-thumb {
-    appearance: none;
-    width: var(#{$range-thumb-size-var});
-    height: var(#{$range-thumb-size-var});
-    background: var(#{$range-thumb-bg-var});
-    border: var(#{$range-thumb-border-width-var}) solid
-      var(#{$range-thumb-border-color-var});
-    border-radius: var(#{$range-thumb-border-radius-var});
-    box-shadow: var(#{$range-thumb-shadow-var});
-    transition: var(#{$range-transition-var});
-  }
-
-  // ----------------------------------------
-  // Hover State
-  // ----------------------------------------
-  &:hover:not(:disabled) {
-    &::-webkit-slider-runnable-track {
-      background: linear-gradient(
-        to right,
-        var(#{$range-track-fill-bg-var}) 0%,
-        var(#{$range-track-fill-bg-var}) var(#{$range-fill-percent-var}),
-        var(#{$range-track-bg-hover-var}) var(#{$range-fill-percent-var}),
-        var(#{$range-track-bg-hover-var}) 100%
-      );
-    }
-    &::-moz-range-track {
-      background: var(#{$range-track-bg-hover-var});
-    }
-    &::-webkit-slider-thumb {
-      background: var(#{$range-thumb-bg-hover-var});
-      border-color: var(#{$range-thumb-border-color-hover-var});
-      box-shadow: var(#{$range-thumb-shadow-hover-var});
-    }
-    &::-moz-range-thumb {
-      background: var(#{$range-thumb-bg-hover-var});
-      border-color: var(#{$range-thumb-border-color-hover-var});
-      box-shadow: var(#{$range-thumb-shadow-hover-var});
-    }
-  }
-
-  // ----------------------------------------
-  // Active State
-  // ----------------------------------------
-  &:active:not(:disabled) {
-    &::-webkit-slider-thumb {
-      background: var(#{$range-thumb-bg-active-var});
-      border-color: var(#{$range-thumb-border-color-active-var});
-      box-shadow: var(#{$range-thumb-shadow-active-var});
-    }
-    &::-moz-range-thumb {
-      background: var(#{$range-thumb-bg-active-var});
-      border-color: var(#{$range-thumb-border-color-active-var});
-      box-shadow: var(#{$range-thumb-shadow-active-var});
-    }
-  }
-
-  // ----------------------------------------
-  // Focus State
-  // ----------------------------------------
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    &::-webkit-slider-thumb {
-      outline: var(#{$range-focus-ring-width-var}) solid
-        var(#{$range-focus-ring-color-var});
-      outline-offset: var(#{$range-focus-ring-offset-var});
-    }
-    &::-moz-range-thumb {
-      outline: var(#{$range-focus-ring-width-var}) solid
-        var(#{$range-focus-ring-color-var});
-      outline-offset: var(#{$range-focus-ring-offset-var});
-    }
-  }
-
-  // ----------------------------------------
-  // Disabled State
-  // ----------------------------------------
-  &:disabled {
-    opacity: var(#{$range-disabled-opacity-var});
-    cursor: not-allowed;
-  }
-}
-
-// Size variants belong in theme layer; core exposes single size variable.
-
-// Semantic/neutral color variants are handled in theme layer; core uses simple variable-driven colors.
-
-// ============================================
-// Flat Variant (no fill effect)
-// ============================================
-// Usage: <input type="range" class="range range-flat">
-// 塗りつぶしなしのフラットなトラック（JSなしで動作）
-.#{$range-class-name}.range-flat,
-input[type="range"].#{$range-class-name}.range-flat {
-  #{$range-fill-percent-var}: var(#{$range-flat-fill-percent-var});
+  accent-color: var(#{$range-accent-color-var});
 }

@@ -6,10 +6,6 @@
 // ============================================
 // Prefixes
 // ============================================
-// Variant Names
-$range-size-sm-var: --#{range.$range-prefix}size-sm !default;
-$range-size-md-var: --#{range.$range-prefix}size-md !default;
-$range-size-lg-var: --#{range.$range-prefix}size-lg !default;
 
 // ============================================
 // Process
@@ -17,68 +13,12 @@ $range-size-lg-var: --#{range.$range-prefix}size-lg !default;
 // ============================================
 // CSS Variants
 // ============================================
-:root {
-  #{$range-size-sm-var}: 1rem;
-  #{$range-size-md-var}: 1.25rem;
-  #{$range-size-lg-var}: 1.75rem;
-}
 
 // ============================================
 // Overrides
 // ============================================
 .#{range.$range-class-name} {
-  // Track colors
-  #{range.$range-track-bg-var}: var(#{contract_prefixes.$neutral-lighter-var});
-  #{range.$range-track-bg-hover-var}: var(
-    #{contract_prefixes.$neutral-light-var}
-  );
-  #{range.$range-track-border-color-var}: transparent;
-
-  // Track fill color (uses semantic palette)
-  #{range.$range-track-fill-bg-var}: var(
+  #{range.$range-accent-color-var}: var(
     #{contract_prefixes.$palette-default-var}
   );
-
-  // Thumb colors
-  #{range.$range-thumb-bg-var}: #ffffff;
-  #{range.$range-thumb-bg-hover-var}: #ffffff;
-  #{range.$range-thumb-bg-active-var}: var(
-    #{contract_prefixes.$neutral-lighter-var}
-  );
-
-  // Thumb border colors
-  #{range.$range-thumb-border-color-var}: var(
-    #{contract_prefixes.$neutral-light-var}
-  );
-  #{range.$range-thumb-border-color-hover-var}: var(
-    #{contract_prefixes.$neutral-default-var}
-  );
-  #{range.$range-thumb-border-color-active-var}: var(
-    #{contract_prefixes.$neutral-dark-var}
-  );
-
-  // Thumb shadows
-  #{range.$range-thumb-shadow-var}: 0 1px 3px rgba(0, 0, 0, 0.1);
-  #{range.$range-thumb-shadow-hover-var}: 0 2px 6px rgba(0, 0, 0, 0.15);
-  #{range.$range-thumb-shadow-active-var}: 0 1px 2px rgba(0, 0, 0, 0.1);
-
-  // Focus ring color (uses semantic palette)
-  #{range.$range-focus-ring-color-var}: var(
-    #{contract_prefixes.$palette-default-var}
-  );
-}
-
-// ============================================
-// Sizes
-// ============================================
-.#{range.$range-class-name} {
-  &.sm {
-    #{range.$range-size-var}: var(#{$range-size-sm-var});
-  }
-  &.md {
-    #{range.$range-size-var}: var(#{$range-size-md-var});
-  }
-  &.lg {
-    #{range.$range-size-var}: var(#{$range-size-lg-var});
-  }
 }
