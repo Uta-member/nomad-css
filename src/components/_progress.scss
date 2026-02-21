@@ -11,15 +11,7 @@ $progress-class-name: "progress" !default;
 
 // Variable Names
 $progress-height-var: --#{$progress-prefix}height !default;
-$progress-bg-var: --#{$progress-prefix}bg !default;
-$progress-border-radius-var: --#{$progress-prefix}border-radius !default;
-$progress-border-width-var: --#{$progress-prefix}border-width !default;
-$progress-border-color-var: --#{$progress-prefix}border-color !default;
-$progress-value-bg-var: --#{$progress-prefix}value-bg !default;
-$progress-value-border-radius-var: --#{$progress-prefix}value-border-radius !default;
-$progress-transition-var: --#{$progress-prefix}transition !default;
-$progress-indeterminate-duration-var: --#{$progress-prefix}indeterminate-duration !default;
-$progress-indeterminate-width-var: --#{$progress-prefix}indeterminate-width !default;
+$progress-accent-color-var: --#{$progress-prefix}accent-color !default;
 
 // ============================================
 // Process
@@ -29,12 +21,7 @@ $progress-indeterminate-width-var: --#{$progress-prefix}indeterminate-width !def
 // ============================================
 .#{$progress-class-name} {
   #{$progress-height-var}: 0.5rem;
-  #{$progress-border-radius-var}: 0.25rem;
-  #{$progress-border-width-var}: 0;
-  #{$progress-value-border-radius-var}: 0.25rem;
-  #{$progress-transition-var}: width 0.3s ease-in-out;
-  #{$progress-indeterminate-duration-var}: 1.5s;
-  #{$progress-indeterminate-width-var}: 30%;
+  #{$progress-accent-color-var}: blue;
 }
 
 // ============================================
@@ -42,146 +29,10 @@ $progress-indeterminate-width-var: --#{$progress-prefix}indeterminate-width !def
 // ============================================
 .#{$progress-class-name},
 progress.#{$progress-class-name} {
-  // Reset browser default
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
   // Size
-  display: block;
   width: 100%;
   height: var(#{$progress-height-var}, 0.5rem);
 
   // For Firefox
-  background: var(#{$progress-bg-var});
-  border: var(#{$progress-border-width-var}) solid
-    var(#{$progress-border-color-var});
-  border-radius: var(#{$progress-border-radius-var});
-
-  // Remove default styling
-  overflow: hidden;
-
-  // ----------------------------------------
-  // WebKit Background (Chrome, Safari, Edge)
-  // ----------------------------------------
-  &::-webkit-progress-bar {
-    background: var(#{$progress-bg-var});
-    border-radius: var(#{$progress-border-radius-var});
-  }
-
-  // ----------------------------------------
-  // WebKit Value (Chrome, Safari, Edge)
-  // ----------------------------------------
-  &::-webkit-progress-value {
-    background: var(#{$progress-value-bg-var});
-    border-radius: var(#{$progress-value-border-radius-var});
-    transition: var(#{$progress-transition-var});
-  }
-
-  // ----------------------------------------
-  // Mozilla Value (Firefox)
-  // ----------------------------------------
-  &::-moz-progress-bar {
-    background: var(#{$progress-value-bg-var});
-    border-radius: var(#{$progress-value-border-radius-var});
-    transition: var(#{$progress-transition-var});
-  }
-}
-
-// ============================================
-// Indeterminate Progress (native <progress>)
-// ============================================
-// Note: Use .indeterminate class instead of :indeterminate pseudo-class
-// <progress class="progress indeterminate"></progress>
-
-progress.#{$progress-class-name}.indeterminate {
-  // Override background to show animated gradient
-  background: linear-gradient(
-    90deg,
-    var(#{$progress-bg-var}) 0%,
-    var(#{$progress-bg-var}) 33%,
-    var(#{$progress-value-bg-var}) 50%,
-    var(#{$progress-bg-var}) 67%,
-    var(#{$progress-bg-var}) 100%
-  );
-  background-size: 300% 100%;
-  animation: progress-indeterminate var(#{$progress-indeterminate-duration-var})
-    linear infinite;
-
-  // Make internal pseudo-elements transparent so the animated background shows through
-  &::-webkit-progress-bar {
-    background: transparent;
-  }
-  &::-webkit-progress-value {
-    background: transparent;
-  }
-  &::-moz-progress-bar {
-    background: transparent;
-  }
-}
-
-// ============================================
-// Indeterminate Animation Keyframes
-// ============================================
-@keyframes progress-indeterminate {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0% 0;
-  }
-}
-
-// ============================================
-// DIV-based Progress (for more control)
-// ============================================
-// Two supported markup patterns:
-// 1) Existing project pattern (outer `.progress-bar`, inner `.progress-bar-value`):
-//    <div class="progress-bar">
-//      <div class="progress-bar-value" style="width:50%"></div>
-//    </div>
-// 2) Bootstrap-like pattern (outer `.progress`, inner `.progress-bar`):
-//    <div class="progress">
-//      <div class="progress-bar" style="width:50%"></div>
-//    </div>
-
-/* Inner bar element: use `.progress > .progress-bar` for DIV-based progress.
-   This keeps implementation simple: outer `.progress` (or native `<progress>`) and
-   inner `.progress-bar` element for the filled portion. */
-:not(progress).#{$progress-class-name} {
-  display: flex;
-  width: 100%;
-  height: var(#{$progress-height-var}, 0.5rem);
-  background: var(#{$progress-bg-var});
-  border: var(#{$progress-border-width-var}) solid
-    var(#{$progress-border-color-var});
-  border-radius: var(#{$progress-border-radius-var});
-  overflow: hidden;
-}
-
-:not(progress).#{$progress-class-name} > .progress-bar {
-  height: 100%;
-  background: var(#{$progress-value-bg-var});
-  border-radius: var(#{$progress-value-border-radius-var});
-  transition: var(#{$progress-transition-var});
-}
-
-// ----------------------------------------
-// DIV-based Indeterminate
-// ----------------------------------------
-:not(progress).#{$progress-class-name}.indeterminate > .progress-bar {
-  width: var(#{$progress-indeterminate-width-var});
-  animation: progress-bar-indeterminate
-    var(#{$progress-indeterminate-duration-var}) ease-in-out infinite;
-}
-
-@keyframes progress-bar-indeterminate {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(
-      calc(100% / var(#{$progress-indeterminate-width-var}) * 100%)
-    );
-  }
+  accent-color: var(#{$progress-accent-color-var});
 }

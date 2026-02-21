@@ -128,103 +128,16 @@ input[type=checkbox].checkbox {
 
 .progress {
   --progress-height: 0.5rem;
-  --progress-border-radius: 0.25rem;
-  --progress-border-width: 0;
-  --progress-value-border-radius: 0.25rem;
-  --progress-transition: width 0.3s ease-in-out;
-  --progress-indeterminate-duration: 1.5s;
-  --progress-indeterminate-width: 30%;
+  --progress-accent-color: blue;
 }
 
 .progress,
 progress.progress {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: block;
   width: 100%;
   height: var(--progress-height, 0.5rem);
-  background: var(--progress-bg);
-  border: var(--progress-border-width) solid var(--progress-border-color);
-  border-radius: var(--progress-border-radius);
-  overflow: hidden;
-}
-.progress::-webkit-progress-bar,
-progress.progress::-webkit-progress-bar {
-  background: var(--progress-bg);
-  border-radius: var(--progress-border-radius);
-}
-.progress::-webkit-progress-value,
-progress.progress::-webkit-progress-value {
-  background: var(--progress-value-bg);
-  border-radius: var(--progress-value-border-radius);
-  -webkit-transition: var(--progress-transition);
-  transition: var(--progress-transition);
-}
-.progress::-moz-progress-bar,
-progress.progress::-moz-progress-bar {
-  background: var(--progress-value-bg);
-  border-radius: var(--progress-value-border-radius);
-  -moz-transition: var(--progress-transition);
-  transition: var(--progress-transition);
+  accent-color: var(--progress-accent-color);
 }
 
-progress.progress.indeterminate {
-  background: linear-gradient(90deg, var(--progress-bg) 0%, var(--progress-bg) 33%, var(--progress-value-bg) 50%, var(--progress-bg) 67%, var(--progress-bg) 100%);
-  background-size: 300% 100%;
-  animation: progress-indeterminate var(--progress-indeterminate-duration) linear infinite;
-}
-progress.progress.indeterminate::-webkit-progress-bar {
-  background: transparent;
-}
-progress.progress.indeterminate::-webkit-progress-value {
-  background: transparent;
-}
-progress.progress.indeterminate::-moz-progress-bar {
-  background: transparent;
-}
-
-@keyframes progress-indeterminate {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0% 0;
-  }
-}
-/* Inner bar element: use `.progress > .progress-bar` for DIV-based progress.
-   This keeps implementation simple: outer `.progress` (or native `<progress>`) and
-   inner `.progress-bar` element for the filled portion. */
-:not(progress).progress {
-  display: flex;
-  width: 100%;
-  height: var(--progress-height, 0.5rem);
-  background: var(--progress-bg);
-  border: var(--progress-border-width) solid var(--progress-border-color);
-  border-radius: var(--progress-border-radius);
-  overflow: hidden;
-}
-
-:not(progress).progress > .progress-bar {
-  height: 100%;
-  background: var(--progress-value-bg);
-  border-radius: var(--progress-value-border-radius);
-  transition: var(--progress-transition);
-}
-
-:not(progress).progress.indeterminate > .progress-bar {
-  width: var(--progress-indeterminate-width);
-  animation: progress-bar-indeterminate var(--progress-indeterminate-duration) ease-in-out infinite;
-}
-
-@keyframes progress-bar-indeterminate {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(calc(100% / var(--progress-indeterminate-width) * 100%));
-  }
-}
 :root {
   --radio-size: 1.25rem;
   --radio-border-width: 2px;
