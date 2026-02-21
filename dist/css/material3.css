@@ -3858,101 +3858,12 @@ progress.progress {
   accent-color: var(--progress-accent-color);
 }
 
-:root {
-  --radio-size: 1.25rem;
-  --radio-border-width: 2px;
-  --radio-border-color: transparent;
-  --radio-border-color-hover: transparent;
-  --radio-border-color-checked: transparent;
-  --radio-border-color-focus: transparent;
-  --radio-bg: transparent;
-  --radio-bg-hover: transparent;
-  --radio-bg-checked: transparent;
-  --radio-dot-size: calc(var(--radio-size) * 0.4);
-  --radio-dot-color: inherit;
-  --radio-focus-ring-width: 2px;
-  --radio-focus-ring-offset: 2px;
-  --radio-focus-ring-color: transparent;
-  --radio-disabled-opacity: 0.5;
-  --radio-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  --form-radio-gap: 0.5rem;
-  --form-radio-label-color: inherit;
-}
-
-.radio,
 input[type=radio].radio {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  margin: 0;
-  width: var(--radio-size);
-  height: var(--radio-size);
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  border: var(--radio-border-width) solid var(--radio-border-color);
-  border-radius: 50%;
-  background-color: var(--radio-bg);
-  cursor: pointer;
-  transition: var(--radio-transition);
-}
-.radio:hover:not(:disabled),
-input[type=radio].radio:hover:not(:disabled) {
-  background-color: var(--radio-bg-hover);
-  border-color: var(--radio-border-color-hover);
-}
-.radio:focus-visible,
-input[type=radio].radio:focus-visible {
-  outline: var(--radio-focus-ring-width) solid var(--radio-focus-ring-color);
-  outline-offset: var(--radio-focus-ring-offset);
-}
-.radio:checked,
-input[type=radio].radio:checked {
-  background-color: var(--radio-bg);
-  border-color: var(--radio-border-color-checked);
-}
-.radio:checked::after,
-input[type=radio].radio:checked::after {
-  content: "";
-  display: block;
-  /* Use percentage so dot scales with the radio element size */
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  background-color: var(--radio-dot-color);
-}
-.radio:disabled,
-input[type=radio].radio:disabled {
-  opacity: var(--radio-disabled-opacity);
-  cursor: not-allowed;
+  --radio-accent-color: blue;
 }
 
-.form-radio {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--form-radio-gap);
-  cursor: pointer;
-  color: var(--form-radio-label-color);
-}
-.form-radio:has(:disabled) {
-  opacity: var(--radio-disabled-opacity);
-  cursor: not-allowed;
-}
-
-.form-radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-radio-inline {
-  display: inline-flex;
-  gap: 1rem;
-}
-.form-radio-inline > .form-radio {
-  margin-right: 0;
+input[type=radio].radio {
+  accent-color: var(--radio-accent-color);
 }
 
 .input {
@@ -5277,35 +5188,8 @@ h6,
   --checkbox-accent-color: var(--palette-default);
 }
 
-:root {
-  --radio-size-sm: 1rem;
-  --radio-size-md: 1.25rem;
-  --radio-size-lg: 1.75rem;
-}
-
-:root {
-  --radio-size: var(--radio-size-md);
-  --radio-bg: transparent;
-  --radio-dot-color: var(--palette-default);
-  --radio-border-color: var(--neutral-light);
-  --radio-border-color-hover: var(--neutral-light);
-  --radio-border-color-checked: var(--neutral-light);
-  --radio-border-color-focus: var(--neutral-light);
-  --radio-bg-hover: var(--neutral-lighter);
-}
-
-.radio.sm {
-  --radio-size: var(--radio-size-sm);
-}
-.radio.md {
-  --radio-size: var(--radio-size-md);
-}
-.radio.lg {
-  --radio-size: var(--radio-size-lg);
-}
-
-.radio {
-  --radio-dot-color: var(--palette-default);
+input[type=radio].radio {
+  --radio-accent-color: var(--palette-default);
 }
 
 :root {

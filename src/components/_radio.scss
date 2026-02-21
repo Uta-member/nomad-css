@@ -10,188 +10,22 @@ $radio-prefix: #{$prefix}radio- !default;
 $radio-class-name: "radio" !default;
 
 // Variable Names
-$radio-size-var: --#{$radio-prefix}size !default;
-$radio-border-width-var: --#{$radio-prefix}border-width !default;
-$radio-border-color-var: --#{$radio-prefix}border-color !default;
-$radio-border-color-hover-var: --#{$radio-prefix}border-color-hover !default;
-$radio-border-color-checked-var: --#{$radio-prefix}border-color-checked !default;
-$radio-border-color-focus-var: --#{$radio-prefix}border-color-focus !default;
-$radio-bg-var: --#{$radio-prefix}bg !default;
-$radio-bg-hover-var: --#{$radio-prefix}bg-hover !default;
-$radio-bg-checked-var: --#{$radio-prefix}bg-checked !default;
-$radio-dot-size-var: --#{$radio-prefix}dot-size !default;
-$radio-dot-color-var: --#{$radio-prefix}dot-color !default;
-$radio-focus-ring-width-var: --#{$radio-prefix}focus-ring-width !default;
-$radio-focus-ring-offset-var: --#{$radio-prefix}focus-ring-offset !default;
-$radio-focus-ring-color-var: --#{$radio-prefix}focus-ring-color !default;
-$radio-disabled-opacity-var: --#{$radio-prefix}disabled-opacity !default;
-$radio-transition-var: --#{$radio-prefix}transition !default;
-$form-radio-gap-var: --form-radio-gap !default;
-$form-radio-label-color-var: --form-radio-label-color !default;
+$radio-accent-color-var: --#{$radio-prefix}accent-color !default;
 
 // ============================================
 // Process
 // ============================================
 
 // ============================================
-// CSS Variables (defaults live in :root so theme overrides win)
+// CSS Variables
 // ============================================
-:root {
-  // Size
-  #{$radio-size-var}: 1.25rem;
-
-  // Border
-  #{$radio-border-width-var}: 2px;
-  #{$radio-border-color-var}: transparent;
-  #{$radio-border-color-hover-var}: transparent;
-  #{$radio-border-color-checked-var}: transparent;
-  #{$radio-border-color-focus-var}: transparent;
-
-  // Background
-  #{$radio-bg-var}: transparent;
-  #{$radio-bg-hover-var}: transparent;
-  #{$radio-bg-checked-var}: transparent;
-
-  // Dot (scale relative to radio size to ensure gap from border)
-  #{$radio-dot-size-var}: calc(var(#{$radio-size-var}) * 0.4);
-  #{$radio-dot-color-var}: inherit;
-
-  // Focus ring
-  #{$radio-focus-ring-width-var}: 2px;
-  #{$radio-focus-ring-offset-var}: 2px;
-  #{$radio-focus-ring-color-var}: transparent;
-
-  // Disabled
-  #{$radio-disabled-opacity-var}: 0.5;
-
-  // Transition
-  #{$radio-transition-var}:
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-
-  // ----------------------------------------
-  // Form Radio (label wrapper) Variables
-  // ----------------------------------------
-  #{$form-radio-gap-var}: 0.5rem;
-  #{$form-radio-label-color-var}: inherit;
+input[type="radio"].#{$radio-class-name} {
+  #{$radio-accent-color-var}: blue;
 }
 
 // ============================================
 // Radio
 // ============================================
-.#{$radio-class-name},
 input[type="radio"].#{$radio-class-name} {
-  // Reset browser default
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  margin: 0;
-
-  // Size
-  width: var(#{$radio-size-var});
-  height: var(#{$radio-size-var});
-  flex-shrink: 0;
-
-  // Display
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-
-  // Border (always circular for radio)
-  border: var(#{$radio-border-width-var}) solid var(#{$radio-border-color-var});
-  border-radius: 50%;
-
-  // Background
-  background-color: var(#{$radio-bg-var});
-
-  // Cursor
-  cursor: pointer;
-
-  // Transition
-  transition: var(#{$radio-transition-var});
-
-  // ----------------------------------------
-  // Hover State
-  // ----------------------------------------
-  &:hover:not(:disabled) {
-    background-color: var(#{$radio-bg-hover-var});
-    border-color: var(#{$radio-border-color-hover-var});
-  }
-
-  // ----------------------------------------
-  // Focus State
-  // ----------------------------------------
-  &:focus-visible {
-    outline: var(#{$radio-focus-ring-width-var}) solid
-      var(#{$radio-focus-ring-color-var});
-    outline-offset: var(#{$radio-focus-ring-offset-var});
-  }
-
-  // ----------------------------------------
-  // Checked State
-  // ----------------------------------------
-  &:checked {
-    background-color: var(#{$radio-bg-var});
-    border-color: var(#{$radio-border-color-checked-var});
-
-    // Inner dot using pseudo-element
-    &::after {
-      content: "";
-      display: block;
-      /* Use percentage so dot scales with the radio element size */
-      width: 50%;
-      height: 50%;
-      border-radius: 50%;
-      background-color: var(#{$radio-dot-color-var});
-    }
-  }
-
-  // ----------------------------------------
-  // Disabled State
-  // ----------------------------------------
-  &:disabled {
-    opacity: var(#{$radio-disabled-opacity-var});
-    cursor: not-allowed;
-  }
-}
-
-// ============================================
-// Form Check Wrapper
-// ============================================
-// Usage: <label class="form-check"><input type="checkbox" class="checkbox"> Label text</label>
-.form-radio {
-  display: inline-flex;
-  align-items: center;
-  gap: var(#{$form-radio-gap-var});
-  cursor: pointer;
-  color: var(#{$form-radio-label-color-var});
-
-  // When disabled, style the whole label
-  &:has(:disabled) {
-    opacity: var(#{$radio-disabled-opacity-var});
-    cursor: not-allowed;
-  }
-}
-
-// ============================================
-// Form Check Group (vertical stack)
-// ============================================
-.form-radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-// ============================================
-// Form Check Inline (horizontal)
-// ============================================
-.form-radio-inline {
-  display: inline-flex;
-  gap: 1rem;
-
-  > .form-radio {
-    margin-right: 0;
-  }
+  accent-color: var(#{$radio-accent-color-var});
 }
