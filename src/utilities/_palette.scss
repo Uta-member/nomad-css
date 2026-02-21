@@ -255,8 +255,8 @@ $palettes: (
 //=============================================
 // Process
 // ============================================
-@each $selector, $value in $palettes {
-  #{$selector} {
+@each $name, $value in $palettes {
+  .#{$name} {
     @include generate-palette($value);
   }
 }

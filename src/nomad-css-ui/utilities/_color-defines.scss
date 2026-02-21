@@ -8,23 +8,25 @@
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$border-color-var: --#{palette.$palette-prefix}border-color;
-$border-color-light-var: --#{palette.$palette-prefix}border-color-light;
-$border-color-dark-var: --#{palette.$palette-prefix}border-color-dark;
+$border-color-var: --border-color;
+$border-color-light-var: --border-color-light;
+$border-color-dark-var: --border-color-dark;
 
 // ---------------------------------------------
 // Text
 // ---------------------------------------------
-$text-color-var: --#{palette.$palette-prefix}text-color;
-$text-color-light-var: --#{palette.$palette-prefix}text-color-light;
-$text-color-dark-var: --#{palette.$palette-prefix}text-color-dark;
+$text-color-var: --text-color;
+$text-color-light-var: --text-color-light;
+$text-color-dark-var: --text-color-dark;
 
 // ---------------------------------------------
 // Surface
 // ---------------------------------------------
-$surface-color-var: --#{palette.$palette-prefix}surface-color;
-$surface-color-light-var: --#{palette.$palette-prefix}surface-color-light;
-$surface-color-dark-var: --#{palette.$palette-prefix}surface-color-dark;
+$surface-color-var: --surface-color;
+$surface-color-light-var: --surface-color-light;
+$surface-color-lighter-var: --surface-color-lighter;
+$surface-color-dark-var: --surface-color-dark;
+$surface-color-darker-var: --surface-color-darker;
 
 // ============================================
 // Process
@@ -42,6 +44,8 @@ $surface-color-dark-var: --#{palette.$palette-prefix}surface-color-dark;
   #{$text-color-dark-var}: #000000;
 
   #{$surface-color-var}: #F0F0F0;
-  #{$surface-color-light-var}: #FFFFFF;
-  #{$surface-color-dark-var}: #F5F5F5;
+  #{$surface-color-light-var}: #F5F5F5;
+  #{$surface-color-lighter-var}: #FFFFFF;
+  #{$surface-color-dark-var}: #E5E5E5;
+  #{$surface-color-darker-var}: #D9D9D9;
 }

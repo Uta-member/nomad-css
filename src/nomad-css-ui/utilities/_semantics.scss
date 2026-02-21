@@ -32,7 +32,7 @@ $semantic-primary: (
     dark: 8,
     darker: 9,
   ),
-);
+) !default;
 $semantic-secondary: (
   hue: var(#{hue-colors.$hue-pink-var}),
   saturation: 80%,
@@ -44,7 +44,7 @@ $semantic-secondary: (
     dark: 7,
     darker: 9,
   ),
-);
+) !default;
 $semantic-tertiary: (
   hue: var(#{hue-colors.$hue-teal-var}),
   saturation: 60%,
@@ -56,7 +56,7 @@ $semantic-tertiary: (
     dark: 9,
     darker: 10,
   ),
-);
+) !default;
 $semantic-success: (
   hue: var(#{hue-colors.$hue-green-var}),
   saturation: 60%,
@@ -68,7 +68,7 @@ $semantic-success: (
     dark: 9,
     darker: 10,
   ),
-);
+) !default;
 $semantic-warning: (
   hue: var(#{hue-colors.$hue-yellow-var}),
   saturation: 80%,
@@ -79,8 +79,7 @@ $semantic-warning: (
     default: 6,
     dark: 8,
     darker: 9,
-  ),
-);
+)) !default;
 $semantic-danger: (
   hue: var(#{hue-colors.$hue-red-var}),
   saturation: 80%,
@@ -92,7 +91,7 @@ $semantic-danger: (
     dark: 8,
     darker: 9,
   ),
-);
+) !default;
 $semantic-info: (
   hue: var(#{hue-colors.$hue-cyan-var}),
   saturation: 80%,
@@ -104,16 +103,16 @@ $semantic-info: (
     dark: 8,
     darker: 9,
   ),
-);
+) !default;
 
 $semantic-colors: (
-  ".#{$semantic-primary-class-name}": $semantic-primary,
-  ".#{$semantic-secondary-class-name}": $semantic-secondary,
-  ".#{$semantic-tertiary-class-name}": $semantic-tertiary,
-  ".#{$semantic-success-class-name}": $semantic-success,
-  ".#{$semantic-warning-class-name}": $semantic-warning,
-  ".#{$semantic-danger-class-name}": $semantic-danger,
-  ".#{$semantic-info-class-name}": $semantic-info,
+  #{$semantic-primary-class-name}: $semantic-primary,
+  #{$semantic-secondary-class-name}: $semantic-secondary,
+  #{$semantic-tertiary-class-name}: $semantic-tertiary,
+  #{$semantic-success-class-name}: $semantic-success,
+  #{$semantic-warning-class-name}: $semantic-warning,
+  #{$semantic-danger-class-name}: $semantic-danger,
+  #{$semantic-info-class-name}: $semantic-info,
 );
 
 // ============================================
@@ -152,4 +151,4 @@ $semantic-neutral: (
     palette-hue-var: --neutral-h,
     palette-saturation-var: --neutral-s,
   ),
-);
+) !default;

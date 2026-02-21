@@ -1,4 +1,39 @@
 @use "../../nomad-css-ui/nomad-css-ui.scss";
 
 :root[data-theme="fluent2"] {
+  .secondary {
+    --palette-saturation: 0%;
+  }
+  .button{
+    --button-border-width: 1px;
+
+    &.filled {
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
+      
+      &.secondary {
+        --button-bg-color: var(--surface-color-lighter);
+        --button-color: var(--text-color);
+        --button-border-color: var(--border-color);
+        --button-hover-bg-color: var(--surface-color);
+        --button-hover-color: var(--button-color);
+        --button-hover-border-color: var(--border-color);
+        --button-active-bg-color: var(--surface-color-dark);
+        --button-active-color: var(--button-color);
+        --button-active-border-color: var(--border-color);
+        --button-focus-bg-color: var(--surface-color);
+        --button-focus-color: var(--button-color);
+        --button-focus-border-color: var(--border-color);
+      }
+    }
+
+    &:disabled {
+      --button-disabled-bg-color: var(--button-bg-color);
+      --button-disabled-color: var(--button-color);
+      --button-disabled-border-color: var(--button-border-color);
+      --button-disabled-opacity: 0.5;
+    }
+  }
 }

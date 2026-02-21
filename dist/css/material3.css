@@ -4584,15 +4584,17 @@ h6,
 }
 
 :root {
-  --palette-border-color: var(--neutral-default);
-  --palette-border-color-light: var(--neutral-light);
-  --palette-border-color-dark: var(--neutral-dark);
-  --palette-text-color: #1F1F1F;
-  --palette-text-color-light: #3F3F3F;
-  --palette-text-color-dark: #000000;
-  --palette-surface-color: #F0F0F0;
-  --palette-surface-color-light: #FFFFFF;
-  --palette-surface-color-dark: #F5F5F5;
+  --border-color: var(--neutral-default);
+  --border-color-light: var(--neutral-light);
+  --border-color-dark: var(--neutral-dark);
+  --text-color: #1F1F1F;
+  --text-color-light: #3F3F3F;
+  --text-color-dark: #000000;
+  --surface-color: #F0F0F0;
+  --surface-color-light: #F5F5F5;
+  --surface-color-lighter: #FFFFFF;
+  --surface-color-dark: #E5E5E5;
+  --surface-color-darker: #D9D9D9;
 }
 
 .button {
@@ -4774,7 +4776,7 @@ button.text {
 
 .button.sm {
   --button-font-size: 0.75rem;
-  --button-padding: 0.25em 0.5em;
+  --button-padding: 0.35em 0.75em;
 }
 
 .button, .button.md {
@@ -4785,4 +4787,26 @@ button.text {
 .button.lg {
   --button-font-size: 1.25rem;
   --button-padding: 0.75em 1.5em;
+}
+
+:root[data-theme=material3] {
+  --palette-hue: 260;
+  --palette-saturation: 70%;
+  --palette-default: var(--palette-color-5);
+}
+:root[data-theme=material3] .primary {
+  --palette-hue: 260;
+  --palette-saturation: 70%;
+  --palette-default: var(--palette-color-5);
+  --palette-light: var(--palette-color-4);
+  --palette-lighter: var(--palette-color-3);
+  --palette-dark: var(--palette-color-7);
+  --palette-darker: var(--palette-color-8);
+}
+:root[data-theme=material3] .button {
+  --button-border-radius: 10rem;
+}
+:root[data-theme=material3] .button.filled {
+  --button-hover-bg-color: var(--palette-light);
+  --button-active-bg-color: var(--palette-lighter);
 }/*# sourceMappingURL=material3.css.map */

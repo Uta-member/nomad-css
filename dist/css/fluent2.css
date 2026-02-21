@@ -4584,15 +4584,17 @@ h6,
 }
 
 :root {
-  --palette-border-color: var(--neutral-default);
-  --palette-border-color-light: var(--neutral-light);
-  --palette-border-color-dark: var(--neutral-dark);
-  --palette-text-color: #1F1F1F;
-  --palette-text-color-light: #3F3F3F;
-  --palette-text-color-dark: #000000;
-  --palette-surface-color: #F0F0F0;
-  --palette-surface-color-light: #FFFFFF;
-  --palette-surface-color-dark: #F5F5F5;
+  --border-color: var(--neutral-default);
+  --border-color-light: var(--neutral-light);
+  --border-color-dark: var(--neutral-dark);
+  --text-color: #1F1F1F;
+  --text-color-light: #3F3F3F;
+  --text-color-dark: #000000;
+  --surface-color: #F0F0F0;
+  --surface-color-light: #F5F5F5;
+  --surface-color-lighter: #FFFFFF;
+  --surface-color-dark: #E5E5E5;
+  --surface-color-darker: #D9D9D9;
 }
 
 .button {
@@ -4774,7 +4776,7 @@ button.text {
 
 .button.sm {
   --button-font-size: 0.75rem;
-  --button-padding: 0.25em 0.5em;
+  --button-padding: 0.35em 0.75em;
 }
 
 .button, .button.md {
@@ -4785,4 +4787,37 @@ button.text {
 .button.lg {
   --button-font-size: 1.25rem;
   --button-padding: 0.75em 1.5em;
+}
+
+:root[data-theme=fluent2] .secondary {
+  --palette-saturation: 0%;
+}
+:root[data-theme=fluent2] .button {
+  --button-border-width: 1px;
+}
+:root[data-theme=fluent2] .button.filled {
+  --button-border-color: var(--button-bg-color);
+  --button-hover-border-color: var(--button-hover-bg-color);
+  --button-active-border-color: var(--button-active-bg-color);
+  --button-focus-border-color: var(--button-focus-bg-color);
+}
+:root[data-theme=fluent2] .button.filled.secondary {
+  --button-bg-color: var(--surface-color-lighter);
+  --button-color: var(--text-color);
+  --button-border-color: var(--border-color);
+  --button-hover-bg-color: var(--surface-color);
+  --button-hover-color: var(--button-color);
+  --button-hover-border-color: var(--border-color);
+  --button-active-bg-color: var(--surface-color-dark);
+  --button-active-color: var(--button-color);
+  --button-active-border-color: var(--border-color);
+  --button-focus-bg-color: var(--surface-color);
+  --button-focus-color: var(--button-color);
+  --button-focus-border-color: var(--border-color);
+}
+:root[data-theme=fluent2] .button:disabled {
+  --button-disabled-bg-color: var(--button-bg-color);
+  --button-disabled-color: var(--button-color);
+  --button-disabled-border-color: var(--button-border-color);
+  --button-disabled-opacity: 0.5;
 }/*# sourceMappingURL=fluent2.css.map */

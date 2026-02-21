@@ -26,73 +26,73 @@ $hue-pink-var: --#{prefixes.$prefix}hue-pink;
 // threshold: アクセントカラー切り替え閾値（省略時はデフォルト50%）
 // ============================================
 $hues: (
-  ".red": (
+  "red": (
     hue: 0,
     saturation: 100%,
     accent-threshold: 50%,
     variant-name: #{$hue-red-var},
   ),
-  ".orange": (
+  "orange": (
     hue: 30,
     saturation: 100%,
     accent-threshold: 40%,
     variant-name: #{$hue-orange-var},
   ),
-  ".yellow": (
+  "yellow": (
     hue: 50,
     saturation: 100%,
     accent-threshold: 30%,
     variant-name: #{$hue-yellow-var},
   ),
-  ".lime": (
+  "lime": (
     hue: 90,
     saturation: 100%,
     accent-threshold: 30%,
     variant-name: #{$hue-lime-var},
   ),
-  ".green": (
+  "green": (
     hue: 125,
     saturation: 100%,
     accent-threshold: 30%,
     variant-name: #{$hue-green-var},
   ),
-  ".teal": (
+  "teal": (
     hue: 170,
     saturation: 100%,
     accent-threshold: 40%,
     variant-name: #{$hue-teal-var},
   ),
-  ".cyan": (
+  "cyan": (
     hue: 190,
     saturation: 100%,
     accent-threshold: 40%,
     variant-name: #{$hue-cyan-var},
   ),
-  ".blue": (
+  "blue": (
     hue: 220,
     saturation: 100%,
     accent-threshold: 50%,
     variant-name: #{$hue-blue-var},
   ),
-  ".indigo": (
+  "indigo": (
     hue: 240,
     saturation: 100%,
     accent-threshold: 70%,
     variant-name: #{$hue-indigo-var},
   ),
-  ".violet": (
+  "violet": (
     hue: 270,
     saturation: 100%,
     accent-threshold: 70%,
     variant-name: #{$hue-violet-var},
   ),
-  ".purple": (
+  "purple": (
     hue: 290,
     saturation: 100%,
     accent-threshold: 50%,
     variant-name: #{$hue-purple-var},
   ),
-  ".pink": (
+  "pink": (
     hue: 330,
     saturation: 100%,
     accent-threshold: 55%,

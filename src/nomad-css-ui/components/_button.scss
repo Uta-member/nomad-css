@@ -209,6 +209,7 @@ $button-padding-var: --#{$button-prefix}padding;
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
+
   #{$button-bg-color-var}: var(#{palette.$palette-default-var});
   #{$button-hover-bg-color-var}: var(#{palette.$palette-dark-var});
   #{$button-active-bg-color-var}: var(#{palette.$palette-darker-var});
@@ -370,7 +371,7 @@ $button-padding-var: --#{$button-prefix}padding;
 // ============================================
 .#{$button-class-name}.sm {
   #{$button-font-size-var}: 0.75rem;
-  #{$button-padding-var}: 0.25em 0.5em;
+  #{$button-padding-var}: 0.35em 0.75em;
 }
 
 .#{$button-class-name}, .#{$button-class-name}.md {
