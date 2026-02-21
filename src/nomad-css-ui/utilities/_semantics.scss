@@ -115,3 +115,41 @@ $semantic-colors: (
   ".#{$semantic-danger-class-name}": $semantic-danger,
   ".#{$semantic-info-class-name}": $semantic-info,
 );
+
+// ============================================
+// Neutral Palette Variant Names (theme-local)
+// These live in the theme layer only so props layer remains unchanged.
+// ============================================
+$neutral-lighter-var: --neutral-lighter;
+$neutral-light-var: --neutral-light;
+$neutral-default-var: --neutral-default;
+$neutral-dark-var: --neutral-dark;
+$neutral-darker-var: --neutral-darker;
+
+$neutral-lighter-accent-var: --neutral-accent-lighter;
+$neutral-light-accent-var: --neutral-accent-light;
+$neutral-default-accent-var: --neutral-accent-default;
+$neutral-dark-accent-var: --neutral-accent-dark;
+$neutral-darker-accent-var: --neutral-accent-darker;
+
+$semantic-neutral: (
+  hue: var(#{hue-colors.$hue-blue-var}),
+  saturation: 5%,
+  accent-threshold: 50%,
+  levels: (
+    lighter: 1,
+    light: 3,
+    default: 5,
+    dark: 7,
+    darker: 9,
+  ),
+  names: (
+    palette-prefix: neutral-,
+    palette-color-prefix: neutral-color-,
+    palette-accent-prefix: neutral-accent-,
+    palette-gray-prefix: neutral-gray-,
+    palette-lightness-prefix: neutral-l-,
+    palette-hue-var: --neutral-h,
+    palette-saturation-var: --neutral-s,
+  ),
+);

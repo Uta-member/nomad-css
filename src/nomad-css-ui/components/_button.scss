@@ -1,0 +1,384 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$button-prefix: #{prefixes.$prefix}button-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$button-class-name: "button" !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Background Colors
+// --------------------------------------------
+$button-bg-color-var: --#{$button-prefix}bg-color;
+$button-hover-bg-color-var: --#{$button-prefix}hover-bg-color;
+$button-active-bg-color-var: --#{$button-prefix}active-bg-color;
+$button-focus-bg-color-var: --#{$button-prefix}focus-bg-color;
+$button-disabled-bg-color-var: --#{$button-prefix}disabled-bg-color;
+
+// --------------------------------------------
+// Text Colors
+// --------------------------------------------
+$button-color-var: --#{$button-prefix}color;
+$button-hover-color-var: --#{$button-prefix}hover-color;
+$button-active-color-var: --#{$button-prefix}active-color;
+$button-focus-color-var: --#{$button-prefix}focus-color;
+$button-disabled-color-var: --#{$button-prefix}disabled-color;
+
+// --------------------------------------------
+// Borders
+// --------------------------------------------
+$button-border-color-var: --#{$button-prefix}border-color;
+$button-hover-border-color-var: --#{$button-prefix}hover-border-color;
+$button-active-border-color-var: --#{$button-prefix}active-border-color;
+$button-focus-border-color-var: --#{$button-prefix}focus-border-color;
+$button-disabled-border-color-var: --#{$button-prefix}disabled-border-color;
+$button-border-radius-var: --#{$button-prefix}border-radius;
+$button-border-width-var: --#{$button-prefix}border-width;
+
+// --------------------------------------------
+// Opacity
+// --------------------------------------------
+$button-opacity-var: --#{$button-prefix}opacity;
+$button-hover-opacity-var: --#{$button-prefix}hover-opacity;
+$button-active-opacity-var: --#{$button-prefix}active-opacity;
+$button-focus-opacity-var: --#{$button-prefix}focus-opacity;
+$button-disabled-opacity-var: --#{$button-prefix}disabled-opacity;
+
+// --------------------------------------------
+// Cursor
+// --------------------------------------------
+$button-cursor-var: --#{$button-prefix}cursor;
+$button-disabled-cursor-var: --#{$button-prefix}disabled-cursor;
+
+// --------------------------------------------
+// Box Shadow
+// --------------------------------------------
+$button-box-shadow-var: --#{$button-prefix}box-shadow;
+$button-hover-box-shadow-var: --#{$button-prefix}hover-box-shadow;
+$button-active-box-shadow-var: --#{$button-prefix}active-box-shadow;
+$button-focus-box-shadow-var: --#{$button-prefix}focus-box-shadow;
+$button-disabled-box-shadow-var: --#{$button-prefix}disabled-box-shadow;
+
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$button-transition-var: --#{$button-prefix}transition;
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$button-font-size-var: --#{$button-prefix}font-size;
+$button-padding-var: --#{$button-prefix}padding;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$button-class-name} {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$button-bg-color-var}: transparent;
+  #{$button-hover-bg-color-var}: transparent;
+  #{$button-active-bg-color-var}: transparent;
+  #{$button-focus-bg-color-var}: transparent;
+  #{$button-disabled-bg-color-var}: transparent;
+
+  // --------------------------------------------
+  // Text Colors
+  // --------------------------------------------
+  #{$button-color-var}: inherit;
+  #{$button-hover-color-var}: inherit;
+  #{$button-active-color-var}: inherit;
+  #{$button-focus-color-var}: inherit;
+  #{$button-disabled-color-var}: inherit;
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$button-border-color-var}: transparent;
+  #{$button-hover-border-color-var}: transparent;
+  #{$button-active-border-color-var}: transparent;
+  #{$button-focus-border-color-var}: transparent;
+  #{$button-disabled-border-color-var}: transparent;
+  #{$button-border-width-var}: 1px;
+  #{$button-border-radius-var}: 0.25rem;
+  
+  // --------------------------------------------
+  // Opacity
+  // --------------------------------------------
+  #{$button-opacity-var}: 1;
+  #{$button-hover-opacity-var}: 1;
+  #{$button-active-opacity-var}: 1;
+  #{$button-focus-opacity-var}: 1;
+  #{$button-disabled-opacity-var}: 1;
+  
+  // --------------------------------------------
+  // Cursor
+  // --------------------------------------------
+  #{$button-cursor-var}: pointer;
+  #{$button-disabled-cursor-var}: not-allowed;
+
+  // --------------------------------------------
+  // Box Shadow
+  // --------------------------------------------
+  #{$button-box-shadow-var}: none;
+  #{$button-hover-box-shadow-var}: none;
+  #{$button-active-box-shadow-var}: none;
+  #{$button-focus-box-shadow-var}: none;
+  #{$button-disabled-box-shadow-var}: none;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$button-transition-var}: 0.3s;
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$button-font-size-var}: inherit;
+  #{$button-padding-var}: 0.5em 1em;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$button-class-name} {
+  background-color: var(#{$button-bg-color-var});
+  color: var(#{$button-color-var});
+  border: var(#{$button-border-width-var}) solid
+    var(#{$button-border-color-var});
+  opacity: var(#{$button-opacity-var});
+  cursor: var(#{$button-cursor-var});
+  box-shadow: var(#{$button-box-shadow-var});
+  transition: var(#{$button-transition-var});
+  font-size: var(#{$button-font-size-var});
+  padding: var(#{$button-padding-var});
+  border-radius: var(#{$button-border-radius-var});
+
+  &:hover {
+    background-color: var(#{$button-hover-bg-color-var});
+    color: var(#{$button-hover-color-var});
+    border-color: var(#{$button-hover-border-color-var});
+    opacity: var(#{$button-hover-opacity-var});
+    box-shadow: var(#{$button-hover-box-shadow-var});
+  }
+  &:active {
+    background-color: var(#{$button-active-bg-color-var});
+    color: var(#{$button-active-color-var});
+    border-color: var(#{$button-active-border-color-var});
+    opacity: var(#{$button-active-opacity-var});
+    box-shadow: var(#{$button-active-box-shadow-var});
+  }
+  &:disabled {
+    background-color: var(#{$button-disabled-bg-color-var});
+    color: var(#{$button-disabled-color-var});
+    border-color: var(#{$button-disabled-border-color-var});
+    opacity: var(#{$button-disabled-opacity-var});
+    cursor: var(#{$button-disabled-cursor-var});
+    box-shadow: var(#{$button-disabled-box-shadow-var});
+  }
+  &:focus-visible {
+    background-color: var(#{$button-focus-bg-color-var});
+    color: var(#{$button-focus-color-var});
+    border-color: var(#{$button-focus-border-color-var});
+    opacity: var(#{$button-focus-opacity-var});
+    box-shadow: var(#{$button-focus-box-shadow-var});
+  }
+}
+
+// ============================================
+// Variants
+// ============================================
+.#{$button-class-name}, #{$button-class-name}.filled {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$button-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-darker-var});
+  #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
+  #{$button-disabled-bg-color-var}: var(#{semantics.$neutral-light-var});
+
+  // --------------------------------------------
+  // Text Colors
+  // --------------------------------------------
+  #{$button-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-dark-accent-var});
+  #{$button-active-color-var}: var(#{palette.$palette-darker-accent-var});
+  #{$button-focus-color-var}: var(#{$button-hover-color-var});
+  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$button-border-color-var}: transparent;
+  #{$button-hover-border-color-var}: transparent;
+  #{$button-active-border-color-var}: transparent;
+  #{$button-focus-border-color-var}: transparent;
+  #{$button-disabled-border-color-var}: transparent;
+  #{$button-border-radius-var}: 0.25rem;
+  #{$button-border-width-var}: 0px;
+
+  // --------------------------------------------
+  // Box Shadow
+  // --------------------------------------------
+  #{$button-box-shadow-var}: none;
+  #{$button-hover-box-shadow-var}: none;
+  #{$button-active-box-shadow-var}: none;
+  #{$button-focus-box-shadow-var}: none;
+  #{$button-disabled-box-shadow-var}: none;
+}
+
+#{$button-class-name}.tonal {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$button-bg-color-var}: var(#{palette.$palette-lighter-var});
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-light-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
+  #{$button-disabled-bg-color-var}: var(#{semantics.$neutral-lighter-var});
+
+  // --------------------------------------------
+  // Text Colors
+  // --------------------------------------------
+  #{$button-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-active-color-var}: var(#{palette.$palette-darker-var});
+  #{$button-focus-color-var}: var(#{$button-hover-color-var});
+  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$button-border-color-var}: transparent;
+  #{$button-hover-border-color-var}: transparent;
+  #{$button-active-border-color-var}: transparent;
+  #{$button-focus-border-color-var}: transparent;
+  #{$button-disabled-border-color-var}: transparent;
+  #{$button-border-radius-var}: 0.25rem;
+  #{$button-border-width-var}: 0px;
+
+  // --------------------------------------------
+  // Box Shadow
+  // --------------------------------------------
+  #{$button-box-shadow-var}: none;
+  #{$button-hover-box-shadow-var}: none;
+  #{$button-active-box-shadow-var}: none;
+  #{$button-focus-box-shadow-var}: none;
+  #{$button-disabled-box-shadow-var}: none;
+}
+
+#{$button-class-name}.outlined {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$button-bg-color-var}: transparent;
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-light-var});
+  #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
+  #{$button-disabled-bg-color-var}: transparent;
+
+  // --------------------------------------------
+  // Text Colors
+  // --------------------------------------------
+  #{$button-color-var}: var(#{palette.$palette-default-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-active-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-focus-color-var}: var(#{$button-hover-color-var});
+  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$button-border-color-var}: var(#{palette.$palette-default-var});
+  #{$button-hover-border-color-var}: var(#{palette.$palette-default-var});
+  #{$button-active-border-color-var}: var(#{palette.$palette-default-var});
+  #{$button-focus-border-color-var}: var(#{palette.$palette-default-var});
+  #{$button-disabled-border-color-var}: var(#{semantics.$neutral-default-var});
+  #{$button-border-radius-var}: 0.25rem;
+  #{$button-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Box Shadow
+  // --------------------------------------------
+  #{$button-box-shadow-var}: none;
+  #{$button-hover-box-shadow-var}: none;
+  #{$button-active-box-shadow-var}: none;
+  #{$button-focus-box-shadow-var}: none;
+  #{$button-disabled-box-shadow-var}: none;
+}
+
+#{$button-class-name}.text {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$button-bg-color-var}: transparent;
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-light-var});
+  #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
+  #{$button-disabled-bg-color-var}: transparent;
+
+  // --------------------------------------------
+  // Text Colors
+  // --------------------------------------------
+  #{$button-color-var}: var(#{palette.$palette-default-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-active-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-focus-color-var}: var(#{$button-hover-color-var});
+  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$button-border-color-var}: transparent;
+  #{$button-hover-border-color-var}: transparent;
+  #{$button-active-border-color-var}: transparent;
+  #{$button-focus-border-color-var}: transparent;
+  #{$button-disabled-border-color-var}: transparent;
+  #{$button-border-radius-var}: 0.25rem;
+  #{$button-border-width-var}: 0px;
+
+  // --------------------------------------------
+  // Box Shadow
+  // --------------------------------------------
+  #{$button-box-shadow-var}: none;
+  #{$button-hover-box-shadow-var}: none;
+  #{$button-active-box-shadow-var}: none;
+  #{$button-focus-box-shadow-var}: none;
+  #{$button-disabled-box-shadow-var}: none;
+}
+
+// ============================================
+// Sizes
+// ============================================
+.#{$button-class-name}.sm {
+  #{$button-font-size-var}: 0.75rem;
+  #{$button-padding-var}: 0.25em 0.5em;
+}
+
+.#{$button-class-name}, .#{$button-class-name}.md {
+  #{$button-font-size-var}: 1rem;
+  #{$button-padding-var}: 0.5em 1em;
+}
+
+.#{$button-class-name}.lg {
+  #{$button-font-size-var}: 1.25rem;
+  #{$button-padding-var}: 0.75em 1.5em;
+}

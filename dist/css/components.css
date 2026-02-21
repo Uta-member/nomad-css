@@ -1,0 +1,80 @@
+.button {
+  ---button-bg-color: transparent;
+  ---button-color: black;
+  ---button-border-color: transparent;
+  ---button-hover-bg-color: transparent;
+  ---button-hover-color: black;
+  ---button-hover-border-color: transparent;
+  ---button-active-bg-color: transparent;
+  ---button-active-color: black;
+  ---button-active-border-color: transparent;
+  ---button-disabled-bg-color: transparent;
+  ---button-disabled-color: black;
+  ---button-disabled-border-color: transparent;
+  ---button-focus-bg-color: transparent;
+  ---button-focus-color: black;
+  ---button-focus-border-color: transparent;
+  ---button-opacity: 1;
+  ---button-hover-opacity: 1;
+  ---button-active-opacity: 1;
+  ---button-disabled-opacity: 0.5;
+  ---button-focus-opacity: 1;
+  ---button-cursor: pointer;
+  ---button-box-shadow: none;
+  ---button-hover-box-shadow: none;
+  ---button-active-box-shadow: none;
+  ---button-disabled-box-shadow: none;
+  ---button-focus-box-shadow: none;
+  ---button-transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s, opacity 0.3s, transform 0.3s;
+  ---button-font-size: inherit;
+  ---button-padding: 0.5em 1em;
+  ---button-border-width: 1px;
+  ---button-border-radius: 4px;
+  ---button-width: auto;
+  ---button-height: auto;
+  ---button-disabled-cursor: not-allowed;
+}
+
+.button {
+  background-color: var(---button-bg-color);
+  color: var(---button-color);
+  border: var(---button-border-width) solid var(---button-border-color);
+  opacity: var(---button-opacity);
+  cursor: var(---button-cursor);
+  box-shadow: var(---button-box-shadow);
+  transition: var(---button-transition);
+  font-size: var(---button-font-size);
+  padding: var(---button-padding);
+  border-radius: var(---button-border-radius);
+  width: var(---button-width);
+  height: var(---button-height);
+}
+.button:hover {
+  background-color: var(---button-hover-bg-color);
+  color: var(---button-hover-color);
+  border-color: var(---button-hover-border-color);
+  opacity: var(---button-hover-opacity);
+  box-shadow: var(---button-hover-box-shadow);
+}
+.button:active {
+  background-color: var(---button-active-bg-color);
+  color: var(---button-active-color);
+  border-color: var(---button-active-border-color);
+  opacity: var(---button-active-opacity);
+  box-shadow: var(---button-active-box-shadow);
+}
+.button:disabled {
+  background-color: var(---button-disabled-bg-color);
+  color: var(---button-disabled-color);
+  border-color: var(---button-disabled-border-color);
+  opacity: var(---button-disabled-opacity);
+  cursor: var(---button-disabled-cursor);
+  box-shadow: var(---button-disabled-box-shadow);
+}
+.button:focus {
+  background-color: var(---button-focus-bg-color);
+  color: var(---button-focus-color);
+  border-color: var(---button-focus-border-color);
+  opacity: var(---button-focus-opacity);
+  box-shadow: var(---button-focus-box-shadow);
+}/*# sourceMappingURL=components.css.map */

@@ -1,4 +1,9 @@
-@use "../../utilities/palette" as palette;
+@use "sass:map";
+@use "./hue-colors" as hue-colors;
+@use "./semantics" as semantics;
+@use "../../utilities/palette" as palette with (
+  $palettes: map.merge(hue-colors.$hues, semantics.$semantic-colors)
+);
 
 // ============================================
 // Palette Prefix
@@ -17,17 +22,17 @@ $palette-dark-accent-var: --#{palette.$palette-accent-prefix}dark;
 $palette-darker-accent-var: --#{palette.$palette-accent-prefix}darker;
 
 // ============================================
-// Neutral Palette Variant Names (theme-local)
-// These live in the theme layer only so props layer remains unchanged.
+// Overridable Variants
 // ============================================
-$neutral-lighter-var: --neutral-lighter;
-$neutral-light-var: --neutral-light;
-$neutral-default-var: --neutral-default;
-$neutral-dark-var: --neutral-dark;
-$neutral-darker-var: --neutral-darker;
+$default-palette: semantics.$semantic-primary !default;
 
-$neutral-lighter-accent-var: --neutral-accent-lighter;
-$neutral-light-accent-var: --neutral-accent-light;
-$neutral-default-accent-var: --neutral-accent-default;
-$neutral-dark-accent-var: --neutral-accent-dark;
-$neutral-darker-accent-var: --neutral-accent-darker;
+// ============================================
+// Process
+// ============================================
+:root {
+  @include palette.generate-palette($default-palette);
+}
+
+:root {
+  @include palette.generate-palette(semantics.$semantic-neutral);
+}
