@@ -4789,6 +4789,13 @@ button.text {
   --button-padding: 0.75em 1.5em;
 }
 
+:root {
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-body-size: 16px;
+  font-family: var(--font-family);
+  font-size: var(--font-body-size);
+}
+
 :root[data-theme=material3] {
   --palette-hue: 260;
   --palette-saturation: 70%;
@@ -4804,10 +4811,25 @@ button.text {
   --palette-darker: var(--palette-color-8);
 }
 
+:root[data-theme=material3] {
+  --font-body-size: 16px;
+}
+
 :root[data-theme=material3] .button {
+  --button-border-width: 1px;
   --button-border-radius: 10rem;
 }
 :root[data-theme=material3] .button.filled {
   --button-hover-bg-color: var(--palette-light);
   --button-active-bg-color: var(--palette-lighter);
+  --button-border-color: var(--button-bg-color);
+  --button-hover-border-color: var(--button-hover-bg-color);
+  --button-active-border-color: var(--button-active-bg-color);
+  --button-focus-border-color: var(--button-focus-bg-color);
+}
+:root[data-theme=material3] .button.tonal {
+  --button-border-color: var(--button-bg-color);
+  --button-hover-border-color: var(--button-hover-bg-color);
+  --button-active-border-color: var(--button-active-bg-color);
+  --button-focus-border-color: var(--button-focus-bg-color);
 }/*# sourceMappingURL=material3.css.map */

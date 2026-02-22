@@ -1,0 +1,19 @@
+// ============================================
+// Variants
+// ============================================
+$font-family-var: --font-family;
+$font-body-size-var: --font-body-size;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variants
+// ============================================
+:root {
+  #{$font-family-var}: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  #{$font-body-size-var}: 16px;
+
+  font-family: var(#{$font-family-var});
+  font-size: var(#{$font-body-size-var});
+}

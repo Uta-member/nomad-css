@@ -1,0 +1,5 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  --font-body-size: 16px;
+}

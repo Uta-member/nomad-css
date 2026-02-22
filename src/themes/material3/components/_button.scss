@@ -2,11 +2,23 @@
 
 :root[data-theme="#{prefixes.$theme-name}"] {
   .button {
+    --button-border-width: 1px;
     --button-border-radius: 10rem;
 
     &.filled {
       --button-hover-bg-color: var(--palette-light);
       --button-active-bg-color: var(--palette-lighter);
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
+    }
+
+    &.tonal {
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
     }
   }
 }
