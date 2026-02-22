@@ -4803,6 +4803,7 @@ button.text {
   --palette-dark: var(--palette-color-7);
   --palette-darker: var(--palette-color-8);
 }
+
 :root[data-theme=material3] .button {
   --button-border-radius: 10rem;
 }

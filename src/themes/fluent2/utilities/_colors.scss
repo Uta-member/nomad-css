@@ -1,0 +1,7 @@
+@use "./prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .secondary {
+      --palette-saturation: 0%;
+    }
+}

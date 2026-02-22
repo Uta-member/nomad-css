@@ -4792,6 +4792,7 @@ button.text {
 :root[data-theme=fluent2] .secondary {
   --palette-saturation: 0%;
 }
+
 :root[data-theme=fluent2] .button {
   --button-border-width: 1px;
 }

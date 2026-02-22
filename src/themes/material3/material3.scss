@@ -1,26 +1,4 @@
 @use "../../nomad-css-ui/nomad-css-ui.scss";
-
-:root[data-theme="material3"] {
-  --palette-hue: 260;
-  --palette-saturation: 70%;
-  --palette-default: var(--palette-color-5);
-  
-  .primary {
-    --palette-hue: 260;
-    --palette-saturation: 70%;
-    --palette-default: var(--palette-color-5);
-    --palette-light: var(--palette-color-4);
-    --palette-lighter: var(--palette-color-3);
-    --palette-dark: var(--palette-color-7);
-    --palette-darker: var(--palette-color-8);
-  }
-
-  .button {
-    --button-border-radius: 10rem;
-
-    &.filled {
-      --button-hover-bg-color: var(--palette-light);
-      --button-active-bg-color: var(--palette-lighter);
-    }
-  }
-}
+@use "./utilities/prefixes" as prefixes;
+@use "./utilities/colors" as colors;
+@use "./components/components" as components;

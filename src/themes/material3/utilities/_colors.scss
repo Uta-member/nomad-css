@@ -1,0 +1,17 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  --palette-hue: 260;
+  --palette-saturation: 70%;
+  --palette-default: var(--palette-color-5);
+  
+  .primary {
+    --palette-hue: 260;
+    --palette-saturation: 70%;
+    --palette-default: var(--palette-color-5);
+    --palette-light: var(--palette-color-4);
+    --palette-lighter: var(--palette-color-3);
+    --palette-dark: var(--palette-color-7);
+    --palette-darker: var(--palette-color-8);
+  }
+}

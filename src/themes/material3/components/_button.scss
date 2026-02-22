@@ -1,0 +1,12 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 10rem;
+
+    &.filled {
+      --button-hover-bg-color: var(--palette-light);
+      --button-active-bg-color: var(--palette-lighter);
+    }
+  }
+}
