@@ -294,10 +294,21 @@
               ><input type="checkbox" checked disabled /> Checked
               Disabled</label
             >
+            <label
+              ><input
+                type="checkbox"
+                id="not-styled-disabled-indeterminate"
+                disabled
+              />
+              Indeterminate Disabled</label
+            >
           </div>
           <script>
             document.getElementById("not-styled-indeterminate").indeterminate =
               true;
+            document.getElementById(
+              "not-styled-disabled-indeterminate"
+            ).indeterminate = true;
           </script>
         </div>
         <div class="demo-row">
@@ -325,10 +336,22 @@
               ><input type="checkbox" class="checkbox" checked disabled />
               Checked Disabled</label
             >
+            <label class="form-check"
+              ><input
+                type="checkbox"
+                class="checkbox"
+                id="styled-disabled-indeterminate"
+                disabled
+              />
+              Indeterminate Disabled</label
+            >
           </div>
           <script>
             document.getElementById("styled-indeterminate").indeterminate =
               true;
+            document.getElementById(
+              "styled-disabled-indeterminate"
+            ).indeterminate = true;
           </script>
         </div>
 
@@ -363,6 +386,25 @@
             <label
               ><input type="checkbox" class="checkbox info" checked />
               Info</label
+            >
+          </div>
+        </div>
+
+        <!-- Checkbox Sizes -->
+        <div class="demo-row">
+          <div class="demo-label">Checkbox Sizes</div>
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+            <label
+              ><input type="checkbox" class="checkbox sm" checked />
+              Small</label
+            >
+            <label
+              ><input type="checkbox" class="checkbox md" checked />
+              Medium</label
+            >
+            <label
+              ><input type="checkbox" class="checkbox lg" checked />
+              Large</label
             >
           </div>
         </div>
