@@ -5050,6 +5050,14 @@ button.text {
   background-color: var(--radio-disabled-mark-color);
 }
 
+.range {
+  --rangeaccent-color: var(--palette-default);
+}
+
+.range {
+  accent-color: var(--rangeaccent-color);
+}
+
 :root {
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-body-size: 16px;
