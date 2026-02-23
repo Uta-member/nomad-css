@@ -5058,6 +5058,27 @@ button.text {
   accent-color: var(--rangeaccent-color);
 }
 
+.progress {
+  --progressaccent-color: var(--palette-default);
+  --progresssm-size: 0.75rem;
+  --progressmd-size: 1rem;
+  --progresslg-size: 1.5rem;
+}
+
+.progress {
+  accent-color: var(--progressaccent-color);
+  height: var(--progressmd-size);
+}
+.progress.sm {
+  height: var(--progresssm-size);
+}
+.progress.md {
+  height: var(--progressmd-size);
+}
+.progress.lg {
+  height: var(--progresslg-size);
+}
+
 :root {
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-body-size: 16px;
@@ -5067,6 +5088,29 @@ button.text {
 
 :root[data-theme=fluent2] .secondary {
   --palette-saturation: 0%;
+}
+
+:root[data-theme=fluent2],
+:root[data-theme=fluent2][data-color-scheme=light] {
+  --text-color: #1f1f1f;
+  --text-color-light: #3f3f3f;
+  --text-color-dark: #000000;
+  --surface-color: #f0f0f0;
+  --surface-color-light: #f5f5f5;
+  --surface-color-lighter: #ffffff;
+  --surface-color-dark: #e5e5e5;
+  --surface-color-darker: #d9d9d9;
+}
+
+:root[data-theme=fluent2][data-color-scheme=dark] {
+  --text-color: #f0f0f0;
+  --text-color-light: #f5f5f5;
+  --text-color-dark: #e5e5e5;
+  --surface-color: #0d0d0d;
+  --surface-color-light: #1a1a1a;
+  --surface-color-lighter: #262626;
+  --surface-color-dark: #0a0a0a;
+  --surface-color-darker: #050505;
 }
 
 :root[data-theme=fluent2] {

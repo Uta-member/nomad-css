@@ -1,1 +1,8 @@
 @use "../../nomad-css-ui/nomad-css-ui.scss";
+
+body {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-body-size);
+}

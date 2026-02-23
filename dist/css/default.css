@@ -5058,9 +5058,37 @@ button.text {
   accent-color: var(--rangeaccent-color);
 }
 
+.progress {
+  --progressaccent-color: var(--palette-default);
+  --progresssm-size: 0.75rem;
+  --progressmd-size: 1rem;
+  --progresslg-size: 1.5rem;
+}
+
+.progress {
+  accent-color: var(--progressaccent-color);
+  height: var(--progressmd-size);
+}
+.progress.sm {
+  height: var(--progresssm-size);
+}
+.progress.md {
+  height: var(--progressmd-size);
+}
+.progress.lg {
+  height: var(--progresslg-size);
+}
+
 :root {
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-body-size: 16px;
+  font-family: var(--font-family);
+  font-size: var(--font-body-size);
+}
+
+body {
+  background-color: var(--surface-color);
+  color: var(--text-color);
   font-family: var(--font-family);
   font-size: var(--font-body-size);
 }/*# sourceMappingURL=default.css.map */

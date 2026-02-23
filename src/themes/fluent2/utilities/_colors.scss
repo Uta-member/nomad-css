@@ -2,6 +2,31 @@
 
 :root[data-theme="#{prefixes.$theme-name}"] {
   .secondary {
-      --palette-saturation: 0%;
-    }
+    --palette-saturation: 0%;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"],
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
+  --text-color: #1f1f1f;
+  --text-color-light: #3f3f3f;
+  --text-color-dark: #000000;
+
+  --surface-color: #f0f0f0;
+  --surface-color-light: #f5f5f5;
+  --surface-color-lighter: #ffffff;
+  --surface-color-dark: #e5e5e5;
+  --surface-color-darker: #d9d9d9;
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  --text-color: #f0f0f0;
+  --text-color-light: #f5f5f5;
+  --text-color-dark: #e5e5e5;
+
+  --surface-color: #0d0d0d;
+  --surface-color-light: #1a1a1a;
+  --surface-color-lighter: #262626;
+  --surface-color-dark: #0a0a0a;
+  --surface-color-darker: #050505;
 }

@@ -1,0 +1,70 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$progress-prefix: #{prefixes.$prefix}progress;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$progress-class-name: progress;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Accent Colors
+// --------------------------------------------
+$progress-accent-color-var: --#{$progress-prefix}accent-color;
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$progress-sm-size-var: --#{$progress-prefix}sm-size;
+$progress-md-size-var: --#{$progress-prefix}md-size;
+$progress-lg-size-var: --#{$progress-prefix}lg-size;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$progress-class-name} {
+  // --------------------------------------------
+  // Accent Colors
+  // --------------------------------------------
+  #{$progress-accent-color-var}: var(#{palette.$palette-default-var});
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$progress-sm-size-var}: 0.75rem;
+  #{$progress-md-size-var}: 1rem;
+  #{$progress-lg-size-var}: 1.5rem;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$progress-class-name} {
+  accent-color: var(#{$progress-accent-color-var});
+  height: var(#{$progress-md-size-var});
+
+  &.sm {
+    height: var(#{$progress-sm-size-var});
+  }
+  &.md {
+    height: var(#{$progress-md-size-var});
+  }
+  &.lg {
+    height: var(#{$progress-lg-size-var});
+  }
+}
