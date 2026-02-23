@@ -29,25 +29,22 @@
       }
       .demo-box {
         padding: 1rem;
-        background: #f5f5f5;
+        background: var(--surface-color-light);
         margin-bottom: 0.5rem;
       }
       nav {
         position: sticky;
         top: 0;
-        background: white;
+        background: var(--surface-color-lighter);
         padding: 1rem;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid var(--border-color);
         z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
       nav a {
         margin-right: 1rem;
-      }
-      .theme-switcher {
-        margin-bottom: 1rem;
-        padding: 1rem;
-        background: #f0f0f0;
-        border-radius: 8px;
       }
       main {
         max-width: 1200px;
@@ -56,19 +53,19 @@
       }
     </style>
   </head>
-  <body>
+  <body style="background-color: var(--surface-color)">
     <nav>
-      <strong>nomad-css</strong> |
-      <a href="#typography">Typography</a>
-      <a href="#buttons">Buttons</a>
-      <a href="#form-controls">Form Controls</a>
-      <a href="#tables">Tables</a>
-      <a href="#layout">Layout</a>
-      <a href="#borders">Borders</a>
-      <a href="#colors">Colors</a>
-    </nav>
+      <div>
+        <strong>nomad-css</strong> |
+        <a href="#typography">Typography</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#form-controls">Form Controls</a>
+        <a href="#tables">Tables</a>
+        <a href="#layout">Layout</a>
+        <a href="#borders">Borders</a>
+        <a href="#colors">Colors</a>
+      </div>
 
-    <main>
       <!-- Theme Switcher -->
       <div class="theme-switcher">
         <strong>Theme:</strong>
@@ -92,7 +89,8 @@
           Material 3</label
         >
       </div>
-
+    </nav>
+    <main>
       <!-- ============================================ -->
       <!-- Typography -->
       <!-- ============================================ -->
@@ -275,17 +273,15 @@
         <div class="demo-row">
           <div class="demo-label">Checkbox (NotStyled)</div>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <label>
-              <input type="checkbox" /> Unchecked</label
-            >
-            <label><input type="checkbox" checked /> Checked</label
-            >
-            <label><input type="checkbox" id="not-styled-indeterminate" />
+            <label> <input type="checkbox" /> Unchecked</label>
+            <label><input type="checkbox" checked /> Checked</label>
+            <label
+              ><input type="checkbox" id="not-styled-indeterminate" />
               Indeterminate</label
             >
-            <label><input type="checkbox" disabled /> Disabled</label
-            >
-            <label><input type="checkbox" checked disabled /> Checked
+            <label><input type="checkbox" disabled /> Disabled</label>
+            <label
+              ><input type="checkbox" checked disabled /> Checked
               Disabled</label
             >
           </div>
@@ -330,25 +326,32 @@
         <div class="demo-row">
           <div class="demo-label">Checkbox Semantic Colors</div>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <label><input type="checkbox" class="checkbox primary" checked />
+            <label
+              ><input type="checkbox" class="checkbox primary" checked />
               Primary</label
             >
-            <label><input type="checkbox" class="checkbox secondary" checked />
+            <label
+              ><input type="checkbox" class="checkbox secondary" checked />
               Secondary</label
             >
-            <label><input type="checkbox" class="checkbox tertiary" checked />
+            <label
+              ><input type="checkbox" class="checkbox tertiary" checked />
               Tertiary</label
             >
-            <label><input type="checkbox" class="checkbox success" checked />
+            <label
+              ><input type="checkbox" class="checkbox success" checked />
               Success</label
             >
-            <label><input type="checkbox" class="checkbox warning" checked />
+            <label
+              ><input type="checkbox" class="checkbox warning" checked />
               Warning</label
             >
-            <label><input type="checkbox" class="checkbox danger" checked />
+            <label
+              ><input type="checkbox" class="checkbox danger" checked />
               Danger</label
             >
-            <label><input type="checkbox" class="checkbox info" checked />
+            <label
+              ><input type="checkbox" class="checkbox info" checked />
               Info</label
             >
           </div>
@@ -358,13 +361,18 @@
         <div class="demo-row">
           <div class="demo-label">Radio (NotStyled)</div>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <label><input type="radio" name="not-styled-radio" /> Option 1</label
+            <label
+              ><input type="radio" name="not-styled-radio" /> Option 1</label
             >
-            <label><input type="radio" name="not-styled-radio" checked /> Option
+            <label
+              ><input type="radio" name="not-styled-radio" checked /> Option
               2</label
             >
-            <label><input type="radio" name="not-styled-radio" /> Option 3</label>
-            <label><input type="radio" name="not-styled-radio-disabled" disabled />
+            <label
+              ><input type="radio" name="not-styled-radio" /> Option 3</label
+            >
+            <label
+              ><input type="radio" name="not-styled-radio-disabled" disabled />
               Disabled</label
             >
           </div>
@@ -373,16 +381,20 @@
         <div class="demo-row">
           <div class="demo-label">Radio (.radio)</div>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <label><input type="radio" class="radio" name="styled-radio" /> Option
+            <label
+              ><input type="radio" class="radio" name="styled-radio" /> Option
               1</label
             >
-            <label><input type="radio" class="radio" name="styled-radio" checked />
+            <label
+              ><input type="radio" class="radio" name="styled-radio" checked />
               Option 2</label
             >
-            <label><input type="radio" class="radio" name="styled-radio" /> Option
+            <label
+              ><input type="radio" class="radio" name="styled-radio" /> Option
               3</label
             >
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio"
                 name="styled-radio-disabled"
@@ -397,7 +409,8 @@
         <div class="demo-row">
           <div class="demo-label">Radio Semantic Colors</div>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio primary"
                 name="radio-color-primary"
@@ -405,7 +418,8 @@
               />
               Primary</label
             >
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio secondary"
                 name="radio-color-secondary"
@@ -413,7 +427,8 @@
               />
               Secondary</label
             >
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio tertiary"
                 name="radio-color-tertiary"
@@ -421,7 +436,8 @@
               />
               Tertiary</label
             >
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio success"
                 name="radio-color-success"
@@ -429,7 +445,8 @@
               />
               Success</label
             >
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio warning"
                 name="radio-color-warning"
@@ -437,7 +454,8 @@
               />
               Warning</label
             >
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio danger"
                 name="radio-color-danger"
@@ -445,7 +463,8 @@
               />
               Danger</label
             >
-            <label><input
+            <label
+              ><input
                 type="radio"
                 class="radio info"
                 name="radio-color-info"
