@@ -1,0 +1,78 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$table-prefix: #{prefixes.$prefix}table;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$table-class-name: table !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Borders
+// --------------------------------------------
+$table-border-color-var: --#{$table-prefix}border-color;
+$table-border-width-var: --#{$table-prefix}border-width;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$table-class-name} {
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$table-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$table-border-width-var}: 1px;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$table-class-name} {
+  border-collapse: collapse;
+  border-color: var(#{$table-border-color-var});
+  border-width: 0px;
+  border-style: solid;
+
+  & .cell {
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(#{$table-border-color-var});
+  }
+
+  &>:not(caption)>*>* {
+    padding: 0.5em;
+  }
+}
+
+// ============================================
+// BorderStyle
+// ============================================
+.#{$table-class-name} {
+  &.row-bordered {
+    & .cell {
+      border-top-width: var(#{$table-border-width-var});
+      border-bottom-width: var(#{$table-border-width-var});
+    }
+  }
+  &.column-bordered {
+    & .cell {
+      border-left-width: var(#{$table-border-width-var});
+      border-right-width: var(#{$table-border-width-var});
+    }
+  }
+}

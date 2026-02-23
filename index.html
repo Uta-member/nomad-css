@@ -14,6 +14,9 @@
         border: 1px solid #ddd;
         border-radius: 8px;
         background-color: var(--surface-color-lighter);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
       }
       .demo-section > h2 {
         margin-top: 0;
@@ -26,7 +29,7 @@
       .demo-label {
         font-size: 0.875rem;
         color: #666;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
       }
       .demo-box {
         padding: 1rem;
@@ -1270,10 +1273,10 @@ Disabled textarea</textarea
       <section id="tables" class="demo-section">
         <h2>Tables</h2>
 
-        <!-- Basic Table -->
+        <!-- NotStyled -->
         <div class="demo-row">
-          <div class="demo-label">Basic Table (.table)</div>
-          <table class="table">
+          <div class="demo-label">Table (NotStyled)</div>
+          <table>
             <thead>
               <tr>
                 <th>#</th>
@@ -1305,253 +1308,144 @@ Disabled textarea</textarea
           </table>
         </div>
 
-        <!-- Striped Table -->
+        <!-- Table -->
         <div class="demo-row">
-          <div class="demo-label">Striped Table (.table.table-striped)</div>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>john@example.com</td>
-                <td>Admin</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>jane@example.com</td>
-                <td>User</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Bob Wilson</td>
-                <td>bob@example.com</td>
-                <td>Editor</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Alice Brown</td>
-                <td>alice@example.com</td>
-                <td>User</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Bordered Table -->
-        <div class="demo-row">
-          <div class="demo-label">Bordered Table (.table.table-bordered)</div>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>john@example.com</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>jane@example.com</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Hover Table -->
-        <div class="demo-row">
-          <div class="demo-label">Hover Table (.table.table-hover)</div>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>john@example.com</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>jane@example.com</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Bob Wilson</td>
-                <td>bob@example.com</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Small Table -->
-        <div class="demo-row">
-          <div class="demo-label">Small Table (.table.table-sm)</div>
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>john@example.com</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>jane@example.com</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Color Variants -->
-        <div class="demo-row">
-          <div class="demo-label">Table Color Variants</div>
-          <table class="table table-primary">
-            <tr>
-              <td>.table-primary</td>
-              <td>Primary colored table</td>
-            </tr>
-          </table>
-          <table class="table table-secondary">
-            <tr>
-              <td>.table-secondary</td>
-              <td>Secondary colored table</td>
-            </tr>
-          </table>
-          <table class="table table-success">
-            <tr>
-              <td>.table-success</td>
-              <td>Success colored table</td>
-            </tr>
-          </table>
-          <table class="table table-warning">
-            <tr>
-              <td>.table-warning</td>
-              <td>Warning colored table</td>
-            </tr>
-          </table>
-          <table class="table table-danger">
-            <tr>
-              <td>.table-danger</td>
-              <td>Danger colored table</td>
-            </tr>
-          </table>
-          <table class="table table-info">
-            <tr>
-              <td>.table-info</td>
-              <td>Info colored table</td>
-            </tr>
-          </table>
-          <table class="table table-light">
-            <tr>
-              <td>.table-light</td>
-              <td>Light colored table</td>
-            </tr>
-          </table>
-          <table class="table table-dark">
-            <tr>
-              <td>.table-dark</td>
-              <td>Dark colored table</td>
-            </tr>
-          </table>
-        </div>
-
-        <!-- Row Color Variants -->
-        <div class="demo-row">
-          <div class="demo-label">Row Color Variants</div>
+          <div class="demo-label">Table (.table)</div>
           <table class="table">
             <thead>
               <tr>
-                <th>Class</th>
-                <th>Description</th>
+                <th class="cell">#</th>
+                <th class="cell">Name</th>
+                <th class="cell">Email</th>
+                <th class="cell">Role</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="table-primary">
-                <td>.table-primary</td>
-                <td>Primary row</td>
+              <tr>
+                <td class="cell">1</td>
+                <td class="cell">John Doe</td>
+                <td class="cell">john@example.com</td>
+                <td class="cell">Admin</td>
               </tr>
-              <tr class="table-secondary">
-                <td>.table-secondary</td>
-                <td>Secondary row</td>
+              <tr>
+                <td class="cell">2</td>
+                <td class="cell">Jane Smith</td>
+                <td class="cell">jane@example.com</td>
+                <td class="cell">User</td>
               </tr>
-              <tr class="table-success">
-                <td>.table-success</td>
-                <td>Success row</td>
-              </tr>
-              <tr class="table-warning">
-                <td>.table-warning</td>
-                <td>Warning row</td>
-              </tr>
-              <tr class="table-danger">
-                <td>.table-danger</td>
-                <td>Danger row</td>
-              </tr>
-              <tr class="table-info">
-                <td>.table-info</td>
-                <td>Info row</td>
+              <tr>
+                <td class="cell">3</td>
+                <td class="cell">Bob Wilson</td>
+                <td class="cell">bob@example.com</td>
+                <td class="cell">Editor</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Responsive Table -->
+        <!-- Row Bordered Table -->
         <div class="demo-row">
-          <div class="demo-label">Responsive Table (.table-responsive)</div>
-          <div class="table-responsive">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Col 1</th>
-                  <th>Col 2</th>
-                  <th>Col 3</th>
-                  <th>Col 4</th>
-                  <th>Col 5</th>
-                  <th>Col 6</th>
-                  <th>Col 7</th>
-                  <th>Col 8</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Data</td>
-                  <td>Data</td>
-                  <td>Data</td>
-                  <td>Data</td>
-                  <td>Data</td>
-                  <td>Data</td>
-                  <td>Data</td>
-                  <td>Data</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div class="demo-label">Table (.table .row-bordered)</div>
+          <table class="table row-bordered">
+            <thead>
+              <tr>
+                <th class="cell">#</th>
+                <th class="cell">Name</th>
+                <th class="cell">Email</th>
+                <th class="cell">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell">1</td>
+                <td class="cell">John Doe</td>
+                <td class="cell">john@example.com</td>
+                <td class="cell">Admin</td>
+              </tr>
+              <tr>
+                <td class="cell">2</td>
+                <td class="cell">Jane Smith</td>
+                <td class="cell">jane@example.com</td>
+                <td class="cell">User</td>
+              </tr>
+              <tr>
+                <td class="cell">3</td>
+                <td class="cell">Bob Wilson</td>
+                <td class="cell">bob@example.com</td>
+                <td class="cell">Editor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Column Bordered Table -->
+        <div class="demo-row">
+          <div class="demo-label">Table (.table .column-bordered)</div>
+          <table class="table column-bordered">
+            <thead>
+              <tr>
+                <th class="cell">#</th>
+                <th class="cell">Name</th>
+                <th class="cell">Email</th>
+                <th class="cell">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell">1</td>
+                <td class="cell">John Doe</td>
+                <td class="cell">john@example.com</td>
+                <td class="cell">Admin</td>
+              </tr>
+              <tr>
+                <td class="cell">2</td>
+                <td class="cell">Jane Smith</td>
+                <td class="cell">jane@example.com</td>
+                <td class="cell">User</td>
+              </tr>
+              <tr>
+                <td class="cell">3</td>
+                <td class="cell">Bob Wilson</td>
+                <td class="cell">bob@example.com</td>
+                <td class="cell">Editor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- All Bordered Table -->
+        <div class="demo-row">
+          <div class="demo-label">Table (.table .row-bordered .column-bordered)</div>
+          <table class="table row-bordered column-bordered">
+            <thead>
+              <tr>
+                <th class="cell">#</th>
+                <th class="cell">Name</th>
+                <th class="cell">Email</th>
+                <th class="cell">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell">1</td>
+                <td class="cell">John Doe</td>
+                <td class="cell">john@example.com</td>
+                <td class="cell">Admin</td>
+              </tr>
+              <tr>
+                <td class="cell">2</td>
+                <td class="cell">Jane Smith</td>
+                <td class="cell">jane@example.com</td>
+                <td class="cell">User</td>
+              </tr>
+              <tr>
+                <td class="cell">3</td>
+                <td class="cell">Bob Wilson</td>
+                <td class="cell">bob@example.com</td>
+                <td class="cell">Editor</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

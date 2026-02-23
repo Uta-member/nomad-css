@@ -5645,6 +5645,35 @@ h6,
   box-shadow: 0 -1px 0 0 var(--select-focus-ring-color) inset;
 }
 
+.table {
+  --tableborder-color: var(--border-color);
+  --tableborder-width: 1px;
+}
+
+.table {
+  border-collapse: collapse;
+  border-color: var(--tableborder-color);
+  border-width: 0px;
+  border-style: solid;
+}
+.table .cell {
+  border-width: 0px;
+  border-style: solid;
+  border-color: var(--tableborder-color);
+}
+.table > :not(caption) > * > * {
+  padding: 0.5em;
+}
+
+.table.row-bordered .cell {
+  border-top-width: var(--tableborder-width);
+  border-bottom-width: var(--tableborder-width);
+}
+.table.column-bordered .cell {
+  border-left-width: var(--tableborder-width);
+  border-right-width: var(--tableborder-width);
+}
+
 :root {
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-body-size: 16px;
