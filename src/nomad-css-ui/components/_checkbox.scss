@@ -20,7 +20,7 @@ $check-box-class-name: checkbox;
 // Variants
 // --------------------------------------------
 // --------------------------------------------
-// Backgrouns Colors
+// Background Colors
 // --------------------------------------------
 $check-box-bg-color-var: --#{$check-box-prefix}bg-color;
 $check-box-hover-bg-color-var: --#{$check-box-prefix}hover-bg-color;
@@ -86,7 +86,7 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
 // ============================================
 .#{$check-box-class-name} {
   // --------------------------------------------
-  // Backgrouns Colors
+  // Background Colors
   // --------------------------------------------
   #{$check-box-bg-color-var}: transparent;
   #{$check-box-hover-bg-color-var}: var(#{color-defines.$surface-color-var});

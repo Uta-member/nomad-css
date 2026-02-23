@@ -1,0 +1,326 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$select-prefix: #{prefixes.$prefix}select-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$select-class-name: select;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Background Colors
+// --------------------------------------------
+$select-filled-bg-color-var: --#{$select-prefix}filled-bg-color;
+$select-filled-hover-bg-color-var: --#{$select-prefix}filled-hover-bg-color;
+$select-filled-active-bg-color-var: --#{$select-prefix}filled-active-bg-color;
+$select-filled-focus-bg-color-var: --#{$select-prefix}filled-focus-bg-color;
+$select-filled-disabled-bg-color-var: --#{$select-prefix}filled-disabled-bg-color;
+
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$select-color-var: --#{$select-prefix}color;
+$select-hover-color-var: --#{$select-prefix}hover-color;
+$select-active-color-var: --#{$select-prefix}active-color;
+$select-focus-color-var: --#{$select-prefix}focus-color;
+$select-disabled-color-var: --#{$select-prefix}disabled-color;
+
+// --------------------------------------------
+// Placeholder Colors (for native placeholder usage if any)
+// --------------------------------------------
+$select-placeholder-color-var: --#{$select-prefix}placeholder-color;
+$select-placeholder-hover-color-var: --#{$select-prefix}placeholder-hover-color;
+$select-placeholder-active-color-var: --#{$select-prefix}placeholder-active-color;
+$select-placeholder-focus-color-var: --#{$select-prefix}placeholder-focus-color;
+$select-placeholder-disabled-color-var: --#{$select-prefix}placeholder-disabled-color;
+
+// --------------------------------------------
+// Borders
+// --------------------------------------------
+$select-border-top-width-var: --#{$select-prefix}border-top-width;
+$select-border-right-width-var: --#{$select-prefix}border-right-width;
+$select-border-bottom-width-var: --#{$select-prefix}border-bottom-width;
+$select-border-left-width-var: --#{$select-prefix}border-left-width;
+$select-border-radius-var: --#{$select-prefix}border-radius;
+$select-border-color-var: --#{$select-prefix}border-color;
+$select-hover-border-color-var: --#{$select-prefix}hover-border-color;
+$select-active-border-color-var: --#{$select-prefix}active-border-color;
+$select-focus-border-color-var: --#{$select-prefix}focus-border-color;
+$select-disabled-border-color-var: --#{$select-prefix}disabled-border-color;
+
+// --------------------------------------------
+// Focus Ring
+// --------------------------------------------
+$select-focus-ring-width-var: --#{$select-prefix}focus-ring-width;
+$select-focus-ring-color-var: --#{$select-prefix}focus-ring-color;
+$select-focus-ring-offset-width-var: --#{$select-prefix}focus-ring-offset-width;
+
+// --------------------------------------------
+// Opacity
+// --------------------------------------------
+$select-opacity-var: --#{$select-prefix}opacity;
+$select-disabled-opacity-var: --#{$select-prefix}disabled-opacity;
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$select-padding-var: --#{$select-prefix}padding;
+$select-font-size-var: --#{$select-prefix}font-size;
+$select-sm-padding-var: --#{$select-prefix}sm-padding;
+$select-sm-font-size-var: --#{$select-prefix}sm-font-size;
+$select-lg-padding-var: --#{$select-prefix}lg-padding;
+$select-lg-font-size-var: --#{$select-prefix}lg-font-size;
+
+// --------------------------------------------
+// Cursor
+// --------------------------------------------
+$select-cursor-var: --#{$select-prefix}cursor;
+$select-disabled-cursor-var: --#{$select-prefix}disabled-cursor;
+
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$select-transition-var: --#{$select-prefix}transition;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$select-class-name} {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$select-filled-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$select-filled-hover-bg-color-var}: var(
+    #{color-defines.$surface-color-darker-var}
+  );
+  #{$select-filled-active-bg-color-var}: var(#{$select-filled-bg-color-var});
+  #{$select-filled-focus-bg-color-var}: var(#{$select-filled-bg-color-var});
+  #{$select-filled-disabled-bg-color-var}: var(#{semantics.$neutral-light-var});
+
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$select-color-var}: var(#{color-defines.$text-color-var});
+  #{$select-hover-color-var}: var(#{color-defines.$text-color-var});
+  #{$select-active-color-var}: var(#{color-defines.$text-color-var});
+  #{$select-focus-color-var}: var(#{color-defines.$text-color-var});
+  #{$select-disabled-color-var}: var(#{semantics.$neutral-dark-var});
+
+  // --------------------------------------------
+  // Placeholder Colors
+  // --------------------------------------------
+  #{$select-placeholder-color-var}: var(#{semantics.$neutral-default-var});
+  #{$select-placeholder-hover-color-var}: var(#{$select-placeholder-color-var});
+  #{$select-placeholder-active-color-var}: var(
+    #{$select-placeholder-color-var}
+  );
+  #{$select-placeholder-focus-color-var}: var(#{$select-placeholder-color-var});
+  #{$select-placeholder-disabled-color-var}: var(
+    #{$select-placeholder-color-var}
+  );
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$select-border-top-width-var}: 1px;
+  #{$select-border-right-width-var}: 1px;
+  #{$select-border-bottom-width-var}: 1px;
+  #{$select-border-left-width-var}: 1px;
+  #{$select-border-radius-var}: 4px;
+  #{$select-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$select-hover-border-color-var}: var(
+    #{color-defines.$border-color-dark-var}
+  );
+  #{$select-active-border-color-var}: var(
+    #{color-defines.$border-color-dark-var}
+  );
+  #{$select-focus-border-color-var}: var(
+    #{color-defines.$border-color-dark-var}
+  );
+  #{$select-disabled-border-color-var}: var(#{semantics.$neutral-light-var});
+
+  // --------------------------------------------
+  // Focus Ring
+  // --------------------------------------------
+  #{$select-focus-ring-width-var}: 2px;
+  #{$select-focus-ring-color-var}: var(#{palette.$palette-default-var});
+
+  // --------------------------------------------
+  // Opacity
+  // --------------------------------------------
+  #{$select-opacity-var}: 1;
+  #{$select-disabled-opacity-var}: 1;
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$select-padding-var}: 0.5rem 0.75rem;
+  #{$select-font-size-var}: 1rem;
+  #{$select-sm-padding-var}: 0.25rem 0.5rem;
+  #{$select-sm-font-size-var}: 0.875rem;
+  #{$select-lg-padding-var}: 0.75rem 1rem;
+  #{$select-lg-font-size-var}: 1.125rem;
+
+  // --------------------------------------------
+  // Cursor
+  // --------------------------------------------
+  #{$select-cursor-var}: pointer;
+  #{$select-disabled-cursor-var}: not-allowed;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$select-transition-var}: 0.2s;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$select-class-name} {
+  background-color: transparent;
+
+  color: var(#{$select-color-var});
+
+  border-width: var(#{$select-border-top-width-var})
+    var(#{$select-border-right-width-var})
+    var(#{$select-border-bottom-width-var})
+    var(#{$select-border-left-width-var});
+  border-radius: var(#{$select-border-radius-var});
+  border-color: var(#{$select-border-color-var});
+  border-style: solid;
+
+  opacity: var(#{$select-opacity-var});
+
+  cursor: var(#{$select-cursor-var});
+  transition: var(#{$select-transition-var});
+  outline: none;
+
+  padding: var(#{$select-padding-var});
+  font-size: var(#{$select-font-size-var});
+
+  & option {
+    background-color: var(#{color-defines.$surface-color-lighter-var});
+    &:checked {
+      background-color: var(#{semantics.$neutral-default-var});
+      color: var(#{semantics.$neutral-default-accent-var});
+    }
+  }
+
+  & optgroup {
+    background-color: var(#{color-defines.$surface-color-var});
+  }
+
+  &.sm {
+    padding: var(#{$select-sm-padding-var});
+    font-size: var(#{$select-sm-font-size-var});
+  }
+  &.md {
+    padding: var(#{$select-padding-var});
+    font-size: var(#{$select-font-size-var});
+  }
+  &.lg {
+    padding: var(#{$select-lg-padding-var});
+    font-size: var(#{$select-lg-font-size-var});
+  }
+
+  &:hover {
+    color: var(#{$select-hover-color-var});
+    border-color: var(#{$select-hover-border-color-var});
+    &::placeholder {
+      color: var(#{$select-placeholder-hover-color-var});
+    }
+  }
+
+  &:active {
+    color: var(#{$select-active-color-var});
+    border-color: var(#{$select-active-border-color-var});
+    &::placeholder {
+      color: var(#{$select-placeholder-active-color-var});
+    }
+  }
+
+  &:focus-visible {
+    color: var(#{$select-focus-color-var});
+    border-color: var(#{$select-focus-border-color-var});
+    &::placeholder {
+      color: var(#{$select-placeholder-focus-color-var});
+    }
+  }
+
+  &:disabled {
+    color: var(#{$select-disabled-color-var});
+    border-color: var(#{$select-disabled-border-color-var});
+    opacity: var(#{$select-disabled-opacity-var});
+    cursor: var(#{$select-disabled-cursor-var});
+    &::placeholder {
+      color: var(#{$select-placeholder-disabled-color-var});
+    }
+  }
+
+  &::placeholder {
+    color: var(#{$select-placeholder-color-var});
+  }
+}
+
+// ============================================
+// Variables
+// ============================================
+.#{$select-class-name},
+.#{$select-class-name}.outlined {
+  &:focus-visible {
+    outline-offset: var(#{$select-focus-ring-offset-width-var});
+    outline-width: var(#{$select-focus-ring-width-var});
+    outline-color: var(#{$select-focus-ring-color-var});
+    outline-style: solid;
+  }
+}
+.#{$select-class-name}.filled {
+  background-color: var(#{$select-filled-bg-color-var});
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  #{$select-border-top-width-var}: 0;
+  #{$select-border-right-width-var}: 0;
+  #{$select-border-left-width-var}: 0;
+
+  &:hover {
+    background-color: var(#{$select-filled-hover-bg-color-var});
+  }
+  &:active {
+    background-color: var(#{$select-filled-active-bg-color-var});
+  }
+  &:focus-visible {
+    background-color: var(#{$select-filled-focus-bg-color-var});
+    outline: none;
+    box-shadow: 0 -1px 0 0 var(#{$select-focus-ring-color-var}) inset;
+  }
+  &:disabled {
+    background-color: var(#{$select-filled-disabled-bg-color-var});
+  }
+}
+.#{$select-class-name}.underline {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  #{$select-border-top-width-var}: 0;
+  #{$select-border-right-width-var}: 0;
+  #{$select-border-left-width-var}: 0;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 -1px 0 0 var(#{$select-focus-ring-color-var}) inset;
+  }
+}

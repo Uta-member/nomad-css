@@ -5271,6 +5271,175 @@ button.text {
   box-shadow: 0 -1px 0 0 var(--form-control-focus-ring-color) inset;
 }
 
+.select {
+  --select-filled-bg-color: var(--surface-color-dark);
+  --select-filled-hover-bg-color: var(--surface-color-darker);
+  --select-filled-active-bg-color: var(--select-filled-bg-color);
+  --select-filled-focus-bg-color: var(--select-filled-bg-color);
+  --select-filled-disabled-bg-color: var(--neutral-light);
+  --select-color: var(--text-color);
+  --select-hover-color: var(--text-color);
+  --select-active-color: var(--text-color);
+  --select-focus-color: var(--text-color);
+  --select-disabled-color: var(--neutral-dark);
+  --select-placeholder-color: var(--neutral-default);
+  --select-placeholder-hover-color: var(--select-placeholder-color);
+  --select-placeholder-active-color: var(--select-placeholder-color);
+  --select-placeholder-focus-color: var(--select-placeholder-color);
+  --select-placeholder-disabled-color: var(--select-placeholder-color);
+  --select-border-top-width: 1px;
+  --select-border-right-width: 1px;
+  --select-border-bottom-width: 1px;
+  --select-border-left-width: 1px;
+  --select-border-radius: 4px;
+  --select-border-color: var(--border-color);
+  --select-hover-border-color: var(--border-color-dark);
+  --select-active-border-color: var(--border-color-dark);
+  --select-focus-border-color: var(--border-color-dark);
+  --select-disabled-border-color: var(--neutral-light);
+  --select-focus-ring-width: 2px;
+  --select-focus-ring-color: var(--palette-default);
+  --select-opacity: 1;
+  --select-disabled-opacity: 1;
+  --select-padding: 0.5rem 0.75rem;
+  --select-font-size: 1rem;
+  --select-sm-padding: 0.25rem 0.5rem;
+  --select-sm-font-size: 0.875rem;
+  --select-lg-padding: 0.75rem 1rem;
+  --select-lg-font-size: 1.125rem;
+  --select-cursor: pointer;
+  --select-disabled-cursor: not-allowed;
+  --select-transition: 0.2s;
+}
+
+.select {
+  background-color: transparent;
+  color: var(--select-color);
+  border-width: var(--select-border-top-width) var(--select-border-right-width) var(--select-border-bottom-width) var(--select-border-left-width);
+  border-radius: var(--select-border-radius);
+  border-color: var(--select-border-color);
+  border-style: solid;
+  opacity: var(--select-opacity);
+  cursor: var(--select-cursor);
+  transition: var(--select-transition);
+  outline: none;
+  padding: var(--select-padding);
+  font-size: var(--select-font-size);
+}
+.select option {
+  background-color: var(--surface-color-lighter);
+}
+.select option:checked {
+  background-color: var(--neutral-default);
+  color: var(--neutral-accent-default);
+}
+.select optgroup {
+  background-color: var(--surface-color);
+}
+.select.sm {
+  padding: var(--select-sm-padding);
+  font-size: var(--select-sm-font-size);
+}
+.select.md {
+  padding: var(--select-padding);
+  font-size: var(--select-font-size);
+}
+.select.lg {
+  padding: var(--select-lg-padding);
+  font-size: var(--select-lg-font-size);
+}
+.select:hover {
+  color: var(--select-hover-color);
+  border-color: var(--select-hover-border-color);
+}
+.select:hover::-moz-placeholder {
+  color: var(--select-placeholder-hover-color);
+}
+.select:hover::placeholder {
+  color: var(--select-placeholder-hover-color);
+}
+.select:active {
+  color: var(--select-active-color);
+  border-color: var(--select-active-border-color);
+}
+.select:active::-moz-placeholder {
+  color: var(--select-placeholder-active-color);
+}
+.select:active::placeholder {
+  color: var(--select-placeholder-active-color);
+}
+.select:focus-visible {
+  color: var(--select-focus-color);
+  border-color: var(--select-focus-border-color);
+}
+.select:focus-visible::-moz-placeholder {
+  color: var(--select-placeholder-focus-color);
+}
+.select:focus-visible::placeholder {
+  color: var(--select-placeholder-focus-color);
+}
+.select:disabled {
+  color: var(--select-disabled-color);
+  border-color: var(--select-disabled-border-color);
+  opacity: var(--select-disabled-opacity);
+  cursor: var(--select-disabled-cursor);
+}
+.select:disabled::-moz-placeholder {
+  color: var(--select-placeholder-disabled-color);
+}
+.select:disabled::placeholder {
+  color: var(--select-placeholder-disabled-color);
+}
+.select::-moz-placeholder {
+  color: var(--select-placeholder-color);
+}
+.select::placeholder {
+  color: var(--select-placeholder-color);
+}
+
+.select:focus-visible,
+.select.outlined:focus-visible {
+  outline-offset: var(--select-focus-ring-offset-width);
+  outline-width: var(--select-focus-ring-width);
+  outline-color: var(--select-focus-ring-color);
+  outline-style: solid;
+}
+
+.select.filled {
+  background-color: var(--select-filled-bg-color);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  --select-border-top-width: 0;
+  --select-border-right-width: 0;
+  --select-border-left-width: 0;
+}
+.select.filled:hover {
+  background-color: var(--select-filled-hover-bg-color);
+}
+.select.filled:active {
+  background-color: var(--select-filled-active-bg-color);
+}
+.select.filled:focus-visible {
+  background-color: var(--select-filled-focus-bg-color);
+  outline: none;
+  box-shadow: 0 -1px 0 0 var(--select-focus-ring-color) inset;
+}
+.select.filled:disabled {
+  background-color: var(--select-filled-disabled-bg-color);
+}
+
+.select.underline {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  --select-border-top-width: 0;
+  --select-border-right-width: 0;
+  --select-border-left-width: 0;
+}
+.select.underline:focus-visible {
+  outline: none;
+  box-shadow: 0 -1px 0 0 var(--select-focus-ring-color) inset;
+}
+
 :root {
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-body-size: 16px;
