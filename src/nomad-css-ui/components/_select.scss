@@ -185,7 +185,9 @@ $select-transition-var: --#{$select-prefix}transition;
   // --------------------------------------------
   // Transition
   // --------------------------------------------
-  #{$select-transition-var}: 0.2s;
+  #{$select-transition-var}:
+    0.2s,
+    outline 0.05s;
 }
 
 // ============================================

@@ -78,6 +78,11 @@ $default-indeterminate-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://
 $check-box-cursor-var: --#{$check-box-prefix}cursor;
 $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
 
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$check-box-transition-var: --#{$check-box-prefix}transition;
+
 // ============================================
 // Process
 // ============================================
@@ -163,6 +168,11 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
   // --------------------------------------------
   #{$check-box-cursor-var}: pointer;
   #{$check-box-disabled-cursor-var}: not-allowed;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$check-box-transition-var}: 0.2s;
 }
 
 // ============================================
@@ -182,6 +192,8 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
   border-style: solid;
 
   opacity: var(#{$check-box-opacity-var});
+
+  transition: var(#{$check-box-transition-var});
 
   width: var(#{$check-box-size-var});
   height: var(#{$check-box-size-var});

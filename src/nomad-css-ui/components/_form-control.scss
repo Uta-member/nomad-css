@@ -219,7 +219,9 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   // --------------------------------------------
   // Transition
   // --------------------------------------------
-  #{$form-control-transition-var}: 0.2s;
+  #{$form-control-transition-var}:
+    0.2s,
+    outline 0.05s;
 }
 
 // ============================================

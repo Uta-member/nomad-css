@@ -75,6 +75,11 @@ $radio-mark-size-var: --#{$radio-prefix}mark-size;
 $radio-cursor-var: --#{$radio-prefix}cursor;
 $radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor;
 
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$radio-transition-var: --#{$radio-prefix}transition;
+
 // ============================================
 // Process
 // ============================================
@@ -145,6 +150,11 @@ $radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor;
   // --------------------------------------------
   #{$radio-cursor-var}: pointer;
   #{$radio-disabled-cursor-var}: not-allowed;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$radio-transition-var}: 0.2s;
 }
 
 // ============================================
@@ -167,6 +177,8 @@ $radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor;
   border-style: solid;
 
   opacity: var(#{$radio-opacity-var});
+
+  transition: var(#{$radio-transition-var});
 
   width: var(#{$radio-size-var});
   height: var(#{$radio-size-var});

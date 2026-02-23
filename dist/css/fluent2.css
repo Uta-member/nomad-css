@@ -5020,6 +5020,7 @@ button.text {
   --checkbox-indeterminate-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline x1='5' y1='12' x2='19' y2='12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
   --checkbox-cursor: pointer;
   --checkbox-disabled-cursor: not-allowed;
+  --checkbox-transition: 0.2s;
 }
 
 .checkbox {
@@ -5033,6 +5034,7 @@ button.text {
   border-radius: var(--checkbox-border-radius);
   border-style: solid;
   opacity: var(--checkbox-opacity);
+  transition: var(--checkbox-transition);
   width: var(--checkbox-size);
   height: var(--checkbox-size);
 }
@@ -5151,6 +5153,7 @@ button.text {
   --radio-mark-size: 50%;
   --radio-cursor: pointer;
   --radio-disabled-cursor: not-allowed;
+  --radio-transition: 0.2s;
 }
 
 .radio {
@@ -5167,6 +5170,7 @@ button.text {
   border-radius: var(--radio-border-radius);
   border-style: solid;
   opacity: var(--radio-opacity);
+  transition: var(--radio-transition);
   width: var(--radio-size);
   height: var(--radio-size);
 }
@@ -5318,7 +5322,7 @@ button.text {
   --form-control-cursor: text;
   --form-control-disabled-cursor: not-allowed;
   --form-control-readonly-cursor: not-allowed;
-  --form-control-transition: 0.2s;
+  --form-control-transition: 0.2s, outline 0.05s;
 }
 
 .form-control {
@@ -5504,7 +5508,7 @@ button.text {
   --select-lg-font-size: 1.125rem;
   --select-cursor: pointer;
   --select-disabled-cursor: not-allowed;
-  --select-transition: 0.2s;
+  --select-transition: 0.2s, outline 0.05s;
 }
 
 .select {
