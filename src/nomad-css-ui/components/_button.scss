@@ -230,7 +230,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
 // Variants
 // ============================================
 .#{$button-class-name},
-#{$button-class-name}.filled {
+.#{$button-class-name}.filled {
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
@@ -270,7 +270,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-disabled-box-shadow-var}: none;
 }
 
-#{$button-class-name}.tonal {
+.#{$button-class-name}.tonal {
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
@@ -310,7 +310,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-disabled-box-shadow-var}: none;
 }
 
-#{$button-class-name}.outlined {
+.#{$button-class-name}.outlined {
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
@@ -350,7 +350,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-disabled-box-shadow-var}: none;
 }
 
-#{$button-class-name}.text {
+.#{$button-class-name}.text {
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------

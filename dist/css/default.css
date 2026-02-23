@@ -4886,7 +4886,7 @@ h6,
 }
 
 .button,
-button.filled {
+.button.filled {
   --button-bg-color: var(--palette-default);
   --button-hover-bg-color: var(--palette-dark);
   --button-active-bg-color: var(--palette-darker);
@@ -4911,7 +4911,7 @@ button.filled {
   --button-disabled-box-shadow: none;
 }
 
-button.tonal {
+.button.tonal {
   --button-bg-color: var(--palette-lighter);
   --button-hover-bg-color: var(--palette-light);
   --button-active-bg-color: var(--palette-default);
@@ -4936,7 +4936,7 @@ button.tonal {
   --button-disabled-box-shadow: none;
 }
 
-button.outlined {
+.button.outlined {
   --button-bg-color: transparent;
   --button-hover-bg-color: var(--palette-lighter);
   --button-active-bg-color: var(--palette-light);
@@ -4961,7 +4961,7 @@ button.outlined {
   --button-disabled-box-shadow: none;
 }
 
-button.text {
+.button.text {
   --button-bg-color: transparent;
   --button-hover-bg-color: var(--palette-lighter);
   --button-active-bg-color: var(--palette-light);
