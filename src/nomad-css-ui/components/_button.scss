@@ -118,7 +118,7 @@ $button-padding-var: --#{$button-prefix}padding;
   #{$button-disabled-border-color-var}: transparent;
   #{$button-border-width-var}: 1px;
   #{$button-border-radius-var}: 0.25rem;
-  
+
   // --------------------------------------------
   // Opacity
   // --------------------------------------------
@@ -127,7 +127,7 @@ $button-padding-var: --#{$button-prefix}padding;
   #{$button-active-opacity-var}: 1;
   #{$button-focus-opacity-var}: 1;
   #{$button-disabled-opacity-var}: 1;
-  
+
   // --------------------------------------------
   // Cursor
   // --------------------------------------------
@@ -205,11 +205,11 @@ $button-padding-var: --#{$button-prefix}padding;
 // ============================================
 // Variants
 // ============================================
-.#{$button-class-name}, #{$button-class-name}.filled {
+.#{$button-class-name},
+#{$button-class-name}.filled {
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
-
   #{$button-bg-color-var}: var(#{palette.$palette-default-var});
   #{$button-hover-bg-color-var}: var(#{palette.$palette-dark-var});
   #{$button-active-bg-color-var}: var(#{palette.$palette-darker-var});
@@ -374,7 +374,8 @@ $button-padding-var: --#{$button-prefix}padding;
   #{$button-padding-var}: 0.35em 0.75em;
 }
 
-.#{$button-class-name}, .#{$button-class-name}.md {
+.#{$button-class-name},
+.#{$button-class-name}.md {
   #{$button-font-size-var}: 1rem;
   #{$button-padding-var}: 0.5em 1em;
 }
