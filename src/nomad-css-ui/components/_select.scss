@@ -217,10 +217,6 @@ $select-transition-var: --#{$select-prefix}transition;
 
   & option {
     background-color: var(#{color-defines.$surface-color-lighter-var});
-    &:checked {
-      background-color: var(#{semantics.$neutral-default-var});
-      color: var(#{semantics.$neutral-default-accent-var});
-    }
   }
 
   & optgroup {
@@ -281,8 +277,13 @@ $select-transition-var: --#{$select-prefix}transition;
   &[multiple] {
     padding: 0;
 
-    option {
+    & option {
       padding: var(#{$select-padding-var});
+    }
+
+    & option:checked {
+      background-color: var(#{palette.$palette-default-var});
+      color: var(#{palette.$palette-default-accent-var});
     }
   }
 }

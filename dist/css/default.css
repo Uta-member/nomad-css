@@ -5528,10 +5528,6 @@ button.text {
 .select option {
   background-color: var(--surface-color-lighter);
 }
-.select option:checked {
-  background-color: var(--neutral-default);
-  color: var(--neutral-accent-default);
-}
 .select optgroup {
   background-color: var(--surface-color);
 }
@@ -5600,6 +5596,10 @@ button.text {
 }
 .select[multiple] option {
   padding: var(--select-padding);
+}
+.select[multiple] option:checked {
+  background-color: var(--palette-default);
+  color: var(--palette-accent-default);
 }
 
 .select:focus-visible,
