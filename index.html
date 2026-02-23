@@ -52,6 +52,71 @@
         margin: 0 auto;
         padding: 1rem;
       }
+      .container-color-0 {
+        background-color: var(--palette-color-0);
+        color: var(--palette-accent-0);
+      }
+      .container-color-1 {
+        background-color: var(--palette-color-1);
+        color: var(--palette-accent-1);
+      }
+      .container-color-2 {
+        background-color: var(--palette-color-2);
+        color: var(--palette-accent-2);
+      }
+      .container-color-3 {
+        background-color: var(--palette-color-3);
+        color: var(--palette-accent-3);
+      }
+      .container-color-4 {
+        background-color: var(--palette-color-4);
+        color: var(--palette-accent-4);
+      }
+      .container-color-5 {
+        background-color: var(--palette-color-5);
+        color: var(--palette-accent-5);
+      }
+      .container-color-6 {
+        background-color: var(--palette-color-6);
+        color: var(--palette-accent-6);
+      }
+      .container-color-7 {
+        background-color: var(--palette-color-7);
+        color: var(--palette-accent-7);
+      }
+      .container-color-8 {
+        background-color: var(--palette-color-8);
+        color: var(--palette-accent-8);
+      }
+      .container-color-9 {
+        background-color: var(--palette-color-9);
+        color: var(--palette-accent-9);
+      }
+      .container-color-10 {
+        background-color: var(--palette-color-10);
+        color: var(--palette-accent-10);
+      }
+      .container-semantic-color {
+        background-color: var(--palette-default);
+        color: var(--palette-accent-default);
+
+        &.lighter {
+          background-color: var(--palette-lighter);
+          color: var(--palette-accent-lighter);
+        }
+        &.light {
+          background-color: var(--palette-light);
+          color: var(--palette-accent-light);
+        }
+        &.dark {
+          background-color: var(--palette-dark);
+          color: var(--palette-accent-dark);
+        }
+        &.darker {
+          background-color: var(--palette-darker);
+          color: var(--palette-accent-darker);
+        }
+      }
     </style>
   </head>
   <body>
@@ -1739,10 +1804,10 @@ Disabled textarea</textarea
         <h2>Semantic Colors</h2>
 
         <div class="demo-row">
-          <div class="demo-label">Color Palettes (0-10)</div>
+          <h4>Semantic Colors</h4>
           <div class="d-flex flex-wrap" style="gap: 20px">
             <div class="primary" style="width: 160px">
-              <h4>Primary</h4>
+              <div class="demo-label">Primary</div>
               <div class="container-color-0">0</div>
               <div class="container-color-1">1</div>
               <div class="container-color-2">2</div>
@@ -1756,7 +1821,7 @@ Disabled textarea</textarea
               <div class="container-color-10">10</div>
             </div>
             <div class="secondary" style="width: 160px">
-              <h4>Secondary</h4>
+              <div class="demo-label">Secondary</div>
               <div class="container-color-0">0</div>
               <div class="container-color-1">1</div>
               <div class="container-color-2">2</div>
@@ -1770,7 +1835,7 @@ Disabled textarea</textarea
               <div class="container-color-10">10</div>
             </div>
             <div class="success" style="width: 160px">
-              <h4>Success</h4>
+              <div class="demo-label">Success</div>
               <div class="container-color-0">0</div>
               <div class="container-color-1">1</div>
               <div class="container-color-2">2</div>
@@ -1784,7 +1849,7 @@ Disabled textarea</textarea
               <div class="container-color-10">10</div>
             </div>
             <div class="warning" style="width: 160px">
-              <h4>Warning</h4>
+              <div class="demo-label">Warning</div>
               <div class="container-color-0">0</div>
               <div class="container-color-1">1</div>
               <div class="container-color-2">2</div>
@@ -1798,7 +1863,7 @@ Disabled textarea</textarea
               <div class="container-color-10">10</div>
             </div>
             <div class="danger" style="width: 160px">
-              <h4>Danger</h4>
+              <div class="demo-label">Danger</div>
               <div class="container-color-0">0</div>
               <div class="container-color-1">1</div>
               <div class="container-color-2">2</div>
@@ -1812,7 +1877,7 @@ Disabled textarea</textarea
               <div class="container-color-10">10</div>
             </div>
             <div class="info" style="width: 160px">
-              <h4>Info</h4>
+              <div class="demo-label">Info</div>
               <div class="container-color-0">0</div>
               <div class="container-color-1">1</div>
               <div class="container-color-2">2</div>
@@ -1830,10 +1895,10 @@ Disabled textarea</textarea
 
         <!-- Semantic Levels -->
         <div class="demo-row">
-          <div class="demo-label">Semantic Levels</div>
+          <h5>Semantic Levels</h5>
           <div class="d-flex flex-wrap" style="gap: 20px">
             <div class="primary" style="width: 160px">
-              <h4>Primary</h4>
+              <div class="demo-label">Primary</div>
               <div class="container-semantic-color lighter">lighter</div>
               <div class="container-semantic-color light">light</div>
               <div class="container-semantic-color">default</div>
@@ -1841,7 +1906,7 @@ Disabled textarea</textarea
               <div class="container-semantic-color darker">darker</div>
             </div>
             <div class="secondary" style="width: 160px">
-              <h4>Secondary</h4>
+              <div class="demo-label">Secondary</div>
               <div class="container-semantic-color lighter">lighter</div>
               <div class="container-semantic-color light">light</div>
               <div class="container-semantic-color">default</div>
@@ -1849,7 +1914,7 @@ Disabled textarea</textarea
               <div class="container-semantic-color darker">darker</div>
             </div>
             <div class="success" style="width: 160px">
-              <h4>Success</h4>
+              <div class="demo-label">Success</div>
               <div class="container-semantic-color lighter">lighter</div>
               <div class="container-semantic-color light">light</div>
               <div class="container-semantic-color">default</div>
@@ -1857,7 +1922,7 @@ Disabled textarea</textarea
               <div class="container-semantic-color darker">darker</div>
             </div>
             <div class="warning" style="width: 160px">
-              <h4>Warning</h4>
+              <div class="demo-label">Warning</div>
               <div class="container-semantic-color lighter">lighter</div>
               <div class="container-semantic-color light">light</div>
               <div class="container-semantic-color">default</div>
@@ -1865,7 +1930,7 @@ Disabled textarea</textarea
               <div class="container-semantic-color darker">darker</div>
             </div>
             <div class="danger" style="width: 160px">
-              <h4>Danger</h4>
+              <div class="demo-label">Danger</div>
               <div class="container-semantic-color lighter">lighter</div>
               <div class="container-semantic-color light">light</div>
               <div class="container-semantic-color">default</div>
@@ -1873,7 +1938,7 @@ Disabled textarea</textarea
               <div class="container-semantic-color darker">darker</div>
             </div>
             <div class="info" style="width: 160px">
-              <h4>Info</h4>
+              <div class="demo-label">Info</div>
               <div class="container-semantic-color lighter">lighter</div>
               <div class="container-semantic-color light">light</div>
               <div class="container-semantic-color">default</div>
@@ -1885,86 +1950,184 @@ Disabled textarea</textarea
 
         <!-- Common HUE Colors -->
         <div class="demo-row">
-          <div class="demo-label">Common HUE Colors</div>
+          <h4>Common HUE Colors</h4>
           <div class="d-flex flex-wrap" style="gap: 20px">
             <div class="red" style="width: 100px">
-              <h5>Red</h5>
+              <div class="demo-label">Red</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="orange" style="width: 100px">
-              <h5>Orange</h5>
+              <div class="demo-label">Orange</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="yellow" style="width: 100px">
-              <h5>Yellow</h5>
+              <div class="demo-label">Yellow</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="green" style="width: 100px">
-              <h5>Green</h5>
+              <div class="demo-label">Green</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="teal" style="width: 100px">
-              <h5>Teal</h5>
+              <div class="demo-label">Teal</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="cyan" style="width: 100px">
-              <h5>Cyan</h5>
+              <div class="demo-label">Cyan</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="blue" style="width: 100px">
-              <h5>Blue</h5>
+              <div class="demo-label">Blue</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="indigo" style="width: 100px">
-              <h5>Indigo</h5>
+              <div class="demo-label">Indigo</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="purple" style="width: 100px">
-              <h5>Purple</h5>
+              <div class="demo-label">Purple</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
             <div class="pink" style="width: 100px">
-              <h5>Pink</h5>
+              <div class="demo-label">Pink</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
               <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
               <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
               <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
             </div>
           </div>
         </div>
 
-        <!-- Neutral -->
         <div class="demo-row">
-          <div class="demo-label">Neutral Palette</div>
-          <div class="neutral" style="width: 200px">
-            <div class="container-color-0">0</div>
-            <div class="container-color-1">1</div>
-            <div class="container-color-2">2</div>
-            <div class="container-color-3">3</div>
-            <div class="container-color-4">4</div>
-            <div class="container-color-5">5</div>
-            <div class="container-color-6">6</div>
-            <div class="container-color-7">7</div>
-            <div class="container-color-8">8</div>
-            <div class="container-color-9">9</div>
-            <div class="container-color-10">10</div>
+          <h4>Other Palettes</h4>
+          <div class="d-flex flex-wrap" style="gap: 20px">
+            <!-- Default Palette -->
+            <div style="width: 200px">
+              <div class="demo-label">Default Palette</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
+              <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
+              <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
+              <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
+            </div>
+            <!-- Neutral Palette -->
+            <div class="neutral" style="width: 200px">
+              <div class="demo-label">Neutral Palette</div>
+              <div class="container-color-0">0</div>
+              <div class="container-color-1">1</div>
+              <div class="container-color-2">2</div>
+              <div class="container-color-3">3</div>
+              <div class="container-color-4">4</div>
+              <div class="container-color-5">5</div>
+              <div class="container-color-6">6</div>
+              <div class="container-color-7">7</div>
+              <div class="container-color-8">8</div>
+              <div class="container-color-9">9</div>
+              <div class="container-color-10">10</div>
+            </div>
           </div>
         </div>
       </section>
