@@ -58,8 +58,8 @@ $check-box-disabled-opacity-var: --#{$check-box-prefix}disabled-opacity;
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
+$check-box-size-var: --#{$check-box-prefix}size;
 $check-box-sm-size-var: --#{$check-box-prefix}sm-size;
-$check-box-md-size-var: --#{$check-box-prefix}md-size;
 $check-box-lg-size-var: --#{$check-box-prefix}lg-size;
 
 // --------------------------------------------
@@ -144,8 +144,8 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
   // --------------------------------------------
   // Sizes
   // --------------------------------------------
+  #{$check-box-size-var}: 1rem;
   #{$check-box-sm-size-var}: 0.75rem;
-  #{$check-box-md-size-var}: 1rem;
   #{$check-box-lg-size-var}: 1.5rem;
 
   // --------------------------------------------
@@ -183,16 +183,16 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
 
   opacity: var(#{$check-box-opacity-var});
 
-  width: var(#{$check-box-md-size-var});
-  height: var(#{$check-box-md-size-var});
+  width: var(#{$check-box-size-var});
+  height: var(#{$check-box-size-var});
 
   &.sm {
     width: var(#{$check-box-sm-size-var});
     height: var(#{$check-box-sm-size-var});
   }
   &.md {
-    width: var(#{$check-box-md-size-var});
-    height: var(#{$check-box-md-size-var});
+    width: var(#{$check-box-size-var});
+    height: var(#{$check-box-size-var});
   }
   &.lg {
     width: var(#{$check-box-lg-size-var});

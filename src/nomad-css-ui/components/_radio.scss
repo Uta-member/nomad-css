@@ -58,8 +58,8 @@ $radio-disabled-opacity-var: --#{$radio-prefix}disabled-opacity;
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
+$radio-size-var: --#{$radio-prefix}size;
 $radio-sm-size-var: --#{$radio-prefix}sm-size;
-$radio-md-size-var: --#{$radio-prefix}md-size;
 $radio-lg-size-var: --#{$radio-prefix}lg-size;
 
 // --------------------------------------------
@@ -129,8 +129,8 @@ $radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor;
   // --------------------------------------------
   // Sizes
   // --------------------------------------------
+  #{$radio-size-var}: 1rem;
   #{$radio-sm-size-var}: 0.75rem;
-  #{$radio-md-size-var}: 1rem;
   #{$radio-lg-size-var}: 1.5rem;
 
   // --------------------------------------------
@@ -168,16 +168,16 @@ $radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor;
 
   opacity: var(#{$radio-opacity-var});
 
-  width: var(#{$radio-md-size-var});
-  height: var(#{$radio-md-size-var});
+  width: var(#{$radio-size-var});
+  height: var(#{$radio-size-var});
 
   &.sm {
     width: var(#{$radio-sm-size-var});
     height: var(#{$radio-sm-size-var});
   }
   &.md {
-    width: var(#{$radio-md-size-var});
-    height: var(#{$radio-md-size-var});
+    width: var(#{$radio-size-var});
+    height: var(#{$radio-size-var});
   }
   &.lg {
     width: var(#{$radio-lg-size-var});

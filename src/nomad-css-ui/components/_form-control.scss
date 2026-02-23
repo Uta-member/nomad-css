@@ -1,0 +1,62 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$form-control-prefix: #{prefixes.$prefix}form-control-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$form-control-class-name: form-control;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Backgrouns Colors
+// --------------------------------------------
+$form-control-bg-color-var: --#{$form-control-prefix}bg-color;
+$form-control-hover-bg-color-var: --#{$form-control-prefix}hover-bg-color;
+$form-control-active-bg-color-var: --#{$form-control-prefix}active-bg-color;
+$form-control-focus-bg-color-var: --#{$form-control-prefix}focus-bg-color;
+$form-control-disabled-bg-color-var: --#{$form-control-prefix}disabled-bg-color;
+$form-control-readonly-bg-color-var: --#{$form-control-prefix}readonly-bg-color;
+
+// --------------------------------------------
+// Borders
+// --------------------------------------------
+$form-control-border-top-width-var: --#{$form-control-prefix}border-top-width;
+$form-control-border-right-width-var: --#{$form-control-prefix}border-right-width;
+$form-control-border-bottom-width-var: --#{$form-control-prefix}border-bottom-width;
+$form-control-border-left-width-var: --#{$form-control-prefix}border-left-width;
+$form-control-border-radius-var: --#{$form-control-prefix}border-radius;
+$form-control-border-color-var: --#{$form-control-prefix}border-color;
+$form-control-hover-border-color-var: --#{$form-control-prefix}hover-border-color;
+$form-control-active-border-color-var: --#{$form-control-prefix}active-border-color;
+$form-control-focus-border-color-var: --#{$form-control-prefix}focus-border-color;
+$form-control-disabled-border-color-var: --#{$form-control-prefix}disabled-border-color;
+$form-control-readonly-border-color-var: --#{$form-control-prefix}readonly-border-color;
+
+// --------------------------------------------
+// Opacity
+// --------------------------------------------
+$form-control-opacity-var: --#{$form-control-prefix}opacity;
+$form-control-disabled-opacity-var: --#{$form-control-prefix}disabled-opacity;
+$form-control-readonly-opacity-var: --#{$form-control-prefix}readonly-opacity;
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$form-control-padding-var: --#{$form-control-prefix}padding;
+$form-control-font-size-var: --#{$form-control-prefix}font-size;
+$form-control-sm-padding-var: --#{$form-control-prefix}sm-padding;
+$form-control-sm-font-size-var: --#{$form-control-prefix}sm-font-size;
+$form-control-lg-padding-var: --#{$form-control-prefix}lg-padding;
+$form-control-lg-font-size-var: --#{$form-control-prefix}lg-font-size;

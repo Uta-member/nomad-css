@@ -82,6 +82,10 @@ $button-transition-var: --#{$button-prefix}transition;
 // --------------------------------------------
 $button-font-size-var: --#{$button-prefix}font-size;
 $button-padding-var: --#{$button-prefix}padding;
+$button-sm-font-size-var: --#{$button-prefix}sm-font-size;
+$button-sm-padding-var: --#{$button-prefix}sm-padding;
+$button-lg-font-size-var: --#{$button-prefix}lg-font-size;
+$button-lg-padding-var: --#{$button-prefix}lg-padding;
 
 // ============================================
 // Process
@@ -153,6 +157,10 @@ $button-padding-var: --#{$button-prefix}padding;
   // --------------------------------------------
   #{$button-font-size-var}: inherit;
   #{$button-padding-var}: 0.5em 1em;
+  #{$button-sm-font-size-var}: 0.75rem;
+  #{$button-sm-padding-var}: 0.25em 0.5em;
+  #{$button-lg-font-size-var}: 1.5rem;
+  #{$button-lg-padding-var}: 0.75em 2em;
 }
 
 // ============================================
@@ -170,6 +178,22 @@ $button-padding-var: --#{$button-prefix}padding;
   font-size: var(#{$button-font-size-var});
   padding: var(#{$button-padding-var});
   border-radius: var(#{$button-border-radius-var});
+
+  // --------------------------------------------
+  // Sizes
+  // ---------------------------------------------
+  &.sm {
+    font-size: var(#{$button-sm-font-size-var});
+    padding: var(#{$button-sm-padding-var});
+  }
+  &.md {
+    font-size: var(#{$button-font-size-var});
+    padding: var(#{$button-padding-var});
+  }
+  &.lg {
+    font-size: var(#{$button-lg-font-size-var});
+    padding: var(#{$button-lg-padding-var});
+  }
 
   &:hover {
     background-color: var(#{$button-hover-bg-color-var});
@@ -364,23 +388,4 @@ $button-padding-var: --#{$button-prefix}padding;
   #{$button-active-box-shadow-var}: none;
   #{$button-focus-box-shadow-var}: none;
   #{$button-disabled-box-shadow-var}: none;
-}
-
-// ============================================
-// Sizes
-// ============================================
-.#{$button-class-name}.sm {
-  #{$button-font-size-var}: 0.75rem;
-  #{$button-padding-var}: 0.35em 0.75em;
-}
-
-.#{$button-class-name},
-.#{$button-class-name}.md {
-  #{$button-font-size-var}: 1rem;
-  #{$button-padding-var}: 0.5em 1em;
-}
-
-.#{$button-class-name}.lg {
-  #{$button-font-size-var}: 1.25rem;
-  #{$button-padding-var}: 0.75em 1.5em;
 }

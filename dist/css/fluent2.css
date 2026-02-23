@@ -4630,6 +4630,10 @@ h6,
   --button-transition: 0.3s;
   --button-font-size: inherit;
   --button-padding: 0.5em 1em;
+  --button-sm-font-size: 0.75rem;
+  --button-sm-padding: 0.25em 0.5em;
+  --button-lg-font-size: 1.5rem;
+  --button-lg-padding: 0.75em 2em;
 }
 
 .button {
@@ -4643,6 +4647,18 @@ h6,
   font-size: var(--button-font-size);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
+}
+.button.sm {
+  font-size: var(--button-sm-font-size);
+  padding: var(--button-sm-padding);
+}
+.button.md {
+  font-size: var(--button-font-size);
+  padding: var(--button-padding);
+}
+.button.lg {
+  font-size: var(--button-lg-font-size);
+  padding: var(--button-lg-padding);
 }
 .button:hover {
   background-color: var(--button-hover-bg-color);
@@ -4775,22 +4791,6 @@ button.text {
   --button-disabled-box-shadow: none;
 }
 
-.button.sm {
-  --button-font-size: 0.75rem;
-  --button-padding: 0.35em 0.75em;
-}
-
-.button,
-.button.md {
-  --button-font-size: 1rem;
-  --button-padding: 0.5em 1em;
-}
-
-.button.lg {
-  --button-font-size: 1.25rem;
-  --button-padding: 0.75em 1.5em;
-}
-
 .checkbox {
   --checkbox-bg-color: transparent;
   --checkbox-hover-bg-color: var(--surface-color);
@@ -4816,8 +4816,8 @@ button.text {
   --checkbox-checked-disabled-border-color: var(--neutral-light);
   --checkbox-opacity: 1;
   --checkbox-disabled-opacity: 1;
+  --checkbox-size: 1rem;
   --checkbox-sm-size: 0.75rem;
-  --checkbox-md-size: 1rem;
   --checkbox-lg-size: 1.5rem;
   --checkbox-mark-color: var(--palette-accent-default);
   --checkbox-disabled-mark-color: var(--surface-color-lighter);
@@ -4838,16 +4838,16 @@ button.text {
   border-radius: var(--checkbox-border-radius);
   border-style: solid;
   opacity: var(--checkbox-opacity);
-  width: var(--checkbox-md-size);
-  height: var(--checkbox-md-size);
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
 }
 .checkbox.sm {
   width: var(--checkbox-sm-size);
   height: var(--checkbox-sm-size);
 }
 .checkbox.md {
-  width: var(--checkbox-md-size);
-  height: var(--checkbox-md-size);
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
 }
 .checkbox.lg {
   width: var(--checkbox-lg-size);
@@ -4948,8 +4948,8 @@ button.text {
   --radio-checked-disabled-border-color: var(--neutral-light);
   --radio-opacity: 1;
   --radio-disabled-opacity: 1;
+  --radio-size: 1rem;
   --radio-sm-size: 0.75rem;
-  --radio-md-size: 1rem;
   --radio-lg-size: 1.5rem;
   --radio-mark-color: var(--palette-default);
   --radio-disabled-mark-color: var(--neutral-light);
@@ -4972,16 +4972,16 @@ button.text {
   border-radius: var(--radio-border-radius);
   border-style: solid;
   opacity: var(--radio-opacity);
-  width: var(--radio-md-size);
-  height: var(--radio-md-size);
+  width: var(--radio-size);
+  height: var(--radio-size);
 }
 .radio.sm {
   width: var(--radio-sm-size);
   height: var(--radio-sm-size);
 }
 .radio.md {
-  width: var(--radio-md-size);
-  height: var(--radio-md-size);
+  width: var(--radio-size);
+  height: var(--radio-size);
 }
 .radio.lg {
   width: var(--radio-lg-size);
