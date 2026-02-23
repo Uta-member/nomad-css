@@ -766,7 +766,7 @@
           </div>
         </div>
         <div class="demo-row">
-          <div class="demo-label">Input (.input)</div>
+          <div class="demo-label">Input (.form-control)</div>
           <div
             style="
               display: flex;
@@ -775,10 +775,22 @@
               max-width: 400px;
             "
           >
-            <input type="text" class="input" placeholder="Enter text" />
-            <input type="email" class="input" placeholder="Enter email" />
-            <input type="password" class="input" placeholder="Enter password" />
-            <input type="number" class="input" placeholder="Enter number" />
+            <input type="text" class="form-control" placeholder="Enter text" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter email"
+            />
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter password"
+            />
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter number"
+            />
           </div>
         </div>
 
@@ -793,9 +805,19 @@
               max-width: 400px;
             "
           >
-            <input type="text" class="input" value="Normal input" />
-            <input type="text" class="input" value="Disabled input" disabled />
-            <input type="text" class="input" value="Readonly input" readonly />
+            <input type="text" class="form-control" value="Normal input" />
+            <input
+              type="text"
+              class="form-control"
+              value="Disabled input"
+              disabled
+            />
+            <input
+              type="text"
+              class="form-control"
+              value="Readonly input"
+              readonly
+            />
           </div>
         </div>
 
@@ -810,9 +832,21 @@
               max-width: 400px;
             "
           >
-            <input type="text" class="input sm" placeholder="Small input" />
-            <input type="text" class="input md" placeholder="Default input" />
-            <input type="text" class="input lg" placeholder="Large input" />
+            <input
+              type="text"
+              class="form-control sm"
+              placeholder="Small input"
+            />
+            <input
+              type="text"
+              class="form-control md"
+              placeholder="Default input"
+            />
+            <input
+              type="text"
+              class="form-control lg"
+              placeholder="Large input"
+            />
           </div>
         </div>
 
@@ -827,15 +861,19 @@
               max-width: 400px;
             "
           >
-            <input type="text" class="input" placeholder="Default (outlined)" />
             <input
               type="text"
-              class="input filled"
+              class="form-control"
+              placeholder="Default (outlined)"
+            />
+            <input
+              type="text"
+              class="form-control filled"
               placeholder="Filled variant"
             />
             <input
               type="text"
-              class="input underline"
+              class="form-control underline"
               placeholder="Underline variant"
             />
           </div>
@@ -854,35 +892,109 @@
           >
             <input
               type="text"
-              class="input primary"
-              placeholder="Primary focus"
+              class="form-control primary"
+              placeholder="Primary outlined focus"
             />
             <input
               type="text"
-              class="input secondary"
-              placeholder="Secondary focus"
+              class="form-control primary filled"
+              placeholder="Primary filled focus"
             />
             <input
               type="text"
-              class="input tertiary"
-              placeholder="Tertiary focus"
+              class="form-control primary underline"
+              placeholder="Primary underline focus"
             />
             <input
               type="text"
-              class="input success"
-              placeholder="Success focus"
+              class="form-control secondary"
+              placeholder="Secondary outlined focus"
             />
             <input
               type="text"
-              class="input warning"
-              placeholder="Warning focus"
+              class="form-control secondary filled"
+              placeholder="Secondary filled focus"
             />
             <input
               type="text"
-              class="input danger"
-              placeholder="Danger focus"
+              class="form-control secondary underline"
+              placeholder="Secondary underline focus"
             />
-            <input type="text" class="input info" placeholder="Info focus" />
+            <input
+              type="text"
+              class="form-control tertiary"
+              placeholder="Tertiary outlined focus"
+            />
+            <input
+              type="text"
+              class="form-control tertiary filled"
+              placeholder="Tertiary filled focus"
+            />
+            <input
+              type="text"
+              class="form-control tertiary underline"
+              placeholder="Tertiary underline focus"
+            />
+            <input
+              type="text"
+              class="form-control success"
+              placeholder="Success outlined focus"
+            />
+            <input
+              type="text"
+              class="form-control success filled"
+              placeholder="Success filled focus"
+            />
+            <input
+              type="text"
+              class="form-control success underline"
+              placeholder="Success underline focus"
+            />
+            <input
+              type="text"
+              class="form-control warning"
+              placeholder="Warning outlined focus"
+            />
+            <input
+              type="text"
+              class="form-control warning filled"
+              placeholder="Warning filled focus"
+            />
+            <input
+              type="text"
+              class="form-control warning underline"
+              placeholder="Warning underline focus"
+            />
+            <input
+              type="text"
+              class="form-control danger"
+              placeholder="Danger outlined focus"
+            />
+            <input
+              type="text"
+              class="form-control danger filled"
+              placeholder="Danger filled focus"
+            />
+            <input
+              type="text"
+              class="form-control danger underline"
+              placeholder="Danger underline focus"
+            />
+            <input
+              type="text"
+              class="form-control info"
+              placeholder="Info outlined focus"
+            />
+            <input
+              type="text"
+              class="form-control info filled"
+              placeholder="Info filled focus"
+            />
+            <input
+              type="text"
+              class="form-control info underline"
+              placeholder="Info underline focus"
+            />
           </div>
         </div>
 
@@ -898,15 +1010,15 @@
             "
           >
             <textarea
-              class="input"
+              class="form-control"
               rows="3"
               placeholder="Enter multiple lines..."
             ></textarea>
-            <textarea class="input" rows="3" disabled>
+            <textarea class="form-control" rows="3" disabled>
 Disabled textarea</textarea
             >
             <textarea
-              class="input input-no-resize"
+              class="form-control form-control-no-resize"
               rows="3"
               placeholder="No resize"
             ></textarea>

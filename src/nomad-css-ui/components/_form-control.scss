@@ -22,12 +22,32 @@ $form-control-class-name: form-control;
 // --------------------------------------------
 // Backgrouns Colors
 // --------------------------------------------
-$form-control-bg-color-var: --#{$form-control-prefix}bg-color;
-$form-control-hover-bg-color-var: --#{$form-control-prefix}hover-bg-color;
-$form-control-active-bg-color-var: --#{$form-control-prefix}active-bg-color;
-$form-control-focus-bg-color-var: --#{$form-control-prefix}focus-bg-color;
-$form-control-disabled-bg-color-var: --#{$form-control-prefix}disabled-bg-color;
-$form-control-readonly-bg-color-var: --#{$form-control-prefix}readonly-bg-color;
+$form-control-filled-bg-color-var: --#{$form-control-prefix}filled-bg-color;
+$form-control-filled-hover-bg-color-var: --#{$form-control-prefix}filled-hover-bg-color;
+$form-control-filled-active-bg-color-var: --#{$form-control-prefix}filled-active-bg-color;
+$form-control-filled-focus-bg-color-var: --#{$form-control-prefix}filled-focus-bg-color;
+$form-control-filled-disabled-bg-color-var: --#{$form-control-prefix}filled-disabled-bg-color;
+$form-control-filled-readonly-bg-color-var: --#{$form-control-prefix}filled-readonly-bg-color;
+
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$form-control-color-var: --#{$form-control-prefix}color;
+$form-control-hover-color-var: --#{$form-control-prefix}hover-color;
+$form-control-active-color-var: --#{$form-control-prefix}active-color;
+$form-control-focus-color-var: --#{$form-control-prefix}focus-color;
+$form-control-disabled-color-var: --#{$form-control-prefix}disabled-color;
+$form-control-readonly-color-var: --#{$form-control-prefix}readonly-color;
+
+// --------------------------------------------
+// Placeholder Colors
+// --------------------------------------------
+$form-control-placeholder-color-var: --#{$form-control-prefix}placeholder-color;
+$form-control-placeholder-hover-color-var: --#{$form-control-prefix}placeholder-hover-color;
+$form-control-placeholder-active-color-var: --#{$form-control-prefix}placeholder-active-color;
+$form-control-placeholder-focus-color-var: --#{$form-control-prefix}placeholder-focus-color;
+$form-control-placeholder-disabled-color-var: --#{$form-control-prefix}placeholder-disabled-color;
+$form-control-placeholder-readonly-color-var: --#{$form-control-prefix}placeholder-readonly-color;
 
 // --------------------------------------------
 // Borders
@@ -45,6 +65,13 @@ $form-control-disabled-border-color-var: --#{$form-control-prefix}disabled-borde
 $form-control-readonly-border-color-var: --#{$form-control-prefix}readonly-border-color;
 
 // --------------------------------------------
+// Focus Ring
+// --------------------------------------------
+$form-control-focus-ring-width-var: --#{$form-control-prefix}focus-ring-width;
+$form-control-focus-ring-color-var: --#{$form-control-prefix}focus-ring-color;
+$form-control-focus-ring-offset-width-var: --#{$form-control-prefix}focus-ring-offset-width;
+
+// --------------------------------------------
 // Opacity
 // --------------------------------------------
 $form-control-opacity-var: --#{$form-control-prefix}opacity;
@@ -60,3 +87,275 @@ $form-control-sm-padding-var: --#{$form-control-prefix}sm-padding;
 $form-control-sm-font-size-var: --#{$form-control-prefix}sm-font-size;
 $form-control-lg-padding-var: --#{$form-control-prefix}lg-padding;
 $form-control-lg-font-size-var: --#{$form-control-prefix}lg-font-size;
+
+// --------------------------------------------
+// Cursor
+// --------------------------------------------
+$form-control-cursor-var: --#{$form-control-prefix}cursor;
+$form-control-disabled-cursor-var: --#{$form-control-prefix}disabled-cursor;
+$form-control-readonly-cursor-var: --#{$form-control-prefix}readonly-cursor;
+
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$form-control-transition-var: --#{$form-control-prefix}transition;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$form-control-class-name} {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$form-control-filled-bg-color-var}: var(
+    #{color-defines.$surface-color-dark-var}
+  );
+  #{$form-control-filled-hover-bg-color-var}: var(
+    #{color-defines.$surface-color-darker-var}
+  );
+  #{$form-control-filled-active-bg-color-var}: var(
+    #{$form-control-filled-bg-color-var}
+  );
+  #{$form-control-filled-focus-bg-color-var}: var(
+    #{$form-control-filled-bg-color-var}
+  );
+  #{$form-control-filled-disabled-bg-color-var}: var(
+    #{semantics.$neutral-light-var}
+  );
+  #{$form-control-filled-readonly-bg-color-var}: var(
+    #{$form-control-filled-bg-color-var}
+  );
+
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$form-control-color-var}: var(#{color-defines.$text-color-var});
+  #{$form-control-hover-color-var}: var(#{color-defines.$text-color-var});
+  #{$form-control-active-color-var}: var(#{color-defines.$text-color-var});
+  #{$form-control-focus-color-var}: var(#{color-defines.$text-color-var});
+  #{$form-control-disabled-color-var}: var(#{semantics.$neutral-dark-var});
+  #{$form-control-readonly-color-var}: var(#{$form-control-color-var});
+
+  // --------------------------------------------
+  // Placeholder Colors
+  // --------------------------------------------
+  #{$form-control-placeholder-color-var}: var(
+    #{semantics.$neutral-default-var}
+  );
+  #{$form-control-placeholder-hover-color-var}: var(
+    #{$form-control-placeholder-color-var}
+  );
+  #{$form-control-placeholder-active-color-var}: var(
+    #{$form-control-placeholder-color-var}
+  );
+  #{$form-control-placeholder-focus-color-var}: var(
+    #{$form-control-placeholder-color-var}
+  );
+  #{$form-control-placeholder-disabled-color-var}: var(
+    #{$form-control-placeholder-color-var}
+  );
+  #{$form-control-placeholder-readonly-color-var}: var(
+    #{$form-control-placeholder-color-var}
+  );
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$form-control-border-top-width-var}: 1px;
+  #{$form-control-border-right-width-var}: 1px;
+  #{$form-control-border-bottom-width-var}: 1px;
+  #{$form-control-border-left-width-var}: 1px;
+  #{$form-control-border-radius-var}: 4px;
+  #{$form-control-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$form-control-hover-border-color-var}: var(
+    #{color-defines.$border-color-dark-var}
+  );
+  #{$form-control-active-border-color-var}: var(
+    #{color-defines.$border-color-dark-var}
+  );
+  #{$form-control-focus-border-color-var}: var(
+    #{color-defines.$border-color-dark-var}
+  );
+  #{$form-control-disabled-border-color-var}: var(
+    #{semantics.$neutral-light-var}
+  );
+  #{$form-control-readonly-border-color-var}: var(
+    #{$form-control-border-color-var}
+  );
+
+  // --------------------------------------------
+  // Focus Ring
+  // --------------------------------------------
+  #{$form-control-focus-ring-width-var}: 2px;
+  #{$form-control-focus-ring-color-var}: var(#{palette.$palette-default-var});
+
+  // --------------------------------------------
+  // Opacity
+  // --------------------------------------------
+  #{$form-control-opacity-var}: 1;
+  #{$form-control-disabled-opacity-var}: 1;
+  #{$form-control-readonly-opacity-var}: 0.7;
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$form-control-padding-var}: 0.5rem 0.75rem;
+  #{$form-control-font-size-var}: 1rem;
+  #{$form-control-sm-padding-var}: 0.25rem 0.5rem;
+  #{$form-control-sm-font-size-var}: 0.875rem;
+  #{$form-control-lg-padding-var}: 0.75rem 1rem;
+  #{$form-control-lg-font-size-var}: 1.125rem;
+
+  // --------------------------------------------
+  // Cursor
+  // --------------------------------------------
+  #{$form-control-cursor-var}: text;
+  #{$form-control-disabled-cursor-var}: not-allowed;
+  #{$form-control-readonly-cursor-var}: not-allowed;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$form-control-transition-var}: 0.2s;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$form-control-class-name} {
+  background-color: transparent;
+
+  color: var(#{$form-control-color-var});
+
+  border-width: var(#{$form-control-border-top-width-var})
+    var(#{$form-control-border-right-width-var})
+    var(#{$form-control-border-bottom-width-var})
+    var(#{$form-control-border-left-width-var});
+  border-radius: var(#{$form-control-border-radius-var});
+  border-color: var(#{$form-control-border-color-var});
+  border-style: solid;
+
+  opacity: var(#{$form-control-opacity-var});
+
+  cursor: var(#{$form-control-cursor-var});
+  transition: var(#{$form-control-transition-var});
+  outline: none;
+
+  padding: var(#{$form-control-padding-var});
+  font-size: var(#{$form-control-font-size-var});
+
+  &.sm {
+    padding: var(#{$form-control-sm-padding-var});
+    font-size: var(#{$form-control-sm-font-size-var});
+  }
+  &.md {
+    padding: var(#{$form-control-padding-var});
+    font-size: var(#{$form-control-font-size-var});
+  }
+  &.lg {
+    padding: var(#{$form-control-lg-padding-var});
+    font-size: var(#{$form-control-lg-font-size-var});
+  }
+
+  &:hover {
+    color: var(#{$form-control-hover-color-var});
+    border-color: var(#{$form-control-hover-border-color-var});
+    &::placeholder {
+      color: var(#{$form-control-placeholder-hover-color-var});
+    }
+  }
+
+  &:active {
+    color: var(#{$form-control-active-color-var});
+    border-color: var(#{$form-control-active-border-color-var});
+    &::placeholder {
+      color: var(#{$form-control-placeholder-active-color-var});
+    }
+  }
+
+  &:focus-visible {
+    color: var(#{$form-control-focus-color-var});
+    border-color: var(#{$form-control-focus-border-color-var});
+    &::placeholder {
+      color: var(#{$form-control-placeholder-focus-color-var});
+    }
+  }
+
+  &:disabled {
+    color: var(#{$form-control-disabled-color-var});
+    border-color: var(#{$form-control-disabled-border-color-var});
+    opacity: var(#{$form-control-disabled-opacity-var});
+    cursor: var(#{$form-control-disabled-cursor-var});
+    &::placeholder {
+      color: var(#{$form-control-placeholder-disabled-color-var});
+    }
+  }
+
+  &:read-only {
+    color: var(#{$form-control-readonly-color-var});
+    border-color: var(#{$form-control-readonly-border-color-var});
+    opacity: var(#{$form-control-readonly-opacity-var});
+    cursor: var(#{$form-control-readonly-cursor-var});
+    &::placeholder {
+      color: var(#{$form-control-placeholder-readonly-color-var});
+    }
+  }
+
+  &::placeholder {
+    color: var(#{$form-control-placeholder-color-var});
+  }
+}
+
+// ============================================
+// Variables
+// ============================================
+.#{$form-control-class-name},
+.#{$form-control-class-name}.outlined {
+  &:focus-visible {
+    outline-offset: var(#{$form-control-focus-ring-offset-width-var});
+    outline-width: var(#{$form-control-focus-ring-width-var});
+    outline-color: var(#{$form-control-focus-ring-color-var});
+    outline-style: solid;
+  }
+}
+.#{$form-control-class-name}.filled {
+  background-color: var(#{$form-control-filled-bg-color-var});
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  #{$form-control-border-top-width-var}: 0;
+  #{$form-control-border-right-width-var}: 0;
+  #{$form-control-border-left-width-var}: 0;
+
+  &:hover {
+    background-color: var(#{$form-control-filled-hover-bg-color-var});
+  }
+  &:active {
+    background-color: var(#{$form-control-filled-active-bg-color-var});
+  }
+  &:focus-visible {
+    background-color: var(#{$form-control-filled-focus-bg-color-var});
+    outline: none;
+    box-shadow: 0 -1px 0 0 var(#{$form-control-focus-ring-color-var}) inset;
+  }
+  &:disabled {
+    background-color: var(#{$form-control-filled-disabled-bg-color-var});
+  }
+  &:read-only {
+    background-color: var(#{$form-control-filled-readonly-bg-color-var});
+  }
+}
+.#{$form-control-class-name}.underline {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  #{$form-control-border-top-width-var}: 0;
+  #{$form-control-border-right-width-var}: 0;
+  #{$form-control-border-left-width-var}: 0;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 -1px 0 0 var(#{$form-control-focus-ring-color-var}) inset;
+  }
+}

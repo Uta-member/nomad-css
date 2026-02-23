@@ -5079,6 +5079,198 @@ button.text {
   height: var(--progresslg-size);
 }
 
+.form-control {
+  --form-control-filled-bg-color: var(--surface-color-dark);
+  --form-control-filled-hover-bg-color: var(--surface-color-darker);
+  --form-control-filled-active-bg-color: var(--form-control-filled-bg-color);
+  --form-control-filled-focus-bg-color: var(--form-control-filled-bg-color);
+  --form-control-filled-disabled-bg-color: var(--neutral-light);
+  --form-control-filled-readonly-bg-color: var(--form-control-filled-bg-color);
+  --form-control-color: var(--text-color);
+  --form-control-hover-color: var(--text-color);
+  --form-control-active-color: var(--text-color);
+  --form-control-focus-color: var(--text-color);
+  --form-control-disabled-color: var(--neutral-dark);
+  --form-control-readonly-color: var(--form-control-color);
+  --form-control-placeholder-color: var(--neutral-default);
+  --form-control-placeholder-hover-color: var(--form-control-placeholder-color);
+  --form-control-placeholder-active-color: var(--form-control-placeholder-color);
+  --form-control-placeholder-focus-color: var(--form-control-placeholder-color);
+  --form-control-placeholder-disabled-color: var(--form-control-placeholder-color);
+  --form-control-placeholder-readonly-color: var(--form-control-placeholder-color);
+  --form-control-border-top-width: 1px;
+  --form-control-border-right-width: 1px;
+  --form-control-border-bottom-width: 1px;
+  --form-control-border-left-width: 1px;
+  --form-control-border-radius: 4px;
+  --form-control-border-color: var(--border-color);
+  --form-control-hover-border-color: var(--border-color-dark);
+  --form-control-active-border-color: var(--border-color-dark);
+  --form-control-focus-border-color: var(--border-color-dark);
+  --form-control-disabled-border-color: var(--neutral-light);
+  --form-control-readonly-border-color: var(--form-control-border-color);
+  --form-control-focus-ring-width: 2px;
+  --form-control-focus-ring-color: var(--palette-default);
+  --form-control-opacity: 1;
+  --form-control-disabled-opacity: 1;
+  --form-control-readonly-opacity: 0.7;
+  --form-control-padding: 0.5rem 0.75rem;
+  --form-control-font-size: 1rem;
+  --form-control-sm-padding: 0.25rem 0.5rem;
+  --form-control-sm-font-size: 0.875rem;
+  --form-control-lg-padding: 0.75rem 1rem;
+  --form-control-lg-font-size: 1.125rem;
+  --form-control-cursor: text;
+  --form-control-disabled-cursor: not-allowed;
+  --form-control-readonly-cursor: not-allowed;
+  --form-control-transition: 0.2s;
+}
+
+.form-control {
+  background-color: transparent;
+  color: var(--form-control-color);
+  border-width: var(--form-control-border-top-width) var(--form-control-border-right-width) var(--form-control-border-bottom-width) var(--form-control-border-left-width);
+  border-radius: var(--form-control-border-radius);
+  border-color: var(--form-control-border-color);
+  border-style: solid;
+  opacity: var(--form-control-opacity);
+  cursor: var(--form-control-cursor);
+  transition: var(--form-control-transition);
+  outline: none;
+  padding: var(--form-control-padding);
+  font-size: var(--form-control-font-size);
+}
+.form-control.sm {
+  padding: var(--form-control-sm-padding);
+  font-size: var(--form-control-sm-font-size);
+}
+.form-control.md {
+  padding: var(--form-control-padding);
+  font-size: var(--form-control-font-size);
+}
+.form-control.lg {
+  padding: var(--form-control-lg-padding);
+  font-size: var(--form-control-lg-font-size);
+}
+.form-control:hover {
+  color: var(--form-control-hover-color);
+  border-color: var(--form-control-hover-border-color);
+}
+.form-control:hover::-moz-placeholder {
+  color: var(--form-control-placeholder-hover-color);
+}
+.form-control:hover::placeholder {
+  color: var(--form-control-placeholder-hover-color);
+}
+.form-control:active {
+  color: var(--form-control-active-color);
+  border-color: var(--form-control-active-border-color);
+}
+.form-control:active::-moz-placeholder {
+  color: var(--form-control-placeholder-active-color);
+}
+.form-control:active::placeholder {
+  color: var(--form-control-placeholder-active-color);
+}
+.form-control:focus-visible {
+  color: var(--form-control-focus-color);
+  border-color: var(--form-control-focus-border-color);
+}
+.form-control:focus-visible::-moz-placeholder {
+  color: var(--form-control-placeholder-focus-color);
+}
+.form-control:focus-visible::placeholder {
+  color: var(--form-control-placeholder-focus-color);
+}
+.form-control:disabled {
+  color: var(--form-control-disabled-color);
+  border-color: var(--form-control-disabled-border-color);
+  opacity: var(--form-control-disabled-opacity);
+  cursor: var(--form-control-disabled-cursor);
+}
+.form-control:disabled::-moz-placeholder {
+  color: var(--form-control-placeholder-disabled-color);
+}
+.form-control:disabled::placeholder {
+  color: var(--form-control-placeholder-disabled-color);
+}
+.form-control:-moz-read-only {
+  color: var(--form-control-readonly-color);
+  border-color: var(--form-control-readonly-border-color);
+  opacity: var(--form-control-readonly-opacity);
+  cursor: var(--form-control-readonly-cursor);
+}
+.form-control:read-only {
+  color: var(--form-control-readonly-color);
+  border-color: var(--form-control-readonly-border-color);
+  opacity: var(--form-control-readonly-opacity);
+  cursor: var(--form-control-readonly-cursor);
+}
+.form-control:read-only::-moz-placeholder {
+  color: var(--form-control-placeholder-readonly-color);
+}
+.form-control:-moz-read-only::placeholder {
+  color: var(--form-control-placeholder-readonly-color);
+}
+.form-control:read-only::placeholder {
+  color: var(--form-control-placeholder-readonly-color);
+}
+.form-control::-moz-placeholder {
+  color: var(--form-control-placeholder-color);
+}
+.form-control::placeholder {
+  color: var(--form-control-placeholder-color);
+}
+
+.form-control:focus-visible,
+.form-control.outlined:focus-visible {
+  outline-offset: var(--form-control-focus-ring-offset-width);
+  outline-width: var(--form-control-focus-ring-width);
+  outline-color: var(--form-control-focus-ring-color);
+  outline-style: solid;
+}
+
+.form-control.filled {
+  background-color: var(--form-control-filled-bg-color);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  --form-control-border-top-width: 0;
+  --form-control-border-right-width: 0;
+  --form-control-border-left-width: 0;
+}
+.form-control.filled:hover {
+  background-color: var(--form-control-filled-hover-bg-color);
+}
+.form-control.filled:active {
+  background-color: var(--form-control-filled-active-bg-color);
+}
+.form-control.filled:focus-visible {
+  background-color: var(--form-control-filled-focus-bg-color);
+  outline: none;
+  box-shadow: 0 -1px 0 0 var(--form-control-focus-ring-color) inset;
+}
+.form-control.filled:disabled {
+  background-color: var(--form-control-filled-disabled-bg-color);
+}
+.form-control.filled:-moz-read-only {
+  background-color: var(--form-control-filled-readonly-bg-color);
+}
+.form-control.filled:read-only {
+  background-color: var(--form-control-filled-readonly-bg-color);
+}
+
+.form-control.underline {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  --form-control-border-top-width: 0;
+  --form-control-border-right-width: 0;
+  --form-control-border-left-width: 0;
+}
+.form-control.underline:focus-visible {
+  outline: none;
+  box-shadow: 0 -1px 0 0 var(--form-control-focus-ring-color) inset;
+}
+
 :root {
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-body-size: 16px;
