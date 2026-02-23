@@ -5646,32 +5646,77 @@ h6,
 }
 
 .table {
-  --tableborder-color: var(--border-color);
-  --tableborder-width: 1px;
+  --table-border-color: var(--border-color);
+  --table-border-width: 1px;
+  --table-striped-bg-color: var(--neutral-lighter);
+  --table-striped-color: var(--neutral-accent-lighter);
+  --table-hover-bg-color: var(--neutral-lighter);
+  --table-hover-color: var(--neutral-accent-lighter);
+  --table-hover-row-cursor: unset;
+  --table-hover-cell-cursor: unset;
 }
 
 .table {
   border-collapse: collapse;
-  border-color: var(--tableborder-color);
+  border-color: var(--table-border-color);
   border-width: 0px;
   border-style: solid;
-}
-.table .cell {
-  border-width: 0px;
-  border-style: solid;
-  border-color: var(--tableborder-color);
 }
 .table > :not(caption) > * > * {
   padding: 0.5em;
+  border-width: 0px;
+  border-style: solid;
+  border-color: var(--table-border-color);
 }
 
-.table.row-bordered .cell {
-  border-top-width: var(--tableborder-width);
-  border-bottom-width: var(--tableborder-width);
+.table.row-bordered > :not(caption) > * > * {
+  border-top-width: var(--table-border-width);
+  border-bottom-width: var(--table-border-width);
 }
-.table.column-bordered .cell {
-  border-left-width: var(--tableborder-width);
-  border-right-width: var(--tableborder-width);
+.table.column-bordered > :not(caption) > * > * {
+  border-left-width: var(--table-border-width);
+  border-right-width: var(--table-border-width);
+}
+
+.table.striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: var(--table-striped-bg-color);
+  color: var(--table-striped-color);
+}
+.table.striped-column > :not(caption) > tr > :nth-child(2n) {
+  background-color: var(--table-striped-bg-color);
+  color: var(--table-striped-color);
+}
+
+.table.hover-row > tbody > tr:hover > * {
+  background-color: var(--table-hover-bg-color);
+  color: var(--table-hover-color);
+  cursor: var(--table-hover-row-cursor);
+}
+.table.hover-cell > tbody > tr > *:hover {
+  background-color: var(--table-hover-bg-color);
+  color: var(--table-hover-color);
+  cursor: var(--table-hover-cell-cursor);
+}
+
+.table .palette-default {
+  background-color: var(--palette-default);
+  color: var(--palette-accent-default);
+}
+.table .palette-light {
+  background-color: var(--palette-light);
+  color: var(--palette-accent-light);
+}
+.table .palette-lighter {
+  background-color: var(--palette-lighter);
+  color: var(--palette-accent-lighter);
+}
+.table .palette-dark {
+  background-color: var(--palette-dark);
+  color: var(--palette-accent-dark);
+}
+.table .palette-darker {
+  background-color: var(--palette-darker);
+  color: var(--palette-accent-darker);
 }
 
 :root {

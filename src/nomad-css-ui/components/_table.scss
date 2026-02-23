@@ -9,7 +9,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$table-prefix: #{prefixes.$prefix}table;
+$table-prefix: #{prefixes.$prefix}table- !default;
 
 // --------------------------------------------
 // Class Names
@@ -25,6 +25,24 @@ $table-class-name: table !default;
 $table-border-color-var: --#{$table-prefix}border-color;
 $table-border-width-var: --#{$table-prefix}border-width;
 
+// --------------------------------------------
+// Striped
+// --------------------------------------------
+$table-striped-bg-color-var: --#{$table-prefix}striped-bg-color;
+$table-striped-color-var: --#{$table-prefix}striped-color;
+
+// --------------------------------------------
+// Hover
+// --------------------------------------------
+$table-hover-bg-color-var: --#{$table-prefix}hover-bg-color;
+$table-hover-color-var: --#{$table-prefix}hover-color;
+
+// --------------------------------------------
+// Cursors
+// --------------------------------------------
+$table-hover-row-cursor-var: --#{$table-prefix}hover-row-cursor;
+$table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor;
+
 // ============================================
 // Process
 // ============================================
@@ -37,6 +55,24 @@ $table-border-width-var: --#{$table-prefix}border-width;
   // --------------------------------------------
   #{$table-border-color-var}: var(#{color-defines.$border-color-var});
   #{$table-border-width-var}: 1px;
+  
+  // --------------------------------------------
+  // Striped
+  // --------------------------------------------
+  #{$table-striped-bg-color-var}: var(#{semantics.$neutral-lighter-var});
+  #{$table-striped-color-var}: var(#{semantics.$neutral-lighter-accent-var});
+  
+  // --------------------------------------------
+  // Hover
+  // --------------------------------------------
+  #{$table-hover-bg-color-var}: var(#{semantics.$neutral-lighter-var});
+  #{$table-hover-color-var}: var(#{semantics.$neutral-lighter-accent-var});
+  
+  // --------------------------------------------
+  // Cursors
+  // --------------------------------------------
+  #{$table-hover-row-cursor-var}: unset;
+  #{$table-hover-cell-cursor-var}: unset;
 }
 
 // ============================================
@@ -48,14 +84,11 @@ $table-border-width-var: --#{$table-prefix}border-width;
   border-width: 0px;
   border-style: solid;
 
-  & .cell {
+  &>:not(caption)>*>* {
+    padding: 0.5em;
     border-width: 0px;
     border-style: solid;
     border-color: var(#{$table-border-color-var});
-  }
-
-  &>:not(caption)>*>* {
-    padding: 0.5em;
   }
 }
 
@@ -64,15 +97,72 @@ $table-border-width-var: --#{$table-prefix}border-width;
 // ============================================
 .#{$table-class-name} {
   &.row-bordered {
-    & .cell {
+    &>:not(caption)>*>* {
       border-top-width: var(#{$table-border-width-var});
       border-bottom-width: var(#{$table-border-width-var});
     }
   }
   &.column-bordered {
-    & .cell {
+    &>:not(caption)>*>* {
       border-left-width: var(#{$table-border-width-var});
       border-right-width: var(#{$table-border-width-var});
     }
+  }
+}
+
+// ============================================
+// Striped
+// ============================================
+.#{$table-class-name} {
+  &.striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: var(#{$table-striped-bg-color-var});
+    color: var(#{$table-striped-color-var});
+  }
+  
+  &.striped-column>:not(caption)>tr>:nth-child(2n) {
+    background-color: var(#{$table-striped-bg-color-var});
+    color: var(#{$table-striped-color-var});
+  }
+}
+
+// ============================================
+// Hover
+// ============================================
+.#{$table-class-name} {
+  &.hover-row>tbody>tr:hover>* {
+    background-color: var(#{$table-hover-bg-color-var});
+    color: var(#{$table-hover-color-var});
+    cursor: var(#{$table-hover-row-cursor-var});
+  }
+  &.hover-cell>tbody>tr>*:hover {
+    background-color: var(#{$table-hover-bg-color-var});
+    color: var(#{$table-hover-color-var});
+    cursor: var(#{$table-hover-cell-cursor-var});
+  }
+}
+
+// ============================================
+// palette
+// ============================================
+.#{$table-class-name} {
+  & .palette-default {
+    background-color: var(#{palette.$palette-default-var});
+    color: var(#{palette.$palette-default-accent-var});
+  }
+  & .palette-light {
+    background-color: var(#{palette.$palette-light-var});
+    color: var(#{palette.$palette-light-accent-var});
+  }
+  & .palette-lighter {
+    background-color: var(#{palette.$palette-lighter-var});
+    color: var(#{palette.$palette-lighter-accent-var});
+  }
+  & .palette-dark {
+    background-color: var(#{palette.$palette-dark-var});
+    color: var(#{palette.$palette-dark-accent-var});
+  }
+  & .palette-darker {
+    background-color: var(#{palette.$palette-darker-var});
+    color: var(#{palette.$palette-darker-accent-var});
   }
 }
