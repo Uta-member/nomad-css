@@ -275,6 +275,14 @@ $select-transition-var: --#{$select-prefix}transition;
   &::placeholder {
     color: var(#{$select-placeholder-color-var});
   }
+
+  &[multiple] {
+    padding: 0;
+
+    option {
+      padding: var(#{$select-padding-var});
+    }
+  }
 }
 
 // ============================================

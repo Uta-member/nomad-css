@@ -5591,6 +5591,12 @@ button.text {
 .select::placeholder {
   color: var(--select-placeholder-color);
 }
+.select[multiple] {
+  padding: 0;
+}
+.select[multiple] option {
+  padding: var(--select-padding);
+}
 
 .select:focus-visible,
 .select.outlined:focus-visible {
