@@ -1,0 +1,251 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$radio-prefix: #{prefixes.$prefix}radio-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$radio-class-name: radio;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Backgrouns Colors
+// --------------------------------------------
+$radio-bg-color-var: --#{$radio-prefix}bg-color;
+$radio-hover-bg-color-var: --#{$radio-prefix}hover-bg-color;
+$radio-active-bg-color-var: --#{$radio-prefix}active-bg-color;
+$radio-focus-bg-color-var: --#{$radio-prefix}focus-bg-color;
+$radio-disabled-bg-color-var: --#{$radio-prefix}disabled-bg-color;
+$radio-checked-bg-color-var: --#{$radio-prefix}checked-bg-color;
+$radio-checked-hover-bg-color-var: --#{$radio-prefix}checked-hover-bg-color;
+$radio-checked-active-bg-color-var: --#{$radio-prefix}checked-active-bg-color;
+$radio-checked-focus-bg-color-var: --#{$radio-prefix}checked-focus-bg-color;
+$radio-checked-disabled-bg-color-var: --#{$radio-prefix}checked-disabled-bg-color;
+
+// --------------------------------------------
+// Borders
+// --------------------------------------------
+$radio-border-width-var: --#{$radio-prefix}border-width;
+$radio-border-radius-var: --#{$radio-prefix}border-radius;
+$radio-border-color-var: --#{$radio-prefix}border-color;
+$radio-hover-border-color-var: --#{$radio-prefix}hover-border-color;
+$radio-active-border-color-var: --#{$radio-prefix}active-border-color;
+$radio-focus-border-color-var: --#{$radio-prefix}focus-border-color;
+$radio-disabled-border-color-var: --#{$radio-prefix}disabled-border-color;
+$radio-checked-border-color-var: --#{$radio-prefix}checked-border-color;
+$radio-checked-hover-border-color-var: --#{$radio-prefix}checked-hover-border-color;
+$radio-checked-active-border-color-var: --#{$radio-prefix}checked-active-border-color;
+$radio-checked-focus-border-color-var: --#{$radio-prefix}checked-focus-border-color;
+$radio-checked-disabled-border-color-var: --#{$radio-prefix}checked-disabled-border-color;
+
+// --------------------------------------------
+// Opacity
+// --------------------------------------------
+$radio-opacity-var: --#{$radio-prefix}opacity;
+$radio-disabled-opacity-var: --#{$radio-prefix}disabled-opacity;
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$radio-sm-size-var: --#{$radio-prefix}sm-size;
+$radio-md-size-var: --#{$radio-prefix}md-size;
+$radio-lg-size-var: --#{$radio-prefix}lg-size;
+
+// --------------------------------------------
+// Check Mark
+// --------------------------------------------
+$radio-mark-color-var: --#{$radio-prefix}mark-color;
+$radio-disabled-mark-color-var: --#{$radio-prefix}disabled-mark-color;
+$radio-mark-size-var: --#{$radio-prefix}mark-size;
+
+// --------------------------------------------
+// Cursor
+// --------------------------------------------
+$radio-cursor-var: --#{$radio-prefix}cursor;
+$radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$radio-class-name} {
+  // --------------------------------------------
+  // Background Colors
+  // --------------------------------------------
+  #{$radio-bg-color-var}: transparent;
+  #{$radio-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
+  #{$radio-active-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$radio-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
+  #{$radio-disabled-bg-color-var}: transparent;
+  #{$radio-checked-bg-color-var}: var(#{$radio-bg-color-var});
+  #{$radio-checked-hover-bg-color-var}: var(#{$radio-hover-bg-color-var});
+  #{$radio-checked-active-bg-color-var}: var(#{$radio-active-bg-color-var});
+  #{$radio-checked-focus-bg-color-var}: var(#{$radio-focus-bg-color-var});
+  #{$radio-checked-disabled-bg-color-var}: var(#{$radio-disabled-bg-color-var});
+
+  // --------------------------------------------
+  // Borders
+  // --------------------------------------------
+  #{$radio-border-width-var}: 2px;
+  #{$radio-border-radius-var}: 50%;
+  #{$radio-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$radio-hover-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$radio-active-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$radio-focus-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$radio-disabled-border-color-var}: var(#{semantics.$neutral-light-var});
+  #{$radio-checked-border-color-var}: var(#{palette.$palette-default-var});
+  #{$radio-checked-hover-border-color-var}: var(
+    #{palette.$palette-default-var}
+  );
+  #{$radio-checked-active-border-color-var}: var(
+    #{palette.$palette-default-var}
+  );
+  #{$radio-checked-focus-border-color-var}: var(
+    #{palette.$palette-default-var}
+  );
+  #{$radio-checked-disabled-border-color-var}: var(
+    #{semantics.$neutral-light-var}
+  );
+
+  // --------------------------------------------
+  // Opacity
+  // --------------------------------------------
+  #{$radio-opacity-var}: 1;
+  #{$radio-disabled-opacity-var}: 1;
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$radio-sm-size-var}: 0.75rem;
+  #{$radio-md-size-var}: 1rem;
+  #{$radio-lg-size-var}: 1.5rem;
+
+  // --------------------------------------------
+  // Check Mark
+  // --------------------------------------------
+  #{$radio-mark-color-var}: var(#{palette.$palette-default-var});
+  #{$radio-disabled-mark-color-var}: var(#{semantics.$neutral-light-var});
+  #{$radio-mark-size-var}: 50%;
+
+  // --------------------------------------------
+  // Cursor
+  // --------------------------------------------
+  #{$radio-cursor-var}: pointer;
+  #{$radio-disabled-cursor-var}: not-allowed;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$radio-class-name} {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(#{$radio-bg-color-var});
+
+  border-width: var(#{$radio-border-width-var});
+  border-color: var(#{$radio-border-color-var});
+  border-radius: var(#{$radio-border-radius-var});
+  border-style: solid;
+
+  opacity: var(#{$radio-opacity-var});
+
+  width: var(#{$radio-md-size-var});
+  height: var(#{$radio-md-size-var});
+
+  &.sm {
+    width: var(#{$radio-sm-size-var});
+    height: var(#{$radio-sm-size-var});
+  }
+  &.md {
+    width: var(#{$radio-md-size-var});
+    height: var(#{$radio-md-size-var});
+  }
+  &.lg {
+    width: var(#{$radio-lg-size-var});
+    height: var(#{$radio-lg-size-var});
+  }
+
+  cursor: var(#{$radio-cursor-var});
+
+  &:hover {
+    background-color: var(#{$radio-hover-bg-color-var});
+    border-color: var(#{$radio-hover-border-color-var});
+  }
+  &:active {
+    background-color: var(#{$radio-active-bg-color-var});
+    border-color: var(#{$radio-active-border-color-var});
+  }
+  &:focus-visible {
+    background-color: var(#{$radio-focus-bg-color-var});
+    border-color: var(#{$radio-focus-border-color-var});
+  }
+  &:disabled {
+    background-color: var(#{$radio-disabled-bg-color-var});
+    border-color: var(#{$radio-disabled-border-color-var});
+    opacity: var(#{$radio-disabled-opacity-var});
+    cursor: var(#{$radio-disabled-cursor-var});
+  }
+
+  &:checked,
+  &:indeterminate {
+    background-color: var(#{$radio-checked-bg-color-var});
+    border-color: var(#{$radio-checked-border-color-var});
+
+    &:hover {
+      background-color: var(#{$radio-checked-hover-bg-color-var});
+      border-color: var(#{$radio-checked-hover-border-color-var});
+    }
+    &:active {
+      background-color: var(#{$radio-checked-active-bg-color-var});
+      border-color: var(#{$radio-checked-active-border-color-var});
+    }
+    &:focus-visible {
+      background-color: var(#{$radio-checked-focus-bg-color-var});
+      border-color: var(#{$radio-checked-focus-border-color-var});
+    }
+    &:disabled {
+      background-color: var(#{$radio-checked-disabled-bg-color-var});
+      border-color: var(#{$radio-checked-disabled-border-color-var});
+      opacity: var(#{$radio-disabled-opacity-var});
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: var(#{$radio-mark-size-var});
+    height: var(#{$radio-mark-size-var});
+    border-radius: 50%;
+    background-color: transparent;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &:checked::before {
+    background-color: var(#{$radio-mark-color-var});
+  }
+
+  &:disabled::before {
+    background-color: var(#{$radio-disabled-mark-color-var});
+  }
+}

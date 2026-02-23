@@ -153,7 +153,7 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
   // --------------------------------------------
   #{$check-box-mark-color-var}: var(#{palette.$palette-default-accent-var});
   #{$check-box-disabled-mark-color-var}: var(
-    #{semantics.$neutral-light-accent-var}
+    #{color-defines.$surface-color-lighter-var}
   );
   #{$check-box-mark-image-var}: #{$default-mark-image};
   #{$check-box-indeterminate-mark-image-var}: #{$default-indeterminate-mark-image};
@@ -258,6 +258,11 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
   &:checked::before,
   &:indeterminate::before {
     background-color: var(#{$check-box-mark-color-var});
+  }
+
+  &:checked:disabled::before,
+  &:indeterminate:disabled::before {
+    background-color: var(#{$check-box-disabled-mark-color-var});
   }
 
   &:checked::before {

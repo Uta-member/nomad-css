@@ -4820,7 +4820,7 @@ button.text {
   --checkbox-md-size: 1rem;
   --checkbox-lg-size: 1.5rem;
   --checkbox-mark-color: var(--palette-accent-default);
-  --checkbox-disabled-mark-color: var(--neutral-accent-light);
+  --checkbox-disabled-mark-color: var(--surface-color-lighter);
   --checkbox-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
   --checkbox-indeterminate-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline x1='5' y1='12' x2='19' y2='12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
   --checkbox-cursor: pointer;
@@ -4911,6 +4911,9 @@ button.text {
 .checkbox:checked::before, .checkbox:indeterminate::before {
   background-color: var(--checkbox-mark-color);
 }
+.checkbox:checked:disabled::before, .checkbox:indeterminate:disabled::before {
+  background-color: var(--checkbox-disabled-mark-color);
+}
 .checkbox:checked::before {
   -webkit-mask-image: var(--checkbox-mark-image);
           mask-image: var(--checkbox-mark-image);
@@ -4918,6 +4921,133 @@ button.text {
 .checkbox:indeterminate::before {
   -webkit-mask-image: var(--checkbox-indeterminate-mark-image);
           mask-image: var(--checkbox-indeterminate-mark-image);
+}
+
+.radio {
+  --radio-bg-color: transparent;
+  --radio-hover-bg-color: var(--surface-color);
+  --radio-active-bg-color: var(--surface-color-dark);
+  --radio-focus-bg-color: var(--surface-color);
+  --radio-disabled-bg-color: transparent;
+  --radio-checked-bg-color: var(--radio-bg-color);
+  --radio-checked-hover-bg-color: var(--radio-hover-bg-color);
+  --radio-checked-active-bg-color: var(--radio-active-bg-color);
+  --radio-checked-focus-bg-color: var(--radio-focus-bg-color);
+  --radio-checked-disabled-bg-color: var(--radio-disabled-bg-color);
+  --radio-border-width: 2px;
+  --radio-border-radius: 50%;
+  --radio-border-color: var(--border-color);
+  --radio-hover-border-color: var(--border-color);
+  --radio-active-border-color: var(--border-color);
+  --radio-focus-border-color: var(--border-color);
+  --radio-disabled-border-color: var(--neutral-light);
+  --radio-checked-border-color: var(--palette-default);
+  --radio-checked-hover-border-color: var(--palette-default);
+  --radio-checked-active-border-color: var(--palette-default);
+  --radio-checked-focus-border-color: var(--palette-default);
+  --radio-checked-disabled-border-color: var(--neutral-light);
+  --radio-opacity: 1;
+  --radio-disabled-opacity: 1;
+  --radio-sm-size: 0.75rem;
+  --radio-md-size: 1rem;
+  --radio-lg-size: 1.5rem;
+  --radio-mark-color: var(--palette-default);
+  --radio-disabled-mark-color: var(--neutral-light);
+  --radio-mark-size: 50%;
+  --radio-cursor: pointer;
+  --radio-disabled-cursor: not-allowed;
+}
+
+.radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--radio-bg-color);
+  border-width: var(--radio-border-width);
+  border-color: var(--radio-border-color);
+  border-radius: var(--radio-border-radius);
+  border-style: solid;
+  opacity: var(--radio-opacity);
+  width: var(--radio-md-size);
+  height: var(--radio-md-size);
+}
+.radio.sm {
+  width: var(--radio-sm-size);
+  height: var(--radio-sm-size);
+}
+.radio.md {
+  width: var(--radio-md-size);
+  height: var(--radio-md-size);
+}
+.radio.lg {
+  width: var(--radio-lg-size);
+  height: var(--radio-lg-size);
+}
+.radio {
+  cursor: var(--radio-cursor);
+}
+.radio:hover {
+  background-color: var(--radio-hover-bg-color);
+  border-color: var(--radio-hover-border-color);
+}
+.radio:active {
+  background-color: var(--radio-active-bg-color);
+  border-color: var(--radio-active-border-color);
+}
+.radio:focus-visible {
+  background-color: var(--radio-focus-bg-color);
+  border-color: var(--radio-focus-border-color);
+}
+.radio:disabled {
+  background-color: var(--radio-disabled-bg-color);
+  border-color: var(--radio-disabled-border-color);
+  opacity: var(--radio-disabled-opacity);
+  cursor: var(--radio-disabled-cursor);
+}
+.radio:checked, .radio:indeterminate {
+  background-color: var(--radio-checked-bg-color);
+  border-color: var(--radio-checked-border-color);
+}
+.radio:checked:hover, .radio:indeterminate:hover {
+  background-color: var(--radio-checked-hover-bg-color);
+  border-color: var(--radio-checked-hover-border-color);
+}
+.radio:checked:active, .radio:indeterminate:active {
+  background-color: var(--radio-checked-active-bg-color);
+  border-color: var(--radio-checked-active-border-color);
+}
+.radio:checked:focus-visible, .radio:indeterminate:focus-visible {
+  background-color: var(--radio-checked-focus-bg-color);
+  border-color: var(--radio-checked-focus-border-color);
+}
+.radio:checked:disabled, .radio:indeterminate:disabled {
+  background-color: var(--radio-checked-disabled-bg-color);
+  border-color: var(--radio-checked-disabled-border-color);
+  opacity: var(--radio-disabled-opacity);
+}
+.radio::before {
+  content: "";
+  display: block;
+  width: var(--radio-mark-size);
+  height: var(--radio-mark-size);
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.radio:checked::before {
+  background-color: var(--radio-mark-color);
+}
+.radio:disabled::before {
+  background-color: var(--radio-disabled-mark-color);
 }
 
 :root {
