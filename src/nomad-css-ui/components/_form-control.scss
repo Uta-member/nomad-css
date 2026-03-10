@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -124,7 +123,7 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
     #{$form-control-filled-bg-color-var}
   );
   #{$form-control-filled-disabled-bg-color-var}: var(
-    #{semantics.$neutral-light-var}
+    #{color-defines.$border-color-light-var}
   );
   #{$form-control-filled-readonly-bg-color-var}: var(
     #{color-defines.$surface-color-darker-var}
@@ -140,14 +139,14 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   #{$form-control-hover-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-active-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-focus-color-var}: var(#{color-defines.$text-color-var});
-  #{$form-control-disabled-color-var}: var(#{semantics.$neutral-dark-var});
+  #{$form-control-disabled-color-var}: var(#{color-defines.$border-color-dark-var});
   #{$form-control-readonly-color-var}: var(#{$form-control-color-var});
 
   // --------------------------------------------
   // Placeholder Colors
   // --------------------------------------------
   #{$form-control-placeholder-color-var}: var(
-    #{semantics.$neutral-default-var}
+    #{color-defines.$border-color-var}
   );
   #{$form-control-placeholder-hover-color-var}: var(
     #{$form-control-placeholder-color-var}
@@ -182,7 +181,7 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   );
   #{$form-control-focus-border-color-var}: var(#{palette.$palette-default-var});
   #{$form-control-disabled-border-color-var}: var(
-    #{semantics.$neutral-light-var}
+    #{color-defines.$border-color-light-var}
   );
   #{$form-control-readonly-border-color-var}: var(
     #{$form-control-border-color-var}

@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -81,14 +80,6 @@ $badge-overlay-right-var: --#{$badge-prefix}overlay-right;
   // --------------------------------------------
   #{$badge-overlay-top-var}: 0;
   #{$badge-overlay-right-var}: 0;
-
-  // --------------------------------------------
-  // Semantic palette override
-  // --------------------------------------------
-  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
-    #{$badge-bg-color-var}: var(#{palette.$palette-default-var});
-    #{$badge-color-var}: var(#{palette.$palette-default-accent-var});
-  }
 }
 
 // ============================================

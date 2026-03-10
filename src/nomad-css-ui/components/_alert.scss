@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -49,9 +48,9 @@ $alert-icon-size-var: --#{$alert-prefix}icon-size;
   // --------------------------------------------
   // Colors (default: neutral surface)
   // --------------------------------------------
-  #{$alert-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
-  #{$alert-color-var}: var(#{color-defines.$text-color-var});
-  #{$alert-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$alert-bg-color-var}: var(#{palette.$palette-lighter-var});
+  #{$alert-color-var}: var(#{palette.$palette-dark-var});
+  #{$alert-border-color-var}: var(#{palette.$palette-light-var});
 
   // --------------------------------------------
   // Border
@@ -65,17 +64,6 @@ $alert-icon-size-var: --#{$alert-prefix}icon-size;
   #{$alert-padding-var}: 0.75rem 1rem;
   #{$alert-gap-var}: 0.5rem;
   #{$alert-icon-size-var}: 1.25em;
-
-  // --------------------------------------------
-  // Semantic palette override
-  // When a semantic class (.success, .danger etc.) is applied to the same
-  // element, the --palette-* vars are scoped to that element automatically.
-  // --------------------------------------------
-  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
-    #{$alert-bg-color-var}: var(#{palette.$palette-lighter-var});
-    #{$alert-color-var}: var(#{palette.$palette-dark-var});
-    #{$alert-border-color-var}: var(#{palette.$palette-light-var});
-  }
 }
 
 // ============================================
@@ -99,22 +87,10 @@ $alert-icon-size-var: --#{$alert-prefix}icon-size;
 // Variants
 // ============================================
 .#{$alert-class-name} {
-  // Outlined: transparent background, colored border/text
   &.outlined {
     background-color: transparent;
-
-    &:where(
-      .primary,
-      .secondary,
-      .tertiary,
-      .success,
-      .warning,
-      .danger,
-      .info
-    ) {
-      #{$alert-color-var}: var(#{palette.$palette-default-var});
-      #{$alert-border-color-var}: var(#{palette.$palette-default-var});
-    }
+    #{$alert-color-var}: var(#{palette.$palette-default-var});
+    #{$alert-border-color-var}: var(#{palette.$palette-default-var});
   }
 }
 

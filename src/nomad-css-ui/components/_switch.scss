@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -98,7 +97,7 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor;
   );
   #{$switch-track-border-radius-var}: 10rem;
   #{$switch-track-border-width-var}: 1px;
-  #{$switch-track-disabled-bg-color-var}: var(#{semantics.$neutral-light-var});
+  #{$switch-track-disabled-bg-color-var}: var(#{color-defines.$border-color-light-var});
 
   // --------------------------------------------
   // Thumb sizes
@@ -205,8 +204,8 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor;
       background-color: var(#{$switch-thumb-disabled-bg-color-var});
     }
   }
-
-  &:has(.#{$switch-input-class-name}:disabled) {
+  
+  &.disabled {
     cursor: var(#{$switch-disabled-cursor-var});
     opacity: var(#{$switch-disabled-opacity-var});
   }

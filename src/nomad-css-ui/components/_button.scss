@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -238,7 +237,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-hover-bg-color-var}: var(#{palette.$palette-dark-var});
   #{$button-active-bg-color-var}: var(#{palette.$palette-darker-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
-  #{$button-disabled-bg-color-var}: var(#{semantics.$neutral-light-var});
+  #{$button-disabled-bg-color-var}: var(#{color-defines.$border-color-light-var});
 
   // --------------------------------------------
   // Text Colors
@@ -247,7 +246,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-hover-color-var}: var(#{palette.$palette-dark-accent-var});
   #{$button-active-color-var}: var(#{palette.$palette-darker-accent-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
-  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+  #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 
   // --------------------------------------------
   // Borders
@@ -278,7 +277,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-hover-bg-color-var}: var(#{palette.$palette-light-var});
   #{$button-active-bg-color-var}: var(#{palette.$palette-default-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
-  #{$button-disabled-bg-color-var}: var(#{semantics.$neutral-lighter-var});
+  #{$button-disabled-bg-color-var}: var(#{color-defines.$surface-color-var});
 
   // --------------------------------------------
   // Text Colors
@@ -287,7 +286,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
   #{$button-active-color-var}: var(#{palette.$palette-darker-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
-  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+  #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 
   // --------------------------------------------
   // Borders
@@ -327,7 +326,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
   #{$button-active-color-var}: var(#{palette.$palette-dark-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
-  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+  #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 
   // --------------------------------------------
   // Borders
@@ -336,7 +335,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-hover-border-color-var}: var(#{palette.$palette-default-var});
   #{$button-active-border-color-var}: var(#{palette.$palette-default-var});
   #{$button-focus-border-color-var}: var(#{palette.$palette-default-var});
-  #{$button-disabled-border-color-var}: var(#{semantics.$neutral-default-var});
+  #{$button-disabled-border-color-var}: var(#{color-defines.$border-color-var});
   #{$button-border-radius-var}: 0.25rem;
   #{$button-border-width-var}: 1px;
 
@@ -367,7 +366,7 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding;
   #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
   #{$button-active-color-var}: var(#{palette.$palette-dark-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
-  #{$button-disabled-color-var}: var(#{semantics.$neutral-default-var});
+  #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 
   // --------------------------------------------
   // Borders

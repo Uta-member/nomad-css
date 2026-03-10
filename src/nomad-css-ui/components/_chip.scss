@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -54,12 +53,12 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
 // ============================================
 .#{$chip-class-name} {
   // --------------------------------------------
-  // Colors (default: tonal neutral)
+  // Colors (default: palette tonal)
   // --------------------------------------------
-  #{$chip-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
-  #{$chip-color-var}: var(#{color-defines.$text-color-var});
-  #{$chip-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$chip-hover-bg-color-var}: var(#{color-defines.$surface-color-darker-var});
+  #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
+  #{$chip-color-var}: var(#{palette.$palette-dark-var});
+  #{$chip-border-color-var}: var(#{palette.$palette-lighter-var});
+  #{$chip-hover-bg-color-var}: var(#{palette.$palette-light-var});
 
   // --------------------------------------------
   // Border
@@ -77,20 +76,8 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
   // --------------------------------------------
   // Dismiss
   // --------------------------------------------
-  #{$chip-dismiss-color-var}: var(#{color-defines.$text-color-light-var});
-  #{$chip-dismiss-hover-color-var}: var(#{color-defines.$text-color-var});
-
-  // --------------------------------------------
-  // Semantic palette override (tonal style)
-  // --------------------------------------------
-  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
-    #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
-    #{$chip-color-var}: var(#{palette.$palette-dark-var});
-    #{$chip-border-color-var}: var(#{palette.$palette-lighter-var});
-    #{$chip-hover-bg-color-var}: var(#{palette.$palette-light-var});
-    #{$chip-dismiss-color-var}: var(#{palette.$palette-dark-var});
-    #{$chip-dismiss-hover-color-var}: var(#{palette.$palette-darker-var});
-  }
+  #{$chip-dismiss-color-var}: var(#{palette.$palette-dark-var});
+  #{$chip-dismiss-hover-color-var}: var(#{palette.$palette-darker-var});
 }
 
 // ============================================
@@ -134,38 +121,13 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
   // Outlined: transparent background
   &.outlined {
     background-color: transparent;
-    #{$chip-hover-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
-
-    &:where(
-      .primary,
-      .secondary,
-      .tertiary,
-      .success,
-      .warning,
-      .danger,
-      .info
-    ) {
-      #{$chip-color-var}: var(#{palette.$palette-default-var});
-      #{$chip-border-color-var}: var(#{palette.$palette-default-var});
-      #{$chip-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
-    }
+    #{$chip-color-var}: var(#{palette.$palette-default-var});
+    #{$chip-border-color-var}: var(#{palette.$palette-default-var});
+    #{$chip-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
   }
 
-  // Tonal: light background with colored text
   &.tonal {
-    &:where(
-      .primary,
-      .secondary,
-      .tertiary,
-      .success,
-      .warning,
-      .danger,
-      .info
-    ) {
-      #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
-      #{$chip-color-var}: var(#{palette.$palette-dark-var});
-      #{$chip-border-color-var}: transparent;
-    }
+    #{$chip-border-color-var}: transparent;
   }
 }
 

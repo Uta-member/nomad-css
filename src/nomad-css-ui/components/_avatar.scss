@@ -74,14 +74,6 @@ $avatar-font-size-var: --#{$avatar-prefix}font-size;
   // Font
   // --------------------------------------------
   #{$avatar-font-size-var}: 1em;
-
-  // --------------------------------------------
-  // Semantic palette override
-  // --------------------------------------------
-  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
-    #{$avatar-bg-color-var}: var(#{palette.$palette-default-var});
-    #{$avatar-color-var}: var(#{palette.$palette-default-accent-var});
-  }
 }
 
 // ============================================

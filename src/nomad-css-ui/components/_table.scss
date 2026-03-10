@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -59,14 +58,14 @@ $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor;
   // --------------------------------------------
   // Striped
   // --------------------------------------------
-  #{$table-striped-bg-color-var}: var(#{semantics.$neutral-lighter-var});
-  #{$table-striped-color-var}: var(#{semantics.$neutral-lighter-accent-var});
+  #{$table-striped-bg-color-var}: var(#{color-defines.$surface-color-var});
+  #{$table-striped-color-var}: var(#{color-defines.$text-color-var});
   
   // --------------------------------------------
   // Hover
   // --------------------------------------------
-  #{$table-hover-bg-color-var}: var(#{semantics.$neutral-lighter-var});
-  #{$table-hover-color-var}: var(#{semantics.$neutral-lighter-accent-var});
+  #{$table-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
+  #{$table-hover-color-var}: var(#{color-defines.$text-color-var});
   
   // --------------------------------------------
   // Cursors

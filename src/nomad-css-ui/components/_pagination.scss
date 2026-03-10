@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -68,7 +67,7 @@ $pagination-gap-var: --#{$pagination-prefix}gap;
   #{$pagination-active-bg-color-var}: var(#{palette.$palette-default-var});
   #{$pagination-active-color-var}: var(#{palette.$palette-default-accent-var});
   #{$pagination-active-border-color-var}: var(#{palette.$palette-default-var});
-  #{$pagination-disabled-color-var}: var(#{semantics.$neutral-default-var});
+  #{$pagination-disabled-color-var}: var(#{color-defines.$border-color-var});
   #{$pagination-disabled-bg-color-var}: var(
     #{color-defines.$surface-color-lighter-var}
   );

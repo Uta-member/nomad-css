@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -80,13 +79,6 @@ $spinner-speed-var: --#{$spinner-prefix}speed;
   // Animation
   // --------------------------------------------
   #{$spinner-speed-var}: 0.75s;
-
-  // --------------------------------------------
-  // Semantic palette override
-  // --------------------------------------------
-  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
-    #{$spinner-color-var}: var(#{palette.$palette-default-var});
-  }
 }
 
 // ============================================

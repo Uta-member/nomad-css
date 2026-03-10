@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -111,7 +110,7 @@ $check-box-transition-var: --#{$check-box-prefix}transition;
     #{palette.$palette-default-var}
   );
   #{$check-box-checked-disabled-bg-color-var}: var(
-    #{semantics.$neutral-light-var}
+    #{color-defines.$border-color-light-var}
   );
 
   // --------------------------------------------
@@ -125,7 +124,7 @@ $check-box-transition-var: --#{$check-box-prefix}transition;
     #{color-defines.$border-color-var}
   );
   #{$check-box-focus-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$check-box-disabled-border-color-var}: var(#{semantics.$neutral-light-var});
+  #{$check-box-disabled-border-color-var}: var(#{color-defines.$border-color-light-var});
   #{$check-box-checked-border-color-var}: var(#{palette.$palette-default-var});
   #{$check-box-checked-hover-border-color-var}: var(
     #{palette.$palette-default-var}
@@ -137,7 +136,7 @@ $check-box-transition-var: --#{$check-box-prefix}transition;
     #{palette.$palette-default-var}
   );
   #{$check-box-checked-disabled-border-color-var}: var(
-    #{semantics.$neutral-light-var}
+    #{color-defines.$border-color-light-var}
   );
 
   // --------------------------------------------

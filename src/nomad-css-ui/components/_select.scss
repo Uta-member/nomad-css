@@ -1,7 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
-@use "../utilities/semantics" as semantics;
 
 // ============================================
 // Prefixes
@@ -110,7 +109,7 @@ $select-transition-var: --#{$select-prefix}transition;
   );
   #{$select-filled-active-bg-color-var}: var(#{$select-filled-bg-color-var});
   #{$select-filled-focus-bg-color-var}: var(#{$select-filled-bg-color-var});
-  #{$select-filled-disabled-bg-color-var}: var(#{semantics.$neutral-light-var});
+  #{$select-filled-disabled-bg-color-var}: var(#{color-defines.$border-color-light-var});
 
   // --------------------------------------------
   // Colors
@@ -119,12 +118,12 @@ $select-transition-var: --#{$select-prefix}transition;
   #{$select-hover-color-var}: var(#{color-defines.$text-color-var});
   #{$select-active-color-var}: var(#{color-defines.$text-color-var});
   #{$select-focus-color-var}: var(#{color-defines.$text-color-var});
-  #{$select-disabled-color-var}: var(#{semantics.$neutral-dark-var});
+  #{$select-disabled-color-var}: var(#{color-defines.$border-color-dark-var});
 
   // --------------------------------------------
   // Placeholder Colors
   // --------------------------------------------
-  #{$select-placeholder-color-var}: var(#{semantics.$neutral-default-var});
+  #{$select-placeholder-color-var}: var(#{color-defines.$border-color-var});
   #{$select-placeholder-hover-color-var}: var(#{$select-placeholder-color-var});
   #{$select-placeholder-active-color-var}: var(
     #{$select-placeholder-color-var}
@@ -152,7 +151,7 @@ $select-transition-var: --#{$select-prefix}transition;
   #{$select-focus-border-color-var}: var(
     #{color-defines.$border-color-dark-var}
   );
-  #{$select-disabled-border-color-var}: var(#{semantics.$neutral-light-var});
+  #{$select-disabled-border-color-var}: var(#{color-defines.$border-color-light-var});
 
   // --------------------------------------------
   // Focus Ring
