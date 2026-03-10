@@ -1,0 +1,65 @@
+@use "../utilities/prefixes" as prefixes;
+
+// ============================================
+// Fluent2 - form-control overrides
+// ============================================
+// Fluent2 の設計特徴:
+//   - フォーカス時: アウトラインリングなし、ボトムラインが2px アクセント色に変化
+//   - Hover時: ボトムラインが1px 濃いグレーに変化
+//   - Disabled: 0.4 の透明度（Fluent2 仕様値）
+//   - Readonly: テキストカーソル（選択・コピー可能）
+// ============================================
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    // フォーカスリング（outline）を非表示にし、ボトムライン方式に切り替え
+    --form-control-focus-ring-width: 0px;
+
+    // フォーカス時のボーダー色はニュートラルのまま（ボトムラインで強調）
+    --form-control-focus-border-color: var(--border-color-dark);
+
+    // Fluent2 仕様: disabled は 0.4 透明度
+    --form-control-disabled-opacity: 0.4;
+
+    // Readonly: テキストカーソル（選択・コピー可能なため not-allowed にしない）
+    --form-control-readonly-cursor: text;
+
+    // ============================================
+    // フォーカスインジケーター: ボトム 2px アクセントライン
+    // ============================================
+    &:focus-visible {
+      box-shadow: 0 -2px 0 0 var(--palette-default) inset;
+    }
+
+    // Hover 時: ボトム 1px ダークグレーライン
+    &:hover:not(:disabled):not(:read-only) {
+      box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+    }
+
+    // ============================================
+    // Filled バリエーション
+    // ============================================
+    &.filled {
+      &:focus-visible {
+        // デフォルト（1px）より太い 2px に上書き
+        box-shadow: 0 -2px 0 0 var(--palette-default) inset;
+      }
+
+      &:hover:not(:disabled):not(:read-only) {
+        box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+      }
+    }
+
+    // ============================================
+    // Underline バリエーション
+    // ============================================
+    &.underline {
+      &:focus-visible {
+        box-shadow: 0 -2px 0 0 var(--palette-default) inset;
+      }
+
+      &:hover:not(:disabled):not(:read-only) {
+        box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+      }
+    }
+  }
+}

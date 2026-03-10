@@ -28,6 +28,7 @@ $form-control-filled-active-bg-color-var: --#{$form-control-prefix}filled-active
 $form-control-filled-focus-bg-color-var: --#{$form-control-prefix}filled-focus-bg-color;
 $form-control-filled-disabled-bg-color-var: --#{$form-control-prefix}filled-disabled-bg-color;
 $form-control-filled-readonly-bg-color-var: --#{$form-control-prefix}filled-readonly-bg-color;
+$form-control-readonly-bg-color-var: --#{$form-control-prefix}readonly-bg-color;
 
 // --------------------------------------------
 // Colors
@@ -126,7 +127,10 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
     #{semantics.$neutral-light-var}
   );
   #{$form-control-filled-readonly-bg-color-var}: var(
-    #{$form-control-filled-bg-color-var}
+    #{color-defines.$surface-color-darker-var}
+  );
+  #{$form-control-readonly-bg-color-var}: var(
+    #{color-defines.$surface-color-dark-var}
   );
 
   // --------------------------------------------
@@ -176,9 +180,7 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   #{$form-control-active-border-color-var}: var(
     #{color-defines.$border-color-dark-var}
   );
-  #{$form-control-focus-border-color-var}: var(
-    #{color-defines.$border-color-dark-var}
-  );
+  #{$form-control-focus-border-color-var}: var(#{palette.$palette-default-var});
   #{$form-control-disabled-border-color-var}: var(
     #{semantics.$neutral-light-var}
   );
@@ -191,13 +193,14 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   // --------------------------------------------
   #{$form-control-focus-ring-width-var}: 2px;
   #{$form-control-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$form-control-focus-ring-offset-width-var}: 2px;
 
   // --------------------------------------------
   // Opacity
   // --------------------------------------------
   #{$form-control-opacity-var}: 1;
-  #{$form-control-disabled-opacity-var}: 1;
-  #{$form-control-readonly-opacity-var}: 0.7;
+  #{$form-control-disabled-opacity-var}: 0.5;
+  #{$form-control-readonly-opacity-var}: 1;
 
   // --------------------------------------------
   // Sizes
@@ -214,7 +217,7 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   // --------------------------------------------
   #{$form-control-cursor-var}: text;
   #{$form-control-disabled-cursor-var}: not-allowed;
-  #{$form-control-readonly-cursor-var}: not-allowed;
+  #{$form-control-readonly-cursor-var}: default;
 
   // --------------------------------------------
   // Transition
@@ -297,6 +300,7 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   }
 
   &:read-only {
+    background-color: var(#{$form-control-readonly-bg-color-var});
     color: var(#{$form-control-readonly-color-var});
     border-color: var(#{$form-control-readonly-border-color-var});
     opacity: var(#{$form-control-readonly-opacity-var});
@@ -359,5 +363,9 @@ $form-control-transition-var: --#{$form-control-prefix}transition;
   &:focus-visible {
     outline: none;
     box-shadow: 0 -1px 0 0 var(#{$form-control-focus-ring-color-var}) inset;
+  }
+
+  &:read-only {
+    #{$form-control-readonly-bg-color-var}: transparent;
   }
 }

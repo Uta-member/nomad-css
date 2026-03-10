@@ -5276,7 +5276,8 @@ h6,
   --form-control-filled-active-bg-color: var(--form-control-filled-bg-color);
   --form-control-filled-focus-bg-color: var(--form-control-filled-bg-color);
   --form-control-filled-disabled-bg-color: var(--neutral-light);
-  --form-control-filled-readonly-bg-color: var(--form-control-filled-bg-color);
+  --form-control-filled-readonly-bg-color: var(--surface-color-darker);
+  --form-control-readonly-bg-color: var(--surface-color-dark);
   --form-control-color: var(--text-color);
   --form-control-hover-color: var(--text-color);
   --form-control-active-color: var(--text-color);
@@ -5297,14 +5298,15 @@ h6,
   --form-control-border-color: var(--border-color);
   --form-control-hover-border-color: var(--border-color-dark);
   --form-control-active-border-color: var(--border-color-dark);
-  --form-control-focus-border-color: var(--border-color-dark);
+  --form-control-focus-border-color: var(--palette-default);
   --form-control-disabled-border-color: var(--neutral-light);
   --form-control-readonly-border-color: var(--form-control-border-color);
   --form-control-focus-ring-width: 2px;
   --form-control-focus-ring-color: var(--palette-default);
+  --form-control-focus-ring-offset-width: 2px;
   --form-control-opacity: 1;
-  --form-control-disabled-opacity: 1;
-  --form-control-readonly-opacity: 0.7;
+  --form-control-disabled-opacity: 0.5;
+  --form-control-readonly-opacity: 1;
   --form-control-padding: 0.5rem 0.75rem;
   --form-control-font-size: 1rem;
   --form-control-sm-padding: 0.25rem 0.5rem;
@@ -5313,7 +5315,7 @@ h6,
   --form-control-lg-font-size: 1.125rem;
   --form-control-cursor: text;
   --form-control-disabled-cursor: not-allowed;
-  --form-control-readonly-cursor: not-allowed;
+  --form-control-readonly-cursor: default;
   --form-control-transition: 0.2s, outline 0.05s;
 }
 
@@ -5374,6 +5376,7 @@ h6,
   color: var(--form-control-placeholder-disabled-color);
 }
 .form-control:read-only {
+  background-color: var(--form-control-readonly-bg-color);
   color: var(--form-control-readonly-color);
   border-color: var(--form-control-readonly-border-color);
   opacity: var(--form-control-readonly-opacity);
@@ -5430,6 +5433,9 @@ h6,
 .form-control.underline:focus-visible {
   outline: none;
   box-shadow: 0 -1px 0 0 var(--form-control-focus-ring-color) inset;
+}
+.form-control.underline:read-only {
+  --form-control-readonly-bg-color: transparent;
 }
 
 .select {
@@ -5710,10 +5716,16 @@ pre {
   --text-color: var(--neutral-color-0);
   --text-color-light: var(--neutral-color-0);
   --text-color-dark: var(--neutral-color-1);
-  --surface-color-lighter: var(--neutral-color-9);
-  --surface-color-light: var(--neutral-color-9);
+  --surface-color-lighter: var(
+    --neutral-color-9
+  );
+  --surface-color-light: var(
+    --neutral-color-9
+  );
   --surface-color: var(--neutral-color-10);
-  --surface-color-dark: var(--neutral-color-10);
+  --surface-color-dark: var(
+    --neutral-color-10
+  );
   --surface-color-darker: var(--neutral-color-10);
 }
 
@@ -5750,6 +5762,31 @@ pre {
   --button-disabled-color: var(--button-color);
   --button-disabled-border-color: var(--button-border-color);
   --button-disabled-opacity: 0.5;
+}
+
+:root[data-theme=fluent2] .form-control {
+  --form-control-focus-ring-width: 0px;
+  --form-control-focus-border-color: var(--border-color-dark);
+  --form-control-disabled-opacity: 0.4;
+  --form-control-readonly-cursor: text;
+}
+:root[data-theme=fluent2] .form-control:focus-visible {
+  box-shadow: 0 -2px 0 0 var(--palette-default) inset;
+}
+:root[data-theme=fluent2] .form-control:hover:not(:disabled):not(:read-only) {
+  box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+}
+:root[data-theme=fluent2] .form-control.filled:focus-visible {
+  box-shadow: 0 -2px 0 0 var(--palette-default) inset;
+}
+:root[data-theme=fluent2] .form-control.filled:hover:not(:disabled):not(:read-only) {
+  box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+}
+:root[data-theme=fluent2] .form-control.underline:focus-visible {
+  box-shadow: 0 -2px 0 0 var(--palette-default) inset;
+}
+:root[data-theme=fluent2] .form-control.underline:hover:not(:disabled):not(:read-only) {
+  box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
 }
 
 /*# sourceMappingURL=fluent2.css.map */

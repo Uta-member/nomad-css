@@ -4601,9 +4601,6 @@ h6,
   --neutral-l-8: 26%;
   --neutral-l-9: 18%;
   --neutral-l-10: 10%;
-  --neutral-l-11: 6%;
-  --neutral-l-12: 4%;
-  --neutral-l-13: 2%;
   --neutral-color-0: hsl(
     var(--neutral-h),
     var(--neutral-s),
@@ -4658,21 +4655,6 @@ h6,
     var(--neutral-h),
     var(--neutral-s),
     var(--neutral-l-10)
-  );
-  --neutral-color-11: hsl(
-    var(--neutral-h),
-    var(--neutral-s),
-    var(--neutral-l-11)
-  );
-  --neutral-color-12: hsl(
-    var(--neutral-h),
-    var(--neutral-s),
-    var(--neutral-l-12)
-  );
-  --neutral-color-13: hsl(
-    var(--neutral-h),
-    var(--neutral-s),
-    var(--neutral-l-13)
   );
   --neutral-gray-0: hsl(
     var(--neutral-h),
@@ -4729,21 +4711,6 @@ h6,
     var(--palette-gray-saturation),
     var(--neutral-l-10)
   );
-  --neutral-gray-11: hsl(
-    var(--neutral-h),
-    var(--palette-gray-saturation),
-    var(--neutral-l-11)
-  );
-  --neutral-gray-12: hsl(
-    var(--neutral-h),
-    var(--palette-gray-saturation),
-    var(--neutral-l-12)
-  );
-  --neutral-gray-13: hsl(
-    var(--neutral-h),
-    var(--palette-gray-saturation),
-    var(--neutral-l-13)
-  );
   --neutral-accent-0: hsl(
     var(--neutral-h),
     var(--palette-gray-saturation),
@@ -4795,21 +4762,6 @@ h6,
     var(--palette-accent-light-lightness)
   );
   --neutral-accent-10: hsl(
-    var(--neutral-h),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --neutral-accent-11: hsl(
-    var(--neutral-h),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --neutral-accent-12: hsl(
-    var(--neutral-h),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --neutral-accent-13: hsl(
     var(--neutral-h),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
@@ -5324,7 +5276,8 @@ h6,
   --form-control-filled-active-bg-color: var(--form-control-filled-bg-color);
   --form-control-filled-focus-bg-color: var(--form-control-filled-bg-color);
   --form-control-filled-disabled-bg-color: var(--neutral-light);
-  --form-control-filled-readonly-bg-color: var(--form-control-filled-bg-color);
+  --form-control-filled-readonly-bg-color: var(--surface-color-darker);
+  --form-control-readonly-bg-color: var(--surface-color-dark);
   --form-control-color: var(--text-color);
   --form-control-hover-color: var(--text-color);
   --form-control-active-color: var(--text-color);
@@ -5345,14 +5298,15 @@ h6,
   --form-control-border-color: var(--border-color);
   --form-control-hover-border-color: var(--border-color-dark);
   --form-control-active-border-color: var(--border-color-dark);
-  --form-control-focus-border-color: var(--border-color-dark);
+  --form-control-focus-border-color: var(--palette-default);
   --form-control-disabled-border-color: var(--neutral-light);
   --form-control-readonly-border-color: var(--form-control-border-color);
   --form-control-focus-ring-width: 2px;
   --form-control-focus-ring-color: var(--palette-default);
+  --form-control-focus-ring-offset-width: 2px;
   --form-control-opacity: 1;
-  --form-control-disabled-opacity: 1;
-  --form-control-readonly-opacity: 0.7;
+  --form-control-disabled-opacity: 0.5;
+  --form-control-readonly-opacity: 1;
   --form-control-padding: 0.5rem 0.75rem;
   --form-control-font-size: 1rem;
   --form-control-sm-padding: 0.25rem 0.5rem;
@@ -5361,7 +5315,7 @@ h6,
   --form-control-lg-font-size: 1.125rem;
   --form-control-cursor: text;
   --form-control-disabled-cursor: not-allowed;
-  --form-control-readonly-cursor: not-allowed;
+  --form-control-readonly-cursor: default;
   --form-control-transition: 0.2s, outline 0.05s;
 }
 
@@ -5422,6 +5376,7 @@ h6,
   color: var(--form-control-placeholder-disabled-color);
 }
 .form-control:read-only {
+  background-color: var(--form-control-readonly-bg-color);
   color: var(--form-control-readonly-color);
   border-color: var(--form-control-readonly-border-color);
   opacity: var(--form-control-readonly-opacity);
@@ -5478,6 +5433,9 @@ h6,
 .form-control.underline:focus-visible {
   outline: none;
   box-shadow: 0 -1px 0 0 var(--form-control-focus-ring-color) inset;
+}
+.form-control.underline:read-only {
+  --form-control-readonly-bg-color: transparent;
 }
 
 .select {
@@ -5771,6 +5729,24 @@ pre {
   --button-hover-border-color: var(--button-hover-bg-color);
   --button-active-border-color: var(--button-active-bg-color);
   --button-focus-border-color: var(--button-focus-bg-color);
+}
+
+:root[data-theme=material3] .form-control {
+  --form-control-focus-ring-width: 0px;
+  --form-control-disabled-opacity: 0.38;
+  --form-control-readonly-cursor: text;
+}
+:root[data-theme=material3] .form-control:focus-visible {
+  --form-control-border-top-width: 2px;
+  --form-control-border-right-width: 2px;
+  --form-control-border-bottom-width: 2px;
+  --form-control-border-left-width: 2px;
+}
+:root[data-theme=material3] .form-control.filled:focus-visible {
+  box-shadow: 0 -2px 0 0 var(--palette-default) inset;
+}
+:root[data-theme=material3] .form-control.underline:focus-visible {
+  box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 
 /*# sourceMappingURL=material3.css.map */
