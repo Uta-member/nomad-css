@@ -133,6 +133,20 @@
         <a href="#layout">Layout</a>
         <a href="#borders">Borders</a>
         <a href="#colors">Colors</a>
+        <a href="#accordion">Accordion</a>
+        <a href="#alert">Alert</a>
+        <a href="#avatar">Avatar</a>
+        <a href="#badge">Badge</a>
+        <a href="#breadcrumb">Breadcrumb</a>
+        <a href="#card">Card</a>
+        <a href="#chip">Chip</a>
+        <a href="#divider">Divider</a>
+        <a href="#list">List</a>
+        <a href="#pagination">Pagination</a>
+        <a href="#skeleton">Skeleton</a>
+        <a href="#spinner">Spinner</a>
+        <a href="#switch">Switch</a>
+        <a href="#tooltip">Tooltip</a>
       </div>
 
       <div>
@@ -2217,6 +2231,809 @@ Disabled textarea</textarea
               <div class="container-color-9">9</div>
               <div class="container-color-10">10</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Accordion -->
+      <!-- ============================================ -->
+      <section id="accordion" class="demo-section">
+        <h2>Accordion</h2>
+
+        <!-- Single Accordion -->
+        <div class="demo-row">
+          <div class="demo-label">Single Accordion</div>
+          <details class="accordion">
+            <summary class="accordion-header">Accordion Header 1</summary>
+            <div class="accordion-body">
+              Accordion content. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+            </div>
+          </details>
+          <details class="accordion" open>
+            <summary class="accordion-header">Accordion Header 2 (Open)</summary>
+            <div class="accordion-body">
+              This accordion is open by default. You can click the header to
+              collapse it.
+            </div>
+          </details>
+        </div>
+
+        <!-- Accordion Group -->
+        <div class="demo-row">
+          <div class="demo-label">Accordion Group (.accordion-group)</div>
+          <div class="accordion-group">
+            <details class="accordion">
+              <summary class="accordion-header">Section 1</summary>
+              <div class="accordion-body">Content for section 1.</div>
+            </details>
+            <details class="accordion" open>
+              <summary class="accordion-header">Section 2 (Open)</summary>
+              <div class="accordion-body">Content for section 2.</div>
+            </details>
+            <details class="accordion">
+              <summary class="accordion-header">Section 3</summary>
+              <div class="accordion-body">Content for section 3.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Alert -->
+      <!-- ============================================ -->
+      <section id="alert" class="demo-section">
+        <h2>Alert</h2>
+
+        <!-- Semantic Color Alerts -->
+        <div class="demo-row">
+          <div class="demo-label">Alert (Semantic Colors)</div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem">
+            <div class="alert primary">
+              <span class="alert-icon">ℹ</span>
+              <div>
+                <span class="alert-title">Primary</span>
+                <span class="alert-body">This is a primary alert message.</span>
+              </div>
+            </div>
+            <div class="alert secondary">
+              <span class="alert-icon">★</span>
+              <div>
+                <span class="alert-title">Secondary</span>
+                <span class="alert-body">This is a secondary alert message.</span>
+              </div>
+            </div>
+            <div class="alert success">
+              <span class="alert-icon">✓</span>
+              <div>
+                <span class="alert-title">Success</span>
+                <span class="alert-body">Operation completed successfully.</span>
+              </div>
+            </div>
+            <div class="alert warning">
+              <span class="alert-icon">⚠</span>
+              <div>
+                <span class="alert-title">Warning</span>
+                <span class="alert-body">Please review before continuing.</span>
+              </div>
+            </div>
+            <div class="alert danger">
+              <span class="alert-icon">✕</span>
+              <div>
+                <span class="alert-title">Danger</span>
+                <span class="alert-body">An error occurred. Please try again.</span>
+              </div>
+            </div>
+            <div class="alert info">
+              <span class="alert-icon">ℹ</span>
+              <div>
+                <span class="alert-title">Info</span>
+                <span class="alert-body">Here is some useful information.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outlined Alerts -->
+        <div class="demo-row">
+          <div class="demo-label">Alert Outlined (.outlined)</div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem">
+            <div class="alert primary outlined">
+              <span class="alert-icon">ℹ</span>
+              <div>
+                <span class="alert-title">Primary Outlined</span>
+                <span class="alert-body">This is an outlined primary alert.</span>
+              </div>
+            </div>
+            <div class="alert success outlined">
+              <span class="alert-icon">✓</span>
+              <div>
+                <span class="alert-title">Success Outlined</span>
+                <span class="alert-body">Operation completed successfully.</span>
+              </div>
+            </div>
+            <div class="alert danger outlined">
+              <span class="alert-icon">✕</span>
+              <div>
+                <span class="alert-title">Danger Outlined</span>
+                <span class="alert-body">An error occurred.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simple Alert (no icon) -->
+        <div class="demo-row">
+          <div class="demo-label">Alert (No Icon)</div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem">
+            <div class="alert info">This is a simple info alert without an icon.</div>
+            <div class="alert warning">This is a simple warning alert without an icon.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Avatar -->
+      <!-- ============================================ -->
+      <section id="avatar" class="demo-section">
+        <h2>Avatar</h2>
+
+        <!-- Basic Avatar -->
+        <div class="demo-row">
+          <div class="demo-label">Avatar (Text Initials)</div>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
+            <span class="avatar primary">AB</span>
+            <span class="avatar secondary">CD</span>
+            <span class="avatar success">EF</span>
+            <span class="avatar warning">GH</span>
+            <span class="avatar danger">IJ</span>
+            <span class="avatar info">KL</span>
+          </div>
+        </div>
+
+        <!-- Avatar Sizes -->
+        <div class="demo-row">
+          <div class="demo-label">Avatar Sizes</div>
+          <div style="display: flex; gap: 1rem; align-items: center">
+            <span class="avatar primary sm">AB</span>
+            <span class="avatar primary">AB</span>
+            <span class="avatar primary lg">AB</span>
+          </div>
+        </div>
+
+        <!-- Avatar Shapes -->
+        <div class="demo-row">
+          <div class="demo-label">Avatar Shapes</div>
+          <div style="display: flex; gap: 1rem; align-items: center">
+            <span class="avatar primary circle">AB</span>
+            <span class="avatar primary rounded">AB</span>
+            <span class="avatar primary square">AB</span>
+          </div>
+        </div>
+
+        <!-- Avatar with Image -->
+        <div class="demo-row">
+          <div class="demo-label">Avatar with Image</div>
+          <div style="display: flex; gap: 1rem; align-items: center">
+            <span class="avatar">
+              <img src="https://i.pravatar.cc/100?img=1" alt="User 1" />
+            </span>
+            <span class="avatar rounded">
+              <img src="https://i.pravatar.cc/100?img=2" alt="User 2" />
+            </span>
+            <span class="avatar square">
+              <img src="https://i.pravatar.cc/100?img=3" alt="User 3" />
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Badge -->
+      <!-- ============================================ -->
+      <section id="badge" class="demo-section">
+        <h2>Badge</h2>
+
+        <!-- Semantic Colors -->
+        <div class="demo-row">
+          <div class="demo-label">Badge (Semantic Colors)</div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center">
+            <span class="badge primary">Primary</span>
+            <span class="badge secondary">Secondary</span>
+            <span class="badge tertiary">Tertiary</span>
+            <span class="badge success">Success</span>
+            <span class="badge warning">Warning</span>
+            <span class="badge danger">Danger</span>
+            <span class="badge info">Info</span>
+          </div>
+        </div>
+
+        <!-- Sizes -->
+        <div class="demo-row">
+          <div class="demo-label">Badge Sizes</div>
+          <div style="display: flex; gap: 0.75rem; align-items: center">
+            <span class="badge primary sm">Small</span>
+            <span class="badge primary">Default</span>
+            <span class="badge primary lg">Large</span>
+          </div>
+        </div>
+
+        <!-- Dot Badge -->
+        <div class="demo-row">
+          <div class="demo-label">Badge Dot (.dot)</div>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
+            <span class="badge primary dot"></span>
+            <span class="badge secondary dot"></span>
+            <span class="badge success dot"></span>
+            <span class="badge warning dot"></span>
+            <span class="badge danger dot"></span>
+            <span class="badge info dot"></span>
+          </div>
+        </div>
+
+        <!-- Overlay Badge -->
+        <div class="demo-row">
+          <div class="demo-label">Badge Overlay (.overlay)</div>
+          <div style="display: flex; gap: 2rem; align-items: center">
+            <div style="position: relative; display: inline-block">
+              <button class="button filled primary">Messages</button>
+              <span class="badge danger overlay">5</span>
+            </div>
+            <div style="position: relative; display: inline-block">
+              <button class="button outlined secondary">Notifications</button>
+              <span class="badge danger dot overlay"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Breadcrumb -->
+      <!-- ============================================ -->
+      <section id="breadcrumb" class="demo-section">
+        <h2>Breadcrumb</h2>
+
+        <!-- Basic Breadcrumb -->
+        <div class="demo-row">
+          <div class="demo-label">Breadcrumb (.breadcrumb)</div>
+          <ol class="breadcrumb primary">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active">Data</li>
+          </ol>
+        </div>
+
+        <!-- Deeper Breadcrumb -->
+        <div class="demo-row">
+          <div class="demo-label">Deeper Nesting</div>
+          <ol class="breadcrumb primary">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Products</a></li>
+            <li class="breadcrumb-item"><a href="#">Electronics</a></li>
+            <li class="breadcrumb-item"><a href="#">Laptops</a></li>
+            <li class="breadcrumb-item active">Model X</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Card -->
+      <!-- ============================================ -->
+      <section id="card" class="demo-section">
+        <h2>Card</h2>
+
+        <!-- Basic Card -->
+        <div class="demo-row">
+          <div class="demo-label">Basic Card (.card)</div>
+          <div style="max-width: 320px">
+            <div class="card">
+              <div class="card-body">
+                <p>This is a basic card with body content only.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card with Header and Footer -->
+        <div class="demo-row">
+          <div class="demo-label">Card with Header &amp; Footer</div>
+          <div style="max-width: 320px">
+            <div class="card">
+              <div class="card-header">Card Header</div>
+              <div class="card-body">
+                <p>Card body content. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.</p>
+              </div>
+              <div class="card-footer">Card Footer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card with Image -->
+        <div class="demo-row">
+          <div class="demo-label">Card with Image (.card-img)</div>
+          <div style="max-width: 320px">
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://picsum.photos/320/180?random=1"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <p><strong>Card Title</strong></p>
+                <p>Some description text for this card.</p>
+                <button class="button filled primary sm">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multiple Cards -->
+        <div class="demo-row">
+          <div class="demo-label">Multiple Cards</div>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+            <div class="card" style="width: 200px">
+              <div class="card-header">Card 1</div>
+              <div class="card-body">Content for card 1.</div>
+            </div>
+            <div class="card" style="width: 200px">
+              <div class="card-header">Card 2</div>
+              <div class="card-body">Content for card 2.</div>
+            </div>
+            <div class="card" style="width: 200px">
+              <div class="card-header">Card 3</div>
+              <div class="card-body">Content for card 3.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Chip -->
+      <!-- ============================================ -->
+      <section id="chip" class="demo-section">
+        <h2>Chip</h2>
+
+        <!-- Semantic Colors -->
+        <div class="demo-row">
+          <div class="demo-label">Chip (Semantic Colors)</div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+            <span class="chip primary">Primary</span>
+            <span class="chip secondary">Secondary</span>
+            <span class="chip tertiary">Tertiary</span>
+            <span class="chip success">Success</span>
+            <span class="chip warning">Warning</span>
+            <span class="chip danger">Danger</span>
+            <span class="chip info">Info</span>
+          </div>
+        </div>
+
+        <!-- Variants -->
+        <div class="demo-row">
+          <div class="demo-label">Chip Variants</div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+            <span class="chip primary">Default (Tonal)</span>
+            <span class="chip primary outlined">Outlined</span>
+            <span class="chip primary tonal">Tonal</span>
+          </div>
+        </div>
+
+        <!-- Sizes -->
+        <div class="demo-row">
+          <div class="demo-label">Chip Sizes</div>
+          <div style="display: flex; gap: 0.5rem; align-items: center">
+            <span class="chip primary sm">Small</span>
+            <span class="chip primary">Default</span>
+            <span class="chip primary lg">Large</span>
+          </div>
+        </div>
+
+        <!-- With Icon -->
+        <div class="demo-row">
+          <div class="demo-label">Chip with Icon</div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+            <span class="chip primary">
+              <span class="chip-icon">★</span>
+              Starred
+            </span>
+            <span class="chip success">
+              <span class="chip-icon">✓</span>
+              Verified
+            </span>
+            <span class="chip danger">
+              <span class="chip-icon">⚠</span>
+              Alert
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Divider -->
+      <!-- ============================================ -->
+      <section id="divider" class="demo-section">
+        <h2>Divider</h2>
+
+        <!-- Horizontal Divider -->
+        <div class="demo-row">
+          <div class="demo-label">Horizontal Divider (hr.divider)</div>
+          <p>Content above</p>
+          <hr class="divider" />
+          <p>Content below</p>
+        </div>
+
+        <!-- Text Divider -->
+        <div class="demo-row">
+          <div class="demo-label">Text Divider (div.divider)</div>
+          <div class="divider">Section Title</div>
+          <div class="divider">OR</div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="demo-row">
+          <div class="demo-label">Vertical Divider (span.divider.vertical)</div>
+          <div style="display: flex; align-items: center">
+            <span>Left Content</span>
+            <span class="divider vertical"></span>
+            <span>Middle Content</span>
+            <span class="divider vertical"></span>
+            <span>Right Content</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- List -->
+      <!-- ============================================ -->
+      <section id="list" class="demo-section">
+        <h2>List</h2>
+
+        <!-- Plain List -->
+        <div class="demo-row">
+          <div class="demo-label">Plain List (.list)</div>
+          <ul class="list" style="max-width: 300px">
+            <li class="list-item">List Item 1</li>
+            <li class="list-item">List Item 2</li>
+            <li class="list-item active">Active Item</li>
+            <li class="list-item">List Item 4</li>
+            <li class="list-item disabled">Disabled Item</li>
+          </ul>
+        </div>
+
+        <!-- List Group -->
+        <div class="demo-row">
+          <div class="demo-label">List Group (.list-group)</div>
+          <ul class="list-group primary" style="max-width: 300px">
+            <li class="list-group-item">Group Item 1</li>
+            <li class="list-group-item">Group Item 2</li>
+            <li class="list-group-item active">Active Item</li>
+            <li class="list-group-item">Group Item 4</li>
+            <li class="list-group-item disabled">Disabled Item</li>
+          </ul>
+        </div>
+
+        <!-- List Group with Links -->
+        <div class="demo-row">
+          <div class="demo-label">List Group with Links</div>
+          <div class="list-group primary" style="max-width: 300px">
+            <a href="#" class="list-group-item">Clickable Item 1</a>
+            <a href="#" class="list-group-item active">Active Clickable</a>
+            <a href="#" class="list-group-item">Clickable Item 3</a>
+            <a href="#" class="list-group-item disabled">Disabled</a>
+          </div>
+        </div>
+
+        <!-- Flush List Group -->
+        <div class="demo-row">
+          <div class="demo-label">Flush List Group (.flush)</div>
+          <ul class="list-group primary flush" style="max-width: 300px">
+            <li class="list-group-item">Flush Item 1</li>
+            <li class="list-group-item">Flush Item 2</li>
+            <li class="list-group-item active">Active Flush</li>
+            <li class="list-group-item">Flush Item 4</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Pagination -->
+      <!-- ============================================ -->
+      <section id="pagination" class="demo-section">
+        <h2>Pagination</h2>
+
+        <!-- Basic Pagination -->
+        <div class="demo-row">
+          <div class="demo-label">Basic Pagination (.pagination)</div>
+          <ul class="pagination primary">
+            <li class="page-item disabled">
+              <a class="page-link">«</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">5</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">»</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pagination Sizes -->
+        <div class="demo-row">
+          <div class="demo-label">Pagination Sizes</div>
+          <div style="display: flex; flex-direction: column; gap: 1rem">
+            <ul class="pagination primary sm">
+              <li class="page-item"><a class="page-link" href="#">«</a></li>
+              <li class="page-item active"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">»</a></li>
+            </ul>
+            <ul class="pagination primary">
+              <li class="page-item"><a class="page-link" href="#">«</a></li>
+              <li class="page-item active"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">»</a></li>
+            </ul>
+            <ul class="pagination primary lg">
+              <li class="page-item"><a class="page-link" href="#">«</a></li>
+              <li class="page-item active"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">»</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Skeleton -->
+      <!-- ============================================ -->
+      <section id="skeleton" class="demo-section">
+        <h2>Skeleton</h2>
+
+        <!-- Text Skeleton -->
+        <div class="demo-row">
+          <div class="demo-label">Text Skeleton (.skeleton.text)</div>
+          <div style="max-width: 400px; display: flex; flex-direction: column; gap: 0.5rem">
+            <span class="skeleton text" style="width: 90%"></span>
+            <span class="skeleton text" style="width: 75%"></span>
+            <span class="skeleton text" style="width: 60%"></span>
+          </div>
+        </div>
+
+        <!-- Rect Skeleton -->
+        <div class="demo-row">
+          <div class="demo-label">Rectangle Skeleton (.skeleton.rect)</div>
+          <div style="max-width: 400px">
+            <span class="skeleton rect" style="display: block; width: 100%; height: 120px"></span>
+          </div>
+        </div>
+
+        <!-- Circle Skeleton -->
+        <div class="demo-row">
+          <div class="demo-label">Circle Skeleton (.skeleton.circle)</div>
+          <div style="display: flex; gap: 0.75rem; align-items: center">
+            <span class="skeleton circle" style="display: inline-block; width: 2.5rem; height: 2.5rem"></span>
+            <span class="skeleton circle" style="display: inline-block; width: 4rem; height: 4rem"></span>
+            <span class="skeleton circle" style="display: inline-block; width: 6rem; height: 6rem"></span>
+          </div>
+        </div>
+
+        <!-- Card Skeleton -->
+        <div class="demo-row">
+          <div class="demo-label">Card Skeleton (Composition)</div>
+          <div style="max-width: 320px; display: flex; gap: 0.75rem; align-items: flex-start">
+            <span class="skeleton circle" style="display: inline-block; width: 3rem; height: 3rem; flex-shrink: 0"></span>
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem">
+              <span class="skeleton text" style="width: 60%"></span>
+              <span class="skeleton text" style="width: 45%"></span>
+              <span class="skeleton rect" style="display: block; width: 100%; height: 80px; margin-top: 0.25rem"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Spinner -->
+      <!-- ============================================ -->
+      <section id="spinner" class="demo-section">
+        <h2>Spinner</h2>
+
+        <!-- Semantic Colors -->
+        <div class="demo-row">
+          <div class="demo-label">Spinner (Semantic Colors)</div>
+          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap">
+            <span class="spinner primary"></span>
+            <span class="spinner secondary"></span>
+            <span class="spinner tertiary"></span>
+            <span class="spinner success"></span>
+            <span class="spinner warning"></span>
+            <span class="spinner danger"></span>
+            <span class="spinner info"></span>
+          </div>
+        </div>
+
+        <!-- Sizes -->
+        <div class="demo-row">
+          <div class="demo-label">Spinner Sizes</div>
+          <div style="display: flex; gap: 1.5rem; align-items: center">
+            <span class="spinner primary sm"></span>
+            <span class="spinner primary"></span>
+            <span class="spinner primary lg"></span>
+          </div>
+        </div>
+
+        <!-- In a Button -->
+        <div class="demo-row">
+          <div class="demo-label">Spinner in Button</div>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
+            <button class="button filled primary" disabled>
+              <span class="spinner sm"></span>
+              Loading...
+            </button>
+            <button class="button outlined secondary" disabled>
+              <span class="spinner secondary sm"></span>
+              Processing
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Switch -->
+      <!-- ============================================ -->
+      <section id="switch" class="demo-section">
+        <h2>Switch</h2>
+
+        <!-- Basic Switch -->
+        <div class="demo-row">
+          <div class="demo-label">Basic Switch (.switch)</div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem">
+            <label class="switch">
+              <input type="checkbox" class="switch-input" />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Unchecked</span>
+            </label>
+            <label class="switch">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Checked</span>
+            </label>
+            <label class="switch">
+              <input type="checkbox" class="switch-input" disabled />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Disabled</span>
+            </label>
+            <label class="switch">
+              <input type="checkbox" class="switch-input" checked disabled />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Checked Disabled</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Semantic Colors -->
+        <div class="demo-row">
+          <div class="demo-label">Switch Semantic Colors</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem">
+            <label class="switch primary">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Primary</span>
+            </label>
+            <label class="switch secondary">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Secondary</span>
+            </label>
+            <label class="switch success">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Success</span>
+            </label>
+            <label class="switch warning">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Warning</span>
+            </label>
+            <label class="switch danger">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Danger</span>
+            </label>
+            <label class="switch info">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Info</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Sizes -->
+        <div class="demo-row">
+          <div class="demo-label">Switch Sizes</div>
+          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap">
+            <label class="switch primary sm">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Small</span>
+            </label>
+            <label class="switch primary">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Default</span>
+            </label>
+            <label class="switch primary lg">
+              <input type="checkbox" class="switch-input" checked />
+              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-label">Large</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- Tooltip -->
+      <!-- ============================================ -->
+      <section id="tooltip" class="demo-section">
+        <h2>Tooltip</h2>
+
+        <!-- Placement -->
+        <div class="demo-row">
+          <div class="demo-label">Tooltip Placement (hover to see)</div>
+          <div style="display: flex; gap: 3rem; align-items: center; padding: 2rem">
+            <span class="tooltip" data-tooltip="Top tooltip (default)">
+              <button class="button outlined primary">Top (default)</button>
+            </span>
+            <span class="tooltip tooltip-bottom" data-tooltip="Bottom tooltip">
+              <button class="button outlined primary">Bottom</button>
+            </span>
+            <span class="tooltip tooltip-right" data-tooltip="Right tooltip">
+              <button class="button outlined primary">Right</button>
+            </span>
+            <span class="tooltip tooltip-left" data-tooltip="Left tooltip">
+              <button class="button outlined primary">Left</button>
+            </span>
+          </div>
+        </div>
+
+        <!-- Tooltip on Text -->
+        <div class="demo-row">
+          <div class="demo-label">Tooltip on Text</div>
+          <p>
+            Hover over
+            <span class="tooltip" data-tooltip="This is an abbreviation explanation">
+              <abbr style="cursor: help; border-bottom: 1px dotted">CSS</abbr>
+            </span>
+            or
+            <span class="tooltip tooltip-bottom" data-tooltip="Click the link for more info">
+              <a href="#">this link</a>
+            </span>
+            to see tooltips.
+          </p>
+        </div>
+
+        <!-- Long Tooltip -->
+        <div class="demo-row">
+          <div class="demo-label">Long Tooltip Text</div>
+          <div style="padding-top: 3rem">
+            <span class="tooltip" data-tooltip="This is a longer tooltip text that wraps to multiple lines when it exceeds the maximum width.">
+              <button class="button tonal info">Hover for long tooltip</button>
+            </span>
           </div>
         </div>
       </section>
