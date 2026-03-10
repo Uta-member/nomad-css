@@ -58,7 +58,8 @@ $skeleton-speed-var: --#{$skeleton-prefix}speed !default;
 // ============================================
 .#{$skeleton-class-name} {
   // --------------------------------------------
-  // Colors
+  // Colors (Light mode)
+  // bg: darker(75%) / shimmer: dark(85%) で shimmer が明るく浮き上がる
   // --------------------------------------------
   #{$skeleton-bg-color-var}: var(#{color-defines.$surface-color-darker-var});
   #{$skeleton-shimmer-color-var}: var(#{color-defines.$surface-color-dark-var});

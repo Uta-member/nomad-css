@@ -6692,7 +6692,7 @@ pre {
   );
   --surface-color: var(--neutral-color-10);
   --surface-color-dark: var(
-    --neutral-color-10
+    --neutral-color-9
   );
   --surface-color-darker: var(--neutral-color-10);
 }

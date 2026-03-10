@@ -41,7 +41,7 @@
   ); // 18% → 上位サーフェス (カード等)
   --surface-color: var(--neutral-color-10); // 10% → ベース背景
   --surface-color-dark: var(
-    --neutral-color-10
-  ); // 10% → 低位 (スクロール背景等)
-  --surface-color-darker: var(--neutral-color-10); // 10% → 最低位 ※ほぼ同一
+    --neutral-color-9
+  ); // 18% → 低位 (スクロール背景等) ※ lighter/light と同値だがコントラスト確保のため区別
+  --surface-color-darker: var(--neutral-color-10); // 10% → 最低位（skeleton bg など）
 }
