@@ -99,8 +99,3 @@ $hues: (
     variant-name: #{$hue-pink-var},
   ),
 );
-:root {
-  @each $key, $value in $hues {
-    #{map.get($value, variant-name)}: #{map.get($value, hue)};
-  }
-}

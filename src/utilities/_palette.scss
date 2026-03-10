@@ -71,69 +71,6 @@ $palette-accent-threshold-default: 50% !default;
 $palette-gray-saturation-default: 5% !default;
 
 // ============================================
-// デフォルトパレット定義リスト
-// ============================================
-// selector: セレクタ
-// value: パレットプロパティリスト
-//   hue: 色相
-//   saturation: 彩度
-//   lightnesses: 輝度リスト
-//     key: 輝度名
-//     value: 輝度値
-//   accent-threshold: アクセント切り替え輝度
-//   levels: レベルリスト
-//     key: レベル名
-//     value: 輝度名
-//   accent-light-lightness: アクセントの明るい方の輝度
-//   accent-dark-lightness: アクセントの暗い方の輝度
-//   gray-saturation: グレーの彩度
-//   palette-prefix: パレットのベースprefix
-// ============================================
-$palettes: (
-  // ".#{prefixes.$prefix}primary": (
-  //   hue: 220,
-  //   saturation: 80%,
-  //   lightnesses: (
-  //     0: 97%,
-  //     1: 93%,
-  //     2: 85%,
-  //     3: 75%,
-  //     4: 65%,
-  //     5: 50%,
-  //     6: 42%,
-  //     7: 34%,
-  //     8: 26%,
-  //     9: 18%,
-  //     10: 10%,
-  //   ),
-  //   accent-threshold: 50%,
-  //   levels: (
-  //     lighter: 2,
-  //     light: 3,
-  //     default: 6,
-  //     dark: 8,
-  //     darker: 9,
-  //   ),
-  //   accent-light-lightness: 97%,
-  //   accent-dark-lightness: 10%,
-  //   gray-saturation: 5%,
-  //   names: (
-  //     palette-prefix: #{$palette-prefix},
-  //     palette-color-prefix: #{$palette-color-prefix},
-  //     palette-accent-prefix: #{$palette-accent-prefix},
-  //     palette-gray-prefix: #{$palette-gray-prefix},
-  //     palette-lightness-prefix: #{$palette-lightness-prefix},
-  //     palette-hue-var: #{$palette-hue-var},
-  //     palette-saturation-var: #{$palette-saturation-var},
-  //     palette-gray-saturation-var: #{$palette-gray-saturation-var},
-  //     palette-accent-light-lightness-var: #{$palette-accent-light-lightness-var},
-  //     palette-accent-dark-lightness-var: #{$palette-accent-dark-lightness-var},
-  //     palette-accent-threshold-var: #{$palette-accent-threshold-var},
-  //   ),
-   // ),
-) !default;
-
-// ============================================
 // Mixins
 // ============================================
 @mixin generate-palette($palette) {
@@ -249,14 +186,5 @@ $palettes: (
 
     --#{$base-prefix}#{$level-name}: var(--#{$color-prefix}#{$step-key});
     --#{$accent-prefix}#{$level-name}: var(--#{$accent-prefix}#{$step-key});
-  }
-}
-
-//=============================================
-// Process
-// ============================================
-@each $name, $value in $palettes {
-  .#{$name} {
-    @include generate-palette($value);
   }
 }

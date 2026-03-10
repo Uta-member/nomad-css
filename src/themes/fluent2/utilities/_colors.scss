@@ -1,6 +1,9 @@
 @use "./prefixes" as prefixes;
 
 :root[data-theme="#{prefixes.$theme-name}"] {
+  // Fluent2 はニュートラルを無彩色（純グレー）で使用するため彩度を 0 に
+  --neutral-s: 0%;
+
   .secondary {
     --palette-saturation: 0%;
   }
@@ -8,25 +11,37 @@
 
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
-  --text-color: #1f1f1f;
-  --text-color-light: #3f3f3f;
-  --text-color-dark: #000000;
+  // テキスト: neutral-color-10 (10%) → #1a1a1a ≈ #1f1f1f
+  --text-color: var(--neutral-color-10);
+  // テキスト（サブ）: neutral-color-8 (26%) → #424242 ≈ #3f3f3f
+  --text-color-light: var(--neutral-color-8);
+  // テキスト（強調）: 同 neutral-color-10 (--neutral-s:0% で純黒に近い)
+  --text-color-dark: var(--neutral-color-10);
 
-  --surface-color: #f0f0f0;
-  --surface-color-light: #f5f5f5;
-  --surface-color-lighter: #ffffff;
-  --surface-color-dark: #e5e5e5;
-  --surface-color-darker: #d9d9d9;
+  // サーフェス: lighter/light は neutral-color-0 (97%), 標準は neutral-color-1 (93%)
+  --surface-color-lighter: var(--neutral-color-0);
+  --surface-color-light: var(--neutral-color-0);
+  --surface-color: var(--neutral-color-1);
+  --surface-color-dark: var(--neutral-color-2);
+  --surface-color-darker: var(--neutral-color-3);
 }
 
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
-  --text-color: #f0f0f0;
-  --text-color-light: #f5f5f5;
-  --text-color-dark: #e5e5e5;
+  // テキスト（ライトモードの明暗を反転して参照）
+  --text-color: var(--neutral-color-0); // 97% → 明るい文字色
+  --text-color-light: var(--neutral-color-0); // 97% → サブテキスト
+  --text-color-dark: var(--neutral-color-1); // 93% → 強調テキスト
 
-  --surface-color: #0d0d0d;
-  --surface-color-light: #1a1a1a;
-  --surface-color-lighter: #262626;
-  --surface-color-dark: #0a0a0a;
-  --surface-color-darker: #050505;
+  // サーフェス（elevation モデル: 番号が小さいほど明るく＝浮いて見える）
+  --surface-color-lighter: var(
+    --neutral-color-9
+  ); // 18% → 最上位サーフェス (ダイアログ等)
+  --surface-color-light: var(
+    --neutral-color-9
+  ); // 18% → 上位サーフェス (カード等)
+  --surface-color: var(--neutral-color-10); // 10% → ベース背景
+  --surface-color-dark: var(
+    --neutral-color-10
+  ); // 10% → 低位 (スクロール背景等)
+  --surface-color-darker: var(--neutral-color-10); // 10% → 最低位 ※ほぼ同一
 }

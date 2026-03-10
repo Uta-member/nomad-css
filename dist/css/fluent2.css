@@ -4782,14 +4782,14 @@ h6,
   --border-color: var(--neutral-default);
   --border-color-light: var(--neutral-light);
   --border-color-dark: var(--neutral-dark);
-  --text-color: #1F1F1F;
-  --text-color-light: #3F3F3F;
-  --text-color-dark: #000000;
-  --surface-color: #F0F0F0;
-  --surface-color-light: #F5F5F5;
-  --surface-color-lighter: #FFFFFF;
-  --surface-color-dark: #E5E5E5;
-  --surface-color-darker: #D9D9D9;
+  --text-color: var(--neutral-color-9);
+  --text-color-light: var(--neutral-color-8);
+  --text-color-dark: var(--neutral-color-10);
+  --surface-color-lighter: var(--neutral-color-0);
+  --surface-color-light: var(--neutral-color-0);
+  --surface-color: var(--neutral-color-1);
+  --surface-color-dark: var(--neutral-color-2);
+  --surface-color-darker: var(--neutral-color-3);
 }
 
 .button {
@@ -5098,12 +5098,9 @@ h6,
   width: 100%;
   height: 100%;
   background-color: transparent;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 .checkbox:checked::before, .checkbox:indeterminate::before {
   background-color: var(--checkbox-mark-color);
@@ -5112,12 +5109,10 @@ h6,
   background-color: var(--checkbox-disabled-mark-color);
 }
 .checkbox:checked::before {
-  -webkit-mask-image: var(--checkbox-mark-image);
-          mask-image: var(--checkbox-mark-image);
+  mask-image: var(--checkbox-mark-image);
 }
 .checkbox:indeterminate::before {
-  -webkit-mask-image: var(--checkbox-indeterminate-mark-image);
-          mask-image: var(--checkbox-indeterminate-mark-image);
+  mask-image: var(--checkbox-indeterminate-mark-image);
 }
 
 .radio {
@@ -5235,12 +5230,9 @@ h6,
   height: var(--radio-mark-size);
   border-radius: 50%;
   background-color: transparent;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 .radio:checked::before {
   background-color: var(--radio-mark-color);
@@ -5355,9 +5347,6 @@ h6,
   color: var(--form-control-hover-color);
   border-color: var(--form-control-hover-border-color);
 }
-.form-control:hover::-moz-placeholder {
-  color: var(--form-control-placeholder-hover-color);
-}
 .form-control:hover::placeholder {
   color: var(--form-control-placeholder-hover-color);
 }
@@ -5365,18 +5354,12 @@ h6,
   color: var(--form-control-active-color);
   border-color: var(--form-control-active-border-color);
 }
-.form-control:active::-moz-placeholder {
-  color: var(--form-control-placeholder-active-color);
-}
 .form-control:active::placeholder {
   color: var(--form-control-placeholder-active-color);
 }
 .form-control:focus-visible {
   color: var(--form-control-focus-color);
   border-color: var(--form-control-focus-border-color);
-}
-.form-control:focus-visible::-moz-placeholder {
-  color: var(--form-control-placeholder-focus-color);
 }
 .form-control:focus-visible::placeholder {
   color: var(--form-control-placeholder-focus-color);
@@ -5387,17 +5370,8 @@ h6,
   opacity: var(--form-control-disabled-opacity);
   cursor: var(--form-control-disabled-cursor);
 }
-.form-control:disabled::-moz-placeholder {
-  color: var(--form-control-placeholder-disabled-color);
-}
 .form-control:disabled::placeholder {
   color: var(--form-control-placeholder-disabled-color);
-}
-.form-control:-moz-read-only {
-  color: var(--form-control-readonly-color);
-  border-color: var(--form-control-readonly-border-color);
-  opacity: var(--form-control-readonly-opacity);
-  cursor: var(--form-control-readonly-cursor);
 }
 .form-control:read-only {
   color: var(--form-control-readonly-color);
@@ -5405,17 +5379,8 @@ h6,
   opacity: var(--form-control-readonly-opacity);
   cursor: var(--form-control-readonly-cursor);
 }
-.form-control:read-only::-moz-placeholder {
-  color: var(--form-control-placeholder-readonly-color);
-}
-.form-control:-moz-read-only::placeholder {
-  color: var(--form-control-placeholder-readonly-color);
-}
 .form-control:read-only::placeholder {
   color: var(--form-control-placeholder-readonly-color);
-}
-.form-control::-moz-placeholder {
-  color: var(--form-control-placeholder-color);
 }
 .form-control::placeholder {
   color: var(--form-control-placeholder-color);
@@ -5450,9 +5415,6 @@ h6,
 }
 .form-control.filled:disabled {
   background-color: var(--form-control-filled-disabled-bg-color);
-}
-.form-control.filled:-moz-read-only {
-  background-color: var(--form-control-filled-readonly-bg-color);
 }
 .form-control.filled:read-only {
   background-color: var(--form-control-filled-readonly-bg-color);
@@ -5547,9 +5509,6 @@ h6,
   color: var(--select-hover-color);
   border-color: var(--select-hover-border-color);
 }
-.select:hover::-moz-placeholder {
-  color: var(--select-placeholder-hover-color);
-}
 .select:hover::placeholder {
   color: var(--select-placeholder-hover-color);
 }
@@ -5557,18 +5516,12 @@ h6,
   color: var(--select-active-color);
   border-color: var(--select-active-border-color);
 }
-.select:active::-moz-placeholder {
-  color: var(--select-placeholder-active-color);
-}
 .select:active::placeholder {
   color: var(--select-placeholder-active-color);
 }
 .select:focus-visible {
   color: var(--select-focus-color);
   border-color: var(--select-focus-border-color);
-}
-.select:focus-visible::-moz-placeholder {
-  color: var(--select-placeholder-focus-color);
 }
 .select:focus-visible::placeholder {
   color: var(--select-placeholder-focus-color);
@@ -5579,14 +5532,8 @@ h6,
   opacity: var(--select-disabled-opacity);
   cursor: var(--select-disabled-cursor);
 }
-.select:disabled::-moz-placeholder {
-  color: var(--select-placeholder-disabled-color);
-}
 .select:disabled::placeholder {
   color: var(--select-placeholder-disabled-color);
-}
-.select::-moz-placeholder {
-  color: var(--select-placeholder-color);
 }
 .select::placeholder {
   color: var(--select-placeholder-color);
@@ -5740,31 +5687,34 @@ pre {
   margin: 0;
 }
 
+:root[data-theme=fluent2] {
+  --neutral-s: 0%;
+}
 :root[data-theme=fluent2] .secondary {
   --palette-saturation: 0%;
 }
 
 :root[data-theme=fluent2],
 :root[data-theme=fluent2][data-color-scheme=light] {
-  --text-color: #1f1f1f;
-  --text-color-light: #3f3f3f;
-  --text-color-dark: #000000;
-  --surface-color: #f0f0f0;
-  --surface-color-light: #f5f5f5;
-  --surface-color-lighter: #ffffff;
-  --surface-color-dark: #e5e5e5;
-  --surface-color-darker: #d9d9d9;
+  --text-color: var(--neutral-color-10);
+  --text-color-light: var(--neutral-color-8);
+  --text-color-dark: var(--neutral-color-10);
+  --surface-color-lighter: var(--neutral-color-0);
+  --surface-color-light: var(--neutral-color-0);
+  --surface-color: var(--neutral-color-1);
+  --surface-color-dark: var(--neutral-color-2);
+  --surface-color-darker: var(--neutral-color-3);
 }
 
 :root[data-theme=fluent2][data-color-scheme=dark] {
-  --text-color: #f0f0f0;
-  --text-color-light: #f5f5f5;
-  --text-color-dark: #e5e5e5;
-  --surface-color: #0d0d0d;
-  --surface-color-light: #1a1a1a;
-  --surface-color-lighter: #262626;
-  --surface-color-dark: #0a0a0a;
-  --surface-color-darker: #050505;
+  --text-color: var(--neutral-color-0);
+  --text-color-light: var(--neutral-color-0);
+  --text-color-dark: var(--neutral-color-1);
+  --surface-color-lighter: var(--neutral-color-9);
+  --surface-color-light: var(--neutral-color-9);
+  --surface-color: var(--neutral-color-10);
+  --surface-color-dark: var(--neutral-color-10);
+  --surface-color-darker: var(--neutral-color-10);
 }
 
 :root[data-theme=fluent2] {
@@ -5800,4 +5750,6 @@ pre {
   --button-disabled-color: var(--button-color);
   --button-disabled-border-color: var(--button-border-color);
   --button-disabled-opacity: 0.5;
-}/*# sourceMappingURL=fluent2.css.map */
+}
+
+/*# sourceMappingURL=fluent2.css.map */

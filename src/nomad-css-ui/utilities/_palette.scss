@@ -1,9 +1,7 @@
 @use "sass:map";
 @use "./hue-colors" as hue-colors;
 @use "./semantics" as semantics;
-@use "../../utilities/palette" as palette with (
-  $palettes: map.merge(hue-colors.$hues, semantics.$semantic-colors)
-);
+@use "../../utilities/palette" as palette;
 
 // ============================================
 // Palette Prefix
@@ -29,10 +27,43 @@ $default-palette: semantics.$semantic-primary !default;
 // ============================================
 // Process
 // ============================================
+// --------------------------------------------
+// HUE CSS変数の出力
+// --------------------------------------------
+:root {
+  @each $key, $value in hue-colors.$hues {
+    #{map.get($value, variant-name)}: #{map.get($value, hue)};
+  }
+}
+
+// --------------------------------------------
+// HUEカラーごとのパレットクラス生成
+// --------------------------------------------
+@each $name, $value in hue-colors.$hues {
+  .#{$name} {
+    @include palette.generate-palette($value);
+  }
+}
+
+// --------------------------------------------
+// セマンティックカラーごとのパレットクラス生成
+// --------------------------------------------
+@each $name, $value in semantics.$semantic-colors {
+  .#{$name} {
+    @include palette.generate-palette($value);
+  }
+}
+
+// --------------------------------------------
+// デフォルトパレット（primary）の :root 生成
+// --------------------------------------------
 :root {
   @include palette.generate-palette($default-palette);
 }
 
+// --------------------------------------------
+// Neutralパレットの :root 生成
+// --------------------------------------------
 :root {
   @include palette.generate-palette(semantics.$semantic-neutral-with-name);
 }

@@ -35,17 +35,25 @@ $surface-color-darker-var: --surface-color-darker;
 // CSS Variants
 // ============================================
 :root {
-  #{$border-color-var}: var(#{semantics.$neutral-default-var});
-  #{$border-color-light-var}: var(#{semantics.$neutral-light-var});
-  #{$border-color-dark-var}: var(#{semantics.$neutral-dark-var});
+  #{$border-color-var}: var(
+    #{semantics.$neutral-default-var}
+  ); // neutral-color-5 (50%)
+  #{$border-color-light-var}: var(
+    #{semantics.$neutral-light-var}
+  ); // neutral-color-3 (75%)
+  #{$border-color-dark-var}: var(
+    #{semantics.$neutral-dark-var}
+  ); // neutral-color-7 (34%)
 
-  #{$text-color-var}: #1F1F1F;
-  #{$text-color-light-var}: #3F3F3F;
-  #{$text-color-dark-var}: #000000;
+  #{$text-color-var}: var(--neutral-color-9); // 18% — 本文テキスト
+  #{$text-color-light-var}: var(--neutral-color-8); // 26% — サブテキスト
+  #{$text-color-dark-var}: var(--neutral-color-10); // 10% — 強調テキスト
 
-  #{$surface-color-var}: #F0F0F0;
-  #{$surface-color-light-var}: #F5F5F5;
-  #{$surface-color-lighter-var}: #FFFFFF;
-  #{$surface-color-dark-var}: #E5E5E5;
-  #{$surface-color-darker-var}: #D9D9D9;
+  #{$surface-color-lighter-var}: var(
+    --neutral-color-0
+  ); // 97% — 最明 (ダイアログ等)
+  #{$surface-color-light-var}: var(--neutral-color-0); // 97% — 明 (カード等)
+  #{$surface-color-var}: var(--neutral-color-1); // 93% — 標準ページ背景
+  #{$surface-color-dark-var}: var(--neutral-color-2); // 85% — サイドバー等
+  #{$surface-color-darker-var}: var(--neutral-color-3); // 75% — フッター等
 }
