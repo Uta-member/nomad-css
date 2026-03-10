@@ -7,7 +7,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$tooltip-prefix: #{prefixes.$prefix}tooltip-;
+$tooltip-prefix: #{prefixes.$prefix}tooltip- !default;
 
 // --------------------------------------------
 // Class Names
@@ -27,22 +27,22 @@ $tooltip-class-name: tooltip !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$tooltip-bg-color-var: --#{$tooltip-prefix}bg-color;
-$tooltip-color-var: --#{$tooltip-prefix}color;
+$tooltip-bg-color-var: --#{$tooltip-prefix}bg-color !default;
+$tooltip-color-var: --#{$tooltip-prefix}color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$tooltip-border-radius-var: --#{$tooltip-prefix}border-radius;
+$tooltip-border-radius-var: --#{$tooltip-prefix}border-radius !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$tooltip-padding-var: --#{$tooltip-prefix}padding;
-$tooltip-font-size-var: --#{$tooltip-prefix}font-size;
-$tooltip-max-width-var: --#{$tooltip-prefix}max-width;
-$tooltip-offset-var: --#{$tooltip-prefix}offset;
-$tooltip-z-index-var: --#{$tooltip-prefix}z-index;
+$tooltip-padding-var: --#{$tooltip-prefix}padding !default;
+$tooltip-font-size-var: --#{$tooltip-prefix}font-size !default;
+$tooltip-max-width-var: --#{$tooltip-prefix}max-width !default;
+$tooltip-offset-var: --#{$tooltip-prefix}offset !default;
+$tooltip-z-index-var: --#{$tooltip-prefix}z-index !default;
 
 // ============================================
 // Process

@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$badge-prefix: #{prefixes.$prefix}badge-;
+$badge-prefix: #{prefixes.$prefix}badge- !default;
 
 // --------------------------------------------
 // Class Names
@@ -21,30 +21,30 @@ $badge-class-name: badge !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$badge-bg-color-var: --#{$badge-prefix}bg-color;
-$badge-color-var: --#{$badge-prefix}color;
+$badge-bg-color-var: --#{$badge-prefix}bg-color !default;
+$badge-color-var: --#{$badge-prefix}color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$badge-border-radius-var: --#{$badge-prefix}border-radius;
+$badge-border-radius-var: --#{$badge-prefix}border-radius !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$badge-padding-var: --#{$badge-prefix}padding;
-$badge-font-size-var: --#{$badge-prefix}font-size;
+$badge-padding-var: --#{$badge-prefix}padding !default;
+$badge-font-size-var: --#{$badge-prefix}font-size !default;
 
 // --------------------------------------------
 // Dot
 // --------------------------------------------
-$badge-dot-size-var: --#{$badge-prefix}dot-size;
+$badge-dot-size-var: --#{$badge-prefix}dot-size !default;
 
 // --------------------------------------------
 // Overlay
 // --------------------------------------------
-$badge-overlay-top-var: --#{$badge-prefix}overlay-top;
-$badge-overlay-right-var: --#{$badge-prefix}overlay-right;
+$badge-overlay-top-var: --#{$badge-prefix}overlay-top !default;
+$badge-overlay-right-var: --#{$badge-prefix}overlay-right !default;
 
 // ============================================
 // Process

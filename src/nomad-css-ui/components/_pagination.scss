@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$pagination-prefix: #{prefixes.$prefix}pagination-;
+$pagination-prefix: #{prefixes.$prefix}pagination- !default;
 
 // --------------------------------------------
 // Class Names
@@ -23,29 +23,29 @@ $page-link-class-name: page-link !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$pagination-bg-color-var: --#{$pagination-prefix}bg-color;
-$pagination-color-var: --#{$pagination-prefix}color;
-$pagination-border-color-var: --#{$pagination-prefix}border-color;
-$pagination-hover-bg-color-var: --#{$pagination-prefix}hover-bg-color;
-$pagination-hover-color-var: --#{$pagination-prefix}hover-color;
-$pagination-active-bg-color-var: --#{$pagination-prefix}active-bg-color;
-$pagination-active-color-var: --#{$pagination-prefix}active-color;
-$pagination-active-border-color-var: --#{$pagination-prefix}active-border-color;
-$pagination-disabled-color-var: --#{$pagination-prefix}disabled-color;
-$pagination-disabled-bg-color-var: --#{$pagination-prefix}disabled-bg-color;
+$pagination-bg-color-var: --#{$pagination-prefix}bg-color !default;
+$pagination-color-var: --#{$pagination-prefix}color !default;
+$pagination-border-color-var: --#{$pagination-prefix}border-color !default;
+$pagination-hover-bg-color-var: --#{$pagination-prefix}hover-bg-color !default;
+$pagination-hover-color-var: --#{$pagination-prefix}hover-color !default;
+$pagination-active-bg-color-var: --#{$pagination-prefix}active-bg-color !default;
+$pagination-active-color-var: --#{$pagination-prefix}active-color !default;
+$pagination-active-border-color-var: --#{$pagination-prefix}active-border-color !default;
+$pagination-disabled-color-var: --#{$pagination-prefix}disabled-color !default;
+$pagination-disabled-bg-color-var: --#{$pagination-prefix}disabled-bg-color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$pagination-border-radius-var: --#{$pagination-prefix}border-radius;
-$pagination-border-width-var: --#{$pagination-prefix}border-width;
+$pagination-border-radius-var: --#{$pagination-prefix}border-radius !default;
+$pagination-border-width-var: --#{$pagination-prefix}border-width !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$pagination-padding-var: --#{$pagination-prefix}padding;
-$pagination-font-size-var: --#{$pagination-prefix}font-size;
-$pagination-gap-var: --#{$pagination-prefix}gap;
+$pagination-padding-var: --#{$pagination-prefix}padding !default;
+$pagination-font-size-var: --#{$pagination-prefix}font-size !default;
+$pagination-gap-var: --#{$pagination-prefix}gap !default;
 
 // ============================================
 // Process

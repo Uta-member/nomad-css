@@ -8,12 +8,12 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$range-prefix: #{prefixes.$prefix}range;
+$range-prefix: #{prefixes.$prefix}range- !default;
 
 // --------------------------------------------
 // Class Names
 // --------------------------------------------
-$range-class-name: range;
+$range-class-name: range !default;
 
 // --------------------------------------------
 // Variants
@@ -21,7 +21,7 @@ $range-class-name: range;
 // --------------------------------------------
 // Accent Colors
 // --------------------------------------------
-$range-accent-color-var: --#{$range-prefix}accent-color;
+$range-accent-color-var: --#{$range-prefix}accent-color !default;
 
 // ============================================
 // Process

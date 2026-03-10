@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$switch-prefix: #{prefixes.$prefix}switch-;
+$switch-prefix: #{prefixes.$prefix}switch- !default;
 
 // --------------------------------------------
 // Class Names
@@ -25,47 +25,47 @@ $switch-label-class-name: switch-label !default;
 // --------------------------------------------
 // Track sizes
 // --------------------------------------------
-$switch-track-width-var: --#{$switch-prefix}track-width;
-$switch-track-height-var: --#{$switch-prefix}track-height;
-$switch-track-sm-width-var: --#{$switch-prefix}track-sm-width;
-$switch-track-sm-height-var: --#{$switch-prefix}track-sm-height;
-$switch-track-lg-width-var: --#{$switch-prefix}track-lg-width;
-$switch-track-lg-height-var: --#{$switch-prefix}track-lg-height;
+$switch-track-width-var: --#{$switch-prefix}track-width !default;
+$switch-track-height-var: --#{$switch-prefix}track-height !default;
+$switch-track-sm-width-var: --#{$switch-prefix}track-sm-width !default;
+$switch-track-sm-height-var: --#{$switch-prefix}track-sm-height !default;
+$switch-track-lg-width-var: --#{$switch-prefix}track-lg-width !default;
+$switch-track-lg-height-var: --#{$switch-prefix}track-lg-height !default;
 
 // --------------------------------------------
 // Track colors
 // --------------------------------------------
-$switch-track-bg-color-var: --#{$switch-prefix}track-bg-color;
-$switch-track-checked-bg-color-var: --#{$switch-prefix}track-checked-bg-color;
-$switch-track-border-color-var: --#{$switch-prefix}track-border-color;
-$switch-track-checked-border-color-var: --#{$switch-prefix}track-checked-border-color;
-$switch-track-border-radius-var: --#{$switch-prefix}track-border-radius;
-$switch-track-border-width-var: --#{$switch-prefix}track-border-width;
-$switch-track-disabled-bg-color-var: --#{$switch-prefix}track-disabled-bg-color;
+$switch-track-bg-color-var: --#{$switch-prefix}track-bg-color !default;
+$switch-track-checked-bg-color-var: --#{$switch-prefix}track-checked-bg-color !default;
+$switch-track-border-color-var: --#{$switch-prefix}track-border-color !default;
+$switch-track-checked-border-color-var: --#{$switch-prefix}track-checked-border-color !default;
+$switch-track-border-radius-var: --#{$switch-prefix}track-border-radius !default;
+$switch-track-border-width-var: --#{$switch-prefix}track-border-width !default;
+$switch-track-disabled-bg-color-var: --#{$switch-prefix}track-disabled-bg-color !default;
 
 // --------------------------------------------
 // Thumb sizes
 // --------------------------------------------
-$switch-thumb-size-var: --#{$switch-prefix}thumb-size;
-$switch-thumb-sm-size-var: --#{$switch-prefix}thumb-sm-size;
-$switch-thumb-lg-size-var: --#{$switch-prefix}thumb-lg-size;
-$switch-thumb-offset-var: --#{$switch-prefix}thumb-offset;
+$switch-thumb-size-var: --#{$switch-prefix}thumb-size !default;
+$switch-thumb-sm-size-var: --#{$switch-prefix}thumb-sm-size !default;
+$switch-thumb-lg-size-var: --#{$switch-prefix}thumb-lg-size !default;
+$switch-thumb-offset-var: --#{$switch-prefix}thumb-offset !default;
 
 // --------------------------------------------
 // Thumb colors
 // --------------------------------------------
-$switch-thumb-bg-color-var: --#{$switch-prefix}thumb-bg-color;
-$switch-thumb-checked-bg-color-var: --#{$switch-prefix}thumb-checked-bg-color;
-$switch-thumb-disabled-bg-color-var: --#{$switch-prefix}thumb-disabled-bg-color;
+$switch-thumb-bg-color-var: --#{$switch-prefix}thumb-bg-color !default;
+$switch-thumb-checked-bg-color-var: --#{$switch-prefix}thumb-checked-bg-color !default;
+$switch-thumb-disabled-bg-color-var: --#{$switch-prefix}thumb-disabled-bg-color !default;
 
 // --------------------------------------------
 // Misc
 // --------------------------------------------
-$switch-transition-var: --#{$switch-prefix}transition;
-$switch-gap-var: --#{$switch-prefix}gap;
-$switch-disabled-opacity-var: --#{$switch-prefix}disabled-opacity;
-$switch-cursor-var: --#{$switch-prefix}cursor;
-$switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor;
+$switch-transition-var: --#{$switch-prefix}transition !default;
+$switch-gap-var: --#{$switch-prefix}gap !default;
+$switch-disabled-opacity-var: --#{$switch-prefix}disabled-opacity !default;
+$switch-cursor-var: --#{$switch-prefix}cursor !default;
+$switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
 
 // ============================================
 // Process

@@ -8,12 +8,12 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$form-control-prefix: #{prefixes.$prefix}form-control-;
+$form-control-prefix: #{prefixes.$prefix}form-control- !default;
 
 // --------------------------------------------
 // Class Names
 // --------------------------------------------
-$form-control-class-name: form-control;
+$form-control-class-name: form-control !default;
 
 // --------------------------------------------
 // Variants
@@ -21,84 +21,84 @@ $form-control-class-name: form-control;
 // --------------------------------------------
 // Background Colors
 // --------------------------------------------
-$form-control-filled-bg-color-var: --#{$form-control-prefix}filled-bg-color;
-$form-control-filled-hover-bg-color-var: --#{$form-control-prefix}filled-hover-bg-color;
-$form-control-filled-active-bg-color-var: --#{$form-control-prefix}filled-active-bg-color;
-$form-control-filled-focus-bg-color-var: --#{$form-control-prefix}filled-focus-bg-color;
-$form-control-filled-disabled-bg-color-var: --#{$form-control-prefix}filled-disabled-bg-color;
-$form-control-filled-readonly-bg-color-var: --#{$form-control-prefix}filled-readonly-bg-color;
-$form-control-readonly-bg-color-var: --#{$form-control-prefix}readonly-bg-color;
+$form-control-filled-bg-color-var: --#{$form-control-prefix}filled-bg-color !default;
+$form-control-filled-hover-bg-color-var: --#{$form-control-prefix}filled-hover-bg-color !default;
+$form-control-filled-active-bg-color-var: --#{$form-control-prefix}filled-active-bg-color !default;
+$form-control-filled-focus-bg-color-var: --#{$form-control-prefix}filled-focus-bg-color !default;
+$form-control-filled-disabled-bg-color-var: --#{$form-control-prefix}filled-disabled-bg-color !default;
+$form-control-filled-readonly-bg-color-var: --#{$form-control-prefix}filled-readonly-bg-color !default;
+$form-control-readonly-bg-color-var: --#{$form-control-prefix}readonly-bg-color !default;
 
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$form-control-color-var: --#{$form-control-prefix}color;
-$form-control-hover-color-var: --#{$form-control-prefix}hover-color;
-$form-control-active-color-var: --#{$form-control-prefix}active-color;
-$form-control-focus-color-var: --#{$form-control-prefix}focus-color;
-$form-control-disabled-color-var: --#{$form-control-prefix}disabled-color;
-$form-control-readonly-color-var: --#{$form-control-prefix}readonly-color;
+$form-control-color-var: --#{$form-control-prefix}color !default;
+$form-control-hover-color-var: --#{$form-control-prefix}hover-color !default;
+$form-control-active-color-var: --#{$form-control-prefix}active-color !default;
+$form-control-focus-color-var: --#{$form-control-prefix}focus-color !default;
+$form-control-disabled-color-var: --#{$form-control-prefix}disabled-color !default;
+$form-control-readonly-color-var: --#{$form-control-prefix}readonly-color !default;
 
 // --------------------------------------------
 // Placeholder Colors
 // --------------------------------------------
-$form-control-placeholder-color-var: --#{$form-control-prefix}placeholder-color;
-$form-control-placeholder-hover-color-var: --#{$form-control-prefix}placeholder-hover-color;
-$form-control-placeholder-active-color-var: --#{$form-control-prefix}placeholder-active-color;
-$form-control-placeholder-focus-color-var: --#{$form-control-prefix}placeholder-focus-color;
-$form-control-placeholder-disabled-color-var: --#{$form-control-prefix}placeholder-disabled-color;
-$form-control-placeholder-readonly-color-var: --#{$form-control-prefix}placeholder-readonly-color;
+$form-control-placeholder-color-var: --#{$form-control-prefix}placeholder-color !default;
+$form-control-placeholder-hover-color-var: --#{$form-control-prefix}placeholder-hover-color !default;
+$form-control-placeholder-active-color-var: --#{$form-control-prefix}placeholder-active-color !default;
+$form-control-placeholder-focus-color-var: --#{$form-control-prefix}placeholder-focus-color !default;
+$form-control-placeholder-disabled-color-var: --#{$form-control-prefix}placeholder-disabled-color !default;
+$form-control-placeholder-readonly-color-var: --#{$form-control-prefix}placeholder-readonly-color !default;
 
 // --------------------------------------------
 // Borders
 // --------------------------------------------
-$form-control-border-top-width-var: --#{$form-control-prefix}border-top-width;
-$form-control-border-right-width-var: --#{$form-control-prefix}border-right-width;
-$form-control-border-bottom-width-var: --#{$form-control-prefix}border-bottom-width;
-$form-control-border-left-width-var: --#{$form-control-prefix}border-left-width;
-$form-control-border-radius-var: --#{$form-control-prefix}border-radius;
-$form-control-border-color-var: --#{$form-control-prefix}border-color;
-$form-control-hover-border-color-var: --#{$form-control-prefix}hover-border-color;
-$form-control-active-border-color-var: --#{$form-control-prefix}active-border-color;
-$form-control-focus-border-color-var: --#{$form-control-prefix}focus-border-color;
-$form-control-disabled-border-color-var: --#{$form-control-prefix}disabled-border-color;
-$form-control-readonly-border-color-var: --#{$form-control-prefix}readonly-border-color;
+$form-control-border-top-width-var: --#{$form-control-prefix}border-top-width !default;
+$form-control-border-right-width-var: --#{$form-control-prefix}border-right-width !default;
+$form-control-border-bottom-width-var: --#{$form-control-prefix}border-bottom-width !default;
+$form-control-border-left-width-var: --#{$form-control-prefix}border-left-width !default;
+$form-control-border-radius-var: --#{$form-control-prefix}border-radius !default;
+$form-control-border-color-var: --#{$form-control-prefix}border-color !default;
+$form-control-hover-border-color-var: --#{$form-control-prefix}hover-border-color !default;
+$form-control-active-border-color-var: --#{$form-control-prefix}active-border-color !default;
+$form-control-focus-border-color-var: --#{$form-control-prefix}focus-border-color !default;
+$form-control-disabled-border-color-var: --#{$form-control-prefix}disabled-border-color !default;
+$form-control-readonly-border-color-var: --#{$form-control-prefix}readonly-border-color !default;
 
 // --------------------------------------------
 // Focus Ring
 // --------------------------------------------
-$form-control-focus-ring-width-var: --#{$form-control-prefix}focus-ring-width;
-$form-control-focus-ring-color-var: --#{$form-control-prefix}focus-ring-color;
-$form-control-focus-ring-offset-width-var: --#{$form-control-prefix}focus-ring-offset-width;
+$form-control-focus-ring-width-var: --#{$form-control-prefix}focus-ring-width !default;
+$form-control-focus-ring-color-var: --#{$form-control-prefix}focus-ring-color !default;
+$form-control-focus-ring-offset-width-var: --#{$form-control-prefix}focus-ring-offset-width !default;
 
 // --------------------------------------------
 // Opacity
 // --------------------------------------------
-$form-control-opacity-var: --#{$form-control-prefix}opacity;
-$form-control-disabled-opacity-var: --#{$form-control-prefix}disabled-opacity;
-$form-control-readonly-opacity-var: --#{$form-control-prefix}readonly-opacity;
+$form-control-opacity-var: --#{$form-control-prefix}opacity !default;
+$form-control-disabled-opacity-var: --#{$form-control-prefix}disabled-opacity !default;
+$form-control-readonly-opacity-var: --#{$form-control-prefix}readonly-opacity !default;
 
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$form-control-padding-var: --#{$form-control-prefix}padding;
-$form-control-font-size-var: --#{$form-control-prefix}font-size;
-$form-control-sm-padding-var: --#{$form-control-prefix}sm-padding;
-$form-control-sm-font-size-var: --#{$form-control-prefix}sm-font-size;
-$form-control-lg-padding-var: --#{$form-control-prefix}lg-padding;
-$form-control-lg-font-size-var: --#{$form-control-prefix}lg-font-size;
+$form-control-padding-var: --#{$form-control-prefix}padding !default;
+$form-control-font-size-var: --#{$form-control-prefix}font-size !default;
+$form-control-sm-padding-var: --#{$form-control-prefix}sm-padding !default;
+$form-control-sm-font-size-var: --#{$form-control-prefix}sm-font-size !default;
+$form-control-lg-padding-var: --#{$form-control-prefix}lg-padding !default;
+$form-control-lg-font-size-var: --#{$form-control-prefix}lg-font-size !default;
 
 // --------------------------------------------
 // Cursor
 // --------------------------------------------
-$form-control-cursor-var: --#{$form-control-prefix}cursor;
-$form-control-disabled-cursor-var: --#{$form-control-prefix}disabled-cursor;
-$form-control-readonly-cursor-var: --#{$form-control-prefix}readonly-cursor;
+$form-control-cursor-var: --#{$form-control-prefix}cursor !default;
+$form-control-disabled-cursor-var: --#{$form-control-prefix}disabled-cursor !default;
+$form-control-readonly-cursor-var: --#{$form-control-prefix}readonly-cursor !default;
 
 // --------------------------------------------
 // Transition
 // --------------------------------------------
-$form-control-transition-var: --#{$form-control-prefix}transition;
+$form-control-transition-var: --#{$form-control-prefix}transition !default;
 
 // ============================================
 // Process

@@ -8,12 +8,12 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$check-box-prefix: #{prefixes.$prefix}checkbox-;
+$check-box-prefix: #{prefixes.$prefix}checkbox- !default;
 
 // --------------------------------------------
 // Class Names
 // --------------------------------------------
-$check-box-class-name: checkbox;
+$check-box-class-name: checkbox !default;
 
 // --------------------------------------------
 // Variants
@@ -21,66 +21,66 @@ $check-box-class-name: checkbox;
 // --------------------------------------------
 // Background Colors
 // --------------------------------------------
-$check-box-bg-color-var: --#{$check-box-prefix}bg-color;
-$check-box-hover-bg-color-var: --#{$check-box-prefix}hover-bg-color;
-$check-box-active-bg-color-var: --#{$check-box-prefix}active-bg-color;
-$check-box-focus-bg-color-var: --#{$check-box-prefix}focus-bg-color;
-$check-box-disabled-bg-color-var: --#{$check-box-prefix}disabled-bg-color;
-$check-box-checked-bg-color-var: --#{$check-box-prefix}checked-bg-color;
-$check-box-checked-hover-bg-color-var: --#{$check-box-prefix}checked-hover-bg-color;
-$check-box-checked-active-bg-color-var: --#{$check-box-prefix}checked-active-bg-color;
-$check-box-checked-focus-bg-color-var: --#{$check-box-prefix}checked-focus-bg-color;
-$check-box-checked-disabled-bg-color-var: --#{$check-box-prefix}checked-disabled-bg-color;
+$check-box-bg-color-var: --#{$check-box-prefix}bg-color !default;
+$check-box-hover-bg-color-var: --#{$check-box-prefix}hover-bg-color !default;
+$check-box-active-bg-color-var: --#{$check-box-prefix}active-bg-color !default;
+$check-box-focus-bg-color-var: --#{$check-box-prefix}focus-bg-color !default;
+$check-box-disabled-bg-color-var: --#{$check-box-prefix}disabled-bg-color !default;
+$check-box-checked-bg-color-var: --#{$check-box-prefix}checked-bg-color !default;
+$check-box-checked-hover-bg-color-var: --#{$check-box-prefix}checked-hover-bg-color !default;
+$check-box-checked-active-bg-color-var: --#{$check-box-prefix}checked-active-bg-color !default;
+$check-box-checked-focus-bg-color-var: --#{$check-box-prefix}checked-focus-bg-color !default;
+$check-box-checked-disabled-bg-color-var: --#{$check-box-prefix}checked-disabled-bg-color !default;
 
 // --------------------------------------------
 // Borders
 // --------------------------------------------
-$check-box-border-width-var: --#{$check-box-prefix}border-width;
-$check-box-border-radius-var: --#{$check-box-prefix}border-radius;
-$check-box-border-color-var: --#{$check-box-prefix}border-color;
-$check-box-hover-border-color-var: --#{$check-box-prefix}hover-border-color;
-$check-box-active-border-color-var: --#{$check-box-prefix}active-border-color;
-$check-box-focus-border-color-var: --#{$check-box-prefix}focus-border-color;
-$check-box-disabled-border-color-var: --#{$check-box-prefix}disabled-border-color;
-$check-box-checked-border-color-var: --#{$check-box-prefix}checked-border-color;
-$check-box-checked-hover-border-color-var: --#{$check-box-prefix}checked-hover-border-color;
-$check-box-checked-active-border-color-var: --#{$check-box-prefix}checked-active-border-color;
-$check-box-checked-focus-border-color-var: --#{$check-box-prefix}checked-focus-border-color;
-$check-box-checked-disabled-border-color-var: --#{$check-box-prefix}checked-disabled-border-color;
+$check-box-border-width-var: --#{$check-box-prefix}border-width !default;
+$check-box-border-radius-var: --#{$check-box-prefix}border-radius !default;
+$check-box-border-color-var: --#{$check-box-prefix}border-color !default;
+$check-box-hover-border-color-var: --#{$check-box-prefix}hover-border-color !default;
+$check-box-active-border-color-var: --#{$check-box-prefix}active-border-color !default;
+$check-box-focus-border-color-var: --#{$check-box-prefix}focus-border-color !default;
+$check-box-disabled-border-color-var: --#{$check-box-prefix}disabled-border-color !default;
+$check-box-checked-border-color-var: --#{$check-box-prefix}checked-border-color !default;
+$check-box-checked-hover-border-color-var: --#{$check-box-prefix}checked-hover-border-color !default;
+$check-box-checked-active-border-color-var: --#{$check-box-prefix}checked-active-border-color !default;
+$check-box-checked-focus-border-color-var: --#{$check-box-prefix}checked-focus-border-color !default;
+$check-box-checked-disabled-border-color-var: --#{$check-box-prefix}checked-disabled-border-color !default;
 
 // --------------------------------------------
 // Opacity
 // --------------------------------------------
-$check-box-opacity-var: --#{$check-box-prefix}opacity;
-$check-box-disabled-opacity-var: --#{$check-box-prefix}disabled-opacity;
+$check-box-opacity-var: --#{$check-box-prefix}opacity !default;
+$check-box-disabled-opacity-var: --#{$check-box-prefix}disabled-opacity !default;
 
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$check-box-size-var: --#{$check-box-prefix}size;
-$check-box-sm-size-var: --#{$check-box-prefix}sm-size;
-$check-box-lg-size-var: --#{$check-box-prefix}lg-size;
+$check-box-size-var: --#{$check-box-prefix}size !default;
+$check-box-sm-size-var: --#{$check-box-prefix}sm-size !default;
+$check-box-lg-size-var: --#{$check-box-prefix}lg-size !default;
 
 // --------------------------------------------
 // Check Mark
 // --------------------------------------------
-$check-box-mark-color-var: --#{$check-box-prefix}mark-color;
-$check-box-disabled-mark-color-var: --#{$check-box-prefix}disabled-mark-color;
-$check-box-mark-image-var: --#{$check-box-prefix}mark-image;
-$check-box-indeterminate-mark-image-var: --#{$check-box-prefix}indeterminate-mark-image;
+$check-box-mark-color-var: --#{$check-box-prefix}mark-color !default;
+$check-box-disabled-mark-color-var: --#{$check-box-prefix}disabled-mark-color !default;
+$check-box-mark-image-var: --#{$check-box-prefix}mark-image !default;
+$check-box-indeterminate-mark-image-var: --#{$check-box-prefix}indeterminate-mark-image !default;
 $default-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
 $default-indeterminate-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline x1='5' y1='12' x2='19' y2='12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
 
 // --------------------------------------------
 // Cursor
 // --------------------------------------------
-$check-box-cursor-var: --#{$check-box-prefix}cursor;
-$check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor;
+$check-box-cursor-var: --#{$check-box-prefix}cursor !default;
+$check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor !default;
 
 // --------------------------------------------
 // Transition
 // --------------------------------------------
-$check-box-transition-var: --#{$check-box-prefix}transition;
+$check-box-transition-var: --#{$check-box-prefix}transition !default;
 
 // ============================================
 // Process

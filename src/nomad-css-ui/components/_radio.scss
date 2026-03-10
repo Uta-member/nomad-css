@@ -8,12 +8,12 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$radio-prefix: #{prefixes.$prefix}radio-;
+$radio-prefix: #{prefixes.$prefix}radio- !default;
 
 // --------------------------------------------
 // Class Names
 // --------------------------------------------
-$radio-class-name: radio;
+$radio-class-name: radio !default;
 
 // --------------------------------------------
 // Variants
@@ -21,63 +21,63 @@ $radio-class-name: radio;
 // --------------------------------------------
 // Background Colors
 // --------------------------------------------
-$radio-bg-color-var: --#{$radio-prefix}bg-color;
-$radio-hover-bg-color-var: --#{$radio-prefix}hover-bg-color;
-$radio-active-bg-color-var: --#{$radio-prefix}active-bg-color;
-$radio-focus-bg-color-var: --#{$radio-prefix}focus-bg-color;
-$radio-disabled-bg-color-var: --#{$radio-prefix}disabled-bg-color;
-$radio-checked-bg-color-var: --#{$radio-prefix}checked-bg-color;
-$radio-checked-hover-bg-color-var: --#{$radio-prefix}checked-hover-bg-color;
-$radio-checked-active-bg-color-var: --#{$radio-prefix}checked-active-bg-color;
-$radio-checked-focus-bg-color-var: --#{$radio-prefix}checked-focus-bg-color;
-$radio-checked-disabled-bg-color-var: --#{$radio-prefix}checked-disabled-bg-color;
+$radio-bg-color-var: --#{$radio-prefix}bg-color !default;
+$radio-hover-bg-color-var: --#{$radio-prefix}hover-bg-color !default;
+$radio-active-bg-color-var: --#{$radio-prefix}active-bg-color !default;
+$radio-focus-bg-color-var: --#{$radio-prefix}focus-bg-color !default;
+$radio-disabled-bg-color-var: --#{$radio-prefix}disabled-bg-color !default;
+$radio-checked-bg-color-var: --#{$radio-prefix}checked-bg-color !default;
+$radio-checked-hover-bg-color-var: --#{$radio-prefix}checked-hover-bg-color !default;
+$radio-checked-active-bg-color-var: --#{$radio-prefix}checked-active-bg-color !default;
+$radio-checked-focus-bg-color-var: --#{$radio-prefix}checked-focus-bg-color !default;
+$radio-checked-disabled-bg-color-var: --#{$radio-prefix}checked-disabled-bg-color !default;
 
 // --------------------------------------------
 // Borders
 // --------------------------------------------
-$radio-border-width-var: --#{$radio-prefix}border-width;
-$radio-border-radius-var: --#{$radio-prefix}border-radius;
-$radio-border-color-var: --#{$radio-prefix}border-color;
-$radio-hover-border-color-var: --#{$radio-prefix}hover-border-color;
-$radio-active-border-color-var: --#{$radio-prefix}active-border-color;
-$radio-focus-border-color-var: --#{$radio-prefix}focus-border-color;
-$radio-disabled-border-color-var: --#{$radio-prefix}disabled-border-color;
-$radio-checked-border-color-var: --#{$radio-prefix}checked-border-color;
-$radio-checked-hover-border-color-var: --#{$radio-prefix}checked-hover-border-color;
-$radio-checked-active-border-color-var: --#{$radio-prefix}checked-active-border-color;
-$radio-checked-focus-border-color-var: --#{$radio-prefix}checked-focus-border-color;
-$radio-checked-disabled-border-color-var: --#{$radio-prefix}checked-disabled-border-color;
+$radio-border-width-var: --#{$radio-prefix}border-width !default;
+$radio-border-radius-var: --#{$radio-prefix}border-radius !default;
+$radio-border-color-var: --#{$radio-prefix}border-color !default;
+$radio-hover-border-color-var: --#{$radio-prefix}hover-border-color !default;
+$radio-active-border-color-var: --#{$radio-prefix}active-border-color !default;
+$radio-focus-border-color-var: --#{$radio-prefix}focus-border-color !default;
+$radio-disabled-border-color-var: --#{$radio-prefix}disabled-border-color !default;
+$radio-checked-border-color-var: --#{$radio-prefix}checked-border-color !default;
+$radio-checked-hover-border-color-var: --#{$radio-prefix}checked-hover-border-color !default;
+$radio-checked-active-border-color-var: --#{$radio-prefix}checked-active-border-color !default;
+$radio-checked-focus-border-color-var: --#{$radio-prefix}checked-focus-border-color !default;
+$radio-checked-disabled-border-color-var: --#{$radio-prefix}checked-disabled-border-color !default;
 
 // --------------------------------------------
 // Opacity
 // --------------------------------------------
-$radio-opacity-var: --#{$radio-prefix}opacity;
-$radio-disabled-opacity-var: --#{$radio-prefix}disabled-opacity;
+$radio-opacity-var: --#{$radio-prefix}opacity !default;
+$radio-disabled-opacity-var: --#{$radio-prefix}disabled-opacity !default;
 
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$radio-size-var: --#{$radio-prefix}size;
-$radio-sm-size-var: --#{$radio-prefix}sm-size;
-$radio-lg-size-var: --#{$radio-prefix}lg-size;
+$radio-size-var: --#{$radio-prefix}size !default;
+$radio-sm-size-var: --#{$radio-prefix}sm-size !default;
+$radio-lg-size-var: --#{$radio-prefix}lg-size !default;
 
 // --------------------------------------------
 // Check Mark
 // --------------------------------------------
-$radio-mark-color-var: --#{$radio-prefix}mark-color;
-$radio-disabled-mark-color-var: --#{$radio-prefix}disabled-mark-color;
-$radio-mark-size-var: --#{$radio-prefix}mark-size;
+$radio-mark-color-var: --#{$radio-prefix}mark-color !default;
+$radio-disabled-mark-color-var: --#{$radio-prefix}disabled-mark-color !default;
+$radio-mark-size-var: --#{$radio-prefix}mark-size !default;
 
 // --------------------------------------------
 // Cursor
 // --------------------------------------------
-$radio-cursor-var: --#{$radio-prefix}cursor;
-$radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor;
+$radio-cursor-var: --#{$radio-prefix}cursor !default;
+$radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor !default;
 
 // --------------------------------------------
 // Transition
 // --------------------------------------------
-$radio-transition-var: --#{$radio-prefix}transition;
+$radio-transition-var: --#{$radio-prefix}transition !default;
 
 // ============================================
 // Process

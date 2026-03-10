@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$list-prefix: #{prefixes.$prefix}list-;
+$list-prefix: #{prefixes.$prefix}list- !default;
 
 // --------------------------------------------
 // Class Names
@@ -24,25 +24,25 @@ $list-group-item-class-name: list-group-item !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$list-bg-color-var: --#{$list-prefix}bg-color;
-$list-color-var: --#{$list-prefix}color;
-$list-hover-bg-color-var: --#{$list-prefix}hover-bg-color;
-$list-hover-color-var: --#{$list-prefix}hover-color;
-$list-active-bg-color-var: --#{$list-prefix}active-bg-color;
-$list-active-color-var: --#{$list-prefix}active-color;
-$list-disabled-color-var: --#{$list-prefix}disabled-color;
+$list-bg-color-var: --#{$list-prefix}bg-color !default;
+$list-color-var: --#{$list-prefix}color !default;
+$list-hover-bg-color-var: --#{$list-prefix}hover-bg-color !default;
+$list-hover-color-var: --#{$list-prefix}hover-color !default;
+$list-active-bg-color-var: --#{$list-prefix}active-bg-color !default;
+$list-active-color-var: --#{$list-prefix}active-color !default;
+$list-disabled-color-var: --#{$list-prefix}disabled-color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$list-border-color-var: --#{$list-prefix}border-color;
-$list-border-radius-var: --#{$list-prefix}border-radius;
-$list-border-width-var: --#{$list-prefix}border-width;
+$list-border-color-var: --#{$list-prefix}border-color !default;
+$list-border-radius-var: --#{$list-prefix}border-radius !default;
+$list-border-width-var: --#{$list-prefix}border-width !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$list-padding-var: --#{$list-prefix}padding;
+$list-padding-var: --#{$list-prefix}padding !default;
 
 // ============================================
 // Process

@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$card-prefix: #{prefixes.$prefix}card-;
+$card-prefix: #{prefixes.$prefix}card- !default;
 
 // --------------------------------------------
 // Class Names
@@ -26,31 +26,31 @@ $card-img-bottom-class-name: card-img-bottom !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$card-bg-color-var: --#{$card-prefix}bg-color;
-$card-color-var: --#{$card-prefix}color;
-$card-border-color-var: --#{$card-prefix}border-color;
-$card-header-bg-color-var: --#{$card-prefix}header-bg-color;
-$card-header-color-var: --#{$card-prefix}header-color;
-$card-footer-bg-color-var: --#{$card-prefix}footer-bg-color;
-$card-footer-color-var: --#{$card-prefix}footer-color;
+$card-bg-color-var: --#{$card-prefix}bg-color !default;
+$card-color-var: --#{$card-prefix}color !default;
+$card-border-color-var: --#{$card-prefix}border-color !default;
+$card-header-bg-color-var: --#{$card-prefix}header-bg-color !default;
+$card-header-color-var: --#{$card-prefix}header-color !default;
+$card-footer-bg-color-var: --#{$card-prefix}footer-bg-color !default;
+$card-footer-color-var: --#{$card-prefix}footer-color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$card-border-radius-var: --#{$card-prefix}border-radius;
-$card-border-width-var: --#{$card-prefix}border-width;
+$card-border-radius-var: --#{$card-prefix}border-radius !default;
+$card-border-width-var: --#{$card-prefix}border-width !default;
 
 // --------------------------------------------
 // Shadow
 // --------------------------------------------
-$card-box-shadow-var: --#{$card-prefix}box-shadow;
+$card-box-shadow-var: --#{$card-prefix}box-shadow !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$card-padding-var: --#{$card-prefix}padding;
-$card-header-padding-var: --#{$card-prefix}header-padding;
-$card-footer-padding-var: --#{$card-prefix}footer-padding;
+$card-padding-var: --#{$card-prefix}padding !default;
+$card-header-padding-var: --#{$card-prefix}header-padding !default;
+$card-footer-padding-var: --#{$card-prefix}footer-padding !default;
 
 // ============================================
 // Process

@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$breadcrumb-prefix: #{prefixes.$prefix}breadcrumb-;
+$breadcrumb-prefix: #{prefixes.$prefix}breadcrumb- !default;
 
 // --------------------------------------------
 // Class Names
@@ -22,21 +22,21 @@ $breadcrumb-item-class-name: breadcrumb-item !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$breadcrumb-color-var: --#{$breadcrumb-prefix}color;
-$breadcrumb-hover-color-var: --#{$breadcrumb-prefix}hover-color;
-$breadcrumb-active-color-var: --#{$breadcrumb-prefix}active-color;
-$breadcrumb-separator-color-var: --#{$breadcrumb-prefix}separator-color;
+$breadcrumb-color-var: --#{$breadcrumb-prefix}color !default;
+$breadcrumb-hover-color-var: --#{$breadcrumb-prefix}hover-color !default;
+$breadcrumb-active-color-var: --#{$breadcrumb-prefix}active-color !default;
+$breadcrumb-separator-color-var: --#{$breadcrumb-prefix}separator-color !default;
 
 // --------------------------------------------
 // Separator
 // --------------------------------------------
-$breadcrumb-separator-var: --#{$breadcrumb-prefix}separator;
+$breadcrumb-separator-var: --#{$breadcrumb-prefix}separator !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$breadcrumb-gap-var: --#{$breadcrumb-prefix}gap;
-$breadcrumb-font-size-var: --#{$breadcrumb-prefix}font-size;
+$breadcrumb-gap-var: --#{$breadcrumb-prefix}gap !default;
+$breadcrumb-font-size-var: --#{$breadcrumb-prefix}font-size !default;
 
 // ============================================
 // Process

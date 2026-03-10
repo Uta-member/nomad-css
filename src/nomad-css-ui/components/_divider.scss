@@ -7,7 +7,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$divider-prefix: #{prefixes.$prefix}divider-;
+$divider-prefix: #{prefixes.$prefix}divider- !default;
 
 // --------------------------------------------
 // Class Names
@@ -20,16 +20,16 @@ $divider-class-name: divider !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$divider-color-var: --#{$divider-prefix}color;
-$divider-text-color-var: --#{$divider-prefix}text-color;
-$divider-text-gap-var: --#{$divider-prefix}text-gap;
+$divider-color-var: --#{$divider-prefix}color !default;
+$divider-text-color-var: --#{$divider-prefix}text-color !default;
+$divider-text-gap-var: --#{$divider-prefix}text-gap !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$divider-width-var: --#{$divider-prefix}width;
-$divider-margin-var: --#{$divider-prefix}margin;
-$divider-vertical-height-var: --#{$divider-prefix}vertical-height;
+$divider-width-var: --#{$divider-prefix}width !default;
+$divider-margin-var: --#{$divider-prefix}margin !default;
+$divider-vertical-height-var: --#{$divider-prefix}vertical-height !default;
 
 // ============================================
 // Process

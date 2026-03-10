@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$alert-prefix: #{prefixes.$prefix}alert-;
+$alert-prefix: #{prefixes.$prefix}alert- !default;
 
 // --------------------------------------------
 // Class Names
@@ -21,22 +21,22 @@ $alert-class-name: alert !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$alert-bg-color-var: --#{$alert-prefix}bg-color;
-$alert-color-var: --#{$alert-prefix}color;
-$alert-border-color-var: --#{$alert-prefix}border-color;
+$alert-bg-color-var: --#{$alert-prefix}bg-color !default;
+$alert-color-var: --#{$alert-prefix}color !default;
+$alert-border-color-var: --#{$alert-prefix}border-color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$alert-border-width-var: --#{$alert-prefix}border-width;
-$alert-border-radius-var: --#{$alert-prefix}border-radius;
+$alert-border-width-var: --#{$alert-prefix}border-width !default;
+$alert-border-radius-var: --#{$alert-prefix}border-radius !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$alert-padding-var: --#{$alert-prefix}padding;
-$alert-gap-var: --#{$alert-prefix}gap;
-$alert-icon-size-var: --#{$alert-prefix}icon-size;
+$alert-padding-var: --#{$alert-prefix}padding !default;
+$alert-gap-var: --#{$alert-prefix}gap !default;
+$alert-icon-size-var: --#{$alert-prefix}icon-size !default;
 
 // ============================================
 // Process

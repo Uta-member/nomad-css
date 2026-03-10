@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$spinner-prefix: #{prefixes.$prefix}spinner-;
+$spinner-prefix: #{prefixes.$prefix}spinner- !default;
 
 // --------------------------------------------
 // Class Names
@@ -21,25 +21,25 @@ $spinner-class-name: spinner !default;
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$spinner-size-var: --#{$spinner-prefix}size;
-$spinner-sm-size-var: --#{$spinner-prefix}sm-size;
-$spinner-lg-size-var: --#{$spinner-prefix}lg-size;
+$spinner-size-var: --#{$spinner-prefix}size !default;
+$spinner-sm-size-var: --#{$spinner-prefix}sm-size !default;
+$spinner-lg-size-var: --#{$spinner-prefix}lg-size !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$spinner-border-width-var: --#{$spinner-prefix}border-width;
+$spinner-border-width-var: --#{$spinner-prefix}border-width !default;
 
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$spinner-color-var: --#{$spinner-prefix}color;
-$spinner-track-color-var: --#{$spinner-prefix}track-color;
+$spinner-color-var: --#{$spinner-prefix}color !default;
+$spinner-track-color-var: --#{$spinner-prefix}track-color !default;
 
 // --------------------------------------------
 // Animation
 // --------------------------------------------
-$spinner-speed-var: --#{$spinner-prefix}speed;
+$spinner-speed-var: --#{$spinner-prefix}speed !default;
 
 // ============================================
 // Process

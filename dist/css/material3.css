@@ -5251,32 +5251,32 @@ h6,
 }
 
 .range {
-  --rangeaccent-color: var(--palette-default);
+  --range-accent-color: var(--palette-default);
 }
 
 .range {
-  accent-color: var(--rangeaccent-color);
+  accent-color: var(--range-accent-color);
 }
 
 .progress {
-  --progressaccent-color: var(--palette-default);
-  --progresssm-size: 0.75rem;
-  --progressmd-size: 1rem;
-  --progresslg-size: 1.5rem;
+  --progress-accent-color: var(--palette-default);
+  --progress-sm-size: 0.75rem;
+  --progress-md-size: 1rem;
+  --progress-lg-size: 1.5rem;
 }
 
 .progress {
-  accent-color: var(--progressaccent-color);
-  height: var(--progressmd-size);
+  accent-color: var(--progress-accent-color);
+  height: var(--progress-md-size);
 }
 .progress.sm {
-  height: var(--progresssm-size);
+  height: var(--progress-sm-size);
 }
 .progress.md {
-  height: var(--progressmd-size);
+  height: var(--progress-md-size);
 }
 .progress.lg {
-  height: var(--progresslg-size);
+  height: var(--progress-lg-size);
 }
 
 .form-control {
@@ -5823,14 +5823,12 @@ h6,
   --chip-bg-color: var(--palette-lighter);
   --chip-color: var(--palette-dark);
   --chip-border-color: var(--palette-lighter);
-  --chip-hover-bg-color: var(--palette-light);
   --chip-border-radius: 10rem;
   --chip-border-width: 1px;
   --chip-padding: 0.25em 0.625em;
   --chip-font-size: 0.875em;
   --chip-gap: 0.25rem;
   --chip-dismiss-color: var(--palette-dark);
-  --chip-dismiss-hover-color: var(--palette-darker);
 }
 
 .chip {
@@ -5846,9 +5844,6 @@ h6,
   line-height: 1.4;
   vertical-align: middle;
 }
-.chip:hover {
-  background-color: var(--chip-hover-bg-color);
-}
 .chip.sm {
   font-size: 0.75em;
 }
@@ -5860,7 +5855,6 @@ h6,
   background-color: transparent;
   --chip-color: var(--palette-default);
   --chip-border-color: var(--palette-default);
-  --chip-hover-bg-color: var(--palette-lighter);
 }
 .chip.tonal {
   --chip-border-color: transparent;
@@ -5884,9 +5878,6 @@ h6,
   cursor: pointer;
   color: var(--chip-dismiss-color);
   line-height: 1;
-}
-.chip-dismiss:hover {
-  color: var(--chip-dismiss-hover-color);
 }
 
 @keyframes nomad-spinner-rotate {

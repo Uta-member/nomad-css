@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$chip-prefix: #{prefixes.$prefix}chip-;
+$chip-prefix: #{prefixes.$prefix}chip- !default;
 
 // --------------------------------------------
 // Class Names
@@ -21,29 +21,27 @@ $chip-class-name: chip !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$chip-bg-color-var: --#{$chip-prefix}bg-color;
-$chip-color-var: --#{$chip-prefix}color;
-$chip-border-color-var: --#{$chip-prefix}border-color;
-$chip-hover-bg-color-var: --#{$chip-prefix}hover-bg-color;
+$chip-bg-color-var: --#{$chip-prefix}bg-color !default;
+$chip-color-var: --#{$chip-prefix}color !default;
+$chip-border-color-var: --#{$chip-prefix}border-color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$chip-border-radius-var: --#{$chip-prefix}border-radius;
-$chip-border-width-var: --#{$chip-prefix}border-width;
+$chip-border-radius-var: --#{$chip-prefix}border-radius !default;
+$chip-border-width-var: --#{$chip-prefix}border-width !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$chip-padding-var: --#{$chip-prefix}padding;
-$chip-font-size-var: --#{$chip-prefix}font-size;
-$chip-gap-var: --#{$chip-prefix}gap;
+$chip-padding-var: --#{$chip-prefix}padding !default;
+$chip-font-size-var: --#{$chip-prefix}font-size !default;
+$chip-gap-var: --#{$chip-prefix}gap !default;
 
 // --------------------------------------------
 // Dismiss
 // --------------------------------------------
-$chip-dismiss-color-var: --#{$chip-prefix}dismiss-color;
-$chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
+$chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
 
 // ============================================
 // Process
@@ -58,7 +56,6 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
   #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
   #{$chip-color-var}: var(#{palette.$palette-dark-var});
   #{$chip-border-color-var}: var(#{palette.$palette-lighter-var});
-  #{$chip-hover-bg-color-var}: var(#{palette.$palette-light-var});
 
   // --------------------------------------------
   // Border
@@ -77,7 +74,6 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
   // Dismiss
   // --------------------------------------------
   #{$chip-dismiss-color-var}: var(#{palette.$palette-dark-var});
-  #{$chip-dismiss-hover-color-var}: var(#{palette.$palette-darker-var});
 }
 
 // ============================================
@@ -99,10 +95,6 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
   line-height: 1.4;
   vertical-align: middle;
 
-  &:hover {
-    background-color: var(#{$chip-hover-bg-color-var});
-  }
-
   // --------------------------------------------
   // Sizes
   // --------------------------------------------
@@ -123,7 +115,6 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
     background-color: transparent;
     #{$chip-color-var}: var(#{palette.$palette-default-var});
     #{$chip-border-color-var}: var(#{palette.$palette-default-var});
-    #{$chip-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
   }
 
   &.tonal {
@@ -152,8 +143,4 @@ $chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
   cursor: pointer;
   color: var(#{$chip-dismiss-color-var});
   line-height: 1;
-
-  &:hover {
-    color: var(#{$chip-dismiss-hover-color-var});
-  }
 }

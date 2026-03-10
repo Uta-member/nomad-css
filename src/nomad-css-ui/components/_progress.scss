@@ -8,12 +8,12 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$progress-prefix: #{prefixes.$prefix}progress;
+$progress-prefix: #{prefixes.$prefix}progress- !default;
 
 // --------------------------------------------
 // Class Names
 // --------------------------------------------
-$progress-class-name: progress;
+$progress-class-name: progress !default;
 
 // --------------------------------------------
 // Variants
@@ -21,14 +21,14 @@ $progress-class-name: progress;
 // --------------------------------------------
 // Accent Colors
 // --------------------------------------------
-$progress-accent-color-var: --#{$progress-prefix}accent-color;
+$progress-accent-color-var: --#{$progress-prefix}accent-color !default;
 
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$progress-sm-size-var: --#{$progress-prefix}sm-size;
-$progress-md-size-var: --#{$progress-prefix}md-size;
-$progress-lg-size-var: --#{$progress-prefix}lg-size;
+$progress-sm-size-var: --#{$progress-prefix}sm-size !default;
+$progress-md-size-var: --#{$progress-prefix}md-size !default;
+$progress-lg-size-var: --#{$progress-prefix}lg-size !default;
 
 // ============================================
 // Process

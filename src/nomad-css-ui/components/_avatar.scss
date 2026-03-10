@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$avatar-prefix: #{prefixes.$prefix}avatar-;
+$avatar-prefix: #{prefixes.$prefix}avatar- !default;
 
 // --------------------------------------------
 // Class Names
@@ -21,27 +21,27 @@ $avatar-class-name: avatar !default;
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$avatar-size-var: --#{$avatar-prefix}size;
-$avatar-sm-size-var: --#{$avatar-prefix}sm-size;
-$avatar-lg-size-var: --#{$avatar-prefix}lg-size;
+$avatar-size-var: --#{$avatar-prefix}size !default;
+$avatar-sm-size-var: --#{$avatar-prefix}sm-size !default;
+$avatar-lg-size-var: --#{$avatar-prefix}lg-size !default;
 
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$avatar-bg-color-var: --#{$avatar-prefix}bg-color;
-$avatar-color-var: --#{$avatar-prefix}color;
-$avatar-border-color-var: --#{$avatar-prefix}border-color;
-$avatar-border-width-var: --#{$avatar-prefix}border-width;
+$avatar-bg-color-var: --#{$avatar-prefix}bg-color !default;
+$avatar-color-var: --#{$avatar-prefix}color !default;
+$avatar-border-color-var: --#{$avatar-prefix}border-color !default;
+$avatar-border-width-var: --#{$avatar-prefix}border-width !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$avatar-border-radius-var: --#{$avatar-prefix}border-radius;
+$avatar-border-radius-var: --#{$avatar-prefix}border-radius !default;
 
 // --------------------------------------------
 // Font
 // --------------------------------------------
-$avatar-font-size-var: --#{$avatar-prefix}font-size;
+$avatar-font-size-var: --#{$avatar-prefix}font-size !default;
 
 // ============================================
 // Process

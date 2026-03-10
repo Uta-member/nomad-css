@@ -21,26 +21,26 @@ $table-class-name: table !default;
 // --------------------------------------------
 // Borders
 // --------------------------------------------
-$table-border-color-var: --#{$table-prefix}border-color;
-$table-border-width-var: --#{$table-prefix}border-width;
+$table-border-color-var: --#{$table-prefix}border-color !default;
+$table-border-width-var: --#{$table-prefix}border-width !default;
 
 // --------------------------------------------
 // Striped
 // --------------------------------------------
-$table-striped-bg-color-var: --#{$table-prefix}striped-bg-color;
-$table-striped-color-var: --#{$table-prefix}striped-color;
+$table-striped-bg-color-var: --#{$table-prefix}striped-bg-color !default;
+$table-striped-color-var: --#{$table-prefix}striped-color !default;
 
 // --------------------------------------------
 // Hover
 // --------------------------------------------
-$table-hover-bg-color-var: --#{$table-prefix}hover-bg-color;
-$table-hover-color-var: --#{$table-prefix}hover-color;
+$table-hover-bg-color-var: --#{$table-prefix}hover-bg-color !default;
+$table-hover-color-var: --#{$table-prefix}hover-color !default;
 
 // --------------------------------------------
 // Cursors
 // --------------------------------------------
-$table-hover-row-cursor-var: --#{$table-prefix}hover-row-cursor;
-$table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor;
+$table-hover-row-cursor-var: --#{$table-prefix}hover-row-cursor !default;
+$table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
 
 // ============================================
 // Process

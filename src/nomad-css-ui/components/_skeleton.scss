@@ -7,7 +7,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$skeleton-prefix: #{prefixes.$prefix}skeleton-;
+$skeleton-prefix: #{prefixes.$prefix}skeleton- !default;
 
 // --------------------------------------------
 // Class Names
@@ -20,23 +20,23 @@ $skeleton-class-name: skeleton !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$skeleton-bg-color-var: --#{$skeleton-prefix}bg-color;
-$skeleton-shimmer-color-var: --#{$skeleton-prefix}shimmer-color;
+$skeleton-bg-color-var: --#{$skeleton-prefix}bg-color !default;
+$skeleton-shimmer-color-var: --#{$skeleton-prefix}shimmer-color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$skeleton-border-radius-var: --#{$skeleton-prefix}border-radius;
+$skeleton-border-radius-var: --#{$skeleton-prefix}border-radius !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$skeleton-text-height-var: --#{$skeleton-prefix}text-height;
+$skeleton-text-height-var: --#{$skeleton-prefix}text-height !default;
 
 // --------------------------------------------
 // Animation
 // --------------------------------------------
-$skeleton-speed-var: --#{$skeleton-prefix}speed;
+$skeleton-speed-var: --#{$skeleton-prefix}speed !default;
 
 // ============================================
 // Process

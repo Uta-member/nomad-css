@@ -8,12 +8,12 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$select-prefix: #{prefixes.$prefix}select-;
+$select-prefix: #{prefixes.$prefix}select- !default;
 
 // --------------------------------------------
 // Class Names
 // --------------------------------------------
-$select-class-name: select;
+$select-class-name: select !default;
 
 // --------------------------------------------
 // Variants
@@ -21,77 +21,77 @@ $select-class-name: select;
 // --------------------------------------------
 // Background Colors
 // --------------------------------------------
-$select-filled-bg-color-var: --#{$select-prefix}filled-bg-color;
-$select-filled-hover-bg-color-var: --#{$select-prefix}filled-hover-bg-color;
-$select-filled-active-bg-color-var: --#{$select-prefix}filled-active-bg-color;
-$select-filled-focus-bg-color-var: --#{$select-prefix}filled-focus-bg-color;
-$select-filled-disabled-bg-color-var: --#{$select-prefix}filled-disabled-bg-color;
+$select-filled-bg-color-var: --#{$select-prefix}filled-bg-color !default;
+$select-filled-hover-bg-color-var: --#{$select-prefix}filled-hover-bg-color !default;
+$select-filled-active-bg-color-var: --#{$select-prefix}filled-active-bg-color !default;
+$select-filled-focus-bg-color-var: --#{$select-prefix}filled-focus-bg-color !default;
+$select-filled-disabled-bg-color-var: --#{$select-prefix}filled-disabled-bg-color !default;
 
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$select-color-var: --#{$select-prefix}color;
-$select-hover-color-var: --#{$select-prefix}hover-color;
-$select-active-color-var: --#{$select-prefix}active-color;
-$select-focus-color-var: --#{$select-prefix}focus-color;
-$select-disabled-color-var: --#{$select-prefix}disabled-color;
+$select-color-var: --#{$select-prefix}color !default;
+$select-hover-color-var: --#{$select-prefix}hover-color !default;
+$select-active-color-var: --#{$select-prefix}active-color !default;
+$select-focus-color-var: --#{$select-prefix}focus-color !default;
+$select-disabled-color-var: --#{$select-prefix}disabled-color !default;
 
 // --------------------------------------------
 // Placeholder Colors (for native placeholder usage if any)
 // --------------------------------------------
-$select-placeholder-color-var: --#{$select-prefix}placeholder-color;
-$select-placeholder-hover-color-var: --#{$select-prefix}placeholder-hover-color;
-$select-placeholder-active-color-var: --#{$select-prefix}placeholder-active-color;
-$select-placeholder-focus-color-var: --#{$select-prefix}placeholder-focus-color;
-$select-placeholder-disabled-color-var: --#{$select-prefix}placeholder-disabled-color;
+$select-placeholder-color-var: --#{$select-prefix}placeholder-color !default;
+$select-placeholder-hover-color-var: --#{$select-prefix}placeholder-hover-color !default;
+$select-placeholder-active-color-var: --#{$select-prefix}placeholder-active-color !default;
+$select-placeholder-focus-color-var: --#{$select-prefix}placeholder-focus-color !default;
+$select-placeholder-disabled-color-var: --#{$select-prefix}placeholder-disabled-color !default;
 
 // --------------------------------------------
 // Borders
 // --------------------------------------------
-$select-border-top-width-var: --#{$select-prefix}border-top-width;
-$select-border-right-width-var: --#{$select-prefix}border-right-width;
-$select-border-bottom-width-var: --#{$select-prefix}border-bottom-width;
-$select-border-left-width-var: --#{$select-prefix}border-left-width;
-$select-border-radius-var: --#{$select-prefix}border-radius;
-$select-border-color-var: --#{$select-prefix}border-color;
-$select-hover-border-color-var: --#{$select-prefix}hover-border-color;
-$select-active-border-color-var: --#{$select-prefix}active-border-color;
-$select-focus-border-color-var: --#{$select-prefix}focus-border-color;
-$select-disabled-border-color-var: --#{$select-prefix}disabled-border-color;
+$select-border-top-width-var: --#{$select-prefix}border-top-width !default;
+$select-border-right-width-var: --#{$select-prefix}border-right-width !default;
+$select-border-bottom-width-var: --#{$select-prefix}border-bottom-width !default;
+$select-border-left-width-var: --#{$select-prefix}border-left-width !default;
+$select-border-radius-var: --#{$select-prefix}border-radius !default;
+$select-border-color-var: --#{$select-prefix}border-color !default;
+$select-hover-border-color-var: --#{$select-prefix}hover-border-color !default;
+$select-active-border-color-var: --#{$select-prefix}active-border-color !default;
+$select-focus-border-color-var: --#{$select-prefix}focus-border-color !default;
+$select-disabled-border-color-var: --#{$select-prefix}disabled-border-color !default;
 
 // --------------------------------------------
 // Focus Ring
 // --------------------------------------------
-$select-focus-ring-width-var: --#{$select-prefix}focus-ring-width;
-$select-focus-ring-color-var: --#{$select-prefix}focus-ring-color;
-$select-focus-ring-offset-width-var: --#{$select-prefix}focus-ring-offset-width;
+$select-focus-ring-width-var: --#{$select-prefix}focus-ring-width !default;
+$select-focus-ring-color-var: --#{$select-prefix}focus-ring-color !default;
+$select-focus-ring-offset-width-var: --#{$select-prefix}focus-ring-offset-width !default;
 
 // --------------------------------------------
 // Opacity
 // --------------------------------------------
-$select-opacity-var: --#{$select-prefix}opacity;
-$select-disabled-opacity-var: --#{$select-prefix}disabled-opacity;
+$select-opacity-var: --#{$select-prefix}opacity !default;
+$select-disabled-opacity-var: --#{$select-prefix}disabled-opacity !default;
 
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$select-padding-var: --#{$select-prefix}padding;
-$select-font-size-var: --#{$select-prefix}font-size;
-$select-sm-padding-var: --#{$select-prefix}sm-padding;
-$select-sm-font-size-var: --#{$select-prefix}sm-font-size;
-$select-lg-padding-var: --#{$select-prefix}lg-padding;
-$select-lg-font-size-var: --#{$select-prefix}lg-font-size;
+$select-padding-var: --#{$select-prefix}padding !default;
+$select-font-size-var: --#{$select-prefix}font-size !default;
+$select-sm-padding-var: --#{$select-prefix}sm-padding !default;
+$select-sm-font-size-var: --#{$select-prefix}sm-font-size !default;
+$select-lg-padding-var: --#{$select-prefix}lg-padding !default;
+$select-lg-font-size-var: --#{$select-prefix}lg-font-size !default;
 
 // --------------------------------------------
 // Cursor
 // --------------------------------------------
-$select-cursor-var: --#{$select-prefix}cursor;
-$select-disabled-cursor-var: --#{$select-prefix}disabled-cursor;
+$select-cursor-var: --#{$select-prefix}cursor !default;
+$select-disabled-cursor-var: --#{$select-prefix}disabled-cursor !default;
 
 // --------------------------------------------
 // Transition
 // --------------------------------------------
-$select-transition-var: --#{$select-prefix}transition;
+$select-transition-var: --#{$select-prefix}transition !default;
 
 // ============================================
 // Process
