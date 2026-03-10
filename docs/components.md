@@ -1,203 +1,334 @@
-# Nomad CSS コンポーネント利用ガイド
+# コンポーネントリファレンス (`src/nomad-css-ui/`)
 
-## はじめに
-Nomad CSSはCSS変数ベースでカスタマイズ可能なコンポーネントライブラリです。
-使用するには、ベースとなるCSSを読み込み、`<html>` タグ等で `data-theme` 属性を指定します。
-
-```html
-<!DOCTYPE html>
-<html lang="ja" data-theme="fluent2"> <!-- or "material3" -->
-<head>
-    <link rel="stylesheet" href="dist/nomad.css">
-</head>
-<body>
-    ...
-</body>
-</html>
-```
+nomad-css-ui 層のコンポーネントは、CSS 変数によってスタイルが制御され、テーマ層から上書きすることで外観を変更できます。
 
 ---
 
-## Button (ボタン)
+## ボタン (`_button.scss`)
 
-### 基本的な使い方
-`.button` クラスを使用します。
-
-```html
-<button class="button">Default Button</button>
-```
-
-### バリエーション (Variant)
-用途に合わせてスタイルを切り替えます。スタイルは `_contract.scss` で一元管理されています。
-
-| クラス名 | 説明 |
-| --- | --- |
-| `.filled` | 背景色付き（標準）。アクションを強調する場合に使用。 |
-| `.tonal` | 薄い背景色。優先度の低いアクションに使用。 |
-| `.outlined` |枠線のみ。補助的なアクションに使用。 |
-| `.text` | テキストのみ。控えめなアクションに使用。 |
+### 使用方法
 
 ```html
+<!-- ベース -->
+<button class="button">Default</button>
+
+<!-- バリエーション -->
 <button class="button filled">Filled</button>
 <button class="button tonal">Tonal</button>
 <button class="button outlined">Outlined</button>
 <button class="button text">Text</button>
+
+<!-- サイズ -->
+<button class="button sm">Small</button>
+<button class="button lg">Large</button>
+
+<!-- 状態 -->
+<button class="button filled" disabled>Disabled</button>
 ```
 
-### サイズ
-テーマによって実際のサイズ値は異なりますが、相対的な大小を指定できます。
+### 主な CSS 変数
 
-```html
-<button class="button button-sm">Small</button>
-<button class="button">Default</button>
-<button class="button button-lg">Large</button>
-```
-
-### アイコン
-アイコンのみのボタンを作成する場合は `.icon-only` を追加します。正方形のアスペクト比が維持されます。
-
-```html
-<button class="button icon-only">
-    <span class="icon">★</span>
-</button>
-```
+| 変数                         | 用途                                       |
+| ---------------------------- | ------------------------------------------ |
+| `--button-bg-color`          | 背景色                                     |
+| `--button-hover-bg-color`    | ホバー時背景色                             |
+| `--button-active-bg-color`   | アクティブ時背景色                         |
+| `--button-focus-bg-color`    | フォーカス時背景色                         |
+| `--button-disabled-bg-color` | 無効時背景色                               |
+| `--button-color`             | テキスト色                                 |
+| `--button-border-color`      | ボーダー色                                 |
+| `--button-border-radius`     | 角丸                                       |
+| `--button-border-width`      | ボーダー幅                                 |
+| `--button-box-shadow`        | 影                                         |
+| `--button-focus-box-shadow`  | フォーカス時の影                           |
+| `--button-padding`           | パディング                                 |
+| `--button-font-size`         | フォントサイズ                             |
+| `--button-sm-padding`        | sm サイズのパディング                      |
+| `--button-lg-padding`        | lg サイズのパディング                      |
+| `--button-cursor`            | カーソル (デフォルト: `pointer`)           |
+| `--button-disabled-cursor`   | 無効時カーソル (デフォルト: `not-allowed`) |
+| `--button-disabled-opacity`  | 無効時の不透明度                           |
+| `--button-transition`        | トランジション                             |
 
 ---
 
-## Input (入力フォーム)
+## テキスト入力 (`_form-control.scss`)
 
-### 基本的な使い方
-`.input` クラスを使用します。
-
-```html
-<input type="text" class="input" placeholder="Type here...">
-```
-
-### Textarea
-`<textarea>` にも同じ `.input` クラスを使用します。
+### 使用方法
 
 ```html
-<textarea class="input" placeholder="Type details..."></textarea>
+<!-- ベース -->
+<input type="text" class="form-control" placeholder="入力してください" />
+<textarea class="form-control">テキスト</textarea>
+
+<!-- バリエーション -->
+<input type="text" class="form-control filled" placeholder="Filled" />
+<input type="text" class="form-control underline" placeholder="Underline" />
+
+<!-- サイズ -->
+<input type="text" class="form-control sm" />
+<input type="text" class="form-control lg" />
+
+<!-- 状態 -->
+<input type="text" class="form-control" disabled />
+<input type="text" class="form-control" readonly />
 ```
 
-### バリエーション
-Material Design風の下線スタイルなどを利用できます。
+### 主な CSS 変数
 
-```html
-<!-- 全面塗りつぶし/枠線なし背景あり -->
-<input type="text" class="input input-filled" placeholder="Filled">
-
-<!-- 下線のみ -->
-<input type="text" class="input input-underline" placeholder="Underline">
-
-<!-- 枠線なし -->
-<input type="text" class="input input-borderless" placeholder="Borderless">
-```
-
-### サイズ
-
-```html
-<input type="text" class="input input-sm" placeholder="Small">
-<input type="text" class="input input-lg" placeholder="Large">
-```
+| 変数                                     | 用途                       |
+| ---------------------------------------- | -------------------------- |
+| `--form-control-color`                   | テキスト色                 |
+| `--form-control-placeholder-color`       | プレースホルダー色         |
+| `--form-control-filled-bg-color`         | filled バリアントの背景色  |
+| `--form-control-border-color`            | ボーダー色                 |
+| `--form-control-focus-border-color`      | フォーカス時ボーダー色     |
+| `--form-control-border-radius`           | 角丸                       |
+| `--form-control-border-top-width`        | 上ボーダー幅               |
+| `--form-control-border-right-width`      | 右ボーダー幅               |
+| `--form-control-border-bottom-width`     | 下ボーダー幅               |
+| `--form-control-border-left-width`       | 左ボーダー幅               |
+| `--form-control-focus-ring-width`        | フォーカスリング幅         |
+| `--form-control-focus-ring-color`        | フォーカスリング色         |
+| `--form-control-focus-ring-offset-width` | フォーカスリングオフセット |
+| `--form-control-disabled-opacity`        | 無効時の不透明度           |
 
 ---
 
-## Select (セレクトボックス)
+## セレクトボックス (`_select.scss`)
 
-ネイティブの `<select>` 要素をスタイリングします。
-※ ブラウザの仕様上、ドロップダウンリスト（`<option>`部分）のスタイル制御には限界があります。
-
-### 基本的な使い方
-`.select` クラスを使用します。
+### 使用方法
 
 ```html
+<!-- ベース -->
 <select class="select">
-    <option>Option 1</option>
-    <option>Option 2</option>
+  <option>選択してください</option>
+  <option>オプション1</option>
+</select>
+
+<!-- バリエーション -->
+<select class="select filled">
+  ...
+</select>
+<select class="select underline">
+  ...
 </select>
 ```
 
-### バリエーション & サイズ
-Inputコンポーネントと同様のクラスが使用可能です。
+### 主な CSS 変数
 
-```html
-<select class="select select-filled">...</select>
-<select class="select select-underline">...</select>
-<select class="select select-sm">...</select>
-```
+form-control と同様のパターンで、プレフィックスが `--select-` になります。
 
 ---
 
-## 入力グループ (Input Group)
+## チェックボックス (`_checkbox.scss`)
 
-アイコンやテキストを入力欄と一体化させて表示します。
+### 使用方法
 
 ```html
-<!-- テキストアドオン -->
-<div class="input-group">
-    <span class="input-addon">https://</span>
-    <input type="text" class="input" placeholder="example.com">
-</div>
+<input type="checkbox" class="checkbox" />
+<input type="checkbox" class="checkbox" checked />
+<input type="checkbox" class="checkbox" disabled />
 
-<!-- アイコン付き入力 -->
-<div class="input-icon">
-    <span class="input-icon-left">🔍</span>
-    <input type="text" class="input" placeholder="Search...">
-</div>
+<!-- サイズ -->
+<input type="checkbox" class="checkbox sm" />
+<input type="checkbox" class="checkbox lg" />
 ```
+
+### 主な CSS 変数
+
+| 変数                                  | 用途                 |
+| ------------------------------------- | -------------------- |
+| `--checkbox-bg-color`                 | 未チェック時背景色   |
+| `--checkbox-checked-bg-color`         | チェック時背景色     |
+| `--checkbox-border-color`             | ボーダー色           |
+| `--checkbox-checked-border-color`     | チェック時ボーダー色 |
+| `--checkbox-border-radius`            | 角丸                 |
+| `--checkbox-border-width`             | ボーダー幅           |
+| `--checkbox-mark-color`               | チェックマーク色     |
+| `--checkbox-mark-image`               | チェックマーク SVG   |
+| `--checkbox-indeterminate-mark-image` | 中間状態マーク SVG   |
+| `--checkbox-size`                     | サイズ               |
+| `--checkbox-sm-size`                  | sm サイズ            |
+| `--checkbox-lg-size`                  | lg サイズ            |
+| `--checkbox-cursor`                   | カーソル             |
+| `--checkbox-disabled-opacity`         | 無効時の不透明度     |
 
 ---
 
-## テーマのカスタマイズ
+## ラジオボタン (`_radio.scss`)
 
-各テーマ（Fluent2 / Material3）はCSS定義済みですが、CSS変数を上書きすることで部分的なカスタマイズが可能です。
+### 使用方法
+
+```html
+<input type="radio" class="radio" name="group" />
+<input type="radio" class="radio" name="group" checked />
+<input type="radio" class="radio" disabled />
+
+<!-- サイズ -->
+<input type="radio" class="radio sm" />
+<input type="radio" class="radio lg" />
+```
+
+### 主な CSS 変数
+
+checkbox と同様のパターンで、プレフィックスが `--radio-` になります。
+
+---
+
+## レンジスライダー (`_range.scss`)
+
+### 使用方法
+
+```html
+<input type="range" class="range" min="0" max="100" value="50" />
+```
+
+### 主な CSS 変数
+
+| 変数                   | 用途                                   |
+| ---------------------- | -------------------------------------- |
+| `--range-accent-color` | アクセントカラー（トラック・つまみ色） |
+
+---
+
+## プログレスバー (`_progress.scss`)
+
+### 使用方法
+
+```html
+<progress class="progress" value="70" max="100"></progress>
+
+<!-- サイズ -->
+<progress class="progress sm" value="70" max="100"></progress>
+<progress class="progress md" value="70" max="100"></progress>
+<progress class="progress lg" value="70" max="100"></progress>
+```
+
+### 主な CSS 変数
+
+| 変数                     | デフォルト               | 用途             |
+| ------------------------ | ------------------------ | ---------------- |
+| `--progressaccent-color` | `var(--palette-default)` | アクセントカラー |
+| `--progresssm-size`      | `0.75rem`                | sm サイズの高さ  |
+| `--progressmd-size`      | `1rem`                   | md サイズの高さ  |
+| `--progresslg-size`      | `1.5rem`                 | lg サイズの高さ  |
+
+---
+
+## テーブル (`_table.scss`)
+
+### 使用方法
+
+```html
+<!-- ベース -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>列1</th>
+      <th>列2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>データ1</td>
+      <td>データ2</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- バリエーション（組み合わせ可） -->
+<table class="table striped">
+  ...
+</table>
+<table class="table hover">
+  ...
+</table>
+<table class="table row-bordered">
+  ...
+</table>
+<table class="table column-bordered">
+  ...
+</table>
+<table class="table bordered">
+  ...
+</table>
+<!-- row-bordered + column-bordered -->
+```
+
+### 主な CSS 変数
+
+| 変数                        | デフォルト                      | 用途                 |
+| --------------------------- | ------------------------------- | -------------------- |
+| `--table-border-color`      | `var(--border-color)`           | ボーダー色           |
+| `--table-border-width`      | `1px`                           | ボーダー幅           |
+| `--table-striped-bg-color`  | `var(--neutral-lighter)`        | 縞模様の背景色       |
+| `--table-striped-color`     | `var(--neutral-accent-lighter)` | 縞模様のテキスト色   |
+| `--table-hover-bg-color`    | `var(--neutral-lighter)`        | ホバー時背景色       |
+| `--table-hover-color`       | `var(--neutral-accent-lighter)` | ホバー時テキスト色   |
+| `--table-hover-row-cursor`  | `unset`                         | 行ホバー時カーソル   |
+| `--table-hover-cell-cursor` | `unset`                         | セルホバー時カーソル |
+
+---
+
+## カラーシステム (`src/nomad-css-ui/utilities/`)
+
+### HUE カラー (`_hue-colors.scss`)
+
+HSL 色相環に基づく 12 色の HUE 変数を定義します。
+各変数は `:root` に定義され、HUE 値 (0〜360) が格納されています。
+
+| 変数           | HUE  | 彩度 |
+| -------------- | ---- | ---- |
+| `--hue-red`    | 0°   | 100% |
+| `--hue-orange` | 30°  | 100% |
+| `--hue-yellow` | 50°  | 100% |
+| `--hue-lime`   | 90°  | 100% |
+| `--hue-green`  | 125° | 100% |
+| `--hue-teal`   | 170° | 100% |
+| `--hue-cyan`   | 190° | 100% |
+| `--hue-blue`   | 220° | 100% |
+| `--hue-indigo` | 240° | 100% |
+| `--hue-violet` | 270° | 100% |
+| `--hue-purple` | 290° | 100% |
+| `--hue-pink`   | 330° | 100% |
+
+### セマンティックカラー (`_semantics.scss`)
+
+アプリケーションでよく使われるセマンティックカラーを定義します。
+各カラーは HUE 変数を参照し、`generate-palette()` で CSS 変数を生成します。
+
+| 名前        | HUE                  | 彩度 | 用途             |
+| ----------- | -------------------- | ---- | ---------------- |
+| `primary`   | `--hue-blue` (220°)  | 80%  | メインアクション |
+| `secondary` | `--hue-pink` (330°)  | 80%  | サブアクション   |
+| `tertiary`  | `--hue-teal` (170°)  | 60%  | 補助カラー       |
+| `success`   | `--hue-green` (125°) | 60%  | 成功・完了       |
+| `warning`   | `--hue-yellow` (50°) | 80%  | 警告             |
+| `danger`    | `--hue-red` (0°)     | 80%  | エラー・危険     |
+| `info`      | `--hue-cyan` (190°)  | 80%  | 情報             |
+| `neutral`   | `--hue-blue` (220°)  | 5%   | ニュートラル     |
+
+### 共通カラー変数 (`_color-defines.scss`)
+
+テーマ層から必ず上書きが想定される共通カラー変数です。
+デフォルト値はライトモードを想定した値になっています。
 
 ```css
-/* 例: Fluent2テーマのプライマリカラーを赤に変更 */
-:root[data-theme="fluent2"] {
-    --primary-h: 0; /* Red Hue */
-    --primary-s: 80%;
-}
----
+/* テキストカラー */
+--text-color: #1f1f1f;
+--text-color-light: #3f3f3f;
+--text-color-dark: #000000;
 
-## **Components 実装ガイド**
+/* サーフェスカラー */
+--surface-color: #f0f0f0;
+--surface-color-light: #f5f5f5;
+--surface-color-lighter: #ffffff;
+--surface-color-dark: #e5e5e5;
+--surface-color-darker: #d9d9d9;
 
-- **目的**: コンポーネント層は構造とレイアウト、及び最小限の公開CSS変数（サイズ・色・トランジション等）を提供します。セマンティックカラーやサイズバリアントはテーマ層で定義してください。
-
-- **共通構造**:
-    - 各コンポーネントはSCSSで `$<name>-prefix` と `$<name>-class-name` を持ちます（例: `$select-prefix`, `$select-class-name`）。
-    - CSSカスタムプロパティは直接散らさず、`$<component>-<prop>-var` をラップして使います。参照は `var(#{$<component>-<prop>-var})`。実例: [src/components/_select.scss](src/components/_select.scss)。
-    - デフォルト値はグローバル `:root` ではなく `.#{$<component>-class-name}` の中に置きます。テーマは `:root[data-theme="..."]` で上書きします。
-
-- **命名規約（推奨）**:
-    - プレフィックス: `$<component>-prefix: "<prefix>-"`。
-    - クラス名: `$<component>-class-name: "<name>"`。
-    - CSS変数ラッパー: `$<component>-<prop>-var: --#{$<component>-prefix}<prop>`。
-
-- **状態・擬似要素の扱い**:
-    - `:hover`, `:active`, `:focus`, `:disabled` 等はコンポーネント内でCSS変数を参照して記述し、実際の色/サイズはテーマで設定します。
-    - ブラウザ差異のための擬似要素（例: `::-webkit-slider-thumb`）はそのまま維持し、色/サイズのみ変数参照化してください（例: [src/components/_range.scss](src/components/_range.scss)）。
-
-- **実装手順（新コンポーネント追加）**:
-    1. `src/components/_newcomponent.scss` を作成。
-    2. `$new-prefix` と `$new-class-name` を定義。
-    3. 必要な `$new-*-var` を列挙し、`.#{$new-class-name}` にデフォルトを置く。
-    4. スタイル中は `var(#{$new-*-var})` を使用する（直接ハードコードしない）。
-    5. サイズ/semantic/validation ロジックはコアに入れずテーマ/アプリ層で実装すること。
-
-- **既存コンポーネントの参照例**:
-    - Select: [src/components/_select.scss](src/components/_select.scss)
-    - Range: [src/components/_range.scss](src/components/_range.scss)
-    - Progress / Input: `src/components/_progress.scss`, `src/components/_input.scss`
-
-- **テスト / ビルドの確認**:
-    - Sass をビルドして（`npm run build` 等）スタイルがコンパイルされることを確認してください。
-    - ブラウザで主要コントロールの見た目・キーボード操作を検証してください。
-
-- **次の推奨作業**:
-    - 各テーマ（`fluent2`, `material3`）へサイズ（sm/lg等）とセマンティック色の具体値を追加する。
-    - コンポーネント単位のアクセシビリティチェックリストを整備する（キーボード操作、フォーカス、コントラストなど）。
-
-(注) このガイドはコア方針に合わせて随時更新してください。
+/* ボーダーカラー（neutral パレットから自動生成） */
+--border-color: var(--neutral-default);
+--border-color-light: var(--neutral-light);
+--border-color-dark: var(--neutral-dark);
 ```
