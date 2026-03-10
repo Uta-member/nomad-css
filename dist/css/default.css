@@ -5821,13 +5821,29 @@ h6,
 
 .chip {
   --chip-bg-color: var(--palette-lighter);
+  --chip-hover-bg-color: var(--palette-light);
+  --chip-active-bg-color: var(--palette-default);
+  --chip-focus-bg-color: var(--chip-hover-bg-color);
+  --chip-disabled-bg-color: var(--surface-color);
   --chip-color: var(--palette-dark);
+  --chip-hover-color: var(--palette-dark);
+  --chip-active-color: var(--palette-darker);
+  --chip-focus-color: var(--chip-hover-color);
+  --chip-disabled-color: var(--border-color);
   --chip-border-color: var(--palette-lighter);
+  --chip-hover-border-color: var(--palette-light);
+  --chip-active-border-color: var(--palette-default);
+  --chip-focus-border-color: var(--chip-hover-border-color);
+  --chip-disabled-border-color: var(--border-color-light);
   --chip-border-radius: 10rem;
   --chip-border-width: 1px;
   --chip-padding: 0.25em 0.625em;
   --chip-font-size: 0.875em;
   --chip-gap: 0.25rem;
+  --chip-cursor: default;
+  --chip-disabled-cursor: not-allowed;
+  --chip-disabled-opacity: 1;
+  --chip-transition: 0.3s;
   --chip-dismiss-color: var(--palette-dark);
 }
 
@@ -5843,6 +5859,31 @@ h6,
   font-size: var(--chip-font-size);
   line-height: 1.4;
   vertical-align: middle;
+  cursor: var(--chip-cursor);
+  transition: var(--chip-transition);
+}
+.chip:hover {
+  background-color: var(--chip-hover-bg-color);
+  color: var(--chip-hover-color);
+  border-color: var(--chip-hover-border-color);
+}
+.chip:active {
+  background-color: var(--chip-active-bg-color);
+  color: var(--chip-active-color);
+  border-color: var(--chip-active-border-color);
+}
+.chip:focus-visible {
+  background-color: var(--chip-focus-bg-color);
+  color: var(--chip-focus-color);
+  border-color: var(--chip-focus-border-color);
+}
+.chip:disabled, .chip[aria-disabled=true] {
+  background-color: var(--chip-disabled-bg-color);
+  color: var(--chip-disabled-color);
+  border-color: var(--chip-disabled-border-color);
+  opacity: var(--chip-disabled-opacity);
+  cursor: var(--chip-disabled-cursor);
+  pointer-events: none;
 }
 .chip.sm {
   font-size: 0.75em;
@@ -5852,12 +5893,26 @@ h6,
 }
 
 .chip.outlined {
-  background-color: transparent;
+  --chip-bg-color: transparent;
+  --chip-hover-bg-color: var(--palette-lighter);
+  --chip-active-bg-color: var(--palette-light);
+  --chip-focus-bg-color: var(--chip-hover-bg-color);
+  --chip-disabled-bg-color: transparent;
   --chip-color: var(--palette-default);
+  --chip-hover-color: var(--palette-dark);
+  --chip-active-color: var(--palette-dark);
+  --chip-focus-color: var(--chip-hover-color);
   --chip-border-color: var(--palette-default);
+  --chip-hover-border-color: var(--palette-default);
+  --chip-active-border-color: var(--palette-default);
+  --chip-focus-border-color: var(--palette-default);
 }
 .chip.tonal {
   --chip-border-color: transparent;
+  --chip-hover-border-color: transparent;
+  --chip-active-border-color: transparent;
+  --chip-focus-border-color: transparent;
+  --chip-disabled-border-color: transparent;
 }
 
 .chip-icon {

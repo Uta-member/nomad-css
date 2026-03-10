@@ -22,8 +22,22 @@ $chip-class-name: chip !default;
 // Colors
 // --------------------------------------------
 $chip-bg-color-var: --#{$chip-prefix}bg-color !default;
+$chip-hover-bg-color-var: --#{$chip-prefix}hover-bg-color !default;
+$chip-active-bg-color-var: --#{$chip-prefix}active-bg-color !default;
+$chip-focus-bg-color-var: --#{$chip-prefix}focus-bg-color !default;
+$chip-disabled-bg-color-var: --#{$chip-prefix}disabled-bg-color !default;
+
 $chip-color-var: --#{$chip-prefix}color !default;
+$chip-hover-color-var: --#{$chip-prefix}hover-color !default;
+$chip-active-color-var: --#{$chip-prefix}active-color !default;
+$chip-focus-color-var: --#{$chip-prefix}focus-color !default;
+$chip-disabled-color-var: --#{$chip-prefix}disabled-color !default;
+
 $chip-border-color-var: --#{$chip-prefix}border-color !default;
+$chip-hover-border-color-var: --#{$chip-prefix}hover-border-color !default;
+$chip-active-border-color-var: --#{$chip-prefix}active-border-color !default;
+$chip-focus-border-color-var: --#{$chip-prefix}focus-border-color !default;
+$chip-disabled-border-color-var: --#{$chip-prefix}disabled-border-color !default;
 
 // --------------------------------------------
 // Border
@@ -39,6 +53,22 @@ $chip-font-size-var: --#{$chip-prefix}font-size !default;
 $chip-gap-var: --#{$chip-prefix}gap !default;
 
 // --------------------------------------------
+// Cursor
+// --------------------------------------------
+$chip-cursor-var: --#{$chip-prefix}cursor !default;
+$chip-disabled-cursor-var: --#{$chip-prefix}disabled-cursor !default;
+
+// --------------------------------------------
+// Opacity
+// --------------------------------------------
+$chip-disabled-opacity-var: --#{$chip-prefix}disabled-opacity !default;
+
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$chip-transition-var: --#{$chip-prefix}transition !default;
+
+// --------------------------------------------
 // Dismiss
 // --------------------------------------------
 $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
@@ -51,11 +81,25 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
 // ============================================
 .#{$chip-class-name} {
   // --------------------------------------------
-  // Colors (default: palette tonal)
+  // Colors (default: tonal)
   // --------------------------------------------
   #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
+  #{$chip-hover-bg-color-var}: var(#{palette.$palette-light-var});
+  #{$chip-active-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$chip-focus-bg-color-var}: var(#{$chip-hover-bg-color-var});
+  #{$chip-disabled-bg-color-var}: var(#{color-defines.$surface-color-var});
+
   #{$chip-color-var}: var(#{palette.$palette-dark-var});
+  #{$chip-hover-color-var}: var(#{palette.$palette-dark-var});
+  #{$chip-active-color-var}: var(#{palette.$palette-darker-var});
+  #{$chip-focus-color-var}: var(#{$chip-hover-color-var});
+  #{$chip-disabled-color-var}: var(#{color-defines.$border-color-var});
+
   #{$chip-border-color-var}: var(#{palette.$palette-lighter-var});
+  #{$chip-hover-border-color-var}: var(#{palette.$palette-light-var});
+  #{$chip-active-border-color-var}: var(#{palette.$palette-default-var});
+  #{$chip-focus-border-color-var}: var(#{$chip-hover-border-color-var});
+  #{$chip-disabled-border-color-var}: var(#{color-defines.$border-color-light-var});
 
   // --------------------------------------------
   // Border
@@ -69,6 +113,22 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   #{$chip-padding-var}: 0.25em 0.625em;
   #{$chip-font-size-var}: 0.875em;
   #{$chip-gap-var}: 0.25rem;
+
+  // --------------------------------------------
+  // Cursor
+  // --------------------------------------------
+  #{$chip-cursor-var}: default;
+  #{$chip-disabled-cursor-var}: not-allowed;
+
+  // --------------------------------------------
+  // Opacity
+  // --------------------------------------------
+  #{$chip-disabled-opacity-var}: 1;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$chip-transition-var}: 0.3s;
 
   // --------------------------------------------
   // Dismiss
@@ -95,6 +155,34 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   line-height: 1.4;
   vertical-align: middle;
 
+  cursor: var(#{$chip-cursor-var});
+  transition: var(#{$chip-transition-var});
+
+  &:hover {
+    background-color: var(#{$chip-hover-bg-color-var});
+    color: var(#{$chip-hover-color-var});
+    border-color: var(#{$chip-hover-border-color-var});
+  }
+  &:active {
+    background-color: var(#{$chip-active-bg-color-var});
+    color: var(#{$chip-active-color-var});
+    border-color: var(#{$chip-active-border-color-var});
+  }
+  &:focus-visible {
+    background-color: var(#{$chip-focus-bg-color-var});
+    color: var(#{$chip-focus-color-var});
+    border-color: var(#{$chip-focus-border-color-var});
+  }
+  &:disabled,
+  &[aria-disabled="true"] {
+    background-color: var(#{$chip-disabled-bg-color-var});
+    color: var(#{$chip-disabled-color-var});
+    border-color: var(#{$chip-disabled-border-color-var});
+    opacity: var(#{$chip-disabled-opacity-var});
+    cursor: var(#{$chip-disabled-cursor-var});
+    pointer-events: none;
+  }
+
   // --------------------------------------------
   // Sizes
   // --------------------------------------------
@@ -112,13 +200,29 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
 .#{$chip-class-name} {
   // Outlined: transparent background
   &.outlined {
-    background-color: transparent;
+    #{$chip-bg-color-var}: transparent;
+    #{$chip-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
+    #{$chip-active-bg-color-var}: var(#{palette.$palette-light-var});
+    #{$chip-focus-bg-color-var}: var(#{$chip-hover-bg-color-var});
+    #{$chip-disabled-bg-color-var}: transparent;
+
     #{$chip-color-var}: var(#{palette.$palette-default-var});
+    #{$chip-hover-color-var}: var(#{palette.$palette-dark-var});
+    #{$chip-active-color-var}: var(#{palette.$palette-dark-var});
+    #{$chip-focus-color-var}: var(#{$chip-hover-color-var});
+
     #{$chip-border-color-var}: var(#{palette.$palette-default-var});
+    #{$chip-hover-border-color-var}: var(#{palette.$palette-default-var});
+    #{$chip-active-border-color-var}: var(#{palette.$palette-default-var});
+    #{$chip-focus-border-color-var}: var(#{palette.$palette-default-var});
   }
 
   &.tonal {
     #{$chip-border-color-var}: transparent;
+    #{$chip-hover-border-color-var}: transparent;
+    #{$chip-active-border-color-var}: transparent;
+    #{$chip-focus-border-color-var}: transparent;
+    #{$chip-disabled-border-color-var}: transparent;
   }
 }
 

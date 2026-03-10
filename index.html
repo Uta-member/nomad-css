@@ -2647,6 +2647,50 @@ Disabled textarea</textarea
             </span>
           </div>
         </div>
+
+        <!-- With Dismiss -->
+        <div class="demo-row">
+          <div class="demo-label">Chip with Dismiss (.chip-dismiss)</div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+            <span class="chip primary">
+              React
+              <button class="chip-dismiss" aria-label="Remove">✕</button>
+            </span>
+            <span class="chip success">
+              TypeScript
+              <button class="chip-dismiss" aria-label="Remove">✕</button>
+            </span>
+            <span class="chip secondary outlined">
+              Design
+              <button class="chip-dismiss" aria-label="Remove">✕</button>
+            </span>
+          </div>
+        </div>
+
+        <!-- Interactive (button element) -->
+        <div class="demo-row">
+          <div class="demo-label">Interactive Chip (button element — hover/active visible)</div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+            <button class="chip primary">Click me</button>
+            <button class="chip primary outlined">Outlined</button>
+            <button class="chip primary tonal">Tonal</button>
+            <button class="chip success">
+              <span class="chip-icon">✓</span>
+              Success
+            </button>
+          </div>
+        </div>
+
+        <!-- Disabled -->
+        <div class="demo-row">
+          <div class="demo-label">Chip Disabled</div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+            <button class="chip primary" disabled>Disabled (button)</button>
+            <button class="chip primary outlined" disabled>Outlined Disabled</button>
+            <button class="chip primary tonal" disabled>Tonal Disabled</button>
+            <span class="chip primary" aria-disabled="true">Disabled (span)</span>
+          </div>
+        </div>
       </section>
 
       <!-- ============================================ -->
