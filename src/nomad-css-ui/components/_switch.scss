@@ -57,6 +57,7 @@ $switch-thumb-offset-var: --#{$switch-prefix}thumb-offset !default;
 $switch-thumb-bg-color-var: --#{$switch-prefix}thumb-bg-color !default;
 $switch-thumb-checked-bg-color-var: --#{$switch-prefix}thumb-checked-bg-color !default;
 $switch-thumb-disabled-bg-color-var: --#{$switch-prefix}thumb-disabled-bg-color !default;
+$switch-track-checked-disabled-bg-color-var: --#{$switch-prefix}track-checked-disabled-bg-color !default;
 
 // --------------------------------------------
 // Misc
@@ -110,13 +111,12 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   // --------------------------------------------
   // Thumb colors
   // --------------------------------------------
-  #{$switch-thumb-bg-color-var}: var(#{color-defines.$border-color-var});
+  #{$switch-thumb-bg-color-var}: var(#{palette.$palette-default-accent-var});
   #{$switch-thumb-checked-bg-color-var}: var(
     #{palette.$palette-default-accent-var}
   );
-  #{$switch-thumb-disabled-bg-color-var}: var(
-    #{color-defines.$surface-color-lighter-var}
-  );
+  #{$switch-thumb-disabled-bg-color-var}: var(#{color-defines.$border-color-var});
+  #{$switch-track-checked-disabled-bg-color-var}: var(#{palette.$palette-lighter-var});
 
   // --------------------------------------------
   // Misc
@@ -203,6 +203,12 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
     .#{$switch-thumb-class-name} {
       background-color: var(#{$switch-thumb-disabled-bg-color-var});
     }
+  }
+
+  // Checked + Disabled state: 背景に薄いセマンティックカラーを使用（ボーダーではなく背景で状態を表現）
+  .#{$switch-input-class-name}:checked:disabled ~ .#{$switch-track-class-name} {
+    background-color: var(#{$switch-track-checked-disabled-bg-color-var});
+    border-color: var(#{$switch-track-checked-disabled-bg-color-var});
   }
   
   &.disabled {

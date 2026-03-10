@@ -6027,9 +6027,10 @@ h6,
   --switch-thumb-sm-size: 0.75rem;
   --switch-thumb-lg-size: 1.25rem;
   --switch-thumb-offset: 0.1875rem;
-  --switch-thumb-bg-color: var(--border-color);
+  --switch-thumb-bg-color: var(--palette-accent-default);
   --switch-thumb-checked-bg-color: var(--palette-accent-default);
-  --switch-thumb-disabled-bg-color: var(--surface-color-lighter);
+  --switch-thumb-disabled-bg-color: var(--border-color);
+  --switch-track-checked-disabled-bg-color: var(--palette-lighter);
   --switch-transition: 0.2s;
   --switch-gap: 0.5rem;
   --switch-disabled-opacity: 0.5;
@@ -6091,6 +6092,10 @@ h6,
 }
 .switch .switch-input:disabled ~ .switch-track .switch-thumb {
   background-color: var(--switch-thumb-disabled-bg-color);
+}
+.switch .switch-input:checked:disabled ~ .switch-track {
+  background-color: var(--switch-track-checked-disabled-bg-color);
+  border-color: var(--switch-track-checked-disabled-bg-color);
 }
 .switch.disabled {
   cursor: var(--switch-disabled-cursor);
