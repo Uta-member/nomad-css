@@ -1,0 +1,120 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$skeleton-prefix: #{prefixes.$prefix}skeleton-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$skeleton-class-name: skeleton !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$skeleton-bg-color-var: --#{$skeleton-prefix}bg-color;
+$skeleton-shimmer-color-var: --#{$skeleton-prefix}shimmer-color;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$skeleton-border-radius-var: --#{$skeleton-prefix}border-radius;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$skeleton-text-height-var: --#{$skeleton-prefix}text-height;
+
+// --------------------------------------------
+// Animation
+// --------------------------------------------
+$skeleton-speed-var: --#{$skeleton-prefix}speed;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// Keyframes
+// ============================================
+@keyframes nomad-skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// ============================================
+// CSS Variables
+// ============================================
+.#{$skeleton-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$skeleton-bg-color-var}: var(#{color-defines.$surface-color-darker-var});
+  #{$skeleton-shimmer-color-var}: var(#{color-defines.$surface-color-dark-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$skeleton-border-radius-var}: 0.25rem;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$skeleton-text-height-var}: 1em;
+
+  // --------------------------------------------
+  // Animation
+  // --------------------------------------------
+  #{$skeleton-speed-var}: 1.5s;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$skeleton-class-name} {
+  display: block;
+  border-radius: var(#{$skeleton-border-radius-var});
+  background-color: var(#{$skeleton-bg-color-var});
+  background-image: linear-gradient(
+    90deg,
+    var(#{$skeleton-bg-color-var}) 25%,
+    var(#{$skeleton-shimmer-color-var}) 50%,
+    var(#{$skeleton-bg-color-var}) 75%
+  );
+  background-size: 200% 100%;
+  animation: nomad-skeleton-shimmer var(#{$skeleton-speed-var}) ease-in-out
+    infinite;
+
+  // --------------------------------------------
+  // Text line shape
+  // --------------------------------------------
+  &.text {
+    height: var(#{$skeleton-text-height-var});
+    width: 100%;
+  }
+
+  // --------------------------------------------
+  // Rectangle shape
+  // --------------------------------------------
+  &.rect {
+    border-radius: var(#{$skeleton-border-radius-var});
+  }
+
+  // --------------------------------------------
+  // Circle shape
+  // --------------------------------------------
+  &.circle {
+    border-radius: 50%;
+  }
+}

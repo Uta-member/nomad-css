@@ -1,0 +1,94 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$divider-prefix: #{prefixes.$prefix}divider-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$divider-class-name: divider !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$divider-color-var: --#{$divider-prefix}color;
+$divider-text-color-var: --#{$divider-prefix}text-color;
+$divider-text-gap-var: --#{$divider-prefix}text-gap;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$divider-width-var: --#{$divider-prefix}width;
+$divider-margin-var: --#{$divider-prefix}margin;
+$divider-vertical-height-var: --#{$divider-prefix}vertical-height;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$divider-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$divider-color-var}: var(#{color-defines.$border-color-var});
+  #{$divider-text-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$divider-text-gap-var}: 0.75rem;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$divider-width-var}: 1px;
+  #{$divider-margin-var}: 1rem 0;
+  #{$divider-vertical-height-var}: 1em;
+}
+
+// ============================================
+// Overrides
+// ============================================
+
+// <hr class="divider"> — simple horizontal rule
+hr.#{$divider-class-name} {
+  border: none;
+  border-top: var(#{$divider-width-var}) solid var(#{$divider-color-var});
+  margin: var(#{$divider-margin-var});
+}
+
+// <div class="divider"> — text-divider with lines on both sides
+div.#{$divider-class-name},
+.#{$divider-class-name}:not(hr):not(span) {
+  display: flex;
+  align-items: center;
+  gap: var(#{$divider-text-gap-var});
+  margin: var(#{$divider-margin-var});
+  color: var(#{$divider-text-color-var});
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: var(#{$divider-width-var});
+    background-color: var(#{$divider-color-var});
+  }
+}
+
+// <span class="divider vertical"> — vertical inline divider
+span.#{$divider-class-name}.vertical,
+.#{$divider-class-name}.vertical {
+  display: inline-block;
+  width: var(#{$divider-width-var});
+  height: var(#{$divider-vertical-height-var});
+  background-color: var(#{$divider-color-var});
+  margin: 0 var(#{$divider-text-gap-var});
+  vertical-align: middle;
+}

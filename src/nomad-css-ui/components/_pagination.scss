@@ -1,0 +1,154 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$pagination-prefix: #{prefixes.$prefix}pagination-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$pagination-class-name: pagination !default;
+$page-item-class-name: page-item !default;
+$page-link-class-name: page-link !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$pagination-bg-color-var: --#{$pagination-prefix}bg-color;
+$pagination-color-var: --#{$pagination-prefix}color;
+$pagination-border-color-var: --#{$pagination-prefix}border-color;
+$pagination-hover-bg-color-var: --#{$pagination-prefix}hover-bg-color;
+$pagination-hover-color-var: --#{$pagination-prefix}hover-color;
+$pagination-active-bg-color-var: --#{$pagination-prefix}active-bg-color;
+$pagination-active-color-var: --#{$pagination-prefix}active-color;
+$pagination-active-border-color-var: --#{$pagination-prefix}active-border-color;
+$pagination-disabled-color-var: --#{$pagination-prefix}disabled-color;
+$pagination-disabled-bg-color-var: --#{$pagination-prefix}disabled-bg-color;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$pagination-border-radius-var: --#{$pagination-prefix}border-radius;
+$pagination-border-width-var: --#{$pagination-prefix}border-width;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$pagination-padding-var: --#{$pagination-prefix}padding;
+$pagination-font-size-var: --#{$pagination-prefix}font-size;
+$pagination-gap-var: --#{$pagination-prefix}gap;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$pagination-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$pagination-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$pagination-color-var}: var(#{color-defines.$text-color-var});
+  #{$pagination-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$pagination-hover-bg-color-var}: var(
+    #{color-defines.$surface-color-dark-var}
+  );
+  #{$pagination-hover-color-var}: var(#{color-defines.$text-color-var});
+  #{$pagination-active-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$pagination-active-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$pagination-active-border-color-var}: var(#{palette.$palette-default-var});
+  #{$pagination-disabled-color-var}: var(#{semantics.$neutral-default-var});
+  #{$pagination-disabled-bg-color-var}: var(
+    #{color-defines.$surface-color-lighter-var}
+  );
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$pagination-border-radius-var}: 0.25rem;
+  #{$pagination-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$pagination-padding-var}: 0.375rem 0.75rem;
+  #{$pagination-font-size-var}: inherit;
+  #{$pagination-gap-var}: 0.25rem;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$pagination-class-name} {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(#{$pagination-gap-var});
+  font-size: var(#{$pagination-font-size-var});
+}
+
+.#{$page-item-class-name} {
+  display: block;
+}
+
+.#{$page-link-class-name} {
+  display: block;
+  padding: var(#{$pagination-padding-var});
+  background-color: var(#{$pagination-bg-color-var});
+  color: var(#{$pagination-color-var});
+  border: var(#{$pagination-border-width-var}) solid
+    var(#{$pagination-border-color-var});
+  border-radius: var(#{$pagination-border-radius-var});
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.5;
+
+  &:hover {
+    background-color: var(#{$pagination-hover-bg-color-var});
+    color: var(#{$pagination-hover-color-var});
+  }
+}
+
+// Active page
+.#{$page-item-class-name}.active .#{$page-link-class-name} {
+  background-color: var(#{$pagination-active-bg-color-var});
+  color: var(#{$pagination-active-color-var});
+  border-color: var(#{$pagination-active-border-color-var});
+  cursor: default;
+}
+
+// Disabled page
+.#{$page-item-class-name}.disabled .#{$page-link-class-name} {
+  background-color: var(#{$pagination-disabled-bg-color-var});
+  color: var(#{$pagination-disabled-color-var});
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+// ============================================
+// Sizes
+// ============================================
+.#{$pagination-class-name} {
+  &.sm .#{$page-link-class-name} {
+    font-size: 0.875em;
+    padding: 0.25rem 0.5rem;
+  }
+  &.lg .#{$page-link-class-name} {
+    font-size: 1.125em;
+    padding: 0.5rem 1rem;
+  }
+}

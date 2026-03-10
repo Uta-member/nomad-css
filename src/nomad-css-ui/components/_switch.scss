@@ -1,0 +1,263 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$switch-prefix: #{prefixes.$prefix}switch-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$switch-class-name: switch !default;
+$switch-input-class-name: switch-input !default;
+$switch-track-class-name: switch-track !default;
+$switch-thumb-class-name: switch-thumb !default;
+$switch-label-class-name: switch-label !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Track sizes
+// --------------------------------------------
+$switch-track-width-var: --#{$switch-prefix}track-width;
+$switch-track-height-var: --#{$switch-prefix}track-height;
+$switch-track-sm-width-var: --#{$switch-prefix}track-sm-width;
+$switch-track-sm-height-var: --#{$switch-prefix}track-sm-height;
+$switch-track-lg-width-var: --#{$switch-prefix}track-lg-width;
+$switch-track-lg-height-var: --#{$switch-prefix}track-lg-height;
+
+// --------------------------------------------
+// Track colors
+// --------------------------------------------
+$switch-track-bg-color-var: --#{$switch-prefix}track-bg-color;
+$switch-track-checked-bg-color-var: --#{$switch-prefix}track-checked-bg-color;
+$switch-track-border-color-var: --#{$switch-prefix}track-border-color;
+$switch-track-checked-border-color-var: --#{$switch-prefix}track-checked-border-color;
+$switch-track-border-radius-var: --#{$switch-prefix}track-border-radius;
+$switch-track-border-width-var: --#{$switch-prefix}track-border-width;
+$switch-track-disabled-bg-color-var: --#{$switch-prefix}track-disabled-bg-color;
+
+// --------------------------------------------
+// Thumb sizes
+// --------------------------------------------
+$switch-thumb-size-var: --#{$switch-prefix}thumb-size;
+$switch-thumb-sm-size-var: --#{$switch-prefix}thumb-sm-size;
+$switch-thumb-lg-size-var: --#{$switch-prefix}thumb-lg-size;
+$switch-thumb-offset-var: --#{$switch-prefix}thumb-offset;
+
+// --------------------------------------------
+// Thumb colors
+// --------------------------------------------
+$switch-thumb-bg-color-var: --#{$switch-prefix}thumb-bg-color;
+$switch-thumb-checked-bg-color-var: --#{$switch-prefix}thumb-checked-bg-color;
+$switch-thumb-disabled-bg-color-var: --#{$switch-prefix}thumb-disabled-bg-color;
+
+// --------------------------------------------
+// Misc
+// --------------------------------------------
+$switch-transition-var: --#{$switch-prefix}transition;
+$switch-gap-var: --#{$switch-prefix}gap;
+$switch-disabled-opacity-var: --#{$switch-prefix}disabled-opacity;
+$switch-cursor-var: --#{$switch-prefix}cursor;
+$switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$switch-class-name} {
+  // --------------------------------------------
+  // Track sizes
+  // --------------------------------------------
+  #{$switch-track-width-var}: 2.5rem;
+  #{$switch-track-height-var}: 1.375rem;
+  #{$switch-track-sm-width-var}: 2rem;
+  #{$switch-track-sm-height-var}: 1.125rem;
+  #{$switch-track-lg-width-var}: 3rem;
+  #{$switch-track-lg-height-var}: 1.625rem;
+
+  // --------------------------------------------
+  // Track colors
+  // --------------------------------------------
+  #{$switch-track-bg-color-var}: var(
+    #{color-defines.$surface-color-darker-var}
+  );
+  #{$switch-track-checked-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$switch-track-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$switch-track-checked-border-color-var}: var(
+    #{palette.$palette-default-var}
+  );
+  #{$switch-track-border-radius-var}: 10rem;
+  #{$switch-track-border-width-var}: 1px;
+  #{$switch-track-disabled-bg-color-var}: var(#{semantics.$neutral-light-var});
+
+  // --------------------------------------------
+  // Thumb sizes
+  // --------------------------------------------
+  #{$switch-thumb-size-var}: 1rem;
+  #{$switch-thumb-sm-size-var}: 0.75rem;
+  #{$switch-thumb-lg-size-var}: 1.25rem;
+  #{$switch-thumb-offset-var}: 0.1875rem;
+
+  // --------------------------------------------
+  // Thumb colors
+  // --------------------------------------------
+  #{$switch-thumb-bg-color-var}: var(#{color-defines.$border-color-var});
+  #{$switch-thumb-checked-bg-color-var}: var(
+    #{palette.$palette-default-accent-var}
+  );
+  #{$switch-thumb-disabled-bg-color-var}: var(
+    #{color-defines.$surface-color-lighter-var}
+  );
+
+  // --------------------------------------------
+  // Misc
+  // --------------------------------------------
+  #{$switch-transition-var}: 0.2s;
+  #{$switch-gap-var}: 0.5rem;
+  #{$switch-disabled-opacity-var}: 0.5;
+  #{$switch-cursor-var}: pointer;
+  #{$switch-disabled-cursor-var}: not-allowed;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$switch-class-name} {
+  display: inline-flex;
+  align-items: center;
+  gap: var(#{$switch-gap-var});
+  cursor: var(#{$switch-cursor-var});
+
+  // Hide the actual input visually
+  .#{$switch-input-class-name} {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  // Track
+  .#{$switch-track-class-name} {
+    position: relative;
+    display: inline-block;
+    width: var(#{$switch-track-width-var});
+    height: var(#{$switch-track-height-var});
+    background-color: var(#{$switch-track-bg-color-var});
+    border: var(#{$switch-track-border-width-var}) solid
+      var(#{$switch-track-border-color-var});
+    border-radius: var(#{$switch-track-border-radius-var});
+    transition:
+      background-color var(#{$switch-transition-var}),
+      border-color var(#{$switch-transition-var});
+    flex-shrink: 0;
+  }
+
+  // Thumb
+  .#{$switch-thumb-class-name} {
+    position: absolute;
+    top: 50%;
+    left: var(#{$switch-thumb-offset-var});
+    transform: translateY(-50%);
+    width: var(#{$switch-thumb-size-var});
+    height: var(#{$switch-thumb-size-var});
+    background-color: var(#{$switch-thumb-bg-color-var});
+    border-radius: 50%;
+    transition:
+      left var(#{$switch-transition-var}),
+      background-color var(#{$switch-transition-var});
+  }
+
+  // Checked state
+  .#{$switch-input-class-name}:checked ~ .#{$switch-track-class-name} {
+    background-color: var(#{$switch-track-checked-bg-color-var});
+    border-color: var(#{$switch-track-checked-border-color-var});
+
+    .#{$switch-thumb-class-name} {
+      left: calc(
+        100% - var(#{$switch-thumb-size-var}) - var(#{$switch-thumb-offset-var})
+      );
+      background-color: var(#{$switch-thumb-checked-bg-color-var});
+    }
+  }
+
+  // Disabled state
+  .#{$switch-input-class-name}:disabled ~ .#{$switch-track-class-name} {
+    background-color: var(#{$switch-track-disabled-bg-color-var});
+    opacity: var(#{$switch-disabled-opacity-var});
+    cursor: var(#{$switch-disabled-cursor-var});
+
+    .#{$switch-thumb-class-name} {
+      background-color: var(#{$switch-thumb-disabled-bg-color-var});
+    }
+  }
+
+  &:has(.#{$switch-input-class-name}:disabled) {
+    cursor: var(#{$switch-disabled-cursor-var});
+    opacity: var(#{$switch-disabled-opacity-var});
+  }
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  &.sm {
+    .#{$switch-track-class-name} {
+      width: var(#{$switch-track-sm-width-var});
+      height: var(#{$switch-track-sm-height-var});
+    }
+    .#{$switch-thumb-class-name} {
+      width: var(#{$switch-thumb-sm-size-var});
+      height: var(#{$switch-thumb-sm-size-var});
+    }
+    .#{$switch-input-class-name}:checked ~ .#{$switch-track-class-name} {
+      .#{$switch-thumb-class-name} {
+        left: calc(
+          100% - var(#{$switch-thumb-sm-size-var}) - var(
+              #{$switch-thumb-offset-var}
+            )
+        );
+      }
+    }
+  }
+
+  &.lg {
+    .#{$switch-track-class-name} {
+      width: var(#{$switch-track-lg-width-var});
+      height: var(#{$switch-track-lg-height-var});
+    }
+    .#{$switch-thumb-class-name} {
+      width: var(#{$switch-thumb-lg-size-var});
+      height: var(#{$switch-thumb-lg-size-var});
+    }
+    .#{$switch-input-class-name}:checked ~ .#{$switch-track-class-name} {
+      .#{$switch-thumb-class-name} {
+        left: calc(
+          100% - var(#{$switch-thumb-lg-size-var}) - var(
+              #{$switch-thumb-offset-var}
+            )
+        );
+      }
+    }
+  }
+}
+
+// ============================================
+// Sub-elements
+// ============================================
+.switch-label {
+  user-select: none;
+}

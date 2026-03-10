@@ -1,0 +1,122 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$spinner-prefix: #{prefixes.$prefix}spinner-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$spinner-class-name: spinner !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$spinner-size-var: --#{$spinner-prefix}size;
+$spinner-sm-size-var: --#{$spinner-prefix}sm-size;
+$spinner-lg-size-var: --#{$spinner-prefix}lg-size;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$spinner-border-width-var: --#{$spinner-prefix}border-width;
+
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$spinner-color-var: --#{$spinner-prefix}color;
+$spinner-track-color-var: --#{$spinner-prefix}track-color;
+
+// --------------------------------------------
+// Animation
+// --------------------------------------------
+$spinner-speed-var: --#{$spinner-prefix}speed;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// Keyframes
+// ============================================
+@keyframes nomad-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ============================================
+// CSS Variables
+// ============================================
+.#{$spinner-class-name} {
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$spinner-size-var}: 1.5rem;
+  #{$spinner-sm-size-var}: 1rem;
+  #{$spinner-lg-size-var}: 2.5rem;
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$spinner-border-width-var}: 2px;
+
+  // --------------------------------------------
+  // Colors (default: primary palette)
+  // --------------------------------------------
+  #{$spinner-color-var}: var(#{palette.$palette-default-var});
+  #{$spinner-track-color-var}: var(#{color-defines.$surface-color-darker-var});
+
+  // --------------------------------------------
+  // Animation
+  // --------------------------------------------
+  #{$spinner-speed-var}: 0.75s;
+
+  // --------------------------------------------
+  // Semantic palette override
+  // --------------------------------------------
+  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
+    #{$spinner-color-var}: var(#{palette.$palette-default-var});
+  }
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$spinner-class-name} {
+  display: inline-block;
+  width: var(#{$spinner-size-var});
+  height: var(#{$spinner-size-var});
+  border: var(#{$spinner-border-width-var}) solid
+    var(#{$spinner-track-color-var});
+  border-top-color: var(#{$spinner-color-var});
+  border-radius: 50%;
+  animation: nomad-spinner-rotate var(#{$spinner-speed-var}) linear infinite;
+  vertical-align: middle;
+  flex-shrink: 0;
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  &.sm {
+    width: var(#{$spinner-sm-size-var});
+    height: var(#{$spinner-sm-size-var});
+  }
+  &.md {
+    width: var(#{$spinner-size-var});
+    height: var(#{$spinner-size-var});
+  }
+  &.lg {
+    width: var(#{$spinner-lg-size-var});
+    height: var(#{$spinner-lg-size-var});
+  }
+}

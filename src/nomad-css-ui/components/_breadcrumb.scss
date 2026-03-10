@@ -1,0 +1,111 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$breadcrumb-prefix: #{prefixes.$prefix}breadcrumb-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$breadcrumb-class-name: breadcrumb !default;
+$breadcrumb-item-class-name: breadcrumb-item !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$breadcrumb-color-var: --#{$breadcrumb-prefix}color;
+$breadcrumb-hover-color-var: --#{$breadcrumb-prefix}hover-color;
+$breadcrumb-active-color-var: --#{$breadcrumb-prefix}active-color;
+$breadcrumb-separator-color-var: --#{$breadcrumb-prefix}separator-color;
+
+// --------------------------------------------
+// Separator
+// --------------------------------------------
+$breadcrumb-separator-var: --#{$breadcrumb-prefix}separator;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$breadcrumb-gap-var: --#{$breadcrumb-prefix}gap;
+$breadcrumb-font-size-var: --#{$breadcrumb-prefix}font-size;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$breadcrumb-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$breadcrumb-color-var}: var(#{palette.$palette-default-var});
+  #{$breadcrumb-hover-color-var}: var(#{palette.$palette-dark-var});
+  #{$breadcrumb-active-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$breadcrumb-separator-color-var}: var(
+    #{color-defines.$text-color-light-var}
+  );
+
+  // --------------------------------------------
+  // Separator
+  // --------------------------------------------
+  #{$breadcrumb-separator-var}: "/";
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$breadcrumb-gap-var}: 0.5rem;
+  #{$breadcrumb-font-size-var}: inherit;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$breadcrumb-class-name} {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(#{$breadcrumb-gap-var});
+  font-size: var(#{$breadcrumb-font-size-var});
+}
+
+.#{$breadcrumb-item-class-name} {
+  display: flex;
+  align-items: center;
+  gap: var(#{$breadcrumb-gap-var});
+
+  // Separator (prepended to every item except the first)
+  & + .#{$breadcrumb-item-class-name}::before {
+    content: var(#{$breadcrumb-separator-var});
+    color: var(#{$breadcrumb-separator-color-var});
+    user-select: none;
+  }
+
+  // Links inside breadcrumb items
+  a {
+    color: var(#{$breadcrumb-color-var});
+    text-decoration: none;
+
+    &:hover {
+      color: var(#{$breadcrumb-hover-color-var});
+      text-decoration: underline;
+    }
+  }
+
+  // Active / current page item (no link)
+  &.active {
+    color: var(#{$breadcrumb-active-color-var});
+  }
+}

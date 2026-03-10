@@ -1,0 +1,197 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$chip-prefix: #{prefixes.$prefix}chip-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$chip-class-name: chip !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$chip-bg-color-var: --#{$chip-prefix}bg-color;
+$chip-color-var: --#{$chip-prefix}color;
+$chip-border-color-var: --#{$chip-prefix}border-color;
+$chip-hover-bg-color-var: --#{$chip-prefix}hover-bg-color;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$chip-border-radius-var: --#{$chip-prefix}border-radius;
+$chip-border-width-var: --#{$chip-prefix}border-width;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$chip-padding-var: --#{$chip-prefix}padding;
+$chip-font-size-var: --#{$chip-prefix}font-size;
+$chip-gap-var: --#{$chip-prefix}gap;
+
+// --------------------------------------------
+// Dismiss
+// --------------------------------------------
+$chip-dismiss-color-var: --#{$chip-prefix}dismiss-color;
+$chip-dismiss-hover-color-var: --#{$chip-prefix}dismiss-hover-color;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$chip-class-name} {
+  // --------------------------------------------
+  // Colors (default: tonal neutral)
+  // --------------------------------------------
+  #{$chip-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$chip-color-var}: var(#{color-defines.$text-color-var});
+  #{$chip-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$chip-hover-bg-color-var}: var(#{color-defines.$surface-color-darker-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$chip-border-radius-var}: 10rem;
+  #{$chip-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$chip-padding-var}: 0.25em 0.625em;
+  #{$chip-font-size-var}: 0.875em;
+  #{$chip-gap-var}: 0.25rem;
+
+  // --------------------------------------------
+  // Dismiss
+  // --------------------------------------------
+  #{$chip-dismiss-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$chip-dismiss-hover-color-var}: var(#{color-defines.$text-color-var});
+
+  // --------------------------------------------
+  // Semantic palette override (tonal style)
+  // --------------------------------------------
+  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
+    #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
+    #{$chip-color-var}: var(#{palette.$palette-dark-var});
+    #{$chip-border-color-var}: var(#{palette.$palette-lighter-var});
+    #{$chip-hover-bg-color-var}: var(#{palette.$palette-light-var});
+    #{$chip-dismiss-color-var}: var(#{palette.$palette-dark-var});
+    #{$chip-dismiss-hover-color-var}: var(#{palette.$palette-darker-var});
+  }
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$chip-class-name} {
+  display: inline-flex;
+  align-items: center;
+  gap: var(#{$chip-gap-var});
+
+  background-color: var(#{$chip-bg-color-var});
+  color: var(#{$chip-color-var});
+
+  border: var(#{$chip-border-width-var}) solid var(#{$chip-border-color-var});
+  border-radius: var(#{$chip-border-radius-var});
+
+  padding: var(#{$chip-padding-var});
+  font-size: var(#{$chip-font-size-var});
+  line-height: 1.4;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: var(#{$chip-hover-bg-color-var});
+  }
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  &.sm {
+    font-size: 0.75em;
+  }
+  &.lg {
+    font-size: 1em;
+  }
+}
+
+// ============================================
+// Variants
+// ============================================
+.#{$chip-class-name} {
+  // Outlined: transparent background
+  &.outlined {
+    background-color: transparent;
+    #{$chip-hover-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+
+    &:where(
+      .primary,
+      .secondary,
+      .tertiary,
+      .success,
+      .warning,
+      .danger,
+      .info
+    ) {
+      #{$chip-color-var}: var(#{palette.$palette-default-var});
+      #{$chip-border-color-var}: var(#{palette.$palette-default-var});
+      #{$chip-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
+    }
+  }
+
+  // Tonal: light background with colored text
+  &.tonal {
+    &:where(
+      .primary,
+      .secondary,
+      .tertiary,
+      .success,
+      .warning,
+      .danger,
+      .info
+    ) {
+      #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
+      #{$chip-color-var}: var(#{palette.$palette-dark-var});
+      #{$chip-border-color-var}: transparent;
+    }
+  }
+}
+
+// ============================================
+// Sub-elements
+// ============================================
+.chip-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1em;
+  line-height: 1;
+}
+
+.chip-dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: var(#{$chip-dismiss-color-var});
+  line-height: 1;
+
+  &:hover {
+    color: var(#{$chip-dismiss-hover-color-var});
+  }
+}

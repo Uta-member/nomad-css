@@ -1,0 +1,180 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$accordion-prefix: #{prefixes.$prefix}accordion-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$accordion-class-name: accordion !default;
+$accordion-header-class-name: accordion-header !default;
+$accordion-body-class-name: accordion-body !default;
+$accordion-group-class-name: accordion-group !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$accordion-bg-color-var: --#{$accordion-prefix}bg-color;
+$accordion-header-bg-color-var: --#{$accordion-prefix}header-bg-color;
+$accordion-header-hover-bg-color-var: --#{$accordion-prefix}header-hover-bg-color;
+$accordion-header-color-var: --#{$accordion-prefix}header-color;
+$accordion-header-open-bg-color-var: --#{$accordion-prefix}header-open-bg-color;
+$accordion-header-open-color-var: --#{$accordion-prefix}header-open-color;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$accordion-border-color-var: --#{$accordion-prefix}border-color;
+$accordion-border-radius-var: --#{$accordion-prefix}border-radius;
+$accordion-border-width-var: --#{$accordion-prefix}border-width;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$accordion-padding-var: --#{$accordion-prefix}padding;
+$accordion-header-padding-var: --#{$accordion-prefix}header-padding;
+
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$accordion-transition-var: --#{$accordion-prefix}transition;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$accordion-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$accordion-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$accordion-header-bg-color-var}: var(
+    #{color-defines.$surface-color-dark-var}
+  );
+  #{$accordion-header-hover-bg-color-var}: var(
+    #{color-defines.$surface-color-darker-var}
+  );
+  #{$accordion-header-color-var}: var(#{color-defines.$text-color-var});
+  #{$accordion-header-open-bg-color-var}: var(
+    #{color-defines.$surface-color-dark-var}
+  );
+  #{$accordion-header-open-color-var}: var(#{color-defines.$text-color-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$accordion-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$accordion-border-radius-var}: 0.25rem;
+  #{$accordion-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$accordion-padding-var}: 0.75rem 1rem;
+  #{$accordion-header-padding-var}: 0.75rem 1rem;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$accordion-transition-var}: 0.2s;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$accordion-class-name} {
+  border: var(#{$accordion-border-width-var}) solid
+    var(#{$accordion-border-color-var});
+  border-radius: var(#{$accordion-border-radius-var});
+  overflow: hidden;
+
+  // Header (summary)
+  & > .#{$accordion-header-class-name} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: var(#{$accordion-header-padding-var});
+    background-color: var(#{$accordion-header-bg-color-var});
+    color: var(#{$accordion-header-color-var});
+    cursor: pointer;
+    user-select: none;
+    transition:
+      background-color var(#{$accordion-transition-var}),
+      color var(#{$accordion-transition-var});
+
+    // Remove default disclosure triangle
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::marker {
+      content: none;
+    }
+
+    // Custom expand indicator (::after)
+    &::after {
+      content: "▶";
+      font-size: 0.7em;
+      transition: transform var(#{$accordion-transition-var});
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background-color: var(#{$accordion-header-hover-bg-color-var});
+    }
+  }
+
+  // Open state
+  &[open] > .#{$accordion-header-class-name} {
+    background-color: var(#{$accordion-header-open-bg-color-var});
+    color: var(#{$accordion-header-open-color-var});
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  // Body
+  & > .#{$accordion-body-class-name} {
+    padding: var(#{$accordion-padding-var});
+    background-color: var(#{$accordion-bg-color-var});
+    border-top: var(#{$accordion-border-width-var}) solid
+      var(#{$accordion-border-color-var});
+  }
+}
+
+// ============================================
+// Group
+// ============================================
+.#{$accordion-group-class-name} {
+  display: flex;
+  flex-direction: column;
+
+  & > .#{$accordion-class-name} {
+    border-radius: 0;
+    border-bottom-width: 0;
+
+    &:first-child {
+      border-top-left-radius: var(#{$accordion-border-radius-var});
+      border-top-right-radius: var(#{$accordion-border-radius-var});
+    }
+
+    &:last-child {
+      border-bottom-left-radius: var(#{$accordion-border-radius-var});
+      border-bottom-right-radius: var(#{$accordion-border-radius-var});
+      border-bottom-width: var(#{$accordion-border-width-var});
+    }
+  }
+}

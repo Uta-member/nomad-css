@@ -1,0 +1,159 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$avatar-prefix: #{prefixes.$prefix}avatar-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$avatar-class-name: avatar !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$avatar-size-var: --#{$avatar-prefix}size;
+$avatar-sm-size-var: --#{$avatar-prefix}sm-size;
+$avatar-lg-size-var: --#{$avatar-prefix}lg-size;
+
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$avatar-bg-color-var: --#{$avatar-prefix}bg-color;
+$avatar-color-var: --#{$avatar-prefix}color;
+$avatar-border-color-var: --#{$avatar-prefix}border-color;
+$avatar-border-width-var: --#{$avatar-prefix}border-width;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$avatar-border-radius-var: --#{$avatar-prefix}border-radius;
+
+// --------------------------------------------
+// Font
+// --------------------------------------------
+$avatar-font-size-var: --#{$avatar-prefix}font-size;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$avatar-class-name} {
+  // --------------------------------------------
+  // Sizes (default: circle)
+  // --------------------------------------------
+  #{$avatar-size-var}: 2.5rem;
+  #{$avatar-sm-size-var}: 1.75rem;
+  #{$avatar-lg-size-var}: 4rem;
+
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$avatar-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$avatar-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$avatar-border-color-var}: transparent;
+  #{$avatar-border-width-var}: 0;
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$avatar-border-radius-var}: 50%;
+
+  // --------------------------------------------
+  // Font
+  // --------------------------------------------
+  #{$avatar-font-size-var}: 1em;
+
+  // --------------------------------------------
+  // Semantic palette override
+  // --------------------------------------------
+  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
+    #{$avatar-bg-color-var}: var(#{palette.$palette-default-var});
+    #{$avatar-color-var}: var(#{palette.$palette-default-accent-var});
+  }
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$avatar-class-name} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  width: var(#{$avatar-size-var});
+  height: var(#{$avatar-size-var});
+  font-size: var(#{$avatar-font-size-var});
+
+  background-color: var(#{$avatar-bg-color-var});
+  color: var(#{$avatar-color-var});
+
+  border-radius: var(#{$avatar-border-radius-var});
+  border: var(#{$avatar-border-width-var}) solid
+    var(#{$avatar-border-color-var});
+
+  font-weight: 600;
+  line-height: 1;
+  user-select: none;
+  vertical-align: middle;
+
+  // Image fills the avatar
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  &.sm {
+    width: var(#{$avatar-sm-size-var});
+    height: var(#{$avatar-sm-size-var});
+    font-size: 0.75em;
+  }
+  &.md {
+    width: var(#{$avatar-size-var});
+    height: var(#{$avatar-size-var});
+    font-size: var(#{$avatar-font-size-var});
+  }
+  &.lg {
+    width: var(#{$avatar-lg-size-var});
+    height: var(#{$avatar-lg-size-var});
+    font-size: 1.5em;
+  }
+}
+
+// ============================================
+// Shape variants
+// ============================================
+.#{$avatar-class-name} {
+  // Default is circle — explicit class
+  &.circle {
+    #{$avatar-border-radius-var}: 50%;
+  }
+
+  // Square
+  &.square {
+    #{$avatar-border-radius-var}: 0;
+  }
+
+  // Rounded square
+  &.rounded {
+    #{$avatar-border-radius-var}: 0.375rem;
+  }
+}

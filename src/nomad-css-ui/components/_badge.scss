@@ -1,0 +1,142 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+@use "../utilities/semantics" as semantics;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$badge-prefix: #{prefixes.$prefix}badge-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$badge-class-name: badge !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$badge-bg-color-var: --#{$badge-prefix}bg-color;
+$badge-color-var: --#{$badge-prefix}color;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$badge-border-radius-var: --#{$badge-prefix}border-radius;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$badge-padding-var: --#{$badge-prefix}padding;
+$badge-font-size-var: --#{$badge-prefix}font-size;
+
+// --------------------------------------------
+// Dot
+// --------------------------------------------
+$badge-dot-size-var: --#{$badge-prefix}dot-size;
+
+// --------------------------------------------
+// Overlay
+// --------------------------------------------
+$badge-overlay-top-var: --#{$badge-prefix}overlay-top;
+$badge-overlay-right-var: --#{$badge-prefix}overlay-right;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$badge-class-name} {
+  // --------------------------------------------
+  // Colors (default: primary palette)
+  // --------------------------------------------
+  #{$badge-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$badge-color-var}: var(#{palette.$palette-default-accent-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$badge-border-radius-var}: 10rem;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$badge-padding-var}: 0.2em 0.5em;
+  #{$badge-font-size-var}: 0.75em;
+
+  // --------------------------------------------
+  // Dot
+  // --------------------------------------------
+  #{$badge-dot-size-var}: 0.5rem;
+
+  // --------------------------------------------
+  // Overlay
+  // --------------------------------------------
+  #{$badge-overlay-top-var}: 0;
+  #{$badge-overlay-right-var}: 0;
+
+  // --------------------------------------------
+  // Semantic palette override
+  // --------------------------------------------
+  &:where(.primary, .secondary, .tertiary, .success, .warning, .danger, .info) {
+    #{$badge-bg-color-var}: var(#{palette.$palette-default-var});
+    #{$badge-color-var}: var(#{palette.$palette-default-accent-var});
+  }
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$badge-class-name} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(#{$badge-bg-color-var});
+  color: var(#{$badge-color-var});
+
+  border-radius: var(#{$badge-border-radius-var});
+  padding: var(#{$badge-padding-var});
+  font-size: var(#{$badge-font-size-var});
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  // --------------------------------------------
+  // Overlay
+  // --------------------------------------------
+  &.overlay {
+    position: absolute;
+    top: var(#{$badge-overlay-top-var});
+    right: var(#{$badge-overlay-right-var});
+    transform: translate(50%, -50%);
+  }
+
+  // --------------------------------------------
+  // Dot
+  // --------------------------------------------
+  &.dot {
+    width: var(#{$badge-dot-size-var});
+    height: var(#{$badge-dot-size-var});
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  &.sm {
+    font-size: 0.65em;
+  }
+  &.lg {
+    font-size: 0.875em;
+  }
+}

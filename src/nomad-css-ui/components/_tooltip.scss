@@ -1,0 +1,147 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$tooltip-prefix: #{prefixes.$prefix}tooltip-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$tooltip-class-name: tooltip !default;
+
+// ============================================
+// NOTE
+// ============================================
+// CSS-only tooltip using [data-tooltip] + ::after pseudo-element.
+// Appears on :hover and :focus-visible.
+// ⚠ Touch devices do not fire :hover — for touch support, use a JS implementation.
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$tooltip-bg-color-var: --#{$tooltip-prefix}bg-color;
+$tooltip-color-var: --#{$tooltip-prefix}color;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$tooltip-border-radius-var: --#{$tooltip-prefix}border-radius;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$tooltip-padding-var: --#{$tooltip-prefix}padding;
+$tooltip-font-size-var: --#{$tooltip-prefix}font-size;
+$tooltip-max-width-var: --#{$tooltip-prefix}max-width;
+$tooltip-offset-var: --#{$tooltip-prefix}offset;
+$tooltip-z-index-var: --#{$tooltip-prefix}z-index;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$tooltip-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$tooltip-bg-color-var}: var(#{color-defines.$text-color-dark-var});
+  #{$tooltip-color-var}: var(#{color-defines.$surface-color-lighter-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$tooltip-border-radius-var}: 0.25rem;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$tooltip-padding-var}: 0.3em 0.6em;
+  #{$tooltip-font-size-var}: 0.8125rem;
+  #{$tooltip-max-width-var}: 16rem;
+  #{$tooltip-offset-var}: 0.5rem;
+  #{$tooltip-z-index-var}: 1000;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$tooltip-class-name} {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+
+  // The tooltip bubble (::after)
+  &[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    z-index: var(#{$tooltip-z-index-var});
+    background-color: var(#{$tooltip-bg-color-var});
+    color: var(#{$tooltip-color-var});
+    border-radius: var(#{$tooltip-border-radius-var});
+    padding: var(#{$tooltip-padding-var});
+    font-size: var(#{$tooltip-font-size-var});
+    white-space: pre-wrap;
+    max-width: var(#{$tooltip-max-width-var});
+    pointer-events: none;
+    opacity: 0;
+    // Animate in
+    transition: opacity 0.15s;
+  }
+
+  &[data-tooltip]:hover::after,
+  &[data-tooltip]:focus-visible::after {
+    opacity: 1;
+  }
+}
+
+// ============================================
+// Placement variants
+// ============================================
+// Default / top
+.#{$tooltip-class-name}:not(.tooltip-right):not(.tooltip-bottom):not(
+    .tooltip-left
+  ),
+.#{$tooltip-class-name}.tooltip-top {
+  &[data-tooltip]::after {
+    bottom: calc(100% + var(#{$tooltip-offset-var}));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// Bottom
+.#{$tooltip-class-name}.tooltip-bottom {
+  &[data-tooltip]::after {
+    top: calc(100% + var(#{$tooltip-offset-var}));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// Right
+.#{$tooltip-class-name}.tooltip-right {
+  &[data-tooltip]::after {
+    top: 50%;
+    left: calc(100% + var(#{$tooltip-offset-var}));
+    transform: translateY(-50%);
+  }
+}
+
+// Left
+.#{$tooltip-class-name}.tooltip-left {
+  &[data-tooltip]::after {
+    top: 50%;
+    right: calc(100% + var(#{$tooltip-offset-var}));
+    transform: translateY(-50%);
+  }
+}

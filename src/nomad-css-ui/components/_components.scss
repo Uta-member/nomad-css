@@ -6,3 +6,22 @@
 @use "./form-control" as *;
 @use "./select" as *;
 @use "./table" as *;
+// Feedback & status
+@use "./alert" as *;
+@use "./badge" as *;
+@use "./chip" as *;
+@use "./spinner" as *;
+@use "./skeleton" as *;
+// Interactive inputs
+@use "./switch" as *;
+@use "./accordion" as *;
+@use "./tooltip" as *;
+// Navigation
+@use "./breadcrumb" as *;
+@use "./pagination" as *;
+// Layout & containers
+@use "./card" as *;
+@use "./divider" as *;
+// Data display
+@use "./avatar" as *;
+@use "./list" as *;

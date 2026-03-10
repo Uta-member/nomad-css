@@ -1,0 +1,155 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$card-prefix: #{prefixes.$prefix}card-;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$card-class-name: card !default;
+$card-header-class-name: card-header !default;
+$card-body-class-name: card-body !default;
+$card-footer-class-name: card-footer !default;
+$card-img-class-name: card-img !default;
+$card-img-bottom-class-name: card-img-bottom !default;
+
+// --------------------------------------------
+// Variants
+// --------------------------------------------
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$card-bg-color-var: --#{$card-prefix}bg-color;
+$card-color-var: --#{$card-prefix}color;
+$card-border-color-var: --#{$card-prefix}border-color;
+$card-header-bg-color-var: --#{$card-prefix}header-bg-color;
+$card-header-color-var: --#{$card-prefix}header-color;
+$card-footer-bg-color-var: --#{$card-prefix}footer-bg-color;
+$card-footer-color-var: --#{$card-prefix}footer-color;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$card-border-radius-var: --#{$card-prefix}border-radius;
+$card-border-width-var: --#{$card-prefix}border-width;
+
+// --------------------------------------------
+// Shadow
+// --------------------------------------------
+$card-box-shadow-var: --#{$card-prefix}box-shadow;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$card-padding-var: --#{$card-prefix}padding;
+$card-header-padding-var: --#{$card-prefix}header-padding;
+$card-footer-padding-var: --#{$card-prefix}footer-padding;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$card-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$card-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$card-color-var}: var(#{color-defines.$text-color-var});
+  #{$card-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$card-header-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$card-header-color-var}: var(#{color-defines.$text-color-var});
+  #{$card-footer-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$card-footer-color-var}: var(#{color-defines.$text-color-light-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$card-border-radius-var}: 0.375rem;
+  #{$card-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Shadow (elevation — theme layer is expected to override)
+  // --------------------------------------------
+  #{$card-box-shadow-var}: none;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$card-padding-var}: 1rem;
+  #{$card-header-padding-var}: 0.75rem 1rem;
+  #{$card-footer-padding-var}: 0.75rem 1rem;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$card-class-name} {
+  background-color: var(#{$card-bg-color-var});
+  color: var(#{$card-color-var});
+  border: var(#{$card-border-width-var}) solid var(#{$card-border-color-var});
+  border-radius: var(#{$card-border-radius-var});
+  box-shadow: var(#{$card-box-shadow-var});
+  overflow: hidden;
+
+  // Header
+  & > .#{$card-header-class-name} {
+    padding: var(#{$card-header-padding-var});
+    background-color: var(#{$card-header-bg-color-var});
+    color: var(#{$card-header-color-var});
+    border-bottom: var(#{$card-border-width-var}) solid
+      var(#{$card-border-color-var});
+  }
+
+  // Body
+  & > .#{$card-body-class-name} {
+    padding: var(#{$card-padding-var});
+  }
+
+  // Footer
+  & > .#{$card-footer-class-name} {
+    padding: var(#{$card-footer-padding-var});
+    background-color: var(#{$card-footer-bg-color-var});
+    color: var(#{$card-footer-color-var});
+    border-top: var(#{$card-border-width-var}) solid
+      var(#{$card-border-color-var});
+  }
+
+  // Image — top
+  & > .#{$card-img-class-name} {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: var(#{$card-border-width-var}) solid
+      var(#{$card-border-color-var});
+  }
+
+  // Image — bottom
+  & > .#{$card-img-bottom-class-name} {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top: var(#{$card-border-width-var}) solid
+      var(#{$card-border-color-var});
+  }
+}
+
+// ============================================
+// Variants
+// ============================================
+.#{$card-class-name} {
+  // Outlined: border only, no shadow
+  &.outlined {
+    #{$card-box-shadow-var}: none;
+  }
+}
