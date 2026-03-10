@@ -8,7 +8,7 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$accordion-prefix: #{prefixes.$prefix}accordion-;
+$accordion-prefix: #{prefixes.$prefix}accordion- !default;
 
 // --------------------------------------------
 // Class Names
@@ -24,30 +24,30 @@ $accordion-group-class-name: accordion-group !default;
 // --------------------------------------------
 // Colors
 // --------------------------------------------
-$accordion-bg-color-var: --#{$accordion-prefix}bg-color;
-$accordion-header-bg-color-var: --#{$accordion-prefix}header-bg-color;
-$accordion-header-hover-bg-color-var: --#{$accordion-prefix}header-hover-bg-color;
-$accordion-header-color-var: --#{$accordion-prefix}header-color;
-$accordion-header-open-bg-color-var: --#{$accordion-prefix}header-open-bg-color;
-$accordion-header-open-color-var: --#{$accordion-prefix}header-open-color;
+$accordion-bg-color-var: --#{$accordion-prefix}bg-color !default;
+$accordion-header-bg-color-var: --#{$accordion-prefix}header-bg-color !default;
+$accordion-header-hover-bg-color-var: --#{$accordion-prefix}header-hover-bg-color !default;
+$accordion-header-color-var: --#{$accordion-prefix}header-color !default;
+$accordion-header-open-bg-color-var: --#{$accordion-prefix}header-open-bg-color !default;
+$accordion-header-open-color-var: --#{$accordion-prefix}header-open-color !default;
 
 // --------------------------------------------
 // Border
 // --------------------------------------------
-$accordion-border-color-var: --#{$accordion-prefix}border-color;
-$accordion-border-radius-var: --#{$accordion-prefix}border-radius;
-$accordion-border-width-var: --#{$accordion-prefix}border-width;
+$accordion-border-color-var: --#{$accordion-prefix}border-color !default;
+$accordion-border-radius-var: --#{$accordion-prefix}border-radius !default;
+$accordion-border-width-var: --#{$accordion-prefix}border-width !default;
 
 // --------------------------------------------
 // Layout
 // --------------------------------------------
-$accordion-padding-var: --#{$accordion-prefix}padding;
-$accordion-header-padding-var: --#{$accordion-prefix}header-padding;
+$accordion-padding-var: --#{$accordion-prefix}padding !default;
+$accordion-header-padding-var: --#{$accordion-prefix}header-padding !default;
 
 // --------------------------------------------
 // Transition
 // --------------------------------------------
-$accordion-transition-var: --#{$accordion-prefix}transition;
+$accordion-transition-var: --#{$accordion-prefix}transition !default;
 
 // ============================================
 // Process
@@ -141,6 +141,10 @@ $accordion-transition-var: --#{$accordion-prefix}transition;
     background-color: var(#{$accordion-header-open-bg-color-var});
     color: var(#{$accordion-header-open-color-var});
 
+    &:hover {
+      background-color: var(#{$accordion-header-hover-bg-color-var});
+    }
+    
     &::after {
       transform: rotate(90deg);
     }

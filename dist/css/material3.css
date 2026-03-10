@@ -6132,6 +6132,9 @@ h6,
   background-color: var(--accordion-header-open-bg-color);
   color: var(--accordion-header-open-color);
 }
+.accordion[open] > .accordion-header:hover {
+  background-color: var(--accordion-header-hover-bg-color);
+}
 .accordion[open] > .accordion-header::after {
   transform: rotate(90deg);
 }
