@@ -7364,6 +7364,8 @@ h6,
   --accordion-icon-size: 1em;
   --accordion-icon-color: currentColor;
   --accordion-icon-hover-color: currentColor;
+  --accordion-icon-hover-bg-color: transparent;
+  --accordion-icon-border-radius: 0;
   --accordion-icon-open-color: currentColor;
 }
 
@@ -7436,7 +7438,8 @@ h6,
   width: var(--accordion-icon-size);
   height: var(--accordion-icon-size);
   color: var(--accordion-icon-color);
-  transition: transform var(--accordion-transition), color var(--accordion-transition);
+  border-radius: var(--accordion-icon-border-radius);
+  transition: transform var(--accordion-transition), color var(--accordion-transition), background-color var(--accordion-transition);
 }
 .accordion > .accordion-header > .accordion-icon::before {
   content: "";
@@ -7463,6 +7466,7 @@ h6,
 }
 .accordion > .accordion-header > .accordion-icon:hover {
   color: var(--accordion-icon-hover-color);
+  background-color: var(--accordion-icon-hover-bg-color);
 }
 
 .accordion[open] > .accordion-header > .accordion-icon {

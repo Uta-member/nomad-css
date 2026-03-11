@@ -7364,6 +7364,8 @@ h6,
   --accordion-icon-size: 1em;
   --accordion-icon-color: currentColor;
   --accordion-icon-hover-color: currentColor;
+  --accordion-icon-hover-bg-color: transparent;
+  --accordion-icon-border-radius: 0;
   --accordion-icon-open-color: currentColor;
 }
 
@@ -7436,7 +7438,8 @@ h6,
   width: var(--accordion-icon-size);
   height: var(--accordion-icon-size);
   color: var(--accordion-icon-color);
-  transition: transform var(--accordion-transition), color var(--accordion-transition);
+  border-radius: var(--accordion-icon-border-radius);
+  transition: transform var(--accordion-transition), color var(--accordion-transition), background-color var(--accordion-transition);
 }
 .accordion > .accordion-header > .accordion-icon::before {
   content: "";
@@ -7463,6 +7466,7 @@ h6,
 }
 .accordion > .accordion-header > .accordion-icon:hover {
   color: var(--accordion-icon-hover-color);
+  background-color: var(--accordion-icon-hover-bg-color);
 }
 
 .accordion[open] > .accordion-header > .accordion-icon {
@@ -8028,6 +8032,10 @@ pre {
 :root[data-theme=material3] .accordion {
   --accordion-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/%3E%3C/svg%3E");
   --accordion-icon-open-rotation: 180deg;
+  --accordion-header-hover-bg-color: var(--accordion-header-bg-color);
+  --accordion-icon-size: 2.5rem;
+  --accordion-icon-border-radius: 50%;
+  --accordion-icon-hover-bg-color: rgba(0, 0, 0, 0.08);
 }
 
 :root[data-theme=material3] .button {

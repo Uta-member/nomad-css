@@ -6,5 +6,11 @@
     --accordion-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/%3E%3C/svg%3E");
     // Material 3: rotate 180deg (down → up) on open
     --accordion-icon-open-rotation: 180deg;
+    // Material 3: header hover は背景色を変えず、矢印のみ state layer を出す
+    --accordion-header-hover-bg-color: var(--accordion-header-bg-color);
+    // Material 3: icon の touch target を広げて円形 state layer を出す
+    --accordion-icon-size: 2.5rem;
+    --accordion-icon-border-radius: 50%;
+    --accordion-icon-hover-bg-color: rgba(0, 0, 0, 0.08);
   }
 }

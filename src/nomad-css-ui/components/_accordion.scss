@@ -58,6 +58,8 @@ $accordion-icon-open-rotation-var: --#{$accordion-prefix}icon-open-rotation !def
 $accordion-icon-size-var: --#{$accordion-prefix}icon-size !default;
 $accordion-icon-color-var: --#{$accordion-prefix}icon-color !default;
 $accordion-icon-hover-color-var: --#{$accordion-prefix}icon-hover-color !default;
+$accordion-icon-hover-bg-color-var: --#{$accordion-prefix}icon-hover-bg-color !default;
+$accordion-icon-border-radius-var: --#{$accordion-prefix}icon-border-radius !default;
 $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
 
 // ============================================
@@ -110,6 +112,8 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   #{$accordion-icon-size-var}: 1em;
   #{$accordion-icon-color-var}: currentColor;
   #{$accordion-icon-hover-color-var}: currentColor;
+  #{$accordion-icon-hover-bg-color-var}: transparent;
+  #{$accordion-icon-border-radius-var}: 0;
   #{$accordion-icon-open-color-var}: currentColor;
 }
 
@@ -201,9 +205,11 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   width: var(#{$accordion-icon-size-var});
   height: var(#{$accordion-icon-size-var});
   color: var(#{$accordion-icon-color-var});
+  border-radius: var(#{$accordion-icon-border-radius-var});
   transition:
     transform var(#{$accordion-transition-var}),
-    color var(#{$accordion-transition-var});
+    color var(#{$accordion-transition-var}),
+    background-color var(#{$accordion-transition-var});
 
   // Default indicator via ::before (shown when no child elements are present)
   &::before {
@@ -234,6 +240,7 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
 
   &:hover {
     color: var(#{$accordion-icon-hover-color-var});
+    background-color: var(#{$accordion-icon-hover-bg-color-var});
   }
 }
 
