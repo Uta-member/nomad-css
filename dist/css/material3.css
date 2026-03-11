@@ -6968,12 +6968,6 @@ h6,
   padding: var(--alert-padding);
 }
 
-.alert.outlined {
-  background-color: transparent;
-  --alert-color: var(--palette-default);
-  --alert-border-color: var(--palette-default);
-}
-
 .alert-title {
   display: block;
   font-weight: bold;
@@ -8049,6 +8043,11 @@ pre {
   --accordion-icon-size: 2.5rem;
   --accordion-icon-border-radius: 50%;
   --accordion-icon-hover-bg-color: rgba(0, 0, 0, 0.08);
+}
+
+.alert {
+  --alert-border-color: var(--alert-bg-color);
+  --alert-border-radius: 0.5rem;
 }
 
 :root[data-theme=material3] .button {

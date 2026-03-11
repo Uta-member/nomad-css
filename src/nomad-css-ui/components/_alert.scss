@@ -84,17 +84,6 @@ $alert-icon-size-var: --#{$alert-prefix}icon-size !default;
 }
 
 // ============================================
-// Variants
-// ============================================
-.#{$alert-class-name} {
-  &.outlined {
-    background-color: transparent;
-    #{$alert-color-var}: var(#{palette.$palette-default-var});
-    #{$alert-border-color-var}: var(#{palette.$palette-default-var});
-  }
-}
-
-// ============================================
 // Sub-elements
 // ============================================
 .alert-title {

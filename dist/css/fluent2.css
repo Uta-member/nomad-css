@@ -6968,12 +6968,6 @@ h6,
   padding: var(--alert-padding);
 }
 
-.alert.outlined {
-  background-color: transparent;
-  --alert-color: var(--palette-default);
-  --alert-border-color: var(--palette-default);
-}
-
 .alert-title {
   display: block;
   font-weight: bold;
