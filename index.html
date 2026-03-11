@@ -33,7 +33,7 @@
       }
       .demo-box {
         padding: 1rem;
-        background: var(--surface-color-light);
+        background: var(--surface-color);
         margin-bottom: 0.5rem;
       }
       nav {
@@ -1429,7 +1429,9 @@ Disabled textarea</textarea
 
         <!-- All Bordered Table -->
         <div class="demo-row">
-          <div class="demo-label">Table (.table .row-bordered .column-bordered)</div>
+          <div class="demo-label">
+            Table (.table .row-bordered .column-bordered)
+          </div>
           <table class="table row-bordered column-bordered">
             <thead>
               <tr>
@@ -1531,7 +1533,7 @@ Disabled textarea</textarea
             </tbody>
           </table>
         </div>
-        
+
         <!-- Hover Row Table -->
         <div class="demo-row">
           <div class="demo-label">Table (.table .hover-row)</div>
@@ -1566,7 +1568,7 @@ Disabled textarea</textarea
             </tbody>
           </table>
         </div>
-        
+
         <!-- Hover Cell Table -->
         <div class="demo-row">
           <div class="demo-label">Table (.table .hover-cell)</div>
@@ -1601,7 +1603,7 @@ Disabled textarea</textarea
             </tbody>
           </table>
         </div>
-        
+
         <!-- Palette Table -->
         <div class="demo-row">
           <div class="demo-label">Table (.table .palette-*)</div>
@@ -2252,7 +2254,9 @@ Disabled textarea</textarea
             </div>
           </details>
           <details class="accordion" open>
-            <summary class="accordion-header">Accordion Header 2 (Open)</summary>
+            <summary class="accordion-header">
+              Accordion Header 2 (Open)
+            </summary>
             <div class="accordion-body">
               This accordion is open by default. You can click the header to
               collapse it.
@@ -2301,14 +2305,18 @@ Disabled textarea</textarea
               <span class="alert-icon">★</span>
               <div>
                 <span class="alert-title">Secondary</span>
-                <span class="alert-body">This is a secondary alert message.</span>
+                <span class="alert-body"
+                  >This is a secondary alert message.</span
+                >
               </div>
             </div>
             <div class="alert success">
               <span class="alert-icon">✓</span>
               <div>
                 <span class="alert-title">Success</span>
-                <span class="alert-body">Operation completed successfully.</span>
+                <span class="alert-body"
+                  >Operation completed successfully.</span
+                >
               </div>
             </div>
             <div class="alert warning">
@@ -2322,7 +2330,9 @@ Disabled textarea</textarea
               <span class="alert-icon">✕</span>
               <div>
                 <span class="alert-title">Danger</span>
-                <span class="alert-body">An error occurred. Please try again.</span>
+                <span class="alert-body"
+                  >An error occurred. Please try again.</span
+                >
               </div>
             </div>
             <div class="alert info">
@@ -2343,14 +2353,18 @@ Disabled textarea</textarea
               <span class="alert-icon">ℹ</span>
               <div>
                 <span class="alert-title">Primary Outlined</span>
-                <span class="alert-body">This is an outlined primary alert.</span>
+                <span class="alert-body"
+                  >This is an outlined primary alert.</span
+                >
               </div>
             </div>
             <div class="alert success outlined">
               <span class="alert-icon">✓</span>
               <div>
                 <span class="alert-title">Success Outlined</span>
-                <span class="alert-body">Operation completed successfully.</span>
+                <span class="alert-body"
+                  >Operation completed successfully.</span
+                >
               </div>
             </div>
             <div class="alert danger outlined">
@@ -2367,8 +2381,12 @@ Disabled textarea</textarea
         <div class="demo-row">
           <div class="demo-label">Alert (No Icon)</div>
           <div style="display: flex; flex-direction: column; gap: 0.75rem">
-            <div class="alert info">This is a simple info alert without an icon.</div>
-            <div class="alert warning">This is a simple warning alert without an icon.</div>
+            <div class="alert info">
+              This is a simple info alert without an icon.
+            </div>
+            <div class="alert warning">
+              This is a simple warning alert without an icon.
+            </div>
           </div>
         </div>
       </section>
@@ -2382,7 +2400,14 @@ Disabled textarea</textarea
         <!-- Basic Avatar -->
         <div class="demo-row">
           <div class="demo-label">Avatar (Text Initials)</div>
-          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
             <span class="avatar primary">AB</span>
             <span class="avatar secondary">CD</span>
             <span class="avatar success">EF</span>
@@ -2438,7 +2463,14 @@ Disabled textarea</textarea
         <!-- Semantic Colors -->
         <div class="demo-row">
           <div class="demo-label">Badge (Semantic Colors)</div>
-          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center">
+          <div
+            style="
+              display: flex;
+              gap: 0.75rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
             <span class="badge primary">Primary</span>
             <span class="badge secondary">Secondary</span>
             <span class="badge tertiary">Tertiary</span>
@@ -2462,7 +2494,14 @@ Disabled textarea</textarea
         <!-- Dot Badge -->
         <div class="demo-row">
           <div class="demo-label">Badge Dot (.dot)</div>
-          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
             <span class="badge primary dot"></span>
             <span class="badge secondary dot"></span>
             <span class="badge success dot"></span>
@@ -2542,8 +2581,10 @@ Disabled textarea</textarea
             <div class="card">
               <div class="card-header">Card Header</div>
               <div class="card-body">
-                <p>Card body content. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.</p>
+                <p>
+                  Card body content. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit.
+                </p>
               </div>
               <div class="card-footer">Card Footer</div>
             </div>
@@ -2598,7 +2639,14 @@ Disabled textarea</textarea
         <!-- Semantic Colors -->
         <div class="demo-row">
           <div class="demo-label">Chip (Semantic Colors)</div>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+          <div
+            style="
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
             <span class="chip primary">Primary</span>
             <span class="chip secondary">Secondary</span>
             <span class="chip tertiary">Tertiary</span>
@@ -2612,7 +2660,14 @@ Disabled textarea</textarea
         <!-- Variants -->
         <div class="demo-row">
           <div class="demo-label">Chip Variants</div>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+          <div
+            style="
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
             <span class="chip primary">Default (Tonal)</span>
             <span class="chip primary outlined">Outlined</span>
             <span class="chip primary tonal">Tonal</span>
@@ -2632,7 +2687,14 @@ Disabled textarea</textarea
         <!-- With Icon -->
         <div class="demo-row">
           <div class="demo-label">Chip with Icon</div>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+          <div
+            style="
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
             <span class="chip primary">
               <span class="chip-icon">★</span>
               Starred
@@ -2651,7 +2713,14 @@ Disabled textarea</textarea
         <!-- With Dismiss -->
         <div class="demo-row">
           <div class="demo-label">Chip with Dismiss (.chip-dismiss)</div>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+          <div
+            style="
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
             <span class="chip primary">
               React
               <button class="chip-dismiss" aria-label="Remove">✕</button>
@@ -2669,8 +2738,17 @@ Disabled textarea</textarea
 
         <!-- Interactive (button element) -->
         <div class="demo-row">
-          <div class="demo-label">Interactive Chip (button element — hover/active visible)</div>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+          <div class="demo-label">
+            Interactive Chip (button element — hover/active visible)
+          </div>
+          <div
+            style="
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
             <button class="chip primary">Click me</button>
             <button class="chip primary outlined">Outlined</button>
             <button class="chip primary tonal">Tonal</button>
@@ -2684,11 +2762,22 @@ Disabled textarea</textarea
         <!-- Disabled -->
         <div class="demo-row">
           <div class="demo-label">Chip Disabled</div>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
+          <div
+            style="
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
             <button class="chip primary" disabled>Disabled (button)</button>
-            <button class="chip primary outlined" disabled>Outlined Disabled</button>
+            <button class="chip primary outlined" disabled>
+              Outlined Disabled
+            </button>
             <button class="chip primary tonal" disabled>Tonal Disabled</button>
-            <span class="chip primary" aria-disabled="true">Disabled (span)</span>
+            <span class="chip primary" aria-disabled="true"
+              >Disabled (span)</span
+            >
           </div>
         </div>
       </section>
@@ -2852,7 +2941,14 @@ Disabled textarea</textarea
         <!-- Text Skeleton -->
         <div class="demo-row">
           <div class="demo-label">Text Skeleton (.skeleton.text)</div>
-          <div style="max-width: 400px; display: flex; flex-direction: column; gap: 0.5rem">
+          <div
+            style="
+              max-width: 400px;
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+            "
+          >
             <span class="skeleton text" style="width: 90%"></span>
             <span class="skeleton text" style="width: 75%"></span>
             <span class="skeleton text" style="width: 60%"></span>
@@ -2863,7 +2959,10 @@ Disabled textarea</textarea
         <div class="demo-row">
           <div class="demo-label">Rectangle Skeleton (.skeleton.rect)</div>
           <div style="max-width: 400px">
-            <span class="skeleton rect" style="display: block; width: 100%; height: 120px"></span>
+            <span
+              class="skeleton rect"
+              style="display: block; width: 100%; height: 120px"
+            ></span>
           </div>
         </div>
 
@@ -2871,21 +2970,60 @@ Disabled textarea</textarea
         <div class="demo-row">
           <div class="demo-label">Circle Skeleton (.skeleton.circle)</div>
           <div style="display: flex; gap: 0.75rem; align-items: center">
-            <span class="skeleton circle" style="display: inline-block; width: 2.5rem; height: 2.5rem"></span>
-            <span class="skeleton circle" style="display: inline-block; width: 4rem; height: 4rem"></span>
-            <span class="skeleton circle" style="display: inline-block; width: 6rem; height: 6rem"></span>
+            <span
+              class="skeleton circle"
+              style="display: inline-block; width: 2.5rem; height: 2.5rem"
+            ></span>
+            <span
+              class="skeleton circle"
+              style="display: inline-block; width: 4rem; height: 4rem"
+            ></span>
+            <span
+              class="skeleton circle"
+              style="display: inline-block; width: 6rem; height: 6rem"
+            ></span>
           </div>
         </div>
 
         <!-- Card Skeleton -->
         <div class="demo-row">
           <div class="demo-label">Card Skeleton (Composition)</div>
-          <div style="max-width: 320px; display: flex; gap: 0.75rem; align-items: flex-start">
-            <span class="skeleton circle" style="display: inline-block; width: 3rem; height: 3rem; flex-shrink: 0"></span>
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem">
+          <div
+            style="
+              max-width: 320px;
+              display: flex;
+              gap: 0.75rem;
+              align-items: flex-start;
+            "
+          >
+            <span
+              class="skeleton circle"
+              style="
+                display: inline-block;
+                width: 3rem;
+                height: 3rem;
+                flex-shrink: 0;
+              "
+            ></span>
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              "
+            >
               <span class="skeleton text" style="width: 60%"></span>
               <span class="skeleton text" style="width: 45%"></span>
-              <span class="skeleton rect" style="display: block; width: 100%; height: 80px; margin-top: 0.25rem"></span>
+              <span
+                class="skeleton rect"
+                style="
+                  display: block;
+                  width: 100%;
+                  height: 80px;
+                  margin-top: 0.25rem;
+                "
+              ></span>
             </div>
           </div>
         </div>
@@ -2900,7 +3038,14 @@ Disabled textarea</textarea
         <!-- Semantic Colors -->
         <div class="demo-row">
           <div class="demo-label">Spinner (Semantic Colors)</div>
-          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap">
+          <div
+            style="
+              display: flex;
+              gap: 1.5rem;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
             <span class="spinner primary"></span>
             <span class="spinner secondary"></span>
             <span class="spinner tertiary"></span>
@@ -2924,7 +3069,14 @@ Disabled textarea</textarea
         <!-- In a Button -->
         <div class="demo-row">
           <div class="demo-label">Spinner in Button</div>
-          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
             <button class="button filled primary" disabled>
               <span class="spinner sm"></span>
               Loading...
@@ -2949,22 +3101,30 @@ Disabled textarea</textarea
           <div style="display: flex; flex-direction: column; gap: 0.75rem">
             <label class="switch">
               <input type="checkbox" class="switch-input" />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Unchecked</span>
             </label>
             <label class="switch">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Checked</span>
             </label>
             <label class="switch">
               <input type="checkbox" class="switch-input" disabled />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Disabled</span>
             </label>
             <label class="switch">
               <input type="checkbox" class="switch-input" checked disabled />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Checked Disabled</span>
             </label>
           </div>
@@ -2976,32 +3136,44 @@ Disabled textarea</textarea
           <div style="display: flex; flex-wrap: wrap; gap: 1rem">
             <label class="switch primary">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Primary</span>
             </label>
             <label class="switch secondary">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Secondary</span>
             </label>
             <label class="switch success">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Success</span>
             </label>
             <label class="switch warning">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Warning</span>
             </label>
             <label class="switch danger">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Danger</span>
             </label>
             <label class="switch info">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Info</span>
             </label>
           </div>
@@ -3010,20 +3182,33 @@ Disabled textarea</textarea
         <!-- Sizes -->
         <div class="demo-row">
           <div class="demo-label">Switch Sizes</div>
-          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap">
+          <div
+            style="
+              display: flex;
+              gap: 1.5rem;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
             <label class="switch primary sm">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Small</span>
             </label>
             <label class="switch primary">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Default</span>
             </label>
             <label class="switch primary lg">
               <input type="checkbox" class="switch-input" checked />
-              <span class="switch-track"><span class="switch-thumb"></span></span>
+              <span class="switch-track"
+                ><span class="switch-thumb"></span
+              ></span>
               <span class="switch-label">Large</span>
             </label>
           </div>
@@ -3039,7 +3224,9 @@ Disabled textarea</textarea
         <!-- Placement -->
         <div class="demo-row">
           <div class="demo-label">Tooltip Placement (hover to see)</div>
-          <div style="display: flex; gap: 3rem; align-items: center; padding: 2rem">
+          <div
+            style="display: flex; gap: 3rem; align-items: center; padding: 2rem"
+          >
             <span class="tooltip" data-tooltip="Top tooltip (default)">
               <button class="button outlined primary">Top (default)</button>
             </span>
@@ -3060,11 +3247,17 @@ Disabled textarea</textarea
           <div class="demo-label">Tooltip on Text</div>
           <p>
             Hover over
-            <span class="tooltip" data-tooltip="This is an abbreviation explanation">
+            <span
+              class="tooltip"
+              data-tooltip="This is an abbreviation explanation"
+            >
               <abbr style="cursor: help; border-bottom: 1px dotted">CSS</abbr>
             </span>
             or
-            <span class="tooltip tooltip-bottom" data-tooltip="Click the link for more info">
+            <span
+              class="tooltip tooltip-bottom"
+              data-tooltip="Click the link for more info"
+            >
               <a href="#">this link</a>
             </span>
             to see tooltips.
@@ -3075,7 +3268,10 @@ Disabled textarea</textarea
         <div class="demo-row">
           <div class="demo-label">Long Tooltip Text</div>
           <div style="padding-top: 3rem">
-            <span class="tooltip" data-tooltip="This is a longer tooltip text that wraps to multiple lines when it exceeds the maximum width.">
+            <span
+              class="tooltip"
+              data-tooltip="This is a longer tooltip text that wraps to multiple lines when it exceeds the maximum width."
+            >
               <button class="button tonal info">Hover for long tooltip</button>
             </span>
           </div>
