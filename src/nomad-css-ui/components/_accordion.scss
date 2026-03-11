@@ -17,6 +17,7 @@ $accordion-class-name: accordion !default;
 $accordion-header-class-name: accordion-header !default;
 $accordion-body-class-name: accordion-body !default;
 $accordion-group-class-name: accordion-group !default;
+$accordion-icon-class-name: accordion-icon !default;
 
 // --------------------------------------------
 // Variants
@@ -48,6 +49,16 @@ $accordion-header-padding-var: --#{$accordion-prefix}header-padding !default;
 // Transition
 // --------------------------------------------
 $accordion-transition-var: --#{$accordion-prefix}transition !default;
+
+// --------------------------------------------
+// Icon
+// --------------------------------------------
+$accordion-icon-image-var: --#{$accordion-prefix}icon-image !default;
+$accordion-icon-open-rotation-var: --#{$accordion-prefix}icon-open-rotation !default;
+$accordion-icon-size-var: --#{$accordion-prefix}icon-size !default;
+$accordion-icon-color-var: --#{$accordion-prefix}icon-color !default;
+$accordion-icon-hover-color-var: --#{$accordion-prefix}icon-hover-color !default;
+$accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
 
 // ============================================
 // Process
@@ -89,6 +100,17 @@ $accordion-transition-var: --#{$accordion-prefix}transition !default;
   // Transition
   // --------------------------------------------
   #{$accordion-transition-var}: 0.2s;
+
+  // --------------------------------------------
+  // Icon
+  // Right-pointing filled triangle (default)
+  // --------------------------------------------
+  #{$accordion-icon-image-var}: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L16 12L10 18Z'/%3E%3C/svg%3E");
+  #{$accordion-icon-open-rotation-var}: 90deg;
+  #{$accordion-icon-size-var}: 1em;
+  #{$accordion-icon-color-var}: currentColor;
+  #{$accordion-icon-hover-color-var}: currentColor;
+  #{$accordion-icon-open-color-var}: currentColor;
 }
 
 // ============================================
@@ -123,12 +145,19 @@ $accordion-transition-var: --#{$accordion-prefix}transition !default;
       content: none;
     }
 
-    // Custom expand indicator (::after)
-    &::after {
-      content: "▶";
-      font-size: 0.7em;
-      transition: transform var(#{$accordion-transition-var});
+    // Custom expand indicator (::after) - fallback when .accordion-icon is not used
+    &:not(:has(.#{$accordion-icon-class-name}))::after {
+      content: "";
+      display: block;
       flex-shrink: 0;
+      width: 1em;
+      height: 1em;
+      background-color: currentColor;
+      mask-image: var(#{$accordion-icon-image-var});
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      transition: transform var(#{$accordion-transition-var});
     }
 
     &:hover {
@@ -144,9 +173,9 @@ $accordion-transition-var: --#{$accordion-prefix}transition !default;
     &:hover {
       background-color: var(#{$accordion-header-hover-bg-color-var});
     }
-    
-    &::after {
-      transform: rotate(90deg);
+
+    &:not(:has(.#{$accordion-icon-class-name}))::after {
+      transform: rotate(var(#{$accordion-icon-open-rotation-var}));
     }
   }
 
@@ -157,6 +186,63 @@ $accordion-transition-var: --#{$accordion-prefix}transition !default;
     border-top: var(#{$accordion-border-width-var}) solid
       var(#{$accordion-border-color-var});
   }
+}
+
+// ============================================
+// Icon
+// ============================================
+.#{$accordion-class-name}
+  > .#{$accordion-header-class-name}
+  > .#{$accordion-icon-class-name} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(#{$accordion-icon-size-var});
+  height: var(#{$accordion-icon-size-var});
+  color: var(#{$accordion-icon-color-var});
+  transition:
+    transform var(#{$accordion-transition-var}),
+    color var(#{$accordion-transition-var});
+
+  // Default indicator via ::before (shown when no child elements are present)
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    mask-image: var(#{$accordion-icon-image-var});
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  // Progressive enhancement: hide ::before when child elements (e.g. SVG) are provided
+  &:has(> *) {
+    &::before {
+      display: none;
+    }
+  }
+
+  // SVG sizing and color
+  & > svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+
+  &:hover {
+    color: var(#{$accordion-icon-hover-color-var});
+  }
+}
+
+// Open state
+.#{$accordion-class-name}[open]
+  > .#{$accordion-header-class-name}
+  > .#{$accordion-icon-class-name} {
+  transform: rotate(var(#{$accordion-icon-open-rotation-var}));
+  color: var(#{$accordion-icon-open-color-var});
 }
 
 // ============================================

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --border-width: 1px;
   --border-style: solid;
@@ -7360,6 +7359,12 @@ h6,
   --accordion-padding: 0.75rem 1rem;
   --accordion-header-padding: 0.75rem 1rem;
   --accordion-transition: 0.2s;
+  --accordion-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L16 12L10 18Z'/%3E%3C/svg%3E");
+  --accordion-icon-open-rotation: 90deg;
+  --accordion-icon-size: 1em;
+  --accordion-icon-color: currentColor;
+  --accordion-icon-hover-color: currentColor;
+  --accordion-icon-open-color: currentColor;
 }
 
 .accordion {
@@ -7387,11 +7392,22 @@ h6,
 .accordion > .accordion-header::marker {
   content: none;
 }
-.accordion > .accordion-header::after {
-  content: "▶";
-  font-size: 0.7em;
-  transition: transform var(--accordion-transition);
+.accordion > .accordion-header:not(:has(.accordion-icon))::after {
+  content: "";
+  display: block;
   flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask-image: var(--accordion-icon-image);
+          mask-image: var(--accordion-icon-image);
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  transition: transform var(--accordion-transition);
 }
 .accordion > .accordion-header:hover {
   background-color: var(--accordion-header-hover-bg-color);
@@ -7403,13 +7419,55 @@ h6,
 .accordion[open] > .accordion-header:hover {
   background-color: var(--accordion-header-hover-bg-color);
 }
-.accordion[open] > .accordion-header::after {
-  transform: rotate(90deg);
+.accordion[open] > .accordion-header:not(:has(.accordion-icon))::after {
+  transform: rotate(var(--accordion-icon-open-rotation));
 }
 .accordion > .accordion-body {
   padding: var(--accordion-padding);
   background-color: var(--accordion-bg-color);
   border-top: var(--accordion-border-width) solid var(--accordion-border-color);
+}
+
+.accordion > .accordion-header > .accordion-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--accordion-icon-size);
+  height: var(--accordion-icon-size);
+  color: var(--accordion-icon-color);
+  transition: transform var(--accordion-transition), color var(--accordion-transition);
+}
+.accordion > .accordion-header > .accordion-icon::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  -webkit-mask-image: var(--accordion-icon-image);
+          mask-image: var(--accordion-icon-image);
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+.accordion > .accordion-header > .accordion-icon:has(> *)::before {
+  display: none;
+}
+.accordion > .accordion-header > .accordion-icon > svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+.accordion > .accordion-header > .accordion-icon:hover {
+  color: var(--accordion-icon-hover-color);
+}
+
+.accordion[open] > .accordion-header > .accordion-icon {
+  transform: rotate(var(--accordion-icon-open-rotation));
+  color: var(--accordion-icon-open-color);
 }
 
 .accordion-group {
