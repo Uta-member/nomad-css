@@ -6932,9 +6932,9 @@ h6,
   --badge-bg-color: var(--palette-default);
   --badge-color: var(--palette-accent-default);
   --badge-border-radius: 10rem;
-  --badge-padding: 0.2em 0.5em;
+  --badge-padding: 0.35em 0.55em;
   --badge-font-size: 0.75em;
-  --badge-dot-size: 0.5rem;
+  --badge-dot-size: 0.85rem;
   --badge-overlay-top: 0;
   --badge-overlay-right: 0;
 }

@@ -67,13 +67,12 @@ $badge-overlay-right-var: --#{$badge-prefix}overlay-right !default;
   // --------------------------------------------
   // Layout
   // --------------------------------------------
-  #{$badge-padding-var}: 0.2em 0.5em;
+  #{$badge-padding-var}: 0.35em 0.55em;
   #{$badge-font-size-var}: 0.75em;
 
   // --------------------------------------------
-  // Dot
   // --------------------------------------------
-  #{$badge-dot-size-var}: 0.5rem;
+  #{$badge-dot-size-var}: 0.85rem;
 
   // --------------------------------------------
   // Overlay
