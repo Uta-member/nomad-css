@@ -162,8 +162,8 @@ $semantic-neutral-with-name: (
     palette-color-prefix: neutral-color-,
     palette-accent-prefix: neutral-accent-,
     palette-gray-prefix: neutral-gray-,
-    palette-lightness-prefix: neutral-l-,
-    palette-hue-var: --neutral-h,
-    palette-saturation-var: --neutral-s,
+    palette-lightness-prefix: neutral-lightness-,
+    palette-hue-var: --neutral-hue,
+    palette-saturation-var: --neutral-saturation,
   ),
 ) !default;

@@ -1,9 +1,8 @@
 @use "../utilities/prefixes" as prefixes;
 
 :root[data-theme="#{prefixes.$theme-name}"] {
-  // デフォルトパレット（primary に準拠）
-  --palette-hue: 254;
-  --palette-saturation: 40%;
+  --palette-hue: var(--neutral-hue);
+  --palette-saturation: var(--neutral-saturation);
   --palette-lighter: var(--palette-color-2);
   --palette-light: var(--palette-color-3);
   --palette-default: var(--palette-color-6);
@@ -100,4 +99,20 @@
     --palette-dark: var(--palette-color-8);
     --palette-darker: var(--palette-color-9);
   }
+
+  // ============================================================
+  // Neutral
+  // ============================================================
+  .neutral {
+    --palette-hue: var(--neutral-hue);
+    --palette-saturation: var(--neutral-saturation);
+    --palette-lighter: var(--palette-color-2);
+    --palette-light: var(--palette-color-3);
+    --palette-default: var(--palette-color-7);
+    --palette-dark: var(--palette-color-8);
+    --palette-darker: var(--palette-color-9);
+  }
+
+  --neutral-hue: 280;
+  --neutral-saturation: 20%;
 }
