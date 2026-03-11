@@ -6792,6 +6792,11 @@ pre {
 :root[data-theme=material3] {
   --palette-hue: 254;
   --palette-saturation: 65%;
+  --palette-lighter: var(--palette-color-2);
+  --palette-light: var(--palette-color-3);
+  --palette-default: var(--palette-color-5);
+  --palette-dark: var(--palette-color-6);
+  --palette-darker: var(--palette-color-8);
 }
 :root[data-theme=material3] .primary {
   --palette-hue: 254;
