@@ -1,0 +1,75 @@
+---
+title: Card
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Card</h1>
+
+  <!-- Basic Card -->
+  <div class="demo-row">
+    <div class="demo-label">Basic Card (.card)</div>
+    <div style="max-width: 320px">
+      <div class="card">
+        <div class="card-body">
+          <p>This is a basic card with body content only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card with Header and Footer -->
+  <div class="demo-row">
+    <div class="demo-label">Card with Header &amp; Footer</div>
+    <div style="max-width: 320px">
+      <div class="card">
+        <div class="card-header">Card Header</div>
+        <div class="card-body">
+          <p>
+            Card body content. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+        </div>
+        <div class="card-footer">Card Footer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card with Image -->
+  <div class="demo-row">
+    <div class="demo-label">Card with Image (.card-img)</div>
+    <div style="max-width: 320px">
+      <div class="card">
+        <img
+          class="card-img"
+          src="https://picsum.photos/320/180?random=1"
+          alt="Card image"
+        />
+        <div class="card-body">
+          <p><strong>Card Title</strong></p>
+          <p>Some description text for this card.</p>
+          <button class="button filled primary sm">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multiple Cards -->
+  <div class="demo-row">
+    <div class="demo-label">Multiple Cards</div>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+      <div class="card" style="width: 200px">
+        <div class="card-header">Card 1</div>
+        <div class="card-body">Content for card 1.</div>
+      </div>
+      <div class="card" style="width: 200px">
+        <div class="card-header">Card 2</div>
+        <div class="card-body">Content for card 2.</div>
+      </div>
+      <div class="card" style="width: 200px">
+        <div class="card-header">Card 3</div>
+        <div class="card-body">Content for card 3.</div>
+      </div>
+    </div>
+  </div>
+</section>

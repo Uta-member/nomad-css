@@ -1,0 +1,122 @@
+---
+title: Layout
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Layout Utilities</h1>
+
+  <!-- Display -->
+  <div class="demo-row">
+    <div class="demo-label">Display</div>
+    <span class="d-block demo-box">.d-block</span>
+    <span class="d-inline demo-box">.d-inline</span>
+    <span class="d-inline-block demo-box">.d-inline-block</span>
+  </div>
+
+  <!-- Flexbox -->
+  <div class="demo-row">
+    <div class="demo-label">Flexbox (.d-flex)</div>
+    <div class="d-flex demo-box" style="gap: 0.5rem">
+      <div class="demo-box">Item 1</div>
+      <div class="demo-box">Item 2</div>
+      <div class="demo-box">Item 3</div>
+    </div>
+  </div>
+
+  <!-- Flex Direction -->
+  <div class="demo-row">
+    <div class="demo-label">Flex Direction</div>
+    <div class="d-flex" style="gap: 1rem">
+      <div>
+        <p class="small">.flex-row</p>
+        <div class="d-flex flex-row demo-box" style="gap: 4px">
+          <span class="demo-box">1</span><span class="demo-box">2</span
+          ><span class="demo-box">3</span>
+        </div>
+      </div>
+      <div>
+        <p class="small">.flex-column</p>
+        <div class="d-flex flex-column demo-box" style="gap: 4px">
+          <span class="demo-box">1</span><span class="demo-box">2</span
+          ><span class="demo-box">3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Justify Content -->
+  <div class="demo-row">
+    <div class="demo-label">Justify Content</div>
+    <p class="small">.justify-start</p>
+    <div class="d-flex justify-start demo-box" style="gap: 4px">
+      <span class="demo-box">1</span><span class="demo-box">2</span
+      ><span class="demo-box">3</span>
+    </div>
+    <p class="small">.justify-center</p>
+    <div class="d-flex justify-center demo-box" style="gap: 4px">
+      <span class="demo-box">1</span><span class="demo-box">2</span
+      ><span class="demo-box">3</span>
+    </div>
+    <p class="small">.justify-end</p>
+    <div class="d-flex justify-end demo-box" style="gap: 4px">
+      <span class="demo-box">1</span><span class="demo-box">2</span
+      ><span class="demo-box">3</span>
+    </div>
+    <p class="small">.justify-between</p>
+    <div class="d-flex justify-between demo-box">
+      <span class="demo-box">1</span><span class="demo-box">2</span
+      ><span class="demo-box">3</span>
+    </div>
+  </div>
+
+  <!-- Align Items -->
+  <div class="demo-row">
+    <div class="demo-label">Align Items</div>
+    <div class="d-flex" style="gap: 1rem">
+      <div>
+        <p class="small">.align-items-start</p>
+        <div
+          class="d-flex align-items-start demo-box"
+          style="height: 80px; gap: 4px"
+        >
+          <span class="demo-box">1</span
+          ><span class="demo-box" style="padding: 1.5rem">2</span
+          ><span class="demo-box">3</span>
+        </div>
+      </div>
+      <div>
+        <p class="small">.align-items-center</p>
+        <div
+          class="d-flex align-items-center demo-box"
+          style="height: 80px; gap: 4px"
+        >
+          <span class="demo-box">1</span
+          ><span class="demo-box" style="padding: 1.5rem">2</span
+          ><span class="demo-box">3</span>
+        </div>
+      </div>
+      <div>
+        <p class="small">.align-items-end</p>
+        <div
+          class="d-flex align-items-end demo-box"
+          style="height: 80px; gap: 4px"
+        >
+          <span class="demo-box">1</span
+          ><span class="demo-box" style="padding: 1.5rem">2</span
+          ><span class="demo-box">3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flex Wrap -->
+  <div class="demo-row">
+    <div class="demo-label">Flex Wrap (.flex-wrap)</div>
+    <div class="d-flex flex-wrap demo-box" style="width: 300px; gap: 4px">
+      <span class="demo-box">Item 1</span><span class="demo-box">Item 2</span
+      ><span class="demo-box">Item 3</span>
+      <span class="demo-box">Item 4</span><span class="demo-box">Item 5</span>
+    </div>
+  </div>
+</section>

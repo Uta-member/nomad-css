@@ -1,0 +1,27 @@
+---
+title: nomad-css Component Showcase
+layout: layout.njk
+---
+
+<div class="showcase-gallery">
+  <h1>nomad-css</h1>
+  <p>フレームワーク非依存のテーマ切り替え可能な CSS ライブラリです。<br>各コンポーネント・ユーティリティのデモページを選択してください。</p>
+
+  <h2>Utilities</h2>
+  <div class="gallery-grid">
+    {% for item in nav.utilities %}
+      <a href="{{ ('/utilities/' + item.slug + '/') | url }}" class="gallery-card">
+        {{ item.title }}
+      </a>
+    {% endfor %}
+  </div>
+
+  <h2>Components</h2>
+  <div class="gallery-grid">
+    {% for item in nav.components %}
+      <a href="{{ ('/components/' + item.slug + '/') | url }}" class="gallery-card">
+        {{ item.title }}
+      </a>
+    {% endfor %}
+  </div>
+</div>

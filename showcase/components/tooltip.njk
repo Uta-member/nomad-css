@@ -1,0 +1,59 @@
+---
+title: Tooltip
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Tooltip</h1>
+
+  <!-- Placement -->
+  <div class="demo-row">
+    <div class="demo-label">Tooltip Placement (hover to see)</div>
+    <div style="display: flex; gap: 3rem; align-items: center; padding: 2rem">
+      <span class="tooltip" data-tooltip="Top tooltip (default)">
+        <button class="button outlined primary">Top (default)</button>
+      </span>
+      <span class="tooltip tooltip-bottom" data-tooltip="Bottom tooltip">
+        <button class="button outlined primary">Bottom</button>
+      </span>
+      <span class="tooltip tooltip-right" data-tooltip="Right tooltip">
+        <button class="button outlined primary">Right</button>
+      </span>
+      <span class="tooltip tooltip-left" data-tooltip="Left tooltip">
+        <button class="button outlined primary">Left</button>
+      </span>
+    </div>
+  </div>
+
+  <!-- Tooltip on Text -->
+  <div class="demo-row">
+    <div class="demo-label">Tooltip on Text</div>
+    <p>
+      Hover over
+      <span class="tooltip" data-tooltip="This is an abbreviation explanation">
+        <abbr style="cursor: help; border-bottom: 1px dotted">CSS</abbr>
+      </span>
+      or
+      <span
+        class="tooltip tooltip-bottom"
+        data-tooltip="Click the link for more info"
+      >
+        <a href="#">this link</a>
+      </span>
+      to see tooltips.
+    </p>
+  </div>
+
+  <!-- Long Tooltip -->
+  <div class="demo-row">
+    <div class="demo-label">Long Tooltip Text</div>
+    <div style="padding-top: 3rem">
+      <span
+        class="tooltip"
+        data-tooltip="This is a longer tooltip text that wraps to multiple lines when it exceeds the maximum width."
+      >
+        <button class="button tonal info">Hover for long tooltip</button>
+      </span>
+    </div>
+  </div>
+</section>

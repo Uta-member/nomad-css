@@ -1,0 +1,51 @@
+---
+title: Spinner
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Spinner</h1>
+
+  <!-- Semantic Colors -->
+  <div class="demo-row">
+    <div class="demo-label">Spinner (Semantic Colors)</div>
+    <div
+      style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap"
+    >
+      <span class="spinner primary"></span>
+      <span class="spinner secondary"></span>
+      <span class="spinner tertiary"></span>
+      <span class="spinner success"></span>
+      <span class="spinner warning"></span>
+      <span class="spinner danger"></span>
+      <span class="spinner info"></span>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="demo-row">
+    <div class="demo-label">Spinner Sizes</div>
+    <div style="display: flex; gap: 1.5rem; align-items: center">
+      <span class="spinner primary sm"></span>
+      <span class="spinner primary"></span>
+      <span class="spinner primary lg"></span>
+    </div>
+  </div>
+
+  <!-- In a Button -->
+  <div class="demo-row">
+    <div class="demo-label">Spinner in Button</div>
+    <div
+      style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap"
+    >
+      <button class="button filled primary" disabled>
+        <span class="spinner sm"></span>
+        Loading...
+      </button>
+      <button class="button outlined secondary" disabled>
+        <span class="spinner secondary sm"></span>
+        Processing
+      </button>
+    </div>
+  </div>
+</section>

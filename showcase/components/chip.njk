@@ -1,0 +1,119 @@
+---
+title: Chip
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Chip</h1>
+
+  <!-- Semantic Colors -->
+  <div class="demo-row">
+    <div class="demo-label">Chip (Semantic Colors)</div>
+    <div
+      style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
+    >
+      <span class="chip primary">Primary</span>
+      <span class="chip secondary">Secondary</span>
+      <span class="chip tertiary">Tertiary</span>
+      <span class="chip success">Success</span>
+      <span class="chip warning">Warning</span>
+      <span class="chip danger">Danger</span>
+      <span class="chip info">Info</span>
+    </div>
+  </div>
+
+  <!-- Variants -->
+  <div class="demo-row">
+    <div class="demo-label">Chip Variants</div>
+    <div
+      style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
+    >
+      <span class="chip primary">Default (Tonal)</span>
+      <span class="chip primary outlined">Outlined</span>
+      <span class="chip primary tonal">Tonal</span>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="demo-row">
+    <div class="demo-label">Chip Sizes</div>
+    <div style="display: flex; gap: 0.5rem; align-items: center">
+      <span class="chip primary sm">Small</span>
+      <span class="chip primary">Default</span>
+      <span class="chip primary lg">Large</span>
+    </div>
+  </div>
+
+  <!-- With Icon -->
+  <div class="demo-row">
+    <div class="demo-label">Chip with Icon</div>
+    <div
+      style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
+    >
+      <span class="chip primary">
+        <span class="chip-icon">★</span>
+        Starred
+      </span>
+      <span class="chip success">
+        <span class="chip-icon">✓</span>
+        Verified
+      </span>
+      <span class="chip danger">
+        <span class="chip-icon">⚠</span>
+        Alert
+      </span>
+    </div>
+  </div>
+
+  <!-- With Dismiss -->
+  <div class="demo-row">
+    <div class="demo-label">Chip with Dismiss (.chip-dismiss)</div>
+    <div
+      style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
+    >
+      <span class="chip primary">
+        React
+        <button class="chip-dismiss" aria-label="Remove">✕</button>
+      </span>
+      <span class="chip success">
+        TypeScript
+        <button class="chip-dismiss" aria-label="Remove">✕</button>
+      </span>
+      <span class="chip secondary outlined">
+        Design
+        <button class="chip-dismiss" aria-label="Remove">✕</button>
+      </span>
+    </div>
+  </div>
+
+  <!-- Interactive (button element) -->
+  <div class="demo-row">
+    <div class="demo-label">
+      Interactive Chip (button element — hover/active visible)
+    </div>
+    <div
+      style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
+    >
+      <button class="chip primary">Click me</button>
+      <button class="chip primary outlined">Outlined</button>
+      <button class="chip primary tonal">Tonal</button>
+      <button class="chip success">
+        <span class="chip-icon">✓</span>
+        Success
+      </button>
+    </div>
+  </div>
+
+  <!-- Disabled -->
+  <div class="demo-row">
+    <div class="demo-label">Chip Disabled</div>
+    <div
+      style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
+    >
+      <button class="chip primary" disabled>Disabled (button)</button>
+      <button class="chip primary outlined" disabled>Outlined Disabled</button>
+      <button class="chip primary tonal" disabled>Tonal Disabled</button>
+      <span class="chip primary" aria-disabled="true">Disabled (span)</span>
+    </div>
+  </div>
+</section>

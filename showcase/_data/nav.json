@@ -1,0 +1,33 @@
+{
+  "components": [
+    { "title": "Accordion", "slug": "accordion" },
+    { "title": "Alert", "slug": "alert" },
+    { "title": "Avatar", "slug": "avatar" },
+    { "title": "Badge", "slug": "badge" },
+    { "title": "Breadcrumb", "slug": "breadcrumb" },
+    { "title": "Button", "slug": "button" },
+    { "title": "Card", "slug": "card" },
+    { "title": "Checkbox", "slug": "checkbox" },
+    { "title": "Chip", "slug": "chip" },
+    { "title": "Divider", "slug": "divider" },
+    { "title": "Form Control", "slug": "form-control" },
+    { "title": "List", "slug": "list" },
+    { "title": "Pagination", "slug": "pagination" },
+    { "title": "Progress", "slug": "progress" },
+    { "title": "Radio", "slug": "radio" },
+    { "title": "Range", "slug": "range" },
+    { "title": "Select", "slug": "select" },
+    { "title": "Skeleton", "slug": "skeleton" },
+    { "title": "Spinner", "slug": "spinner" },
+    { "title": "Switch", "slug": "switch" },
+    { "title": "Table", "slug": "table" },
+    { "title": "Tooltip", "slug": "tooltip" }
+  ],
+  "utilities": [
+    { "title": "Typography", "slug": "typography" },
+    { "title": "Colors", "slug": "colors" },
+    { "title": "Layout", "slug": "layout" },
+    { "title": "Borders", "slug": "borders" },
+    { "title": "Shadows", "slug": "shadows" }
+  ]
+}

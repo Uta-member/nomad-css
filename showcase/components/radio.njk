@@ -1,0 +1,166 @@
+---
+title: Radio
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Radio</h1>
+
+  <!-- Radio NotStyled -->
+  <div class="demo-row">
+    <div class="demo-label">Radio (NotStyled)</div>
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+      <label><input type="radio" name="not-styled-radio" /> Option 1</label>
+      <label
+        ><input type="radio" name="not-styled-radio" checked /> Option
+        2</label
+      >
+      <label><input type="radio" name="not-styled-radio" /> Option 3</label>
+      <label
+        ><input type="radio" name="not-styled-radio-disabled" disabled />
+        Disabled</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="not-styled-radio-disabled"
+          disabled
+          checked
+        />
+        Checked Disabled</label
+      >
+    </div>
+  </div>
+
+  <!-- Radio Styled -->
+  <div class="demo-row">
+    <div class="demo-label">Radio (.radio)</div>
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+      <label
+        ><input type="radio" class="radio" name="styled-radio" /> Option
+        1</label
+      >
+      <label
+        ><input type="radio" class="radio" name="styled-radio" checked />
+        Option 2</label
+      >
+      <label
+        ><input type="radio" class="radio" name="styled-radio" /> Option
+        3</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio"
+          name="styled-radio-disabled"
+          disabled
+        />
+        Disabled</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio"
+          name="styled-radio-disabled"
+          checked
+          disabled
+        />
+        Checked Disabled</label
+      >
+    </div>
+  </div>
+
+  <!-- Radio Semantic Colors -->
+  <div class="demo-row">
+    <div class="demo-label">Radio Semantic Colors</div>
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+      <label
+        ><input
+          type="radio"
+          class="radio primary"
+          name="radio-color-primary"
+          checked
+        />
+        Primary</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio secondary"
+          name="radio-color-secondary"
+          checked
+        />
+        Secondary</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio tertiary"
+          name="radio-color-tertiary"
+          checked
+        />
+        Tertiary</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio success"
+          name="radio-color-success"
+          checked
+        />
+        Success</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio warning"
+          name="radio-color-warning"
+          checked
+        />
+        Warning</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio danger"
+          name="radio-color-danger"
+          checked
+        />
+        Danger</label
+      >
+      <label
+        ><input
+          type="radio"
+          class="radio info"
+          name="radio-color-info"
+          checked
+        />
+        Info</label
+      >
+    </div>
+  </div>
+
+  <!-- Radio Sizes -->
+  <div class="demo-row">
+    <div class="demo-label">Radio Sizes</div>
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+      <label
+        ><input
+          type="radio"
+          class="radio sm"
+          name="styled-radio-size"
+          checked
+        />
+        Small</label
+      >
+      <label
+        ><input type="radio" class="radio md" name="styled-radio-size" />
+        Medium</label
+      >
+      <label
+        ><input type="radio" class="radio lg" name="styled-radio-size" />
+        Large</label
+      >
+    </div>
+  </div>
+</section>

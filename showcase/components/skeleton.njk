@@ -1,0 +1,73 @@
+---
+title: Skeleton
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Skeleton</h1>
+
+  <!-- Text Skeleton -->
+  <div class="demo-row">
+    <div class="demo-label">Text Skeleton (.skeleton.text)</div>
+    <div
+      style="max-width: 400px; display: flex; flex-direction: column; gap: 0.5rem"
+    >
+      <span class="skeleton text" style="width: 90%"></span>
+      <span class="skeleton text" style="width: 75%"></span>
+      <span class="skeleton text" style="width: 60%"></span>
+    </div>
+  </div>
+
+  <!-- Rect Skeleton -->
+  <div class="demo-row">
+    <div class="demo-label">Rectangle Skeleton (.skeleton.rect)</div>
+    <div style="max-width: 400px">
+      <span
+        class="skeleton rect"
+        style="display: block; width: 100%; height: 120px"
+      ></span>
+    </div>
+  </div>
+
+  <!-- Circle Skeleton -->
+  <div class="demo-row">
+    <div class="demo-label">Circle Skeleton (.skeleton.circle)</div>
+    <div style="display: flex; gap: 0.75rem; align-items: center">
+      <span
+        class="skeleton circle"
+        style="display: inline-block; width: 2.5rem; height: 2.5rem"
+      ></span>
+      <span
+        class="skeleton circle"
+        style="display: inline-block; width: 4rem; height: 4rem"
+      ></span>
+      <span
+        class="skeleton circle"
+        style="display: inline-block; width: 6rem; height: 6rem"
+      ></span>
+    </div>
+  </div>
+
+  <!-- Card Skeleton -->
+  <div class="demo-row">
+    <div class="demo-label">Card Skeleton (Composition)</div>
+    <div
+      style="max-width: 320px; display: flex; gap: 0.75rem; align-items: flex-start"
+    >
+      <span
+        class="skeleton circle"
+        style="display: inline-block; width: 3rem; height: 3rem; flex-shrink: 0"
+      ></span>
+      <div
+        style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem"
+      >
+        <span class="skeleton text" style="width: 60%"></span>
+        <span class="skeleton text" style="width: 45%"></span>
+        <span
+          class="skeleton rect"
+          style="display: block; width: 100%; height: 80px; margin-top: 0.25rem"
+        ></span>
+      </div>
+    </div>
+  </div>
+</section>

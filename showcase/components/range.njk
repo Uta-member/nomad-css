@@ -1,0 +1,46 @@
+---
+title: Range
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Range</h1>
+
+  <!-- Range NotStyled -->
+  <div class="demo-row">
+    <div class="demo-label">Range / Slider (NotStyled)</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input type="range" value="50" />
+      <input type="range" value="75" disabled />
+    </div>
+  </div>
+
+  <!-- Range Styled -->
+  <div class="demo-row">
+    <div class="demo-label">Range / Slider (.range)</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input type="range" class="range" value="50" />
+      <input type="range" class="range" value="75" disabled />
+    </div>
+  </div>
+
+  <!-- Range Semantic Colors -->
+  <div class="demo-row">
+    <div class="demo-label">Range Semantic Colors</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input type="range" class="range primary" value="50" />
+      <input type="range" class="range secondary" value="50" />
+      <input type="range" class="range tertiary" value="50" />
+      <input type="range" class="range success" value="50" />
+      <input type="range" class="range warning" value="50" />
+      <input type="range" class="range danger" value="50" />
+      <input type="range" class="range info" value="50" />
+    </div>
+  </div>
+</section>

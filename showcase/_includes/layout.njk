@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} — nomad-css</title>
+    <link rel="stylesheet" href="{{ '/dist/css/default.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/fluent2.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/material3.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/demo.css' | url }}" />
+    <script>
+      // テーマを描画前に適用してフラッシュを防ぐ
+      (function () {
+        var theme = localStorage.getItem("nomad-theme") || "material3";
+        var scheme = localStorage.getItem("nomad-scheme") || "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.colorScheme = scheme;
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="showcase-header">
+      <div class="showcase-header-inner">
+        <a href="{{ '/' | url }}" class="showcase-logo">
+          <strong>nomad-css</strong>
+        </a>
+        <div class="showcase-controls">
+          <div class="theme-switcher">
+            <strong>Theme:</strong>
+            <label
+              ><input
+                type="radio"
+                name="theme"
+                value=""
+                onchange="setTheme('')"
+              />Default</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="theme"
+                value="fluent2"
+                onchange="setTheme('fluent2')"
+              />Fluent 2</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="theme"
+                value="material3"
+                onchange="setTheme('material3')"
+              />Material 3</label
+            >
+          </div>
+          <div class="theme-switcher">
+            <strong>Color Scheme:</strong>
+            <label
+              ><input
+                type="radio"
+                name="color-scheme"
+                value=""
+                onchange="setScheme('')"
+              />Default</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="color-scheme"
+                value="light"
+                onchange="setScheme('light')"
+              />Light</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="color-scheme"
+                value="dark"
+                onchange="setScheme('dark')"
+              />Dark</label
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="showcase-layout">
+      <aside class="showcase-sidebar">
+        <nav>
+          {% set homeUrl = '/' | url %}
+          <a
+            href="{{ homeUrl }}"
+            class="sidebar-link sidebar-home{% if page.url == homeUrl %} active{% endif %}"
+            >← Home</a
+          >
+
+          <div class="sidebar-group">
+            <div class="sidebar-group-label">Utilities</div>
+            {% for item in nav.utilities %}
+              {% set itemUrl = ('/utilities/' + item.slug + '/') | url %}
+              <a
+                href="{{ itemUrl }}"
+                class="sidebar-link{% if page.url == itemUrl %} active{% endif %}"
+                >{{ item.title }}</a
+              >
+            {% endfor %}
+          </div>
+
+          <div class="sidebar-group">
+            <div class="sidebar-group-label">Components</div>
+            {% for item in nav.components %}
+              {% set itemUrl = ('/components/' + item.slug + '/') | url %}
+              <a
+                href="{{ itemUrl }}"
+                class="sidebar-link{% if page.url == itemUrl %} active{% endif %}"
+                >{{ item.title }}</a
+              >
+            {% endfor %}
+          </div>
+        </nav>
+      </aside>
+
+      <main class="showcase-main">{{ content | safe }}</main>
+    </div>
+
+    <script>
+      function setTheme(theme) {
+        document.documentElement.dataset.theme = theme;
+        localStorage.setItem("nomad-theme", theme);
+        document.querySelectorAll('input[name="theme"]').forEach(function (r) {
+          r.checked = r.value === theme;
+        });
+      }
+
+      function setScheme(scheme) {
+        document.documentElement.dataset.colorScheme = scheme;
+        localStorage.setItem("nomad-scheme", scheme);
+        document
+          .querySelectorAll('input[name="color-scheme"]')
+          .forEach(function (r) {
+            r.checked = r.value === scheme;
+          });
+      }
+
+      // ページロード時にlocalStorageから復元してラジオボタンも同期
+      var savedTheme = localStorage.getItem("nomad-theme") || "material3";
+      var savedScheme = localStorage.getItem("nomad-scheme") || "light";
+      setTheme(savedTheme);
+      setScheme(savedScheme);
+    </script>
+  </body>
+</html>

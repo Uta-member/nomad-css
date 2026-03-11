@@ -1,0 +1,75 @@
+---
+title: Alert
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Alert</h1>
+
+  <!-- Semantic Color Alerts -->
+  <div class="demo-row">
+    <div class="demo-label">Alert (Semantic Colors)</div>
+    <div style="display: flex; flex-direction: column; gap: 0.75rem">
+      <div class="alert">
+        <span class="alert-icon">ℹ</span>
+        <div>
+          <span class="alert-title">Default</span>
+          <span class="alert-body">This is a default alert message.</span>
+        </div>
+      </div>
+      <div class="alert primary">
+        <span class="alert-icon">ℹ</span>
+        <div>
+          <span class="alert-title">Primary</span>
+          <span class="alert-body">This is a primary alert message.</span>
+        </div>
+      </div>
+      <div class="alert secondary">
+        <span class="alert-icon">★</span>
+        <div>
+          <span class="alert-title">Secondary</span>
+          <span class="alert-body">This is a secondary alert message.</span>
+        </div>
+      </div>
+      <div class="alert success">
+        <span class="alert-icon">✓</span>
+        <div>
+          <span class="alert-title">Success</span>
+          <span class="alert-body">Operation completed successfully.</span>
+        </div>
+      </div>
+      <div class="alert warning">
+        <span class="alert-icon">⚠</span>
+        <div>
+          <span class="alert-title">Warning</span>
+          <span class="alert-body">Please review before continuing.</span>
+        </div>
+      </div>
+      <div class="alert danger">
+        <span class="alert-icon">✕</span>
+        <div>
+          <span class="alert-title">Danger</span>
+          <span class="alert-body">An error occurred. Please try again.</span>
+        </div>
+      </div>
+      <div class="alert info">
+        <span class="alert-icon">ℹ</span>
+        <div>
+          <span class="alert-title">Info</span>
+          <span class="alert-body">Here is some useful information.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simple Alert (no icon) -->
+  <div class="demo-row">
+    <div class="demo-label">Alert (No Icon)</div>
+    <div style="display: flex; flex-direction: column; gap: 0.75rem">
+      <div class="alert info">This is a simple info alert without an icon.</div>
+      <div class="alert warning">
+        This is a simple warning alert without an icon.
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,227 @@
+---
+title: Form Control
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Form Control</h1>
+
+  <!-- Input NotStyled -->
+  <div class="demo-row">
+    <div class="demo-label">Input (NotStyled)</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input type="text" placeholder="Enter text" />
+      <input type="email" placeholder="Enter email" />
+      <input type="password" placeholder="Enter password" />
+      <input type="number" placeholder="Enter number" />
+      <input type="text" placeholder="Disabled input" disabled />
+      <input type="text" placeholder="Readonly input" readonly />
+    </div>
+  </div>
+
+  <!-- Input Styled -->
+  <div class="demo-row">
+    <div class="demo-label">Input (.form-control)</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input type="text" class="form-control" placeholder="Enter text" />
+      <input type="email" class="form-control" placeholder="Enter email" />
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Enter password"
+      />
+      <input type="number" class="form-control" placeholder="Enter number" />
+    </div>
+  </div>
+
+  <!-- Input States -->
+  <div class="demo-row">
+    <div class="demo-label">Input States</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input type="text" class="form-control" value="Normal input" />
+      <input
+        type="text"
+        class="form-control"
+        value="Disabled input"
+        disabled
+      />
+      <input
+        type="text"
+        class="form-control"
+        value="Readonly input"
+        readonly
+      />
+    </div>
+  </div>
+
+  <!-- Input Sizes -->
+  <div class="demo-row">
+    <div class="demo-label">Input Sizes</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input type="text" class="form-control sm" placeholder="Small input" />
+      <input type="text" class="form-control md" placeholder="Default input" />
+      <input type="text" class="form-control lg" placeholder="Large input" />
+    </div>
+  </div>
+
+  <!-- Input Variants -->
+  <div class="demo-row">
+    <div class="demo-label">Input Variants</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Default (outlined)"
+      />
+      <input
+        type="text"
+        class="form-control filled"
+        placeholder="Filled variant"
+      />
+      <input
+        type="text"
+        class="form-control underline"
+        placeholder="Underline variant"
+      />
+    </div>
+  </div>
+
+  <!-- Input Semantic Colors (Focus) -->
+  <div class="demo-row">
+    <div class="demo-label">Input Semantic Colors (focus to see)</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <input
+        type="text"
+        class="form-control primary"
+        placeholder="Primary outlined focus"
+      />
+      <input
+        type="text"
+        class="form-control primary filled"
+        placeholder="Primary filled focus"
+      />
+      <input
+        type="text"
+        class="form-control primary underline"
+        placeholder="Primary underline focus"
+      />
+      <input
+        type="text"
+        class="form-control secondary"
+        placeholder="Secondary outlined focus"
+      />
+      <input
+        type="text"
+        class="form-control secondary filled"
+        placeholder="Secondary filled focus"
+      />
+      <input
+        type="text"
+        class="form-control secondary underline"
+        placeholder="Secondary underline focus"
+      />
+      <input
+        type="text"
+        class="form-control tertiary"
+        placeholder="Tertiary outlined focus"
+      />
+      <input
+        type="text"
+        class="form-control tertiary filled"
+        placeholder="Tertiary filled focus"
+      />
+      <input
+        type="text"
+        class="form-control tertiary underline"
+        placeholder="Tertiary underline focus"
+      />
+      <input
+        type="text"
+        class="form-control success"
+        placeholder="Success outlined focus"
+      />
+      <input
+        type="text"
+        class="form-control success filled"
+        placeholder="Success filled focus"
+      />
+      <input
+        type="text"
+        class="form-control success underline"
+        placeholder="Success underline focus"
+      />
+      <input
+        type="text"
+        class="form-control warning"
+        placeholder="Warning outlined focus"
+      />
+      <input
+        type="text"
+        class="form-control warning filled"
+        placeholder="Warning filled focus"
+      />
+      <input
+        type="text"
+        class="form-control warning underline"
+        placeholder="Warning underline focus"
+      />
+      <input
+        type="text"
+        class="form-control danger"
+        placeholder="Danger outlined focus"
+      />
+      <input
+        type="text"
+        class="form-control danger filled"
+        placeholder="Danger filled focus"
+      />
+      <input
+        type="text"
+        class="form-control danger underline"
+        placeholder="Danger underline focus"
+      />
+      <input
+        type="text"
+        class="form-control info"
+        placeholder="Info outlined focus"
+      />
+      <input
+        type="text"
+        class="form-control info filled"
+        placeholder="Info filled focus"
+      />
+      <input
+        type="text"
+        class="form-control info underline"
+        placeholder="Info underline focus"
+      />
+    </div>
+  </div>
+
+  <!-- Textarea -->
+  <div class="demo-row">
+    <div class="demo-label">Textarea</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <textarea
+        class="form-control"
+        rows="3"
+        placeholder="Enter multiple lines..."
+      ></textarea>
+      <textarea class="form-control" rows="3" disabled>Disabled textarea</textarea>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+---
+title: Switch
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Switch</h1>
+
+  <!-- Basic Switch -->
+  <div class="demo-row">
+    <div class="demo-label">Basic Switch (.switch)</div>
+    <div style="display: flex; flex-direction: column; gap: 0.75rem">
+      <label class="switch">
+        <input type="checkbox" class="switch-input" />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Unchecked</span>
+      </label>
+      <label class="switch">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Checked</span>
+      </label>
+      <label class="switch">
+        <input type="checkbox" class="switch-input" disabled />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Disabled</span>
+      </label>
+      <label class="switch">
+        <input type="checkbox" class="switch-input" checked disabled />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Checked Disabled</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Semantic Colors -->
+  <div class="demo-row">
+    <div class="demo-label">Switch Semantic Colors</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem">
+      <label class="switch primary">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Primary</span>
+      </label>
+      <label class="switch secondary">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Secondary</span>
+      </label>
+      <label class="switch success">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Success</span>
+      </label>
+      <label class="switch warning">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Warning</span>
+      </label>
+      <label class="switch danger">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Danger</span>
+      </label>
+      <label class="switch info">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Info</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="demo-row">
+    <div class="demo-label">Switch Sizes</div>
+    <div
+      style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap"
+    >
+      <label class="switch primary sm">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Small</span>
+      </label>
+      <label class="switch primary">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Default</span>
+      </label>
+      <label class="switch primary lg">
+        <input type="checkbox" class="switch-input" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Large</span>
+      </label>
+    </div>
+  </div>
+</section>

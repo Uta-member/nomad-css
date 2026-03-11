@@ -1,0 +1,67 @@
+---
+title: Progress
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Progress</h1>
+
+  <!-- Progress NotStyled -->
+  <div class="demo-row">
+    <div class="demo-label">Progress (NotStyled)</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <progress value="30" max="100"></progress>
+      <progress value="70" max="100"></progress>
+      <progress></progress>
+    </div>
+  </div>
+
+  <!-- Progress Styled -->
+  <div class="demo-row">
+    <div class="demo-label">Progress (.progress)</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <progress class="progress" value="30" max="100"></progress>
+      <progress class="progress" value="70" max="100"></progress>
+      <progress class="progress"></progress>
+    </div>
+  </div>
+
+  <!-- Progress Semantic Colors -->
+  <div class="demo-row">
+    <div class="demo-label">Progress Semantic Colors</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 0.75rem; max-width: 400px"
+    >
+      <progress class="progress primary" value="60" max="100"></progress>
+      <progress class="progress primary"></progress>
+      <progress class="progress secondary" value="60" max="100"></progress>
+      <progress class="progress secondary"></progress>
+      <progress class="progress tertiary" value="60" max="100"></progress>
+      <progress class="progress tertiary"></progress>
+      <progress class="progress success" value="60" max="100"></progress>
+      <progress class="progress success"></progress>
+      <progress class="progress warning" value="60" max="100"></progress>
+      <progress class="progress warning"></progress>
+      <progress class="progress danger" value="60" max="100"></progress>
+      <progress class="progress danger"></progress>
+      <progress class="progress info" value="60" max="100"></progress>
+      <progress class="progress info"></progress>
+    </div>
+  </div>
+
+  <!-- Progress Sizes -->
+  <div class="demo-row">
+    <div class="demo-label">Progress Sizes</div>
+    <div
+      style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
+    >
+      <progress class="progress sm primary" value="50" max="100"></progress>
+      <progress class="progress primary" value="50" max="100"></progress>
+      <progress class="progress lg primary" value="50" max="100"></progress>
+    </div>
+  </div>
+</section>
