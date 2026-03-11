@@ -4,15 +4,36 @@
 // Prefixes
 // ============================================
 // Prefixes
-$border-prefix: #{prefixes.$prefix}-border-;
+$border-prefix: #{prefixes.$prefix}border-;
 
 // Class Name
 $border-class-name: "border";
 
 // Variable Name
-$border-width-var: --#{border-prefix}width;
-$border-style-var: --#{border-prefix}style;
-$border-color-var: --#{border-prefix}color;
+$border-width-var: --#{$border-prefix}width;
+$border-style-var: --#{$border-prefix}style;
+$border-color-var: --#{$border-prefix}color;
+
+// ============================================
+// Variables
+// ============================================
+$border-width-variations: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
+
+$border-radius-variations: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+) !default;
 
 // ============================================
 // Process
@@ -20,7 +41,7 @@ $border-color-var: --#{border-prefix}color;
 // ============================================
 // CSS Variables
 // ============================================
-.#{$border-class-name} {
+:root {
   #{$border-width-var}: 1px;
   #{$border-style-var}: solid;
   #{$border-color-var}: gray;
@@ -29,40 +50,46 @@ $border-color-var: --#{border-prefix}color;
 // ============================================
 // Border
 // ============================================
-.border {
+.#{$border-class-name} {
   border: var(#{$border-width-var}) var(#{$border-style-var})
     var(#{$border-color-var});
 }
-.border-top {
+.#{$border-class-name}-top {
   border-top: var(#{$border-width-var}) var(#{$border-style-var})
     var(#{$border-color-var});
 }
-.border-bottom {
+.#{$border-class-name}-bottom {
   border-bottom: var(#{$border-width-var}) var(#{$border-style-var})
     var(#{$border-color-var});
 }
-.border-start {
+.#{$border-class-name}-start {
   border-left: var(#{$border-width-var}) var(#{$border-style-var})
     var(#{$border-color-var});
 }
-.border-end {
+.#{$border-class-name}-end {
   border-right: var(#{$border-width-var}) var(#{$border-style-var})
     var(#{$border-color-var});
 }
+
 // ============================================
 // Border Sizes
 // ============================================
-.border-top-0 {
+.#{$border-class-name}-top-0 {
   border-top: none;
 }
-.border-bottom-0 {
+.#{$border-class-name}-bottom-0 {
   border-bottom: none;
 }
-.border-start-0 {
+.#{$border-class-name}-start-0 {
   border-left: none;
 }
-.border-end-0 {
+.#{$border-class-name}-end-0 {
   border-right: none;
+}
+@each $size, $value in $border-width-variations {
+  .#{$border-class-name}-#{$size} {
+    border-width: $value;
+  }
 }
 
 // ============================================
@@ -92,4 +119,9 @@ $border-color-var: --#{border-prefix}color;
 .rounded-end-0 {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+@each $size, $value in $border-radius-variations {
+  .rounded-#{$size} {
+    border-radius: $value;
+  }
 }

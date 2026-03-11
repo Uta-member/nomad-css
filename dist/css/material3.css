@@ -1,28 +1,28 @@
 @charset "UTF-8";
-.border {
-  --border-prefixwidth: 1px;
-  --border-prefixstyle: solid;
-  --border-prefixcolor: gray;
+:root {
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: gray;
 }
 
 .border {
-  border: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+  border: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-top {
-  border-top: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+  border-top: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-bottom {
-  border-bottom: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-start {
-  border-left: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+  border-left: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-end {
-  border-right: var(--border-prefixwidth) var(--border-prefixstyle) var(--border-prefixcolor);
+  border-right: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-top-0 {
@@ -39,6 +39,30 @@
 
 .border-end-0 {
   border-right: none;
+}
+
+.border-0 {
+  border-width: 0;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-3 {
+  border-width: 3px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-5 {
+  border-width: 5px;
 }
 
 .rounded {
@@ -71,6 +95,30 @@
 .rounded-end-0 {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+.rounded-0 {
+  border-radius: 0;
+}
+
+.rounded-1 {
+  border-radius: 4px;
+}
+
+.rounded-2 {
+  border-radius: 8px;
+}
+
+.rounded-3 {
+  border-radius: 12px;
+}
+
+.rounded-4 {
+  border-radius: 16px;
+}
+
+.rounded-5 {
+  border-radius: 20px;
 }
 
 .d-none {
@@ -6664,6 +6712,10 @@ a,
 li,
 pre {
   margin: 0;
+}
+
+.border.palette {
+  border-color: var(--palette-default);
 }
 
 :root[data-theme=material3] {

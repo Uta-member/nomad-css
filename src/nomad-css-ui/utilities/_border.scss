@@ -1,0 +1,9 @@
+@use "../../utilities/border" as border;
+@use "./palette" as palette;
+
+// ============================================
+// Border Colors
+// ============================================
+.#{border.$border-class-name}.palette {
+  border-color: var(#{palette.$palette-default-var});
+}
