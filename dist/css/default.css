@@ -4922,13 +4922,22 @@ h6,
   --button-transition: 0.3s;
   --button-font-size: inherit;
   --button-padding: 0.5em 1em;
+  --button-icon-only-padding: 0.5em;
+  --button-gap: 0.5em;
   --button-sm-font-size: 0.75rem;
   --button-sm-padding: 0.25em 0.5em;
+  --button-sm-icon-only-padding: 0.25em;
   --button-lg-font-size: 1.5rem;
   --button-lg-padding: 0.75em 2em;
+  --button-lg-icon-only-padding: 0.75em;
 }
 
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap);
+  vertical-align: middle;
   background-color: var(--button-bg-color);
   color: var(--button-color);
   border: var(--button-border-width) solid var(--button-border-color);
@@ -4951,6 +4960,20 @@ h6,
 .button.lg {
   font-size: var(--button-lg-font-size);
   padding: var(--button-lg-padding);
+}
+.button > span {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+.button.icon-only {
+  padding: var(--button-icon-only-padding);
+}
+.button.icon-only.sm {
+  padding: var(--button-sm-icon-only-padding);
+}
+.button.icon-only.lg {
+  padding: var(--button-lg-icon-only-padding);
 }
 .button:hover {
   background-color: var(--button-hover-bg-color);

@@ -81,10 +81,14 @@ $button-transition-var: --#{$button-prefix}transition !default;
 // --------------------------------------------
 $button-font-size-var: --#{$button-prefix}font-size !default;
 $button-padding-var: --#{$button-prefix}padding !default;
+$button-icon-only-padding-var: --#{$button-prefix}icon-only-padding !default;
+$button-gap-var: --#{$button-prefix}gap !default;
 $button-sm-font-size-var: --#{$button-prefix}sm-font-size !default;
 $button-sm-padding-var: --#{$button-prefix}sm-padding !default;
+$button-sm-icon-only-padding-var: --#{$button-prefix}sm-icon-only-padding !default;
 $button-lg-font-size-var: --#{$button-prefix}lg-font-size !default;
 $button-lg-padding-var: --#{$button-prefix}lg-padding !default;
+$button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !default;
 
 // ============================================
 // Process
@@ -156,16 +160,25 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding !default;
   // --------------------------------------------
   #{$button-font-size-var}: inherit;
   #{$button-padding-var}: 0.5em 1em;
+  #{$button-icon-only-padding-var}: 0.5em;
+  #{$button-gap-var}: 0.5em;
   #{$button-sm-font-size-var}: 0.75rem;
   #{$button-sm-padding-var}: 0.25em 0.5em;
+  #{$button-sm-icon-only-padding-var}: 0.25em;
   #{$button-lg-font-size-var}: 1.5rem;
   #{$button-lg-padding-var}: 0.75em 2em;
+  #{$button-lg-icon-only-padding-var}: 0.75em;
 }
 
 // ============================================
 // Overrides
 // ============================================
 .#{$button-class-name} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(#{$button-gap-var});
+  vertical-align: middle;
   background-color: var(#{$button-bg-color-var});
   color: var(#{$button-color-var});
   border: var(#{$button-border-width-var}) solid
@@ -192,6 +205,28 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding !default;
   &.lg {
     font-size: var(#{$button-lg-font-size-var});
     padding: var(#{$button-lg-padding-var});
+  }
+
+  // --------------------------------------------
+  // Icon
+  // ---------------------------------------------
+  > span {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  // --------------------------------------------
+  // Icon Only
+  // ---------------------------------------------
+  &.icon-only {
+    padding: var(#{$button-icon-only-padding-var});
+    &.sm {
+      padding: var(#{$button-sm-icon-only-padding-var});
+    }
+    &.lg {
+      padding: var(#{$button-lg-icon-only-padding-var});
+    }
   }
 
   &:hover {
@@ -237,7 +272,9 @@ $button-lg-padding-var: --#{$button-prefix}lg-padding !default;
   #{$button-hover-bg-color-var}: var(#{palette.$palette-dark-var});
   #{$button-active-bg-color-var}: var(#{palette.$palette-darker-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
-  #{$button-disabled-bg-color-var}: var(#{color-defines.$border-color-light-var});
+  #{$button-disabled-bg-color-var}: var(
+    #{color-defines.$border-color-light-var}
+  );
 
   // --------------------------------------------
   // Text Colors
