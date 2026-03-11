@@ -45,6 +45,10 @@ $button-active-border-color-var: --#{$button-prefix}active-border-color !default
 $button-focus-border-color-var: --#{$button-prefix}focus-border-color !default;
 $button-disabled-border-color-var: --#{$button-prefix}disabled-border-color !default;
 $button-border-radius-var: --#{$button-prefix}border-radius !default;
+$button-hover-border-radius-var: --#{$button-prefix}hover-border-radius !default;
+$button-active-border-radius-var: --#{$button-prefix}active-border-radius !default;
+$button-focus-border-radius-var: --#{$button-prefix}focus-border-radius !default;
+$button-disabled-border-radius-var: --#{$button-prefix}disabled-border-radius !default;
 $button-border-width-var: --#{$button-prefix}border-width !default;
 
 // --------------------------------------------
@@ -77,18 +81,35 @@ $button-disabled-box-shadow-var: --#{$button-prefix}disabled-box-shadow !default
 $button-transition-var: --#{$button-prefix}transition !default;
 
 // --------------------------------------------
+// Outlines
+// --------------------------------------------
+$button-focus-outline-color-var: --#{$button-prefix}focus-outline-color !default;
+$button-focus-outline-width-var: --#{$button-prefix}focus-outline-width !default;
+$button-focus-outline-offset-var: --#{$button-prefix}focus-outline-offset !default;
+
+// --------------------------------------------
 // Sizes
 // --------------------------------------------
 $button-font-size-var: --#{$button-prefix}font-size !default;
 $button-padding-var: --#{$button-prefix}padding !default;
-$button-icon-only-padding-var: --#{$button-prefix}icon-only-padding !default;
 $button-gap-var: --#{$button-prefix}gap !default;
+$button-icon-only-padding-var: --#{$button-prefix}icon-only-padding !default;
+$button-xs-font-size-var: --#{$button-prefix}xs-font-size !default;
+$button-xs-padding-var: --#{$button-prefix}xs-padding !default;
+$button-xs-gap-var: --#{$button-prefix}xs-gap !default;
+$button-xs-icon-only-padding-var: --#{$button-prefix}xs-icon-only-padding !default;
 $button-sm-font-size-var: --#{$button-prefix}sm-font-size !default;
 $button-sm-padding-var: --#{$button-prefix}sm-padding !default;
+$button-sm-gap-var: --#{$button-prefix}sm-gap !default;
 $button-sm-icon-only-padding-var: --#{$button-prefix}sm-icon-only-padding !default;
 $button-lg-font-size-var: --#{$button-prefix}lg-font-size !default;
 $button-lg-padding-var: --#{$button-prefix}lg-padding !default;
+$button-lg-gap-var: --#{$button-prefix}lg-gap !default;
 $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !default;
+$button-xl-font-size-var: --#{$button-prefix}xl-font-size !default;
+$button-xl-padding-var: --#{$button-prefix}xl-padding !default;
+$button-xl-gap-var: --#{$button-prefix}xl-gap !default;
+$button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !default;
 
 // ============================================
 // Process
@@ -125,6 +146,10 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
   #{$button-disabled-border-color-var}: transparent;
   #{$button-border-width-var}: 1px;
   #{$button-border-radius-var}: 0.25rem;
+  #{$button-hover-border-radius-var}: var(#{$button-border-radius-var});
+  #{$button-active-border-radius-var}: var(#{$button-border-radius-var});
+  #{$button-focus-border-radius-var}: var(#{$button-border-radius-var});
+  #{$button-disabled-border-radius-var}: var(#{$button-border-radius-var});
 
   // --------------------------------------------
   // Opacity
@@ -156,18 +181,35 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
   #{$button-transition-var}: 0.3s;
 
   // --------------------------------------------
+  // Outlines
+  // --------------------------------------------
+  #{$button-focus-outline-color-var}: var(#{color-defines.$border-color-var});
+  #{$button-focus-outline-width-var}: 2px;
+  #{$button-focus-outline-offset-var}: 2px;
+
+  // --------------------------------------------
   // Sizes
   // --------------------------------------------
   #{$button-font-size-var}: inherit;
   #{$button-padding-var}: 0.5em 1em;
-  #{$button-icon-only-padding-var}: 0.5em;
   #{$button-gap-var}: 0.5em;
+  #{$button-icon-only-padding-var}: 0.5em;
+  #{$button-xs-font-size-var}: 0.625rem;
+  #{$button-xs-padding-var}: 0.125em 0.25em;
+  #{$button-xs-gap-var}: 0.25em;
+  #{$button-xs-icon-only-padding-var}: 0.125em;
   #{$button-sm-font-size-var}: 0.75rem;
   #{$button-sm-padding-var}: 0.25em 0.5em;
+  #{$button-sm-gap-var}: 0.375em;
   #{$button-sm-icon-only-padding-var}: 0.25em;
   #{$button-lg-font-size-var}: 1.5rem;
   #{$button-lg-padding-var}: 0.75em 2em;
+  #{$button-lg-gap-var}: 0.75em;
   #{$button-lg-icon-only-padding-var}: 0.75em;
+  #{$button-xl-font-size-var}: 1.875rem;
+  #{$button-xl-padding-var}: 1em 3em;
+  #{$button-xl-gap-var}: 1em;
+  #{$button-xl-icon-only-padding-var}: 1em;
 }
 
 // ============================================
@@ -194,17 +236,30 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
   // --------------------------------------------
   // Sizes
   // ---------------------------------------------
+  &.xs {
+    font-size: var(#{$button-xs-font-size-var});
+    padding: var(#{$button-xs-padding-var});
+    gap: var(#{$button-xs-gap-var});
+  }
   &.sm {
     font-size: var(#{$button-sm-font-size-var});
     padding: var(#{$button-sm-padding-var});
+    gap: var(#{$button-sm-gap-var});
   }
   &.md {
     font-size: var(#{$button-font-size-var});
     padding: var(#{$button-padding-var});
+    gap: var(#{$button-gap-var});
   }
   &.lg {
     font-size: var(#{$button-lg-font-size-var});
     padding: var(#{$button-lg-padding-var});
+    gap: var(#{$button-lg-gap-var});
+  }
+  &.xl {
+    font-size: var(#{$button-xl-font-size-var});
+    padding: var(#{$button-xl-padding-var});
+    gap: var(#{$button-xl-gap-var});
   }
 
   // --------------------------------------------
@@ -221,11 +276,17 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
   // ---------------------------------------------
   &.icon-only {
     padding: var(#{$button-icon-only-padding-var});
+    &.xs {
+      padding: var(#{$button-xs-icon-only-padding-var});
+    }
     &.sm {
       padding: var(#{$button-sm-icon-only-padding-var});
     }
     &.lg {
       padding: var(#{$button-lg-icon-only-padding-var});
+    }
+    &.xl {
+      padding: var(#{$button-xl-icon-only-padding-var});
     }
   }
 
@@ -233,6 +294,7 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
     background-color: var(#{$button-hover-bg-color-var});
     color: var(#{$button-hover-color-var});
     border-color: var(#{$button-hover-border-color-var});
+    border-radius: var(#{$button-hover-border-radius-var});
     opacity: var(#{$button-hover-opacity-var});
     box-shadow: var(#{$button-hover-box-shadow-var});
   }
@@ -240,6 +302,7 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
     background-color: var(#{$button-active-bg-color-var});
     color: var(#{$button-active-color-var});
     border-color: var(#{$button-active-border-color-var});
+    border-radius: var(#{$button-active-border-radius-var});
     opacity: var(#{$button-active-opacity-var});
     box-shadow: var(#{$button-active-box-shadow-var});
   }
@@ -247,6 +310,7 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
     background-color: var(#{$button-disabled-bg-color-var});
     color: var(#{$button-disabled-color-var});
     border-color: var(#{$button-disabled-border-color-var});
+    border-radius: var(#{$button-disabled-border-radius-var});
     opacity: var(#{$button-disabled-opacity-var});
     cursor: var(#{$button-disabled-cursor-var});
     box-shadow: var(#{$button-disabled-box-shadow-var});
@@ -255,8 +319,12 @@ $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !defau
     background-color: var(#{$button-focus-bg-color-var});
     color: var(#{$button-focus-color-var});
     border-color: var(#{$button-focus-border-color-var});
+    border-radius: var(#{$button-focus-border-radius-var});
     opacity: var(#{$button-focus-opacity-var});
     box-shadow: var(#{$button-focus-box-shadow-var});
+    outline: var(#{$button-focus-outline-width-var}) solid
+      var(#{$button-focus-outline-color-var});
+    outline-offset: var(#{$button-focus-outline-offset-var});
   }
 }
 

@@ -3,24 +3,24 @@
 :root[data-theme="#{prefixes.$theme-name}"] {
   // デフォルトパレット（primary に準拠）
   --palette-hue: 254;
-  --palette-saturation: 65%;
+  --palette-saturation: 40%;
   --palette-lighter: var(--palette-color-2);
   --palette-light: var(--palette-color-3);
-  --palette-default: var(--palette-color-5);
-  --palette-dark: var(--palette-color-6);
-  --palette-darker: var(--palette-color-8);
+  --palette-default: var(--palette-color-6);
+  --palette-dark: var(--palette-color-8);
+  --palette-darker: var(--palette-color-9);
 
   // ============================================================
   // Primary
   // ============================================================
   .primary {
     --palette-hue: 254;
-    --palette-saturation: 65%;
+    --palette-saturation: 40%;
     --palette-lighter: var(--palette-color-2);
     --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-5);
-    --palette-dark: var(--palette-color-6);
-    --palette-darker: var(--palette-color-8);
+    --palette-default: var(--palette-color-6);
+    --palette-dark: var(--palette-color-8);
+    --palette-darker: var(--palette-color-9);
   }
 
   // ============================================================
@@ -32,8 +32,8 @@
     --palette-lighter: var(--palette-color-2);
     --palette-light: var(--palette-color-3);
     --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-9);
-    --palette-darker: var(--palette-color-10);
+    --palette-dark: var(--palette-color-8);
+    --palette-darker: var(--palette-color-9);
   }
 
   // ============================================================
@@ -45,8 +45,8 @@
     --palette-lighter: var(--palette-color-2);
     --palette-light: var(--palette-color-3);
     --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-9);
-    --palette-darker: var(--palette-color-10);
+    --palette-dark: var(--palette-color-8);
+    --palette-darker: var(--palette-color-9);
   }
 
   // ============================================================
