@@ -658,6 +658,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -770,14 +803,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .orange {
@@ -853,6 +901,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -965,14 +1046,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .yellow {
@@ -1048,6 +1144,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -1160,14 +1289,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .lime {
@@ -1243,6 +1387,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -1355,14 +1532,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .green {
@@ -1438,6 +1630,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -1550,14 +1775,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .teal {
@@ -1633,6 +1873,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -1745,14 +2018,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .cyan {
@@ -1828,6 +2116,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -1940,14 +2261,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .blue {
@@ -2023,6 +2359,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -2135,14 +2504,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .indigo {
@@ -2218,6 +2602,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -2330,14 +2747,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .violet {
@@ -2413,6 +2845,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -2525,14 +2990,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .purple {
@@ -2608,6 +3088,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -2720,14 +3233,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .pink {
@@ -2803,6 +3331,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -2915,14 +3476,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .primary {
@@ -2998,6 +3574,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -3110,14 +3719,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-6);
   --palette-accent-default: var(--palette-accent-6);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
   --palette-dark: var(--palette-color-8);
   --palette-accent-dark: var(--palette-accent-8);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .secondary {
@@ -3193,6 +3817,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -3305,14 +3962,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .tertiary {
@@ -3388,6 +4060,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -3500,14 +4205,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-4);
   --palette-accent-light: var(--palette-accent-4);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
   --palette-default: var(--palette-color-7);
   --palette-accent-default: var(--palette-accent-7);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-dark: var(--palette-color-9);
   --palette-accent-dark: var(--palette-accent-9);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
   --palette-darker: var(--palette-color-10);
   --palette-accent-darker: var(--palette-accent-10);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
 }
 
 .success {
@@ -3583,6 +4303,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -3695,14 +4448,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-4);
   --palette-accent-light: var(--palette-accent-4);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
   --palette-default: var(--palette-color-7);
   --palette-accent-default: var(--palette-accent-7);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-dark: var(--palette-color-9);
   --palette-accent-dark: var(--palette-accent-9);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
   --palette-darker: var(--palette-color-10);
   --palette-accent-darker: var(--palette-accent-10);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
 }
 
 .warning {
@@ -3778,6 +4546,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -3890,14 +4691,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-4);
   --palette-accent-light: var(--palette-accent-4);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
   --palette-default: var(--palette-color-6);
   --palette-accent-default: var(--palette-accent-6);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
   --palette-dark: var(--palette-color-8);
   --palette-accent-dark: var(--palette-accent-8);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .danger {
@@ -3973,6 +4789,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -4085,14 +4934,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-4);
   --palette-accent-light: var(--palette-accent-4);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
   --palette-default: var(--palette-color-6);
   --palette-accent-default: var(--palette-accent-6);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
   --palette-dark: var(--palette-color-8);
   --palette-accent-dark: var(--palette-accent-8);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .info {
@@ -4168,6 +5032,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -4280,14 +5177,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-4);
   --palette-accent-light: var(--palette-accent-4);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
   --palette-default: var(--palette-color-7);
   --palette-accent-default: var(--palette-accent-7);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-dark: var(--palette-color-8);
   --palette-accent-dark: var(--palette-accent-8);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 .neutral {
@@ -4363,6 +5275,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -4475,14 +5420,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-1);
   --palette-accent-lighter: var(--palette-accent-1);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-5);
   --palette-accent-default: var(--palette-accent-5);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
   --palette-dark: var(--palette-color-7);
   --palette-accent-dark: var(--palette-accent-7);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 :root {
@@ -4558,6 +5518,39 @@ h6,
     var(--palette-saturation),
     var(--palette-lightness-10)
   );
+  --palette-color-0-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-0);
+  --palette-color-1-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-1);
+  --palette-color-2-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
+  --palette-color-3-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
+  --palette-color-4-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-4);
+  --palette-color-5-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-5);
+  --palette-color-6-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
+  --palette-color-7-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-7);
+  --palette-color-8-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
+  --palette-color-9-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
+  --palette-color-10-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-10);
   --palette-gray-0: hsl(
     var(--palette-hue),
     var(--palette-gray-saturation),
@@ -4670,14 +5663,29 @@ h6,
   );
   --palette-lighter: var(--palette-color-2);
   --palette-accent-lighter: var(--palette-accent-2);
+  --palette-lighter-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-2);
   --palette-light: var(--palette-color-3);
   --palette-accent-light: var(--palette-accent-3);
+  --palette-light-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-3);
   --palette-default: var(--palette-color-6);
   --palette-accent-default: var(--palette-accent-6);
+  --palette-default-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-6);
   --palette-dark: var(--palette-color-8);
   --palette-accent-dark: var(--palette-accent-8);
+  --palette-dark-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-8);
   --palette-darker: var(--palette-color-9);
   --palette-accent-darker: var(--palette-accent-9);
+  --palette-darker-ch:
+    var(--palette-hue), var(--palette-saturation),
+    var(--palette-lightness-9);
 }
 
 :root {
@@ -4753,6 +5761,39 @@ h6,
     var(--neutral-s),
     var(--neutral-l-10)
   );
+  --neutral-color-0-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-0);
+  --neutral-color-1-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-1);
+  --neutral-color-2-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-2);
+  --neutral-color-3-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-3);
+  --neutral-color-4-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-4);
+  --neutral-color-5-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-5);
+  --neutral-color-6-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-6);
+  --neutral-color-7-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-7);
+  --neutral-color-8-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-8);
+  --neutral-color-9-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-9);
+  --neutral-color-10-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-10);
   --neutral-gray-0: hsl(
     var(--neutral-h),
     var(--palette-gray-saturation),
@@ -4865,14 +5906,29 @@ h6,
   );
   --neutral-lighter: var(--neutral-color-1);
   --neutral-accent-lighter: var(--neutral-accent-1);
+  --neutral-lighter-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-1);
   --neutral-light: var(--neutral-color-3);
   --neutral-accent-light: var(--neutral-accent-3);
+  --neutral-light-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-3);
   --neutral-default: var(--neutral-color-5);
   --neutral-accent-default: var(--neutral-accent-5);
+  --neutral-default-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-5);
   --neutral-dark: var(--neutral-color-7);
   --neutral-accent-dark: var(--neutral-accent-7);
+  --neutral-dark-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-7);
   --neutral-darker: var(--neutral-color-9);
   --neutral-accent-darker: var(--neutral-accent-9);
+  --neutral-darker-ch:
+    var(--neutral-h), var(--neutral-s),
+    var(--neutral-l-9);
 }
 
 :root {

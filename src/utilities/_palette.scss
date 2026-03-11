@@ -145,6 +145,15 @@ $palette-gray-saturation-default: 5% !default;
       var(--#{$lightness-prefix}#{$key})
     );
   }
+  // color channels
+  @each $key, $lightness in $lightnesses {
+    @if meta.type-of($lightness) == "map" {
+      @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
+    }
+    --#{$color-prefix}#{$key}-ch:
+      var(#{$hue-var}), var(#{$saturation-var}),
+      var(--#{$lightness-prefix}#{$key});
+  }
   // grays
   @each $key, $lightness in $lightnesses {
     @if meta.type-of($lightness) == "map" {
@@ -186,5 +195,8 @@ $palette-gray-saturation-default: 5% !default;
 
     --#{$base-prefix}#{$level-name}: var(--#{$color-prefix}#{$step-key});
     --#{$accent-prefix}#{$level-name}: var(--#{$accent-prefix}#{$step-key});
+    --#{$base-prefix}#{$level-name}-ch:
+      var(#{$hue-var}), var(#{$saturation-var}),
+      var(--#{$lightness-prefix}#{$step-key});
   }
 }
