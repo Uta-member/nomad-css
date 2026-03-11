@@ -1,0 +1,83 @@
+@use "sass:map";
+@use "prefixes" as prefixes;
+
+// ============================================
+// Prefixes
+// ============================================
+// Prefixes
+$shadow-prefix: #{prefixes.$prefix}shadow-;
+
+// Class Name
+$shadow-class-name: "shadow";
+
+// Variable Name
+$shadow-offset-x-var: --#{$shadow-prefix}offset-x;
+$shadow-offset-y-var: --#{$shadow-prefix}offset-y;
+$shadow-blur-var: --#{$shadow-prefix}blur;
+$shadow-spread-var: --#{$shadow-prefix}spread;
+$shadow-color-var: --#{$shadow-prefix}color;
+
+// ============================================
+// Variables
+// ============================================
+$shadow-variations: (
+  none: (
+    offset-x: 0,
+    offset-y: 0,
+    blur: 0,
+    spread: 0,
+    color: transparent,
+  ),
+  sm: (
+    offset-x: 0px,
+    offset-y: 1px,
+    blur: 3px,
+    spread: 0px,
+    color: rgba(0, 0, 0, 0.2),
+  ),
+  md: (
+    offset-x: 0px,
+    offset-y: 4px,
+    blur: 6px,
+    spread: 0px,
+    color: rgba(0, 0, 0, 0.2),
+  ),
+  lg: (
+    offset-x: 0px,
+    offset-y: 10px,
+    blur: 20px,
+    spread: 0px,
+    color: rgba(0, 0, 0, 0.2),
+  ),
+) !default;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// Shadows
+// ============================================
+@each $size, $properties in $shadow-variations {
+  .#{$shadow-class-name}-#{$size} {
+    #{$shadow-offset-x-var}: map.get($properties, offset-x);
+    #{$shadow-offset-y-var}: map.get($properties, offset-y);
+    #{$shadow-blur-var}: map.get($properties, blur);
+    #{$shadow-spread-var}: map.get($properties, spread);
+    #{$shadow-color-var}: map.get($properties, color);
+
+    box-shadow: var(#{$shadow-offset-x-var})
+      var(#{$shadow-offset-y-var})
+      var(#{$shadow-blur-var})
+      var(#{$shadow-spread-var})
+      var(#{$shadow-color-var});
+
+    &.inset {
+      box-shadow: inset
+        var(#{$shadow-offset-x-var})
+        var(#{$shadow-offset-y-var})
+        var(#{$shadow-blur-var})
+        var(#{$shadow-spread-var})
+        var(#{$shadow-color-var});
+    }
+  }
+}
