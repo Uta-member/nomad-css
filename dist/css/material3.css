@@ -10187,6 +10187,38 @@ pre {
 
 :root[data-theme=material3] .checkbox {
   --checkbox-border-radius: 3px;
+  --checkbox-state-layer-size: 2.5rem;
+  position: relative;
+  overflow: visible;
+}
+:root[data-theme=material3] .checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--checkbox-state-layer-size);
+  height: var(--checkbox-state-layer-size);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  background-color: var(--text-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.2s, opacity 0.2s;
+}
+:root[data-theme=material3] .checkbox:hover:not(:disabled)::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.08;
+}
+:root[data-theme=material3] .checkbox:focus-visible:not(:disabled)::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.12;
+}
+:root[data-theme=material3] .checkbox:active:not(:disabled)::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.16;
+}
+:root[data-theme=material3] .checkbox:checked:hover:not(:disabled)::after, :root[data-theme=material3] .checkbox:checked:focus-visible:not(:disabled)::after, :root[data-theme=material3] .checkbox:checked:active:not(:disabled)::after, :root[data-theme=material3] .checkbox:indeterminate:hover:not(:disabled)::after, :root[data-theme=material3] .checkbox:indeterminate:focus-visible:not(:disabled)::after, :root[data-theme=material3] .checkbox:indeterminate:active:not(:disabled)::after {
+  background-color: var(--checkbox-checked-bg-color);
 }
 
 :root[data-theme=material3] .form-control {
