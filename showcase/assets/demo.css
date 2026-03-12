@@ -96,7 +96,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #999;
+  color: var(--text-color-dark);
   padding: 0.25rem 1rem;
 }
 
@@ -162,7 +162,7 @@ body {
 
 .gallery-card:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-color: #aaa;
+  border-color: var(--border-color);
 }
 
 /* ---- Demo components ---- */
@@ -170,7 +170,7 @@ body {
 .demo-section {
   margin-bottom: 3rem;
   padding: 1.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   background-color: var(--surface-color-lighter);
   display: flex;
@@ -182,7 +182,7 @@ body {
 .demo-section > h2 {
   margin-top: 0;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .demo-row {
@@ -191,7 +191,7 @@ body {
 
 .demo-label {
   font-size: 0.875rem;
-  color: #666;
+  color: var(--text-color-dark);
   margin-bottom: 0.5rem;
 }
 
