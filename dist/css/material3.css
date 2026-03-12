@@ -10320,4 +10320,8 @@ pre {
   --select-cursor: pointer;
 }
 
+:root[data-theme=material3] .spinner {
+  --spinner-border-width: 3px;
+}
+
 /*# sourceMappingURL=material3.css.map */
