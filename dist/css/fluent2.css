@@ -8531,7 +8531,7 @@ h6,
 .form-control.filled:focus-visible {
   background-color: var(--form-control-filled-focus-bg-color);
   outline: none;
-  box-shadow: 0 -1px 0 0 var(--form-control-focus-ring-color) inset;
+  box-shadow: 0 calc(-1 * var(--form-control-focus-ring-width)) 0 0 var(--form-control-focus-ring-color) inset;
 }
 .form-control.filled:disabled {
   background-color: var(--form-control-filled-disabled-bg-color);
@@ -8549,7 +8549,7 @@ h6,
 }
 .form-control.underline:focus-visible {
   outline: none;
-  box-shadow: 0 -1px 0 0 var(--form-control-focus-ring-color) inset;
+  box-shadow: 0 calc(-1 * var(--form-control-focus-ring-width)) 0 0 var(--form-control-focus-ring-color) inset;
 }
 .form-control.underline:read-only {
   --form-control-readonly-bg-color: transparent;

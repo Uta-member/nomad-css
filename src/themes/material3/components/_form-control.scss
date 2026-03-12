@@ -3,52 +3,13 @@
 // ============================================
 // Material3 - form-control overrides
 // ============================================
-// Material3 の設計特徴:
-//   - Outlined: 全周ボーダー、フォーカス時に 2px アクセント色のボーダーに変化
-//   - Filled: グレー背景＋ボトムアンダーライン、フォーカス時に 2px アクセント色
-//   - アウトラインリングなし（ボーダー幅の変化で強調表現）
-//   - Disabled: 0.38 透明度（M3 仕様値）
-//   - Readonly: テキストカーソル（選択・コピー可能）
-// ============================================
 :root[data-theme="#{prefixes.$theme-name}"] {
   .form-control {
-    // アウトラインリング非表示（ボーダーで強調表現）
-    --form-control-focus-ring-width: 0px;
-
-    // Material3 仕様: disabled は 0.38 透明度
     --form-control-disabled-opacity: 0.38;
-
-    // Readonly: テキストカーソル（選択・コピー可能なため not-allowed にしない）
     --form-control-readonly-cursor: text;
-
-    // ============================================
-    // Outlined バリエーション: フォーカス時に 2px ボーダー
-    // ============================================
-    &:focus-visible {
-      // ボーダー幅を 2px に変更してフォーカスを表現
-      --form-control-border-top-width: 2px;
-      --form-control-border-right-width: 2px;
-      --form-control-border-bottom-width: 2px;
-      --form-control-border-left-width: 2px;
-    }
-
-    // ============================================
-    // Filled バリエーション: フォーカス時に 2px ボトムライン
-    // ============================================
-    &.filled {
-      &:focus-visible {
-        // デフォルト（1px）より太い 2px に上書き
-        box-shadow: 0 -2px 0 0 var(--palette-default) inset;
-      }
-    }
-
-    // ============================================
-    // Underline バリエーション: フォーカス時に 2px ボトムライン
-    // ============================================
-    &.underline {
-      &:focus-visible {
-        box-shadow: 0 -2px 0 0 var(--palette-default) inset;
-      }
-    }
+    --form-control-focus-ring-width: 1.5px;
+    --form-control-focus-ring-color: var(--palette-default);
+    --form-control-focus-ring-opacity: 1;
+    --form-control-focus-ring-offset-width: 0px;
   }
 }

@@ -361,7 +361,8 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   &:focus-visible {
     background-color: var(#{$form-control-filled-focus-bg-color-var});
     outline: none;
-    box-shadow: 0 -1px 0 0 var(#{$form-control-focus-ring-color-var}) inset;
+    box-shadow: 0 calc(-1 * var(#{$form-control-focus-ring-width-var})) 0 0
+      var(#{$form-control-focus-ring-color-var}) inset;
   }
   &:disabled {
     background-color: var(#{$form-control-filled-disabled-bg-color-var});
@@ -379,7 +380,8 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
 
   &:focus-visible {
     outline: none;
-    box-shadow: 0 -1px 0 0 var(#{$form-control-focus-ring-color-var}) inset;
+    box-shadow: 0 calc(-1 * var(#{$form-control-focus-ring-width-var})) 0 0
+      var(#{$form-control-focus-ring-color-var}) inset;
   }
 
   &:read-only {
