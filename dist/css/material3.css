@@ -10139,20 +10139,20 @@ pre {
   --palette-accent-light: var(--palette-accent-3);
   --palette-default: var(--palette-color-4);
   --palette-accent-default: var(--palette-accent-4);
-  --palette-dark: var(--palette-color-6);
-  --palette-accent-dark: var(--palette-accent-6);
-  --palette-darker: var(--palette-color-7);
-  --palette-accent-darker: var(--palette-accent-7);
+  --palette-dark: var(--palette-color-7);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-darker: var(--palette-accent-9);
   --primary-lighter: var(--primary-color-2);
   --primary-accent-lighter: var(--primary-accent-2);
   --primary-light: var(--primary-color-3);
   --primary-accent-light: var(--primary-accent-3);
   --primary-default: var(--primary-color-4);
   --primary-accent-default: var(--primary-accent-4);
-  --primary-dark: var(--primary-color-6);
-  --primary-accent-dark: var(--primary-accent-6);
-  --primary-darker: var(--primary-color-7);
-  --primary-accent-darker: var(--primary-accent-7);
+  --primary-dark: var(--primary-color-7);
+  --primary-accent-dark: var(--primary-accent-7);
+  --primary-darker: var(--primary-color-9);
+  --primary-accent-darker: var(--primary-accent-9);
   --secondary-lighter: var(--secondary-color-2);
   --secondary-accent-lighter: var(--secondary-accent-2);
   --secondary-light: var(--secondary-color-3);
@@ -10161,8 +10161,8 @@ pre {
   --secondary-accent-default: var(--secondary-accent-4);
   --secondary-dark: var(--secondary-color-7);
   --secondary-accent-dark: var(--secondary-accent-7);
-  --secondary-darker: var(--secondary-color-8);
-  --secondary-accent-darker: var(--secondary-accent-8);
+  --secondary-darker: var(--secondary-color-9);
+  --secondary-accent-darker: var(--secondary-accent-9);
   --tertiary-lighter: var(--tertiary-color-2);
   --tertiary-accent-lighter: var(--tertiary-accent-2);
   --tertiary-light: var(--tertiary-color-3);
@@ -10171,8 +10171,8 @@ pre {
   --tertiary-accent-default: var(--tertiary-accent-4);
   --tertiary-dark: var(--tertiary-color-7);
   --tertiary-accent-dark: var(--tertiary-accent-7);
-  --tertiary-darker: var(--tertiary-color-8);
-  --tertiary-accent-darker: var(--tertiary-accent-8);
+  --tertiary-darker: var(--tertiary-color-9);
+  --tertiary-accent-darker: var(--tertiary-accent-9);
   --success-lighter: var(--success-color-2);
   --success-accent-lighter: var(--success-accent-2);
   --success-light: var(--success-color-3);
@@ -10181,8 +10181,8 @@ pre {
   --success-accent-default: var(--success-accent-4);
   --success-dark: var(--success-color-7);
   --success-accent-dark: var(--success-accent-7);
-  --success-darker: var(--success-color-8);
-  --success-accent-darker: var(--success-accent-8);
+  --success-darker: var(--success-color-9);
+  --success-accent-darker: var(--success-accent-9);
   --warning-lighter: var(--warning-color-2);
   --warning-accent-lighter: var(--warning-accent-2);
   --warning-light: var(--warning-color-3);
@@ -10201,8 +10201,8 @@ pre {
   --danger-accent-default: var(--danger-accent-4);
   --danger-dark: var(--danger-color-7);
   --danger-accent-dark: var(--danger-accent-7);
-  --danger-darker: var(--danger-color-8);
-  --danger-accent-darker: var(--danger-accent-8);
+  --danger-darker: var(--danger-color-9);
+  --danger-accent-darker: var(--danger-accent-9);
   --info-lighter: var(--info-color-2);
   --info-accent-lighter: var(--info-accent-2);
   --info-light: var(--info-color-3);
@@ -10319,7 +10319,7 @@ pre {
   --button-disabled-bg-color: var(--neutral-lighter);
   --button-disabled-border-color: var(--neutral-lighter);
   --button-disabled-opacity: 1;
-  --button-disabled-text-color: var(--text-color-light);
+  --button-disabled-color: var(--text-color-light);
 }
 :root[data-theme=material3] .button.tonal {
   --button-hover-bg-color: var(--palette-light);
@@ -10332,7 +10332,7 @@ pre {
   --button-disabled-bg-color: var(--neutral-lighter);
   --button-disabled-border-color: var(--neutral-lighter);
   --button-disabled-opacity: 1;
-  --button-disabled-text-color: var(--text-color-light);
+  --button-disabled-color: var(--text-color-light);
   --button-hover-box-shadow: var(--shadow-1);
 }
 :root[data-theme=material3] .button.outlined {
@@ -10345,7 +10345,70 @@ pre {
   --button-disabled-bg-color: var(--neutral-lighter);
   --button-disabled-border-color: var(--neutral-lighter);
   --button-disabled-opacity: 1;
-  --button-disabled-text-color: var(--text-color-light);
+  --button-disabled-color: var(--text-color-light);
+}
+
+:root[data-theme=material3][data-color-scheme=dark] .button.filled {
+  --button-bg-color: var(--palette-light);
+  --button-color: var(--palette-darker);
+  --button-hover-bg-color: var(--palette-lighter);
+  --button-hover-color: var(--palette-darker);
+  --button-hover-opacity: 1;
+  --button-active-bg-color: var(--palette-lighter);
+  --button-active-color: var(--palette-darker);
+  --button-active-opacity: 0.9;
+  --button-border-color: var(--button-bg-color);
+  --button-hover-border-color: var(--button-hover-bg-color);
+  --button-active-border-color: var(--button-active-bg-color);
+  --button-focus-border-color: var(--button-focus-bg-color);
+  --button-disabled-bg-color: var(--neutral-gray-7);
+  --button-disabled-border-color: var(--button-disabled-bg-color);
+  --button-disabled-opacity: 1;
+  --button-disabled-color: var(--neutral-gray-5);
+}
+:root[data-theme=material3][data-color-scheme=dark] .button.tonal {
+  --button-bg-color: var(--palette-darker);
+  --button-color: var(--palette-lighter);
+  --button-hover-bg-color: var(--palette-dark);
+  --button-hover-color: var(--button-color);
+  --button-active-bg-color: var(--button-hover-bg-color);
+  --button-active-color: var(--button-color);
+  --button-focus-bg-color: var(--button-hover-bg-color);
+  --button-focus-color: var(--button-color);
+  --button-border-color: var(--button-bg-color);
+  --button-hover-border-color: var(--button-hover-bg-color);
+  --button-active-border-color: var(--button-active-bg-color);
+  --button-focus-border-color: var(--button-focus-bg-color);
+  --button-disabled-bg-color: var(--neutral-gray-7);
+  --button-disabled-border-color: var(--button-disabled-bg-color);
+  --button-disabled-opacity: 1;
+  --button-disabled-color: var(--neutral-gray-5);
+  --button-hover-box-shadow: var(--shadow-1);
+}
+:root[data-theme=material3][data-color-scheme=dark] .button.outlined {
+  --button-hover-bg-color: var(--palette-darker);
+  --button-hover-color: var(--button-color);
+  --button-active-bg-color: var(--button-hover-bg-color);
+  --button-active-color: var(--button-color);
+  --button-focus-bg-color: var(--button-hover-bg-color);
+  --button-focus-color: var(--button-color);
+  --button-disabled-bg-color: var(--neutral-gray-7);
+  --button-disabled-border-color: var(--button-disabled-color);
+  --button-disabled-opacity: 1;
+  --button-disabled-color: var(--neutral-gray-5);
+  --button-disabled-opacity: 1;
+}
+:root[data-theme=material3][data-color-scheme=dark] .button.text {
+  --button-hover-bg-color: var(--palette-darker);
+  --button-hover-color: var(--button-color);
+  --button-active-bg-color: var(--button-hover-bg-color);
+  --button-active-color: var(--button-color);
+  --button-focus-bg-color: var(--button-hover-bg-color);
+  --button-focus-color: var(--button-color);
+  --button-disabled-bg-color: var(--neutral-gray-7);
+  --button-disabled-border-color: var(--button-disabled-bg-color);
+  --button-disabled-opacity: 1;
+  --button-disabled-color: var(--neutral-gray-5);
 }
 
 :root[data-theme=material3] .checkbox {

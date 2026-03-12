@@ -39,7 +39,7 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-text-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-light);
     }
 
     &.tonal {
@@ -53,7 +53,7 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-text-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-light);
       --button-hover-box-shadow: var(--shadow-1);
     }
 
@@ -68,7 +68,77 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-text-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-light);
+    }
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .button {
+    &.filled {
+      --button-bg-color: var(--palette-light);
+      --button-color: var(--palette-darker);
+      --button-hover-bg-color: var(--palette-lighter);
+      --button-hover-color: var(--palette-darker);
+      --button-hover-opacity: 1;
+      --button-active-bg-color: var(--palette-lighter);
+      --button-active-color: var(--palette-darker);
+      --button-active-opacity: 0.9;
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
+      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-border-color: var(--button-disabled-bg-color);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--neutral-gray-5);
+    }
+
+    &.tonal {
+      --button-bg-color: var(--palette-darker);
+      --button-color: var(--palette-lighter);
+      --button-hover-bg-color: var(--palette-dark);
+      --button-hover-color: var(--button-color);
+      --button-active-bg-color: var(--button-hover-bg-color);
+      --button-active-color: var(--button-color);
+      --button-focus-bg-color: var(--button-hover-bg-color);
+      --button-focus-color: var(--button-color);
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
+      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-border-color: var(--button-disabled-bg-color);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--neutral-gray-5);
+      --button-hover-box-shadow: var(--shadow-1);
+    }
+
+    &.outlined {
+      --button-hover-bg-color: var(--palette-darker);
+      --button-hover-color: var(--button-color);
+      --button-active-bg-color: var(--button-hover-bg-color);
+      --button-active-color: var(--button-color);
+      --button-focus-bg-color: var(--button-hover-bg-color);
+      --button-focus-color: var(--button-color);
+      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-border-color: var(--button-disabled-color);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--neutral-gray-5);
+      --button-disabled-opacity: 1;
+    }
+
+    &.text {
+      --button-hover-bg-color: var(--palette-darker);
+      --button-hover-color: var(--button-color);
+      --button-active-bg-color: var(--button-hover-bg-color);
+      --button-active-color: var(--button-color);
+      --button-focus-bg-color: var(--button-hover-bg-color);
+      --button-focus-color: var(--button-color);
+      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-border-color: var(--button-disabled-bg-color);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--neutral-gray-5);
     }
   }
 }
