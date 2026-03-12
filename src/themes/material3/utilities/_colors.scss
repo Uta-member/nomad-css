@@ -1,118 +1,167 @@
 @use "../utilities/prefixes" as prefixes;
 
 :root[data-theme="#{prefixes.$theme-name}"] {
+  // ============================================================
+  // Default Palette
+  // ============================================================
   --palette-hue: var(--neutral-hue);
   --palette-saturation: var(--neutral-saturation);
-  --palette-lighter: var(--palette-color-2);
-  --palette-light: var(--palette-color-3);
-  --palette-default: var(--palette-color-6);
-  --palette-dark: var(--palette-color-8);
-  --palette-darker: var(--palette-color-9);
+  --palette-lightness-0: var(--neutral-lightness-0);
+  --palette-color-0: var(--neutral-color-0);
+  --palette-color-0-ch: var(--neutral-color-0-ch);
+  --palette-gray-0: var(--neutral-gray-0);
+  --palette-accent-0: var(--neutral-accent-0);
+  --palette-lightness-1: var(--neutral-lightness-1);
+  --palette-color-1: var(--neutral-color-1);
+  --palette-color-1-ch: var(--neutral-color-1-ch);
+  --palette-gray-1: var(--neutral-gray-1);
+  --palette-accent-1: var(--neutral-accent-1);
+  --palette-lightness-2: var(--neutral-lightness-2);
+  --palette-color-2: var(--neutral-color-2);
+  --palette-color-2-ch: var(--neutral-color-2-ch);
+  --palette-gray-2: var(--neutral-gray-2);
+  --palette-accent-2: var(--neutral-accent-2);
+  --palette-lightness-3: var(--neutral-lightness-3);
+  --palette-color-3: var(--neutral-color-3);
+  --palette-color-3-ch: var(--neutral-color-3-ch);
+  --palette-gray-3: var(--neutral-gray-3);
+  --palette-accent-3: var(--neutral-accent-3);
+  --palette-lightness-4: var(--neutral-lightness-4);
+  --palette-color-4: var(--neutral-color-4);
+  --palette-color-4-ch: var(--neutral-color-4-ch);
+  --palette-gray-4: var(--neutral-gray-4);
+  --palette-accent-4: var(--neutral-accent-4);
+  --palette-lightness-5: var(--neutral-lightness-5);
+  --palette-color-5: var(--neutral-color-5);
+  --palette-color-5-ch: var(--neutral-color-5-ch);
+  --palette-gray-5: var(--neutral-gray-5);
+  --palette-accent-5: var(--neutral-accent-5);
+  --palette-lightness-6: var(--neutral-lightness-6);
+  --palette-color-6: var(--neutral-color-6);
+  --palette-color-6-ch: var(--neutral-color-6-ch);
+  --palette-gray-6: var(--neutral-gray-6);
+  --palette-accent-6: var(--neutral-accent-6);
+  --palette-lightness-7: var(--neutral-lightness-7);
+  --palette-color-7: var(--neutral-color-7);
+  --palette-color-7-ch: var(--neutral-color-7-ch);
+  --palette-gray-7: var(--neutral-gray-7);
+  --palette-accent-7: var(--neutral-accent-7);
+  --palette-lightness-8: var(--neutral-lightness-8);
+  --palette-color-8: var(--neutral-color-8);
+  --palette-color-8-ch: var(--neutral-color-8-ch);
+  --palette-gray-8: var(--neutral-gray-8);
+  --palette-accent-8: var(--neutral-accent-8);
+  --palette-lightness-9: var(--neutral-lightness-9);
+  --palette-color-9: var(--neutral-color-9);
+  --palette-color-9-ch: var(--neutral-color-9-ch);
+  --palette-gray-9: var(--neutral-gray-9);
+  --palette-accent-9: var(--neutral-accent-9);
+  --palette-lightness-10: var(--neutral-lightness-10);
+  --palette-color-10: var(--neutral-color-10);
+  --palette-color-10-ch: var(--neutral-color-10-ch);
+  --palette-gray-10: var(--neutral-gray-10);
+  --palette-accent-10: var(--neutral-accent-10);
+  --palette-lighter: var(--neutral-lighter);
+  --palette-accent-lighter: var(--neutral-accent-lighter);
+  --palette-lighter-ch: var(--neutral-lighter-ch);
+  --palette-light: var(--neutral-light);
+  --palette-accent-light: var(--neutral-accent-light);
+  --palette-light-ch: var(--neutral-light-ch);
+  --palette-default: var(--neutral-default);
+  --palette-accent-default: var(--neutral-accent-default);
+  --palette-default-ch: var(--neutral-default-ch);
+  --palette-dark: var(--neutral-dark);
+  --palette-accent-dark: var(--neutral-accent-dark);
+  --palette-dark-ch: var(--neutral-dark-ch);
+  --palette-darker: var(--neutral-darker);
+  --palette-accent-darker: var(--neutral-accent-darker);
+  --palette-darker-ch: var(--neutral-darker-ch);
 
   // ============================================================
   // Primary
   // ============================================================
-  .primary {
-    --palette-hue: 254;
-    --palette-saturation: 40%;
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
+  --primary-hue: 254;
+  --primary-saturation: 40%;
+  --primary-lighter: var(--primary-color-2);
+  --primary-light: var(--primary-color-3);
+  --primary-default: var(--primary-color-6);
+  --primary-dark: var(--primary-color-8);
+  --primary-darker: var(--primary-color-9);
 
   // ============================================================
   // Secondary
   // ============================================================
-  .secondary {
-    --palette-hue: 250;
-    --palette-saturation: 13%;
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
+  --secondary-hue: 250;
+  --secondary-saturation: 13%;
+  --secondary-lighter: var(--secondary-color-2);
+  --secondary-light: var(--secondary-color-3);
+  --secondary-default: var(--secondary-color-6);
+  --secondary-dark: var(--secondary-color-8);
+  --secondary-darker: var(--secondary-color-9);
 
   // ============================================================
   // Tertiary
   // ============================================================
-  .tertiary {
-    --palette-hue: 355;
-    --palette-saturation: 30%;
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
+  --tertiary-hue: 355;
+  --tertiary-saturation: 30%;
+  --tertiary-lighter: var(--tertiary-color-2);
+  --tertiary-light: var(--tertiary-color-3);
+  --tertiary-default: var(--tertiary-color-6);
+  --tertiary-dark: var(--tertiary-color-8);
+  --tertiary-darker: var(--tertiary-color-9);
 
   // ============================================================
   // Danger / Error
   // ============================================================
-  .danger {
-    --palette-hue: 8;
-    --palette-saturation: 90%;
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
+  --danger-hue: 8;
+  --danger-saturation: 90%;
+  --danger-lighter: var(--danger-color-2);
+  --danger-light: var(--danger-color-3);
+  --danger-default: var(--danger-color-6);
+  --danger-dark: var(--danger-color-8);
+  --danger-darker: var(--danger-color-9);
 
   // ============================================================
   // Success
   // ============================================================
-  .success {
-    --palette-hue: 133;
-    --palette-saturation: 55%;
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
+  --success-hue: 133;
+  --success-saturation: 55%;
+  --success-lighter: var(--success-color-2);
+  --success-light: var(--success-color-3);
+  --success-default: var(--success-color-6);
+  --success-dark: var(--success-color-8);
+  --success-darker: var(--success-color-9);
 
   // ============================================================
   // Warning
   // ============================================================
-  .warning {
-    --palette-hue: 46;
-    --palette-saturation: 100%;
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-6);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
+  --warning-hue: 46;
+  --warning-saturation: 100%;
+  --warning-lighter: var(--warning-color-2);
+  --warning-light: var(--warning-color-3);
+  --warning-default: var(--warning-color-6);
+  --warning-dark: var(--warning-color-8);
+  --warning-darker: var(--warning-color-9);
 
   // ============================================================
   // Info
   // ============================================================
-  .info {
-    --palette-hue: 195;
-    --palette-saturation: 75%;
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-7);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
+  --info-hue: 195;
+  --info-saturation: 75%;
+  --info-lighter: var(--info-color-2);
+  --info-light: var(--info-color-3);
+  --info-default: var(--info-color-7);
+  --info-dark: var(--info-color-8);
+  --info-darker: var(--info-color-9);
 
   // ============================================================
   // Neutral
   // ============================================================
-  .neutral {
-    --palette-hue: var(--neutral-hue);
-    --palette-saturation: var(--neutral-saturation);
-    --palette-lighter: var(--palette-color-2);
-    --palette-light: var(--palette-color-3);
-    --palette-default: var(--palette-color-7);
-    --palette-dark: var(--palette-color-8);
-    --palette-darker: var(--palette-color-9);
-  }
-
   --neutral-hue: 280;
   --neutral-saturation: 20%;
+  --neutral-lighter: var(--neutral-color-2);
+  --neutral-light: var(--neutral-color-3);
+  --neutral-default: var(--neutral-color-7);
+  --neutral-dark: var(--neutral-color-8);
+  --neutral-darker: var(--neutral-color-9);
 }
