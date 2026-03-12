@@ -521,52 +521,75 @@ h6,
   text-overflow: ellipsis;
 }
 
+:root {
+  --shadow--none-offset-x: 0;
+  --shadow--none-offset-y: 0;
+  --shadow--none-blur: 0;
+  --shadow--none-spread: 0;
+  --shadow--none-color: transparent;
+  --shadow-none: var(--shadow--none-offset-x)
+    var(--shadow--none-offset-y)
+    var(--shadow--none-blur)
+    var(--shadow--none-spread)
+    var(--shadow--none-color);
+  --shadow--sm-offset-x: 0px;
+  --shadow--sm-offset-y: 1px;
+  --shadow--sm-blur: 3px;
+  --shadow--sm-spread: 0px;
+  --shadow--sm-color: rgba(0, 0, 0, 0.2);
+  --shadow-sm: var(--shadow--sm-offset-x)
+    var(--shadow--sm-offset-y)
+    var(--shadow--sm-blur)
+    var(--shadow--sm-spread)
+    var(--shadow--sm-color);
+  --shadow--md-offset-x: 0px;
+  --shadow--md-offset-y: 4px;
+  --shadow--md-blur: 6px;
+  --shadow--md-spread: 0px;
+  --shadow--md-color: rgba(0, 0, 0, 0.2);
+  --shadow-md: var(--shadow--md-offset-x)
+    var(--shadow--md-offset-y)
+    var(--shadow--md-blur)
+    var(--shadow--md-spread)
+    var(--shadow--md-color);
+  --shadow--lg-offset-x: 0px;
+  --shadow--lg-offset-y: 10px;
+  --shadow--lg-blur: 20px;
+  --shadow--lg-spread: 0px;
+  --shadow--lg-color: rgba(0, 0, 0, 0.2);
+  --shadow-lg: var(--shadow--lg-offset-x)
+    var(--shadow--lg-offset-y)
+    var(--shadow--lg-blur)
+    var(--shadow--lg-spread)
+    var(--shadow--lg-color);
+}
+
 .shadow-none {
-  --shadow-offset-x: 0;
-  --shadow-offset-y: 0;
-  --shadow-blur: 0;
-  --shadow-spread: 0;
-  --shadow-color: transparent;
-  box-shadow: var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: var(--shadow-none);
 }
 .shadow-none.inset {
-  box-shadow: inset var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: inset var(--shadow-none);
 }
 
 .shadow-sm {
-  --shadow-offset-x: 0px;
-  --shadow-offset-y: 1px;
-  --shadow-blur: 3px;
-  --shadow-spread: 0px;
-  --shadow-color: rgba(0, 0, 0, 0.2);
-  box-shadow: var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: var(--shadow-sm);
 }
 .shadow-sm.inset {
-  box-shadow: inset var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: inset var(--shadow-sm);
 }
 
 .shadow-md {
-  --shadow-offset-x: 0px;
-  --shadow-offset-y: 4px;
-  --shadow-blur: 6px;
-  --shadow-spread: 0px;
-  --shadow-color: rgba(0, 0, 0, 0.2);
-  box-shadow: var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: var(--shadow-md);
 }
 .shadow-md.inset {
-  box-shadow: inset var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: inset var(--shadow-md);
 }
 
 .shadow-lg {
-  --shadow-offset-x: 0px;
-  --shadow-offset-y: 10px;
-  --shadow-blur: 20px;
-  --shadow-spread: 0px;
-  --shadow-color: rgba(0, 0, 0, 0.2);
-  box-shadow: var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: var(--shadow-lg);
 }
 .shadow-lg.inset {
-  box-shadow: inset var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  box-shadow: inset var(--shadow-lg);
 }
 
 :root {
