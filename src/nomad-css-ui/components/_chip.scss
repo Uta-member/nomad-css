@@ -46,6 +46,13 @@ $chip-border-radius-var: --#{$chip-prefix}border-radius !default;
 $chip-border-width-var: --#{$chip-prefix}border-width !default;
 
 // --------------------------------------------
+// Focus Ring
+// --------------------------------------------
+$chip-focus-ring-color-var: --#{$chip-prefix}focus-ring-color !default;
+$chip-focus-ring-width-var: --#{$chip-prefix}focus-ring-width !default;
+$chip-focus-ring-offset-var: --#{$chip-prefix}focus-ring-offset !default;
+
+// --------------------------------------------
 // Layout
 // --------------------------------------------
 $chip-padding-var: --#{$chip-prefix}padding !default;
@@ -99,13 +106,22 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   #{$chip-hover-border-color-var}: var(#{palette.$palette-light-var});
   #{$chip-active-border-color-var}: var(#{palette.$palette-default-var});
   #{$chip-focus-border-color-var}: var(#{$chip-hover-border-color-var});
-  #{$chip-disabled-border-color-var}: var(#{color-defines.$border-color-light-var});
+  #{$chip-disabled-border-color-var}: var(
+    #{color-defines.$border-color-light-var}
+  );
 
   // --------------------------------------------
   // Border
   // --------------------------------------------
   #{$chip-border-radius-var}: 10rem;
   #{$chip-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Focus Ring
+  // --------------------------------------------
+  #{$chip-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$chip-focus-ring-width-var}: 2px;
+  #{$chip-focus-ring-offset-var}: 2px;
 
   // --------------------------------------------
   // Layout
@@ -172,6 +188,10 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
     background-color: var(#{$chip-focus-bg-color-var});
     color: var(#{$chip-focus-color-var});
     border-color: var(#{$chip-focus-border-color-var});
+    outline-color: var(#{$chip-focus-ring-color-var});
+    outline-width: var(#{$chip-focus-ring-width-var});
+    outline-offset: var(#{$chip-focus-ring-offset-var});
+    outline-style: solid;
   }
   &:disabled,
   &[aria-disabled="true"] {

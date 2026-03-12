@@ -9010,6 +9010,9 @@ h6,
   --chip-disabled-border-color: var(--border-color-light);
   --chip-border-radius: 10rem;
   --chip-border-width: 1px;
+  --chip-focus-ring-color: var(--palette-default);
+  --chip-focus-ring-width: 2px;
+  --chip-focus-ring-offset: 2px;
   --chip-padding: 0.25em 0.625em;
   --chip-font-size: 0.875em;
   --chip-gap: 0.25rem;
@@ -9049,6 +9052,10 @@ h6,
   background-color: var(--chip-focus-bg-color);
   color: var(--chip-focus-color);
   border-color: var(--chip-focus-border-color);
+  outline-color: var(--chip-focus-ring-color);
+  outline-width: var(--chip-focus-ring-width);
+  outline-offset: var(--chip-focus-ring-offset);
+  outline-style: solid;
 }
 .chip:disabled, .chip[aria-disabled=true] {
   background-color: var(--chip-disabled-bg-color);
@@ -10234,6 +10241,11 @@ pre {
 }
 :root[data-theme=material3] .checkbox:checked:hover:not(:disabled)::after, :root[data-theme=material3] .checkbox:checked:active:not(:disabled)::after, :root[data-theme=material3] .checkbox:indeterminate:hover:not(:disabled)::after, :root[data-theme=material3] .checkbox:indeterminate:active:not(:disabled)::after {
   background-color: var(--checkbox-checked-bg-color);
+}
+
+:root[data-theme=material3] .chip {
+  --chip-border-radius: 0.5rem;
+  --chip-focus-ring-offset: 2px;
 }
 
 :root[data-theme=material3] .form-control {
