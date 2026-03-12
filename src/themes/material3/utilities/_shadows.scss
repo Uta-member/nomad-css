@@ -1,0 +1,10 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  --shadow-0-color: rgba(0, 0, 0, 0.8);
+  --shadow-1-color: rgba(0, 0, 0, 0.8);
+  --shadow-2-color: rgba(0, 0, 0, 0.8);
+  --shadow-3-color: rgba(0, 0, 0, 0.8);
+  --shadow-4-color: rgba(0, 0, 0, 0.8);
+  --shadow-5-color: rgba(0, 0, 0, 0.8);
+}

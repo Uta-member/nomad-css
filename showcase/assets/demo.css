@@ -201,6 +201,14 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.demo-box.lighter {
+  background: var(--surface-color-lighter);
+}
+
+.demo-box.light {
+  background: var(--surface-color-light);
+}
+
 /* ---- Color swatches (colors page) ---- */
 
 .container-color-0 {

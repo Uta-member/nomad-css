@@ -11,8 +11,23 @@
     --form-control-focus-ring-color: var(--palette-default);
     --form-control-focus-ring-opacity: 1;
     --form-control-focus-ring-offset-width: 0px;
+    // --form-control-filled-bg-color / --form-control-filled-hover-bg-color は
+    // ライト/ダークで異なるため下記のモード別セレクターで定義
+    --form-control-cursor: pointer;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"],
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
+  .form-control {
     --form-control-filled-bg-color: var(--neutral-gray-2);
     --form-control-filled-hover-bg-color: var(--neutral-gray-3);
-    --form-control-cursor: pointer;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .form-control {
+    --form-control-filled-bg-color: var(--neutral-gray-8);
+    --form-control-filled-hover-bg-color: var(--neutral-gray-7);
   }
 }

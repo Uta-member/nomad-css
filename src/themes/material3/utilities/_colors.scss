@@ -1,5 +1,8 @@
 @use "../utilities/prefixes" as prefixes;
 
+// ============================================================
+// テーマ共通設定（ライト/ダーク両モードで変わらない定義）
+// ============================================================
 :root[data-theme="#{prefixes.$theme-name}"] {
   // ============================================================
   // Default Palette
@@ -246,7 +249,13 @@
   --neutral-darker: var(--neutral-color-9);
   --neutral-darker-ch: var(--neutral-color-9-ch);
   --neutral-accent-darker: var(--neutral-accent-9);
+}
 
+// ============================================================
+// ライトモード設定（data-color-scheme 未指定 または "light"）
+// ============================================================
+:root[data-theme="#{prefixes.$theme-name}"],
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   // ============================================================
   // Border
   // ============================================================
@@ -269,4 +278,47 @@
   --surface-color: var(--neutral-color-2);
   --surface-color-dark: var(--neutral-color-3);
   --surface-color-darker: var(--neutral-color-4);
+}
+
+// ============================================================
+// ダークモード設定
+// ============================================================
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  // ============================================================
+  // Neutral
+  // ============================================================
+  --neutral-lightness-0: 99%;
+  --neutral-lightness-1: 92%;
+  --neutral-lightness-2: 85%;
+  --neutral-lightness-3: 75%;
+  --neutral-lightness-4: 65%;
+  --neutral-lightness-5: 45%;
+  --neutral-lightness-6: 25%;
+  --neutral-lightness-7: 15%;
+  --neutral-lightness-8: 9%;
+  --neutral-lightness-9: 5%;
+  --neutral-lightness-10: 1%;
+
+  // ============================================================
+  // Border（ダーク）
+  // ============================================================
+  --border-color: var(--neutral-color-5);
+  --border-color-light: var(--neutral-color-7);
+  --border-color-dark: var(--neutral-color-4);
+
+  // ============================================================
+  // Text（ダーク）: 暗背景上で読めるよう明るい色に反転
+  // ============================================================
+  --text-color: var(--neutral-gray-1);
+  --text-color-light: var(--neutral-gray-3);
+  --text-color-dark: var(--neutral-gray-0);
+
+  // ============================================================
+  // Surface（ダーク）: 暗背景ベース
+  // ============================================================
+  --surface-color-lighter: var(--neutral-color-8);
+  --surface-color-light: var(--neutral-color-9);
+  --surface-color: var(--neutral-color-10);
+  --surface-color-dark: var(--neutral-color-10);
+  --surface-color-darker: var(--neutral-color-10);
 }

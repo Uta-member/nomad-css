@@ -522,66 +522,66 @@ h6,
 }
 
 :root {
-  --shadow--0-offset-x: 0;
-  --shadow--0-offset-y: 0;
-  --shadow--0-blur: 0;
-  --shadow--0-spread: 0;
-  --shadow--0-color: transparent;
-  --shadow-0: var(--shadow--0-offset-x)
-    var(--shadow--0-offset-y)
-    var(--shadow--0-blur)
-    var(--shadow--0-spread)
-    var(--shadow--0-color);
-  --shadow--1-offset-x: 0px;
-  --shadow--1-offset-y: 2px;
-  --shadow--1-blur: 3px;
-  --shadow--1-spread: 0px;
-  --shadow--1-color: rgba(0, 0, 0, 0.2);
-  --shadow-1: var(--shadow--1-offset-x)
-    var(--shadow--1-offset-y)
-    var(--shadow--1-blur)
-    var(--shadow--1-spread)
-    var(--shadow--1-color);
-  --shadow--2-offset-x: 0px;
-  --shadow--2-offset-y: 4px;
-  --shadow--2-blur: 6px;
-  --shadow--2-spread: 0px;
-  --shadow--2-color: rgba(0, 0, 0, 0.2);
-  --shadow-2: var(--shadow--2-offset-x)
-    var(--shadow--2-offset-y)
-    var(--shadow--2-blur)
-    var(--shadow--2-spread)
-    var(--shadow--2-color);
-  --shadow--3-offset-x: 0px;
-  --shadow--3-offset-y: 6px;
-  --shadow--3-blur: 10px;
-  --shadow--3-spread: 0px;
-  --shadow--3-color: rgba(0, 0, 0, 0.2);
-  --shadow-3: var(--shadow--3-offset-x)
-    var(--shadow--3-offset-y)
-    var(--shadow--3-blur)
-    var(--shadow--3-spread)
-    var(--shadow--3-color);
-  --shadow--4-offset-x: 0px;
-  --shadow--4-offset-y: 8px;
-  --shadow--4-blur: 10px;
-  --shadow--4-spread: 0px;
-  --shadow--4-color: rgba(0, 0, 0, 0.2);
-  --shadow-4: var(--shadow--4-offset-x)
-    var(--shadow--4-offset-y)
-    var(--shadow--4-blur)
-    var(--shadow--4-spread)
-    var(--shadow--4-color);
-  --shadow--5-offset-x: 0px;
-  --shadow--5-offset-y: 10px;
-  --shadow--5-blur: 10px;
-  --shadow--5-spread: 0px;
-  --shadow--5-color: rgba(0, 0, 0, 0.2);
-  --shadow-5: var(--shadow--5-offset-x)
-    var(--shadow--5-offset-y)
-    var(--shadow--5-blur)
-    var(--shadow--5-spread)
-    var(--shadow--5-color);
+  --shadow-0-offset-x: 0;
+  --shadow-0-offset-y: 0;
+  --shadow-0-blur: 0;
+  --shadow-0-spread: 0;
+  --shadow-0-color: transparent;
+  --shadow-0: var(--shadow-0-offset-x)
+    var(--shadow-0-offset-y)
+    var(--shadow-0-blur)
+    var(--shadow-0-spread)
+    var(--shadow-0-color);
+  --shadow-1-offset-x: 0px;
+  --shadow-1-offset-y: 2px;
+  --shadow-1-blur: 3px;
+  --shadow-1-spread: 0px;
+  --shadow-1-color: rgba(0, 0, 0, 0.2);
+  --shadow-1: var(--shadow-1-offset-x)
+    var(--shadow-1-offset-y)
+    var(--shadow-1-blur)
+    var(--shadow-1-spread)
+    var(--shadow-1-color);
+  --shadow-2-offset-x: 0px;
+  --shadow-2-offset-y: 4px;
+  --shadow-2-blur: 6px;
+  --shadow-2-spread: 0px;
+  --shadow-2-color: rgba(0, 0, 0, 0.2);
+  --shadow-2: var(--shadow-2-offset-x)
+    var(--shadow-2-offset-y)
+    var(--shadow-2-blur)
+    var(--shadow-2-spread)
+    var(--shadow-2-color);
+  --shadow-3-offset-x: 0px;
+  --shadow-3-offset-y: 6px;
+  --shadow-3-blur: 10px;
+  --shadow-3-spread: 0px;
+  --shadow-3-color: rgba(0, 0, 0, 0.2);
+  --shadow-3: var(--shadow-3-offset-x)
+    var(--shadow-3-offset-y)
+    var(--shadow-3-blur)
+    var(--shadow-3-spread)
+    var(--shadow-3-color);
+  --shadow-4-offset-x: 0px;
+  --shadow-4-offset-y: 8px;
+  --shadow-4-blur: 10px;
+  --shadow-4-spread: 0px;
+  --shadow-4-color: rgba(0, 0, 0, 0.2);
+  --shadow-4: var(--shadow-4-offset-x)
+    var(--shadow-4-offset-y)
+    var(--shadow-4-blur)
+    var(--shadow-4-spread)
+    var(--shadow-4-color);
+  --shadow-5-offset-x: 0px;
+  --shadow-5-offset-y: 10px;
+  --shadow-5-blur: 10px;
+  --shadow-5-spread: 0px;
+  --shadow-5-color: rgba(0, 0, 0, 0.2);
+  --shadow-5: var(--shadow-5-offset-x)
+    var(--shadow-5-offset-y)
+    var(--shadow-5-blur)
+    var(--shadow-5-spread)
+    var(--shadow-5-color);
 }
 
 .shadow-0 {
@@ -7365,11 +7365,11 @@ h6,
   --neutral-lightness-3: 85%;
   --neutral-lightness-4: 75%;
   --neutral-lightness-5: 55%;
-  --neutral-lightness-6: 45%;
-  --neutral-lightness-7: 35%;
-  --neutral-lightness-8: 25%;
-  --neutral-lightness-9: 15%;
-  --neutral-lightness-10: 5%;
+  --neutral-lightness-6: 35%;
+  --neutral-lightness-7: 25%;
+  --neutral-lightness-8: 15%;
+  --neutral-lightness-9: 8%;
+  --neutral-lightness-10: 4%;
   --neutral-color-0: hsl(
     var(--neutral-hue),
     var(--neutral-saturation),
@@ -10115,6 +10115,10 @@ pre {
   --neutral-darker: var(--neutral-color-9);
   --neutral-darker-ch: var(--neutral-color-9-ch);
   --neutral-accent-darker: var(--neutral-accent-9);
+}
+
+:root[data-theme=material3],
+:root[data-theme=material3][data-color-scheme=light] {
   --border-color: var(--neutral-gray-5);
   --border-color-light: var(--neutral-gray-2);
   --border-color-dark: var(--neutral-gray-6);
@@ -10128,11 +10132,45 @@ pre {
   --surface-color-darker: var(--neutral-color-4);
 }
 
+:root[data-theme=material3][data-color-scheme=dark] {
+  --neutral-lightness-0: 99%;
+  --neutral-lightness-1: 92%;
+  --neutral-lightness-2: 85%;
+  --neutral-lightness-3: 75%;
+  --neutral-lightness-4: 65%;
+  --neutral-lightness-5: 45%;
+  --neutral-lightness-6: 25%;
+  --neutral-lightness-7: 15%;
+  --neutral-lightness-8: 9%;
+  --neutral-lightness-9: 5%;
+  --neutral-lightness-10: 1%;
+  --border-color: var(--neutral-color-5);
+  --border-color-light: var(--neutral-color-7);
+  --border-color-dark: var(--neutral-color-4);
+  --text-color: var(--neutral-gray-1);
+  --text-color-light: var(--neutral-gray-3);
+  --text-color-dark: var(--neutral-gray-0);
+  --surface-color-lighter: var(--neutral-color-8);
+  --surface-color-light: var(--neutral-color-9);
+  --surface-color: var(--neutral-color-10);
+  --surface-color-dark: var(--neutral-color-10);
+  --surface-color-darker: var(--neutral-color-10);
+}
+
 :root[data-theme=material3] {
   --font-body-size: 16px;
   --font-family:
     "Roboto", "Roboto Flex", "Roboto Serif", "Roboto Mono", "Noto Sans",
     sans-serif;
+}
+
+:root[data-theme=material3][data-color-scheme=dark] {
+  --shadow-0-color: rgba(0, 0, 0, 0.8);
+  --shadow-1-color: rgba(0, 0, 0, 0.8);
+  --shadow-2-color: rgba(0, 0, 0, 0.8);
+  --shadow-3-color: rgba(0, 0, 0, 0.8);
+  --shadow-4-color: rgba(0, 0, 0, 0.8);
+  --shadow-5-color: rgba(0, 0, 0, 0.8);
 }
 
 :root[data-theme=material3] .accordion {
@@ -10142,6 +10180,10 @@ pre {
   --accordion-icon-size: 2.5rem;
   --accordion-icon-border-radius: 50%;
   --accordion-icon-hover-bg-color: rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme=material3][data-color-scheme=dark] .accordion {
+  --accordion-icon-hover-bg-color: rgba(255, 255, 255, 0.08);
 }
 
 :root[data-theme=material3] .alert {
@@ -10175,8 +10217,10 @@ pre {
 }
 :root[data-theme=material3] .button.filled {
   --button-hover-bg-color: var(--button-bg-color);
+  --button-hover-color: var(--button-color);
   --button-hover-opacity: 0.8;
   --button-active-bg-color: var(--button-bg-color);
+  --button-active-color: var(--button-color);
   --button-active-opacity: 0.7;
   --button-border-color: var(--button-bg-color);
   --button-hover-border-color: var(--button-hover-bg-color);
@@ -10266,9 +10310,18 @@ pre {
   --form-control-focus-ring-color: var(--palette-default);
   --form-control-focus-ring-opacity: 1;
   --form-control-focus-ring-offset-width: 0px;
+  --form-control-cursor: pointer;
+}
+
+:root[data-theme=material3] .form-control,
+:root[data-theme=material3][data-color-scheme=light] .form-control {
   --form-control-filled-bg-color: var(--neutral-gray-2);
   --form-control-filled-hover-bg-color: var(--neutral-gray-3);
-  --form-control-cursor: pointer;
+}
+
+:root[data-theme=material3][data-color-scheme=dark] .form-control {
+  --form-control-filled-bg-color: var(--neutral-gray-8);
+  --form-control-filled-hover-bg-color: var(--neutral-gray-7);
 }
 
 :root[data-theme=material3] .list,
@@ -10328,9 +10381,18 @@ pre {
   --select-focus-ring-color: var(--palette-default);
   --select-focus-ring-opacity: 1;
   --select-focus-ring-offset-width: 0px;
+  --select-cursor: pointer;
+}
+
+:root[data-theme=material3] .select,
+:root[data-theme=material3][data-color-scheme=light] .select {
   --select-filled-bg-color: var(--neutral-gray-2);
   --select-filled-hover-bg-color: var(--neutral-gray-3);
-  --select-cursor: pointer;
+}
+
+:root[data-theme=material3][data-color-scheme=dark] .select {
+  --select-filled-bg-color: var(--neutral-gray-8);
+  --select-filled-hover-bg-color: var(--neutral-gray-7);
 }
 
 :root[data-theme=material3] .spinner {

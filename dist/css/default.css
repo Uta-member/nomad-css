@@ -522,66 +522,66 @@ h6,
 }
 
 :root {
-  --shadow--0-offset-x: 0;
-  --shadow--0-offset-y: 0;
-  --shadow--0-blur: 0;
-  --shadow--0-spread: 0;
-  --shadow--0-color: transparent;
-  --shadow-0: var(--shadow--0-offset-x)
-    var(--shadow--0-offset-y)
-    var(--shadow--0-blur)
-    var(--shadow--0-spread)
-    var(--shadow--0-color);
-  --shadow--1-offset-x: 0px;
-  --shadow--1-offset-y: 2px;
-  --shadow--1-blur: 3px;
-  --shadow--1-spread: 0px;
-  --shadow--1-color: rgba(0, 0, 0, 0.2);
-  --shadow-1: var(--shadow--1-offset-x)
-    var(--shadow--1-offset-y)
-    var(--shadow--1-blur)
-    var(--shadow--1-spread)
-    var(--shadow--1-color);
-  --shadow--2-offset-x: 0px;
-  --shadow--2-offset-y: 4px;
-  --shadow--2-blur: 6px;
-  --shadow--2-spread: 0px;
-  --shadow--2-color: rgba(0, 0, 0, 0.2);
-  --shadow-2: var(--shadow--2-offset-x)
-    var(--shadow--2-offset-y)
-    var(--shadow--2-blur)
-    var(--shadow--2-spread)
-    var(--shadow--2-color);
-  --shadow--3-offset-x: 0px;
-  --shadow--3-offset-y: 6px;
-  --shadow--3-blur: 10px;
-  --shadow--3-spread: 0px;
-  --shadow--3-color: rgba(0, 0, 0, 0.2);
-  --shadow-3: var(--shadow--3-offset-x)
-    var(--shadow--3-offset-y)
-    var(--shadow--3-blur)
-    var(--shadow--3-spread)
-    var(--shadow--3-color);
-  --shadow--4-offset-x: 0px;
-  --shadow--4-offset-y: 8px;
-  --shadow--4-blur: 10px;
-  --shadow--4-spread: 0px;
-  --shadow--4-color: rgba(0, 0, 0, 0.2);
-  --shadow-4: var(--shadow--4-offset-x)
-    var(--shadow--4-offset-y)
-    var(--shadow--4-blur)
-    var(--shadow--4-spread)
-    var(--shadow--4-color);
-  --shadow--5-offset-x: 0px;
-  --shadow--5-offset-y: 10px;
-  --shadow--5-blur: 10px;
-  --shadow--5-spread: 0px;
-  --shadow--5-color: rgba(0, 0, 0, 0.2);
-  --shadow-5: var(--shadow--5-offset-x)
-    var(--shadow--5-offset-y)
-    var(--shadow--5-blur)
-    var(--shadow--5-spread)
-    var(--shadow--5-color);
+  --shadow-0-offset-x: 0;
+  --shadow-0-offset-y: 0;
+  --shadow-0-blur: 0;
+  --shadow-0-spread: 0;
+  --shadow-0-color: transparent;
+  --shadow-0: var(--shadow-0-offset-x)
+    var(--shadow-0-offset-y)
+    var(--shadow-0-blur)
+    var(--shadow-0-spread)
+    var(--shadow-0-color);
+  --shadow-1-offset-x: 0px;
+  --shadow-1-offset-y: 2px;
+  --shadow-1-blur: 3px;
+  --shadow-1-spread: 0px;
+  --shadow-1-color: rgba(0, 0, 0, 0.2);
+  --shadow-1: var(--shadow-1-offset-x)
+    var(--shadow-1-offset-y)
+    var(--shadow-1-blur)
+    var(--shadow-1-spread)
+    var(--shadow-1-color);
+  --shadow-2-offset-x: 0px;
+  --shadow-2-offset-y: 4px;
+  --shadow-2-blur: 6px;
+  --shadow-2-spread: 0px;
+  --shadow-2-color: rgba(0, 0, 0, 0.2);
+  --shadow-2: var(--shadow-2-offset-x)
+    var(--shadow-2-offset-y)
+    var(--shadow-2-blur)
+    var(--shadow-2-spread)
+    var(--shadow-2-color);
+  --shadow-3-offset-x: 0px;
+  --shadow-3-offset-y: 6px;
+  --shadow-3-blur: 10px;
+  --shadow-3-spread: 0px;
+  --shadow-3-color: rgba(0, 0, 0, 0.2);
+  --shadow-3: var(--shadow-3-offset-x)
+    var(--shadow-3-offset-y)
+    var(--shadow-3-blur)
+    var(--shadow-3-spread)
+    var(--shadow-3-color);
+  --shadow-4-offset-x: 0px;
+  --shadow-4-offset-y: 8px;
+  --shadow-4-blur: 10px;
+  --shadow-4-spread: 0px;
+  --shadow-4-color: rgba(0, 0, 0, 0.2);
+  --shadow-4: var(--shadow-4-offset-x)
+    var(--shadow-4-offset-y)
+    var(--shadow-4-blur)
+    var(--shadow-4-spread)
+    var(--shadow-4-color);
+  --shadow-5-offset-x: 0px;
+  --shadow-5-offset-y: 10px;
+  --shadow-5-blur: 10px;
+  --shadow-5-spread: 0px;
+  --shadow-5-color: rgba(0, 0, 0, 0.2);
+  --shadow-5: var(--shadow-5-offset-x)
+    var(--shadow-5-offset-y)
+    var(--shadow-5-blur)
+    var(--shadow-5-spread)
+    var(--shadow-5-color);
 }
 
 .shadow-0 {
@@ -7365,11 +7365,11 @@ h6,
   --neutral-lightness-3: 85%;
   --neutral-lightness-4: 75%;
   --neutral-lightness-5: 55%;
-  --neutral-lightness-6: 45%;
-  --neutral-lightness-7: 35%;
-  --neutral-lightness-8: 25%;
-  --neutral-lightness-9: 15%;
-  --neutral-lightness-10: 5%;
+  --neutral-lightness-6: 35%;
+  --neutral-lightness-7: 25%;
+  --neutral-lightness-8: 15%;
+  --neutral-lightness-9: 8%;
+  --neutral-lightness-10: 4%;
   --neutral-color-0: hsl(
     var(--neutral-hue),
     var(--neutral-saturation),

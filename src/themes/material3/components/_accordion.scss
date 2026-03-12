@@ -14,3 +14,9 @@
     --accordion-icon-hover-bg-color: rgba(0, 0, 0, 0.08);
   }
 }
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .accordion {
+    --accordion-icon-hover-bg-color: rgba(255, 255, 255, 0.08);
+  }
+}
