@@ -83,10 +83,20 @@
   --primary-hue: 254;
   --primary-saturation: 40%;
   --primary-lighter: var(--primary-color-2);
+  --primary-lighter-ch: var(--primary-color-2-ch);
+  --primary-accent-lighter: var(--primary-accent-2);
   --primary-light: var(--primary-color-3);
+  --primary-light-ch: var(--primary-color-3-ch);
+  --primary-accent-light: var(--primary-accent-3);
   --primary-default: var(--primary-color-6);
+  --primary-default-ch: var(--primary-color-6-ch);
+  --primary-accent-default: var(--primary-accent-6);
   --primary-dark: var(--primary-color-8);
+  --primary-dark-ch: var(--primary-color-8-ch);
+  --primary-accent-dark: var(--primary-accent-8);
   --primary-darker: var(--primary-color-9);
+  --primary-darker-ch: var(--primary-color-9-ch);
+  --primary-accent-darker: var(--primary-accent-9);
 
   // ============================================================
   // Secondary
@@ -94,10 +104,20 @@
   --secondary-hue: 250;
   --secondary-saturation: 13%;
   --secondary-lighter: var(--secondary-color-2);
+  --secondary-lighter-ch: var(--secondary-color-2-ch);
+  --secondary-accent-lighter: var(--secondary-accent-2);
   --secondary-light: var(--secondary-color-3);
+  --secondary-light-ch: var(--secondary-color-3-ch);
+  --secondary-accent-light: var(--secondary-accent-3);
   --secondary-default: var(--secondary-color-6);
+  --secondary-default-ch: var(--secondary-color-6-ch);
+  --secondary-accent-default: var(--secondary-accent-6);
   --secondary-dark: var(--secondary-color-8);
+  --secondary-dark-ch: var(--secondary-color-8-ch);
+  --secondary-accent-dark: var(--secondary-accent-8);
   --secondary-darker: var(--secondary-color-9);
+  --secondary-darker-ch: var(--secondary-color-9-ch);
+  --secondary-accent-darker: var(--secondary-accent-9);
 
   // ============================================================
   // Tertiary
@@ -107,10 +127,20 @@
   --tertiary-accent-5: var(--tertiary-accent-light-color);
   --tertiary-accent-6: var(--tertiary-accent-light-color);
   --tertiary-lighter: var(--tertiary-color-2);
+  --tertiary-lighter-ch: var(--tertiary-color-2-ch);
+  --tertiary-accent-lighter: var(--tertiary-accent-2);
   --tertiary-light: var(--tertiary-color-3);
+  --tertiary-light-ch: var(--tertiary-color-3-ch);
+  --tertiary-accent-light: var(--tertiary-accent-3);
   --tertiary-default: var(--tertiary-color-6);
+  --tertiary-default-ch: var(--tertiary-color-6-ch);
+  --tertiary-accent-default: var(--tertiary-accent-6);
   --tertiary-dark: var(--tertiary-color-8);
+  --tertiary-dark-ch: var(--tertiary-color-8-ch);
+  --tertiary-accent-dark: var(--tertiary-accent-8);
   --tertiary-darker: var(--tertiary-color-9);
+  --tertiary-darker-ch: var(--tertiary-color-9-ch);
+  --tertiary-accent-darker: var(--tertiary-accent-9);
 
   // ============================================================
   // Danger / Error
@@ -118,10 +148,20 @@
   --danger-hue: 8;
   --danger-saturation: 90%;
   --danger-lighter: var(--danger-color-2);
+  --danger-lighter-ch: var(--danger-color-2-ch);
+  --danger-accent-lighter: var(--danger-accent-2);
   --danger-light: var(--danger-color-3);
+  --danger-light-ch: var(--danger-color-3-ch);
+  --danger-accent-light: var(--danger-accent-3);
   --danger-default: var(--danger-color-6);
+  --danger-default-ch: var(--danger-color-6-ch);
+  --danger-accent-default: var(--danger-accent-6);
   --danger-dark: var(--danger-color-8);
+  --danger-dark-ch: var(--danger-color-8-ch);
+  --danger-accent-dark: var(--danger-accent-8);
   --danger-darker: var(--danger-color-9);
+  --danger-darker-ch: var(--danger-color-9-ch);
+  --danger-accent-darker: var(--danger-accent-9);
 
   // ============================================================
   // Success
@@ -129,10 +169,20 @@
   --success-hue: 133;
   --success-saturation: 55%;
   --success-lighter: var(--success-color-2);
+  --success-lighter-ch: var(--success-color-2-ch);
+  --success-accent-lighter: var(--success-accent-2);
   --success-light: var(--success-color-3);
+  --success-light-ch: var(--success-color-3-ch);
+  --success-accent-light: var(--success-accent-3);
   --success-default: var(--success-color-6);
+  --success-default-ch: var(--success-color-6-ch);
+  --success-accent-default: var(--success-accent-6);
   --success-dark: var(--success-color-8);
+  --success-dark-ch: var(--success-color-8-ch);
+  --success-accent-dark: var(--success-accent-8);
   --success-darker: var(--success-color-9);
+  --success-darker-ch: var(--success-color-9-ch);
+  --success-accent-darker: var(--success-accent-9);
 
   // ============================================================
   // Warning
@@ -140,10 +190,20 @@
   --warning-hue: 46;
   --warning-saturation: 100%;
   --warning-lighter: var(--warning-color-2);
+  --warning-lighter-ch: var(--warning-color-2-ch);
+  --warning-accent-lighter: var(--warning-accent-2);
   --warning-light: var(--warning-color-3);
+  --warning-light-ch: var(--warning-color-3-ch);
+  --warning-accent-light: var(--warning-accent-3);
   --warning-default: var(--warning-color-6);
+  --warning-default-ch: var(--warning-color-6-ch);
+  --warning-accent-default: var(--warning-accent-6);
   --warning-dark: var(--warning-color-8);
+  --warning-dark-ch: var(--warning-color-8-ch);
+  --warning-accent-dark: var(--warning-accent-8);
   --warning-darker: var(--warning-color-9);
+  --warning-darker-ch: var(--warning-color-9-ch);
+  --warning-accent-darker: var(--warning-accent-9);
 
   // ============================================================
   // Info
@@ -151,10 +211,20 @@
   --info-hue: 195;
   --info-saturation: 75%;
   --info-lighter: var(--info-color-2);
+  --info-lighter-ch: var(--info-color-2-ch);
+  --info-accent-lighter: var(--info-accent-2);
   --info-light: var(--info-color-3);
+  --info-light-ch: var(--info-color-3-ch);
+  --info-accent-light: var(--info-accent-3);
   --info-default: var(--info-color-7);
+  --info-default-ch: var(--info-color-7-ch);
+  --info-accent-default: var(--info-accent-7);
   --info-dark: var(--info-color-8);
+  --info-dark-ch: var(--info-color-8-ch);
+  --info-accent-dark: var(--info-accent-8);
   --info-darker: var(--info-color-9);
+  --info-darker-ch: var(--info-color-9-ch);
+  --info-accent-darker: var(--info-accent-9);
 
   // ============================================================
   // Neutral
@@ -162,10 +232,20 @@
   --neutral-hue: 280;
   --neutral-saturation: 20%;
   --neutral-lighter: var(--neutral-color-2);
+  --neutral-lighter-ch: var(--neutral-color-2-ch);
+  --neutral-accent-lighter: var(--neutral-accent-2);
   --neutral-light: var(--neutral-color-3);
+  --neutral-light-ch: var(--neutral-color-3-ch);
+  --neutral-accent-light: var(--neutral-accent-3);
   --neutral-default: var(--neutral-color-7);
+  --neutral-default-ch: var(--neutral-color-7-ch);
+  --neutral-accent-default: var(--neutral-accent-7);
   --neutral-dark: var(--neutral-color-8);
+  --neutral-dark-ch: var(--neutral-color-8-ch);
+  --neutral-accent-dark: var(--neutral-accent-8);
   --neutral-darker: var(--neutral-color-9);
+  --neutral-darker-ch: var(--neutral-color-9-ch);
+  --neutral-accent-darker: var(--neutral-accent-9);
 
   // ============================================================
   // Border
