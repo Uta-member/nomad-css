@@ -28,56 +28,53 @@ $default-palette: semantics.$semantic-primary !default;
 // Process
 // ============================================
 // --------------------------------------------
-// HUE CSS変数の出力
-// --------------------------------------------
-:root {
-  @each $key, $value in hue-colors.$hues {
-    #{map.get($value, variant-name)}: #{map.get($value, hue)};
-  }
-}
-
-// --------------------------------------------
-// HUEカラーごとのパレットクラス生成
+// HUEカラーごとのパレット生成
+// names を持つ場合は :root に名前付きパレットを展開し、
+// クラス内は :root 変数への参照のみ生成する
 // --------------------------------------------
 @each $name, $value in hue-colors.$hues {
-  .#{$name} {
-    @include palette.generate-palette($value);
+  @if map.has-key($value, names) {
+    :root {
+      @include palette.generate-palette($value);
+    }
+    .#{$name} {
+      @include palette.generate-palette-reference($value);
+    }
+  } @else {
+    .#{$name} {
+      @include palette.generate-palette($value);
+    }
   }
 }
 
 // --------------------------------------------
 // セマンティックカラーごとのパレットクラス生成
+// names を持つ場合は :root に名前付きパレットを展開し、
+// クラス内は :root 変数への参照のみ生成する
 // --------------------------------------------
 @each $name, $value in semantics.$semantic-colors {
-  .#{$name} {
-    @include palette.generate-palette($value);
+  @if map.has-key($value, names) {
+    :root {
+      @include palette.generate-palette($value);
+    }
+    .#{$name} {
+      @include palette.generate-palette-reference($value);
+    }
+  } @else {
+    .#{$name} {
+      @include palette.generate-palette($value);
+    }
   }
 }
 
 // --------------------------------------------
-// デフォルトパレット（primary）の :root 生成
+// デフォルトパレットの :root 生成
+// names を持つ場合は名前付きパレットへの参照を生成する
 // --------------------------------------------
 :root {
-  @include palette.generate-palette($default-palette);
-}
-
-// --------------------------------------------
-// Neutralパレットの :root 生成
-// --------------------------------------------
-:root {
-  @include palette.generate-palette(semantics.$semantic-neutral-with-name);
-}
-
-// --------------------------------------------
-// Dangerパレットの :root 生成
-// --------------------------------------------
-:root {
-  @include palette.generate-palette(semantics.$semantic-danger-with-name);
-}
-
-// --------------------------------------------
-// Successパレットの :root 生成
-// --------------------------------------------
-:root {
-  @include palette.generate-palette(semantics.$semantic-success-with-name);
+  @if map.has-key($default-palette, names) {
+    @include palette.generate-palette-reference($default-palette);
+  } @else {
+    @include palette.generate-palette($default-palette);
+  }
 }

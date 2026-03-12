@@ -33,6 +33,15 @@ $semantic-primary: (
     dark: 8,
     darker: 9,
   ),
+  names: (
+    palette-prefix: primary-,
+    palette-color-prefix: primary-color-,
+    palette-accent-prefix: primary-accent-,
+    palette-gray-prefix: primary-gray-,
+    palette-lightness-prefix: primary-lightness-,
+    palette-hue-var: --primary-hue,
+    palette-saturation-var: --primary-saturation,
+  ),
 ) !default;
 $semantic-secondary: (
   hue: var(#{hue-colors.$hue-pink-var}),
@@ -44,6 +53,15 @@ $semantic-secondary: (
     default: 5,
     dark: 7,
     darker: 9,
+  ),
+  names: (
+    palette-prefix: secondary-,
+    palette-color-prefix: secondary-color-,
+    palette-accent-prefix: secondary-accent-,
+    palette-gray-prefix: secondary-gray-,
+    palette-lightness-prefix: secondary-lightness-,
+    palette-hue-var: --secondary-hue,
+    palette-saturation-var: --secondary-saturation,
   ),
 ) !default;
 $semantic-tertiary: (
@@ -57,6 +75,15 @@ $semantic-tertiary: (
     dark: 9,
     darker: 10,
   ),
+  names: (
+    palette-prefix: tertiary-,
+    palette-color-prefix: tertiary-color-,
+    palette-accent-prefix: tertiary-accent-,
+    palette-gray-prefix: tertiary-gray-,
+    palette-lightness-prefix: tertiary-lightness-,
+    palette-hue-var: --tertiary-hue,
+    palette-saturation-var: --tertiary-saturation,
+  ),
 ) !default;
 $semantic-success: (
   hue: var(#{hue-colors.$hue-green-var}),
@@ -68,6 +95,15 @@ $semantic-success: (
     default: 7,
     dark: 9,
     darker: 10,
+  ),
+  names: (
+    palette-prefix: success-,
+    palette-color-prefix: success-color-,
+    palette-accent-prefix: success-accent-,
+    palette-gray-prefix: success-gray-,
+    palette-lightness-prefix: success-lightness-,
+    palette-hue-var: --success-hue,
+    palette-saturation-var: --success-saturation,
   ),
 ) !default;
 $semantic-warning: (
@@ -81,6 +117,15 @@ $semantic-warning: (
     dark: 8,
     darker: 9,
   ),
+  names: (
+    palette-prefix: warning-,
+    palette-color-prefix: warning-color-,
+    palette-accent-prefix: warning-accent-,
+    palette-gray-prefix: warning-gray-,
+    palette-lightness-prefix: warning-lightness-,
+    palette-hue-var: --warning-hue,
+    palette-saturation-var: --warning-saturation,
+  ),
 ) !default;
 $semantic-danger: (
   hue: var(#{hue-colors.$hue-red-var}),
@@ -92,6 +137,15 @@ $semantic-danger: (
     default: 6,
     dark: 8,
     darker: 9,
+  ),
+  names: (
+    palette-prefix: danger-,
+    palette-color-prefix: danger-color-,
+    palette-accent-prefix: danger-accent-,
+    palette-gray-prefix: danger-gray-,
+    palette-lightness-prefix: danger-lightness-,
+    palette-hue-var: --danger-hue,
+    palette-saturation-var: --danger-saturation,
   ),
 ) !default;
 $semantic-info: (
@@ -105,6 +159,15 @@ $semantic-info: (
     dark: 8,
     darker: 9,
   ),
+  names: (
+    palette-prefix: info-,
+    palette-color-prefix: info-color-,
+    palette-accent-prefix: info-accent-,
+    palette-gray-prefix: info-gray-,
+    palette-lightness-prefix: info-lightness-,
+    palette-hue-var: --info-hue,
+    palette-saturation-var: --info-saturation,
+  ),
 ) !default;
 $semantic-neutral: (
   hue: var(#{hue-colors.$hue-blue-var}),
@@ -116,6 +179,15 @@ $semantic-neutral: (
     default: 5,
     dark: 7,
     darker: 9,
+  ),
+  names: (
+    palette-prefix: neutral-,
+    palette-color-prefix: neutral-color-,
+    palette-accent-prefix: neutral-accent-,
+    palette-gray-prefix: neutral-gray-,
+    palette-lightness-prefix: neutral-lightness-,
+    palette-hue-var: --neutral-hue,
+    palette-saturation-var: --neutral-saturation,
   ),
 ) !default;
 
@@ -145,69 +217,3 @@ $neutral-light-accent-var: --neutral-accent-light;
 $neutral-default-accent-var: --neutral-accent-default;
 $neutral-dark-accent-var: --neutral-accent-dark;
 $neutral-darker-accent-var: --neutral-accent-darker;
-
-$semantic-neutral-with-name: (
-  hue: var(#{hue-colors.$hue-blue-var}),
-  saturation: 5%,
-  accent-threshold: 50%,
-  levels: (
-    lighter: 1,
-    light: 3,
-    default: 5,
-    dark: 7,
-    darker: 9,
-  ),
-  names: (
-    palette-prefix: neutral-,
-    palette-color-prefix: neutral-color-,
-    palette-accent-prefix: neutral-accent-,
-    palette-gray-prefix: neutral-gray-,
-    palette-lightness-prefix: neutral-lightness-,
-    palette-hue-var: --neutral-hue,
-    palette-saturation-var: --neutral-saturation,
-  ),
-) !default;
-
-$semantic-danger-with-name: (
-  hue: var(#{hue-colors.$hue-red-var}),
-  saturation: 80%,
-  accent-threshold: 50%,
-  levels: (
-    lighter: 2,
-    light: 4,
-    default: 6,
-    dark: 8,
-    darker: 9,
-  ),
-  names: (
-    palette-prefix: danger-,
-    palette-color-prefix: danger-color-,
-    palette-accent-prefix: danger-accent-,
-    palette-gray-prefix: danger-gray-,
-    palette-lightness-prefix: danger-lightness-,
-    palette-hue-var: --danger-hue,
-    palette-saturation-var: --danger-saturation,
-  ),
-) !default;
-
-$semantic-success-with-name: (
-  hue: var(#{hue-colors.$hue-green-var}),
-  saturation: 60%,
-  accent-threshold: 45%,
-  levels: (
-    lighter: 2,
-    light: 4,
-    default: 7,
-    dark: 9,
-    darker: 10,
-  ),
-  names: (
-    palette-prefix: success-,
-    palette-color-prefix: success-color-,
-    palette-accent-prefix: success-accent-,
-    palette-gray-prefix: success-gray-,
-    palette-lightness-prefix: success-lightness-,
-    palette-hue-var: --success-hue,
-    palette-saturation-var: --success-saturation,
-  ),
-) !default;

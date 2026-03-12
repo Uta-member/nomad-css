@@ -200,3 +200,58 @@ $palette-gray-saturation-default: 5% !default;
       var(--#{$lightness-prefix}#{$step-key});
   }
 }
+
+// ============================================
+// :root に展開済みの名前付きパレットを参照するクラス用 Mixin
+// ============================================
+// 名前付きパレット（names キーあり）が :root に展開されている前提で、
+// 標準の --palette-* 変数がその名前付き変数を参照するよう生成する。
+// ============================================
+@mixin generate-palette-reference($named-palette) {
+  @if not map.has-key($named-palette, names) {
+    @error "generate-palette-reference: namesキーが必要です。generate-paletteを使用してください。";
+  }
+
+  $names: map.get($named-palette, names);
+  $named-prefix: map.get($names, palette-prefix) or $palette-prefix;
+  $named-color-prefix: map.get($names, palette-color-prefix) or
+    $palette-color-prefix;
+  $named-accent-prefix: map.get($names, palette-accent-prefix) or
+    $palette-accent-prefix;
+  $named-gray-prefix: map.get($names, palette-gray-prefix) or
+    $palette-gray-prefix;
+  $named-lightness-prefix: map.get($names, palette-lightness-prefix) or
+    $palette-lightness-prefix;
+  $named-hue-var: map.get($names, palette-hue-var) or $palette-hue-var;
+  $named-saturation-var: map.get($names, palette-saturation-var) or
+    $palette-saturation-var;
+
+  $lightnesses: map.get($named-palette, lightnesses) or
+    $palette-lightnesses-default;
+  $levels: map.get($named-palette, levels) or $palette-levels-default;
+
+  #{$palette-hue-var}: var(#{$named-hue-var});
+  #{$palette-saturation-var}: var(#{$named-saturation-var});
+
+  @each $key, $value in $lightnesses {
+    --#{$palette-lightness-prefix}#{$key}: var(
+      --#{$named-lightness-prefix}#{$key}
+    );
+    --#{$palette-color-prefix}#{$key}: var(--#{$named-color-prefix}#{$key});
+    --#{$palette-color-prefix}#{$key}-ch: var(
+      --#{$named-color-prefix}#{$key}-ch
+    );
+    --#{$palette-gray-prefix}#{$key}: var(--#{$named-gray-prefix}#{$key});
+    --#{$palette-accent-prefix}#{$key}: var(--#{$named-accent-prefix}#{$key});
+  }
+
+  @each $level-name, $step-key in $levels {
+    --#{$palette-prefix}#{$level-name}: var(--#{$named-prefix}#{$level-name});
+    --#{$palette-accent-prefix}#{$level-name}: var(
+      --#{$named-accent-prefix}#{$level-name}
+    );
+    --#{$palette-prefix}#{$level-name}-ch: var(
+      --#{$named-prefix}#{$level-name}-ch
+    );
+  }
+}

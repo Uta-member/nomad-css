@@ -4,18 +4,18 @@
 // ============================================
 // Prefixes
 // ============================================
-$hue-red-var: --#{prefixes.$prefix}hue-red;
-$hue-orange-var: --#{prefixes.$prefix}hue-orange;
-$hue-yellow-var: --#{prefixes.$prefix}hue-yellow;
-$hue-lime-var: --#{prefixes.$prefix}hue-lime;
-$hue-green-var: --#{prefixes.$prefix}hue-green;
-$hue-teal-var: --#{prefixes.$prefix}hue-teal;
-$hue-cyan-var: --#{prefixes.$prefix}hue-cyan;
-$hue-blue-var: --#{prefixes.$prefix}hue-blue;
-$hue-indigo-var: --#{prefixes.$prefix}hue-indigo;
-$hue-violet-var: --#{prefixes.$prefix}hue-violet;
-$hue-purple-var: --#{prefixes.$prefix}hue-purple;
-$hue-pink-var: --#{prefixes.$prefix}hue-pink;
+$hue-red-var: --#{prefixes.$prefix}red-hue;
+$hue-orange-var: --#{prefixes.$prefix}orange-hue;
+$hue-yellow-var: --#{prefixes.$prefix}yellow-hue;
+$hue-lime-var: --#{prefixes.$prefix}lime-hue;
+$hue-green-var: --#{prefixes.$prefix}green-hue;
+$hue-teal-var: --#{prefixes.$prefix}teal-hue;
+$hue-cyan-var: --#{prefixes.$prefix}cyan-hue;
+$hue-blue-var: --#{prefixes.$prefix}blue-hue;
+$hue-indigo-var: --#{prefixes.$prefix}indigo-hue;
+$hue-violet-var: --#{prefixes.$prefix}violet-hue;
+$hue-purple-var: --#{prefixes.$prefix}purple-hue;
+$hue-pink-var: --#{prefixes.$prefix}pink-hue;
 
 // ============================================
 // Process
@@ -30,72 +30,168 @@ $hues: (
     hue: 0,
     saturation: 100%,
     accent-threshold: 50%,
-    variant-name: #{$hue-red-var},
+    names: (
+      palette-prefix: red-,
+      palette-color-prefix: red-color-,
+      palette-accent-prefix: red-accent-,
+      palette-gray-prefix: red-gray-,
+      palette-lightness-prefix: red-lightness-,
+      palette-hue-var: #{$hue-red-var},
+      palette-saturation-var: --red-saturation,
+    ),
   ),
   "orange": (
     hue: 30,
     saturation: 100%,
     accent-threshold: 40%,
-    variant-name: #{$hue-orange-var},
+    names: (
+      palette-prefix: orange-,
+      palette-color-prefix: orange-color-,
+      palette-accent-prefix: orange-accent-,
+      palette-gray-prefix: orange-gray-,
+      palette-lightness-prefix: orange-lightness-,
+      palette-hue-var: #{$hue-orange-var},
+      palette-saturation-var: --orange-saturation,
+    ),
   ),
   "yellow": (
     hue: 50,
     saturation: 100%,
     accent-threshold: 30%,
-    variant-name: #{$hue-yellow-var},
+    names: (
+      palette-prefix: yellow-,
+      palette-color-prefix: yellow-color-,
+      palette-accent-prefix: yellow-accent-,
+      palette-gray-prefix: yellow-gray-,
+      palette-lightness-prefix: yellow-lightness-,
+      palette-hue-var: #{$hue-yellow-var},
+      palette-saturation-var: --yellow-saturation,
+    ),
   ),
   "lime": (
     hue: 90,
     saturation: 100%,
     accent-threshold: 30%,
-    variant-name: #{$hue-lime-var},
+    names: (
+      palette-prefix: lime-,
+      palette-color-prefix: lime-color-,
+      palette-accent-prefix: lime-accent-,
+      palette-gray-prefix: lime-gray-,
+      palette-lightness-prefix: lime-lightness-,
+      palette-hue-var: #{$hue-lime-var},
+      palette-saturation-var: --lime-saturation,
+    ),
   ),
   "green": (
     hue: 125,
     saturation: 100%,
     accent-threshold: 30%,
-    variant-name: #{$hue-green-var},
+    names: (
+      palette-prefix: green-,
+      palette-color-prefix: green-color-,
+      palette-accent-prefix: green-accent-,
+      palette-gray-prefix: green-gray-,
+      palette-lightness-prefix: green-lightness-,
+      palette-hue-var: #{$hue-green-var},
+      palette-saturation-var: --green-saturation,
+    ),
   ),
   "teal": (
     hue: 170,
     saturation: 100%,
     accent-threshold: 40%,
-    variant-name: #{$hue-teal-var},
+    names: (
+      palette-prefix: teal-,
+      palette-color-prefix: teal-color-,
+      palette-accent-prefix: teal-accent-,
+      palette-gray-prefix: teal-gray-,
+      palette-lightness-prefix: teal-lightness-,
+      palette-hue-var: #{$hue-teal-var},
+      palette-saturation-var: --teal-saturation,
+    ),
   ),
   "cyan": (
     hue: 190,
     saturation: 100%,
     accent-threshold: 40%,
-    variant-name: #{$hue-cyan-var},
+    names: (
+      palette-prefix: cyan-,
+      palette-color-prefix: cyan-color-,
+      palette-accent-prefix: cyan-accent-,
+      palette-gray-prefix: cyan-gray-,
+      palette-lightness-prefix: cyan-lightness-,
+      palette-hue-var: #{$hue-cyan-var},
+      palette-saturation-var: --cyan-saturation,
+    ),
   ),
   "blue": (
     hue: 220,
     saturation: 100%,
     accent-threshold: 50%,
-    variant-name: #{$hue-blue-var},
+    names: (
+      palette-prefix: blue-,
+      palette-color-prefix: blue-color-,
+      palette-accent-prefix: blue-accent-,
+      palette-gray-prefix: blue-gray-,
+      palette-lightness-prefix: blue-lightness-,
+      palette-hue-var: #{$hue-blue-var},
+      palette-saturation-var: --blue-saturation,
+    ),
   ),
   "indigo": (
     hue: 240,
     saturation: 100%,
     accent-threshold: 70%,
-    variant-name: #{$hue-indigo-var},
+    names: (
+      palette-prefix: indigo-,
+      palette-color-prefix: indigo-color-,
+      palette-accent-prefix: indigo-accent-,
+      palette-gray-prefix: indigo-gray-,
+      palette-lightness-prefix: indigo-lightness-,
+      palette-hue-var: #{$hue-indigo-var},
+      palette-saturation-var: --indigo-saturation,
+    ),
   ),
   "violet": (
     hue: 270,
     saturation: 100%,
     accent-threshold: 70%,
-    variant-name: #{$hue-violet-var},
+    names: (
+      palette-prefix: violet-,
+      palette-color-prefix: violet-color-,
+      palette-accent-prefix: violet-accent-,
+      palette-gray-prefix: violet-gray-,
+      palette-lightness-prefix: violet-lightness-,
+      palette-hue-var: #{$hue-violet-var},
+      palette-saturation-var: --violet-saturation,
+    ),
   ),
   "purple": (
     hue: 290,
     saturation: 100%,
     accent-threshold: 50%,
-    variant-name: #{$hue-purple-var},
+    names: (
+      palette-prefix: purple-,
+      palette-color-prefix: purple-color-,
+      palette-accent-prefix: purple-accent-,
+      palette-gray-prefix: purple-gray-,
+      palette-lightness-prefix: purple-lightness-,
+      palette-hue-var: #{$hue-purple-var},
+      palette-saturation-var: --purple-saturation,
+    ),
   ),
   "pink": (
     hue: 330,
     saturation: 100%,
     accent-threshold: 55%,
-    variant-name: #{$hue-pink-var},
+    names: (
+      palette-prefix: pink-,
+      palette-color-prefix: pink-color-,
+      palette-accent-prefix: pink-accent-,
+      palette-gray-prefix: pink-gray-,
+      palette-lightness-prefix: pink-lightness-,
+      palette-hue-var: #{$hue-pink-var},
+      palette-saturation-var: --pink-saturation,
+    ),
   ),
 );
