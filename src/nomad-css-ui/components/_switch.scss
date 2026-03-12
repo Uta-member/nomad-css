@@ -44,6 +44,13 @@ $switch-track-border-width-var: --#{$switch-prefix}track-border-width !default;
 $switch-track-disabled-bg-color-var: --#{$switch-prefix}track-disabled-bg-color !default;
 
 // --------------------------------------------
+// Focus ring
+// --------------------------------------------
+$switch-track-focus-ring-color-var: --#{$switch-prefix}track-focus-ring-color !default;
+$switch-track-focus-ring-offset-var: --#{$switch-prefix}track-focus-ring-offset !default;
+$switch-track-focus-ring-width-var: --#{$switch-prefix}track-focus-ring-width !default;
+
+// --------------------------------------------
 // Thumb sizes
 // --------------------------------------------
 $switch-thumb-size-var: --#{$switch-prefix}thumb-size !default;
@@ -58,6 +65,7 @@ $switch-thumb-bg-color-var: --#{$switch-prefix}thumb-bg-color !default;
 $switch-thumb-checked-bg-color-var: --#{$switch-prefix}thumb-checked-bg-color !default;
 $switch-thumb-disabled-bg-color-var: --#{$switch-prefix}thumb-disabled-bg-color !default;
 $switch-track-checked-disabled-bg-color-var: --#{$switch-prefix}track-checked-disabled-bg-color !default;
+$switch-thumb-checked-disabled-bg-color-var: --#{$switch-prefix}thumb-checked-disabled-bg-color !default;
 
 // --------------------------------------------
 // Misc
@@ -98,7 +106,16 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   );
   #{$switch-track-border-radius-var}: 10rem;
   #{$switch-track-border-width-var}: 1px;
-  #{$switch-track-disabled-bg-color-var}: var(#{color-defines.$border-color-light-var});
+  #{$switch-track-disabled-bg-color-var}: var(
+    #{color-defines.$border-color-light-var}
+  );
+
+  // --------------------------------------------
+  // Focus ring
+  // --------------------------------------------
+  #{$switch-track-focus-ring-color-var}: black;
+  #{$switch-track-focus-ring-offset-var}: 2px;
+  #{$switch-track-focus-ring-width-var}: 2px;
 
   // --------------------------------------------
   // Thumb sizes
@@ -115,8 +132,15 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   #{$switch-thumb-checked-bg-color-var}: var(
     #{palette.$palette-default-accent-var}
   );
-  #{$switch-thumb-disabled-bg-color-var}: var(#{color-defines.$border-color-var});
-  #{$switch-track-checked-disabled-bg-color-var}: var(#{palette.$palette-lighter-var});
+  #{$switch-thumb-disabled-bg-color-var}: var(
+    #{color-defines.$border-color-var}
+  );
+  #{$switch-track-checked-disabled-bg-color-var}: var(
+    #{palette.$palette-lighter-var}
+  );
+  #{$switch-thumb-checked-disabled-bg-color-var}: var(
+    #{color-defines.$border-color-light-var}
+  );
 
   // --------------------------------------------
   // Misc
@@ -209,11 +233,24 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   .#{$switch-input-class-name}:checked:disabled ~ .#{$switch-track-class-name} {
     background-color: var(#{$switch-track-checked-disabled-bg-color-var});
     border-color: var(#{$switch-track-checked-disabled-bg-color-var});
+
+    .#{$switch-thumb-class-name} {
+      background-color: var(#{$switch-thumb-checked-disabled-bg-color-var});
+    }
   }
-  
+
   &.disabled {
     cursor: var(#{$switch-disabled-cursor-var});
     opacity: var(#{$switch-disabled-opacity-var});
+  }
+
+  // Focus visible state
+  .#{$switch-input-class-name}:focus-visible:not(:disabled)
+    ~ .#{$switch-track-class-name} {
+    outline-width: var(#{$switch-track-focus-ring-width-var});
+    outline-color: var(#{$switch-track-focus-ring-color-var});
+    outline-offset: var(#{$switch-track-focus-ring-offset-var});
+    outline-style: solid;
   }
 
   // --------------------------------------------

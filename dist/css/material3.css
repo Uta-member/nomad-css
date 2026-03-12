@@ -9215,6 +9215,9 @@ h6,
   --switch-track-border-radius: 10rem;
   --switch-track-border-width: 1px;
   --switch-track-disabled-bg-color: var(--border-color-light);
+  --switch-track-focus-ring-color: black;
+  --switch-track-focus-ring-offset: 2px;
+  --switch-track-focus-ring-width: 2px;
   --switch-thumb-size: 1rem;
   --switch-thumb-sm-size: 0.75rem;
   --switch-thumb-lg-size: 1.25rem;
@@ -9223,6 +9226,7 @@ h6,
   --switch-thumb-checked-bg-color: var(--palette-accent-default);
   --switch-thumb-disabled-bg-color: var(--border-color);
   --switch-track-checked-disabled-bg-color: var(--palette-lighter);
+  --switch-thumb-checked-disabled-bg-color: var(--border-color-light);
   --switch-transition: 0.2s;
   --switch-gap: 0.5rem;
   --switch-disabled-opacity: 0.5;
@@ -9289,9 +9293,18 @@ h6,
   background-color: var(--switch-track-checked-disabled-bg-color);
   border-color: var(--switch-track-checked-disabled-bg-color);
 }
+.switch .switch-input:checked:disabled ~ .switch-track .switch-thumb {
+  background-color: var(--switch-thumb-checked-disabled-bg-color);
+}
 .switch.disabled {
   cursor: var(--switch-disabled-cursor);
   opacity: var(--switch-disabled-opacity);
+}
+.switch .switch-input:focus-visible:not(:disabled) ~ .switch-track {
+  outline-width: var(--switch-track-focus-ring-width);
+  outline-color: var(--switch-track-focus-ring-color);
+  outline-offset: var(--switch-track-focus-ring-offset);
+  outline-style: solid;
 }
 .switch.sm .switch-track {
   width: var(--switch-track-sm-width);
@@ -10270,7 +10283,7 @@ pre {
 }
 
 :root[data-theme=material3] .radio {
-  --radio-mark-size: 68%;
+  --radio-mark-size: 65%;
   --radio-state-layer-size: 2.5rem;
   --radio-focus-ring-width: 0;
   position: relative;
@@ -10322,6 +10335,28 @@ pre {
 
 :root[data-theme=material3] .spinner {
   --spinner-border-width: 3px;
+}
+
+:root[data-theme=material3] .switch {
+  --switch-track-bg-color: var(--neutral-light);
+  --switch-thumb-bg-color: var(--neutral-default);
+  --switch-track-checked-bg-color: var(--palette-default);
+  --switch-thumb-checked-bg-color: var(--neutral-lighter);
+  --switch-track-border-color: var(--neutral-default);
+  --switch-track-border-width: 2px;
+  --switch-thumb-size: 0.8rem;
+  --switch-thumb-sm-size: 0.6rem;
+  --switch-thumb-lg-size: 1rem;
+  --switch-track-focus-ring-color: var(--neutral-default);
+  --switch-track-disabled-bg-color: var(--switch-track-bg-color);
+  --switch-thumb-disabled-bg-color: var(--switch-thumb-bg-color);
+  --switch-track-checked-disabled-bg-color: var(
+    --switch-track-checked-bg-color
+  );
+  --switch-thumb-checked-disabled-bg-color: var(
+    --switch-thumb-checked-bg-color
+  );
+  --switch-disabled-opacity: 0.38;
 }
 
 /*# sourceMappingURL=material3.css.map */

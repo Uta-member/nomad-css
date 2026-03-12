@@ -2,7 +2,7 @@
 
 :root[data-theme="#{prefixes.$theme-name}"] {
   .radio {
-    --radio-mark-size: 68%;
+    --radio-mark-size: 65%;
     --radio-state-layer-size: 2.5rem;
     --radio-focus-ring-width: 0; // ::after による円形フォーカスリングを使用するためデフォルト outline を無効化
 

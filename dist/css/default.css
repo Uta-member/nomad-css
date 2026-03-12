@@ -9215,6 +9215,9 @@ h6,
   --switch-track-border-radius: 10rem;
   --switch-track-border-width: 1px;
   --switch-track-disabled-bg-color: var(--border-color-light);
+  --switch-track-focus-ring-color: black;
+  --switch-track-focus-ring-offset: 2px;
+  --switch-track-focus-ring-width: 2px;
   --switch-thumb-size: 1rem;
   --switch-thumb-sm-size: 0.75rem;
   --switch-thumb-lg-size: 1.25rem;
@@ -9223,6 +9226,7 @@ h6,
   --switch-thumb-checked-bg-color: var(--palette-accent-default);
   --switch-thumb-disabled-bg-color: var(--border-color);
   --switch-track-checked-disabled-bg-color: var(--palette-lighter);
+  --switch-thumb-checked-disabled-bg-color: var(--border-color-light);
   --switch-transition: 0.2s;
   --switch-gap: 0.5rem;
   --switch-disabled-opacity: 0.5;
@@ -9289,9 +9293,18 @@ h6,
   background-color: var(--switch-track-checked-disabled-bg-color);
   border-color: var(--switch-track-checked-disabled-bg-color);
 }
+.switch .switch-input:checked:disabled ~ .switch-track .switch-thumb {
+  background-color: var(--switch-thumb-checked-disabled-bg-color);
+}
 .switch.disabled {
   cursor: var(--switch-disabled-cursor);
   opacity: var(--switch-disabled-opacity);
+}
+.switch .switch-input:focus-visible:not(:disabled) ~ .switch-track {
+  outline-width: var(--switch-track-focus-ring-width);
+  outline-color: var(--switch-track-focus-ring-color);
+  outline-offset: var(--switch-track-focus-ring-offset);
+  outline-style: solid;
 }
 .switch.sm .switch-track {
   width: var(--switch-track-sm-width);
