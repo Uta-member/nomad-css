@@ -83,6 +83,13 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor !default;
 $check-box-transition-var: --#{$check-box-prefix}transition !default;
 
 // --------------------------------------------
+// Focus Ring
+// --------------------------------------------
+$check-box-focus-ring-width-var: --#{$check-box-prefix}focus-ring-width !default;
+$check-box-focus-ring-color-var: --#{$check-box-prefix}focus-ring-color !default;
+$check-box-focus-ring-offset-width-var: --#{$check-box-prefix}focus-ring-offset-width !default;
+
+// --------------------------------------------
 // Validation
 // --------------------------------------------
 $check-box-invalid-border-color-var: --#{$check-box-prefix}invalid-border-color !default;
@@ -182,6 +189,13 @@ $check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !def
   #{$check-box-transition-var}: 0.2s;
 
   // --------------------------------------------
+  // Focus Ring
+  // --------------------------------------------
+  #{$check-box-focus-ring-width-var}: 2px;
+  #{$check-box-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$check-box-focus-ring-offset-width-var}: 2px;
+
+  // --------------------------------------------
   // Validation
   // --------------------------------------------
   #{$check-box-invalid-border-color-var}: var(--danger-default);
@@ -237,6 +251,10 @@ $check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !def
   &:focus-visible {
     background-color: var(#{$check-box-focus-bg-color-var});
     border-color: var(#{$check-box-focus-border-color-var});
+    outline-width: var(#{$check-box-focus-ring-width-var});
+    outline-color: var(#{$check-box-focus-ring-color-var});
+    outline-offset: var(#{$check-box-focus-ring-offset-width-var});
+    outline-style: solid;
   }
   &:disabled {
     background-color: var(#{$check-box-disabled-bg-color-var});
@@ -261,6 +279,10 @@ $check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !def
     &:focus-visible {
       background-color: var(#{$check-box-checked-focus-bg-color-var});
       border-color: var(#{$check-box-checked-focus-border-color-var});
+      outline-width: var(#{$check-box-focus-ring-width-var});
+      outline-color: var(#{$check-box-focus-ring-color-var});
+      outline-offset: var(#{$check-box-focus-ring-offset-width-var});
+      outline-style: solid;
     }
     &:disabled {
       background-color: var(#{$check-box-checked-disabled-bg-color-var});

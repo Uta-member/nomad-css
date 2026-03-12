@@ -8159,6 +8159,9 @@ h6,
   --checkbox-cursor: pointer;
   --checkbox-disabled-cursor: not-allowed;
   --checkbox-transition: 0.2s;
+  --checkbox-focus-ring-width: 2px;
+  --checkbox-focus-ring-color: var(--palette-default);
+  --checkbox-focus-ring-offset-width: 2px;
   --checkbox-invalid-border-color: var(--danger-default);
   --checkbox-valid-border-color: var(--success-default);
 }
@@ -8204,6 +8207,10 @@ h6,
 .checkbox:focus-visible {
   background-color: var(--checkbox-focus-bg-color);
   border-color: var(--checkbox-focus-border-color);
+  outline-width: var(--checkbox-focus-ring-width);
+  outline-color: var(--checkbox-focus-ring-color);
+  outline-offset: var(--checkbox-focus-ring-offset-width);
+  outline-style: solid;
 }
 .checkbox:disabled {
   background-color: var(--checkbox-disabled-bg-color);
@@ -8226,6 +8233,10 @@ h6,
 .checkbox:checked:focus-visible, .checkbox:indeterminate:focus-visible {
   background-color: var(--checkbox-checked-focus-bg-color);
   border-color: var(--checkbox-checked-focus-border-color);
+  outline-width: var(--checkbox-focus-ring-width);
+  outline-color: var(--checkbox-focus-ring-color);
+  outline-offset: var(--checkbox-focus-ring-offset-width);
+  outline-style: solid;
 }
 .checkbox:checked:disabled, .checkbox:indeterminate:disabled {
   background-color: var(--checkbox-checked-disabled-bg-color);
