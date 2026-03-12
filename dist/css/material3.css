@@ -7856,7 +7856,8 @@ h6,
   --border-color-light: var(--neutral-light);
   --border-color-dark: var(--neutral-dark);
   --text-color: var(--neutral-color-9);
-  --text-color-light: var(--neutral-color-8);
+  --text-color-light: var(--neutral-color-7);
+  --text-color-lighter: var(--neutral-color-4);
   --text-color-dark: var(--neutral-color-10);
   --surface-color-lighter: var(--neutral-color-0);
   --surface-color-light: var(--neutral-color-0);
@@ -9792,6 +9793,7 @@ span.divider.vertical,
   --list-border-color: var(--border-color);
   --list-border-radius: 0.375rem;
   --list-border-width: 1px;
+  --list-active-border-radius: 0px;
   --list-padding: 0.5rem 1rem;
 }
 
@@ -9810,6 +9812,7 @@ span.divider.vertical,
 .list > .list-item.active {
   background-color: var(--list-active-bg-color);
   color: var(--list-active-color);
+  border-radius: var(--list-active-border-radius);
 }
 .list > .list-item.disabled {
   color: var(--list-disabled-color);
@@ -9845,27 +9848,11 @@ span.divider.vertical,
   background-color: var(--list-active-bg-color);
   color: var(--list-active-color);
   border-color: var(--list-active-bg-color);
+  border-radius: var(--list-active-border-radius);
 }
 .list-group > .list-group-item.disabled {
   color: var(--list-disabled-color);
   pointer-events: none;
-}
-
-.list-group.flush {
-  border: none;
-  border-radius: 0;
-}
-.list-group.flush > .list-group-item {
-  border-left: none;
-  border-right: none;
-}
-.list-group.flush > .list-group-item:first-child {
-  border-top: none;
-}
-
-.list.flush > .list-item,
-.list-group.flush > .list-group-item {
-  border-radius: 0;
 }
 
 :root {
@@ -10258,6 +10245,17 @@ pre {
   --form-control-filled-bg-color: var(--neutral-gray-2);
   --form-control-filled-hover-bg-color: var(--neutral-gray-3);
   --form-control-cursor: pointer;
+}
+
+:root[data-theme=material3] .list,
+:root[data-theme=material3] .list-group {
+  --list-hover-bg-color: var(--palette-lighter);
+  --list-hover-color: var(--palette-accent-lighter);
+  --list-active-bg-color: var(--palette-light);
+  --list-active-color: var(--palette-accent-light);
+  --list-disabled-color: var(--text-color-lighter);
+  --list-border-width: none;
+  --list-active-border-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=material3.css.map */

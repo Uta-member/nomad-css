@@ -38,6 +38,7 @@ $list-disabled-color-var: --#{$list-prefix}disabled-color !default;
 $list-border-color-var: --#{$list-prefix}border-color !default;
 $list-border-radius-var: --#{$list-prefix}border-radius !default;
 $list-border-width-var: --#{$list-prefix}border-width !default;
+$list-active-border-radius-var: --#{$list-prefix}active-border-radius !default;
 
 // --------------------------------------------
 // Layout
@@ -69,6 +70,7 @@ $list-padding-var: --#{$list-prefix}padding !default;
   #{$list-border-color-var}: var(#{color-defines.$border-color-var});
   #{$list-border-radius-var}: 0.375rem;
   #{$list-border-width-var}: 1px;
+  #{$list-active-border-radius-var}: 0px;
 
   // --------------------------------------------
   // Layout
@@ -94,6 +96,7 @@ $list-padding-var: --#{$list-prefix}padding !default;
   &.active {
     background-color: var(#{$list-active-bg-color-var});
     color: var(#{$list-active-color-var});
+    border-radius: var(#{$list-active-border-radius-var});
   }
 
   &.disabled {
@@ -138,32 +141,11 @@ $list-padding-var: --#{$list-prefix}padding !default;
     background-color: var(#{$list-active-bg-color-var});
     color: var(#{$list-active-color-var});
     border-color: var(#{$list-active-bg-color-var});
+    border-radius: var(#{$list-active-border-radius-var});
   }
 
   &.disabled {
     color: var(#{$list-disabled-color-var});
     pointer-events: none;
   }
-}
-
-// ============================================
-// Flush variant (no outer border)
-// ============================================
-.#{$list-group-class-name}.flush {
-  border: none;
-  border-radius: 0;
-
-  & > .#{$list-group-item-class-name} {
-    border-left: none;
-    border-right: none;
-
-    &:first-child {
-      border-top: none;
-    }
-  }
-}
-
-.#{$list-class-name}.flush > .#{$list-item-class-name},
-.#{$list-group-class-name}.flush > .#{$list-group-item-class-name} {
-  border-radius: 0;
 }

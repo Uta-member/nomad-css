@@ -1,0 +1,14 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .list,
+  .list-group {
+    --list-hover-bg-color: var(--palette-lighter);
+    --list-hover-color: var(--palette-accent-lighter);
+    --list-active-bg-color: var(--palette-light);
+    --list-active-color: var(--palette-accent-light);
+    --list-disabled-color: var(--text-color-lighter);
+    --list-border-width: none;
+    --list-active-border-radius: 0.5rem;
+  }
+}
