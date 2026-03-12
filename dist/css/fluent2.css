@@ -8390,7 +8390,6 @@ h6,
   --form-control-filled-focus-bg-color: var(--form-control-filled-bg-color);
   --form-control-filled-disabled-bg-color: var(--border-color-light);
   --form-control-filled-readonly-bg-color: var(--surface-color-darker);
-  --form-control-readonly-bg-color: var(--surface-color-dark);
   --form-control-color: var(--text-color);
   --form-control-hover-color: var(--text-color);
   --form-control-active-color: var(--text-color);
@@ -8492,14 +8491,13 @@ h6,
 .form-control:disabled::placeholder {
   color: var(--form-control-placeholder-disabled-color);
 }
-.form-control:read-only {
-  background-color: var(--form-control-readonly-bg-color);
+.form-control:read-only:not(:disabled) {
   color: var(--form-control-readonly-color);
   border-color: var(--form-control-readonly-border-color);
   opacity: var(--form-control-readonly-opacity);
   cursor: var(--form-control-readonly-cursor);
 }
-.form-control:read-only::placeholder {
+.form-control:read-only:not(:disabled)::placeholder {
   color: var(--form-control-placeholder-readonly-color);
 }
 .form-control::placeholder {
@@ -8536,7 +8534,7 @@ h6,
 .form-control.filled:disabled {
   background-color: var(--form-control-filled-disabled-bg-color);
 }
-.form-control.filled:read-only {
+.form-control.filled:read-only:not(:disabled) {
   background-color: var(--form-control-filled-readonly-bg-color);
 }
 
@@ -8550,9 +8548,6 @@ h6,
 .form-control.underline:focus-visible {
   outline: none;
   box-shadow: 0 calc(-1 * var(--form-control-focus-ring-width)) 0 0 var(--form-control-focus-ring-color) inset;
-}
-.form-control.underline:read-only {
-  --form-control-readonly-bg-color: transparent;
 }
 
 .form-control.is-invalid {

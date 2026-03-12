@@ -5,7 +5,7 @@
 // ============================================
 :root[data-theme="#{prefixes.$theme-name}"] {
   .form-control {
-    --form-control-disabled-opacity: 0.38;
+    --form-control-disabled-opacity: 0.6;
     --form-control-readonly-cursor: text;
     --form-control-focus-ring-width: 1.5px;
     --form-control-focus-ring-color: var(--palette-default);

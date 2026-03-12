@@ -27,7 +27,6 @@ $form-control-filled-active-bg-color-var: --#{$form-control-prefix}filled-active
 $form-control-filled-focus-bg-color-var: --#{$form-control-prefix}filled-focus-bg-color !default;
 $form-control-filled-disabled-bg-color-var: --#{$form-control-prefix}filled-disabled-bg-color !default;
 $form-control-filled-readonly-bg-color-var: --#{$form-control-prefix}filled-readonly-bg-color !default;
-$form-control-readonly-bg-color-var: --#{$form-control-prefix}readonly-bg-color !default;
 
 // --------------------------------------------
 // Colors
@@ -135,9 +134,6 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   );
   #{$form-control-filled-readonly-bg-color-var}: var(
     #{color-defines.$surface-color-darker-var}
-  );
-  #{$form-control-readonly-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
   );
 
   // --------------------------------------------
@@ -316,8 +312,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
     }
   }
 
-  &:read-only {
-    background-color: var(#{$form-control-readonly-bg-color-var});
+  &:read-only:not(:disabled) {
     color: var(#{$form-control-readonly-color-var});
     border-color: var(#{$form-control-readonly-border-color-var});
     opacity: var(#{$form-control-readonly-opacity-var});
@@ -367,7 +362,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   &:disabled {
     background-color: var(#{$form-control-filled-disabled-bg-color-var});
   }
-  &:read-only {
+  &:read-only:not(:disabled) {
     background-color: var(#{$form-control-filled-readonly-bg-color-var});
   }
 }
@@ -382,10 +377,6 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
     outline: none;
     box-shadow: 0 calc(-1 * var(#{$form-control-focus-ring-width-var})) 0 0
       var(#{$form-control-focus-ring-color-var}) inset;
-  }
-
-  &:read-only {
-    #{$form-control-readonly-bg-color-var}: transparent;
   }
 }
 
