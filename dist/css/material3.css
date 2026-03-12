@@ -8134,21 +8134,21 @@ h6,
   --checkbox-checked-hover-bg-color: var(--palette-default);
   --checkbox-checked-active-bg-color: var(--palette-default);
   --checkbox-checked-focus-bg-color: var(--palette-default);
-  --checkbox-checked-disabled-bg-color: var(--border-color-light);
+  --checkbox-checked-disabled-bg-color: var(--border-color);
   --checkbox-border-width: 2px;
   --checkbox-border-radius: 4px;
   --checkbox-border-color: var(--border-color);
   --checkbox-hover-border-color: var(--border-color);
   --checkbox-active-border-color: var(--border-color);
   --checkbox-focus-border-color: var(--border-color);
-  --checkbox-disabled-border-color: var(--border-color-light);
+  --checkbox-disabled-border-color: var(--border-color);
   --checkbox-checked-border-color: var(--palette-default);
   --checkbox-checked-hover-border-color: var(--palette-default);
   --checkbox-checked-active-border-color: var(--palette-default);
   --checkbox-checked-focus-border-color: var(--palette-default);
-  --checkbox-checked-disabled-border-color: var(--border-color-light);
+  --checkbox-checked-disabled-border-color: var(--border-color);
   --checkbox-opacity: 1;
-  --checkbox-disabled-opacity: 1;
+  --checkbox-disabled-opacity: 0.6;
   --checkbox-size: 1rem;
   --checkbox-sm-size: 0.75rem;
   --checkbox-lg-size: 1.5rem;
@@ -10183,6 +10183,10 @@ pre {
   --button-disabled-border-color: var(--neutral-lighter);
   --button-disabled-opacity: 1;
   --button-disabled-text-color: var(--text-color-light);
+}
+
+:root[data-theme=material3] .checkbox {
+  --checkbox-border-radius: 3px;
 }
 
 :root[data-theme=material3] .form-control {
