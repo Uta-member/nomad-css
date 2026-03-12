@@ -104,6 +104,8 @@
   // ============================================================
   --tertiary-hue: 355;
   --tertiary-saturation: 30%;
+  --tertiary-accent-5: var(--tertiary-accent-light-color);
+  --tertiary-accent-6: var(--tertiary-accent-light-color);
   --tertiary-lighter: var(--tertiary-color-2);
   --tertiary-light: var(--tertiary-color-3);
   --tertiary-default: var(--tertiary-color-6);

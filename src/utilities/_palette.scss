@@ -165,23 +165,25 @@ $palette-gray-saturation-default: 5% !default;
       var(--#{$lightness-prefix}#{$key})
     );
   }
-  // accents
+  // accents - ベース2色のみ hsl() を計算し、各レベルはそれを参照する
+  --#{$accent-prefix}light-color: hsl(
+    var(#{$hue-var}),
+    var(#{$gray-saturation-var}),
+    var(#{$accent-light-lightness-var})
+  );
+  --#{$accent-prefix}dark-color: hsl(
+    var(#{$hue-var}),
+    var(#{$gray-saturation-var}),
+    var(#{$accent-dark-lightness-var})
+  );
   @each $key, $lightness in $lightnesses {
     @if meta.type-of($lightness) == "map" {
       @error "カラーパレット生成エラー: 輝度リストの値に連想配列を指定することはできません。";
     }
     @if $lightness > $accent-threshold {
-      --#{$accent-prefix}#{$key}: hsl(
-        var(#{$hue-var}),
-        var(#{$gray-saturation-var}),
-        var(#{$accent-dark-lightness-var})
-      );
+      --#{$accent-prefix}#{$key}: var(--#{$accent-prefix}dark-color);
     } @else {
-      --#{$accent-prefix}#{$key}: hsl(
-        var(#{$hue-var}),
-        var(#{$gray-saturation-var}),
-        var(#{$accent-light-lightness-var})
-      );
+      --#{$accent-prefix}#{$key}: var(--#{$accent-prefix}light-color);
     }
   }
   // levels
@@ -232,6 +234,13 @@ $palette-gray-saturation-default: 5% !default;
 
   #{$palette-hue-var}: var(#{$named-hue-var});
   #{$palette-saturation-var}: var(#{$named-saturation-var});
+
+  --#{$palette-accent-prefix}light-color: var(
+    --#{$named-accent-prefix}light-color
+  );
+  --#{$palette-accent-prefix}dark-color: var(
+    --#{$named-accent-prefix}dark-color
+  );
 
   @each $key, $value in $lightnesses {
     --#{$palette-lightness-prefix}#{$key}: var(

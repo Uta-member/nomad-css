@@ -730,61 +730,27 @@ h6,
     var(--palette-gray-saturation),
     var(--red-lightness-10)
   );
-  --red-accent-0: hsl(
+  --red-accent-light-color: hsl(
+    var(--red-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --red-accent-dark-color: hsl(
     var(--red-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --red-accent-1: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --red-accent-2: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --red-accent-3: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --red-accent-4: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --red-accent-5: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --red-accent-6: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --red-accent-7: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --red-accent-8: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --red-accent-9: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --red-accent-10: hsl(
-    var(--red-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --red-accent-0: var(--red-accent-dark-color);
+  --red-accent-1: var(--red-accent-dark-color);
+  --red-accent-2: var(--red-accent-dark-color);
+  --red-accent-3: var(--red-accent-dark-color);
+  --red-accent-4: var(--red-accent-dark-color);
+  --red-accent-5: var(--red-accent-light-color);
+  --red-accent-6: var(--red-accent-light-color);
+  --red-accent-7: var(--red-accent-light-color);
+  --red-accent-8: var(--red-accent-light-color);
+  --red-accent-9: var(--red-accent-light-color);
+  --red-accent-10: var(--red-accent-light-color);
   --red-lighter: var(--red-color-2);
   --red-accent-lighter: var(--red-accent-2);
   --red-lighter-ch:
@@ -815,6 +781,12 @@ h6,
 .red {
   --palette-hue: var(--red-hue);
   --palette-saturation: var(--red-saturation);
+  --palette-accent-light-color: var(
+    --red-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --red-accent-dark-color
+  );
   --palette-lightness-0: var(
     --red-lightness-0
   );
@@ -1112,61 +1084,27 @@ h6,
     var(--palette-gray-saturation),
     var(--orange-lightness-10)
   );
-  --orange-accent-0: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --orange-accent-1: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --orange-accent-2: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --orange-accent-3: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --orange-accent-4: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --orange-accent-5: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --orange-accent-6: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --orange-accent-7: hsl(
+  --orange-accent-light-color: hsl(
     var(--orange-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --orange-accent-8: hsl(
+  --orange-accent-dark-color: hsl(
     var(--orange-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --orange-accent-9: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --orange-accent-10: hsl(
-    var(--orange-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --orange-accent-0: var(--orange-accent-dark-color);
+  --orange-accent-1: var(--orange-accent-dark-color);
+  --orange-accent-2: var(--orange-accent-dark-color);
+  --orange-accent-3: var(--orange-accent-dark-color);
+  --orange-accent-4: var(--orange-accent-dark-color);
+  --orange-accent-5: var(--orange-accent-dark-color);
+  --orange-accent-6: var(--orange-accent-dark-color);
+  --orange-accent-7: var(--orange-accent-light-color);
+  --orange-accent-8: var(--orange-accent-light-color);
+  --orange-accent-9: var(--orange-accent-light-color);
+  --orange-accent-10: var(--orange-accent-light-color);
   --orange-lighter: var(--orange-color-2);
   --orange-accent-lighter: var(--orange-accent-2);
   --orange-lighter-ch:
@@ -1197,6 +1135,12 @@ h6,
 .orange {
   --palette-hue: var(--orange-hue);
   --palette-saturation: var(--orange-saturation);
+  --palette-accent-light-color: var(
+    --orange-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --orange-accent-dark-color
+  );
   --palette-lightness-0: var(
     --orange-lightness-0
   );
@@ -1494,61 +1438,27 @@ h6,
     var(--palette-gray-saturation),
     var(--yellow-lightness-10)
   );
-  --yellow-accent-0: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-1: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-2: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-3: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-4: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-5: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-6: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-7: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --yellow-accent-8: hsl(
+  --yellow-accent-light-color: hsl(
     var(--yellow-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --yellow-accent-9: hsl(
+  --yellow-accent-dark-color: hsl(
     var(--yellow-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --yellow-accent-10: hsl(
-    var(--yellow-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --yellow-accent-0: var(--yellow-accent-dark-color);
+  --yellow-accent-1: var(--yellow-accent-dark-color);
+  --yellow-accent-2: var(--yellow-accent-dark-color);
+  --yellow-accent-3: var(--yellow-accent-dark-color);
+  --yellow-accent-4: var(--yellow-accent-dark-color);
+  --yellow-accent-5: var(--yellow-accent-dark-color);
+  --yellow-accent-6: var(--yellow-accent-dark-color);
+  --yellow-accent-7: var(--yellow-accent-dark-color);
+  --yellow-accent-8: var(--yellow-accent-light-color);
+  --yellow-accent-9: var(--yellow-accent-light-color);
+  --yellow-accent-10: var(--yellow-accent-light-color);
   --yellow-lighter: var(--yellow-color-2);
   --yellow-accent-lighter: var(--yellow-accent-2);
   --yellow-lighter-ch:
@@ -1579,6 +1489,12 @@ h6,
 .yellow {
   --palette-hue: var(--yellow-hue);
   --palette-saturation: var(--yellow-saturation);
+  --palette-accent-light-color: var(
+    --yellow-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --yellow-accent-dark-color
+  );
   --palette-lightness-0: var(
     --yellow-lightness-0
   );
@@ -1876,61 +1792,27 @@ h6,
     var(--palette-gray-saturation),
     var(--lime-lightness-10)
   );
-  --lime-accent-0: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-1: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-2: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-3: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-4: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-5: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-6: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-7: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --lime-accent-8: hsl(
+  --lime-accent-light-color: hsl(
     var(--lime-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --lime-accent-9: hsl(
+  --lime-accent-dark-color: hsl(
     var(--lime-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --lime-accent-10: hsl(
-    var(--lime-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --lime-accent-0: var(--lime-accent-dark-color);
+  --lime-accent-1: var(--lime-accent-dark-color);
+  --lime-accent-2: var(--lime-accent-dark-color);
+  --lime-accent-3: var(--lime-accent-dark-color);
+  --lime-accent-4: var(--lime-accent-dark-color);
+  --lime-accent-5: var(--lime-accent-dark-color);
+  --lime-accent-6: var(--lime-accent-dark-color);
+  --lime-accent-7: var(--lime-accent-dark-color);
+  --lime-accent-8: var(--lime-accent-light-color);
+  --lime-accent-9: var(--lime-accent-light-color);
+  --lime-accent-10: var(--lime-accent-light-color);
   --lime-lighter: var(--lime-color-2);
   --lime-accent-lighter: var(--lime-accent-2);
   --lime-lighter-ch:
@@ -1961,6 +1843,12 @@ h6,
 .lime {
   --palette-hue: var(--lime-hue);
   --palette-saturation: var(--lime-saturation);
+  --palette-accent-light-color: var(
+    --lime-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --lime-accent-dark-color
+  );
   --palette-lightness-0: var(
     --lime-lightness-0
   );
@@ -2258,61 +2146,27 @@ h6,
     var(--palette-gray-saturation),
     var(--green-lightness-10)
   );
-  --green-accent-0: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-1: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-2: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-3: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-4: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-5: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-6: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-7: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --green-accent-8: hsl(
+  --green-accent-light-color: hsl(
     var(--green-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --green-accent-9: hsl(
+  --green-accent-dark-color: hsl(
     var(--green-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --green-accent-10: hsl(
-    var(--green-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --green-accent-0: var(--green-accent-dark-color);
+  --green-accent-1: var(--green-accent-dark-color);
+  --green-accent-2: var(--green-accent-dark-color);
+  --green-accent-3: var(--green-accent-dark-color);
+  --green-accent-4: var(--green-accent-dark-color);
+  --green-accent-5: var(--green-accent-dark-color);
+  --green-accent-6: var(--green-accent-dark-color);
+  --green-accent-7: var(--green-accent-dark-color);
+  --green-accent-8: var(--green-accent-light-color);
+  --green-accent-9: var(--green-accent-light-color);
+  --green-accent-10: var(--green-accent-light-color);
   --green-lighter: var(--green-color-2);
   --green-accent-lighter: var(--green-accent-2);
   --green-lighter-ch:
@@ -2343,6 +2197,12 @@ h6,
 .green {
   --palette-hue: var(--green-hue);
   --palette-saturation: var(--green-saturation);
+  --palette-accent-light-color: var(
+    --green-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --green-accent-dark-color
+  );
   --palette-lightness-0: var(
     --green-lightness-0
   );
@@ -2640,61 +2500,27 @@ h6,
     var(--palette-gray-saturation),
     var(--teal-lightness-10)
   );
-  --teal-accent-0: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --teal-accent-1: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --teal-accent-2: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --teal-accent-3: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --teal-accent-4: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --teal-accent-5: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --teal-accent-6: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --teal-accent-7: hsl(
+  --teal-accent-light-color: hsl(
     var(--teal-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --teal-accent-8: hsl(
+  --teal-accent-dark-color: hsl(
     var(--teal-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --teal-accent-9: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --teal-accent-10: hsl(
-    var(--teal-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --teal-accent-0: var(--teal-accent-dark-color);
+  --teal-accent-1: var(--teal-accent-dark-color);
+  --teal-accent-2: var(--teal-accent-dark-color);
+  --teal-accent-3: var(--teal-accent-dark-color);
+  --teal-accent-4: var(--teal-accent-dark-color);
+  --teal-accent-5: var(--teal-accent-dark-color);
+  --teal-accent-6: var(--teal-accent-dark-color);
+  --teal-accent-7: var(--teal-accent-light-color);
+  --teal-accent-8: var(--teal-accent-light-color);
+  --teal-accent-9: var(--teal-accent-light-color);
+  --teal-accent-10: var(--teal-accent-light-color);
   --teal-lighter: var(--teal-color-2);
   --teal-accent-lighter: var(--teal-accent-2);
   --teal-lighter-ch:
@@ -2725,6 +2551,12 @@ h6,
 .teal {
   --palette-hue: var(--teal-hue);
   --palette-saturation: var(--teal-saturation);
+  --palette-accent-light-color: var(
+    --teal-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --teal-accent-dark-color
+  );
   --palette-lightness-0: var(
     --teal-lightness-0
   );
@@ -3022,61 +2854,27 @@ h6,
     var(--palette-gray-saturation),
     var(--cyan-lightness-10)
   );
-  --cyan-accent-0: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --cyan-accent-1: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --cyan-accent-2: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --cyan-accent-3: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --cyan-accent-4: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --cyan-accent-5: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --cyan-accent-6: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --cyan-accent-7: hsl(
+  --cyan-accent-light-color: hsl(
     var(--cyan-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --cyan-accent-8: hsl(
+  --cyan-accent-dark-color: hsl(
     var(--cyan-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --cyan-accent-9: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --cyan-accent-10: hsl(
-    var(--cyan-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --cyan-accent-0: var(--cyan-accent-dark-color);
+  --cyan-accent-1: var(--cyan-accent-dark-color);
+  --cyan-accent-2: var(--cyan-accent-dark-color);
+  --cyan-accent-3: var(--cyan-accent-dark-color);
+  --cyan-accent-4: var(--cyan-accent-dark-color);
+  --cyan-accent-5: var(--cyan-accent-dark-color);
+  --cyan-accent-6: var(--cyan-accent-dark-color);
+  --cyan-accent-7: var(--cyan-accent-light-color);
+  --cyan-accent-8: var(--cyan-accent-light-color);
+  --cyan-accent-9: var(--cyan-accent-light-color);
+  --cyan-accent-10: var(--cyan-accent-light-color);
   --cyan-lighter: var(--cyan-color-2);
   --cyan-accent-lighter: var(--cyan-accent-2);
   --cyan-lighter-ch:
@@ -3107,6 +2905,12 @@ h6,
 .cyan {
   --palette-hue: var(--cyan-hue);
   --palette-saturation: var(--cyan-saturation);
+  --palette-accent-light-color: var(
+    --cyan-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --cyan-accent-dark-color
+  );
   --palette-lightness-0: var(
     --cyan-lightness-0
   );
@@ -3404,61 +3208,27 @@ h6,
     var(--palette-gray-saturation),
     var(--blue-lightness-10)
   );
-  --blue-accent-0: hsl(
+  --blue-accent-light-color: hsl(
+    var(--blue-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --blue-accent-dark-color: hsl(
     var(--blue-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --blue-accent-1: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --blue-accent-2: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --blue-accent-3: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --blue-accent-4: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --blue-accent-5: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --blue-accent-6: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --blue-accent-7: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --blue-accent-8: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --blue-accent-9: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --blue-accent-10: hsl(
-    var(--blue-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --blue-accent-0: var(--blue-accent-dark-color);
+  --blue-accent-1: var(--blue-accent-dark-color);
+  --blue-accent-2: var(--blue-accent-dark-color);
+  --blue-accent-3: var(--blue-accent-dark-color);
+  --blue-accent-4: var(--blue-accent-dark-color);
+  --blue-accent-5: var(--blue-accent-light-color);
+  --blue-accent-6: var(--blue-accent-light-color);
+  --blue-accent-7: var(--blue-accent-light-color);
+  --blue-accent-8: var(--blue-accent-light-color);
+  --blue-accent-9: var(--blue-accent-light-color);
+  --blue-accent-10: var(--blue-accent-light-color);
   --blue-lighter: var(--blue-color-2);
   --blue-accent-lighter: var(--blue-accent-2);
   --blue-lighter-ch:
@@ -3489,6 +3259,12 @@ h6,
 .blue {
   --palette-hue: var(--blue-hue);
   --palette-saturation: var(--blue-saturation);
+  --palette-accent-light-color: var(
+    --blue-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --blue-accent-dark-color
+  );
   --palette-lightness-0: var(
     --blue-lightness-0
   );
@@ -3786,61 +3562,27 @@ h6,
     var(--palette-gray-saturation),
     var(--indigo-lightness-10)
   );
-  --indigo-accent-0: hsl(
+  --indigo-accent-light-color: hsl(
+    var(--indigo-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --indigo-accent-dark-color: hsl(
     var(--indigo-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --indigo-accent-1: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --indigo-accent-2: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --indigo-accent-3: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --indigo-accent-4: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --indigo-accent-5: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --indigo-accent-6: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --indigo-accent-7: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --indigo-accent-8: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --indigo-accent-9: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --indigo-accent-10: hsl(
-    var(--indigo-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --indigo-accent-0: var(--indigo-accent-dark-color);
+  --indigo-accent-1: var(--indigo-accent-dark-color);
+  --indigo-accent-2: var(--indigo-accent-dark-color);
+  --indigo-accent-3: var(--indigo-accent-dark-color);
+  --indigo-accent-4: var(--indigo-accent-light-color);
+  --indigo-accent-5: var(--indigo-accent-light-color);
+  --indigo-accent-6: var(--indigo-accent-light-color);
+  --indigo-accent-7: var(--indigo-accent-light-color);
+  --indigo-accent-8: var(--indigo-accent-light-color);
+  --indigo-accent-9: var(--indigo-accent-light-color);
+  --indigo-accent-10: var(--indigo-accent-light-color);
   --indigo-lighter: var(--indigo-color-2);
   --indigo-accent-lighter: var(--indigo-accent-2);
   --indigo-lighter-ch:
@@ -3871,6 +3613,12 @@ h6,
 .indigo {
   --palette-hue: var(--indigo-hue);
   --palette-saturation: var(--indigo-saturation);
+  --palette-accent-light-color: var(
+    --indigo-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --indigo-accent-dark-color
+  );
   --palette-lightness-0: var(
     --indigo-lightness-0
   );
@@ -4168,61 +3916,27 @@ h6,
     var(--palette-gray-saturation),
     var(--violet-lightness-10)
   );
-  --violet-accent-0: hsl(
+  --violet-accent-light-color: hsl(
+    var(--violet-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --violet-accent-dark-color: hsl(
     var(--violet-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --violet-accent-1: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --violet-accent-2: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --violet-accent-3: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --violet-accent-4: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --violet-accent-5: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --violet-accent-6: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --violet-accent-7: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --violet-accent-8: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --violet-accent-9: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --violet-accent-10: hsl(
-    var(--violet-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --violet-accent-0: var(--violet-accent-dark-color);
+  --violet-accent-1: var(--violet-accent-dark-color);
+  --violet-accent-2: var(--violet-accent-dark-color);
+  --violet-accent-3: var(--violet-accent-dark-color);
+  --violet-accent-4: var(--violet-accent-light-color);
+  --violet-accent-5: var(--violet-accent-light-color);
+  --violet-accent-6: var(--violet-accent-light-color);
+  --violet-accent-7: var(--violet-accent-light-color);
+  --violet-accent-8: var(--violet-accent-light-color);
+  --violet-accent-9: var(--violet-accent-light-color);
+  --violet-accent-10: var(--violet-accent-light-color);
   --violet-lighter: var(--violet-color-2);
   --violet-accent-lighter: var(--violet-accent-2);
   --violet-lighter-ch:
@@ -4253,6 +3967,12 @@ h6,
 .violet {
   --palette-hue: var(--violet-hue);
   --palette-saturation: var(--violet-saturation);
+  --palette-accent-light-color: var(
+    --violet-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --violet-accent-dark-color
+  );
   --palette-lightness-0: var(
     --violet-lightness-0
   );
@@ -4550,61 +4270,27 @@ h6,
     var(--palette-gray-saturation),
     var(--purple-lightness-10)
   );
-  --purple-accent-0: hsl(
+  --purple-accent-light-color: hsl(
+    var(--purple-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --purple-accent-dark-color: hsl(
     var(--purple-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --purple-accent-1: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --purple-accent-2: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --purple-accent-3: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --purple-accent-4: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --purple-accent-5: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --purple-accent-6: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --purple-accent-7: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --purple-accent-8: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --purple-accent-9: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --purple-accent-10: hsl(
-    var(--purple-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --purple-accent-0: var(--purple-accent-dark-color);
+  --purple-accent-1: var(--purple-accent-dark-color);
+  --purple-accent-2: var(--purple-accent-dark-color);
+  --purple-accent-3: var(--purple-accent-dark-color);
+  --purple-accent-4: var(--purple-accent-dark-color);
+  --purple-accent-5: var(--purple-accent-light-color);
+  --purple-accent-6: var(--purple-accent-light-color);
+  --purple-accent-7: var(--purple-accent-light-color);
+  --purple-accent-8: var(--purple-accent-light-color);
+  --purple-accent-9: var(--purple-accent-light-color);
+  --purple-accent-10: var(--purple-accent-light-color);
   --purple-lighter: var(--purple-color-2);
   --purple-accent-lighter: var(--purple-accent-2);
   --purple-lighter-ch:
@@ -4635,6 +4321,12 @@ h6,
 .purple {
   --palette-hue: var(--purple-hue);
   --palette-saturation: var(--purple-saturation);
+  --palette-accent-light-color: var(
+    --purple-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --purple-accent-dark-color
+  );
   --palette-lightness-0: var(
     --purple-lightness-0
   );
@@ -4932,61 +4624,27 @@ h6,
     var(--palette-gray-saturation),
     var(--pink-lightness-10)
   );
-  --pink-accent-0: hsl(
+  --pink-accent-light-color: hsl(
+    var(--pink-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --pink-accent-dark-color: hsl(
     var(--pink-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --pink-accent-1: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --pink-accent-2: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --pink-accent-3: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --pink-accent-4: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --pink-accent-5: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --pink-accent-6: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --pink-accent-7: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --pink-accent-8: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --pink-accent-9: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --pink-accent-10: hsl(
-    var(--pink-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --pink-accent-0: var(--pink-accent-dark-color);
+  --pink-accent-1: var(--pink-accent-dark-color);
+  --pink-accent-2: var(--pink-accent-dark-color);
+  --pink-accent-3: var(--pink-accent-dark-color);
+  --pink-accent-4: var(--pink-accent-dark-color);
+  --pink-accent-5: var(--pink-accent-light-color);
+  --pink-accent-6: var(--pink-accent-light-color);
+  --pink-accent-7: var(--pink-accent-light-color);
+  --pink-accent-8: var(--pink-accent-light-color);
+  --pink-accent-9: var(--pink-accent-light-color);
+  --pink-accent-10: var(--pink-accent-light-color);
   --pink-lighter: var(--pink-color-2);
   --pink-accent-lighter: var(--pink-accent-2);
   --pink-lighter-ch:
@@ -5017,6 +4675,12 @@ h6,
 .pink {
   --palette-hue: var(--pink-hue);
   --palette-saturation: var(--pink-saturation);
+  --palette-accent-light-color: var(
+    --pink-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --pink-accent-dark-color
+  );
   --palette-lightness-0: var(
     --pink-lightness-0
   );
@@ -5314,61 +4978,27 @@ h6,
     var(--palette-gray-saturation),
     var(--primary-lightness-10)
   );
-  --primary-accent-0: hsl(
+  --primary-accent-light-color: hsl(
+    var(--primary-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --primary-accent-dark-color: hsl(
     var(--primary-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --primary-accent-1: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --primary-accent-2: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --primary-accent-3: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --primary-accent-4: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --primary-accent-5: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --primary-accent-6: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --primary-accent-7: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --primary-accent-8: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --primary-accent-9: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --primary-accent-10: hsl(
-    var(--primary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --primary-accent-0: var(--primary-accent-dark-color);
+  --primary-accent-1: var(--primary-accent-dark-color);
+  --primary-accent-2: var(--primary-accent-dark-color);
+  --primary-accent-3: var(--primary-accent-dark-color);
+  --primary-accent-4: var(--primary-accent-dark-color);
+  --primary-accent-5: var(--primary-accent-light-color);
+  --primary-accent-6: var(--primary-accent-light-color);
+  --primary-accent-7: var(--primary-accent-light-color);
+  --primary-accent-8: var(--primary-accent-light-color);
+  --primary-accent-9: var(--primary-accent-light-color);
+  --primary-accent-10: var(--primary-accent-light-color);
   --primary-lighter: var(--primary-color-2);
   --primary-accent-lighter: var(--primary-accent-2);
   --primary-lighter-ch:
@@ -5399,6 +5029,12 @@ h6,
 .primary {
   --palette-hue: var(--primary-hue);
   --palette-saturation: var(--primary-saturation);
+  --palette-accent-light-color: var(
+    --primary-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --primary-accent-dark-color
+  );
   --palette-lightness-0: var(
     --primary-lightness-0
   );
@@ -5696,61 +5332,27 @@ h6,
     var(--palette-gray-saturation),
     var(--secondary-lightness-10)
   );
-  --secondary-accent-0: hsl(
+  --secondary-accent-light-color: hsl(
+    var(--secondary-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --secondary-accent-dark-color: hsl(
     var(--secondary-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --secondary-accent-1: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --secondary-accent-2: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --secondary-accent-3: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --secondary-accent-4: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --secondary-accent-5: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --secondary-accent-6: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --secondary-accent-7: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --secondary-accent-8: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --secondary-accent-9: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --secondary-accent-10: hsl(
-    var(--secondary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --secondary-accent-0: var(--secondary-accent-dark-color);
+  --secondary-accent-1: var(--secondary-accent-dark-color);
+  --secondary-accent-2: var(--secondary-accent-dark-color);
+  --secondary-accent-3: var(--secondary-accent-dark-color);
+  --secondary-accent-4: var(--secondary-accent-dark-color);
+  --secondary-accent-5: var(--secondary-accent-light-color);
+  --secondary-accent-6: var(--secondary-accent-light-color);
+  --secondary-accent-7: var(--secondary-accent-light-color);
+  --secondary-accent-8: var(--secondary-accent-light-color);
+  --secondary-accent-9: var(--secondary-accent-light-color);
+  --secondary-accent-10: var(--secondary-accent-light-color);
   --secondary-lighter: var(--secondary-color-2);
   --secondary-accent-lighter: var(--secondary-accent-2);
   --secondary-lighter-ch:
@@ -5781,6 +5383,12 @@ h6,
 .secondary {
   --palette-hue: var(--secondary-hue);
   --palette-saturation: var(--secondary-saturation);
+  --palette-accent-light-color: var(
+    --secondary-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --secondary-accent-dark-color
+  );
   --palette-lightness-0: var(
     --secondary-lightness-0
   );
@@ -6078,61 +5686,27 @@ h6,
     var(--palette-gray-saturation),
     var(--tertiary-lightness-10)
   );
-  --tertiary-accent-0: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --tertiary-accent-1: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --tertiary-accent-2: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --tertiary-accent-3: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --tertiary-accent-4: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --tertiary-accent-5: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --tertiary-accent-6: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --tertiary-accent-7: hsl(
+  --tertiary-accent-light-color: hsl(
     var(--tertiary-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --tertiary-accent-8: hsl(
+  --tertiary-accent-dark-color: hsl(
     var(--tertiary-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --tertiary-accent-9: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --tertiary-accent-10: hsl(
-    var(--tertiary-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --tertiary-accent-0: var(--tertiary-accent-dark-color);
+  --tertiary-accent-1: var(--tertiary-accent-dark-color);
+  --tertiary-accent-2: var(--tertiary-accent-dark-color);
+  --tertiary-accent-3: var(--tertiary-accent-dark-color);
+  --tertiary-accent-4: var(--tertiary-accent-dark-color);
+  --tertiary-accent-5: var(--tertiary-accent-dark-color);
+  --tertiary-accent-6: var(--tertiary-accent-dark-color);
+  --tertiary-accent-7: var(--tertiary-accent-light-color);
+  --tertiary-accent-8: var(--tertiary-accent-light-color);
+  --tertiary-accent-9: var(--tertiary-accent-light-color);
+  --tertiary-accent-10: var(--tertiary-accent-light-color);
   --tertiary-lighter: var(--tertiary-color-2);
   --tertiary-accent-lighter: var(--tertiary-accent-2);
   --tertiary-lighter-ch:
@@ -6163,6 +5737,12 @@ h6,
 .tertiary {
   --palette-hue: var(--tertiary-hue);
   --palette-saturation: var(--tertiary-saturation);
+  --palette-accent-light-color: var(
+    --tertiary-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --tertiary-accent-dark-color
+  );
   --palette-lightness-0: var(
     --tertiary-lightness-0
   );
@@ -6460,61 +6040,27 @@ h6,
     var(--palette-gray-saturation),
     var(--success-lightness-10)
   );
-  --success-accent-0: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --success-accent-1: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --success-accent-2: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --success-accent-3: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --success-accent-4: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --success-accent-5: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --success-accent-6: hsl(
+  --success-accent-light-color: hsl(
     var(--success-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --success-accent-7: hsl(
+  --success-accent-dark-color: hsl(
     var(--success-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --success-accent-8: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --success-accent-9: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --success-accent-10: hsl(
-    var(--success-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --success-accent-0: var(--success-accent-dark-color);
+  --success-accent-1: var(--success-accent-dark-color);
+  --success-accent-2: var(--success-accent-dark-color);
+  --success-accent-3: var(--success-accent-dark-color);
+  --success-accent-4: var(--success-accent-dark-color);
+  --success-accent-5: var(--success-accent-dark-color);
+  --success-accent-6: var(--success-accent-light-color);
+  --success-accent-7: var(--success-accent-light-color);
+  --success-accent-8: var(--success-accent-light-color);
+  --success-accent-9: var(--success-accent-light-color);
+  --success-accent-10: var(--success-accent-light-color);
   --success-lighter: var(--success-color-2);
   --success-accent-lighter: var(--success-accent-2);
   --success-lighter-ch:
@@ -6545,6 +6091,12 @@ h6,
 .success {
   --palette-hue: var(--success-hue);
   --palette-saturation: var(--success-saturation);
+  --palette-accent-light-color: var(
+    --success-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --success-accent-dark-color
+  );
   --palette-lightness-0: var(
     --success-lightness-0
   );
@@ -6842,61 +6394,27 @@ h6,
     var(--palette-gray-saturation),
     var(--warning-lightness-10)
   );
-  --warning-accent-0: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --warning-accent-1: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --warning-accent-2: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --warning-accent-3: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --warning-accent-4: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --warning-accent-5: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --warning-accent-6: hsl(
+  --warning-accent-light-color: hsl(
     var(--warning-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --warning-accent-7: hsl(
+  --warning-accent-dark-color: hsl(
     var(--warning-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --warning-accent-8: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --warning-accent-9: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --warning-accent-10: hsl(
-    var(--warning-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --warning-accent-0: var(--warning-accent-dark-color);
+  --warning-accent-1: var(--warning-accent-dark-color);
+  --warning-accent-2: var(--warning-accent-dark-color);
+  --warning-accent-3: var(--warning-accent-dark-color);
+  --warning-accent-4: var(--warning-accent-dark-color);
+  --warning-accent-5: var(--warning-accent-dark-color);
+  --warning-accent-6: var(--warning-accent-light-color);
+  --warning-accent-7: var(--warning-accent-light-color);
+  --warning-accent-8: var(--warning-accent-light-color);
+  --warning-accent-9: var(--warning-accent-light-color);
+  --warning-accent-10: var(--warning-accent-light-color);
   --warning-lighter: var(--warning-color-2);
   --warning-accent-lighter: var(--warning-accent-2);
   --warning-lighter-ch:
@@ -6927,6 +6445,12 @@ h6,
 .warning {
   --palette-hue: var(--warning-hue);
   --palette-saturation: var(--warning-saturation);
+  --palette-accent-light-color: var(
+    --warning-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --warning-accent-dark-color
+  );
   --palette-lightness-0: var(
     --warning-lightness-0
   );
@@ -7224,61 +6748,27 @@ h6,
     var(--palette-gray-saturation),
     var(--danger-lightness-10)
   );
-  --danger-accent-0: hsl(
+  --danger-accent-light-color: hsl(
+    var(--danger-hue),
+    var(--palette-gray-saturation),
+    var(--palette-accent-light-lightness)
+  );
+  --danger-accent-dark-color: hsl(
     var(--danger-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-dark-lightness)
   );
-  --danger-accent-1: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --danger-accent-2: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --danger-accent-3: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --danger-accent-4: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --danger-accent-5: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --danger-accent-6: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --danger-accent-7: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --danger-accent-8: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --danger-accent-9: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --danger-accent-10: hsl(
-    var(--danger-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --danger-accent-0: var(--danger-accent-dark-color);
+  --danger-accent-1: var(--danger-accent-dark-color);
+  --danger-accent-2: var(--danger-accent-dark-color);
+  --danger-accent-3: var(--danger-accent-dark-color);
+  --danger-accent-4: var(--danger-accent-dark-color);
+  --danger-accent-5: var(--danger-accent-light-color);
+  --danger-accent-6: var(--danger-accent-light-color);
+  --danger-accent-7: var(--danger-accent-light-color);
+  --danger-accent-8: var(--danger-accent-light-color);
+  --danger-accent-9: var(--danger-accent-light-color);
+  --danger-accent-10: var(--danger-accent-light-color);
   --danger-lighter: var(--danger-color-2);
   --danger-accent-lighter: var(--danger-accent-2);
   --danger-lighter-ch:
@@ -7309,6 +6799,12 @@ h6,
 .danger {
   --palette-hue: var(--danger-hue);
   --palette-saturation: var(--danger-saturation);
+  --palette-accent-light-color: var(
+    --danger-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --danger-accent-dark-color
+  );
   --palette-lightness-0: var(
     --danger-lightness-0
   );
@@ -7606,61 +7102,27 @@ h6,
     var(--palette-gray-saturation),
     var(--info-lightness-10)
   );
-  --info-accent-0: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --info-accent-1: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --info-accent-2: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --info-accent-3: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --info-accent-4: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --info-accent-5: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --info-accent-6: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --info-accent-7: hsl(
+  --info-accent-light-color: hsl(
     var(--info-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --info-accent-8: hsl(
+  --info-accent-dark-color: hsl(
     var(--info-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --info-accent-9: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --info-accent-10: hsl(
-    var(--info-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --info-accent-0: var(--info-accent-dark-color);
+  --info-accent-1: var(--info-accent-dark-color);
+  --info-accent-2: var(--info-accent-dark-color);
+  --info-accent-3: var(--info-accent-dark-color);
+  --info-accent-4: var(--info-accent-dark-color);
+  --info-accent-5: var(--info-accent-dark-color);
+  --info-accent-6: var(--info-accent-dark-color);
+  --info-accent-7: var(--info-accent-light-color);
+  --info-accent-8: var(--info-accent-light-color);
+  --info-accent-9: var(--info-accent-light-color);
+  --info-accent-10: var(--info-accent-light-color);
   --info-lighter: var(--info-color-2);
   --info-accent-lighter: var(--info-accent-2);
   --info-lighter-ch:
@@ -7691,6 +7153,12 @@ h6,
 .info {
   --palette-hue: var(--info-hue);
   --palette-saturation: var(--info-saturation);
+  --palette-accent-light-color: var(
+    --info-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --info-accent-dark-color
+  );
   --palette-lightness-0: var(
     --info-lightness-0
   );
@@ -7832,7 +7300,7 @@ h6,
   --neutral-saturation: 5%;
   --palette-accent-light-lightness: 97%;
   --palette-accent-dark-lightness: 10%;
-  --palette-accent-threshold: 50%;
+  --palette-accent-threshold: 60%;
   --palette-gray-saturation: 5%;
   --neutral-lightness-0: 99%;
   --neutral-lightness-1: 97%;
@@ -7988,61 +7456,27 @@ h6,
     var(--palette-gray-saturation),
     var(--neutral-lightness-10)
   );
-  --neutral-accent-0: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --neutral-accent-1: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --neutral-accent-2: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --neutral-accent-3: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --neutral-accent-4: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --neutral-accent-5: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-dark-lightness)
-  );
-  --neutral-accent-6: hsl(
+  --neutral-accent-light-color: hsl(
     var(--neutral-hue),
     var(--palette-gray-saturation),
     var(--palette-accent-light-lightness)
   );
-  --neutral-accent-7: hsl(
+  --neutral-accent-dark-color: hsl(
     var(--neutral-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
-  --neutral-accent-8: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --neutral-accent-9: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
-  --neutral-accent-10: hsl(
-    var(--neutral-hue),
-    var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
-  );
+  --neutral-accent-0: var(--neutral-accent-dark-color);
+  --neutral-accent-1: var(--neutral-accent-dark-color);
+  --neutral-accent-2: var(--neutral-accent-dark-color);
+  --neutral-accent-3: var(--neutral-accent-dark-color);
+  --neutral-accent-4: var(--neutral-accent-dark-color);
+  --neutral-accent-5: var(--neutral-accent-light-color);
+  --neutral-accent-6: var(--neutral-accent-light-color);
+  --neutral-accent-7: var(--neutral-accent-light-color);
+  --neutral-accent-8: var(--neutral-accent-light-color);
+  --neutral-accent-9: var(--neutral-accent-light-color);
+  --neutral-accent-10: var(--neutral-accent-light-color);
   --neutral-lighter: var(--neutral-color-1);
   --neutral-accent-lighter: var(--neutral-accent-1);
   --neutral-lighter-ch:
@@ -8073,6 +7507,12 @@ h6,
 .neutral {
   --palette-hue: var(--neutral-hue);
   --palette-saturation: var(--neutral-saturation);
+  --palette-accent-light-color: var(
+    --neutral-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --neutral-accent-dark-color
+  );
   --palette-lightness-0: var(
     --neutral-lightness-0
   );
@@ -8212,6 +7652,12 @@ h6,
 :root {
   --palette-hue: var(--primary-hue);
   --palette-saturation: var(--primary-saturation);
+  --palette-accent-light-color: var(
+    --primary-accent-light-color
+  );
+  --palette-accent-dark-color: var(
+    --primary-accent-dark-color
+  );
   --palette-lightness-0: var(
     --primary-lightness-0
   );
