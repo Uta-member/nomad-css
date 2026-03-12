@@ -122,9 +122,7 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
   #{$radio-hover-border-color-var}: var(#{color-defines.$border-color-var});
   #{$radio-active-border-color-var}: var(#{color-defines.$border-color-var});
   #{$radio-focus-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$radio-disabled-border-color-var}: var(
-    #{color-defines.$border-color-light-var}
-  );
+  #{$radio-disabled-border-color-var}: var(#{color-defines.$border-color-var});
   #{$radio-checked-border-color-var}: var(#{palette.$palette-default-var});
   #{$radio-checked-hover-border-color-var}: var(
     #{palette.$palette-default-var}
@@ -136,14 +134,14 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
     #{palette.$palette-default-var}
   );
   #{$radio-checked-disabled-border-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-var}
   );
 
   // --------------------------------------------
   // Opacity
   // --------------------------------------------
   #{$radio-opacity-var}: 1;
-  #{$radio-disabled-opacity-var}: 1;
+  #{$radio-disabled-opacity-var}: 0.6;
 
   // --------------------------------------------
   // Sizes
@@ -156,9 +154,7 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
   // Check Mark
   // --------------------------------------------
   #{$radio-mark-color-var}: var(#{palette.$palette-default-var});
-  #{$radio-disabled-mark-color-var}: var(
-    #{color-defines.$border-color-light-var}
-  );
+  #{$radio-disabled-mark-color-var}: var(#{color-defines.$border-color-var});
   #{$radio-mark-size-var}: 50%;
 
   // --------------------------------------------
