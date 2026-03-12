@@ -406,9 +406,9 @@
   --neutral-lightness-4: 65%;
   --neutral-lightness-5: 45%;
   --neutral-lightness-6: 25%;
-  --neutral-lightness-7: 15%;
-  --neutral-lightness-8: 9%;
-  --neutral-lightness-9: 5%;
+  --neutral-lightness-7: 10%;
+  --neutral-lightness-8: 6%;
+  --neutral-lightness-9: 4%;
   --neutral-lightness-10: 1%;
 
   --neutral-lighter: var(--neutral-color-2);
@@ -439,9 +439,9 @@
   // ============================================================
   // Surface（ダーク）: 暗背景ベース
   // ============================================================
-  --surface-color-lighter: var(--neutral-color-8);
-  --surface-color-light: var(--neutral-color-9);
-  --surface-color: var(--neutral-color-10);
-  --surface-color-dark: var(--neutral-color-10);
+  --surface-color-lighter: var(--neutral-color-7);
+  --surface-color-light: var(--neutral-color-8);
+  --surface-color: var(--neutral-color-9);
+  --surface-color-dark: var(--neutral-color-9);
   --surface-color-darker: var(--neutral-color-10);
 }
