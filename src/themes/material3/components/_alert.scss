@@ -1,4 +1,8 @@
-.alert {
-  --alert-border-color: var(--alert-bg-color);
-  --alert-border-radius: 0.5rem;
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .alert {
+    --alert-border-color: var(--alert-bg-color);
+    --alert-border-radius: 0.5rem;
+  }
 }

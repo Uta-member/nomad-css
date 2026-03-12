@@ -10131,7 +10131,7 @@ pre {
   --accordion-icon-hover-bg-color: rgba(0, 0, 0, 0.08);
 }
 
-.alert {
+:root[data-theme=material3] .alert {
   --alert-border-color: var(--alert-bg-color);
   --alert-border-radius: 0.5rem;
 }
@@ -10307,6 +10307,17 @@ pre {
 }
 :root[data-theme=material3] .radio:checked:hover:not(:disabled)::after, :root[data-theme=material3] .radio:checked:active:not(:disabled)::after {
   background-color: var(--radio-mark-color);
+}
+
+:root[data-theme=material3] .select {
+  --select-disabled-opacity: 1;
+  --select-focus-ring-width: 1.5px;
+  --select-focus-ring-color: var(--palette-default);
+  --select-focus-ring-opacity: 1;
+  --select-focus-ring-offset-width: 0px;
+  --select-filled-bg-color: var(--neutral-gray-2);
+  --select-filled-hover-bg-color: var(--neutral-gray-3);
+  --select-cursor: pointer;
 }
 
 /*# sourceMappingURL=material3.css.map */

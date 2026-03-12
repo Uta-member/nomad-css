@@ -1,0 +1,14 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .select {
+    --select-disabled-opacity: 1;
+    --select-focus-ring-width: 1.5px;
+    --select-focus-ring-color: var(--palette-default);
+    --select-focus-ring-opacity: 1;
+    --select-focus-ring-offset-width: 0px;
+    --select-filled-bg-color: var(--neutral-gray-2);
+    --select-filled-hover-bg-color: var(--neutral-gray-3);
+    --select-cursor: pointer;
+  }
+}
