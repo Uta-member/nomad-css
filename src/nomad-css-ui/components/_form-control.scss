@@ -100,6 +100,14 @@ $form-control-readonly-cursor-var: --#{$form-control-prefix}readonly-cursor !def
 // --------------------------------------------
 $form-control-transition-var: --#{$form-control-prefix}transition !default;
 
+// --------------------------------------------
+// Validation
+// --------------------------------------------
+$form-control-invalid-border-color-var: --#{$form-control-prefix}invalid-border-color !default;
+$form-control-valid-border-color-var: --#{$form-control-prefix}valid-border-color !default;
+$form-control-invalid-focus-ring-color-var: --#{$form-control-prefix}invalid-focus-ring-color !default;
+$form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-ring-color !default;
+
 // ============================================
 // Process
 // ============================================
@@ -139,7 +147,9 @@ $form-control-transition-var: --#{$form-control-prefix}transition !default;
   #{$form-control-hover-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-active-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-focus-color-var}: var(#{color-defines.$text-color-var});
-  #{$form-control-disabled-color-var}: var(#{color-defines.$border-color-dark-var});
+  #{$form-control-disabled-color-var}: var(
+    #{color-defines.$border-color-dark-var}
+  );
   #{$form-control-readonly-color-var}: var(#{$form-control-color-var});
 
   // --------------------------------------------
@@ -224,6 +234,14 @@ $form-control-transition-var: --#{$form-control-prefix}transition !default;
   #{$form-control-transition-var}:
     0.2s,
     outline 0.05s;
+
+  // --------------------------------------------
+  // Validation
+  // --------------------------------------------
+  #{$form-control-invalid-border-color-var}: var(--danger-default);
+  #{$form-control-valid-border-color-var}: var(--success-default);
+  #{$form-control-invalid-focus-ring-color-var}: var(--danger-default);
+  #{$form-control-valid-focus-ring-color-var}: var(--success-default);
 }
 
 // ============================================
@@ -367,4 +385,42 @@ $form-control-transition-var: --#{$form-control-prefix}transition !default;
   &:read-only {
     #{$form-control-readonly-bg-color-var}: transparent;
   }
+}
+
+// ============================================
+// Validation
+// ============================================
+.#{$form-control-class-name}.is-invalid {
+  #{$form-control-border-color-var}: var(
+    #{$form-control-invalid-border-color-var}
+  );
+  #{$form-control-hover-border-color-var}: var(
+    #{$form-control-invalid-border-color-var}
+  );
+  #{$form-control-active-border-color-var}: var(
+    #{$form-control-invalid-border-color-var}
+  );
+  #{$form-control-focus-border-color-var}: var(
+    #{$form-control-invalid-border-color-var}
+  );
+  #{$form-control-focus-ring-color-var}: var(
+    #{$form-control-invalid-focus-ring-color-var}
+  );
+}
+.#{$form-control-class-name}.is-valid {
+  #{$form-control-border-color-var}: var(
+    #{$form-control-valid-border-color-var}
+  );
+  #{$form-control-hover-border-color-var}: var(
+    #{$form-control-valid-border-color-var}
+  );
+  #{$form-control-active-border-color-var}: var(
+    #{$form-control-valid-border-color-var}
+  );
+  #{$form-control-focus-border-color-var}: var(
+    #{$form-control-valid-border-color-var}
+  );
+  #{$form-control-focus-ring-color-var}: var(
+    #{$form-control-valid-focus-ring-color-var}
+  );
 }

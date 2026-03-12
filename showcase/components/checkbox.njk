@@ -131,4 +131,32 @@ layout: layout.njk
       >
     </div>
   </div>
+
+  <!-- Checkbox Validation -->
+  <div class="demo-row">
+    <div class="demo-label">Validation (.is-invalid / .is-valid)</div>
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+      <div>
+        <label style="display: flex; align-items: center; gap: 0.5rem">
+          <input type="checkbox" class="checkbox is-invalid" />
+          同意する
+        </label>
+        <span class="form-hint invalid">同意が必要です</span>
+      </div>
+      <div>
+        <label style="display: flex; align-items: center; gap: 0.5rem">
+          <input type="checkbox" class="checkbox is-valid" checked />
+          同意する
+        </label>
+        <span class="form-hint valid">同意されました</span>
+      </div>
+      <div>
+        <label style="display: flex; align-items: center; gap: 0.5rem">
+          <input type="checkbox" class="checkbox is-invalid" checked />
+          同意する（checked 状態）
+        </label>
+        <span class="form-hint invalid">checked状態でもエラー植要生checked状態でもエラー表示可能</span>
+      </div>
+    </div>
+  </div>
 </section>

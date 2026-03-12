@@ -79,6 +79,12 @@ $radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor !default;
 // --------------------------------------------
 $radio-transition-var: --#{$radio-prefix}transition !default;
 
+// --------------------------------------------
+// Validation
+// --------------------------------------------
+$radio-invalid-border-color-var: --#{$radio-prefix}invalid-border-color !default;
+$radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
+
 // ============================================
 // Process
 // ============================================
@@ -109,7 +115,9 @@ $radio-transition-var: --#{$radio-prefix}transition !default;
   #{$radio-hover-border-color-var}: var(#{color-defines.$border-color-var});
   #{$radio-active-border-color-var}: var(#{color-defines.$border-color-var});
   #{$radio-focus-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$radio-disabled-border-color-var}: var(#{color-defines.$border-color-light-var});
+  #{$radio-disabled-border-color-var}: var(
+    #{color-defines.$border-color-light-var}
+  );
   #{$radio-checked-border-color-var}: var(#{palette.$palette-default-var});
   #{$radio-checked-hover-border-color-var}: var(
     #{palette.$palette-default-var}
@@ -141,7 +149,9 @@ $radio-transition-var: --#{$radio-prefix}transition !default;
   // Check Mark
   // --------------------------------------------
   #{$radio-mark-color-var}: var(#{palette.$palette-default-var});
-  #{$radio-disabled-mark-color-var}: var(#{color-defines.$border-color-light-var});
+  #{$radio-disabled-mark-color-var}: var(
+    #{color-defines.$border-color-light-var}
+  );
   #{$radio-mark-size-var}: 50%;
 
   // --------------------------------------------
@@ -154,6 +164,12 @@ $radio-transition-var: --#{$radio-prefix}transition !default;
   // Transition
   // --------------------------------------------
   #{$radio-transition-var}: 0.2s;
+
+  // --------------------------------------------
+  // Validation
+  // --------------------------------------------
+  #{$radio-invalid-border-color-var}: var(--danger-default);
+  #{$radio-valid-border-color-var}: var(--success-default);
 }
 
 // ============================================
@@ -259,4 +275,20 @@ $radio-transition-var: --#{$radio-prefix}transition !default;
   &:disabled::before {
     background-color: var(#{$radio-disabled-mark-color-var});
   }
+}
+
+// ============================================
+// Validation
+// ============================================
+.#{$radio-class-name}.is-invalid {
+  #{$radio-border-color-var}: var(#{$radio-invalid-border-color-var});
+  #{$radio-hover-border-color-var}: var(#{$radio-invalid-border-color-var});
+  #{$radio-active-border-color-var}: var(#{$radio-invalid-border-color-var});
+  #{$radio-focus-border-color-var}: var(#{$radio-invalid-border-color-var});
+}
+.#{$radio-class-name}.is-valid {
+  #{$radio-border-color-var}: var(#{$radio-valid-border-color-var});
+  #{$radio-hover-border-color-var}: var(#{$radio-valid-border-color-var});
+  #{$radio-active-border-color-var}: var(#{$radio-valid-border-color-var});
+  #{$radio-focus-border-color-var}: var(#{$radio-valid-border-color-var});
 }

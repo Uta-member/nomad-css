@@ -167,3 +167,47 @@ $semantic-neutral-with-name: (
     palette-saturation-var: --neutral-saturation,
   ),
 ) !default;
+
+$semantic-danger-with-name: (
+  hue: var(#{hue-colors.$hue-red-var}),
+  saturation: 80%,
+  accent-threshold: 50%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 6,
+    dark: 8,
+    darker: 9,
+  ),
+  names: (
+    palette-prefix: danger-,
+    palette-color-prefix: danger-color-,
+    palette-accent-prefix: danger-accent-,
+    palette-gray-prefix: danger-gray-,
+    palette-lightness-prefix: danger-lightness-,
+    palette-hue-var: --danger-hue,
+    palette-saturation-var: --danger-saturation,
+  ),
+) !default;
+
+$semantic-success-with-name: (
+  hue: var(#{hue-colors.$hue-green-var}),
+  saturation: 60%,
+  accent-threshold: 45%,
+  levels: (
+    lighter: 2,
+    light: 4,
+    default: 7,
+    dark: 9,
+    darker: 10,
+  ),
+  names: (
+    palette-prefix: success-,
+    palette-color-prefix: success-color-,
+    palette-accent-prefix: success-accent-,
+    palette-gray-prefix: success-gray-,
+    palette-lightness-prefix: success-lightness-,
+    palette-hue-var: --success-hue,
+    palette-saturation-var: --success-saturation,
+  ),
+) !default;

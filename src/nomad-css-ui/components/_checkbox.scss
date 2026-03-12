@@ -82,6 +82,12 @@ $check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor !default;
 // --------------------------------------------
 $check-box-transition-var: --#{$check-box-prefix}transition !default;
 
+// --------------------------------------------
+// Validation
+// --------------------------------------------
+$check-box-invalid-border-color-var: --#{$check-box-prefix}invalid-border-color !default;
+$check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !default;
+
 // ============================================
 // Process
 // ============================================
@@ -124,7 +130,9 @@ $check-box-transition-var: --#{$check-box-prefix}transition !default;
     #{color-defines.$border-color-var}
   );
   #{$check-box-focus-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$check-box-disabled-border-color-var}: var(#{color-defines.$border-color-light-var});
+  #{$check-box-disabled-border-color-var}: var(
+    #{color-defines.$border-color-light-var}
+  );
   #{$check-box-checked-border-color-var}: var(#{palette.$palette-default-var});
   #{$check-box-checked-hover-border-color-var}: var(
     #{palette.$palette-default-var}
@@ -172,6 +180,12 @@ $check-box-transition-var: --#{$check-box-prefix}transition !default;
   // Transition
   // --------------------------------------------
   #{$check-box-transition-var}: 0.2s;
+
+  // --------------------------------------------
+  // Validation
+  // --------------------------------------------
+  #{$check-box-invalid-border-color-var}: var(--danger-default);
+  #{$check-box-valid-border-color-var}: var(--success-default);
 }
 
 // ============================================
@@ -283,4 +297,32 @@ $check-box-transition-var: --#{$check-box-prefix}transition !default;
   &:indeterminate::before {
     mask-image: var(#{$check-box-indeterminate-mark-image-var});
   }
+}
+
+// ============================================
+// Validation
+// ============================================
+.#{$check-box-class-name}.is-invalid {
+  #{$check-box-border-color-var}: var(#{$check-box-invalid-border-color-var});
+  #{$check-box-hover-border-color-var}: var(
+    #{$check-box-invalid-border-color-var}
+  );
+  #{$check-box-active-border-color-var}: var(
+    #{$check-box-invalid-border-color-var}
+  );
+  #{$check-box-focus-border-color-var}: var(
+    #{$check-box-invalid-border-color-var}
+  );
+}
+.#{$check-box-class-name}.is-valid {
+  #{$check-box-border-color-var}: var(#{$check-box-valid-border-color-var});
+  #{$check-box-hover-border-color-var}: var(
+    #{$check-box-valid-border-color-var}
+  );
+  #{$check-box-active-border-color-var}: var(
+    #{$check-box-valid-border-color-var}
+  );
+  #{$check-box-focus-border-color-var}: var(
+    #{$check-box-valid-border-color-var}
+  );
 }

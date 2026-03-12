@@ -14,7 +14,6 @@
     "build:showcase": "eleventy --input=showcase --output=_site",
     "build": "npm run build:css && npm run build:showcase",
     "watch:css": "sass --watch src:dist/css",
-    "watch:showcase": "eleventy --input=showcase --output=_site --serve",
     "watch": "eleventy --input=showcase --output=_site --serve",
     "format": "prettier --write \"**/*.{scss,html,js,json,njk}\""
   },

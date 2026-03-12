@@ -67,3 +67,17 @@ $default-palette: semantics.$semantic-primary !default;
 :root {
   @include palette.generate-palette(semantics.$semantic-neutral-with-name);
 }
+
+// --------------------------------------------
+// Dangerパレットの :root 生成
+// --------------------------------------------
+:root {
+  @include palette.generate-palette(semantics.$semantic-danger-with-name);
+}
+
+// --------------------------------------------
+// Successパレットの :root 生成
+// --------------------------------------------
+:root {
+  @include palette.generate-palette(semantics.$semantic-success-with-name);
+}

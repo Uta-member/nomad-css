@@ -1,0 +1,67 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$form-hint-prefix: #{prefixes.$prefix}form-hint- !default;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$form-hint-class-name: form-hint !default;
+
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$form-hint-color-var: --#{$form-hint-prefix}color !default;
+$form-hint-invalid-color-var: --#{$form-hint-prefix}invalid-color !default;
+$form-hint-valid-color-var: --#{$form-hint-prefix}valid-color !default;
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$form-hint-font-size-var: --#{$form-hint-prefix}font-size !default;
+$form-hint-margin-top-var: --#{$form-hint-prefix}margin-top !default;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+.#{$form-hint-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$form-hint-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$form-hint-invalid-color-var}: var(--danger-dark);
+  #{$form-hint-valid-color-var}: var(--success-dark);
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$form-hint-font-size-var}: 0.875em;
+  #{$form-hint-margin-top-var}: 0.25rem;
+}
+
+// ============================================
+// Overrides
+// ============================================
+.#{$form-hint-class-name} {
+  display: block;
+  color: var(#{$form-hint-color-var});
+  font-size: var(#{$form-hint-font-size-var});
+  margin-top: var(#{$form-hint-margin-top-var});
+
+  &.invalid {
+    color: var(#{$form-hint-invalid-color-var});
+  }
+
+  &.valid {
+    color: var(#{$form-hint-valid-color-var});
+  }
+}
