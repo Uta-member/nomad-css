@@ -522,74 +522,108 @@ h6,
 }
 
 :root {
-  --shadow--none-offset-x: 0;
-  --shadow--none-offset-y: 0;
-  --shadow--none-blur: 0;
-  --shadow--none-spread: 0;
-  --shadow--none-color: transparent;
-  --shadow-none: var(--shadow--none-offset-x)
-    var(--shadow--none-offset-y)
-    var(--shadow--none-blur)
-    var(--shadow--none-spread)
-    var(--shadow--none-color);
-  --shadow--sm-offset-x: 0px;
-  --shadow--sm-offset-y: 1px;
-  --shadow--sm-blur: 3px;
-  --shadow--sm-spread: 0px;
-  --shadow--sm-color: rgba(0, 0, 0, 0.2);
-  --shadow-sm: var(--shadow--sm-offset-x)
-    var(--shadow--sm-offset-y)
-    var(--shadow--sm-blur)
-    var(--shadow--sm-spread)
-    var(--shadow--sm-color);
-  --shadow--md-offset-x: 0px;
-  --shadow--md-offset-y: 4px;
-  --shadow--md-blur: 6px;
-  --shadow--md-spread: 0px;
-  --shadow--md-color: rgba(0, 0, 0, 0.2);
-  --shadow-md: var(--shadow--md-offset-x)
-    var(--shadow--md-offset-y)
-    var(--shadow--md-blur)
-    var(--shadow--md-spread)
-    var(--shadow--md-color);
-  --shadow--lg-offset-x: 0px;
-  --shadow--lg-offset-y: 10px;
-  --shadow--lg-blur: 20px;
-  --shadow--lg-spread: 0px;
-  --shadow--lg-color: rgba(0, 0, 0, 0.2);
-  --shadow-lg: var(--shadow--lg-offset-x)
-    var(--shadow--lg-offset-y)
-    var(--shadow--lg-blur)
-    var(--shadow--lg-spread)
-    var(--shadow--lg-color);
+  --shadow--0-offset-x: 0;
+  --shadow--0-offset-y: 0;
+  --shadow--0-blur: 0;
+  --shadow--0-spread: 0;
+  --shadow--0-color: transparent;
+  --shadow-0: var(--shadow--0-offset-x)
+    var(--shadow--0-offset-y)
+    var(--shadow--0-blur)
+    var(--shadow--0-spread)
+    var(--shadow--0-color);
+  --shadow--1-offset-x: 0px;
+  --shadow--1-offset-y: 2px;
+  --shadow--1-blur: 3px;
+  --shadow--1-spread: 0px;
+  --shadow--1-color: rgba(0, 0, 0, 0.2);
+  --shadow-1: var(--shadow--1-offset-x)
+    var(--shadow--1-offset-y)
+    var(--shadow--1-blur)
+    var(--shadow--1-spread)
+    var(--shadow--1-color);
+  --shadow--2-offset-x: 0px;
+  --shadow--2-offset-y: 4px;
+  --shadow--2-blur: 6px;
+  --shadow--2-spread: 0px;
+  --shadow--2-color: rgba(0, 0, 0, 0.2);
+  --shadow-2: var(--shadow--2-offset-x)
+    var(--shadow--2-offset-y)
+    var(--shadow--2-blur)
+    var(--shadow--2-spread)
+    var(--shadow--2-color);
+  --shadow--3-offset-x: 0px;
+  --shadow--3-offset-y: 6px;
+  --shadow--3-blur: 10px;
+  --shadow--3-spread: 0px;
+  --shadow--3-color: rgba(0, 0, 0, 0.2);
+  --shadow-3: var(--shadow--3-offset-x)
+    var(--shadow--3-offset-y)
+    var(--shadow--3-blur)
+    var(--shadow--3-spread)
+    var(--shadow--3-color);
+  --shadow--4-offset-x: 0px;
+  --shadow--4-offset-y: 8px;
+  --shadow--4-blur: 10px;
+  --shadow--4-spread: 0px;
+  --shadow--4-color: rgba(0, 0, 0, 0.2);
+  --shadow-4: var(--shadow--4-offset-x)
+    var(--shadow--4-offset-y)
+    var(--shadow--4-blur)
+    var(--shadow--4-spread)
+    var(--shadow--4-color);
+  --shadow--5-offset-x: 0px;
+  --shadow--5-offset-y: 10px;
+  --shadow--5-blur: 10px;
+  --shadow--5-spread: 0px;
+  --shadow--5-color: rgba(0, 0, 0, 0.2);
+  --shadow-5: var(--shadow--5-offset-x)
+    var(--shadow--5-offset-y)
+    var(--shadow--5-blur)
+    var(--shadow--5-spread)
+    var(--shadow--5-color);
 }
 
-.shadow-none {
-  box-shadow: var(--shadow-none);
+.shadow-0 {
+  box-shadow: var(--shadow-0);
 }
-.shadow-none.inset {
-  box-shadow: inset var(--shadow-none);
-}
-
-.shadow-sm {
-  box-shadow: var(--shadow-sm);
-}
-.shadow-sm.inset {
-  box-shadow: inset var(--shadow-sm);
+.shadow-0.inset {
+  box-shadow: inset var(--shadow-0);
 }
 
-.shadow-md {
-  box-shadow: var(--shadow-md);
+.shadow-1 {
+  box-shadow: var(--shadow-1);
 }
-.shadow-md.inset {
-  box-shadow: inset var(--shadow-md);
+.shadow-1.inset {
+  box-shadow: inset var(--shadow-1);
 }
 
-.shadow-lg {
-  box-shadow: var(--shadow-lg);
+.shadow-2 {
+  box-shadow: var(--shadow-2);
 }
-.shadow-lg.inset {
-  box-shadow: inset var(--shadow-lg);
+.shadow-2.inset {
+  box-shadow: inset var(--shadow-2);
+}
+
+.shadow-3 {
+  box-shadow: var(--shadow-3);
+}
+.shadow-3.inset {
+  box-shadow: inset var(--shadow-3);
+}
+
+.shadow-4 {
+  box-shadow: var(--shadow-4);
+}
+.shadow-4.inset {
+  box-shadow: inset var(--shadow-4);
+}
+
+.shadow-5 {
+  box-shadow: var(--shadow-5);
+}
+.shadow-5.inset {
+  box-shadow: inset var(--shadow-5);
 }
 
 :root {
@@ -9576,8 +9610,8 @@ h6,
   --card-footer-bg-color: var(--surface-color-dark);
   --card-footer-color: var(--text-color-light);
   --card-border-radius: 0.375rem;
-  --card-border-width: 1px;
-  --card-box-shadow: none;
+  --card-outline-border-width: 1px;
+  --card-inner-border-width: 1px;
   --card-padding: 1rem;
   --card-header-padding: 0.75rem 1rem;
   --card-footer-padding: 0.75rem 1rem;
@@ -9586,16 +9620,15 @@ h6,
 .card {
   background-color: var(--card-bg-color);
   color: var(--card-color);
-  border: var(--card-border-width) solid var(--card-border-color);
+  border: var(--card-outline-border-width) solid var(--card-border-color);
   border-radius: var(--card-border-radius);
-  box-shadow: var(--card-box-shadow);
   overflow: hidden;
 }
 .card > .card-header {
   padding: var(--card-header-padding);
   background-color: var(--card-header-bg-color);
   color: var(--card-header-color);
-  border-bottom: var(--card-border-width) solid var(--card-border-color);
+  border-bottom: var(--card-inner-border-width) solid var(--card-border-color);
 }
 .card > .card-body {
   padding: var(--card-padding);
@@ -9604,25 +9637,25 @@ h6,
   padding: var(--card-footer-padding);
   background-color: var(--card-footer-bg-color);
   color: var(--card-footer-color);
-  border-top: var(--card-border-width) solid var(--card-border-color);
+  border-top: var(--card-inner-border-width) solid var(--card-border-color);
 }
 .card > .card-img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-bottom: var(--card-border-width) solid var(--card-border-color);
+  border-bottom: var(--card-inner-border-width) solid var(--card-border-color);
 }
 .card > .card-img-bottom {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-top: var(--card-border-width) solid var(--card-border-color);
+  border-top: var(--card-inner-border-width) solid var(--card-border-color);
 }
 
-.card.outlined {
-  --card-box-shadow: none;
+.card.outlineless {
+  --card-outline-border-width: none;
 }
 
 .divider {

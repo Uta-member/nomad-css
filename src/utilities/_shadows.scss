@@ -19,31 +19,45 @@ $shadow-class-name: "shadow";
 // Variables
 // ============================================
 $shadow-variations: (
-  none: (
+  0: (
     offset-x: 0,
     offset-y: 0,
     blur: 0,
     spread: 0,
     color: transparent,
   ),
-  sm: (
+  1: (
     offset-x: 0px,
-    offset-y: 1px,
+    offset-y: 2px,
     blur: 3px,
     spread: 0px,
     color: rgba(0, 0, 0, 0.2),
   ),
-  md: (
+  2: (
     offset-x: 0px,
     offset-y: 4px,
     blur: 6px,
     spread: 0px,
     color: rgba(0, 0, 0, 0.2),
   ),
-  lg: (
+  3: (
+    offset-x: 0px,
+    offset-y: 6px,
+    blur: 10px,
+    spread: 0px,
+    color: rgba(0, 0, 0, 0.2),
+  ),
+  4: (
+    offset-x: 0px,
+    offset-y: 8px,
+    blur: 10px,
+    spread: 0px,
+    color: rgba(0, 0, 0, 0.2),
+  ),
+  5: (
     offset-x: 0px,
     offset-y: 10px,
-    blur: 20px,
+    blur: 10px,
     spread: 0px,
     color: rgba(0, 0, 0, 0.2),
   ),
