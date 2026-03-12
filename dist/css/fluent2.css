@@ -7834,17 +7834,17 @@ h6,
   --palette-accent-dark-lightness: 10%;
   --palette-accent-threshold: 50%;
   --palette-gray-saturation: 5%;
-  --neutral-lightness-0: 97%;
-  --neutral-lightness-1: 93%;
-  --neutral-lightness-2: 85%;
-  --neutral-lightness-3: 75%;
-  --neutral-lightness-4: 65%;
-  --neutral-lightness-5: 50%;
-  --neutral-lightness-6: 42%;
-  --neutral-lightness-7: 34%;
-  --neutral-lightness-8: 26%;
-  --neutral-lightness-9: 18%;
-  --neutral-lightness-10: 10%;
+  --neutral-lightness-0: 99%;
+  --neutral-lightness-1: 97%;
+  --neutral-lightness-2: 94%;
+  --neutral-lightness-3: 85%;
+  --neutral-lightness-4: 75%;
+  --neutral-lightness-5: 55%;
+  --neutral-lightness-6: 45%;
+  --neutral-lightness-7: 35%;
+  --neutral-lightness-8: 25%;
+  --neutral-lightness-9: 15%;
+  --neutral-lightness-10: 5%;
   --neutral-color-0: hsl(
     var(--neutral-hue),
     var(--neutral-saturation),
@@ -8016,7 +8016,7 @@ h6,
   --neutral-accent-5: hsl(
     var(--neutral-hue),
     var(--palette-gray-saturation),
-    var(--palette-accent-light-lightness)
+    var(--palette-accent-dark-lightness)
   );
   --neutral-accent-6: hsl(
     var(--neutral-hue),
