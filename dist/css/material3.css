@@ -10136,6 +10136,9 @@ pre {
   --form-control-focus-ring-color: var(--palette-default);
   --form-control-focus-ring-opacity: 1;
   --form-control-focus-ring-offset-width: 0px;
+  --form-control-filled-bg-color: var(--neutral-gray-2);
+  --form-control-filled-hover-bg-color: var(--neutral-gray-3);
+  --form-control-cursor: pointer;
 }
 
 /*# sourceMappingURL=material3.css.map */
