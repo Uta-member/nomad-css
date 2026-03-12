@@ -8315,6 +8315,9 @@ h6,
   --radio-cursor: pointer;
   --radio-disabled-cursor: not-allowed;
   --radio-transition: 0.2s;
+  --radio-focus-ring-width: 2px;
+  --radio-focus-ring-color: var(--palette-default);
+  --radio-focus-ring-offset-width: 2px;
   --radio-invalid-border-color: var(--danger-default);
   --radio-valid-border-color: var(--success-default);
 }
@@ -8363,6 +8366,10 @@ h6,
 .radio:focus-visible {
   background-color: var(--radio-focus-bg-color);
   border-color: var(--radio-focus-border-color);
+  outline-width: var(--radio-focus-ring-width);
+  outline-color: var(--radio-focus-ring-color);
+  outline-offset: var(--radio-focus-ring-offset-width);
+  outline-style: solid;
 }
 .radio:disabled {
   background-color: var(--radio-disabled-bg-color);
@@ -8385,6 +8392,10 @@ h6,
 .radio:checked:focus-visible, .radio:indeterminate:focus-visible {
   background-color: var(--radio-checked-focus-bg-color);
   border-color: var(--radio-checked-focus-border-color);
+  outline-width: var(--radio-focus-ring-width);
+  outline-color: var(--radio-focus-ring-color);
+  outline-offset: var(--radio-focus-ring-offset-width);
+  outline-style: solid;
 }
 .radio:checked:disabled, .radio:indeterminate:disabled {
   background-color: var(--radio-checked-disabled-bg-color);
@@ -10256,6 +10267,46 @@ pre {
   --list-disabled-color: var(--text-color-lighter);
   --list-border-width: none;
   --list-active-border-radius: 0.5rem;
+}
+
+:root[data-theme=material3] .radio {
+  --radio-mark-size: 68%;
+  --radio-state-layer-size: 2.5rem;
+  --radio-focus-ring-width: 0;
+  position: relative;
+  overflow: visible;
+}
+:root[data-theme=material3] .radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--radio-state-layer-size);
+  height: var(--radio-state-layer-size);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  background-color: var(--text-color);
+  border: 2px solid transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.2s, opacity 0.2s;
+}
+:root[data-theme=material3] .radio:hover:not(:disabled)::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.08;
+}
+:root[data-theme=material3] .radio:active:not(:disabled)::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.16;
+}
+:root[data-theme=material3] .radio:focus-visible:not(:disabled)::after {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: transparent;
+  border-color: var(--neutral-default);
+  opacity: 1;
+}
+:root[data-theme=material3] .radio:checked:hover:not(:disabled)::after, :root[data-theme=material3] .radio:checked:active:not(:disabled)::after {
+  background-color: var(--radio-mark-color);
 }
 
 /*# sourceMappingURL=material3.css.map */

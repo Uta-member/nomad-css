@@ -8315,6 +8315,9 @@ h6,
   --radio-cursor: pointer;
   --radio-disabled-cursor: not-allowed;
   --radio-transition: 0.2s;
+  --radio-focus-ring-width: 2px;
+  --radio-focus-ring-color: var(--palette-default);
+  --radio-focus-ring-offset-width: 2px;
   --radio-invalid-border-color: var(--danger-default);
   --radio-valid-border-color: var(--success-default);
 }
@@ -8363,6 +8366,10 @@ h6,
 .radio:focus-visible {
   background-color: var(--radio-focus-bg-color);
   border-color: var(--radio-focus-border-color);
+  outline-width: var(--radio-focus-ring-width);
+  outline-color: var(--radio-focus-ring-color);
+  outline-offset: var(--radio-focus-ring-offset-width);
+  outline-style: solid;
 }
 .radio:disabled {
   background-color: var(--radio-disabled-bg-color);
@@ -8385,6 +8392,10 @@ h6,
 .radio:checked:focus-visible, .radio:indeterminate:focus-visible {
   background-color: var(--radio-checked-focus-bg-color);
   border-color: var(--radio-checked-focus-border-color);
+  outline-width: var(--radio-focus-ring-width);
+  outline-color: var(--radio-focus-ring-color);
+  outline-offset: var(--radio-focus-ring-offset-width);
+  outline-style: solid;
 }
 .radio:checked:disabled, .radio:indeterminate:disabled {
   background-color: var(--radio-checked-disabled-bg-color);

@@ -80,6 +80,13 @@ $radio-disabled-cursor-var: --#{$radio-prefix}disabled-cursor !default;
 $radio-transition-var: --#{$radio-prefix}transition !default;
 
 // --------------------------------------------
+// Focus Ring
+// --------------------------------------------
+$radio-focus-ring-width-var: --#{$radio-prefix}focus-ring-width !default;
+$radio-focus-ring-color-var: --#{$radio-prefix}focus-ring-color !default;
+$radio-focus-ring-offset-width-var: --#{$radio-prefix}focus-ring-offset-width !default;
+
+// --------------------------------------------
 // Validation
 // --------------------------------------------
 $radio-invalid-border-color-var: --#{$radio-prefix}invalid-border-color !default;
@@ -166,6 +173,13 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
   #{$radio-transition-var}: 0.2s;
 
   // --------------------------------------------
+  // Focus Ring
+  // --------------------------------------------
+  #{$radio-focus-ring-width-var}: 2px;
+  #{$radio-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$radio-focus-ring-offset-width-var}: 2px;
+
+  // --------------------------------------------
   // Validation
   // --------------------------------------------
   #{$radio-invalid-border-color-var}: var(--danger-default);
@@ -224,6 +238,10 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
   &:focus-visible {
     background-color: var(#{$radio-focus-bg-color-var});
     border-color: var(#{$radio-focus-border-color-var});
+    outline-width: var(#{$radio-focus-ring-width-var});
+    outline-color: var(#{$radio-focus-ring-color-var});
+    outline-offset: var(#{$radio-focus-ring-offset-width-var});
+    outline-style: solid;
   }
   &:disabled {
     background-color: var(#{$radio-disabled-bg-color-var});
@@ -248,6 +266,10 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
     &:focus-visible {
       background-color: var(#{$radio-checked-focus-bg-color-var});
       border-color: var(#{$radio-checked-focus-border-color-var});
+      outline-width: var(#{$radio-focus-ring-width-var});
+      outline-color: var(#{$radio-focus-ring-color-var});
+      outline-offset: var(#{$radio-focus-ring-offset-width-var});
+      outline-style: solid;
     }
     &:disabled {
       background-color: var(#{$radio-checked-disabled-bg-color-var});
