@@ -1,0 +1,174 @@
+---
+title: Spacing
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Spacing Utilities</h1>
+
+  <!-- Margin -->
+  <div class="demo-row">
+    <div class="demo-label">Margin (.m-*)</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
+      {% for i in [0, 1, 2, 3, 4, 5] %}
+        <div class="spacing-wrap">
+          <div class="m-{{ i }} demo-box spacing-inner">.m-{{ i }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Margin X / Y -->
+  <div class="demo-row">
+    <div class="demo-label">Margin X / Y</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
+      {% for i in [1, 2, 3, 4, 5] %}
+        <div class="spacing-wrap">
+          <div class="mx-{{ i }} demo-box spacing-inner">.mx-{{ i }}</div>
+        </div>
+      {% endfor %}
+      {% for i in [1, 2, 3, 4, 5] %}
+        <div class="spacing-wrap">
+          <div class="my-{{ i }} demo-box spacing-inner">.my-{{ i }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Margin Sides -->
+  <div class="demo-row">
+    <div class="demo-label">Margin Sides (level 3)</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
+      <div class="spacing-wrap">
+        <div class="mt-3 demo-box spacing-inner">.mt-3</div>
+      </div>
+      <div class="spacing-wrap">
+        <div class="mr-3 demo-box spacing-inner">.mr-3</div>
+      </div>
+      <div class="spacing-wrap">
+        <div class="mb-3 demo-box spacing-inner">.mb-3</div>
+      </div>
+      <div class="spacing-wrap">
+        <div class="ml-3 demo-box spacing-inner">.ml-3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Padding -->
+  <div class="demo-row">
+    <div class="demo-label">Padding (.p-*)</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
+      {% for i in [0, 1, 2, 3, 4, 5] %}
+        <div class="spacing-pad-box p-{{ i }}">
+          <span>.p-{{ i }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Padding X / Y -->
+  <div class="demo-row">
+    <div class="demo-label">Padding X / Y</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
+      {% for i in [1, 2, 3, 4, 5] %}
+        <div class="spacing-pad-box px-{{ i }}">
+          <span>.px-{{ i }}</span>
+        </div>
+      {% endfor %}
+      {% for i in [1, 2, 3, 4, 5] %}
+        <div class="spacing-pad-box py-{{ i }}">
+          <span>.py-{{ i }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Padding Sides -->
+  <div class="demo-row">
+    <div class="demo-label">Padding Sides (level 3)</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
+      <div class="spacing-pad-box pt-3"><span>.pt-3</span></div>
+      <div class="spacing-pad-box pr-3"><span>.pr-3</span></div>
+      <div class="spacing-pad-box pb-3"><span>.pb-3</span></div>
+      <div class="spacing-pad-box pl-3"><span>.pl-3</span></div>
+    </div>
+  </div>
+
+  <!-- Gap -->
+  <div class="demo-row">
+    <div class="demo-label">Gap (.gap-*)</div>
+    <div class="d-flex flex-column" style="gap: 0.75rem">
+      {% for i in [0, 1, 2, 3, 4, 5] %}
+        <div>
+          <p class="small">.gap-{{ i }}</p>
+          <div class="d-flex gap-{{ i }}">
+            <span class="demo-box">A</span>
+            <span class="demo-box">B</span>
+            <span class="demo-box">C</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Gap X / Y -->
+  <div class="demo-row">
+    <div class="demo-label">Gap X / Y</div>
+    <div class="d-flex" style="gap: 2rem; align-items: flex-start">
+      <div>
+        <p class="small">.gapx-3 (column-gap)</p>
+        <div class="d-flex flex-wrap gapx-3">
+          <span class="demo-box">A</span>
+          <span class="demo-box">B</span>
+          <span class="demo-box">C</span>
+        </div>
+      </div>
+      <div>
+        <p class="small">.gapy-3 (row-gap)</p>
+        <div class="d-flex flex-wrap gapy-3" style="max-width: 80px">
+          <span class="demo-box">A</span>
+          <span class="demo-box">B</span>
+          <span class="demo-box">C</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  /* マージンの可視化: 外側のラッパーをドット枠で表示 */
+  .spacing-wrap {
+    display: inline-block;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--surface-color) 0px,
+      var(--surface-color) 4px,
+      var(--surface-color-lighter) 4px,
+      var(--surface-color-lighter) 8px
+    );
+    border: 1px dashed var(--border-color);
+  }
+  .spacing-inner {
+    background-color: var(--surface-color-lighter);
+  }
+  /* パディングの可視化: デフォルトpaddingなしのボックス */
+  .spacing-pad-box {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--surface-color) 0px,
+      var(--surface-color) 4px,
+      var(--surface-color-lighter) 4px,
+      var(--surface-color-lighter) 8px
+    );
+    border: 1px dashed var(--border-color);
+    display: inline-block;
+  }
+  .spacing-pad-box span {
+    display: block;
+    background-color: var(--surface-color-lighter);
+    white-space: nowrap;
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+</style>

@@ -1,0 +1,108 @@
+// ============================================
+// Overridable Variables
+// ============================================
+$margin-class-name: m !default;
+$margin-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+) !default;
+
+$padding-class-name: p !default;
+$padding-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+) !default;
+
+$gap-class-name: gap !default;
+$gap-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+) !default;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// Margin
+// ============================================
+@each $key, $value in $margin-values {
+  .#{$margin-class-name}-#{$key} {
+    margin: #{$value} !important;
+  }
+  .#{$margin-class-name}t-#{$key} {
+    margin-top: #{$value} !important;
+  }
+  .#{$margin-class-name}r-#{$key} {
+    margin-right: #{$value} !important;
+  }
+  .#{$margin-class-name}b-#{$key} {
+    margin-bottom: #{$value} !important;
+  }
+  .#{$margin-class-name}l-#{$key} {
+    margin-left: #{$value} !important;
+  }
+  .#{$margin-class-name}x-#{$key} {
+    margin-left: #{$value} !important;
+    margin-right: #{$value} !important;
+  }
+  .#{$margin-class-name}y-#{$key} {
+    margin-top: #{$value} !important;
+    margin-bottom: #{$value} !important;
+  }
+}
+
+// ============================================
+// Padding
+// ============================================
+@each $key, $value in $padding-values {
+  .#{$padding-class-name}-#{$key} {
+    padding: #{$value} !important;
+  }
+  .#{$padding-class-name}t-#{$key} {
+    padding-top: #{$value} !important;
+  }
+  .#{$padding-class-name}r-#{$key} {
+    padding-right: #{$value} !important;
+  }
+  .#{$padding-class-name}b-#{$key} {
+    padding-bottom: #{$value} !important;
+  }
+  .#{$padding-class-name}l-#{$key} {
+    padding-left: #{$value} !important;
+  }
+  .#{$padding-class-name}x-#{$key} {
+    padding-left: #{$value} !important;
+    padding-right: #{$value} !important;
+  }
+  .#{$padding-class-name}y-#{$key} {
+    padding-top: #{$value} !important;
+    padding-bottom: #{$value} !important;
+  }
+}
+
+// ============================================
+// Gap
+// ============================================
+@each $key, $value in $gap-values {
+  .#{$gap-class-name}-#{$key} {
+    gap: #{$value} !important;
+  }
+  .#{$gap-class-name}x-#{$key} {
+    column-gap: #{$value} !important;
+  }
+  .#{$gap-class-name}y-#{$key} {
+    row-gap: #{$value} !important;
+  }
+}

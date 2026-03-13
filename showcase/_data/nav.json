@@ -28,6 +28,7 @@
     { "title": "Colors", "slug": "colors" },
     { "title": "Layout", "slug": "layout" },
     { "title": "Borders", "slug": "borders" },
-    { "title": "Shadows", "slug": "shadows" }
+    { "title": "Shadows", "slug": "shadows" },
+    { "title": "Spacing", "slug": "spacing" }
   ]
 }
