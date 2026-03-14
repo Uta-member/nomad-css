@@ -1,0 +1,10 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .select {
+    --select-border-radius: 8px;
+    --select-font-size: 14px;
+    --select-padding-y: 7px;
+    --select-padding-x: 10px;
+  }
+}

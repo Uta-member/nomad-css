@@ -1,0 +1,19 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+// Web 2.0 glossy button — shiny top highlight + strong drop shadow
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 5px;
+    --button-font-size: 13px;
+    --button-padding-y: 6px;
+    --button-padding-x: 16px;
+    --button-border-width: 1px;
+    // Glossy top highlight + drop shadow = Web 2.0 signature look
+    --button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55),
+      0 2px 4px rgba(0, 40, 100, 0.3);
+    --button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55),
+      0 3px 6px rgba(0, 40, 100, 0.35);
+    --button-active-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,9 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+// Web 2.0 badges were often rounded/pill-shaped with shiny look
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .badge {
+    --badge-border-radius: 10px;
+    --badge-font-size: 11px;
+  }
+}

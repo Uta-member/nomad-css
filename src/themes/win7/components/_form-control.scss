@@ -1,0 +1,10 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 3px;
+    --form-control-font-size: 12px;
+    --form-control-padding-y: 4px;
+    --form-control-padding-x: 6px;
+  }
+}

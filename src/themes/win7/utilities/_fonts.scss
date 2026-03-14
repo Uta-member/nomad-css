@@ -1,0 +1,10 @@
+@use "./_prefixes.scss" as prefixes;
+
+// Windows 7 used Segoe UI — Microsoft's modern system font
+:root[data-theme="#{prefixes.$theme-name}"] {
+  --font-family: "Segoe UI", "Meiryo UI", Meiryo, Tahoma, sans-serif;
+  --font-size-base: 12px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+}

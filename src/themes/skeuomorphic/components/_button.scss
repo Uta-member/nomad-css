@@ -1,0 +1,35 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+// Skeuomorphic button — deep bevel, strong inner highlight, realistic 3D appearance
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 10px;
+    --button-font-size: 14px;
+    --button-padding-y: 8px;
+    --button-padding-x: 20px;
+    --button-border-width: 1px;
+    // Layered shadows: strong top inner white highlight + bottom inner dark shadow + outer drop
+    --button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.4),
+      0 1px 2px rgba(0, 0, 0, 0.3);
+    --button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.45),
+      0 2px 4px rgba(0, 0, 0, 0.35);
+    // Pressed look — invert the bevel
+    --button-active-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .button {
+    --button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.6),
+      0 1px 2px rgba(0, 0, 0, 0.5);
+    --button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.65),
+      0 2px 4px rgba(0, 0, 0, 0.55);
+    --button-active-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}

@@ -1,0 +1,32 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+// Windows 7 Aero button — characteristic glowing highlight + subtle gradient feel
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 3px;
+    --button-font-size: 12px;
+    --button-padding-y: 5px;
+    --button-padding-x: 14px;
+    --button-border-width: 1px;
+    // Aero effect: strong top white line + soft blue glow outer shadow
+    --button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85),
+      inset 0 -1px 0 rgba(0, 40, 100, 0.08), 0 1px 3px rgba(0, 60, 130, 0.2);
+    --button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 -1px 0 rgba(0, 40, 100, 0.1), 0 0 6px rgba(0, 100, 200, 0.4),
+      0 1px 3px rgba(0, 60, 130, 0.25);
+    --button-active-box-shadow: inset 0 2px 4px rgba(0, 40, 100, 0.2),
+      inset 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 60, 130, 0.15);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .button {
+    --button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.5);
+    --button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0 8px rgba(60, 140, 220, 0.5),
+      0 1px 3px rgba(0, 0, 0, 0.55);
+    --button-active-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}

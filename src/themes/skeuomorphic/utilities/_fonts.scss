@@ -1,0 +1,10 @@
+@use "./_prefixes.scss" as prefixes;
+
+// iOS 5/6 era used Helvetica Neue — clean, humanist sans-serif
+:root[data-theme="#{prefixes.$theme-name}"] {
+  --font-family: "Helvetica Neue", Helvetica, "Gill Sans MT", Arial, sans-serif;
+  --font-size-base: 14px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+}

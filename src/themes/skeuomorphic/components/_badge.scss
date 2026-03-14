@@ -1,0 +1,8 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .badge {
+    --badge-border-radius: 10px;
+    --badge-font-size: 12px;
+  }
+}

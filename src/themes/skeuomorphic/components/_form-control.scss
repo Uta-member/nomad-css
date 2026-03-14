@@ -1,0 +1,11 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+// iOS text fields had inner shadow (sunken/inset appearance)
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 8px;
+    --form-control-font-size: 14px;
+    --form-control-padding-y: 7px;
+    --form-control-padding-x: 10px;
+  }
+}

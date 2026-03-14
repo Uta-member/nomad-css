@@ -1,0 +1,8 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .list {
+    --list-item-border-radius: 2px;
+    --list-font-size: 12px;
+  }
+}
