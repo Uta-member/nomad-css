@@ -8,12 +8,12 @@
 // --------------------------------------------
 // Prefixes
 // --------------------------------------------
-$check-box-prefix: #{prefixes.$prefix}checkbox- !default;
+$checkbox-prefix: #{prefixes.$prefix}checkbox- !default;
 
 // --------------------------------------------
 // Class Names
 // --------------------------------------------
-$check-box-class-name: checkbox !default;
+$checkbox-class-name: checkbox !default;
 
 // --------------------------------------------
 // Variants
@@ -21,79 +21,79 @@ $check-box-class-name: checkbox !default;
 // --------------------------------------------
 // Background Colors
 // --------------------------------------------
-$check-box-bg-color-var: --#{$check-box-prefix}bg-color !default;
-$check-box-hover-bg-color-var: --#{$check-box-prefix}hover-bg-color !default;
-$check-box-active-bg-color-var: --#{$check-box-prefix}active-bg-color !default;
-$check-box-focus-bg-color-var: --#{$check-box-prefix}focus-bg-color !default;
-$check-box-disabled-bg-color-var: --#{$check-box-prefix}disabled-bg-color !default;
-$check-box-checked-bg-color-var: --#{$check-box-prefix}checked-bg-color !default;
-$check-box-checked-hover-bg-color-var: --#{$check-box-prefix}checked-hover-bg-color !default;
-$check-box-checked-active-bg-color-var: --#{$check-box-prefix}checked-active-bg-color !default;
-$check-box-checked-focus-bg-color-var: --#{$check-box-prefix}checked-focus-bg-color !default;
-$check-box-checked-disabled-bg-color-var: --#{$check-box-prefix}checked-disabled-bg-color !default;
+$checkbox-bg-color-var: --#{$checkbox-prefix}bg-color !default;
+$checkbox-hover-bg-color-var: --#{$checkbox-prefix}hover-bg-color !default;
+$checkbox-active-bg-color-var: --#{$checkbox-prefix}active-bg-color !default;
+$checkbox-focus-bg-color-var: --#{$checkbox-prefix}focus-bg-color !default;
+$checkbox-disabled-bg-color-var: --#{$checkbox-prefix}disabled-bg-color !default;
+$checkbox-checked-bg-color-var: --#{$checkbox-prefix}checked-bg-color !default;
+$checkbox-checked-hover-bg-color-var: --#{$checkbox-prefix}checked-hover-bg-color !default;
+$checkbox-checked-active-bg-color-var: --#{$checkbox-prefix}checked-active-bg-color !default;
+$checkbox-checked-focus-bg-color-var: --#{$checkbox-prefix}checked-focus-bg-color !default;
+$checkbox-checked-disabled-bg-color-var: --#{$checkbox-prefix}checked-disabled-bg-color !default;
 
 // --------------------------------------------
 // Borders
 // --------------------------------------------
-$check-box-border-width-var: --#{$check-box-prefix}border-width !default;
-$check-box-border-radius-var: --#{$check-box-prefix}border-radius !default;
-$check-box-border-color-var: --#{$check-box-prefix}border-color !default;
-$check-box-hover-border-color-var: --#{$check-box-prefix}hover-border-color !default;
-$check-box-active-border-color-var: --#{$check-box-prefix}active-border-color !default;
-$check-box-focus-border-color-var: --#{$check-box-prefix}focus-border-color !default;
-$check-box-disabled-border-color-var: --#{$check-box-prefix}disabled-border-color !default;
-$check-box-checked-border-color-var: --#{$check-box-prefix}checked-border-color !default;
-$check-box-checked-hover-border-color-var: --#{$check-box-prefix}checked-hover-border-color !default;
-$check-box-checked-active-border-color-var: --#{$check-box-prefix}checked-active-border-color !default;
-$check-box-checked-focus-border-color-var: --#{$check-box-prefix}checked-focus-border-color !default;
-$check-box-checked-disabled-border-color-var: --#{$check-box-prefix}checked-disabled-border-color !default;
+$checkbox-border-width-var: --#{$checkbox-prefix}border-width !default;
+$checkbox-border-radius-var: --#{$checkbox-prefix}border-radius !default;
+$checkbox-border-color-var: --#{$checkbox-prefix}border-color !default;
+$checkbox-hover-border-color-var: --#{$checkbox-prefix}hover-border-color !default;
+$checkbox-active-border-color-var: --#{$checkbox-prefix}active-border-color !default;
+$checkbox-focus-border-color-var: --#{$checkbox-prefix}focus-border-color !default;
+$checkbox-disabled-border-color-var: --#{$checkbox-prefix}disabled-border-color !default;
+$checkbox-checked-border-color-var: --#{$checkbox-prefix}checked-border-color !default;
+$checkbox-checked-hover-border-color-var: --#{$checkbox-prefix}checked-hover-border-color !default;
+$checkbox-checked-active-border-color-var: --#{$checkbox-prefix}checked-active-border-color !default;
+$checkbox-checked-focus-border-color-var: --#{$checkbox-prefix}checked-focus-border-color !default;
+$checkbox-checked-disabled-border-color-var: --#{$checkbox-prefix}checked-disabled-border-color !default;
 
 // --------------------------------------------
 // Opacity
 // --------------------------------------------
-$check-box-opacity-var: --#{$check-box-prefix}opacity !default;
-$check-box-disabled-opacity-var: --#{$check-box-prefix}disabled-opacity !default;
+$checkbox-opacity-var: --#{$checkbox-prefix}opacity !default;
+$checkbox-disabled-opacity-var: --#{$checkbox-prefix}disabled-opacity !default;
 
 // --------------------------------------------
 // Sizes
 // --------------------------------------------
-$check-box-size-var: --#{$check-box-prefix}size !default;
-$check-box-sm-size-var: --#{$check-box-prefix}sm-size !default;
-$check-box-lg-size-var: --#{$check-box-prefix}lg-size !default;
+$checkbox-size-var: --#{$checkbox-prefix}size !default;
+$checkbox-sm-size-var: --#{$checkbox-prefix}sm-size !default;
+$checkbox-lg-size-var: --#{$checkbox-prefix}lg-size !default;
 
 // --------------------------------------------
 // Check Mark
 // --------------------------------------------
-$check-box-mark-color-var: --#{$check-box-prefix}mark-color !default;
-$check-box-disabled-mark-color-var: --#{$check-box-prefix}disabled-mark-color !default;
-$check-box-mark-image-var: --#{$check-box-prefix}mark-image !default;
-$check-box-indeterminate-mark-image-var: --#{$check-box-prefix}indeterminate-mark-image !default;
+$checkbox-mark-color-var: --#{$checkbox-prefix}mark-color !default;
+$checkbox-disabled-mark-color-var: --#{$checkbox-prefix}disabled-mark-color !default;
+$checkbox-mark-image-var: --#{$checkbox-prefix}mark-image !default;
+$checkbox-indeterminate-mark-image-var: --#{$checkbox-prefix}indeterminate-mark-image !default;
 $default-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
 $default-indeterminate-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline x1='5' y1='12' x2='19' y2='12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
 
 // --------------------------------------------
 // Cursor
 // --------------------------------------------
-$check-box-cursor-var: --#{$check-box-prefix}cursor !default;
-$check-box-disabled-cursor-var: --#{$check-box-prefix}disabled-cursor !default;
+$checkbox-cursor-var: --#{$checkbox-prefix}cursor !default;
+$checkbox-disabled-cursor-var: --#{$checkbox-prefix}disabled-cursor !default;
 
 // --------------------------------------------
 // Transition
 // --------------------------------------------
-$check-box-transition-var: --#{$check-box-prefix}transition !default;
+$checkbox-transition-var: --#{$checkbox-prefix}transition !default;
 
 // --------------------------------------------
 // Focus Ring
 // --------------------------------------------
-$check-box-focus-ring-width-var: --#{$check-box-prefix}focus-ring-width !default;
-$check-box-focus-ring-color-var: --#{$check-box-prefix}focus-ring-color !default;
-$check-box-focus-ring-offset-width-var: --#{$check-box-prefix}focus-ring-offset-width !default;
+$checkbox-focus-ring-width-var: --#{$checkbox-prefix}focus-ring-width !default;
+$checkbox-focus-ring-color-var: --#{$checkbox-prefix}focus-ring-color !default;
+$checkbox-focus-ring-offset-width-var: --#{$checkbox-prefix}focus-ring-offset-width !default;
 
 // --------------------------------------------
 // Validation
 // --------------------------------------------
-$check-box-invalid-border-color-var: --#{$check-box-prefix}invalid-border-color !default;
-$check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !default;
+$checkbox-invalid-border-color-var: --#{$checkbox-prefix}invalid-border-color !default;
+$checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !default;
 
 // ============================================
 // Process
@@ -101,193 +101,193 @@ $check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !def
 // ============================================
 // CSS Variables
 // ============================================
-.#{$check-box-class-name} {
+.#{$checkbox-class-name} {
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
-  #{$check-box-bg-color-var}: transparent;
-  #{$check-box-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
-  #{$check-box-active-bg-color-var}: var(
+  #{$checkbox-bg-color-var}: transparent;
+  #{$checkbox-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
+  #{$checkbox-active-bg-color-var}: var(
     #{color-defines.$surface-color-dark-var}
   );
-  #{$check-box-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
-  #{$check-box-disabled-bg-color-var}: transparent;
-  #{$check-box-checked-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$check-box-checked-hover-bg-color-var}: var(
+  #{$checkbox-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
+  #{$checkbox-disabled-bg-color-var}: transparent;
+  #{$checkbox-checked-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$checkbox-checked-hover-bg-color-var}: var(
     #{palette.$palette-default-var}
   );
-  #{$check-box-checked-active-bg-color-var}: var(
+  #{$checkbox-checked-active-bg-color-var}: var(
     #{palette.$palette-default-var}
   );
-  #{$check-box-checked-focus-bg-color-var}: var(
+  #{$checkbox-checked-focus-bg-color-var}: var(
     #{palette.$palette-default-var}
   );
-  #{$check-box-checked-disabled-bg-color-var}: var(
+  #{$checkbox-checked-disabled-bg-color-var}: var(
     #{color-defines.$border-color-var}
   );
 
   // --------------------------------------------
   // Borders
   // --------------------------------------------
-  #{$check-box-border-width-var}: 2px;
-  #{$check-box-border-radius-var}: 4px;
-  #{$check-box-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$check-box-hover-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$check-box-active-border-color-var}: var(
+  #{$checkbox-border-width-var}: 2px;
+  #{$checkbox-border-radius-var}: 4px;
+  #{$checkbox-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$checkbox-hover-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$checkbox-active-border-color-var}: var(
     #{color-defines.$border-color-var}
   );
-  #{$check-box-focus-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$check-box-disabled-border-color-var}: var(
+  #{$checkbox-focus-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$checkbox-disabled-border-color-var}: var(
     #{color-defines.$border-color-var}
   );
-  #{$check-box-checked-border-color-var}: var(#{palette.$palette-default-var});
-  #{$check-box-checked-hover-border-color-var}: var(
+  #{$checkbox-checked-border-color-var}: var(#{palette.$palette-default-var});
+  #{$checkbox-checked-hover-border-color-var}: var(
     #{palette.$palette-default-var}
   );
-  #{$check-box-checked-active-border-color-var}: var(
+  #{$checkbox-checked-active-border-color-var}: var(
     #{palette.$palette-default-var}
   );
-  #{$check-box-checked-focus-border-color-var}: var(
+  #{$checkbox-checked-focus-border-color-var}: var(
     #{palette.$palette-default-var}
   );
-  #{$check-box-checked-disabled-border-color-var}: var(
+  #{$checkbox-checked-disabled-border-color-var}: var(
     #{color-defines.$border-color-var}
   );
 
   // --------------------------------------------
   // Opacity
   // --------------------------------------------
-  #{$check-box-opacity-var}: 1;
-  #{$check-box-disabled-opacity-var}: 0.6;
+  #{$checkbox-opacity-var}: 1;
+  #{$checkbox-disabled-opacity-var}: 0.6;
 
   // --------------------------------------------
   // Sizes
   // --------------------------------------------
-  #{$check-box-size-var}: 1rem;
-  #{$check-box-sm-size-var}: 0.75rem;
-  #{$check-box-lg-size-var}: 1.5rem;
+  #{$checkbox-size-var}: 1rem;
+  #{$checkbox-sm-size-var}: 0.75rem;
+  #{$checkbox-lg-size-var}: 1.5rem;
 
   // --------------------------------------------
   // Check Mark
   // --------------------------------------------
-  #{$check-box-mark-color-var}: var(#{palette.$palette-default-accent-var});
-  #{$check-box-disabled-mark-color-var}: var(
+  #{$checkbox-mark-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$checkbox-disabled-mark-color-var}: var(
     #{color-defines.$surface-color-lighter-var}
   );
-  #{$check-box-mark-image-var}: #{$default-mark-image};
-  #{$check-box-indeterminate-mark-image-var}: #{$default-indeterminate-mark-image};
+  #{$checkbox-mark-image-var}: #{$default-mark-image};
+  #{$checkbox-indeterminate-mark-image-var}: #{$default-indeterminate-mark-image};
 
   // --------------------------------------------
   // Cursor
   // --------------------------------------------
-  #{$check-box-cursor-var}: pointer;
-  #{$check-box-disabled-cursor-var}: not-allowed;
+  #{$checkbox-cursor-var}: pointer;
+  #{$checkbox-disabled-cursor-var}: not-allowed;
 
   // --------------------------------------------
   // Transition
   // --------------------------------------------
-  #{$check-box-transition-var}: 0.2s;
+  #{$checkbox-transition-var}: 0.2s;
 
   // --------------------------------------------
   // Focus Ring
   // --------------------------------------------
-  #{$check-box-focus-ring-width-var}: 2px;
-  #{$check-box-focus-ring-color-var}: var(#{palette.$palette-default-var});
-  #{$check-box-focus-ring-offset-width-var}: 2px;
+  #{$checkbox-focus-ring-width-var}: 2px;
+  #{$checkbox-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$checkbox-focus-ring-offset-width-var}: 2px;
 
   // --------------------------------------------
   // Validation
   // --------------------------------------------
-  #{$check-box-invalid-border-color-var}: var(--danger-default);
-  #{$check-box-valid-border-color-var}: var(--success-default);
+  #{$checkbox-invalid-border-color-var}: var(--danger-default);
+  #{$checkbox-valid-border-color-var}: var(--success-default);
 }
 
 // ============================================
 // Overrides
 // ============================================
-.#{$check-box-class-name} {
+.#{$checkbox-class-name} {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   margin: 0;
 
-  background-color: var(#{$check-box-bg-color-var});
+  background-color: var(#{$checkbox-bg-color-var});
 
-  border-width: var(#{$check-box-border-width-var});
-  border-color: var(#{$check-box-border-color-var});
-  border-radius: var(#{$check-box-border-radius-var});
+  border-width: var(#{$checkbox-border-width-var});
+  border-color: var(#{$checkbox-border-color-var});
+  border-radius: var(#{$checkbox-border-radius-var});
   border-style: solid;
 
-  opacity: var(#{$check-box-opacity-var});
+  opacity: var(#{$checkbox-opacity-var});
 
-  transition: var(#{$check-box-transition-var});
+  transition: var(#{$checkbox-transition-var});
 
-  width: var(#{$check-box-size-var});
-  height: var(#{$check-box-size-var});
+  width: var(#{$checkbox-size-var});
+  height: var(#{$checkbox-size-var});
 
   &.sm {
-    width: var(#{$check-box-sm-size-var});
-    height: var(#{$check-box-sm-size-var});
+    width: var(#{$checkbox-sm-size-var});
+    height: var(#{$checkbox-sm-size-var});
   }
   &.md {
-    width: var(#{$check-box-size-var});
-    height: var(#{$check-box-size-var});
+    width: var(#{$checkbox-size-var});
+    height: var(#{$checkbox-size-var});
   }
   &.lg {
-    width: var(#{$check-box-lg-size-var});
-    height: var(#{$check-box-lg-size-var});
+    width: var(#{$checkbox-lg-size-var});
+    height: var(#{$checkbox-lg-size-var});
   }
 
-  cursor: var(#{$check-box-cursor-var});
+  cursor: var(#{$checkbox-cursor-var});
 
   &:hover {
-    background-color: var(#{$check-box-hover-bg-color-var});
-    border-color: var(#{$check-box-hover-border-color-var});
+    background-color: var(#{$checkbox-hover-bg-color-var});
+    border-color: var(#{$checkbox-hover-border-color-var});
   }
   &:active {
-    background-color: var(#{$check-box-active-bg-color-var});
-    border-color: var(#{$check-box-active-border-color-var});
+    background-color: var(#{$checkbox-active-bg-color-var});
+    border-color: var(#{$checkbox-active-border-color-var});
   }
   &:focus-visible:not(:hover):not(:active) {
-    background-color: var(#{$check-box-focus-bg-color-var});
-    border-color: var(#{$check-box-focus-border-color-var});
-    outline-width: var(#{$check-box-focus-ring-width-var});
-    outline-color: var(#{$check-box-focus-ring-color-var});
-    outline-offset: var(#{$check-box-focus-ring-offset-width-var});
+    background-color: var(#{$checkbox-focus-bg-color-var});
+    border-color: var(#{$checkbox-focus-border-color-var});
+    outline-width: var(#{$checkbox-focus-ring-width-var});
+    outline-color: var(#{$checkbox-focus-ring-color-var});
+    outline-offset: var(#{$checkbox-focus-ring-offset-width-var});
     outline-style: solid;
   }
   &:disabled {
-    background-color: var(#{$check-box-disabled-bg-color-var});
-    border-color: var(#{$check-box-disabled-border-color-var});
-    opacity: var(#{$check-box-disabled-opacity-var});
-    cursor: var(#{$check-box-disabled-cursor-var});
+    background-color: var(#{$checkbox-disabled-bg-color-var});
+    border-color: var(#{$checkbox-disabled-border-color-var});
+    opacity: var(#{$checkbox-disabled-opacity-var});
+    cursor: var(#{$checkbox-disabled-cursor-var});
   }
 
   &:checked,
   &:indeterminate {
-    background-color: var(#{$check-box-checked-bg-color-var});
-    border-color: var(#{$check-box-checked-border-color-var});
+    background-color: var(#{$checkbox-checked-bg-color-var});
+    border-color: var(#{$checkbox-checked-border-color-var});
 
     &:hover {
-      background-color: var(#{$check-box-checked-hover-bg-color-var});
-      border-color: var(#{$check-box-checked-hover-border-color-var});
+      background-color: var(#{$checkbox-checked-hover-bg-color-var});
+      border-color: var(#{$checkbox-checked-hover-border-color-var});
     }
     &:active {
-      background-color: var(#{$check-box-checked-active-bg-color-var});
-      border-color: var(#{$check-box-checked-active-border-color-var});
+      background-color: var(#{$checkbox-checked-active-bg-color-var});
+      border-color: var(#{$checkbox-checked-active-border-color-var});
     }
     &:focus-visible:not(:hover):not(:active) {
-      background-color: var(#{$check-box-checked-focus-bg-color-var});
-      border-color: var(#{$check-box-checked-focus-border-color-var});
-      outline-width: var(#{$check-box-focus-ring-width-var});
-      outline-color: var(#{$check-box-focus-ring-color-var});
-      outline-offset: var(#{$check-box-focus-ring-offset-width-var});
+      background-color: var(#{$checkbox-checked-focus-bg-color-var});
+      border-color: var(#{$checkbox-checked-focus-border-color-var});
+      outline-width: var(#{$checkbox-focus-ring-width-var});
+      outline-color: var(#{$checkbox-focus-ring-color-var});
+      outline-offset: var(#{$checkbox-focus-ring-offset-width-var});
       outline-style: solid;
     }
     &:disabled {
-      background-color: var(#{$check-box-checked-disabled-bg-color-var});
-      border-color: var(#{$check-box-checked-disabled-border-color-var});
-      opacity: var(#{$check-box-disabled-opacity-var});
+      background-color: var(#{$checkbox-checked-disabled-bg-color-var});
+      border-color: var(#{$checkbox-checked-disabled-border-color-var});
+      opacity: var(#{$checkbox-disabled-opacity-var});
     }
   }
 
@@ -304,47 +304,47 @@ $check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !def
 
   &:checked::before,
   &:indeterminate::before {
-    background-color: var(#{$check-box-mark-color-var});
+    background-color: var(#{$checkbox-mark-color-var});
   }
 
   &:checked:disabled::before,
   &:indeterminate:disabled::before {
-    background-color: var(#{$check-box-disabled-mark-color-var});
+    background-color: var(#{$checkbox-disabled-mark-color-var});
   }
 
   &:checked::before {
-    mask-image: var(#{$check-box-mark-image-var});
+    mask-image: var(#{$checkbox-mark-image-var});
   }
 
   &:indeterminate::before {
-    mask-image: var(#{$check-box-indeterminate-mark-image-var});
+    mask-image: var(#{$checkbox-indeterminate-mark-image-var});
   }
 }
 
 // ============================================
 // Validation
 // ============================================
-.#{$check-box-class-name}.is-invalid {
-  #{$check-box-border-color-var}: var(#{$check-box-invalid-border-color-var});
-  #{$check-box-hover-border-color-var}: var(
-    #{$check-box-invalid-border-color-var}
+.#{$checkbox-class-name}.is-invalid {
+  #{$checkbox-border-color-var}: var(#{$checkbox-invalid-border-color-var});
+  #{$checkbox-hover-border-color-var}: var(
+    #{$checkbox-invalid-border-color-var}
   );
-  #{$check-box-active-border-color-var}: var(
-    #{$check-box-invalid-border-color-var}
+  #{$checkbox-active-border-color-var}: var(
+    #{$checkbox-invalid-border-color-var}
   );
-  #{$check-box-focus-border-color-var}: var(
-    #{$check-box-invalid-border-color-var}
+  #{$checkbox-focus-border-color-var}: var(
+    #{$checkbox-invalid-border-color-var}
   );
 }
-.#{$check-box-class-name}.is-valid {
-  #{$check-box-border-color-var}: var(#{$check-box-valid-border-color-var});
-  #{$check-box-hover-border-color-var}: var(
-    #{$check-box-valid-border-color-var}
+.#{$checkbox-class-name}.is-valid {
+  #{$checkbox-border-color-var}: var(#{$checkbox-valid-border-color-var});
+  #{$checkbox-hover-border-color-var}: var(
+    #{$checkbox-valid-border-color-var}
   );
-  #{$check-box-active-border-color-var}: var(
-    #{$check-box-valid-border-color-var}
+  #{$checkbox-active-border-color-var}: var(
+    #{$checkbox-valid-border-color-var}
   );
-  #{$check-box-focus-border-color-var}: var(
-    #{$check-box-valid-border-color-var}
+  #{$checkbox-focus-border-color-var}: var(
+    #{$checkbox-valid-border-color-var}
   );
 }

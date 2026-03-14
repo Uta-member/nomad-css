@@ -7,7 +7,7 @@
 $border-prefix: #{prefixes.$prefix}border-;
 
 // Class Name
-$border-class-name: "border";
+$border-class-name: border;
 
 // Variable Name
 $border-width-var: --#{$border-prefix}width;

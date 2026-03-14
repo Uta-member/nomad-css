@@ -9401,8 +9401,8 @@ h6,
   --badge-overlay-top: 0;
   --badge-overlay-right: 0;
   --badge-font-size: 0.75em;
-  --badge-font-size-sm: 0.65em;
-  --badge-font-size-lg: 0.875em;
+  --badge-sm-font-size: 0.65em;
+  --badge-lg-font-size: 0.875em;
 }
 
 .badge {
@@ -9432,10 +9432,10 @@ h6,
   border-radius: 50%;
 }
 .badge.sm {
-  font-size: var(--badge-font-size-sm);
+  font-size: var(--badge-sm-font-size);
 }
 .badge.lg {
-  font-size: var(--badge-font-size-lg);
+  font-size: var(--badge-lg-font-size);
 }
 
 .chip {

@@ -49,8 +49,8 @@ $badge-overlay-right-var: --#{$badge-prefix}overlay-right !default;
 // Sizes
 // --------------------------------------------
 $badge-font-size-var: --#{$badge-prefix}font-size !default;
-$badge-font-size-sm-var: --#{$badge-prefix}font-size-sm !default;
-$badge-font-size-lg-var: --#{$badge-prefix}font-size-lg !default;
+$badge-sm-font-size-var: --#{$badge-prefix}sm-font-size !default;
+$badge-lg-font-size-var: --#{$badge-prefix}lg-font-size !default;
 
 // ============================================
 // Process
@@ -90,8 +90,8 @@ $badge-font-size-lg-var: --#{$badge-prefix}font-size-lg !default;
   // Sizes
   // --------------------------------------------
   #{$badge-font-size-var}: 0.75em;
-  #{$badge-font-size-sm-var}: 0.65em;
-  #{$badge-font-size-lg-var}: 0.875em;
+  #{$badge-sm-font-size-var}: 0.65em;
+  #{$badge-lg-font-size-var}: 0.875em;
 }
 
 // ============================================
@@ -137,9 +137,9 @@ $badge-font-size-lg-var: --#{$badge-prefix}font-size-lg !default;
   // Sizes
   // --------------------------------------------
   &.sm {
-    font-size: var(#{$badge-font-size-sm-var});
+    font-size: var(#{$badge-sm-font-size-var});
   }
   &.lg {
-    font-size: var(#{$badge-font-size-lg-var});
+    font-size: var(#{$badge-lg-font-size-var});
   }
 }
