@@ -1,0 +1,44 @@
+@use "../utilities/prefixes" as prefixes;
+
+// ============================================================
+// Linear Design - Form Controls
+// ============================================================
+// Linear フォームの特徴:
+//   - シンプルな角丸（6px）
+//   - フォーカス時: バイオレットのアウトラインリング（1px offset）
+//   - hover: border が少し濃くなる
+//   - Disabled: 0.45 の透明度
+//   - Readonly: テキストカーソル
+//   - filled バリエーションはわずかに背景を持つ
+// ============================================================
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 6px;
+    --form-control-border-width: 1px;
+    --form-control-font-size: 14px;
+    --form-control-transition: border-color 0.1s ease, box-shadow 0.1s ease;
+
+    // フォーカスリング — バイオレット、1px offset
+    --form-control-focus-ring-width: 2px;
+    --form-control-focus-ring-offset-width: 1px;
+    --form-control-focus-ring-color: var(--primary-default);
+    --form-control-focus-border-color: var(--primary-light);
+
+    // Disabled
+    --form-control-disabled-opacity: 0.45;
+
+    // Readonly
+    --form-control-readonly-cursor: text;
+  }
+}
+
+// ============================================================
+// Dark mode overrides
+// ============================================================
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .form-control {
+    // ダークモードでは focus border を少し明るく
+    --form-control-focus-border-color: var(--primary-default);
+  }
+}

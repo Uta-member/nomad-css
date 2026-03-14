@@ -1,0 +1,89 @@
+@use "../utilities/prefixes" as prefixes;
+
+// ============================================================
+// Linear Design - Button
+// ============================================================
+// Linear ボタンの特徴:
+//   - 小さめの角丸（6px）
+//   - 控えめなボーダー（0.5px〜1px）
+//   - 微妙なホバーエフェクト（0.05 opacity 変化）
+//   - フォーカスリング: バイオレットのアウトライン
+//   - filled は primary バイオレットが際立つ
+//   - outlined/text は ghost スタイルが使いやすい
+//   - フォントウェイト: 500 (medium)
+// ============================================================
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 6px;
+    --button-border-width: 1px;
+    --button-font-size: 14px;
+    --button-font-weight: 500;
+    --button-padding: 7px 14px;
+    --button-gap: 6px;
+    --button-transition: background-color 0.1s ease, border-color 0.1s ease,
+      box-shadow 0.1s ease, opacity 0.1s ease;
+
+    // フォーカスリング — バイオレット
+    --button-focus-ring-width: 2px;
+    --button-focus-ring-offset-width: 2px;
+    --button-focus-ring-color: var(--primary-default);
+
+    // ============================================================
+    // Filled — primary バイオレット塗りつぶし
+    // ============================================================
+    &.filled {
+      --button-border-color: var(--button-bg-color);
+      --button-hover-bg-color: var(--primary-dark);
+      --button-hover-border-color: var(--primary-dark);
+      --button-active-bg-color: var(--primary-darker);
+      --button-active-border-color: var(--primary-darker);
+      --button-disabled-opacity: 0.45;
+    }
+
+    // ============================================================
+    // Tonal — 透過バイオレット（Linear の ghost primary ボタン相当）
+    // ============================================================
+    &.tonal {
+      --button-border-color: transparent;
+      --button-hover-border-color: transparent;
+      --button-active-border-color: transparent;
+      --button-disabled-opacity: 0.45;
+    }
+
+    // ============================================================
+    // Outlined — 細ボーダー + 透過背景
+    // ============================================================
+    &.outlined {
+      --button-disabled-opacity: 0.45;
+    }
+
+    // ============================================================
+    // Text — ボーダーなし・背景なし (hover のみ subtle bg)
+    // ============================================================
+    &.text {
+      --button-disabled-opacity: 0.45;
+    }
+  }
+}
+
+// ============================================================
+// Dark mode overrides
+// ============================================================
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .button {
+    &.outlined {
+      // ダーク時のボーダーは border-color 変数に任せるが
+      // デフォルトの outlined がやや暗すぎる場合に上書き
+      --button-border-color: var(--border-color-dark);
+      --button-hover-border-color: var(--border-color-dark);
+    }
+
+    &.filled {
+      // disabled: 半透明のオーバーレイ
+      --button-disabled-bg-color: rgba(94, 106, 210, 0.25);
+      --button-disabled-color: rgba(220, 220, 232, 0.35);
+      --button-disabled-border-color: transparent;
+    }
+  }
+}

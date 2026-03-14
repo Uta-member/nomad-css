@@ -1,0 +1,27 @@
+@use "./prefixes" as prefixes;
+
+// ============================================================
+// Linear Design - Shadows
+// ============================================================
+// Linear は影を最小限に抑えたフラットデザイン。
+// ダークモードでは border ベースのエレベーションを優先し、
+// 影は控えめな ambient のみ使用。
+// ============================================================
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  // ライトモード: 非常に subtle な影（Notion/Linear スタイル）
+  --shadow-1: 0 1px 2px rgba(0, 0, 40, 0.06), 0 1px 3px rgba(0, 0, 40, 0.08);
+  --shadow-2: 0 2px 6px rgba(0, 0, 40, 0.06), 0 4px 12px rgba(0, 0, 40, 0.08);
+  --shadow-3: 0 4px 12px rgba(0, 0, 40, 0.08), 0 8px 24px rgba(0, 0, 40, 0.08);
+  --shadow-4: 0 8px 24px rgba(0, 0, 40, 0.08), 0 16px 40px rgba(0, 0, 40, 0.10);
+  --shadow-5: 0 24px 64px rgba(0, 0, 40, 0.12), 0 4px 16px rgba(0, 0, 40, 0.08);
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  // ダークモード: さらに控えめ（dark bg では影は見えにくいため border に依存）
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.20), 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 2px 6px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.30);
+  --shadow-3: 0 4px 16px rgba(0, 0, 0, 0.35), 0 8px 32px rgba(0, 0, 0, 0.30);
+  --shadow-4: 0 8px 32px rgba(0, 0, 0, 0.40), 0 16px 48px rgba(0, 0, 0, 0.35);
+  --shadow-5: 0 24px 64px rgba(0, 0, 0, 0.50), 0 4px 16px rgba(0, 0, 0, 0.40);
+}
