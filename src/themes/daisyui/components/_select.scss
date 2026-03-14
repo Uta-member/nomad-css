@@ -1,0 +1,11 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .select {
+    --select-border-radius: 0.5rem;
+    --select-border-width: 2px;
+    --select-padding: 8px 16px;
+    --select-font-size: 14px;
+    --select-height: 40px;
+  }
+}

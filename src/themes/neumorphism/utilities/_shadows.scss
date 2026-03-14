@@ -1,0 +1,13 @@
+:root[data-theme="neumorphism"] {
+  --shadow-sm: 3px 3px 6px #c8ccd4, -3px -3px 6px #f8fcff;
+  --shadow-md: 6px 6px 12px #c8ccd4, -6px -6px 12px #f8fcff;
+  --shadow-lg: 10px 10px 20px #c0c4cc, -10px -10px 20px #ffffff;
+  --shadow-xl: 14px 14px 28px #b8bcc4, -14px -14px 28px #ffffff;
+}
+
+:root[data-theme="neumorphism"][data-color-scheme="dark"] {
+  --shadow-sm: 3px 3px 6px #262626, -3px -3px 6px #343434;
+  --shadow-md: 6px 6px 12px #262626, -6px -6px 12px #343434;
+  --shadow-lg: 10px 10px 20px #222222, -10px -10px 20px #383838;
+  --shadow-xl: 14px 14px 28px #1e1e1e, -14px -14px 28px #3c3c3c;
+}

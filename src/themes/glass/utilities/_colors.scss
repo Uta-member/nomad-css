@@ -1,0 +1,79 @@
+:root[data-theme="glass"] {
+  // Primary: Sky Blue
+  --palette-hue: 210;
+  --palette-saturation: 80%;
+  --palette-color-0: hsl(210, 80%, 97%);
+  --palette-color-1: hsl(210, 80%, 93%);
+  --palette-color-2: hsl(210, 80%, 85%);
+  --palette-color-3: hsl(210, 80%, 75%);
+  --palette-color-4: hsl(210, 80%, 65%);
+  --palette-color-5: hsl(210, 80%, 50%);
+  --palette-color-6: hsl(210, 80%, 42%);
+  --palette-color-7: hsl(210, 80%, 34%);
+  --palette-color-8: hsl(210, 80%, 26%);
+  --palette-color-9: hsl(210, 80%, 18%);
+  --palette-color-10: hsl(210, 80%, 10%);
+  --palette-accent-0: hsl(210, 80%, 97%);
+  --palette-accent-1: hsl(210, 80%, 97%);
+  --palette-accent-2: hsl(210, 80%, 97%);
+  --palette-accent-3: hsl(210, 80%, 97%);
+  --palette-accent-4: hsl(210, 80%, 97%);
+  --palette-accent-5: hsl(210, 80%, 97%);
+  --palette-accent-6: hsl(210, 80%, 97%);
+  --palette-accent-7: hsl(210, 80%, 97%);
+  --palette-accent-8: hsl(210, 80%, 97%);
+  --palette-accent-9: hsl(210, 80%, 97%);
+  --palette-accent-10: hsl(210, 80%, 97%);
+  --palette-lighter: var(--palette-color-2);
+  --palette-light: var(--palette-color-3);
+  --palette-default: var(--palette-color-5);
+  --palette-dark: var(--palette-color-7);
+  --palette-darker: var(--palette-color-9);
+  --palette-accent-lighter: var(--palette-accent-2);
+  --palette-accent-light: var(--palette-accent-3);
+  --palette-accent-default: var(--palette-accent-5);
+  --palette-accent-dark: var(--palette-accent-7);
+  --palette-accent-darker: var(--palette-accent-9);
+
+  // Neutral: Light Frost Blue
+  --neutral-hue: 210;
+  --neutral-saturation: 20%;
+  --neutral-color-0: hsl(210, 20%, 97%);
+  --neutral-color-1: hsl(210, 20%, 93%);
+  --neutral-color-2: hsl(210, 20%, 85%);
+  --neutral-color-3: hsl(210, 20%, 75%);
+  --neutral-color-4: hsl(210, 20%, 65%);
+  --neutral-color-5: hsl(210, 20%, 50%);
+  --neutral-color-6: hsl(210, 20%, 42%);
+  --neutral-color-7: hsl(210, 20%, 34%);
+  --neutral-color-8: hsl(210, 20%, 26%);
+  --neutral-color-9: hsl(210, 20%, 18%);
+  --neutral-color-10: hsl(210, 20%, 10%);
+  --neutral-lighter: var(--neutral-color-2);
+  --neutral-light: var(--neutral-color-3);
+  --neutral-default: var(--neutral-color-5);
+  --neutral-dark: var(--neutral-color-7);
+  --neutral-darker: var(--neutral-color-9);
+  --neutral-accent-lighter: hsl(210, 20%, 97%);
+  --neutral-accent-light: hsl(210, 20%, 97%);
+  --neutral-accent-default: hsl(210, 20%, 97%);
+  --neutral-accent-dark: hsl(210, 20%, 97%);
+  --neutral-accent-darker: hsl(210, 20%, 97%);
+
+  // Surface: Glassmorphism light
+  --surface-color: rgba(255, 255, 255, 0.25);
+  --surface-color-lighter: rgba(255, 255, 255, 0.4);
+  --surface-color-darker: rgba(255, 255, 255, 0.15);
+  --text-color: #1a2a3a;
+  --text-color-muted: #4a6a8a;
+  --border-color: rgba(255, 255, 255, 0.4);
+}
+
+:root[data-theme="glass"][data-color-scheme="dark"] {
+  --surface-color: rgba(0, 0, 0, 0.3);
+  --surface-color-lighter: rgba(255, 255, 255, 0.1);
+  --surface-color-darker: rgba(0, 0, 0, 0.5);
+  --text-color: #e0eeff;
+  --text-color-muted: #8ab0d0;
+  --border-color: rgba(255, 255, 255, 0.2);
+}

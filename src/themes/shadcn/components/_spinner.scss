@@ -1,0 +1,10 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .spinner {
+    --spinner-border-width: 2px;
+    --spinner-size: 16px;
+    --spinner-animation-duration: 0.75s;
+    --spinner-color: var(--primary-default);
+  }
+}

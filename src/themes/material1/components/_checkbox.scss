@@ -1,0 +1,18 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Material Design 1: checkbox with primary color
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .checkbox {
+    --checkbox-border-radius: 2px;
+    --checkbox-border-width: 2px;
+    --checkbox-size: 18px;
+    --checkbox-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    --checkbox-label-gap: 8px;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .checkbox {
+    --checkbox-border-color: rgba(255, 255, 255, 0.7);
+  }
+}

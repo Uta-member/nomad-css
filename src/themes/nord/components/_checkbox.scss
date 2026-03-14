@@ -1,0 +1,5 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .checkbox { --checkbox-border-radius: 3px; }
+}

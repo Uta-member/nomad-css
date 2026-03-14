@@ -1,0 +1,16 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .switch {
+    --switch-border-radius: 100px;
+    --switch-border-width: 0px;
+    --switch-track-width: 48px;
+    --switch-track-height: 24px;
+    --switch-thumb-size: 20px;
+    --switch-thumb-margin: 2px;
+    --switch-thumb-bg-color: #ffffff;
+    --switch-checked-bg-color: var(--primary-default);
+    --switch-transition: all 0.2s ease-out;
+    --switch-disabled-opacity: 0.5;
+  }
+}

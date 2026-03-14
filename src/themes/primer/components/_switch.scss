@@ -1,0 +1,22 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .switch {
+    --switch-border-radius: 100px;
+    --switch-border-width: 0px;
+    --switch-track-width: 32px;
+    --switch-track-height: 20px;
+    --switch-thumb-size: 16px;
+    --switch-thumb-margin: 2px;
+    --switch-thumb-bg-color: #ffffff;
+    --switch-checked-bg-color: var(--success-default);
+    --switch-transition: all 0.12s ease;
+    --switch-disabled-opacity: 0.6;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .switch {
+    --switch-unchecked-bg-color: #30363d;
+  }
+}

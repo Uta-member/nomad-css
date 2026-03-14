@@ -1,0 +1,8 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .accordion {
+    --accordion-border-radius: 0px;
+    --accordion-transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
+  }
+}

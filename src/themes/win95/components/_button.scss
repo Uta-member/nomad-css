@@ -1,0 +1,15 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 0px;
+    --button-font-size: 11px;
+    --button-padding-y: 4px;
+    --button-padding-x: 12px;
+    --button-border-width: 2px;
+    // Classic Win95 bevel effect
+    --button-box-shadow: inset -2px -2px #0a0a0a, inset 2px 2px #ffffff, inset -3px -3px #808080, inset 3px 3px #dfdfdf;
+    --button-hover-box-shadow: inset -2px -2px #0a0a0a, inset 2px 2px #ffffff, inset -3px -3px #808080, inset 3px 3px #dfdfdf;
+    --button-active-box-shadow: inset 2px 2px #808080, inset -2px -2px #dfdfdf;
+  }
+}

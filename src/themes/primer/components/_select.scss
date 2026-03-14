@@ -1,0 +1,18 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .select {
+    --select-border-radius: 0.375rem;
+    --select-border-width: 1px;
+    --select-padding: 5px 12px;
+    --select-font-size: 14px;
+    --select-height: 32px;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .select {
+    --select-border-color: #30363d;
+    --select-bg-color: #0d1117;
+  }
+}

@@ -1,0 +1,16 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 0px;
+    --button-font-size: 14px;
+    --button-padding-y: 8px;
+    --button-padding-x: 18px;
+    // Neon glow effect
+    --button-box-shadow: 0 0 10px var(--primary-default), 0 0 20px var(--primary-default);
+    --button-hover-box-shadow: 0 0 15px var(--primary-default), 0 0 30px var(--primary-default);
+    --button-active-box-shadow: 0 0 5px var(--primary-default);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}

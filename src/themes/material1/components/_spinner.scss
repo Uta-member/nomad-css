@@ -1,0 +1,11 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Material Design 1: circular progress spinner
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .spinner {
+    --spinner-border-width: 3px;
+    --spinner-size: 20px;
+    --spinner-animation-duration: 0.8s;
+    --spinner-color: var(--primary-default);
+  }
+}

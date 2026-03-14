@@ -1,0 +1,11 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Material Design 1: chip with subtle rounding
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .chip {
+    --chip-border-radius: 16px;
+    --chip-padding: 4px 12px;
+    --chip-font-size: 13px;
+    --chip-height: 32px;
+  }
+}

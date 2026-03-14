@@ -12,6 +12,21 @@
     <link rel="stylesheet" href="{{ '/dist/css/ant.css' | url }}" />
     <link rel="stylesheet" href="{{ '/dist/css/bootstrap.css' | url }}" />
     <link rel="stylesheet" href="{{ '/dist/css/chakra.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/material1.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/shadcn.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/primer.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/carbon.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/daisyui.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/spectrum.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/win95.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/aqua.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/holo.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/solarized.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/nord.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/cyberpunk.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/terminal.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/neumorphism.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/glass.css' | url }}" />
     <link rel="stylesheet" href="{{ '/assets/demo.css' | url }}" />
     <script>
       // テーマを描画前に適用してフラッシュを防ぐ
@@ -34,13 +49,34 @@
             <label for="theme-select"><strong>Theme:</strong></label>
             <select id="theme-select" class="select" onchange="setTheme(this.value)">
               <option value="">Default</option>
-              <option value="fluent2">Fluent 2</option>
-              <option value="material3">Material 3</option>
-              <option value="apple-hig">Apple HIG</option>
-              <option value="material2">Material 2</option>
-              <option value="ant">Ant Design</option>
-              <option value="bootstrap">Bootstrap 5</option>
-              <option value="chakra">Chakra UI</option>
+              <optgroup label="Design Systems">
+                <option value="fluent2">Fluent 2</option>
+                <option value="material3">Material 3</option>
+                <option value="material2">Material 2</option>
+                <option value="material1">Material 1 (Holo era)</option>
+                <option value="apple-hig">Apple HIG</option>
+                <option value="ant">Ant Design</option>
+                <option value="bootstrap">Bootstrap 5</option>
+                <option value="chakra">Chakra UI</option>
+                <option value="shadcn">shadcn/ui</option>
+                <option value="primer">GitHub Primer</option>
+                <option value="carbon">IBM Carbon</option>
+                <option value="daisyui">daisyUI</option>
+                <option value="spectrum">Adobe Spectrum</option>
+              </optgroup>
+              <optgroup label="Retro &amp; Classic">
+                <option value="win95">Windows 95</option>
+                <option value="aqua">macOS Aqua</option>
+                <option value="holo">Android Holo</option>
+              </optgroup>
+              <optgroup label="Aesthetic Trends">
+                <option value="solarized">Solarized</option>
+                <option value="nord">Nord</option>
+                <option value="cyberpunk">Cyberpunk</option>
+                <option value="terminal">Terminal</option>
+                <option value="neumorphism">Neumorphism</option>
+                <option value="glass">Glassmorphism</option>
+              </optgroup>
             </select>
           </div>
           <div class="theme-switcher">

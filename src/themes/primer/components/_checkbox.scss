@@ -1,0 +1,17 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .checkbox {
+    --checkbox-border-radius: 0.1875rem;
+    --checkbox-border-width: 1px;
+    --checkbox-size: 16px;
+    --checkbox-label-gap: 8px;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .checkbox {
+    --checkbox-border-color: #484f58;
+    --checkbox-bg-color: rgba(255, 255, 255, 0.04);
+  }
+}

@@ -1,0 +1,16 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 0.5rem;
+    --form-control-border-width: 2px;
+    --form-control-padding: 8px 16px;
+    --form-control-font-size: 14px;
+    --form-control-height: 40px;
+    --form-control-sm-height: 32px;
+    --form-control-lg-height: 48px;
+    --form-control-focus-ring-width: 0px;
+    --form-control-focus-shadow: 0 0 0 2px var(--primary-default);
+    --form-control-disabled-opacity: 0.5;
+  }
+}

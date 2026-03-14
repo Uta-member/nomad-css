@@ -1,0 +1,12 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    // Pill-shaped buttons characteristic of macOS Aqua
+    --button-border-radius: 100px;
+    --button-font-size: 13px;
+    --button-padding-y: 5px;
+    --button-padding-x: 16px;
+    --button-transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+}

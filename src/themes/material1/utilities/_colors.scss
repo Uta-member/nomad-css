@@ -1,0 +1,305 @@
+@use "../utilities/prefixes" as prefixes;
+
+// ============================================================
+// Material Design 1 - Color Definitions
+// Primary: Blue 500 #2196F3 hsl(207, 89%, 54%)
+// Neutral: Blue Gray hsl(200, 18%)
+// ============================================================
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  // ============================================================
+  // Default Palette (mapped to neutral)
+  // ============================================================
+  --palette-hue: var(--neutral-hue);
+  --palette-saturation: var(--neutral-saturation);
+  --palette-lightness-0: var(--neutral-lightness-0);
+  --palette-color-0: var(--neutral-color-0);
+  --palette-color-0-ch: var(--neutral-color-0-ch);
+  --palette-gray-0: var(--neutral-gray-0);
+  --palette-accent-0: var(--neutral-accent-0);
+  --palette-lightness-1: var(--neutral-lightness-1);
+  --palette-color-1: var(--neutral-color-1);
+  --palette-color-1-ch: var(--neutral-color-1-ch);
+  --palette-gray-1: var(--neutral-gray-1);
+  --palette-accent-1: var(--neutral-accent-1);
+  --palette-lightness-2: var(--neutral-lightness-2);
+  --palette-color-2: var(--neutral-color-2);
+  --palette-color-2-ch: var(--neutral-color-2-ch);
+  --palette-gray-2: var(--neutral-gray-2);
+  --palette-accent-2: var(--neutral-accent-2);
+  --palette-lightness-3: var(--neutral-lightness-3);
+  --palette-color-3: var(--neutral-color-3);
+  --palette-color-3-ch: var(--neutral-color-3-ch);
+  --palette-gray-3: var(--neutral-gray-3);
+  --palette-accent-3: var(--neutral-accent-3);
+  --palette-lightness-4: var(--neutral-lightness-4);
+  --palette-color-4: var(--neutral-color-4);
+  --palette-color-4-ch: var(--neutral-color-4-ch);
+  --palette-gray-4: var(--neutral-gray-4);
+  --palette-accent-4: var(--neutral-accent-4);
+  --palette-lightness-5: var(--neutral-lightness-5);
+  --palette-color-5: var(--neutral-color-5);
+  --palette-color-5-ch: var(--neutral-color-5-ch);
+  --palette-gray-5: var(--neutral-gray-5);
+  --palette-accent-5: var(--neutral-accent-5);
+  --palette-lightness-6: var(--neutral-lightness-6);
+  --palette-color-6: var(--neutral-color-6);
+  --palette-color-6-ch: var(--neutral-color-6-ch);
+  --palette-gray-6: var(--neutral-gray-6);
+  --palette-accent-6: var(--neutral-accent-6);
+  --palette-lightness-7: var(--neutral-lightness-7);
+  --palette-color-7: var(--neutral-color-7);
+  --palette-color-7-ch: var(--neutral-color-7-ch);
+  --palette-gray-7: var(--neutral-gray-7);
+  --palette-accent-7: var(--neutral-accent-7);
+  --palette-lightness-8: var(--neutral-lightness-8);
+  --palette-color-8: var(--neutral-color-8);
+  --palette-color-8-ch: var(--neutral-color-8-ch);
+  --palette-gray-8: var(--neutral-gray-8);
+  --palette-accent-8: var(--neutral-accent-8);
+  --palette-lightness-9: var(--neutral-lightness-9);
+  --palette-color-9: var(--neutral-color-9);
+  --palette-color-9-ch: var(--neutral-color-9-ch);
+  --palette-gray-9: var(--neutral-gray-9);
+  --palette-accent-9: var(--neutral-accent-9);
+  --palette-lightness-10: var(--neutral-lightness-10);
+  --palette-color-10: var(--neutral-color-10);
+  --palette-color-10-ch: var(--neutral-color-10-ch);
+  --palette-gray-10: var(--neutral-gray-10);
+  --palette-accent-10: var(--neutral-accent-10);
+  --palette-lighter: var(--neutral-lighter);
+  --palette-accent-lighter: var(--neutral-accent-lighter);
+  --palette-lighter-ch: var(--neutral-lighter-ch);
+  --palette-light: var(--neutral-light);
+  --palette-accent-light: var(--neutral-accent-light);
+  --palette-light-ch: var(--neutral-light-ch);
+  --palette-default: var(--neutral-default);
+  --palette-accent-default: var(--neutral-accent-default);
+  --palette-default-ch: var(--neutral-default-ch);
+  --palette-dark: var(--neutral-dark);
+  --palette-accent-dark: var(--neutral-accent-dark);
+  --palette-dark-ch: var(--neutral-dark-ch);
+  --palette-darker: var(--neutral-darker);
+  --palette-accent-darker: var(--neutral-accent-darker);
+  --palette-darker-ch: var(--neutral-darker-ch);
+
+  // ============================================================
+  // Primary — Blue 500 hsl(207, 89%)
+  // ============================================================
+  --primary-hue: 207;
+  --primary-saturation: 89%;
+  --primary-lighter: var(--primary-color-2);
+  --primary-lighter-ch: var(--primary-color-2-ch);
+  --primary-accent-lighter: var(--primary-accent-2);
+  --primary-light: var(--primary-color-3);
+  --primary-light-ch: var(--primary-color-3-ch);
+  --primary-accent-light: var(--primary-accent-3);
+  --primary-default: var(--primary-color-5);
+  --primary-default-ch: var(--primary-color-5-ch);
+  --primary-accent-default: var(--primary-accent-5);
+  --primary-dark: var(--primary-color-7);
+  --primary-dark-ch: var(--primary-color-7-ch);
+  --primary-accent-dark: var(--primary-accent-7);
+  --primary-darker: var(--primary-color-8);
+  --primary-darker-ch: var(--primary-color-8-ch);
+  --primary-accent-darker: var(--primary-accent-8);
+
+  // ============================================================
+  // Secondary — Pink 500 hsl(339, 82%)
+  // ============================================================
+  --secondary-hue: 339;
+  --secondary-saturation: 82%;
+  --secondary-lighter: var(--secondary-color-2);
+  --secondary-lighter-ch: var(--secondary-color-2-ch);
+  --secondary-accent-lighter: var(--secondary-accent-2);
+  --secondary-light: var(--secondary-color-3);
+  --secondary-light-ch: var(--secondary-color-3-ch);
+  --secondary-accent-light: var(--secondary-accent-3);
+  --secondary-default: var(--secondary-color-5);
+  --secondary-default-ch: var(--secondary-color-5-ch);
+  --secondary-accent-default: var(--secondary-accent-5);
+  --secondary-dark: var(--secondary-color-7);
+  --secondary-dark-ch: var(--secondary-color-7-ch);
+  --secondary-accent-dark: var(--secondary-accent-7);
+  --secondary-darker: var(--secondary-color-8);
+  --secondary-darker-ch: var(--secondary-color-8-ch);
+  --secondary-accent-darker: var(--secondary-accent-8);
+
+  // ============================================================
+  // Tertiary — Teal 500 hsl(174, 60%)
+  // ============================================================
+  --tertiary-hue: 174;
+  --tertiary-saturation: 60%;
+  --tertiary-lighter: var(--tertiary-color-2);
+  --tertiary-lighter-ch: var(--tertiary-color-2-ch);
+  --tertiary-accent-lighter: var(--tertiary-accent-2);
+  --tertiary-light: var(--tertiary-color-3);
+  --tertiary-light-ch: var(--tertiary-color-3-ch);
+  --tertiary-accent-light: var(--tertiary-accent-3);
+  --tertiary-default: var(--tertiary-color-5);
+  --tertiary-default-ch: var(--tertiary-color-5-ch);
+  --tertiary-accent-default: var(--tertiary-accent-5);
+  --tertiary-dark: var(--tertiary-color-7);
+  --tertiary-dark-ch: var(--tertiary-color-7-ch);
+  --tertiary-accent-dark: var(--tertiary-accent-7);
+  --tertiary-darker: var(--tertiary-color-8);
+  --tertiary-darker-ch: var(--tertiary-color-8-ch);
+  --tertiary-accent-darker: var(--tertiary-accent-8);
+
+  // ============================================================
+  // Danger — Red 500 hsl(4, 90%)
+  // ============================================================
+  --danger-hue: 4;
+  --danger-saturation: 90%;
+  --danger-lighter: var(--danger-color-2);
+  --danger-lighter-ch: var(--danger-color-2-ch);
+  --danger-accent-lighter: var(--danger-accent-2);
+  --danger-light: var(--danger-color-3);
+  --danger-light-ch: var(--danger-color-3-ch);
+  --danger-accent-light: var(--danger-accent-3);
+  --danger-default: var(--danger-color-5);
+  --danger-default-ch: var(--danger-color-5-ch);
+  --danger-accent-default: var(--danger-accent-5);
+  --danger-dark: var(--danger-color-7);
+  --danger-dark-ch: var(--danger-color-7-ch);
+  --danger-accent-dark: var(--danger-accent-7);
+  --danger-darker: var(--danger-color-8);
+  --danger-darker-ch: var(--danger-color-8-ch);
+  --danger-accent-darker: var(--danger-accent-8);
+
+  // ============================================================
+  // Success — Green 500 hsl(122, 60%)
+  // ============================================================
+  --success-hue: 122;
+  --success-saturation: 60%;
+  --success-lighter: var(--success-color-2);
+  --success-lighter-ch: var(--success-color-2-ch);
+  --success-accent-lighter: var(--success-accent-2);
+  --success-light: var(--success-color-3);
+  --success-light-ch: var(--success-color-3-ch);
+  --success-accent-light: var(--success-accent-3);
+  --success-default: var(--success-color-5);
+  --success-default-ch: var(--success-color-5-ch);
+  --success-accent-default: var(--success-accent-5);
+  --success-dark: var(--success-color-7);
+  --success-dark-ch: var(--success-color-7-ch);
+  --success-accent-dark: var(--success-accent-7);
+  --success-darker: var(--success-color-8);
+  --success-darker-ch: var(--success-color-8-ch);
+  --success-accent-darker: var(--success-accent-8);
+
+  // ============================================================
+  // Warning — Amber 500 hsl(45, 100%)
+  // ============================================================
+  --warning-hue: 45;
+  --warning-saturation: 100%;
+  --warning-lighter: var(--warning-color-2);
+  --warning-lighter-ch: var(--warning-color-2-ch);
+  --warning-accent-lighter: var(--warning-accent-2);
+  --warning-light: var(--warning-color-3);
+  --warning-light-ch: var(--warning-color-3-ch);
+  --warning-accent-light: var(--warning-accent-3);
+  --warning-default: var(--warning-color-4);
+  --warning-default-ch: var(--warning-color-4-ch);
+  --warning-accent-default: var(--warning-accent-4);
+  --warning-dark: var(--warning-color-6);
+  --warning-dark-ch: var(--warning-color-6-ch);
+  --warning-accent-dark: var(--warning-accent-6);
+  --warning-darker: var(--warning-color-8);
+  --warning-darker-ch: var(--warning-color-8-ch);
+  --warning-accent-darker: var(--warning-accent-8);
+
+  // ============================================================
+  // Info — Cyan hsl(187, 80%)
+  // ============================================================
+  --info-hue: 187;
+  --info-saturation: 80%;
+  --info-lighter: var(--info-color-2);
+  --info-lighter-ch: var(--info-color-2-ch);
+  --info-accent-lighter: var(--info-accent-2);
+  --info-light: var(--info-color-3);
+  --info-light-ch: var(--info-color-3-ch);
+  --info-accent-light: var(--info-accent-3);
+  --info-default: var(--info-color-5);
+  --info-default-ch: var(--info-color-5-ch);
+  --info-accent-default: var(--info-accent-5);
+  --info-dark: var(--info-color-7);
+  --info-dark-ch: var(--info-color-7-ch);
+  --info-accent-dark: var(--info-accent-7);
+  --info-darker: var(--info-color-8);
+  --info-darker-ch: var(--info-color-8-ch);
+  --info-accent-darker: var(--info-accent-8);
+
+  // ============================================================
+  // Neutral — Blue Gray hsl(200, 18%)
+  // ============================================================
+  --neutral-hue: 200;
+  --neutral-saturation: 18%;
+  --neutral-lighter: var(--neutral-color-2);
+  --neutral-lighter-ch: var(--neutral-color-2-ch);
+  --neutral-accent-lighter: var(--neutral-accent-2);
+  --neutral-light: var(--neutral-color-3);
+  --neutral-light-ch: var(--neutral-color-3-ch);
+  --neutral-accent-light: var(--neutral-accent-3);
+  --neutral-default: var(--neutral-color-6);
+  --neutral-default-ch: var(--neutral-color-6-ch);
+  --neutral-accent-default: var(--neutral-accent-6);
+  --neutral-dark: var(--neutral-color-8);
+  --neutral-dark-ch: var(--neutral-color-8-ch);
+  --neutral-accent-dark: var(--neutral-accent-8);
+  --neutral-darker: var(--neutral-color-9);
+  --neutral-darker-ch: var(--neutral-color-9-ch);
+  --neutral-accent-darker: var(--neutral-accent-9);
+}
+
+// ============================================================
+// Light Mode
+// ============================================================
+:root[data-theme="#{prefixes.$theme-name}"],
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
+  --border-color: rgba(0, 0, 0, 0.12);
+  --border-color-light: rgba(0, 0, 0, 0.06);
+  --border-color-dark: rgba(0, 0, 0, 0.24);
+
+  --text-color: rgba(0, 0, 0, 0.87);
+  --text-color-light: rgba(0, 0, 0, 0.54);
+  --text-color-lighter: rgba(0, 0, 0, 0.38);
+  --text-color-dark: rgba(0, 0, 0, 0.87);
+
+  --surface-color-lighter: #ffffff;
+  --surface-color-light: #ffffff;
+  --surface-color: #fafafa;
+  --surface-color-dark: #f5f5f5;
+  --surface-color-darker: #eeeeee;
+}
+
+// ============================================================
+// Dark Mode — Material Design dark theme
+// ============================================================
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  --border-color: rgba(255, 255, 255, 0.12);
+  --border-color-light: rgba(255, 255, 255, 0.06);
+  --border-color-dark: rgba(255, 255, 255, 0.24);
+
+  --text-color: rgba(255, 255, 255, 0.87);
+  --text-color-light: rgba(255, 255, 255, 0.60);
+  --text-color-lighter: rgba(255, 255, 255, 0.38);
+  --text-color-dark: rgba(255, 255, 255, 0.87);
+
+  --surface-color-lighter: #2d2d2d;
+  --surface-color-light: #212121;
+  --surface-color: #121212;
+  --surface-color-dark: #1e1e1e;
+  --surface-color-darker: #252525;
+
+  --primary-default: var(--primary-color-4);
+  --primary-accent-default: var(--primary-accent-4);
+  --danger-default: var(--danger-color-4);
+  --danger-accent-default: var(--danger-accent-4);
+  --success-default: var(--success-color-4);
+  --success-accent-default: var(--success-accent-4);
+  --warning-default: var(--warning-color-3);
+  --warning-accent-default: var(--warning-accent-3);
+  --info-default: var(--info-color-4);
+  --info-accent-default: var(--info-accent-4);
+}

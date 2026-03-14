@@ -1,0 +1,20 @@
+:root[data-theme="neumorphism"] {
+  .button {
+    --button-border-radius: 12px;
+    --button-font-size: 14px;
+    --button-padding-y: 8px;
+    --button-padding-x: 20px;
+    --button-border-width: 0;
+    --button-box-shadow: 6px 6px 12px #c8ccd4, -6px -6px 12px #f8fcff;
+    --button-hover-box-shadow: 4px 4px 8px #c8ccd4, -4px -4px 8px #f8fcff;
+    --button-active-box-shadow: inset 4px 4px 8px #c8ccd4, inset -4px -4px 8px #f8fcff;
+  }
+}
+
+:root[data-theme="neumorphism"][data-color-scheme="dark"] {
+  .button {
+    --button-box-shadow: 6px 6px 12px #262626, -6px -6px 12px #343434;
+    --button-hover-box-shadow: 4px 4px 8px #262626, -4px -4px 8px #343434;
+    --button-active-box-shadow: inset 4px 4px 8px #262626, inset -4px -4px 8px #343434;
+  }
+}

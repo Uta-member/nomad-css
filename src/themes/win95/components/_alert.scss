@@ -1,0 +1,8 @@
+@use "../utilities/_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .alert {
+    --alert-border-radius: 0px;
+    --alert-font-size: 11px;
+  }
+}

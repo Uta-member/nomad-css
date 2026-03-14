@@ -1,0 +1,7 @@
+@use "./_prefixes.scss" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  --shadow-sm: 0 1px 3px rgba(46, 52, 64, 0.12);
+  --shadow-md: 0 2px 8px rgba(46, 52, 64, 0.16);
+  --shadow-lg: 0 4px 16px rgba(46, 52, 64, 0.20);
+}
