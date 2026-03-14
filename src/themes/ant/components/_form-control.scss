@@ -1,0 +1,31 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Ant Design: form control with thin border and blue focus ring
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 0.375rem;
+    --form-control-border-width: 1px;
+    --form-control-padding: 4px 11px;
+    --form-control-font-size: 14px;
+    --form-control-height: 32px;
+    --form-control-sm-height: 24px;
+    --form-control-lg-height: 40px;
+    --form-control-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --form-control-focus-ring-width: 2px;
+    --form-control-focus-ring-offset-width: 0;
+    --form-control-focus-ring-color: var(--primary-default);
+    --form-control-focus-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-default), transparent 80%);
+    --form-control-disabled-opacity: 1;
+    --form-control-disabled-bg-color: #f5f5f5;
+    --form-control-disabled-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .form-control {
+    --form-control-border-color: rgba(255, 255, 255, 0.18);
+    --form-control-bg-color: rgba(255, 255, 255, 0.04);
+    --form-control-disabled-bg-color: rgba(255, 255, 255, 0.08);
+    --form-control-disabled-color: rgba(255, 255, 255, 0.3);
+  }
+}

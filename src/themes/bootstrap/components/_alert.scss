@@ -1,0 +1,12 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: alert with 0.375rem radius
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .alert {
+    --alert-border-radius: 0.375rem;
+    --alert-border-width: 1px;
+    --alert-padding: 1rem 1rem;
+    --alert-font-size: 1rem;
+    --alert-icon-size: 1rem;
+  }
+}

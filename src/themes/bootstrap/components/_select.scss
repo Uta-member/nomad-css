@@ -1,0 +1,28 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: select with standard radius
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .select {
+    --select-border-radius: 0.375rem;
+    --select-border-width: 1px;
+    --select-padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    --select-font-size: 1rem;
+    --select-line-height: 1.5;
+    --select-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --select-focus-ring-width: 0.25rem;
+    --select-focus-ring-offset-width: 0;
+    --select-focus-ring-color: color-mix(in srgb, var(--primary-default), transparent 75%);
+    --select-disabled-opacity: 1;
+    --select-disabled-bg-color: #e9ecef;
+    --select-disabled-color: #6c757d;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .select {
+    --select-border-color: #495057;
+    --select-bg-color: #212529;
+    --select-disabled-bg-color: #343a40;
+    --select-disabled-color: #6c757d;
+  }
+}

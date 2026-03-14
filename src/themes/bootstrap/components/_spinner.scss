@@ -1,0 +1,10 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: spinner with 0.25em border
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .spinner {
+    --spinner-border-width: 0.25em;
+    --spinner-animation-duration: 0.75s;
+    --spinner-color: var(--primary-default);
+  }
+}

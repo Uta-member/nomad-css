@@ -1,0 +1,101 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Ant Design: clean enterprise buttons, 4px radius, thin border
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-width: 1px;
+    --button-border-radius: 0.375rem;
+    --button-padding: 4px 15px;
+    --button-gap: 8px;
+    --button-icon-only-padding: 4px 8px;
+    --button-xs-padding: 0px 7px;
+    --button-xs-gap: 4px;
+    --button-xs-icon-only-padding: 0px 4px;
+    --button-sm-padding: 0px 11px;
+    --button-sm-gap: 6px;
+    --button-sm-icon-only-padding: 0px 6px;
+    --button-lg-padding: 6px 23px;
+    --button-lg-gap: 10px;
+    --button-lg-icon-only-padding: 6px 12px;
+    --button-xl-padding: 10px 31px;
+    --button-xl-gap: 12px;
+    --button-xl-icon-only-padding: 10px 16px;
+    --button-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --button-focus-ring-width: 2px;
+    --button-focus-ring-offset-width: 0px;
+    --button-focus-ring-color: var(--primary-default);
+    --button-font-size: 14px;
+
+    &.filled {
+      --button-border-color: var(--button-bg-color);
+      --button-hover-bg-color: var(--palette-dark);
+      --button-hover-color: var(--button-color);
+      --button-hover-border-color: var(--palette-dark);
+      --button-active-bg-color: var(--palette-darker);
+      --button-active-color: var(--button-color);
+      --button-active-border-color: var(--palette-darker);
+      --button-focus-border-color: var(--button-focus-bg-color);
+      --button-disabled-bg-color: #f5f5f5;
+      --button-disabled-border-color: #d9d9d9;
+      --button-disabled-opacity: 1;
+      --button-disabled-color: rgba(0, 0, 0, 0.25);
+    }
+
+    &.tonal {
+      --button-hover-bg-color: var(--palette-lighter);
+      --button-active-bg-color: var(--palette-light);
+      --button-focus-bg-color: var(--palette-lighter);
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
+      --button-disabled-bg-color: #f5f5f5;
+      --button-disabled-border-color: #d9d9d9;
+      --button-disabled-opacity: 1;
+      --button-disabled-color: rgba(0, 0, 0, 0.25);
+    }
+
+    &.outlined {
+      --button-disabled-border-color: #d9d9d9;
+      --button-disabled-opacity: 1;
+      --button-disabled-color: rgba(0, 0, 0, 0.25);
+    }
+
+    &.text {
+      --button-focus-bg-color: var(--button-bg-color);
+      --button-disabled-opacity: 0.4;
+    }
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .button {
+    &.filled {
+      --button-bg-color: var(--palette-light);
+      --button-color: var(--palette-darker);
+      --button-hover-bg-color: var(--palette-lighter);
+      --button-hover-color: var(--palette-darker);
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-disabled-bg-color: rgba(255, 255, 255, 0.08);
+      --button-disabled-border-color: rgba(255, 255, 255, 0.08);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &.tonal {
+      --button-bg-color: var(--palette-darker);
+      --button-color: var(--palette-lighter);
+      --button-border-color: var(--button-bg-color);
+      --button-disabled-bg-color: rgba(255, 255, 255, 0.08);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &.outlined {
+      --button-disabled-border-color: rgba(255, 255, 255, 0.1);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

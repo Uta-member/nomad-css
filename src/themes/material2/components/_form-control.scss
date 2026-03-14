@@ -1,0 +1,32 @@
+@use "../utilities/prefixes" as prefixes;
+
+// MD2: filled/outlined inputs, focus uses primary color underline
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 0.25rem 0.25rem 0 0;
+    --form-control-focus-ring-width: 2px;
+    --form-control-focus-ring-color: var(--primary-default);
+    --form-control-focus-ring-opacity: 1;
+    --form-control-focus-ring-offset-width: 0px;
+    --form-control-disabled-opacity: 0.38;
+    --form-control-readonly-cursor: text;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"],
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
+  .form-control {
+    --form-control-filled-bg-color: var(--neutral-gray-2);
+    --form-control-filled-hover-bg-color: var(--neutral-gray-3);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .form-control {
+    --form-control-filled-bg-color: var(--neutral-gray-8);
+    --form-control-filled-hover-bg-color: var(--neutral-gray-7);
+    --form-control-border-color: var(--neutral-gray-5);
+    --form-control-hover-border-color: var(--neutral-gray-4);
+    --form-control-placeholder-color: var(--neutral-gray-5);
+  }
+}

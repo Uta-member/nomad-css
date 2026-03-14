@@ -1,0 +1,28 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: form-control with standard radius and focus shadow
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 0.375rem;
+    --form-control-border-width: 1px;
+    --form-control-padding: 0.375rem 0.75rem;
+    --form-control-font-size: 1rem;
+    --form-control-line-height: 1.5;
+    --form-control-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --form-control-focus-ring-width: 0.25rem;
+    --form-control-focus-ring-offset-width: 0;
+    --form-control-focus-ring-color: color-mix(in srgb, var(--primary-default), transparent 75%);
+    --form-control-disabled-opacity: 1;
+    --form-control-disabled-bg-color: #e9ecef;
+    --form-control-disabled-color: #6c757d;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .form-control {
+    --form-control-border-color: #495057;
+    --form-control-bg-color: #212529;
+    --form-control-disabled-bg-color: #343a40;
+    --form-control-disabled-color: #6c757d;
+  }
+}

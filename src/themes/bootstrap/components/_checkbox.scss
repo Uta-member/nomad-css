@@ -1,0 +1,22 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: checkbox with 0.25rem radius and focus shadow
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .checkbox {
+    --checkbox-border-radius: 0.25rem;
+    --checkbox-border-width: 1px;
+    --checkbox-size: 1em;
+    --checkbox-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --checkbox-focus-ring-width: 0.25rem;
+    --checkbox-focus-ring-offset-width: 0;
+    --checkbox-focus-ring-color: color-mix(in srgb, var(--primary-default), transparent 75%);
+    --checkbox-label-gap: 0.5rem;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .checkbox {
+    --checkbox-border-color: #6c757d;
+    --checkbox-bg-color: #343a40;
+  }
+}

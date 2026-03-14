@@ -1,0 +1,117 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Material Design 2: slightly rounded buttons with elevation on hover
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-width: 0px;
+    --button-border-radius: 0.25rem;
+    --button-padding: 8px 16px;
+    --button-gap: 8px;
+    --button-icon-only-padding: 8px;
+    --button-xs-padding: 4px 8px;
+    --button-xs-gap: 4px;
+    --button-xs-icon-only-padding: 4px;
+    --button-sm-padding: 6px 12px;
+    --button-sm-gap: 6px;
+    --button-sm-icon-only-padding: 6px;
+    --button-lg-padding: 12px 24px;
+    --button-lg-gap: 10px;
+    --button-lg-icon-only-padding: 12px;
+    --button-xl-padding: 16px 32px;
+    --button-xl-gap: 12px;
+    --button-xl-icon-only-padding: 16px;
+    --button-transition: background-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+    --button-focus-ring-width: 2px;
+    --button-focus-ring-color: var(--palette-default);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+
+    &.filled {
+      --button-border-color: var(--button-bg-color);
+      --button-box-shadow: var(--shadow-2);
+      --button-hover-bg-color: var(--button-bg-color);
+      --button-hover-color: var(--button-color);
+      --button-hover-opacity: 1;
+      --button-hover-box-shadow: var(--shadow-4);
+      --button-active-bg-color: var(--button-bg-color);
+      --button-active-color: var(--button-color);
+      --button-active-box-shadow: var(--shadow-2);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
+      --button-disabled-bg-color: var(--neutral-lighter);
+      --button-disabled-border-color: var(--neutral-lighter);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--text-color-light);
+      --button-disabled-box-shadow: none;
+    }
+
+    &.tonal {
+      --button-hover-bg-color: var(--palette-light);
+      --button-active-bg-color: var(--button-hover-bg-color);
+      --button-focus-bg-color: var(--button-hover-bg-color);
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-active-border-color: var(--button-active-bg-color);
+      --button-focus-border-color: var(--button-focus-bg-color);
+      --button-box-shadow: var(--shadow-1);
+      --button-hover-box-shadow: var(--shadow-2);
+      --button-disabled-bg-color: var(--neutral-lighter);
+      --button-disabled-border-color: var(--neutral-lighter);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--text-color-light);
+    }
+
+    &.outlined {
+      --button-border-width: 1px;
+      --button-disabled-border-color: var(--neutral-light);
+      --button-disabled-opacity: 1;
+    }
+
+    &.text {
+      text-transform: uppercase;
+      --button-focus-bg-color: var(--button-bg-color);
+      --button-disabled-opacity: 0.38;
+    }
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .button {
+    &.filled {
+      --button-bg-color: var(--palette-light);
+      --button-color: var(--palette-darker);
+      --button-hover-bg-color: var(--palette-lighter);
+      --button-hover-color: var(--palette-darker);
+      --button-border-color: var(--button-bg-color);
+      --button-hover-border-color: var(--button-hover-bg-color);
+      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--neutral-gray-5);
+    }
+
+    &.tonal {
+      --button-bg-color: var(--palette-darker);
+      --button-color: var(--palette-lighter);
+      --button-border-color: var(--button-bg-color);
+      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--neutral-gray-5);
+    }
+
+    &.outlined {
+      --button-hover-bg-color: var(--palette-darker);
+      --button-hover-color: var(--button-color);
+      --button-disabled-bg-color: transparent;
+      --button-disabled-border-color: var(--neutral-gray-6);
+      --button-disabled-opacity: 1;
+      --button-disabled-color: var(--neutral-gray-5);
+    }
+
+    &.text {
+      --button-hover-bg-color: var(--palette-darker);
+      --button-focus-bg-color: var(--button-hover-bg-color);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Chakra UI: input with 2px border and 3px focus ring
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .form-control {
+    --form-control-border-radius: 0.375rem;
+    --form-control-border-width: 1px;
+    --form-control-padding: 0.5rem 1rem;
+    --form-control-font-size: 1rem;
+    --form-control-line-height: 1.5;
+    --form-control-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --form-control-focus-ring-width: 3px;
+    --form-control-focus-ring-offset-width: 0;
+    --form-control-focus-ring-color: var(--primary-default);
+    --form-control-disabled-opacity: 0.4;
+    --form-control-disabled-bg-color: #edf2f7;
+    --form-control-disabled-color: inherit;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .form-control {
+    --form-control-border-color: #4a5568;
+    --form-control-bg-color: #2d3748;
+    --form-control-disabled-bg-color: #2d3748;
+  }
+}

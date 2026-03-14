@@ -1,0 +1,22 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: list-group with slight radius
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .list {
+    --list-border-radius: 0.375rem;
+    --list-border-width: 1px;
+    --list-item-padding: 0.5rem 1rem;
+    --list-item-font-size: 1rem;
+    --list-item-border-radius: 0;
+    --list-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    --list-item-hover-bg-color: #f8f9fa;
+    --list-item-active-color: #ffffff;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .list {
+    --list-item-hover-bg-color: #343a40;
+    --list-border-color: #495057;
+  }
+}

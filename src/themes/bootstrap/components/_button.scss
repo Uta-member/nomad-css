@@ -1,0 +1,58 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: standard rounded buttons, focus ring with 25% opacity
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .button {
+    --button-border-radius: 0.375rem;
+    --button-border-width: 1px;
+    --button-padding: 0.375rem 0.75rem;
+    --button-gap: 0.375rem;
+    --button-font-size: 1rem;
+    --button-font-weight: 400;
+    --button-line-height: 1.5;
+    --button-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --button-focus-ring-width: 0;
+    --button-focus-ring-offset-width: 0;
+    --button-disabled-opacity: 0.65;
+
+    &.sm {
+      --button-padding: 0.25rem 0.5rem;
+      --button-font-size: 0.875rem;
+      --button-border-radius: 0.25rem;
+    }
+
+    &.lg {
+      --button-padding: 0.5rem 1rem;
+      --button-font-size: 1.25rem;
+      --button-border-radius: 0.5rem;
+    }
+
+    &.filled {
+      --button-hover-bg-color: var(--palette-dark);
+      --button-hover-border-color: var(--palette-dark);
+      --button-active-bg-color: var(--palette-darker);
+      --button-active-border-color: var(--palette-darker);
+    }
+
+    &.outlined {
+      --button-hover-bg-color: var(--palette-darker);
+      --button-hover-color: var(--palette-accent-darker);
+      --button-active-bg-color: var(--palette-dark);
+      --button-active-color: var(--palette-accent-dark);
+    }
+
+    &.text {
+      --button-disabled-opacity: 0.65;
+    }
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .button {
+    &.filled {
+      --button-hover-bg-color: var(--palette-light);
+      --button-hover-border-color: var(--palette-light);
+      --button-active-bg-color: var(--palette-lighter);
+    }
+  }
+}

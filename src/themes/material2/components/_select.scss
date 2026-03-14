@@ -1,0 +1,27 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .select {
+    --select-border-radius: 0.25rem 0.25rem 0 0;
+    --select-focus-ring-width: 2px;
+    --select-focus-ring-color: var(--primary-default);
+    --select-focus-ring-opacity: 1;
+    --select-focus-ring-offset-width: 0px;
+    --select-disabled-opacity: 0.38;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"],
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
+  .select {
+    --select-filled-bg-color: var(--neutral-gray-2);
+    --select-filled-hover-bg-color: var(--neutral-gray-3);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .select {
+    --select-filled-bg-color: var(--neutral-gray-8);
+    --select-filled-hover-bg-color: var(--neutral-gray-7);
+  }
+}

@@ -1,0 +1,26 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Chakra UI: switch with teal checked color and 3px focus ring
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .switch {
+    --switch-border-radius: 100px;
+    --switch-border-width: 0px;
+    --switch-track-width: 2.75rem;
+    --switch-track-height: 1.5rem;
+    --switch-thumb-size: calc(1.5rem - 8px);
+    --switch-thumb-margin: 4px;
+    --switch-thumb-bg-color: #ffffff;
+    --switch-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --switch-disabled-opacity: 0.4;
+    --switch-focus-ring-width: 3px;
+    --switch-focus-ring-offset-width: 2px;
+    --switch-focus-ring-color: var(--primary-default);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .switch {
+    --switch-unchecked-bg-color: #4a5568;
+    --switch-thumb-bg-color: rgba(255, 255, 255, 0.9);
+  }
+}

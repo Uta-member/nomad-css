@@ -1,0 +1,23 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Chakra UI: list with subtle hover
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .list {
+    --list-border-radius: 0.375rem;
+    --list-border-width: 1px;
+    --list-item-padding: 0.5rem 1rem;
+    --list-item-font-size: 1rem;
+    --list-item-border-radius: 0.25rem;
+    --list-transition: all 0.15s ease;
+    --list-item-hover-bg-color: #edf2f7;
+    --list-item-active-color: var(--primary-default);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .list {
+    --list-item-hover-bg-color: #2d3748;
+    --list-border-color: #2d3748;
+    --list-item-active-bg-color: color-mix(in srgb, var(--primary-default), transparent 80%);
+  }
+}

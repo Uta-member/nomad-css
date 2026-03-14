@@ -1,0 +1,21 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: radio with focus shadow
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .radio {
+    --radio-border-width: 1px;
+    --radio-size: 1em;
+    --radio-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --radio-focus-ring-width: 0.25rem;
+    --radio-focus-ring-offset-width: 0;
+    --radio-focus-ring-color: color-mix(in srgb, var(--primary-default), transparent 75%);
+    --radio-label-gap: 0.5rem;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .radio {
+    --radio-border-color: #6c757d;
+    --radio-bg-color: #343a40;
+  }
+}

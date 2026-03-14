@@ -1,0 +1,33 @@
+@use "../utilities/prefixes" as prefixes;
+
+// MD2: switch with primary color track when checked
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .switch {
+    --switch-track-bg-color: rgba(0, 0, 0, 0.38);
+    --switch-thumb-bg-color: #fafafa;
+    --switch-track-checked-bg-color: var(--primary-lighter);
+    --switch-thumb-checked-bg-color: var(--primary-default);
+    --switch-track-border-color: transparent;
+    --switch-track-border-width: 0px;
+    --switch-thumb-size: 1rem;
+    --switch-thumb-sm-size: 0.75rem;
+    --switch-thumb-lg-size: 1.25rem;
+    --switch-track-focus-ring-color: var(--primary-default);
+    --switch-track-disabled-bg-color: rgba(0, 0, 0, 0.12);
+    --switch-thumb-disabled-bg-color: #bdbdbd;
+    --switch-track-checked-disabled-bg-color: var(--primary-lighter);
+    --switch-thumb-checked-disabled-bg-color: var(--primary-light);
+    --switch-disabled-opacity: 1;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .switch {
+    --switch-track-bg-color: rgba(255, 255, 255, 0.3);
+    --switch-thumb-bg-color: #bdbdbd;
+    --switch-track-checked-bg-color: var(--primary-darker);
+    --switch-thumb-checked-bg-color: var(--primary-lighter);
+    --switch-track-disabled-bg-color: rgba(255, 255, 255, 0.1);
+    --switch-thumb-disabled-bg-color: #616161;
+  }
+}

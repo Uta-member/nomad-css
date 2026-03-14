@@ -1,0 +1,21 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Chakra UI: radio with teal focus ring
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .radio {
+    --radio-border-width: 2px;
+    --radio-size: 1rem;
+    --radio-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --radio-focus-ring-width: 3px;
+    --radio-focus-ring-offset-width: 2px;
+    --radio-focus-ring-color: var(--primary-default);
+    --radio-label-gap: 0.5rem;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
+  .radio {
+    --radio-border-color: #4a5568;
+    --radio-bg-color: #2d3748;
+  }
+}

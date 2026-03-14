@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="{{ '/dist/css/default.css' | url }}" />
     <link rel="stylesheet" href="{{ '/dist/css/fluent2.css' | url }}" />
     <link rel="stylesheet" href="{{ '/dist/css/material3.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/apple-hig.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/material2.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/ant.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/bootstrap.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/dist/css/chakra.css' | url }}" />
     <link rel="stylesheet" href="{{ '/assets/demo.css' | url }}" />
     <script>
       // テーマを描画前に適用してフラッシュを防ぐ
@@ -26,64 +31,25 @@
         </a>
         <div class="showcase-controls">
           <div class="theme-switcher">
-            <strong>Theme:</strong>
-            <label
-              ><input
-                type="radio"
-                name="theme"
-                class="radio"
-                value=""
-                onchange="setTheme('')"
-              />Default</label
-            >
-            <label
-              ><input
-                type="radio"
-                name="theme"
-                class="radio"
-                value="fluent2"
-                onchange="setTheme('fluent2')"
-              />Fluent 2</label
-            >
-            <label
-              ><input
-                type="radio"
-                name="theme"
-                class="radio"
-                value="material3"
-                onchange="setTheme('material3')"
-              />Material 3</label
-            >
+            <label for="theme-select"><strong>Theme:</strong></label>
+            <select id="theme-select" class="select" onchange="setTheme(this.value)">
+              <option value="">Default</option>
+              <option value="fluent2">Fluent 2</option>
+              <option value="material3">Material 3</option>
+              <option value="apple-hig">Apple HIG</option>
+              <option value="material2">Material 2</option>
+              <option value="ant">Ant Design</option>
+              <option value="bootstrap">Bootstrap 5</option>
+              <option value="chakra">Chakra UI</option>
+            </select>
           </div>
           <div class="theme-switcher">
-            <strong>Color Scheme:</strong>
-            <label
-              ><input
-                type="radio"
-                name="color-scheme"
-                class="radio"
-                value=""
-                onchange="setScheme('')"
-              />Default</label
-            >
-            <label
-              ><input
-                type="radio"
-                name="color-scheme"
-                class="radio"
-                value="light"
-                onchange="setScheme('light')"
-              />Light</label
-            >
-            <label
-              ><input
-                type="radio"
-                name="color-scheme"
-                class="radio"
-                value="dark"
-                onchange="setScheme('dark')"
-              />Dark</label
-            >
+            <label for="scheme-select"><strong>Color Scheme:</strong></label>
+            <select id="scheme-select" class="select" onchange="setScheme(this.value)">
+              <option value="">Default</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
           </div>
         </div>
       </div>
@@ -132,22 +98,18 @@
       function setTheme(theme) {
         document.documentElement.dataset.theme = theme;
         localStorage.setItem("nomad-theme", theme);
-        document.querySelectorAll('input[name="theme"]').forEach(function (r) {
-          r.checked = r.value === theme;
-        });
+        var sel = document.getElementById("theme-select");
+        if (sel) sel.value = theme;
       }
 
       function setScheme(scheme) {
         document.documentElement.dataset.colorScheme = scheme;
         localStorage.setItem("nomad-scheme", scheme);
-        document
-          .querySelectorAll('input[name="color-scheme"]')
-          .forEach(function (r) {
-            r.checked = r.value === scheme;
-          });
+        var sel = document.getElementById("scheme-select");
+        if (sel) sel.value = scheme;
       }
 
-      // ページロード時にlocalStorageから復元してラジオボタンも同期
+      // ページロード時にlocalStorageから復元してドロップダウンも同期
       var savedTheme = localStorage.getItem("nomad-theme") || "material3";
       var savedScheme = localStorage.getItem("nomad-scheme") || "light";
       setTheme(savedTheme);
