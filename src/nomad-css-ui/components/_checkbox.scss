@@ -248,7 +248,7 @@ $check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !def
     background-color: var(#{$check-box-active-bg-color-var});
     border-color: var(#{$check-box-active-border-color-var});
   }
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     background-color: var(#{$check-box-focus-bg-color-var});
     border-color: var(#{$check-box-focus-border-color-var});
     outline-width: var(#{$check-box-focus-ring-width-var});
@@ -276,7 +276,7 @@ $check-box-valid-border-color-var: --#{$check-box-prefix}valid-border-color !def
       background-color: var(#{$check-box-checked-active-bg-color-var});
       border-color: var(#{$check-box-checked-active-border-color-var});
     }
-    &:focus-visible {
+    &:focus-visible:not(:hover):not(:active) {
       background-color: var(#{$check-box-checked-focus-bg-color-var});
       border-color: var(#{$check-box-checked-focus-border-color-var});
       outline-width: var(#{$check-box-focus-ring-width-var});

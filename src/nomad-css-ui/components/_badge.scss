@@ -33,7 +33,6 @@ $badge-border-radius-var: --#{$badge-prefix}border-radius !default;
 // Layout
 // --------------------------------------------
 $badge-padding-var: --#{$badge-prefix}padding !default;
-$badge-font-size-var: --#{$badge-prefix}font-size !default;
 
 // --------------------------------------------
 // Dot
@@ -45,6 +44,13 @@ $badge-dot-size-var: --#{$badge-prefix}dot-size !default;
 // --------------------------------------------
 $badge-overlay-top-var: --#{$badge-prefix}overlay-top !default;
 $badge-overlay-right-var: --#{$badge-prefix}overlay-right !default;
+
+// --------------------------------------------
+// Sizes
+// --------------------------------------------
+$badge-font-size-var: --#{$badge-prefix}font-size !default;
+$badge-font-size-sm-var: --#{$badge-prefix}font-size-sm !default;
+$badge-font-size-lg-var: --#{$badge-prefix}font-size-lg !default;
 
 // ============================================
 // Process
@@ -68,9 +74,9 @@ $badge-overlay-right-var: --#{$badge-prefix}overlay-right !default;
   // Layout
   // --------------------------------------------
   #{$badge-padding-var}: 0.35em 0.55em;
-  #{$badge-font-size-var}: 0.75em;
 
   // --------------------------------------------
+  // Dot
   // --------------------------------------------
   #{$badge-dot-size-var}: 0.85rem;
 
@@ -79,6 +85,13 @@ $badge-overlay-right-var: --#{$badge-prefix}overlay-right !default;
   // --------------------------------------------
   #{$badge-overlay-top-var}: 0;
   #{$badge-overlay-right-var}: 0;
+
+  // --------------------------------------------
+  // Sizes
+  // --------------------------------------------
+  #{$badge-font-size-var}: 0.75em;
+  #{$badge-font-size-sm-var}: 0.65em;
+  #{$badge-font-size-lg-var}: 0.875em;
 }
 
 // ============================================
@@ -124,9 +137,9 @@ $badge-overlay-right-var: --#{$badge-prefix}overlay-right !default;
   // Sizes
   // --------------------------------------------
   &.sm {
-    font-size: 0.65em;
+    font-size: var(#{$badge-font-size-sm-var});
   }
   &.lg {
-    font-size: 0.875em;
+    font-size: var(#{$badge-font-size-lg-var});
   }
 }

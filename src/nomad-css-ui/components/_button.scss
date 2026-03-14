@@ -81,11 +81,11 @@ $button-disabled-box-shadow-var: --#{$button-prefix}disabled-box-shadow !default
 $button-transition-var: --#{$button-prefix}transition !default;
 
 // --------------------------------------------
-// Outlines
+// Focus ring
 // --------------------------------------------
-$button-focus-outline-color-var: --#{$button-prefix}focus-outline-color !default;
-$button-focus-outline-width-var: --#{$button-prefix}focus-outline-width !default;
-$button-focus-outline-offset-var: --#{$button-prefix}focus-outline-offset !default;
+$button-focus-ring-color-var: --#{$button-prefix}focus-ring-color !default;
+$button-focus-ring-width-var: --#{$button-prefix}focus-ring-width !default;
+$button-focus-ring-offset-var: --#{$button-prefix}focus-ring-offset !default;
 
 // --------------------------------------------
 // Sizes
@@ -181,11 +181,11 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   #{$button-transition-var}: 0.3s;
 
   // --------------------------------------------
-  // Outlines
+  // Focus ring
   // --------------------------------------------
-  #{$button-focus-outline-color-var}: var(#{color-defines.$border-color-var});
-  #{$button-focus-outline-width-var}: 2px;
-  #{$button-focus-outline-offset-var}: 2px;
+  #{$button-focus-ring-color-var}: var(#{color-defines.$border-color-var});
+  #{$button-focus-ring-width-var}: 2px;
+  #{$button-focus-ring-offset-var}: 2px;
 
   // --------------------------------------------
   // Sizes
@@ -315,16 +315,16 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
     cursor: var(#{$button-disabled-cursor-var});
     box-shadow: var(#{$button-disabled-box-shadow-var});
   }
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     background-color: var(#{$button-focus-bg-color-var});
     color: var(#{$button-focus-color-var});
     border-color: var(#{$button-focus-border-color-var});
     border-radius: var(#{$button-focus-border-radius-var});
     opacity: var(#{$button-focus-opacity-var});
     box-shadow: var(#{$button-focus-box-shadow-var});
-    outline: var(#{$button-focus-outline-width-var}) solid
-      var(#{$button-focus-outline-color-var});
-    outline-offset: var(#{$button-focus-outline-offset-var});
+    outline: var(#{$button-focus-ring-width-var}) solid
+      var(#{$button-focus-ring-color-var});
+    outline-offset: var(#{$button-focus-ring-offset-var});
   }
 }
 

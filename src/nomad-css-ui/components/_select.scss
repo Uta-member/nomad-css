@@ -271,7 +271,7 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
     }
   }
 
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     color: var(#{$select-focus-color-var});
     border-color: var(#{$select-focus-border-color-var});
     &::placeholder {
@@ -312,7 +312,7 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
 // ============================================
 .#{$select-class-name},
 .#{$select-class-name}.outlined {
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     outline-offset: var(#{$select-focus-ring-offset-width-var});
     outline-width: var(#{$select-focus-ring-width-var});
     outline-color: var(#{$select-focus-ring-color-var});
@@ -333,7 +333,7 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   &:active {
     background-color: var(#{$select-filled-active-bg-color-var});
   }
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     background-color: var(#{$select-filled-focus-bg-color-var});
     outline: none;
     box-shadow: 0 -1px 0 0 var(#{$select-focus-ring-color-var}) inset;
@@ -349,7 +349,7 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   #{$select-border-right-width-var}: 0;
   #{$select-border-left-width-var}: 0;
 
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     outline: none;
     box-shadow: 0 -1px 0 0 var(#{$select-focus-ring-color-var}) inset;
   }

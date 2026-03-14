@@ -39,7 +39,7 @@
     }
 
     // フォーカス時は枠線のみの円 (state layer なし)
-    &:focus-visible:not(:disabled)::after {
+    &:focus-visible:not(:disabled):not(:hover):not(:active)::after {
       transform: translate(-50%, -50%) scale(1);
       background-color: transparent;
       border-color: var(--neutral-default);

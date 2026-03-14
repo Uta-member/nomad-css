@@ -8333,9 +8333,9 @@ h6,
   --button-focus-box-shadow: none;
   --button-disabled-box-shadow: none;
   --button-transition: 0.3s;
-  --button-focus-outline-color: var(--border-color);
-  --button-focus-outline-width: 2px;
-  --button-focus-outline-offset: 2px;
+  --button-focus-ring-color: var(--border-color);
+  --button-focus-ring-width: 2px;
+  --button-focus-ring-offset: 2px;
   --button-font-size: inherit;
   --button-padding: 0.5em 1em;
   --button-gap: 0.5em;
@@ -8445,15 +8445,15 @@ h6,
   cursor: var(--button-disabled-cursor);
   box-shadow: var(--button-disabled-box-shadow);
 }
-.button:focus-visible {
+.button:focus-visible:not(:hover):not(:active) {
   background-color: var(--button-focus-bg-color);
   color: var(--button-focus-color);
   border-color: var(--button-focus-border-color);
   border-radius: var(--button-focus-border-radius);
   opacity: var(--button-focus-opacity);
   box-shadow: var(--button-focus-box-shadow);
-  outline: var(--button-focus-outline-width) solid var(--button-focus-outline-color);
-  outline-offset: var(--button-focus-outline-offset);
+  outline: var(--button-focus-ring-width) solid var(--button-focus-ring-color);
+  outline-offset: var(--button-focus-ring-offset);
 }
 
 .button,
@@ -8637,7 +8637,7 @@ h6,
   background-color: var(--checkbox-active-bg-color);
   border-color: var(--checkbox-active-border-color);
 }
-.checkbox:focus-visible {
+.checkbox:focus-visible:not(:hover):not(:active) {
   background-color: var(--checkbox-focus-bg-color);
   border-color: var(--checkbox-focus-border-color);
   outline-width: var(--checkbox-focus-ring-width);
@@ -8663,7 +8663,7 @@ h6,
   background-color: var(--checkbox-checked-active-bg-color);
   border-color: var(--checkbox-checked-active-border-color);
 }
-.checkbox:checked:focus-visible, .checkbox:indeterminate:focus-visible {
+.checkbox:checked:focus-visible:not(:hover):not(:active), .checkbox:indeterminate:focus-visible:not(:hover):not(:active) {
   background-color: var(--checkbox-checked-focus-bg-color);
   border-color: var(--checkbox-checked-focus-border-color);
   outline-width: var(--checkbox-focus-ring-width);
@@ -8795,7 +8795,7 @@ h6,
   background-color: var(--radio-active-bg-color);
   border-color: var(--radio-active-border-color);
 }
-.radio:focus-visible {
+.radio:focus-visible:not(:hover):not(:active) {
   background-color: var(--radio-focus-bg-color);
   border-color: var(--radio-focus-border-color);
   outline-width: var(--radio-focus-ring-width);
@@ -8821,7 +8821,7 @@ h6,
   background-color: var(--radio-checked-active-bg-color);
   border-color: var(--radio-checked-active-border-color);
 }
-.radio:checked:focus-visible, .radio:indeterminate:focus-visible {
+.radio:checked:focus-visible:not(:hover):not(:active), .radio:indeterminate:focus-visible:not(:hover):not(:active) {
   background-color: var(--radio-checked-focus-bg-color);
   border-color: var(--radio-checked-focus-border-color);
   outline-width: var(--radio-focus-ring-width);
@@ -8987,11 +8987,11 @@ h6,
 .form-control:active::placeholder {
   color: var(--form-control-placeholder-active-color);
 }
-.form-control:focus-visible {
+.form-control:focus-visible:not(:hover):not(:active) {
   color: var(--form-control-focus-color);
   border-color: var(--form-control-focus-border-color);
 }
-.form-control:focus-visible::placeholder {
+.form-control:focus-visible:not(:hover):not(:active)::placeholder {
   color: var(--form-control-placeholder-focus-color);
 }
 .form-control:disabled {
@@ -9016,8 +9016,8 @@ h6,
   color: var(--form-control-placeholder-color);
 }
 
-.form-control:focus-visible,
-.form-control.outlined:focus-visible {
+.form-control:focus-visible:not(:hover):not(:active),
+.form-control.outlined:focus-visible:not(:hover):not(:active) {
   outline-offset: var(--form-control-focus-ring-offset-width);
   outline-width: var(--form-control-focus-ring-width);
   outline-color: var(--form-control-focus-ring-color);
@@ -9038,7 +9038,7 @@ h6,
 .form-control.filled:active {
   background-color: var(--form-control-filled-active-bg-color);
 }
-.form-control.filled:focus-visible {
+.form-control.filled:focus-visible:not(:hover):not(:active) {
   background-color: var(--form-control-filled-focus-bg-color);
   outline: none;
   box-shadow: 0 calc(-1 * var(--form-control-focus-ring-width)) 0 0 var(--form-control-focus-ring-color) inset;
@@ -9057,7 +9057,7 @@ h6,
   --form-control-border-right-width: 0;
   --form-control-border-left-width: 0;
 }
-.form-control.underline:focus-visible {
+.form-control.underline:focus-visible:not(:hover):not(:active) {
   outline: none;
   box-shadow: 0 calc(-1 * var(--form-control-focus-ring-width)) 0 0 var(--form-control-focus-ring-color) inset;
 }
@@ -9190,11 +9190,11 @@ h6,
 .select:active::placeholder {
   color: var(--select-placeholder-active-color);
 }
-.select:focus-visible {
+.select:focus-visible:not(:hover):not(:active) {
   color: var(--select-focus-color);
   border-color: var(--select-focus-border-color);
 }
-.select:focus-visible::placeholder {
+.select:focus-visible:not(:hover):not(:active)::placeholder {
   color: var(--select-placeholder-focus-color);
 }
 .select:disabled {
@@ -9220,8 +9220,8 @@ h6,
   color: var(--palette-accent-default);
 }
 
-.select:focus-visible,
-.select.outlined:focus-visible {
+.select:focus-visible:not(:hover):not(:active),
+.select.outlined:focus-visible:not(:hover):not(:active) {
   outline-offset: var(--select-focus-ring-offset-width);
   outline-width: var(--select-focus-ring-width);
   outline-color: var(--select-focus-ring-color);
@@ -9242,7 +9242,7 @@ h6,
 .select.filled:active {
   background-color: var(--select-filled-active-bg-color);
 }
-.select.filled:focus-visible {
+.select.filled:focus-visible:not(:hover):not(:active) {
   background-color: var(--select-filled-focus-bg-color);
   outline: none;
   box-shadow: 0 -1px 0 0 var(--select-focus-ring-color) inset;
@@ -9258,7 +9258,7 @@ h6,
   --select-border-right-width: 0;
   --select-border-left-width: 0;
 }
-.select.underline:focus-visible {
+.select.underline:focus-visible:not(:hover):not(:active) {
   outline: none;
   box-shadow: 0 -1px 0 0 var(--select-focus-ring-color) inset;
 }
@@ -9397,10 +9397,12 @@ h6,
   --badge-color: var(--palette-accent-default);
   --badge-border-radius: 10rem;
   --badge-padding: 0.35em 0.55em;
-  --badge-font-size: 0.75em;
   --badge-dot-size: 0.85rem;
   --badge-overlay-top: 0;
   --badge-overlay-right: 0;
+  --badge-font-size: 0.75em;
+  --badge-font-size-sm: 0.65em;
+  --badge-font-size-lg: 0.875em;
 }
 
 .badge {
@@ -9430,10 +9432,10 @@ h6,
   border-radius: 50%;
 }
 .badge.sm {
-  font-size: 0.65em;
+  font-size: var(--badge-font-size-sm);
 }
 .badge.lg {
-  font-size: 0.875em;
+  font-size: var(--badge-font-size-lg);
 }
 
 .chip {
@@ -9492,7 +9494,7 @@ h6,
   color: var(--chip-active-color);
   border-color: var(--chip-active-border-color);
 }
-.chip:focus-visible {
+.chip:focus-visible:not(:hover):not(:active) {
   background-color: var(--chip-focus-bg-color);
   color: var(--chip-focus-color);
   border-color: var(--chip-focus-border-color);
@@ -9732,7 +9734,7 @@ h6,
   cursor: var(--switch-disabled-cursor);
   opacity: var(--switch-disabled-opacity);
 }
-.switch .switch-input:focus-visible:not(:disabled) ~ .switch-track {
+.switch .switch-input:focus-visible:not(:disabled):not(:hover):not(:active) ~ .switch-track {
   outline-width: var(--switch-track-focus-ring-width);
   outline-color: var(--switch-track-focus-ring-color);
   outline-offset: var(--switch-track-focus-ring-offset);
@@ -9777,7 +9779,7 @@ h6,
   --accordion-border-width: 1px;
   --accordion-padding: 0.75rem 1rem;
   --accordion-header-padding: 0.75rem 1rem;
-  --accordion-transition: 0.2s;
+  --accordion-transition: color 0.2s, background-color 0.2s, transform 0.2s;
   --accordion-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L16 12L10 18Z'/%3E%3C/svg%3E");
   --accordion-icon-open-rotation: 90deg;
   --accordion-icon-size: 1em;
@@ -9789,7 +9791,9 @@ h6,
 }
 
 .accordion {
-  border: var(--accordion-border-width) solid var(--accordion-border-color);
+  border-width: var(--accordion-border-width);
+  border-style: solid;
+  border-color: var(--accordion-border-color);
   border-radius: var(--accordion-border-radius);
   overflow: hidden;
 }
@@ -9803,7 +9807,7 @@ h6,
   color: var(--accordion-header-color);
   cursor: pointer;
   user-select: none;
-  transition: background-color var(--accordion-transition), color var(--accordion-transition);
+  transition: var(--accordion-transition);
 }
 .accordion > .accordion-header::-webkit-details-marker {
   display: none;
@@ -9822,7 +9826,7 @@ h6,
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
-  transition: transform var(--accordion-transition);
+  transition: var(--accordion-transition);
 }
 .accordion > .accordion-header:hover {
   background-color: var(--accordion-header-hover-bg-color);
@@ -9852,7 +9856,7 @@ h6,
   height: var(--accordion-icon-size);
   color: var(--accordion-icon-color);
   border-radius: var(--accordion-icon-border-radius);
-  transition: transform var(--accordion-transition), color var(--accordion-transition), background-color var(--accordion-transition);
+  transition: var(--accordion-transition);
 }
 .accordion > .accordion-header > .accordion-icon::before {
   content: "";
@@ -10413,19 +10417,19 @@ pre {
   --form-control-disabled-opacity: 0.4;
   --form-control-readonly-cursor: text;
 }
-:root[data-theme=fluent2] .form-control:focus-visible {
+:root[data-theme=fluent2] .form-control:focus-visible:not(:hover):not(:active) {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control:hover:not(:disabled):not(:read-only) {
   box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
 }
-:root[data-theme=fluent2] .form-control.filled:focus-visible {
+:root[data-theme=fluent2] .form-control.filled:focus-visible:not(:hover):not(:active) {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control.filled:hover:not(:disabled):not(:read-only) {
   box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
 }
-:root[data-theme=fluent2] .form-control.underline:focus-visible {
+:root[data-theme=fluent2] .form-control.underline:focus-visible:not(:hover):not(:active) {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control.underline:hover:not(:disabled):not(:read-only) {

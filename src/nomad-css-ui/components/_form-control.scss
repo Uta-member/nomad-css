@@ -294,7 +294,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
     }
   }
 
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     color: var(#{$form-control-focus-color-var});
     border-color: var(#{$form-control-focus-border-color-var});
     &::placeholder {
@@ -332,7 +332,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
 // ============================================
 .#{$form-control-class-name},
 .#{$form-control-class-name}.outlined {
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     outline-offset: var(#{$form-control-focus-ring-offset-width-var});
     outline-width: var(#{$form-control-focus-ring-width-var});
     outline-color: var(#{$form-control-focus-ring-color-var});
@@ -353,7 +353,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   &:active {
     background-color: var(#{$form-control-filled-active-bg-color-var});
   }
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     background-color: var(#{$form-control-filled-focus-bg-color-var});
     outline: none;
     box-shadow: 0 calc(-1 * var(#{$form-control-focus-ring-width-var})) 0 0
@@ -373,7 +373,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   #{$form-control-border-right-width-var}: 0;
   #{$form-control-border-left-width-var}: 0;
 
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     outline: none;
     box-shadow: 0 calc(-1 * var(#{$form-control-focus-ring-width-var})) 0 0
       var(#{$form-control-focus-ring-color-var}) inset;

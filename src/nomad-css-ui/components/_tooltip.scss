@@ -14,13 +14,6 @@ $tooltip-prefix: #{prefixes.$prefix}tooltip- !default;
 // --------------------------------------------
 $tooltip-class-name: tooltip !default;
 
-// ============================================
-// NOTE
-// ============================================
-// CSS-only tooltip using [data-tooltip] + ::after pseudo-element.
-// Appears on :hover and :focus-visible.
-// ⚠ Touch devices do not fire :hover — for touch support, use a JS implementation.
-
 // --------------------------------------------
 // Variants
 // --------------------------------------------

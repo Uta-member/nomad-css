@@ -231,7 +231,7 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
     background-color: var(#{$radio-active-bg-color-var});
     border-color: var(#{$radio-active-border-color-var});
   }
-  &:focus-visible {
+  &:focus-visible:not(:hover):not(:active) {
     background-color: var(#{$radio-focus-bg-color-var});
     border-color: var(#{$radio-focus-border-color-var});
     outline-width: var(#{$radio-focus-ring-width-var});
@@ -259,7 +259,7 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
       background-color: var(#{$radio-checked-active-bg-color-var});
       border-color: var(#{$radio-checked-active-border-color-var});
     }
-    &:focus-visible {
+    &:focus-visible:not(:hover):not(:active) {
       background-color: var(#{$radio-checked-focus-bg-color-var});
       border-color: var(#{$radio-checked-focus-border-color-var});
       outline-width: var(#{$radio-focus-ring-width-var});

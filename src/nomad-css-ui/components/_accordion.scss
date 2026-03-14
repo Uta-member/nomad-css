@@ -101,7 +101,7 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   // --------------------------------------------
   // Transition
   // --------------------------------------------
-  #{$accordion-transition-var}: 0.2s;
+  #{$accordion-transition-var}: color 0.2s, background-color 0.2s, transform 0.2s;
 
   // --------------------------------------------
   // Icon
@@ -121,8 +121,9 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
 // Overrides
 // ============================================
 .#{$accordion-class-name} {
-  border: var(#{$accordion-border-width-var}) solid
-    var(#{$accordion-border-color-var});
+  border-width: var(#{$accordion-border-width-var});
+  border-style: solid;
+  border-color: var(#{$accordion-border-color-var});
   border-radius: var(#{$accordion-border-radius-var});
   overflow: hidden;
 
@@ -137,9 +138,7 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
     color: var(#{$accordion-header-color-var});
     cursor: pointer;
     user-select: none;
-    transition:
-      background-color var(#{$accordion-transition-var}),
-      color var(#{$accordion-transition-var});
+    transition: var(#{$accordion-transition-var});
 
     // Remove default disclosure triangle
     &::-webkit-details-marker {
@@ -161,7 +160,7 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
       mask-size: contain;
       mask-repeat: no-repeat;
       mask-position: center;
-      transition: transform var(#{$accordion-transition-var});
+      transition: var(#{$accordion-transition-var});
     }
 
     &:hover {
@@ -206,10 +205,7 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   height: var(#{$accordion-icon-size-var});
   color: var(#{$accordion-icon-color-var});
   border-radius: var(#{$accordion-icon-border-radius-var});
-  transition:
-    transform var(#{$accordion-transition-var}),
-    color var(#{$accordion-transition-var}),
-    background-color var(#{$accordion-transition-var});
+  transition: var(#{$accordion-transition-var});
 
   // Default indicator via ::before (shown when no child elements are present)
   &::before {
