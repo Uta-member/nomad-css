@@ -355,4 +355,129 @@ layout: layout.njk
       </div>
     </div>
   </div>
+
+  {# ============================================ #}
+  {# Color Utility Classes                        #}
+  {# ============================================ #}
+
+  <h2>Color Utility Classes</h2>
+
+  {# --- Surface & Body Text --- #}
+  <div class="demo-row">
+    <h4>Surface &amp; Body Text</h4>
+    <div style="margin-bottom: 0.75rem">
+      <p class="demo-label">bg-surface-*</p>
+      <div class="d-flex flex-wrap" style="gap: 4px">
+        <div class="color-util-swatch bg-surface-lighter">bg-surface-lighter</div>
+        <div class="color-util-swatch bg-surface-light">bg-surface-light</div>
+        <div class="color-util-swatch bg-surface">bg-surface</div>
+        <div class="color-util-swatch bg-surface-dark">bg-surface-dark</div>
+        <div class="color-util-swatch bg-surface-darker">bg-surface-darker</div>
+      </div>
+    </div>
+    <div>
+      <p class="demo-label">text-body-*</p>
+      <div class="d-flex flex-wrap" style="gap: 1.5rem">
+        <span class="text-body">text-body</span>
+        <span class="text-body-light">text-body-light</span>
+        <span class="text-body-lighter">text-body-lighter</span>
+        <span class="text-body-dark">text-body-dark</span>
+      </div>
+    </div>
+  </div>
+
+  {# --- Semantic bg/text named levels --- #}
+  {% set semanticNames = ["primary","secondary","tertiary","success","warning","danger","info","neutral"] %}
+
+  <div class="demo-row">
+    <h4>bg-{semantic} — Named Levels</h4>
+    <div class="d-flex flex-wrap" style="gap: 16px">
+      {% for s in semanticNames %}
+        <div style="min-width: 130px">
+          <div class="demo-label">{{ s | capitalize }}</div>
+          <div class="color-util-swatch bg-{{ s }}-lighter">bg-{{ s }}-lighter</div>
+          <div class="color-util-swatch bg-{{ s }}-light">bg-{{ s }}-light</div>
+          <div class="color-util-swatch bg-{{ s }}">bg-{{ s }}</div>
+          <div class="color-util-swatch bg-{{ s }}-dark">bg-{{ s }}-dark</div>
+          <div class="color-util-swatch bg-{{ s }}-darker">bg-{{ s }}-darker</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="demo-row">
+    <h4>text-{semantic} — Named Levels</h4>
+    <div class="d-flex flex-wrap" style="gap: 16px">
+      {% for s in semanticNames %}
+        <div style="min-width: 130px">
+          <div class="demo-label">{{ s | capitalize }}</div>
+          <div>
+            <span class="text-{{ s }}-lighter" style="font-size: 0.825rem; display: block">text-{{ s }}-lighter</span>
+            <span class="text-{{ s }}-light" style="font-size: 0.825rem; display: block">text-{{ s }}-light</span>
+            <span class="text-{{ s }}" style="font-size: 0.825rem; display: block">text-{{ s }}</span>
+            <span class="text-{{ s }}-dark" style="font-size: 0.825rem; display: block">text-{{ s }}-dark</span>
+            <span class="text-{{ s }}-darker" style="font-size: 0.825rem; display: block">text-{{ s }}-darker</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- HUE bg named levels --- #}
+  {% set hueNames = ["red","orange","yellow","lime","green","teal","cyan","blue","indigo","violet","purple","pink"] %}
+
+  <div class="demo-row">
+    <h4>bg-{hue} — Named Levels</h4>
+    <div class="d-flex flex-wrap" style="gap: 16px">
+      {% for h in hueNames %}
+        <div style="min-width: 110px">
+          <div class="demo-label">{{ h | capitalize }}</div>
+          <div class="color-util-swatch bg-{{ h }}-lighter">lighter</div>
+          <div class="color-util-swatch bg-{{ h }}-light">light</div>
+          <div class="color-util-swatch bg-{{ h }}">default</div>
+          <div class="color-util-swatch bg-{{ h }}-dark">dark</div>
+          <div class="color-util-swatch bg-{{ h }}-darker">darker</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Numeric 0-10 (primary as example) --- #}
+  <div class="demo-row">
+    <h4>bg-{color}-{n} / bg-{color}-gray-{n} / text-{color}-{n} — Numeric Levels (primary)</h4>
+    <div class="d-flex flex-wrap" style="gap: 24px">
+      <div>
+        <div class="demo-label">bg-primary-{n}</div>
+        {% for n in range(0, 11) %}
+          <div class="color-util-swatch bg-primary-{{ n }}">bg-primary-{{ n }}</div>
+        {% endfor %}
+      </div>
+      <div>
+        <div class="demo-label">bg-primary-gray-{n}</div>
+        {% for n in range(0, 11) %}
+          <div class="color-util-swatch bg-primary-gray-{{ n }}">bg-primary-gray-{{ n }}</div>
+        {% endfor %}
+      </div>
+      <div style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px">
+        <div class="demo-label" style="margin-bottom: 0.25rem">text-primary-{n}</div>
+        {% for n in range(0, 11) %}
+          <div class="text-primary-{{ n }}" style="font-size: 0.825rem; font-family: monospace; margin-bottom: 2px">text-primary-{{ n }}</div>
+        {% endfor %}
+      </div>
+      <div style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px">
+        <div class="demo-label" style="margin-bottom: 0.25rem">text-primary-gray-{n}</div>
+        {% for n in range(0, 11) %}
+          <div class="text-primary-gray-{{ n }}" style="font-size: 0.825rem; font-family: monospace; margin-bottom: 2px">text-primary-gray-{{ n }}</div>
+        {% endfor %}
+      </div>
+      <div style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px">
+        <div class="demo-label" style="margin-bottom: 0.25rem">text-primary-accent-{n}</div>
+        {% for n in range(0, 11) %}
+          <div class="bg-primary-{{ n }}" style="font-size: 0.825rem; font-family: monospace; padding: 2px 6px; margin-bottom: 2px">
+            <span class="text-primary-accent-{{ n }}">text-primary-accent-{{ n }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>
