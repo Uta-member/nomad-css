@@ -1,0 +1,118 @@
+@use "sass:map";
+@use "./semantics" as semantics;
+@use "./hue-colors" as hue-colors;
+@use "./color-defines" as color-defines;
+
+// ============================================
+// Color Utility Classes
+// ============================================
+// text-{color}               → color プロパティを設定
+// bg-{color}                 → background-color + color (accent) を設定
+// text-{color}-{n}           → color-{n} (0-10)
+// bg-{color}-{n}             → color-{n} (0-10) + accent-{n}
+// text-{color}-gray-{n}      → gray-{n} (0-10)
+// bg-{color}-gray-{n}        → gray-{n} (0-10) + accent-{n}
+// text-{color}-accent-{n}    → accent-{n} (0-10)
+// ============================================
+
+// --------------------------------------------
+// Surface / Text (color-defines ベース)
+// --------------------------------------------
+.text-body {
+  color: var(#{color-defines.$text-color-var});
+}
+.text-body-light {
+  color: var(#{color-defines.$text-color-light-var});
+}
+.text-body-lighter {
+  color: var(#{color-defines.$text-color-lighter-var});
+}
+.text-body-dark {
+  color: var(#{color-defines.$text-color-dark-var});
+}
+
+.bg-surface {
+  background-color: var(#{color-defines.$surface-color-var});
+}
+.bg-surface-light {
+  background-color: var(#{color-defines.$surface-color-light-var});
+}
+.bg-surface-lighter {
+  background-color: var(#{color-defines.$surface-color-lighter-var});
+}
+.bg-surface-dark {
+  background-color: var(#{color-defines.$surface-color-dark-var});
+}
+.bg-surface-darker {
+  background-color: var(#{color-defines.$surface-color-darker-var});
+}
+
+// --------------------------------------------
+// Mixin: パレットカラーユーティリティ一括生成
+// --------------------------------------------
+@mixin generate-color-utils($name, $names) {
+  $level-prefix: map.get($names, palette-prefix);
+  $color-prefix: map.get($names, palette-color-prefix);
+  $accent-prefix: map.get($names, palette-accent-prefix);
+  $gray-prefix: map.get($names, palette-gray-prefix);
+
+  // ---- Named levels (lighter / light / default / dark / darker) ----
+  .text-#{$name} {
+    color: var(--#{$level-prefix}default);
+  }
+  .bg-#{$name} {
+    background-color: var(--#{$level-prefix}default);
+    color: var(--#{$accent-prefix}default);
+  }
+
+  @each $level in (lighter, light, dark, darker) {
+    .text-#{$name}-#{$level} {
+      color: var(--#{$level-prefix}#{$level});
+    }
+    .bg-#{$name}-#{$level} {
+      background-color: var(--#{$level-prefix}#{$level});
+      color: var(--#{$accent-prefix}#{$level});
+    }
+  }
+
+  // ---- Numeric levels 0-10 ----
+  @for $i from 0 through 10 {
+    .text-#{$name}-#{$i} {
+      color: var(--#{$color-prefix}#{$i});
+    }
+    .bg-#{$name}-#{$i} {
+      background-color: var(--#{$color-prefix}#{$i});
+      color: var(--#{$accent-prefix}#{$i});
+    }
+    .text-#{$name}-gray-#{$i} {
+      color: var(--#{$gray-prefix}#{$i});
+    }
+    .bg-#{$name}-gray-#{$i} {
+      background-color: var(--#{$gray-prefix}#{$i});
+      color: var(--#{$accent-prefix}#{$i});
+    }
+    .text-#{$name}-accent-#{$i} {
+      color: var(--#{$accent-prefix}#{$i});
+    }
+  }
+}
+
+// --------------------------------------------
+// セマンティックカラー (primary, secondary, ...)
+// --------------------------------------------
+@each $name, $value in semantics.$semantic-colors {
+  $names: map.get($value, names);
+  @if $names != null {
+    @include generate-color-utils($name, $names);
+  }
+}
+
+// --------------------------------------------
+// HUEカラー (red, orange, yellow, ...)
+// --------------------------------------------
+@each $name, $value in hue-colors.$hues {
+  $names: map.get($value, names);
+  @if $names != null {
+    @include generate-color-utils($name, $names);
+  }
+}
