@@ -157,7 +157,7 @@
 // Light mode — Holo Light
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
-  --border-color: #c8c8c8;
+  --border-color: #808080;
   --text-color: #1a1a1a;
   --surface-color: #f0f0f0;
   --surface-color-lighter: #ffffff;
@@ -170,6 +170,7 @@
   --text-color: #eeeeee;
   --surface-color: #1a1a1a;
   --surface-color-lighter: #2a2a2a;
+  --surface-color-dark: #232323;
   --surface-color-darker: #0a0a0a;
 
   --primary-default: var(--primary-color-3);

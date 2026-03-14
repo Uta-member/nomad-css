@@ -16257,7 +16257,7 @@ pre {
 
 :root[data-theme=nord],
 :root[data-theme=nord][data-color-scheme=light] {
-  --border-color: #d8dee9;
+  --border-color: #4c566a;
   --text-color: #2e3440;
   --surface-color: #eceff4;
   --surface-color-lighter: #ffffff;
@@ -16265,10 +16265,11 @@ pre {
 }
 
 :root[data-theme=nord][data-color-scheme=dark] {
-  --border-color: #434c5e;
-  --text-color: #d8dee9;
+  --border-color: #4c566a;
+  --text-color: #eceff4;
   --surface-color: #2e3440;
   --surface-color-lighter: #3b4252;
+  --surface-color-dark: #3b4252;
   --surface-color-darker: #242933;
   --primary-default: var(--primary-color-4);
   --primary-default-ch: var(--primary-color-4-ch);

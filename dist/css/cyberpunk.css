@@ -16269,6 +16269,7 @@ pre {
   --text-color: #e0e0ff;
   --surface-color: #0d0d1a;
   --surface-color-lighter: #1a1a33;
+  --surface-color-dark: #1a1a2e;
   --surface-color-darker: #080810;
   --primary-default: var(--primary-color-4);
   --primary-default-ch: var(--primary-color-4-ch);

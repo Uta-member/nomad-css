@@ -16257,7 +16257,7 @@ pre {
 
 :root[data-theme=aqua],
 :root[data-theme=aqua][data-color-scheme=light] {
-  --border-color: #c8c8c8;
+  --border-color: #8e8e93;
   --text-color: #1c1c1e;
   --surface-color: #f5f5f7;
   --surface-color-lighter: #ffffff;
@@ -16269,6 +16269,7 @@ pre {
   --text-color: #f5f5f7;
   --surface-color: #1c1c1e;
   --surface-color-lighter: #2c2c2e;
+  --surface-color-dark: #2c2c2e;
   --surface-color-darker: #000000;
   --primary-default: var(--primary-color-4);
   --primary-default-ch: var(--primary-color-4-ch);
