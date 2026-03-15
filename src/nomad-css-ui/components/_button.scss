@@ -91,22 +91,27 @@ $button-focus-ring-offset-var: --#{$button-prefix}focus-ring-offset !default;
 // Sizes
 // --------------------------------------------
 $button-font-size-var: --#{$button-prefix}font-size !default;
+$button-height-var: --#{$button-prefix}height !default;
 $button-padding-var: --#{$button-prefix}padding !default;
 $button-gap-var: --#{$button-prefix}gap !default;
 $button-icon-only-padding-var: --#{$button-prefix}icon-only-padding !default;
 $button-xs-font-size-var: --#{$button-prefix}xs-font-size !default;
+$button-xs-height-var: --#{$button-prefix}xs-height !default;
 $button-xs-padding-var: --#{$button-prefix}xs-padding !default;
 $button-xs-gap-var: --#{$button-prefix}xs-gap !default;
 $button-xs-icon-only-padding-var: --#{$button-prefix}xs-icon-only-padding !default;
 $button-sm-font-size-var: --#{$button-prefix}sm-font-size !default;
+$button-sm-height-var: --#{$button-prefix}sm-height !default;
 $button-sm-padding-var: --#{$button-prefix}sm-padding !default;
 $button-sm-gap-var: --#{$button-prefix}sm-gap !default;
 $button-sm-icon-only-padding-var: --#{$button-prefix}sm-icon-only-padding !default;
 $button-lg-font-size-var: --#{$button-prefix}lg-font-size !default;
+$button-lg-height-var: --#{$button-prefix}lg-height !default;
 $button-lg-padding-var: --#{$button-prefix}lg-padding !default;
 $button-lg-gap-var: --#{$button-prefix}lg-gap !default;
 $button-lg-icon-only-padding-var: --#{$button-prefix}lg-icon-only-padding !default;
 $button-xl-font-size-var: --#{$button-prefix}xl-font-size !default;
+$button-xl-height-var: --#{$button-prefix}xl-height !default;
 $button-xl-padding-var: --#{$button-prefix}xl-padding !default;
 $button-xl-gap-var: --#{$button-prefix}xl-gap !default;
 $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !default;
@@ -191,23 +196,28 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   // Sizes
   // --------------------------------------------
   #{$button-font-size-var}: inherit;
-  #{$button-padding-var}: 0.5em 1em;
+  #{$button-height-var}: 36px;
+  #{$button-padding-var}: 0px 24px;
   #{$button-gap-var}: 0.5em;
   #{$button-icon-only-padding-var}: 0.5em;
   #{$button-xs-font-size-var}: 0.625rem;
-  #{$button-xs-padding-var}: 0.125em 0.25em;
+  #{$button-xs-height-var}: 28px;
+  #{$button-xs-padding-var}: 0px 12px;
   #{$button-xs-gap-var}: 0.25em;
   #{$button-xs-icon-only-padding-var}: 0.125em;
   #{$button-sm-font-size-var}: 0.75rem;
-  #{$button-sm-padding-var}: 0.25em 0.5em;
+  #{$button-sm-height-var}: 32px;
+  #{$button-sm-padding-var}: 0px 16px;
   #{$button-sm-gap-var}: 0.375em;
   #{$button-sm-icon-only-padding-var}: 0.25em;
   #{$button-lg-font-size-var}: 1.5rem;
-  #{$button-lg-padding-var}: 0.75em 2em;
+  #{$button-lg-height-var}: 56px;
+  #{$button-lg-padding-var}: 0px 48px;
   #{$button-lg-gap-var}: 0.75em;
   #{$button-lg-icon-only-padding-var}: 0.75em;
   #{$button-xl-font-size-var}: 1.875rem;
-  #{$button-xl-padding-var}: 1em 3em;
+  #{$button-xl-height-var}: 74px;
+  #{$button-xl-padding-var}: 0px 64px;
   #{$button-xl-gap-var}: 1em;
   #{$button-xl-icon-only-padding-var}: 1em;
 }
@@ -232,34 +242,40 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   font-size: var(#{$button-font-size-var});
   padding: var(#{$button-padding-var});
   border-radius: var(#{$button-border-radius-var});
+  height: var(#{$button-height-var});
 
   // --------------------------------------------
   // Sizes
   // ---------------------------------------------
   &.xs {
     font-size: var(#{$button-xs-font-size-var});
-    padding: var(#{$button-xs-padding-var});
+    height: var(#{$button-xs-height-var});
     gap: var(#{$button-xs-gap-var});
+    padding: var(#{$button-xs-padding-var});
   }
   &.sm {
     font-size: var(#{$button-sm-font-size-var});
-    padding: var(#{$button-sm-padding-var});
+    height: var(#{$button-sm-height-var});
     gap: var(#{$button-sm-gap-var});
+    padding: var(#{$button-sm-padding-var});
   }
   &.md {
     font-size: var(#{$button-font-size-var});
-    padding: var(#{$button-padding-var});
+    height: var(#{$button-height-var});
     gap: var(#{$button-gap-var});
+    padding: var(#{$button-padding-var});
   }
   &.lg {
     font-size: var(#{$button-lg-font-size-var});
-    padding: var(#{$button-lg-padding-var});
+    height: var(#{$button-lg-height-var});
     gap: var(#{$button-lg-gap-var});
+    padding: var(#{$button-lg-padding-var});
   }
   &.xl {
     font-size: var(#{$button-xl-font-size-var});
-    padding: var(#{$button-xl-padding-var});
+    height: var(#{$button-xl-height-var});
     gap: var(#{$button-xl-gap-var});
+    padding: var(#{$button-xl-padding-var});
   }
 
   // --------------------------------------------
@@ -275,18 +291,23 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   // Icon Only
   // ---------------------------------------------
   &.icon-only {
-    padding: var(#{$button-icon-only-padding-var});
+    height: var(#{$button-height-var});
+    width: var(#{$button-height-var});
     &.xs {
-      padding: var(#{$button-xs-icon-only-padding-var});
+      height: var(#{$button-xs-height-var});
+      width: var(#{$button-xs-height-var});
     }
     &.sm {
-      padding: var(#{$button-sm-icon-only-padding-var});
+      height: var(#{$button-sm-height-var});
+      width: var(#{$button-sm-height-var});
     }
     &.lg {
-      padding: var(#{$button-lg-icon-only-padding-var});
+      height: var(#{$button-lg-height-var});
+      width: var(#{$button-lg-height-var});
     }
     &.xl {
-      padding: var(#{$button-xl-icon-only-padding-var});
+      height: var(#{$button-xl-height-var});
+      width: var(#{$button-xl-height-var});
     }
   }
 

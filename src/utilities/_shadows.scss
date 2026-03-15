@@ -84,8 +84,21 @@ $shadow-variations: (
       var(#{$shadow-color-var});
   }
 }
+
 @each $size, $properties in $shadow-variations {
   .#{$shadow-class-name}-#{$size} {
+    box-shadow: var(--#{$shadow-class-name}-#{$size});
+    &.inset {
+      box-shadow: inset var(--#{$shadow-class-name}-#{$size});
+    }
+  }
+  .hover-#{$shadow-class-name}-#{$size}:hover {
+    box-shadow: var(--#{$shadow-class-name}-#{$size});
+    &.inset {
+      box-shadow: inset var(--#{$shadow-class-name}-#{$size});
+    }
+  }
+  .active-#{$shadow-class-name}-#{$size}:active {
     box-shadow: var(--#{$shadow-class-name}-#{$size});
     &.inset {
       box-shadow: inset var(--#{$shadow-class-name}-#{$size});

@@ -9,21 +9,21 @@
       border-radius 0.1s;
     --button-focus-ring-color: var(--palette-default);
     --button-active-border-radius: 0.5rem;
-    --button-padding: 12px 24px;
+    --button-height: 56px;
+    --button-padding: 0px 24px;
     --button-gap: 8px;
-    --button-icon-only-padding: 12px;
-    --button-xs-padding: 6px 12px;
+    --button-xs-height: 32px;
+    --button-xs-padding: 0px 12px;
     --button-xs-gap: 4px;
-    --button-xs-icon-only-padding: 6px;
-    --button-sm-padding: 8px 16px;
+    --button-sm-height: 40px;
+    --button-sm-padding: 0px 16px;
     --button-sm-gap: 8px;
-    --button-sm-icon-only-padding: 8px;
-    --button-lg-padding: 24px 48px;
+    --button-lg-height: 96px;
+    --button-lg-padding: 0px 48px;
     --button-lg-gap: 12px;
-    --button-lg-icon-only-padding: 24px;
-    --button-xl-padding: 32px 64px;
+    --button-xl-height: 136px;
+    --button-xl-padding: 0px 64px;
     --button-xl-gap: 16px;
-    --button-xl-icon-only-padding: 32px;
 
     &.filled {
       --button-hover-bg-color: var(--button-bg-color);
