@@ -591,10 +591,38 @@ h6,
   box-shadow: inset var(--shadow-0);
 }
 
+.hover-shadow-0:hover {
+  box-shadow: var(--shadow-0);
+}
+.hover-shadow-0:hover.inset {
+  box-shadow: inset var(--shadow-0);
+}
+
+.active-shadow-0:active {
+  box-shadow: var(--shadow-0);
+}
+.active-shadow-0:active.inset {
+  box-shadow: inset var(--shadow-0);
+}
+
 .shadow-1 {
   box-shadow: var(--shadow-1);
 }
 .shadow-1.inset {
+  box-shadow: inset var(--shadow-1);
+}
+
+.hover-shadow-1:hover {
+  box-shadow: var(--shadow-1);
+}
+.hover-shadow-1:hover.inset {
+  box-shadow: inset var(--shadow-1);
+}
+
+.active-shadow-1:active {
+  box-shadow: var(--shadow-1);
+}
+.active-shadow-1:active.inset {
   box-shadow: inset var(--shadow-1);
 }
 
@@ -605,10 +633,38 @@ h6,
   box-shadow: inset var(--shadow-2);
 }
 
+.hover-shadow-2:hover {
+  box-shadow: var(--shadow-2);
+}
+.hover-shadow-2:hover.inset {
+  box-shadow: inset var(--shadow-2);
+}
+
+.active-shadow-2:active {
+  box-shadow: var(--shadow-2);
+}
+.active-shadow-2:active.inset {
+  box-shadow: inset var(--shadow-2);
+}
+
 .shadow-3 {
   box-shadow: var(--shadow-3);
 }
 .shadow-3.inset {
+  box-shadow: inset var(--shadow-3);
+}
+
+.hover-shadow-3:hover {
+  box-shadow: var(--shadow-3);
+}
+.hover-shadow-3:hover.inset {
+  box-shadow: inset var(--shadow-3);
+}
+
+.active-shadow-3:active {
+  box-shadow: var(--shadow-3);
+}
+.active-shadow-3:active.inset {
   box-shadow: inset var(--shadow-3);
 }
 
@@ -619,10 +675,38 @@ h6,
   box-shadow: inset var(--shadow-4);
 }
 
+.hover-shadow-4:hover {
+  box-shadow: var(--shadow-4);
+}
+.hover-shadow-4:hover.inset {
+  box-shadow: inset var(--shadow-4);
+}
+
+.active-shadow-4:active {
+  box-shadow: var(--shadow-4);
+}
+.active-shadow-4:active.inset {
+  box-shadow: inset var(--shadow-4);
+}
+
 .shadow-5 {
   box-shadow: var(--shadow-5);
 }
 .shadow-5.inset {
+  box-shadow: inset var(--shadow-5);
+}
+
+.hover-shadow-5:hover {
+  box-shadow: var(--shadow-5);
+}
+.hover-shadow-5:hover.inset {
+  box-shadow: inset var(--shadow-5);
+}
+
+.active-shadow-5:active {
+  box-shadow: var(--shadow-5);
+}
+.active-shadow-5:active.inset {
   box-shadow: inset var(--shadow-5);
 }
 
@@ -8337,23 +8421,28 @@ h6,
   --button-focus-ring-width: 2px;
   --button-focus-ring-offset: 2px;
   --button-font-size: inherit;
-  --button-padding: 0.5em 1em;
+  --button-height: 36px;
+  --button-padding: 0px 24px;
   --button-gap: 0.5em;
   --button-icon-only-padding: 0.5em;
   --button-xs-font-size: 0.625rem;
-  --button-xs-padding: 0.125em 0.25em;
+  --button-xs-height: 28px;
+  --button-xs-padding: 0px 12px;
   --button-xs-gap: 0.25em;
   --button-xs-icon-only-padding: 0.125em;
   --button-sm-font-size: 0.75rem;
-  --button-sm-padding: 0.25em 0.5em;
+  --button-sm-height: 32px;
+  --button-sm-padding: 0px 16px;
   --button-sm-gap: 0.375em;
   --button-sm-icon-only-padding: 0.25em;
   --button-lg-font-size: 1.5rem;
-  --button-lg-padding: 0.75em 2em;
+  --button-lg-height: 56px;
+  --button-lg-padding: 0px 48px;
   --button-lg-gap: 0.75em;
   --button-lg-icon-only-padding: 0.75em;
   --button-xl-font-size: 1.875rem;
-  --button-xl-padding: 1em 3em;
+  --button-xl-height: 74px;
+  --button-xl-padding: 0px 64px;
   --button-xl-gap: 1em;
   --button-xl-icon-only-padding: 1em;
 }
@@ -8374,31 +8463,37 @@ h6,
   font-size: var(--button-font-size);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
+  height: var(--button-height);
 }
 .button.xs {
   font-size: var(--button-xs-font-size);
-  padding: var(--button-xs-padding);
+  height: var(--button-xs-height);
   gap: var(--button-xs-gap);
+  padding: var(--button-xs-padding);
 }
 .button.sm {
   font-size: var(--button-sm-font-size);
-  padding: var(--button-sm-padding);
+  height: var(--button-sm-height);
   gap: var(--button-sm-gap);
+  padding: var(--button-sm-padding);
 }
 .button.md {
   font-size: var(--button-font-size);
-  padding: var(--button-padding);
+  height: var(--button-height);
   gap: var(--button-gap);
+  padding: var(--button-padding);
 }
 .button.lg {
   font-size: var(--button-lg-font-size);
-  padding: var(--button-lg-padding);
+  height: var(--button-lg-height);
   gap: var(--button-lg-gap);
+  padding: var(--button-lg-padding);
 }
 .button.xl {
   font-size: var(--button-xl-font-size);
-  padding: var(--button-xl-padding);
+  height: var(--button-xl-height);
   gap: var(--button-xl-gap);
+  padding: var(--button-xl-padding);
 }
 .button > span {
   display: inline-flex;
@@ -8406,19 +8501,24 @@ h6,
   line-height: 1;
 }
 .button.icon-only {
-  padding: var(--button-icon-only-padding);
+  height: var(--button-height);
+  width: var(--button-height);
 }
 .button.icon-only.xs {
-  padding: var(--button-xs-icon-only-padding);
+  height: var(--button-xs-height);
+  width: var(--button-xs-height);
 }
 .button.icon-only.sm {
-  padding: var(--button-sm-icon-only-padding);
+  height: var(--button-sm-height);
+  width: var(--button-sm-height);
 }
 .button.icon-only.lg {
-  padding: var(--button-lg-icon-only-padding);
+  height: var(--button-lg-height);
+  width: var(--button-lg-height);
 }
 .button.icon-only.xl {
-  padding: var(--button-xl-icon-only-padding);
+  height: var(--button-xl-height);
+  width: var(--button-xl-height);
 }
 .button:hover {
   background-color: var(--button-hover-bg-color);
@@ -16350,5 +16450,3 @@ pre {
   --switch-width: 42px;
   --switch-height: 22px;
 }
-
-/*# sourceMappingURL=nord.css.map */

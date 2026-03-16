@@ -36,8 +36,9 @@ module.exports = function (eleventyConfig) {
           "src/themes/neumorphism/neumorphism.scss:dist/css/neumorphism.css",
           "src/themes/glass/glass.scss:dist/css/glass.css",
           "--style=expanded",
+          "--no-source-map",
         ].join(" "),
-        { stdio: "inherit" },
+        { stdio: "inherit" }
       );
     } catch (e) {
       console.error("Sass build failed:", e.message);

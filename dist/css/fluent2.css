@@ -16311,5 +16311,3 @@ pre {
 :root[data-theme=fluent2] .form-control.underline:hover:not(:disabled):not(:read-only) {
   box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
 }
-
-/*# sourceMappingURL=fluent2.css.map */
