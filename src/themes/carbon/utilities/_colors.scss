@@ -258,19 +258,19 @@
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   --border-color: #e0e0e0;
-  --border-color-light: #f4f4f4;
-  --border-color-dark: #c6c6c6;
+  --border-color-subtle: #f4f4f4;
+  --border-color-strong: #c6c6c6;
 
   --text-color: #161616;
-  --text-color-light: #525252;
-  --text-color-lighter: #8d8d8d;
-  --text-color-dark: #161616;
+  --text-color-subtle: #525252;
+  --text-color-muted: #8d8d8d;
+  --text-color-strong: #161616;
 
-  --surface-color-lighter: #ffffff;
-  --surface-color-light: #f4f4f4;
+  --surface-color-overlay: #ffffff;
+  --surface-color-raised: #f4f4f4;
   --surface-color: #f4f4f4;
-  --surface-color-dark: #e0e0e0;
-  --surface-color-darker: #c6c6c6;
+  --surface-color-sunken: #e0e0e0;
+  --surface-color-deep: #c6c6c6;
 }
 
 // ============================================================
@@ -278,19 +278,19 @@
 // ============================================================
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   --border-color: #393939;
-  --border-color-light: #262626;
-  --border-color-dark: #525252;
+  --border-color-subtle: #262626;
+  --border-color-strong: #525252;
 
   --text-color: #f4f4f4;
-  --text-color-light: #c6c6c6;
-  --text-color-lighter: #8d8d8d;
-  --text-color-dark: #f4f4f4;
+  --text-color-subtle: #c6c6c6;
+  --text-color-muted: #8d8d8d;
+  --text-color-strong: #f4f4f4;
 
-  --surface-color-lighter: #393939;
-  --surface-color-light: #262626;
+  --surface-color-overlay: #393939;
+  --surface-color-raised: #262626;
   --surface-color: #161616;
-  --surface-color-dark: #262626;
-  --surface-color-darker: #393939;
+  --surface-color-sunken: #262626;
+  --surface-color-deep: #393939;
 
   --primary-default: var(--primary-color-4);
   --primary-accent-default: var(--primary-accent-4);

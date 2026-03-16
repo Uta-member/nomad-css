@@ -73,7 +73,7 @@ $spinner-speed-var: --#{$spinner-prefix}speed !default;
   // Colors (default: primary palette)
   // --------------------------------------------
   #{$spinner-color-var}: var(#{palette.$palette-default-var});
-  #{$spinner-track-color-var}: var(#{color-defines.$surface-color-darker-var});
+  #{$spinner-track-color-var}: var(#{color-defines.$surface-color-deep-var});
 
   // --------------------------------------------
   // Animation

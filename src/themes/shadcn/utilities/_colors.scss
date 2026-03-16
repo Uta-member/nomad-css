@@ -258,19 +258,19 @@
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   --border-color: #e4e4e7;
-  --border-color-light: #f4f4f5;
-  --border-color-dark: #d4d4d8;
+  --border-color-subtle: #f4f4f5;
+  --border-color-strong: #d4d4d8;
 
   --text-color: #09090b;
-  --text-color-light: #71717a;
-  --text-color-lighter: #a1a1aa;
-  --text-color-dark: #09090b;
+  --text-color-subtle: #71717a;
+  --text-color-muted: #a1a1aa;
+  --text-color-strong: #09090b;
 
-  --surface-color-lighter: #ffffff;
-  --surface-color-light: #fafafa;
+  --surface-color-overlay: #ffffff;
+  --surface-color-raised: #fafafa;
   --surface-color: #ffffff;
-  --surface-color-dark: #f4f4f5;
-  --surface-color-darker: #e4e4e7;
+  --surface-color-sunken: #f4f4f5;
+  --surface-color-deep: #e4e4e7;
 }
 
 // ============================================================
@@ -278,19 +278,19 @@
 // ============================================================
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   --border-color: #27272a;
-  --border-color-light: #18181b;
-  --border-color-dark: #3f3f46;
+  --border-color-subtle: #18181b;
+  --border-color-strong: #3f3f46;
 
   --text-color: #fafafa;
-  --text-color-light: #a1a1aa;
-  --text-color-lighter: #71717a;
-  --text-color-dark: #fafafa;
+  --text-color-subtle: #a1a1aa;
+  --text-color-muted: #71717a;
+  --text-color-strong: #fafafa;
 
-  --surface-color-lighter: #27272a;
-  --surface-color-light: #18181b;
+  --surface-color-overlay: #27272a;
+  --surface-color-raised: #18181b;
   --surface-color: #09090b;
-  --surface-color-dark: #18181b;
-  --surface-color-darker: #27272a;
+  --surface-color-sunken: #18181b;
+  --surface-color-deep: #27272a;
 
   // In dark mode, primary is near-white
   --primary-default: var(--primary-color-1);

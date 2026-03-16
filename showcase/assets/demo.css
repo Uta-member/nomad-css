@@ -22,7 +22,7 @@ body {
   position: sticky;
   top: 0;
   height: var(--showcase-header-height);
-  background: var(--surface-color-lighter);
+  background: var(--surface-color-overlay);
   border-bottom: 1px solid var(--border-color);
   z-index: 100;
   padding: 0 1rem;
@@ -80,7 +80,7 @@ body {
   top: var(--showcase-header-height);
   height: calc(100vh - var(--showcase-header-height));
   overflow-y: auto;
-  background: var(--surface-color-lighter);
+  background: var(--surface-color-overlay);
 }
 
 .sidebar-home {
@@ -96,7 +96,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--text-color-dark);
+  color: var(--text-color-strong);
   padding: 0.25rem 1rem;
 }
 
@@ -152,7 +152,7 @@ body {
   border-radius: 8px;
   text-decoration: none;
   color: inherit;
-  background: var(--surface-color-lighter);
+  background: var(--surface-color-overlay);
   transition:
     box-shadow 0.15s,
     border-color 0.15s;
@@ -172,7 +172,7 @@ body {
   padding: 1.5rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: var(--surface-color-lighter);
+  background-color: var(--surface-color-overlay);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -191,7 +191,7 @@ body {
 
 .demo-label {
   font-size: 0.875rem;
-  color: var(--text-color-dark);
+  color: var(--text-color-strong);
   margin-bottom: 0.5rem;
 }
 
@@ -202,11 +202,11 @@ body {
 }
 
 .demo-box.lighter {
-  background: var(--surface-color-lighter);
+  background: var(--surface-color-overlay);
 }
 
 .demo-box.light {
-  background: var(--surface-color-light);
+  background: var(--surface-color-raised);
 }
 
 /* ---- Color swatches (colors page) ---- */

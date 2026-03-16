@@ -160,8 +160,8 @@
   --border-color: #93a1a1;
   --text-color: #657b83;
   --surface-color: #fdf6e3;
-  --surface-color-lighter: #eee8d5;
-  --surface-color-darker: #fdf6e3;
+  --surface-color-overlay: #eee8d5;
+  --surface-color-deep: #fdf6e3;
 }
 
 // Dark mode — Solarized Dark
@@ -169,9 +169,9 @@
   --border-color: #586e75;
   --text-color: #839496;
   --surface-color: #002b36;
-  --surface-color-lighter: #073642;
-  --surface-color-dark: #073642;
-  --surface-color-darker: #001e27;
+  --surface-color-overlay: #073642;
+  --surface-color-sunken: #073642;
+  --surface-color-deep: #001e27;
 
   --primary-default: var(--primary-color-4);
   --primary-default-ch: var(--primary-color-4-ch);

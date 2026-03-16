@@ -42,7 +42,7 @@ $divider-vertical-height-var: --#{$divider-prefix}vertical-height !default;
   // Colors
   // --------------------------------------------
   #{$divider-color-var}: var(#{color-defines.$border-color-var});
-  #{$divider-text-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$divider-text-color-var}: var(#{color-defines.$text-color-subtle-var});
   #{$divider-text-gap-var}: 0.75rem;
 
   // --------------------------------------------

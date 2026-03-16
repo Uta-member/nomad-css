@@ -118,10 +118,10 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   // Background Colors
   // --------------------------------------------
   #{$form-control-filled-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
+    #{color-defines.$surface-color-sunken-var}
   );
   #{$form-control-filled-hover-bg-color-var}: var(
-    #{color-defines.$surface-color-darker-var}
+    #{color-defines.$surface-color-deep-var}
   );
   #{$form-control-filled-active-bg-color-var}: var(
     #{$form-control-filled-bg-color-var}
@@ -130,10 +130,10 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
     #{$form-control-filled-bg-color-var}
   );
   #{$form-control-filled-disabled-bg-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
   #{$form-control-filled-readonly-bg-color-var}: var(
-    #{color-defines.$surface-color-darker-var}
+    #{color-defines.$surface-color-deep-var}
   );
 
   // --------------------------------------------
@@ -144,7 +144,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   #{$form-control-active-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-focus-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-disabled-color-var}: var(
-    #{color-defines.$border-color-dark-var}
+    #{color-defines.$border-color-strong-var}
   );
   #{$form-control-readonly-color-var}: var(#{$form-control-color-var});
 
@@ -180,14 +180,14 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   #{$form-control-border-radius-var}: 4px;
   #{$form-control-border-color-var}: var(#{color-defines.$border-color-var});
   #{$form-control-hover-border-color-var}: var(
-    #{color-defines.$border-color-dark-var}
+    #{color-defines.$border-color-strong-var}
   );
   #{$form-control-active-border-color-var}: var(
-    #{color-defines.$border-color-dark-var}
+    #{color-defines.$border-color-strong-var}
   );
   #{$form-control-focus-border-color-var}: var(#{palette.$palette-default-var});
   #{$form-control-disabled-border-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
   #{$form-control-readonly-border-color-var}: var(
     #{$form-control-border-color-var}

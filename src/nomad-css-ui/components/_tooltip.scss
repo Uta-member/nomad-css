@@ -47,8 +47,8 @@ $tooltip-z-index-var: --#{$tooltip-prefix}z-index !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$tooltip-bg-color-var}: var(#{color-defines.$text-color-dark-var});
-  #{$tooltip-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$tooltip-bg-color-var}: var(#{color-defines.$text-color-strong-var});
+  #{$tooltip-color-var}: var(#{color-defines.$surface-color-overlay-var});
 
   // --------------------------------------------
   // Border

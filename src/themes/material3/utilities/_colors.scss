@@ -260,24 +260,24 @@
   // Border
   // ============================================================
   --border-color: var(--neutral-gray-5);
-  --border-color-light: var(--neutral-gray-2);
-  --border-color-dark: var(--neutral-gray-6);
+  --border-color-subtle: var(--neutral-gray-2);
+  --border-color-strong: var(--neutral-gray-6);
 
   // ============================================================
   // Text
   // ============================================================
   --text-color: var(--neutral-gray-8);
-  --text-color-light: var(--neutral-gray-6);
-  --text-color-dark: var(--neutral-gray-10);
+  --text-color-subtle: var(--neutral-gray-6);
+  --text-color-strong: var(--neutral-gray-10);
 
   // ============================================================
   // Surface
   // ============================================================
-  --surface-color-lighter: var(--neutral-color-0);
-  --surface-color-light: var(--neutral-color-1);
+  --surface-color-overlay: var(--neutral-color-0);
+  --surface-color-raised: var(--neutral-color-1);
   --surface-color: var(--neutral-color-2);
-  --surface-color-dark: var(--neutral-color-3);
-  --surface-color-darker: var(--neutral-color-4);
+  --surface-color-sunken: var(--neutral-color-3);
+  --surface-color-deep: var(--neutral-color-4);
 }
 
 // ============================================================
@@ -426,22 +426,22 @@
   // Border（ダーク）
   // ============================================================
   --border-color: var(--neutral-color-5);
-  --border-color-light: var(--neutral-color-7);
-  --border-color-dark: var(--neutral-color-4);
+  --border-color-subtle: var(--neutral-color-7);
+  --border-color-strong: var(--neutral-color-4);
 
   // ============================================================
   // Text（ダーク）: 暗背景上で読めるよう明るい色に反転
   // ============================================================
   --text-color: var(--neutral-gray-1);
-  --text-color-light: var(--neutral-gray-0);
-  --text-color-dark: var(--neutral-gray-3);
+  --text-color-subtle: var(--neutral-gray-0);
+  --text-color-strong: var(--neutral-gray-3);
 
   // ============================================================
   // Surface（ダーク）: 暗背景ベース
   // ============================================================
-  --surface-color-lighter: var(--neutral-color-7);
-  --surface-color-light: var(--neutral-color-8);
+  --surface-color-overlay: var(--neutral-color-7);
+  --surface-color-raised: var(--neutral-color-8);
   --surface-color: var(--neutral-color-9);
-  --surface-color-dark: var(--neutral-color-9);
-  --surface-color-darker: var(--neutral-color-10);
+  --surface-color-sunken: var(--neutral-color-9);
+  --surface-color-deep: var(--neutral-color-10);
 }

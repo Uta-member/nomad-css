@@ -104,7 +104,7 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
   // --------------------------------------------
   #{$radio-bg-color-var}: transparent;
   #{$radio-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
-  #{$radio-active-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$radio-active-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
   #{$radio-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$radio-disabled-bg-color-var}: transparent;
   #{$radio-checked-bg-color-var}: var(#{$radio-bg-color-var});

@@ -43,7 +43,7 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-subtle);
       --button-disabled-box-shadow: none;
     }
 
@@ -60,7 +60,7 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-subtle);
     }
 
     &.outlined {

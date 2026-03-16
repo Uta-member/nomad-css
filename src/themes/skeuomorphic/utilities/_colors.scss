@@ -162,10 +162,10 @@
   --text-color-muted: #6a5a4a;
   // Warm linen parchment background
   --surface-color: #f0ebe4;
-  --surface-color-lighter: #f8f5f0;
-  --surface-color-light: #ede6dd;
-  --surface-color-dark: #ddd4c8;
-  --surface-color-darker: #c8bfb0;
+  --surface-color-overlay: #f8f5f0;
+  --surface-color-raised: #ede6dd;
+  --surface-color-sunken: #ddd4c8;
+  --surface-color-deep: #c8bfb0;
 }
 
 // Dark mode — dark leather / aged wood
@@ -174,8 +174,8 @@
   --text-color: #e8ddd0;
   --text-color-muted: #a09080;
   --surface-color: #2a2018;
-  --surface-color-lighter: #362a20;
-  --surface-color-light: #302418;
-  --surface-color-dark: #201810;
-  --surface-color-darker: #180e08;
+  --surface-color-overlay: #362a20;
+  --surface-color-raised: #302418;
+  --surface-color-sunken: #201810;
+  --surface-color-deep: #180e08;
 }

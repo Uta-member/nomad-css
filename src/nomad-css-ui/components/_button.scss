@@ -362,7 +362,7 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   #{$button-active-bg-color-var}: var(#{palette.$palette-darker-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
   #{$button-disabled-bg-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
 
   // --------------------------------------------

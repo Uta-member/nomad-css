@@ -160,8 +160,8 @@
   --border-color: #8e8e93;
   --text-color: #1c1c1e;
   --surface-color: #f5f5f7;
-  --surface-color-lighter: #ffffff;
-  --surface-color-darker: #e8e8ed;
+  --surface-color-overlay: #ffffff;
+  --surface-color-deep: #e8e8ed;
 }
 
 // Dark mode — macOS dark
@@ -169,9 +169,9 @@
   --border-color: #48484a;
   --text-color: #f5f5f7;
   --surface-color: #1c1c1e;
-  --surface-color-lighter: #2c2c2e;
-  --surface-color-dark: #2c2c2e;
-  --surface-color-darker: #000000;
+  --surface-color-overlay: #2c2c2e;
+  --surface-color-sunken: #2c2c2e;
+  --surface-color-deep: #000000;
 
   --primary-default: var(--primary-color-4);
   --primary-default-ch: var(--primary-color-4-ch);

@@ -161,10 +161,10 @@
   --text-color: #333333;
   --text-color-muted: #666666;
   --surface-color: #ffffff;
-  --surface-color-lighter: #ffffff;
-  --surface-color-light: #f4f7fb;
-  --surface-color-dark: #e8ecf2;
-  --surface-color-darker: #d8dde8;
+  --surface-color-overlay: #ffffff;
+  --surface-color-raised: #f4f7fb;
+  --surface-color-sunken: #e8ecf2;
+  --surface-color-deep: #d8dde8;
 }
 
 // Dark mode
@@ -173,8 +173,8 @@
   --text-color: #e8f0f8;
   --text-color-muted: #8090a0;
   --surface-color: #1a2535;
-  --surface-color-lighter: #223040;
-  --surface-color-light: #1e2a3a;
-  --surface-color-dark: #141e2a;
-  --surface-color-darker: #0e1820;
+  --surface-color-overlay: #223040;
+  --surface-color-raised: #1e2a3a;
+  --surface-color-sunken: #141e2a;
+  --surface-color-deep: #0e1820;
 }

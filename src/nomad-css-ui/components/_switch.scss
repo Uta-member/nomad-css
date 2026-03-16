@@ -97,7 +97,7 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   // Track colors
   // --------------------------------------------
   #{$switch-track-bg-color-var}: var(
-    #{color-defines.$surface-color-darker-var}
+    #{color-defines.$surface-color-deep-var}
   );
   #{$switch-track-checked-bg-color-var}: var(#{palette.$palette-default-var});
   #{$switch-track-border-color-var}: var(#{color-defines.$border-color-var});
@@ -107,7 +107,7 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   #{$switch-track-border-radius-var}: 10rem;
   #{$switch-track-border-width-var}: 1px;
   #{$switch-track-disabled-bg-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
 
   // --------------------------------------------
@@ -139,7 +139,7 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
     #{palette.$palette-lighter-var}
   );
   #{$switch-thumb-checked-disabled-bg-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
 
   // --------------------------------------------

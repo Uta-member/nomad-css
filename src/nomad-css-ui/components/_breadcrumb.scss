@@ -50,9 +50,9 @@ $breadcrumb-font-size-var: --#{$breadcrumb-prefix}font-size !default;
   // --------------------------------------------
   #{$breadcrumb-color-var}: var(#{palette.$palette-default-var});
   #{$breadcrumb-hover-color-var}: var(#{palette.$palette-dark-var});
-  #{$breadcrumb-active-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$breadcrumb-active-color-var}: var(#{color-defines.$text-color-subtle-var});
   #{$breadcrumb-separator-color-var}: var(
-    #{color-defines.$text-color-light-var}
+    #{color-defines.$text-color-subtle-var}
   );
 
   // --------------------------------------------

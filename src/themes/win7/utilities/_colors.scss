@@ -161,10 +161,10 @@
   --text-color: #1a1a1a;
   --text-color-muted: #5a6a7a;
   --surface-color: #f0f4f8;
-  --surface-color-lighter: #ffffff;
-  --surface-color-light: #e8eef6;
-  --surface-color-dark: #dce6f0;
-  --surface-color-darker: #ccd8e8;
+  --surface-color-overlay: #ffffff;
+  --surface-color-raised: #e8eef6;
+  --surface-color-sunken: #dce6f0;
+  --surface-color-deep: #ccd8e8;
 }
 
 // Dark mode — Aero dark / Windows 7 High Contrast variant
@@ -173,8 +173,8 @@
   --text-color: #d8e8f8;
   --text-color-muted: #6888a8;
   --surface-color: #18222e;
-  --surface-color-lighter: #223040;
-  --surface-color-light: #1c2838;
-  --surface-color-dark: #101820;
-  --surface-color-darker: #0a1018;
+  --surface-color-overlay: #223040;
+  --surface-color-raised: #1c2838;
+  --surface-color-sunken: #101820;
+  --surface-color-deep: #0a1018;
 }

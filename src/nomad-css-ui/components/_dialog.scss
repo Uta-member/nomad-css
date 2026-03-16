@@ -71,13 +71,13 @@ $dialog-transition-var: --#{$dialog-prefix}transition !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$dialog-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$dialog-bg-color-var}: var(#{color-defines.$surface-color-overlay-var});
   #{$dialog-color-var}: var(#{color-defines.$text-color-var});
   #{$dialog-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$dialog-header-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$dialog-header-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
   #{$dialog-header-color-var}: var(#{color-defines.$text-color-var});
-  #{$dialog-footer-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
-  #{$dialog-footer-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$dialog-footer-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
+  #{$dialog-footer-color-var}: var(#{color-defines.$text-color-subtle-var});
   #{$dialog-backdrop-color-var}: rgba(0, 0, 0, 0.5);
 
   // --------------------------------------------

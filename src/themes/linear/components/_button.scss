@@ -75,8 +75,8 @@
     &.outlined {
       // ダーク時のボーダーは border-color 変数に任せるが
       // デフォルトの outlined がやや暗すぎる場合に上書き
-      --button-border-color: var(--border-color-dark);
-      --button-hover-border-color: var(--border-color-dark);
+      --button-border-color: var(--border-color-strong);
+      --button-hover-border-color: var(--border-color-strong);
     }
 
     &.filled {

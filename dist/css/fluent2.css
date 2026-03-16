@@ -8369,17 +8369,17 @@ h6,
 
 :root {
   --border-color: var(--neutral-default);
-  --border-color-light: var(--neutral-light);
-  --border-color-dark: var(--neutral-dark);
+  --border-color-subtle: var(--neutral-light);
+  --border-color-strong: var(--neutral-dark);
   --text-color: var(--neutral-color-9);
-  --text-color-light: var(--neutral-color-7);
-  --text-color-lighter: var(--neutral-color-4);
-  --text-color-dark: var(--neutral-color-10);
-  --surface-color-lighter: var(--neutral-color-0);
-  --surface-color-light: var(--neutral-color-0);
+  --text-color-subtle: var(--neutral-color-7);
+  --text-color-muted: var(--neutral-color-4);
+  --text-color-strong: var(--neutral-color-10);
+  --surface-color-overlay: var(--neutral-color-0);
+  --surface-color-raised: var(--neutral-color-0);
   --surface-color: var(--neutral-color-1);
-  --surface-color-dark: var(--neutral-color-2);
-  --surface-color-darker: var(--neutral-color-3);
+  --surface-color-sunken: var(--neutral-color-2);
+  --surface-color-deep: var(--neutral-color-3);
 }
 
 .button {
@@ -8562,7 +8562,7 @@ h6,
   --button-hover-bg-color: var(--palette-dark);
   --button-active-bg-color: var(--palette-darker);
   --button-focus-bg-color: var(--button-hover-bg-color);
-  --button-disabled-bg-color: var(--border-color-light);
+  --button-disabled-bg-color: var(--border-color-subtle);
   --button-color: var(--palette-accent-default);
   --button-hover-color: var(--palette-accent-dark);
   --button-active-color: var(--palette-accent-darker);
@@ -8660,7 +8660,7 @@ h6,
 .checkbox {
   --checkbox-bg-color: transparent;
   --checkbox-hover-bg-color: var(--surface-color);
-  --checkbox-active-bg-color: var(--surface-color-dark);
+  --checkbox-active-bg-color: var(--surface-color-sunken);
   --checkbox-focus-bg-color: var(--surface-color);
   --checkbox-disabled-bg-color: transparent;
   --checkbox-checked-bg-color: var(--palette-default);
@@ -8686,7 +8686,7 @@ h6,
   --checkbox-sm-size: 0.75rem;
   --checkbox-lg-size: 1.5rem;
   --checkbox-mark-color: var(--palette-accent-default);
-  --checkbox-disabled-mark-color: var(--surface-color-lighter);
+  --checkbox-disabled-mark-color: var(--surface-color-overlay);
   --checkbox-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
   --checkbox-indeterminate-mark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline x1='5' y1='12' x2='19' y2='12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
   --checkbox-cursor: pointer;
@@ -8816,7 +8816,7 @@ h6,
 .radio {
   --radio-bg-color: transparent;
   --radio-hover-bg-color: var(--surface-color);
-  --radio-active-bg-color: var(--surface-color-dark);
+  --radio-active-bg-color: var(--surface-color-sunken);
   --radio-focus-bg-color: var(--surface-color);
   --radio-disabled-bg-color: transparent;
   --radio-checked-bg-color: var(--radio-bg-color);
@@ -8996,17 +8996,17 @@ h6,
 }
 
 .form-control {
-  --form-control-filled-bg-color: var(--surface-color-dark);
-  --form-control-filled-hover-bg-color: var(--surface-color-darker);
+  --form-control-filled-bg-color: var(--surface-color-sunken);
+  --form-control-filled-hover-bg-color: var(--surface-color-deep);
   --form-control-filled-active-bg-color: var(--form-control-filled-bg-color);
   --form-control-filled-focus-bg-color: var(--form-control-filled-bg-color);
-  --form-control-filled-disabled-bg-color: var(--border-color-light);
-  --form-control-filled-readonly-bg-color: var(--surface-color-darker);
+  --form-control-filled-disabled-bg-color: var(--border-color-subtle);
+  --form-control-filled-readonly-bg-color: var(--surface-color-deep);
   --form-control-color: var(--text-color);
   --form-control-hover-color: var(--text-color);
   --form-control-active-color: var(--text-color);
   --form-control-focus-color: var(--text-color);
-  --form-control-disabled-color: var(--border-color-dark);
+  --form-control-disabled-color: var(--border-color-strong);
   --form-control-readonly-color: var(--form-control-color);
   --form-control-placeholder-color: var(--border-color);
   --form-control-placeholder-hover-color: var(--form-control-placeholder-color);
@@ -9020,10 +9020,10 @@ h6,
   --form-control-border-left-width: 1px;
   --form-control-border-radius: 4px;
   --form-control-border-color: var(--border-color);
-  --form-control-hover-border-color: var(--border-color-dark);
-  --form-control-active-border-color: var(--border-color-dark);
+  --form-control-hover-border-color: var(--border-color-strong);
+  --form-control-active-border-color: var(--border-color-strong);
   --form-control-focus-border-color: var(--palette-default);
-  --form-control-disabled-border-color: var(--border-color-light);
+  --form-control-disabled-border-color: var(--border-color-subtle);
   --form-control-readonly-border-color: var(--form-control-border-color);
   --form-control-focus-ring-width: 2px;
   --form-control-focus-ring-color: var(--palette-default);
@@ -9179,7 +9179,7 @@ h6,
 }
 
 .form-hint {
-  --form-hint-color: var(--text-color-light);
+  --form-hint-color: var(--text-color-subtle);
   --form-hint-invalid-color: var(--danger-dark);
   --form-hint-valid-color: var(--success-dark);
   --form-hint-font-size: 0.875em;
@@ -9200,16 +9200,16 @@ h6,
 }
 
 .select {
-  --select-filled-bg-color: var(--surface-color-dark);
-  --select-filled-hover-bg-color: var(--surface-color-darker);
+  --select-filled-bg-color: var(--surface-color-sunken);
+  --select-filled-hover-bg-color: var(--surface-color-deep);
   --select-filled-active-bg-color: var(--select-filled-bg-color);
   --select-filled-focus-bg-color: var(--select-filled-bg-color);
-  --select-filled-disabled-bg-color: var(--border-color-light);
+  --select-filled-disabled-bg-color: var(--border-color-subtle);
   --select-color: var(--text-color);
   --select-hover-color: var(--text-color);
   --select-active-color: var(--text-color);
   --select-focus-color: var(--text-color);
-  --select-disabled-color: var(--border-color-dark);
+  --select-disabled-color: var(--border-color-strong);
   --select-placeholder-color: var(--border-color);
   --select-placeholder-hover-color: var(--select-placeholder-color);
   --select-placeholder-active-color: var(--select-placeholder-color);
@@ -9221,10 +9221,10 @@ h6,
   --select-border-left-width: 1px;
   --select-border-radius: 4px;
   --select-border-color: var(--border-color);
-  --select-hover-border-color: var(--border-color-dark);
-  --select-active-border-color: var(--border-color-dark);
-  --select-focus-border-color: var(--border-color-dark);
-  --select-disabled-border-color: var(--border-color-light);
+  --select-hover-border-color: var(--border-color-strong);
+  --select-active-border-color: var(--border-color-strong);
+  --select-focus-border-color: var(--border-color-strong);
+  --select-disabled-border-color: var(--border-color-subtle);
   --select-focus-ring-width: 2px;
   --select-focus-ring-color: var(--palette-default);
   --select-opacity: 1;
@@ -9259,7 +9259,7 @@ h6,
   font-size: var(--select-font-size);
 }
 .select option {
-  background-color: var(--surface-color-lighter);
+  background-color: var(--surface-color-overlay);
 }
 .select optgroup {
   background-color: var(--surface-color);
@@ -9553,7 +9553,7 @@ h6,
   --chip-hover-border-color: var(--palette-light);
   --chip-active-border-color: var(--palette-default);
   --chip-focus-border-color: var(--chip-hover-border-color);
-  --chip-disabled-border-color: var(--border-color-light);
+  --chip-disabled-border-color: var(--border-color-subtle);
   --chip-border-radius: 10rem;
   --chip-border-width: 1px;
   --chip-focus-ring-color: var(--palette-default);
@@ -9672,7 +9672,7 @@ h6,
   --spinner-lg-size: 2.5rem;
   --spinner-border-width: 2px;
   --spinner-color: var(--palette-default);
-  --spinner-track-color: var(--surface-color-darker);
+  --spinner-track-color: var(--surface-color-deep);
   --spinner-speed: 0.75s;
 }
 
@@ -9709,8 +9709,8 @@ h6,
   }
 }
 .skeleton {
-  --skeleton-bg-color: var(--surface-color-darker);
-  --skeleton-shimmer-color: var(--surface-color-dark);
+  --skeleton-bg-color: var(--surface-color-deep);
+  --skeleton-shimmer-color: var(--surface-color-sunken);
   --skeleton-border-radius: 0.25rem;
   --skeleton-text-height: 1em;
   --skeleton-speed: 1.5s;
@@ -9742,13 +9742,13 @@ h6,
   --switch-track-sm-height: 1.125rem;
   --switch-track-lg-width: 3rem;
   --switch-track-lg-height: 1.625rem;
-  --switch-track-bg-color: var(--surface-color-darker);
+  --switch-track-bg-color: var(--surface-color-deep);
   --switch-track-checked-bg-color: var(--palette-default);
   --switch-track-border-color: var(--border-color);
   --switch-track-checked-border-color: var(--palette-default);
   --switch-track-border-radius: 10rem;
   --switch-track-border-width: 1px;
-  --switch-track-disabled-bg-color: var(--border-color-light);
+  --switch-track-disabled-bg-color: var(--border-color-subtle);
   --switch-track-focus-ring-color: black;
   --switch-track-focus-ring-offset: 2px;
   --switch-track-focus-ring-width: 2px;
@@ -9760,7 +9760,7 @@ h6,
   --switch-thumb-checked-bg-color: var(--palette-accent-default);
   --switch-thumb-disabled-bg-color: var(--border-color);
   --switch-track-checked-disabled-bg-color: var(--palette-lighter);
-  --switch-thumb-checked-disabled-bg-color: var(--border-color-light);
+  --switch-thumb-checked-disabled-bg-color: var(--border-color-subtle);
   --switch-transition: 0.2s;
   --switch-gap: 0.5rem;
   --switch-disabled-opacity: 0.5;
@@ -9868,11 +9868,11 @@ h6,
 }
 
 .accordion {
-  --accordion-bg-color: var(--surface-color-lighter);
-  --accordion-header-bg-color: var(--surface-color-dark);
-  --accordion-header-hover-bg-color: var(--surface-color-darker);
+  --accordion-bg-color: var(--surface-color-overlay);
+  --accordion-header-bg-color: var(--surface-color-sunken);
+  --accordion-header-hover-bg-color: var(--surface-color-deep);
   --accordion-header-color: var(--text-color);
-  --accordion-header-open-bg-color: var(--surface-color-dark);
+  --accordion-header-open-bg-color: var(--surface-color-sunken);
   --accordion-header-open-color: var(--text-color);
   --accordion-border-color: var(--border-color);
   --accordion-border-radius: 0.25rem;
@@ -10006,8 +10006,8 @@ h6,
 }
 
 .tooltip {
-  --tooltip-bg-color: var(--text-color-dark);
-  --tooltip-color: var(--surface-color-lighter);
+  --tooltip-bg-color: var(--text-color-strong);
+  --tooltip-color: var(--surface-color-overlay);
   --tooltip-border-radius: 0.25rem;
   --tooltip-padding: 0.3em 0.6em;
   --tooltip-font-size: 0.8125rem;
@@ -10068,8 +10068,8 @@ h6,
 .breadcrumb {
   --breadcrumb-color: var(--palette-default);
   --breadcrumb-hover-color: var(--palette-dark);
-  --breadcrumb-active-color: var(--text-color-light);
-  --breadcrumb-separator-color: var(--text-color-light);
+  --breadcrumb-active-color: var(--text-color-subtle);
+  --breadcrumb-separator-color: var(--text-color-subtle);
   --breadcrumb-separator: "/";
   --breadcrumb-gap: 0.5rem;
   --breadcrumb-font-size: inherit;
@@ -10109,16 +10109,16 @@ h6,
 }
 
 .pagination {
-  --pagination-bg-color: var(--surface-color-lighter);
+  --pagination-bg-color: var(--surface-color-overlay);
   --pagination-color: var(--text-color);
   --pagination-border-color: var(--border-color);
-  --pagination-hover-bg-color: var(--surface-color-dark);
+  --pagination-hover-bg-color: var(--surface-color-sunken);
   --pagination-hover-color: var(--text-color);
   --pagination-active-bg-color: var(--palette-default);
   --pagination-active-color: var(--palette-accent-default);
   --pagination-active-border-color: var(--palette-default);
   --pagination-disabled-color: var(--border-color);
-  --pagination-disabled-bg-color: var(--surface-color-lighter);
+  --pagination-disabled-bg-color: var(--surface-color-overlay);
   --pagination-border-radius: 0.25rem;
   --pagination-border-width: 1px;
   --pagination-padding: 0.375rem 0.75rem;
@@ -10181,13 +10181,13 @@ h6,
 }
 
 .card {
-  --card-bg-color: var(--surface-color-lighter);
+  --card-bg-color: var(--surface-color-overlay);
   --card-color: var(--text-color);
   --card-border-color: var(--border-color);
-  --card-header-bg-color: var(--surface-color-dark);
+  --card-header-bg-color: var(--surface-color-sunken);
   --card-header-color: var(--text-color);
-  --card-footer-bg-color: var(--surface-color-dark);
-  --card-footer-color: var(--text-color-light);
+  --card-footer-bg-color: var(--surface-color-sunken);
+  --card-footer-color: var(--text-color-subtle);
   --card-border-radius: 0.375rem;
   --card-outline-border-width: 1px;
   --card-inner-border-width: 1px;
@@ -10239,7 +10239,7 @@ h6,
 
 .divider {
   --divider-color: var(--border-color);
-  --divider-text-color: var(--text-color-light);
+  --divider-text-color: var(--text-color-subtle);
   --divider-text-gap: 0.75rem;
   --divider-width: 1px;
   --divider-margin: 1rem 0;
@@ -10280,13 +10280,13 @@ span.divider.vertical,
 }
 
 .dialog {
-  --dialog-bg-color: var(--surface-color-lighter);
+  --dialog-bg-color: var(--surface-color-overlay);
   --dialog-color: var(--text-color);
   --dialog-border-color: var(--border-color);
-  --dialog-header-bg-color: var(--surface-color-dark);
+  --dialog-header-bg-color: var(--surface-color-sunken);
   --dialog-header-color: var(--text-color);
-  --dialog-footer-bg-color: var(--surface-color-dark);
-  --dialog-footer-color: var(--text-color-light);
+  --dialog-footer-bg-color: var(--surface-color-sunken);
+  --dialog-footer-color: var(--text-color-subtle);
   --dialog-backdrop-color: rgba(0, 0, 0, 0.5);
   --dialog-border-radius: 0.375rem;
   --dialog-border-width: 1px;
@@ -10479,7 +10479,7 @@ span.divider.vertical,
 .list-group {
   --list-bg-color: transparent;
   --list-color: var(--text-color);
-  --list-hover-bg-color: var(--surface-color-dark);
+  --list-hover-bg-color: var(--surface-color-sunken);
   --list-hover-color: var(--text-color);
   --list-active-bg-color: var(--palette-default);
   --list-active-color: var(--palette-accent-default);
@@ -10553,36 +10553,36 @@ span.divider.vertical,
   color: var(--text-color);
 }
 
-.text-body-light {
-  color: var(--text-color-light);
+.text-body-subtle {
+  color: var(--text-color-subtle);
 }
 
-.text-body-lighter {
-  color: var(--text-color-lighter);
+.text-body-muted {
+  color: var(--text-color-muted);
 }
 
-.text-body-dark {
-  color: var(--text-color-dark);
+.text-body-strong {
+  color: var(--text-color-strong);
 }
 
 .bg-surface {
   background-color: var(--surface-color);
 }
 
-.bg-surface-light {
-  background-color: var(--surface-color-light);
+.bg-surface-raised {
+  background-color: var(--surface-color-raised);
 }
 
-.bg-surface-lighter {
-  background-color: var(--surface-color-lighter);
+.bg-surface-overlay {
+  background-color: var(--surface-color-overlay);
 }
 
-.bg-surface-dark {
-  background-color: var(--surface-color-dark);
+.bg-surface-sunken {
+  background-color: var(--surface-color-sunken);
 }
 
-.bg-surface-darker {
-  background-color: var(--surface-color-darker);
+.bg-surface-deep {
+  background-color: var(--surface-color-deep);
 }
 
 .text-primary {
@@ -16360,30 +16360,30 @@ pre {
 :root[data-theme=fluent2],
 :root[data-theme=fluent2][data-color-scheme=light] {
   --text-color: var(--neutral-color-10);
-  --text-color-light: var(--neutral-color-8);
-  --text-color-dark: var(--neutral-color-10);
-  --surface-color-lighter: var(--neutral-color-0);
-  --surface-color-light: var(--neutral-color-0);
+  --text-color-subtle: var(--neutral-color-8);
+  --text-color-strong: var(--neutral-color-10);
+  --surface-color-overlay: var(--neutral-color-0);
+  --surface-color-raised: var(--neutral-color-0);
   --surface-color: var(--neutral-color-1);
-  --surface-color-dark: var(--neutral-color-2);
-  --surface-color-darker: var(--neutral-color-3);
+  --surface-color-sunken: var(--neutral-color-2);
+  --surface-color-deep: var(--neutral-color-3);
 }
 
 :root[data-theme=fluent2][data-color-scheme=dark] {
   --text-color: var(--neutral-color-0);
-  --text-color-light: var(--neutral-color-0);
-  --text-color-dark: var(--neutral-color-1);
-  --surface-color-lighter: var(
+  --text-color-subtle: var(--neutral-color-0);
+  --text-color-strong: var(--neutral-color-1);
+  --surface-color-overlay: var(
     --neutral-color-9
   );
-  --surface-color-light: var(
+  --surface-color-raised: var(
     --neutral-color-9
   );
   --surface-color: var(--neutral-color-10);
-  --surface-color-dark: var(
+  --surface-color-sunken: var(
     --neutral-color-9
   );
-  --surface-color-darker: var(--neutral-color-10);
+  --surface-color-deep: var(--neutral-color-10);
 }
 
 :root[data-theme=fluent2] {
@@ -16401,13 +16401,13 @@ pre {
   --button-focus-border-color: var(--button-focus-bg-color);
 }
 :root[data-theme=fluent2] .button.filled.secondary {
-  --button-bg-color: var(--surface-color-lighter);
+  --button-bg-color: var(--surface-color-overlay);
   --button-color: var(--text-color);
   --button-border-color: var(--border-color);
   --button-hover-bg-color: var(--surface-color);
   --button-hover-color: var(--button-color);
   --button-hover-border-color: var(--border-color);
-  --button-active-bg-color: var(--surface-color-dark);
+  --button-active-bg-color: var(--surface-color-sunken);
   --button-active-color: var(--button-color);
   --button-active-border-color: var(--border-color);
   --button-focus-bg-color: var(--surface-color);
@@ -16423,7 +16423,7 @@ pre {
 
 :root[data-theme=fluent2] .form-control {
   --form-control-focus-ring-width: 0px;
-  --form-control-focus-border-color: var(--border-color-dark);
+  --form-control-focus-border-color: var(--border-color-strong);
   --form-control-disabled-opacity: 0.4;
   --form-control-readonly-cursor: text;
 }
@@ -16431,17 +16431,17 @@ pre {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control:hover:not(:disabled):not(:read-only) {
-  box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+  box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
 }
 :root[data-theme=fluent2] .form-control.filled:focus-visible:not(:hover):not(:active) {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control.filled:hover:not(:disabled):not(:read-only) {
-  box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+  box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
 }
 :root[data-theme=fluent2] .form-control.underline:focus-visible:not(:hover):not(:active) {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control.underline:hover:not(:disabled):not(:read-only) {
-  box-shadow: 0 -1px 0 0 var(--border-color-dark) inset;
+  box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
 }

@@ -258,19 +258,19 @@
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   --border-color: var(--neutral-gray-4);
-  --border-color-light: var(--neutral-gray-2);
-  --border-color-dark: var(--neutral-gray-6);
+  --border-color-subtle: var(--neutral-gray-2);
+  --border-color-strong: var(--neutral-gray-6);
 
   --text-color: var(--neutral-gray-9);
-  --text-color-light: var(--neutral-gray-6);
-  --text-color-lighter: var(--neutral-gray-4);
-  --text-color-dark: var(--neutral-gray-10);
+  --text-color-subtle: var(--neutral-gray-6);
+  --text-color-muted: var(--neutral-gray-4);
+  --text-color-strong: var(--neutral-gray-10);
 
-  --surface-color-lighter: #ffffff;
-  --surface-color-light: var(--neutral-color-0);
+  --surface-color-overlay: #ffffff;
+  --surface-color-raised: var(--neutral-color-0);
   --surface-color: var(--neutral-color-1);
-  --surface-color-dark: var(--neutral-color-2);
-  --surface-color-darker: var(--neutral-color-3);
+  --surface-color-sunken: var(--neutral-color-2);
+  --surface-color-deep: var(--neutral-color-3);
 }
 
 // ============================================================
@@ -278,19 +278,19 @@
 // ============================================================
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   --border-color: var(--neutral-gray-7);
-  --border-color-light: var(--neutral-gray-6);
-  --border-color-dark: var(--neutral-gray-8);
+  --border-color-subtle: var(--neutral-gray-6);
+  --border-color-strong: var(--neutral-gray-8);
 
   --text-color: var(--neutral-gray-0);
-  --text-color-light: var(--neutral-gray-3);
-  --text-color-lighter: var(--neutral-gray-6);
-  --text-color-dark: #ffffff;
+  --text-color-subtle: var(--neutral-gray-3);
+  --text-color-muted: var(--neutral-gray-6);
+  --text-color-strong: #ffffff;
 
-  --surface-color-lighter: #2c2c2e;
-  --surface-color-light: #1c1c1e;
+  --surface-color-overlay: #2c2c2e;
+  --surface-color-raised: #1c1c1e;
   --surface-color: #000000;
-  --surface-color-dark: #1c1c1e;
-  --surface-color-darker: #2c2c2e;
+  --surface-color-sunken: #1c1c1e;
+  --surface-color-deep: #2c2c2e;
 
   // Dark mode semantic level re-mapping (brighter colors for dark bg)
   --primary-default: var(--primary-color-4);

@@ -111,14 +111,14 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
-  #{$select-filled-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$select-filled-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
   #{$select-filled-hover-bg-color-var}: var(
-    #{color-defines.$surface-color-darker-var}
+    #{color-defines.$surface-color-deep-var}
   );
   #{$select-filled-active-bg-color-var}: var(#{$select-filled-bg-color-var});
   #{$select-filled-focus-bg-color-var}: var(#{$select-filled-bg-color-var});
   #{$select-filled-disabled-bg-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
 
   // --------------------------------------------
@@ -128,7 +128,7 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   #{$select-hover-color-var}: var(#{color-defines.$text-color-var});
   #{$select-active-color-var}: var(#{color-defines.$text-color-var});
   #{$select-focus-color-var}: var(#{color-defines.$text-color-var});
-  #{$select-disabled-color-var}: var(#{color-defines.$border-color-dark-var});
+  #{$select-disabled-color-var}: var(#{color-defines.$border-color-strong-var});
 
   // --------------------------------------------
   // Placeholder Colors
@@ -153,16 +153,16 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   #{$select-border-radius-var}: 4px;
   #{$select-border-color-var}: var(#{color-defines.$border-color-var});
   #{$select-hover-border-color-var}: var(
-    #{color-defines.$border-color-dark-var}
+    #{color-defines.$border-color-strong-var}
   );
   #{$select-active-border-color-var}: var(
-    #{color-defines.$border-color-dark-var}
+    #{color-defines.$border-color-strong-var}
   );
   #{$select-focus-border-color-var}: var(
-    #{color-defines.$border-color-dark-var}
+    #{color-defines.$border-color-strong-var}
   );
   #{$select-disabled-border-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
 
   // --------------------------------------------
@@ -235,7 +235,7 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   font-size: var(#{$select-font-size-var});
 
   & option {
-    background-color: var(#{color-defines.$surface-color-lighter-var});
+    background-color: var(#{color-defines.$surface-color-overlay-var});
   }
 
   & optgroup {

@@ -58,7 +58,7 @@ $list-padding-var: --#{$list-prefix}padding !default;
   // --------------------------------------------
   #{$list-bg-color-var}: transparent;
   #{$list-color-var}: var(#{color-defines.$text-color-var});
-  #{$list-hover-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$list-hover-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
   #{$list-hover-color-var}: var(#{color-defines.$text-color-var});
   #{$list-active-bg-color-var}: var(#{palette.$palette-default-var});
   #{$list-active-color-var}: var(#{palette.$palette-default-accent-var});

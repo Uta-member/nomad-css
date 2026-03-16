@@ -191,8 +191,8 @@
   --border-color: #b0c2cc;
   --text-color: #2c2c2c;
   --surface-color: #f8f8f8;
-  --surface-color-lighter: #ffffff;
-  --surface-color-darker: #eeeeee;
+  --surface-color-overlay: #ffffff;
+  --surface-color-deep: #eeeeee;
 }
 
 // ============================================================
@@ -202,9 +202,9 @@
   --border-color: #3b3b3b;
   --text-color: #ebebeb;
   --surface-color: #1e1e1e;
-  --surface-color-lighter: #2a2a2a;
-  --surface-color-dark: #2a2a2a;
-  --surface-color-darker: #141414;
+  --surface-color-overlay: #2a2a2a;
+  --surface-color-sunken: #2a2a2a;
+  --surface-color-deep: #141414;
 
   --primary-default: var(--primary-color-4);
   --primary-default-ch: var(--primary-color-4-ch);

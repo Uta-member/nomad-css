@@ -72,16 +72,16 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$accordion-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$accordion-bg-color-var}: var(#{color-defines.$surface-color-overlay-var});
   #{$accordion-header-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
+    #{color-defines.$surface-color-sunken-var}
   );
   #{$accordion-header-hover-bg-color-var}: var(
-    #{color-defines.$surface-color-darker-var}
+    #{color-defines.$surface-color-deep-var}
   );
   #{$accordion-header-color-var}: var(#{color-defines.$text-color-var});
   #{$accordion-header-open-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
+    #{color-defines.$surface-color-sunken-var}
   );
   #{$accordion-header-open-color-var}: var(#{color-defines.$text-color-var});
 

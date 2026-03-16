@@ -160,8 +160,8 @@
   --border-color: #808080;
   --text-color: #1a1a1a;
   --surface-color: #f0f0f0;
-  --surface-color-lighter: #ffffff;
-  --surface-color-darker: #dedede;
+  --surface-color-overlay: #ffffff;
+  --surface-color-deep: #dedede;
 }
 
 // Dark mode — Holo Dark (the classic Android 4 dark theme)
@@ -169,9 +169,9 @@
   --border-color: #404040;
   --text-color: #eeeeee;
   --surface-color: #1a1a1a;
-  --surface-color-lighter: #2a2a2a;
-  --surface-color-dark: #232323;
-  --surface-color-darker: #0a0a0a;
+  --surface-color-overlay: #2a2a2a;
+  --surface-color-sunken: #232323;
+  --surface-color-deep: #0a0a0a;
 
   --primary-default: var(--primary-color-3);
   --primary-default-ch: var(--primary-color-3-ch);

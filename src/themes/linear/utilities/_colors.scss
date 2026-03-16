@@ -188,20 +188,20 @@
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   // テキスト
   --text-color: hsl(240, 9%, 11%);         // #1a1a2e に近い、やや青み
-  --text-color-light: hsl(240, 6%, 40%);   // サブテキスト
-  --text-color-dark: hsl(240, 12%, 6%);    // 強調テキスト
+  --text-color-subtle: hsl(240, 6%, 40%);   // サブテキスト
+  --text-color-strong: hsl(240, 12%, 6%);    // 強調テキスト
 
   // サーフェス — ほぼ白、subtle な blue-gray
-  --surface-color-lighter: hsl(0, 0%, 100%);       // 純白 (modal, popover)
-  --surface-color-light: hsl(240, 20%, 98%);        // メインコンテンツ背景
+  --surface-color-overlay: hsl(0, 0%, 100%);       // 純白 (modal, popover)
+  --surface-color-raised: hsl(240, 20%, 98%);        // メインコンテンツ背景
   --surface-color: hsl(240, 14%, 96%);              // ページ背景
-  --surface-color-dark: hsl(240, 10%, 92%);         // セクション区切り
-  --surface-color-darker: hsl(240, 8%, 86%);        // ホバー背景
+  --surface-color-sunken: hsl(240, 10%, 92%);         // セクション区切り
+  --surface-color-deep: hsl(240, 8%, 86%);        // ホバー背景
 
   // ボーダー — 非常に控えめ
   --border-color: hsl(240, 10%, 88%);
-  --border-color-light: hsl(240, 8%, 94%);
-  --border-color-dark: hsl(240, 12%, 78%);
+  --border-color-subtle: hsl(240, 8%, 94%);
+  --border-color-strong: hsl(240, 12%, 78%);
 }
 
 // ============================================================
@@ -214,18 +214,18 @@
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   // テキスト — 少しクールなホワイト
   --text-color: hsl(240, 15%, 88%);        // #dcdce8 相当
-  --text-color-light: hsl(240, 8%, 60%);   // サブテキスト
-  --text-color-dark: hsl(240, 20%, 96%);   // 強調テキスト
+  --text-color-subtle: hsl(240, 8%, 60%);   // サブテキスト
+  --text-color-strong: hsl(240, 20%, 96%);   // 強調テキスト
 
   // サーフェス — 階層のある暗い背景
-  --surface-color-lighter: hsl(240, 12%, 18%);     // 最上位 (dialog, card)
-  --surface-color-light: hsl(240, 13%, 15%);        // 上位サーフェス
+  --surface-color-overlay: hsl(240, 12%, 18%);     // 最上位 (dialog, card)
+  --surface-color-raised: hsl(240, 13%, 15%);        // 上位サーフェス
   --surface-color: hsl(240, 16%, 10%);              // ベース背景
-  --surface-color-dark: hsl(240, 14%, 8%);          // 低位背景
-  --surface-color-darker: hsl(240, 18%, 6%);        // 最低位 (skeleton bg)
+  --surface-color-sunken: hsl(240, 14%, 8%);          // 低位背景
+  --surface-color-deep: hsl(240, 18%, 6%);        // 最低位 (skeleton bg)
 
   // ボーダー — 暗い中での繊細なライン
   --border-color: hsl(240, 10%, 22%);
-  --border-color-light: hsl(240, 8%, 18%);
-  --border-color-dark: hsl(240, 12%, 30%);
+  --border-color-subtle: hsl(240, 8%, 18%);
+  --border-color-strong: hsl(240, 12%, 30%);
 }

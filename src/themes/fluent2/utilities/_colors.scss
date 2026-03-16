@@ -14,34 +14,34 @@
   // テキスト: neutral-color-10 (10%) → #1a1a1a ≈ #1f1f1f
   --text-color: var(--neutral-color-10);
   // テキスト（サブ）: neutral-color-8 (26%) → #424242 ≈ #3f3f3f
-  --text-color-light: var(--neutral-color-8);
+  --text-color-subtle: var(--neutral-color-8);
   // テキスト（強調）: 同 neutral-color-10 (--neutral-s:0% で純黒に近い)
-  --text-color-dark: var(--neutral-color-10);
+  --text-color-strong: var(--neutral-color-10);
 
   // サーフェス: lighter/light は neutral-color-0 (97%), 標準は neutral-color-1 (93%)
-  --surface-color-lighter: var(--neutral-color-0);
-  --surface-color-light: var(--neutral-color-0);
+  --surface-color-overlay: var(--neutral-color-0);
+  --surface-color-raised: var(--neutral-color-0);
   --surface-color: var(--neutral-color-1);
-  --surface-color-dark: var(--neutral-color-2);
-  --surface-color-darker: var(--neutral-color-3);
+  --surface-color-sunken: var(--neutral-color-2);
+  --surface-color-deep: var(--neutral-color-3);
 }
 
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   // テキスト（ライトモードの明暗を反転して参照）
   --text-color: var(--neutral-color-0); // 97% → 明るい文字色
-  --text-color-light: var(--neutral-color-0); // 97% → サブテキスト
-  --text-color-dark: var(--neutral-color-1); // 93% → 強調テキスト
+  --text-color-subtle: var(--neutral-color-0); // 97% → サブテキスト
+  --text-color-strong: var(--neutral-color-1); // 93% → 強調テキスト
 
   // サーフェス（elevation モデル: 番号が小さいほど明るく＝浮いて見える）
-  --surface-color-lighter: var(
+  --surface-color-overlay: var(
     --neutral-color-9
   ); // 18% → 最上位サーフェス (ダイアログ等)
-  --surface-color-light: var(
+  --surface-color-raised: var(
     --neutral-color-9
   ); // 18% → 上位サーフェス (カード等)
   --surface-color: var(--neutral-color-10); // 10% → ベース背景
-  --surface-color-dark: var(
+  --surface-color-sunken: var(
     --neutral-color-9
   ); // 18% → 低位 (スクロール背景等) ※ lighter/light と同値だがコントラスト確保のため区別
-  --surface-color-darker: var(--neutral-color-10); // 10% → 最低位（skeleton bg など）
+  --surface-color-deep: var(--neutral-color-10); // 10% → 最低位（skeleton bg など）
 }

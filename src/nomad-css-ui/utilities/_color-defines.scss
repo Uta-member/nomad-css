@@ -9,25 +9,25 @@
 // Border
 // --------------------------------------------
 $border-color-var: --border-color;
-$border-color-light-var: --border-color-light;
-$border-color-dark-var: --border-color-dark;
+$border-color-subtle-var: --border-color-subtle;
+$border-color-strong-var: --border-color-strong;
 
 // ---------------------------------------------
 // Text
 // ---------------------------------------------
 $text-color-var: --text-color;
-$text-color-light-var: --text-color-light;
-$text-color-lighter-var: --text-color-lighter;
-$text-color-dark-var: --text-color-dark;
+$text-color-subtle-var: --text-color-subtle;
+$text-color-muted-var: --text-color-muted;
+$text-color-strong-var: --text-color-strong;
 
 // ---------------------------------------------
 // Surface
 // ---------------------------------------------
 $surface-color-var: --surface-color;
-$surface-color-light-var: --surface-color-light;
-$surface-color-lighter-var: --surface-color-lighter;
-$surface-color-dark-var: --surface-color-dark;
-$surface-color-darker-var: --surface-color-darker;
+$surface-color-raised-var: --surface-color-raised;
+$surface-color-overlay-var: --surface-color-overlay;
+$surface-color-sunken-var: --surface-color-sunken;
+$surface-color-deep-var: --surface-color-deep;
 
 // ============================================
 // Process
@@ -39,23 +39,23 @@ $surface-color-darker-var: --surface-color-darker;
   #{$border-color-var}: var(
     #{semantics.$neutral-default-var}
   ); // neutral-color-5 (50%)
-  #{$border-color-light-var}: var(
+  #{$border-color-subtle-var}: var(
     #{semantics.$neutral-light-var}
   ); // neutral-color-3 (75%)
-  #{$border-color-dark-var}: var(
+  #{$border-color-strong-var}: var(
     #{semantics.$neutral-dark-var}
   ); // neutral-color-7 (34%)
 
   #{$text-color-var}: var(--neutral-color-9);
-  #{$text-color-light-var}: var(--neutral-color-7);
-  #{$text-color-lighter-var}: var(--neutral-color-4);
-  #{$text-color-dark-var}: var(--neutral-color-10);
+  #{$text-color-subtle-var}: var(--neutral-color-7);
+  #{$text-color-muted-var}: var(--neutral-color-4);
+  #{$text-color-strong-var}: var(--neutral-color-10);
 
-  #{$surface-color-lighter-var}: var(
+  #{$surface-color-overlay-var}: var(
     --neutral-color-0
   ); // 97% — 最明 (ダイアログ等)
-  #{$surface-color-light-var}: var(--neutral-color-0);
+  #{$surface-color-raised-var}: var(--neutral-color-0);
   #{$surface-color-var}: var(--neutral-color-1);
-  #{$surface-color-dark-var}: var(--neutral-color-2);
-  #{$surface-color-darker-var}: var(--neutral-color-3);
+  #{$surface-color-sunken-var}: var(--neutral-color-2);
+  #{$surface-color-deep-var}: var(--neutral-color-3);
 }

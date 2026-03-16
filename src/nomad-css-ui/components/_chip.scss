@@ -107,7 +107,7 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   #{$chip-active-border-color-var}: var(#{palette.$palette-default-var});
   #{$chip-focus-border-color-var}: var(#{$chip-hover-border-color-var});
   #{$chip-disabled-border-color-var}: var(
-    #{color-defines.$border-color-light-var}
+    #{color-defines.$border-color-subtle-var}
   );
 
   // --------------------------------------------

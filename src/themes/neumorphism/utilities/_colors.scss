@@ -62,9 +62,9 @@
 
   // Surface colors (light mode)
   --surface-color: #e0e4ec;
-  --surface-color-lighter: #eef0f5;
-  --surface-color-dark: #d8dce6;
-  --surface-color-darker: #d0d4dc;
+  --surface-color-overlay: #eef0f5;
+  --surface-color-sunken: #d8dce6;
+  --surface-color-deep: #d0d4dc;
   --text-color: #3a3f4b;
   --text-color-muted: #7a7f8b;
   --border-color: #b0b9c4;
@@ -72,9 +72,9 @@
 
 :root[data-theme="neumorphism"][data-color-scheme="dark"] {
   --surface-color: #2d2d2d;
-  --surface-color-lighter: #383838;
-  --surface-color-dark: #383838;
-  --surface-color-darker: #222222;
+  --surface-color-overlay: #383838;
+  --surface-color-sunken: #383838;
+  --surface-color-deep: #222222;
   --text-color: #d0d0d0;
   --text-color-muted: #888888;
   --border-color: #444444;

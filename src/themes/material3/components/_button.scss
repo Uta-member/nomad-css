@@ -39,7 +39,7 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-subtle);
     }
 
     &.tonal {
@@ -53,7 +53,7 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-subtle);
       --button-hover-box-shadow: var(--shadow-1);
     }
 
@@ -68,7 +68,7 @@
       --button-disabled-bg-color: var(--neutral-lighter);
       --button-disabled-border-color: var(--neutral-lighter);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--text-color-light);
+      --button-disabled-color: var(--text-color-subtle);
     }
   }
 }

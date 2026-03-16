@@ -160,8 +160,8 @@
   --border-color: #33ff33;
   --text-color: #003300;
   --surface-color: #e8ffe8;
-  --surface-color-lighter: #f0fff0;
-  --surface-color-darker: #d0f0d0;
+  --surface-color-overlay: #f0fff0;
+  --surface-color-deep: #d0f0d0;
 }
 
 // Dark mode — classic green-on-black terminal
@@ -169,7 +169,7 @@
   --border-color: #33ff33;
   --text-color: #33ff33;
   --surface-color: #000000;
-  --surface-color-lighter: #0a0a0a;
-  --surface-color-dark: #0a0a0a;
-  --surface-color-darker: #000000;
+  --surface-color-overlay: #0a0a0a;
+  --surface-color-sunken: #0a0a0a;
+  --surface-color-deep: #000000;
 }

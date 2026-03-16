@@ -57,11 +57,11 @@ $pagination-gap-var: --#{$pagination-prefix}gap !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$pagination-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$pagination-bg-color-var}: var(#{color-defines.$surface-color-overlay-var});
   #{$pagination-color-var}: var(#{color-defines.$text-color-var});
   #{$pagination-border-color-var}: var(#{color-defines.$border-color-var});
   #{$pagination-hover-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
+    #{color-defines.$surface-color-sunken-var}
   );
   #{$pagination-hover-color-var}: var(#{color-defines.$text-color-var});
   #{$pagination-active-bg-color-var}: var(#{palette.$palette-default-var});
@@ -69,7 +69,7 @@ $pagination-gap-var: --#{$pagination-prefix}gap !default;
   #{$pagination-active-border-color-var}: var(#{palette.$palette-default-var});
   #{$pagination-disabled-color-var}: var(#{color-defines.$border-color-var});
   #{$pagination-disabled-bg-color-var}: var(
-    #{color-defines.$surface-color-lighter-var}
+    #{color-defines.$surface-color-overlay-var}
   );
 
   // --------------------------------------------

@@ -238,19 +238,19 @@
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="light"] {
   --border-color: #e2e8f0;
-  --border-color-light: #edf2f7;
-  --border-color-dark: #cbd5e0;
+  --border-color-subtle: #edf2f7;
+  --border-color-strong: #cbd5e0;
 
   --text-color: #1a202c;
-  --text-color-light: #718096;
-  --text-color-lighter: #a0aec0;
-  --text-color-dark: #000000;
+  --text-color-subtle: #718096;
+  --text-color-muted: #a0aec0;
+  --text-color-strong: #000000;
 
-  --surface-color-lighter: #ffffff;
-  --surface-color-light: #f7fafc;
+  --surface-color-overlay: #ffffff;
+  --surface-color-raised: #f7fafc;
   --surface-color: #ffffff;
-  --surface-color-dark: #edf2f7;
-  --surface-color-darker: #e2e8f0;
+  --surface-color-sunken: #edf2f7;
+  --surface-color-deep: #e2e8f0;
 }
 
 // ============================================================
@@ -258,19 +258,19 @@
 // ============================================================
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
   --border-color: #2d3748;
-  --border-color-light: #1a202c;
-  --border-color-dark: #4a5568;
+  --border-color-subtle: #1a202c;
+  --border-color-strong: #4a5568;
 
   --text-color: #e2e8f0;
-  --text-color-light: #a0aec0;
-  --text-color-lighter: #718096;
-  --text-color-dark: #f7fafc;
+  --text-color-subtle: #a0aec0;
+  --text-color-muted: #718096;
+  --text-color-strong: #f7fafc;
 
-  --surface-color-lighter: #2d3748;
-  --surface-color-light: #1a202c;
+  --surface-color-overlay: #2d3748;
+  --surface-color-raised: #1a202c;
   --surface-color: #171923;
-  --surface-color-dark: #0f1117;
-  --surface-color-darker: #0a0c10;
+  --surface-color-sunken: #0f1117;
+  --surface-color-deep: #0a0c10;
 
   --primary-default: var(--primary-color-4);
   --primary-accent-default: var(--primary-accent-4);

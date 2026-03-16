@@ -108,20 +108,16 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
   #{$checkbox-bg-color-var}: transparent;
   #{$checkbox-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$checkbox-active-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
+    #{color-defines.$surface-color-sunken-var}
   );
   #{$checkbox-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$checkbox-disabled-bg-color-var}: transparent;
   #{$checkbox-checked-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$checkbox-checked-hover-bg-color-var}: var(
-    #{palette.$palette-default-var}
-  );
+  #{$checkbox-checked-hover-bg-color-var}: var(#{palette.$palette-default-var});
   #{$checkbox-checked-active-bg-color-var}: var(
     #{palette.$palette-default-var}
   );
-  #{$checkbox-checked-focus-bg-color-var}: var(
-    #{palette.$palette-default-var}
-  );
+  #{$checkbox-checked-focus-bg-color-var}: var(#{palette.$palette-default-var});
   #{$checkbox-checked-disabled-bg-color-var}: var(
     #{color-defines.$border-color-var}
   );
@@ -133,9 +129,7 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
   #{$checkbox-border-radius-var}: 4px;
   #{$checkbox-border-color-var}: var(#{color-defines.$border-color-var});
   #{$checkbox-hover-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$checkbox-active-border-color-var}: var(
-    #{color-defines.$border-color-var}
-  );
+  #{$checkbox-active-border-color-var}: var(#{color-defines.$border-color-var});
   #{$checkbox-focus-border-color-var}: var(#{color-defines.$border-color-var});
   #{$checkbox-disabled-border-color-var}: var(
     #{color-defines.$border-color-var}
@@ -172,7 +166,7 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
   // --------------------------------------------
   #{$checkbox-mark-color-var}: var(#{palette.$palette-default-accent-var});
   #{$checkbox-disabled-mark-color-var}: var(
-    #{color-defines.$surface-color-lighter-var}
+    #{color-defines.$surface-color-overlay-var}
   );
   #{$checkbox-mark-image-var}: #{$default-mark-image};
   #{$checkbox-indeterminate-mark-image-var}: #{$default-indeterminate-mark-image};
@@ -338,13 +332,9 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
 }
 .#{$checkbox-class-name}.is-valid {
   #{$checkbox-border-color-var}: var(#{$checkbox-valid-border-color-var});
-  #{$checkbox-hover-border-color-var}: var(
-    #{$checkbox-valid-border-color-var}
-  );
+  #{$checkbox-hover-border-color-var}: var(#{$checkbox-valid-border-color-var});
   #{$checkbox-active-border-color-var}: var(
     #{$checkbox-valid-border-color-var}
   );
-  #{$checkbox-focus-border-color-var}: var(
-    #{$checkbox-valid-border-color-var}
-  );
+  #{$checkbox-focus-border-color-var}: var(#{$checkbox-valid-border-color-var});
 }

@@ -317,18 +317,18 @@ HSL 色相環に基づく 12 色の HUE 変数を定義します。
 ```css
 /* テキストカラー */
 --text-color: #1f1f1f;
---text-color-light: #3f3f3f;
---text-color-dark: #000000;
+--text-color-subtle: #3f3f3f;
+--text-color-strong: #000000;
 
 /* サーフェスカラー */
 --surface-color: #f0f0f0;
---surface-color-light: #f5f5f5;
---surface-color-lighter: #ffffff;
---surface-color-dark: #e5e5e5;
---surface-color-darker: #d9d9d9;
+--surface-color-raised: #f5f5f5;
+--surface-color-overlay: #ffffff;
+--surface-color-sunken: #e5e5e5;
+--surface-color-deep: #d9d9d9;
 
 /* ボーダーカラー（neutral パレットから自動生成） */
 --border-color: var(--neutral-default);
---border-color-light: var(--neutral-light);
---border-color-dark: var(--neutral-dark);
+--border-color-subtle: var(--neutral-light);
+--border-color-strong: var(--neutral-dark);
 ```
