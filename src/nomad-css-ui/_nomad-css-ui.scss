@@ -12,3 +12,10 @@
 @use "./utilities/color-utils" as color-utils;
 @use "./utilities/fonts" as theme-fonts;
 @use "./utilities/border" as theme-border;
+
+body {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-body-size);
+}
