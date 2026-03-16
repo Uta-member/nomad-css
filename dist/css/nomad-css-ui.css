@@ -10654,6 +10654,165 @@ span.divider.vertical,
   color: var(--link-card-icon-color);
 }
 
+.tree {
+  --tree-color: var(--text-color);
+  --tree-muted-color: var(--text-color-muted);
+  --tree-hover-bg-color: var(--surface-color-sunken);
+  --tree-active-bg-color: var(--palette-default);
+  --tree-active-color: var(--palette-accent-default);
+  --tree-guide-color: var(--border-color);
+  --tree-border-radius: 0.25rem;
+  --tree-indent: 1rem;
+  --tree-row-padding: 0.2rem 0.5rem;
+  --tree-row-gap: 0.375rem;
+  --tree-guide-width: 1px;
+  --tree-leaf-indent: calc(0.5rem + var(--tree-toggle-size) + var(--tree-row-gap));
+  --tree-toggle-size: 0.875em;
+  --tree-toggle-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L16 12L10 18Z'/%3E%3C/svg%3E");
+  --tree-toggle-open-rotation: 90deg;
+  --tree-toggle-opacity: 0.5;
+  --tree-transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  color: var(--tree-color);
+}
+.tree .tree {
+  padding-left: var(--tree-indent);
+  border-left: var(--tree-guide-width) solid var(--tree-guide-color);
+  margin-left: calc(0.5rem + var(--tree-toggle-size) * 0.5);
+}
+.tree > li {
+  list-style: none;
+}
+.tree details > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--tree-row-gap);
+  padding: var(--tree-row-padding);
+  border-radius: var(--tree-border-radius);
+  color: var(--tree-color);
+  cursor: pointer;
+  user-select: none;
+  transition: var(--tree-transition);
+  list-style: none;
+}
+.tree details > summary::-webkit-details-marker {
+  display: none;
+}
+.tree details > summary::marker {
+  content: none;
+}
+.tree details > summary::before {
+  content: "";
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--tree-toggle-size);
+  height: var(--tree-toggle-size);
+  background-color: currentColor;
+  mask-image: var(--tree-toggle-icon);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  opacity: var(--tree-toggle-opacity);
+  transition: transform 0.2s ease, opacity 0.15s ease;
+}
+.tree details > summary:hover {
+  background-color: var(--tree-hover-bg-color);
+}
+.tree details > summary:hover::before {
+  opacity: 1;
+}
+.tree details[open] > summary::before {
+  transform: rotate(var(--tree-toggle-open-rotation));
+  opacity: 1;
+}
+.tree li.active > details > summary,
+.tree details.active > summary {
+  background-color: var(--tree-active-bg-color);
+  color: var(--tree-active-color);
+}
+.tree li.active > details > summary::before,
+.tree details.active > summary::before {
+  opacity: 1;
+}
+.tree li.active > details > summary:hover,
+.tree details.active > summary:hover {
+  background-color: var(--tree-active-bg-color);
+}
+.tree .tree-row {
+  display: flex;
+  align-items: center;
+  gap: var(--tree-row-gap);
+  padding: var(--tree-row-padding);
+  padding-inline-start: var(--tree-leaf-indent);
+  border-radius: var(--tree-border-radius);
+  color: var(--tree-color);
+  text-decoration: none;
+  transition: var(--tree-transition);
+  cursor: default;
+}
+.tree .tree-row[href], .tree .tree-row[tabindex],
+.tree .tree-row button.tree .tree-row {
+  cursor: pointer;
+}
+.tree .tree-row[href]:hover, .tree .tree-row[tabindex]:hover,
+.tree .tree-row button.tree .tree-row:hover {
+  background-color: var(--tree-hover-bg-color);
+}
+.tree .tree-row.active {
+  background-color: var(--tree-active-bg-color);
+  color: var(--tree-active-color);
+}
+.tree .tree-row.active:hover {
+  background-color: var(--tree-active-bg-color);
+}
+.tree li.active > .tree-row {
+  background-color: var(--tree-active-bg-color);
+  color: var(--tree-active-color);
+}
+.tree .tree-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--tree-muted-color);
+  font-size: 1em;
+}
+.active > .tree .tree-icon, .tree-row.active > .tree .tree-icon {
+  color: inherit;
+}
+.tree .tree-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tree .tree-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.75em;
+  color: var(--tree-muted-color);
+  line-height: 1;
+}
+
+.tree.compact {
+  --tree-row-padding: 0.1rem 0.375rem;
+  --tree-row-gap: 0.25rem;
+  --tree-indent: 0.75rem;
+  --tree-toggle-size: 0.75em;
+  --tree-leaf-indent: calc(0.375rem + var(--tree-toggle-size) + var(--tree-row-gap));
+}
+
+.tree.no-lines .tree,
+.tree.no-lines.tree {
+  --tree-guide-width: 0;
+}
+
 .text-body {
   color: var(--text-color);
 }

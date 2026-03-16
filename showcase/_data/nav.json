@@ -23,7 +23,8 @@
     { "title": "Spinner", "slug": "spinner" },
     { "title": "Switch", "slug": "switch" },
     { "title": "Table", "slug": "table" },
-    { "title": "Tooltip", "slug": "tooltip" }
+    { "title": "Tooltip", "slug": "tooltip" },
+    { "title": "Tree", "slug": "tree" }
   ],
   "utilities": [
     { "title": "Typography", "slug": "typography" },

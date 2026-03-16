@@ -1,0 +1,320 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+// --------------------------------------------
+// Prefixes
+// --------------------------------------------
+$tree-prefix: #{prefixes.$prefix}tree- !default;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$tree-class-name: tree !default;
+$tree-row-class-name: tree-row !default;
+$tree-label-class-name: tree-label !default;
+$tree-icon-class-name: tree-icon !default;
+$tree-badge-class-name: tree-badge !default;
+
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$tree-color-var: --#{$tree-prefix}color !default;
+$tree-muted-color-var: --#{$tree-prefix}muted-color !default;
+$tree-hover-bg-color-var: --#{$tree-prefix}hover-bg-color !default;
+$tree-active-bg-color-var: --#{$tree-prefix}active-bg-color !default;
+$tree-active-color-var: --#{$tree-prefix}active-color !default;
+$tree-guide-color-var: --#{$tree-prefix}guide-color !default;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$tree-border-radius-var: --#{$tree-prefix}border-radius !default;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$tree-indent-var: --#{$tree-prefix}indent !default;
+$tree-row-padding-var: --#{$tree-prefix}row-padding !default;
+$tree-row-gap-var: --#{$tree-prefix}row-gap !default;
+$tree-guide-width-var: --#{$tree-prefix}guide-width !default;
+
+// leaf-indent aligns text of leaf .tree-row with text after the toggle icon in
+// branch <summary> elements (toggle-size + row-gap + base horizontal padding).
+$tree-leaf-indent-var: --#{$tree-prefix}leaf-indent !default;
+
+// --------------------------------------------
+// Toggle icon
+// --------------------------------------------
+$tree-toggle-size-var: --#{$tree-prefix}toggle-size !default;
+$tree-toggle-icon-var: --#{$tree-prefix}toggle-icon !default;
+$tree-toggle-open-rotation-var: --#{$tree-prefix}toggle-open-rotation !default;
+$tree-toggle-opacity-var: --#{$tree-prefix}toggle-opacity !default;
+
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$tree-transition-var: --#{$tree-prefix}transition !default;
+
+// ============================================
+// CSS Variables (defaults)
+// ============================================
+.#{$tree-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$tree-color-var}: var(#{color-defines.$text-color-var});
+  #{$tree-muted-color-var}: var(#{color-defines.$text-color-muted-var});
+  #{$tree-hover-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
+  #{$tree-active-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$tree-active-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$tree-guide-color-var}: var(#{color-defines.$border-color-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$tree-border-radius-var}: 0.25rem;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$tree-indent-var}: 1rem;
+  #{$tree-row-padding-var}: 0.2rem 0.5rem;
+  #{$tree-row-gap-var}: 0.375rem;
+  #{$tree-guide-width-var}: 1px;
+
+  // Leaf indent: aligns .tree-row text with summary label text (after toggle icon)
+  #{$tree-leaf-indent-var}: calc(
+    0.5rem + var(#{$tree-toggle-size-var}) + var(#{$tree-row-gap-var})
+  );
+
+  // --------------------------------------------
+  // Toggle icon
+  // Right-pointing filled triangle (same as accordion)
+  // --------------------------------------------
+  #{$tree-toggle-size-var}: 0.875em;
+  #{$tree-toggle-icon-var}: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L16 12L10 18Z'/%3E%3C/svg%3E");
+  #{$tree-toggle-open-rotation-var}: 90deg;
+  #{$tree-toggle-opacity-var}: 0.5;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$tree-transition-var}:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+// ============================================
+// Structure
+// ============================================
+.#{$tree-class-name} {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  color: var(#{$tree-color-var});
+
+  // ------------------------------------------
+  // Nested tree: indent + optional guide line
+  // The left border aligns roughly under the center of the toggle icon.
+  // ------------------------------------------
+  .#{$tree-class-name} {
+    padding-left: var(#{$tree-indent-var});
+    border-left: var(#{$tree-guide-width-var}) solid
+      var(#{$tree-guide-color-var});
+
+    // Position guide line: shift right so it sits under toggle icons above
+    margin-left: calc(0.5rem + var(#{$tree-toggle-size-var}) * 0.5);
+  }
+
+  // ------------------------------------------
+  // <li> reset
+  // ------------------------------------------
+  > li {
+    list-style: none;
+  }
+
+  // ------------------------------------------
+  // <summary> — Interactive branch toggle
+  // Used as: <details><summary>...</summary><ul class="tree">...</ul></details>
+  // ------------------------------------------
+  details > summary {
+    display: flex;
+    align-items: center;
+    gap: var(#{$tree-row-gap-var});
+    padding: var(#{$tree-row-padding-var});
+    border-radius: var(#{$tree-border-radius-var});
+    color: var(#{$tree-color-var});
+    cursor: pointer;
+    user-select: none;
+    transition: var(#{$tree-transition-var});
+    list-style: none;
+
+    // Remove default browser disclosure triangle
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::marker {
+      content: none;
+    }
+
+    // Toggle icon via ::before pseudo-element
+    &::before {
+      content: "";
+      display: inline-flex;
+      flex-shrink: 0;
+      width: var(#{$tree-toggle-size-var});
+      height: var(#{$tree-toggle-size-var});
+      background-color: currentColor;
+      mask-image: var(#{$tree-toggle-icon-var});
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      opacity: var(#{$tree-toggle-opacity-var});
+      transition:
+        transform 0.2s ease,
+        opacity 0.15s ease;
+    }
+
+    &:hover {
+      background-color: var(#{$tree-hover-bg-color-var});
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Open state: rotate toggle icon
+  details[open] > summary {
+    &::before {
+      transform: rotate(var(#{$tree-toggle-open-rotation-var}));
+      opacity: 1;
+    }
+  }
+
+  // Active state on <details>
+  li.active > details > summary,
+  details.active > summary {
+    background-color: var(#{$tree-active-bg-color-var});
+    color: var(#{$tree-active-color-var});
+
+    &::before {
+      opacity: 1;
+    }
+
+    &:hover {
+      background-color: var(#{$tree-active-bg-color-var});
+    }
+  }
+
+  // ------------------------------------------
+  // .tree-row — leaf row or custom branch row
+  // Can be: <div>, <a>, <button>, <span>
+  //
+  // By default, padding-inline-start is offset by the toggle icon width
+  // so that leaf text aligns with branch label text in mixed trees.
+  // Override --tree-leaf-indent to 0.5rem for pure-leaf (no-toggle) trees.
+  // ------------------------------------------
+  .#{$tree-row-class-name} {
+    display: flex;
+    align-items: center;
+    gap: var(#{$tree-row-gap-var});
+    padding: var(#{$tree-row-padding-var});
+    padding-inline-start: var(#{$tree-leaf-indent-var});
+    border-radius: var(#{$tree-border-radius-var});
+    color: var(#{$tree-color-var});
+    text-decoration: none;
+    transition: var(#{$tree-transition-var});
+    cursor: default;
+
+    &[href],
+    &[tabindex],
+    button#{&} {
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(#{$tree-hover-bg-color-var});
+      }
+    }
+
+    &.active {
+      background-color: var(#{$tree-active-bg-color-var});
+      color: var(#{$tree-active-color-var});
+
+      &:hover {
+        background-color: var(#{$tree-active-bg-color-var});
+      }
+    }
+  }
+
+  // Active state via parent <li>
+  li.active > .#{$tree-row-class-name} {
+    background-color: var(#{$tree-active-bg-color-var});
+    color: var(#{$tree-active-color-var});
+  }
+
+  // ------------------------------------------
+  // .tree-icon — icon slot (leading icon in rows)
+  // ------------------------------------------
+  .#{$tree-icon-class-name} {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(#{$tree-muted-color-var});
+    font-size: 1em;
+
+    // Icon within an active row inherits the active color
+    .active > &,
+    .#{$tree-row-class-name}.active > & {
+      color: inherit;
+    }
+  }
+
+  // ------------------------------------------
+  // .tree-label — primary text label
+  // ------------------------------------------
+  .#{$tree-label-class-name} {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  // ------------------------------------------
+  // .tree-badge — trailing metadata (count, status, etc.)
+  // ------------------------------------------
+  .#{$tree-badge-class-name} {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 0.75em;
+    color: var(#{$tree-muted-color-var});
+    line-height: 1;
+  }
+}
+
+// ============================================
+// .compact modifier — dense tree (e.g. JSON viewer, file tree)
+// ============================================
+.#{$tree-class-name}.compact {
+  #{$tree-row-padding-var}: 0.1rem 0.375rem;
+  #{$tree-row-gap-var}: 0.25rem;
+  #{$tree-indent-var}: 0.75rem;
+  #{$tree-toggle-size-var}: 0.75em;
+  #{$tree-leaf-indent-var}: calc(
+    0.375rem + var(#{$tree-toggle-size-var}) + var(#{$tree-row-gap-var})
+  );
+}
+
+// ============================================
+// .no-lines modifier — hide guide lines
+// ============================================
+.#{$tree-class-name}.no-lines .#{$tree-class-name},
+.#{$tree-class-name}.no-lines.#{$tree-class-name} {
+  #{$tree-guide-width-var}: 0;
+}
