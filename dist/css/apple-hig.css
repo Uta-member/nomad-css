@@ -10279,6 +10279,140 @@ span.divider.vertical,
   vertical-align: middle;
 }
 
+.dialog {
+  --dialog-bg-color: var(--surface-color-lighter);
+  --dialog-color: var(--text-color);
+  --dialog-border-color: var(--border-color);
+  --dialog-header-bg-color: var(--surface-color-dark);
+  --dialog-header-color: var(--text-color);
+  --dialog-footer-bg-color: var(--surface-color-dark);
+  --dialog-footer-color: var(--text-color-light);
+  --dialog-backdrop-color: rgba(0, 0, 0, 0.5);
+  --dialog-border-radius: 0.375rem;
+  --dialog-border-width: 1px;
+  --dialog-inner-border-width: 1px;
+  --dialog-padding: 1rem;
+  --dialog-header-padding: 0.75rem 1rem;
+  --dialog-footer-padding: 0.75rem 1rem;
+  --dialog-width: 100%;
+  --dialog-max-width: 32rem;
+  --dialog-max-height: calc(100vh - 4rem);
+  --dialog-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.12);
+  --dialog-z-index: 1050;
+  --dialog-backdrop-z-index: 1040;
+  --dialog-transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dialog-backdrop {
+  --dialog-backdrop-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dialog-backdrop-color);
+  z-index: var(--dialog-backdrop-z-index);
+}
+.dialog-backdrop.open {
+  display: flex;
+}
+
+.dialog {
+  background-color: var(--dialog-bg-color);
+  color: var(--dialog-color);
+  border: var(--dialog-border-width) solid var(--dialog-border-color);
+  border-radius: var(--dialog-border-radius);
+  box-shadow: var(--dialog-shadow);
+  width: var(--dialog-width);
+  max-width: var(--dialog-max-width);
+  max-height: var(--dialog-max-height);
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.dialog:is(dialog) {
+  padding: 0;
+  border: var(--dialog-border-width) solid var(--dialog-border-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
+}
+.dialog:is(dialog)::backdrop {
+  background-color: var(--dialog-backdrop-color);
+}
+.dialog:is(dialog):not([open]) {
+  display: none;
+}
+.dialog-backdrop > .dialog {
+  position: relative;
+  top: auto;
+  left: auto;
+  -webkit-transform: none;
+  transform: none;
+}
+.dialog > .dialog-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: var(--dialog-header-padding);
+  background-color: var(--dialog-header-bg-color);
+  color: var(--dialog-header-color);
+  border-bottom: var(--dialog-inner-border-width) solid var(--dialog-border-color);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.dialog > .dialog-body {
+  padding: var(--dialog-padding);
+  overflow-y: auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.dialog > .dialog-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: var(--dialog-footer-padding);
+  background-color: var(--dialog-footer-bg-color);
+  color: var(--dialog-footer-color);
+  border-top: var(--dialog-inner-border-width) solid var(--dialog-border-color);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.dialog.sm {
+  --dialog-max-width: 20rem;
+}
+
+.dialog.lg {
+  --dialog-max-width: 48rem;
+}
+
+.dialog.xl {
+  --dialog-max-width: 64rem;
+}
+
+.dialog.full {
+  --dialog-max-width: calc(100vw - 2rem);
+  --dialog-max-height: calc(100vh - 2rem);
+}
+
+.dialog.scrollable > .dialog-body {
+  overflow-y: auto;
+}
+
 .avatar {
   --avatar-size: 2.5rem;
   --avatar-sm-size: 1.75rem;

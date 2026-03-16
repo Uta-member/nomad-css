@@ -1,0 +1,299 @@
+---
+title: Dialog
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Dialog</h1>
+
+  <!-- ============================================================
+       1. HTML <dialog> タグ版
+  ============================================================= -->
+  <h2>HTML &lt;dialog&gt; タグ</h2>
+
+  <!-- Basic -->
+  <div class="demo-row">
+    <div class="demo-label">Basic Dialog</div>
+    <button class="button filled" onclick="document.getElementById('dialog-basic').showModal()">
+      Open Dialog
+    </button>
+    <dialog id="dialog-basic" class="dialog">
+      <div class="dialog-header">
+        <span>Dialog Title</span>
+        <button class="button text" onclick="document.getElementById('dialog-basic').close()">✕</button>
+      </div>
+      <div class="dialog-body">
+        <p>This is a basic dialog using the native HTML <code>&lt;dialog&gt;</code> element.</p>
+        <p>The backdrop is provided by the <code>::backdrop</code> pseudo-element.</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="button outlined" onclick="document.getElementById('dialog-basic').close()">Cancel</button>
+        <button class="button filled" onclick="document.getElementById('dialog-basic').close()">OK</button>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- Small -->
+  <div class="demo-row">
+    <div class="demo-label">Small (.sm)</div>
+    <button class="button filled" onclick="document.getElementById('dialog-sm').showModal()">
+      Open Small Dialog
+    </button>
+    <dialog id="dialog-sm" class="dialog sm">
+      <div class="dialog-header">
+        <span>Small Dialog</span>
+        <button class="button text" onclick="document.getElementById('dialog-sm').close()">✕</button>
+      </div>
+      <div class="dialog-body">
+        <p>This is a small dialog (<code>.sm</code>).</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="button filled" onclick="document.getElementById('dialog-sm').close()">Close</button>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- Large -->
+  <div class="demo-row">
+    <div class="demo-label">Large (.lg)</div>
+    <button class="button filled" onclick="document.getElementById('dialog-lg').showModal()">
+      Open Large Dialog
+    </button>
+    <dialog id="dialog-lg" class="dialog lg">
+      <div class="dialog-header">
+        <span>Large Dialog</span>
+        <button class="button text" onclick="document.getElementById('dialog-lg').close()">✕</button>
+      </div>
+      <div class="dialog-body">
+        <p>This is a large dialog (<code>.lg</code>). It can hold more content horizontally.</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="button outlined" onclick="document.getElementById('dialog-lg').close()">Cancel</button>
+        <button class="button filled" onclick="document.getElementById('dialog-lg').close()">Confirm</button>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- Full -->
+  <div class="demo-row">
+    <div class="demo-label">Full (.full)</div>
+    <button class="button filled" onclick="document.getElementById('dialog-full').showModal()">
+      Open Full Dialog
+    </button>
+    <dialog id="dialog-full" class="dialog full">
+      <div class="dialog-header">
+        <span>Full-Width Dialog</span>
+        <button class="button text" onclick="document.getElementById('dialog-full').close()">✕</button>
+      </div>
+      <div class="dialog-body">
+        <p>This dialog expands to nearly fill the viewport (<code>.full</code>).</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="button filled" onclick="document.getElementById('dialog-full').close()">Close</button>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- Scrollable body -->
+  <div class="demo-row">
+    <div class="demo-label">Scrollable Body (.scrollable)</div>
+    <button class="button filled" onclick="document.getElementById('dialog-scroll').showModal()">
+      Open Scrollable Dialog
+    </button>
+    <dialog id="dialog-scroll" class="dialog scrollable" style="--dialog-max-height: 18rem;">
+      <div class="dialog-header">
+        <span>Scrollable Dialog</span>
+        <button class="button text" onclick="document.getElementById('dialog-scroll').close()">✕</button>
+      </div>
+      <div class="dialog-body">
+        <p>Line 1: Lorem ipsum dolor sit amet.</p>
+        <p>Line 2: Consectetur adipiscing elit.</p>
+        <p>Line 3: Sed do eiusmod tempor incididunt.</p>
+        <p>Line 4: Ut labore et dolore magna aliqua.</p>
+        <p>Line 5: Ut enim ad minim veniam.</p>
+        <p>Line 6: Quis nostrud exercitation ullamco.</p>
+        <p>Line 7: Laboris nisi ut aliquip ex ea commodo.</p>
+        <p>Line 8: Duis aute irure dolor in reprehenderit.</p>
+        <p>Line 9: In voluptate velit esse cillum dolore.</p>
+        <p>Line 10: Eu fugiat nulla pariatur excepteur sint.</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="button filled" onclick="document.getElementById('dialog-scroll').close()">Close</button>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- No header / No footer -->
+  <div class="demo-row">
+    <div class="demo-label">Body Only (no header/footer)</div>
+    <button class="button filled" onclick="document.getElementById('dialog-body-only').showModal()">
+      Open Body-only Dialog
+    </button>
+    <dialog id="dialog-body-only" class="dialog">
+      <div class="dialog-body">
+        <p>This dialog has no header or footer — body content only.</p>
+        <div style="text-align: right; margin-top: 1rem;">
+          <button class="button filled" onclick="document.getElementById('dialog-body-only').close()">OK</button>
+        </div>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- ============================================================
+       2. div ベース（レガシー対応）版
+  ============================================================= -->
+  <h2>div ベース（レガシーブラウザ対応）</h2>
+  <p style="color: var(--text-color-light);">
+    <code>.dialog-backdrop</code> + <code>.dialog</code> の組み合わせで、
+    ネイティブ <code>&lt;dialog&gt;</code> をサポートしないブラウザでも動作します。
+    バックドロップには <code>.dialog-backdrop</code>、ダイアログ本体には <code>.dialog</code> を使います。
+    バックドロップに <code>.open</code> クラスを付与すると表示されます。
+  </p>
+
+  <!-- Basic (div) -->
+  <div class="demo-row">
+    <div class="demo-label">Basic (div-based)</div>
+    <button class="button filled" onclick="openLegacyDialog('div-dialog-basic')">
+      Open Dialog (div)
+    </button>
+    <div id="div-dialog-basic" class="dialog-backdrop" role="presentation">
+      <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="div-dialog-basic-title">
+        <div class="dialog-header">
+          <span id="div-dialog-basic-title">Dialog Title</span>
+          <button class="button text" onclick="closeLegacyDialog('div-dialog-basic')">✕</button>
+        </div>
+        <div class="dialog-body">
+          <p>This is a div-based dialog with a <code>.dialog-backdrop</code> overlay.</p>
+          <p>Toggle <code>.open</code> on the backdrop to show/hide.</p>
+        </div>
+        <div class="dialog-footer">
+          <button class="button outlined" onclick="closeLegacyDialog('div-dialog-basic')">Cancel</button>
+          <button class="button filled" onclick="closeLegacyDialog('div-dialog-basic')">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small (div) -->
+  <div class="demo-row">
+    <div class="demo-label">Small (.sm, div-based)</div>
+    <button class="button filled" onclick="openLegacyDialog('div-dialog-sm')">
+      Open Small Dialog (div)
+    </button>
+    <div id="div-dialog-sm" class="dialog-backdrop" role="presentation">
+      <div class="dialog sm" role="dialog" aria-modal="true">
+        <div class="dialog-header">
+          <span>Small Dialog</span>
+          <button class="button text" onclick="closeLegacyDialog('div-dialog-sm')">✕</button>
+        </div>
+        <div class="dialog-body">
+          <p>Small div-based dialog (<code>.sm</code>).</p>
+        </div>
+        <div class="dialog-footer">
+          <button class="button filled" onclick="closeLegacyDialog('div-dialog-sm')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrollable (div) -->
+  <div class="demo-row">
+    <div class="demo-label">Scrollable Body (div-based)</div>
+    <button class="button filled" onclick="openLegacyDialog('div-dialog-scroll')">
+      Open Scrollable Dialog (div)
+    </button>
+    <div id="div-dialog-scroll" class="dialog-backdrop" role="presentation">
+      <div class="dialog scrollable" role="dialog" aria-modal="true" style="--dialog-max-height: 18rem;">
+        <div class="dialog-header">
+          <span>Scrollable Dialog</span>
+          <button class="button text" onclick="closeLegacyDialog('div-dialog-scroll')">✕</button>
+        </div>
+        <div class="dialog-body">
+          <p>Line 1: Lorem ipsum dolor sit amet.</p>
+          <p>Line 2: Consectetur adipiscing elit.</p>
+          <p>Line 3: Sed do eiusmod tempor incididunt.</p>
+          <p>Line 4: Ut labore et dolore magna aliqua.</p>
+          <p>Line 5: Ut enim ad minim veniam.</p>
+          <p>Line 6: Quis nostrud exercitation ullamco.</p>
+          <p>Line 7: Laboris nisi ut aliquip ex ea commodo.</p>
+          <p>Line 8: Duis aute irure dolor in reprehenderit.</p>
+          <p>Line 9: In voluptate velit esse cillum dolore.</p>
+          <p>Line 10: Eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="dialog-footer">
+          <button class="button filled" onclick="closeLegacyDialog('div-dialog-scroll')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backdrop click to close (div) -->
+  <div class="demo-row">
+    <div class="demo-label">Backdrop click to close (div-based)</div>
+    <button class="button filled" onclick="openLegacyDialog('div-dialog-backdrop')">
+      Open Dialog
+    </button>
+    <div id="div-dialog-backdrop" class="dialog-backdrop"
+         role="presentation"
+         onclick="if(event.target===this) closeLegacyDialog('div-dialog-backdrop')">
+      <div class="dialog" role="dialog" aria-modal="true">
+        <div class="dialog-header">
+          <span>Click outside to close</span>
+          <button class="button text" onclick="closeLegacyDialog('div-dialog-backdrop')">✕</button>
+        </div>
+        <div class="dialog-body">
+          <p>Click outside this dialog (on the backdrop) to close it.</p>
+        </div>
+        <div class="dialog-footer">
+          <button class="button filled" onclick="closeLegacyDialog('div-dialog-backdrop')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       3. CSS variables customization example
+  ============================================================= -->
+  <h2>CSS変数カスタマイズ例</h2>
+
+  <div class="demo-row">
+    <div class="demo-label">Custom styled dialog</div>
+    <button class="button filled" onclick="document.getElementById('dialog-custom').showModal()">
+      Open Custom Dialog
+    </button>
+    <dialog id="dialog-custom" class="dialog" style="
+      --dialog-bg-color: #1e1e2e;
+      --dialog-color: #cdd6f4;
+      --dialog-border-color: #89b4fa;
+      --dialog-border-radius: 1rem;
+      --dialog-header-bg-color: #181825;
+      --dialog-header-color: #89b4fa;
+      --dialog-footer-bg-color: #181825;
+      --dialog-shadow: 0 0 32px rgba(137, 180, 250, 0.3);
+      --dialog-backdrop-color: rgba(17, 17, 27, 0.8);
+    ">
+      <div class="dialog-header">
+        <span>Custom Styled Dialog</span>
+        <button class="button text" onclick="document.getElementById('dialog-custom').close()" style="color: #89b4fa;">✕</button>
+      </div>
+      <div class="dialog-body">
+        <p>This dialog is customized via inline CSS variables.</p>
+        <p>Themes can override <code>--dialog-*</code> variables to match their design system.</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="button filled" onclick="document.getElementById('dialog-custom').close()">Close</button>
+      </div>
+    </dialog>
+  </div>
+</section>
+
+<script>
+  function openLegacyDialog(id) {
+    var el = document.getElementById(id);
+    if (el) el.classList.add('open');
+  }
+  function closeLegacyDialog(id) {
+    var el = document.getElementById(id);
+    if (el) el.classList.remove('open');
+  }
+</script>

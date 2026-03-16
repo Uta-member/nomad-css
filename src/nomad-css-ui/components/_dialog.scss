@@ -1,0 +1,271 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+$dialog-prefix: #{prefixes.$prefix}dialog- !default;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$dialog-class-name: dialog !default;
+$dialog-backdrop-class-name: dialog-backdrop !default;
+$dialog-header-class-name: dialog-header !default;
+$dialog-body-class-name: dialog-body !default;
+$dialog-footer-class-name: dialog-footer !default;
+
+// ============================================
+// CSS Variable Names
+// ============================================
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$dialog-bg-color-var: --#{$dialog-prefix}bg-color !default;
+$dialog-color-var: --#{$dialog-prefix}color !default;
+$dialog-border-color-var: --#{$dialog-prefix}border-color !default;
+$dialog-header-bg-color-var: --#{$dialog-prefix}header-bg-color !default;
+$dialog-header-color-var: --#{$dialog-prefix}header-color !default;
+$dialog-footer-bg-color-var: --#{$dialog-prefix}footer-bg-color !default;
+$dialog-footer-color-var: --#{$dialog-prefix}footer-color !default;
+$dialog-backdrop-color-var: --#{$dialog-prefix}backdrop-color !default;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$dialog-border-radius-var: --#{$dialog-prefix}border-radius !default;
+$dialog-border-width-var: --#{$dialog-prefix}border-width !default;
+$dialog-inner-border-width-var: --#{$dialog-prefix}inner-border-width !default;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$dialog-padding-var: --#{$dialog-prefix}padding !default;
+$dialog-header-padding-var: --#{$dialog-prefix}header-padding !default;
+$dialog-footer-padding-var: --#{$dialog-prefix}footer-padding !default;
+$dialog-width-var: --#{$dialog-prefix}width !default;
+$dialog-max-width-var: --#{$dialog-prefix}max-width !default;
+$dialog-max-height-var: --#{$dialog-prefix}max-height !default;
+
+// --------------------------------------------
+// Shadow
+// --------------------------------------------
+$dialog-shadow-var: --#{$dialog-prefix}shadow !default;
+
+// --------------------------------------------
+// Z-index
+// --------------------------------------------
+$dialog-z-index-var: --#{$dialog-prefix}z-index !default;
+$dialog-backdrop-z-index-var: --#{$dialog-prefix}backdrop-z-index !default;
+
+// --------------------------------------------
+// Transition
+// --------------------------------------------
+$dialog-transition-var: --#{$dialog-prefix}transition !default;
+
+// ============================================
+// CSS Variables (default values)
+// ============================================
+.#{$dialog-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$dialog-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$dialog-color-var}: var(#{color-defines.$text-color-var});
+  #{$dialog-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$dialog-header-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$dialog-header-color-var}: var(#{color-defines.$text-color-var});
+  #{$dialog-footer-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$dialog-footer-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$dialog-backdrop-color-var}: rgba(0, 0, 0, 0.5);
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$dialog-border-radius-var}: 0.375rem;
+  #{$dialog-border-width-var}: 1px;
+  #{$dialog-inner-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$dialog-padding-var}: 1rem;
+  #{$dialog-header-padding-var}: 0.75rem 1rem;
+  #{$dialog-footer-padding-var}: 0.75rem 1rem;
+  #{$dialog-width-var}: 100%;
+  #{$dialog-max-width-var}: 32rem;
+  #{$dialog-max-height-var}: calc(100vh - 4rem);
+
+  // --------------------------------------------
+  // Shadow
+  // --------------------------------------------
+  #{$dialog-shadow-var}:
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.12);
+
+  // --------------------------------------------
+  // Z-index
+  // --------------------------------------------
+  #{$dialog-z-index-var}: 1050;
+  #{$dialog-backdrop-z-index-var}: 1040;
+
+  // --------------------------------------------
+  // Transition
+  // --------------------------------------------
+  #{$dialog-transition-var}:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+// ============================================
+// Backdrop
+// ============================================
+// --- div-based backdrop (legacy) ---
+.#{$dialog-backdrop-class-name} {
+  #{$dialog-backdrop-color-var}: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(#{$dialog-backdrop-color-var});
+  z-index: var(#{$dialog-backdrop-z-index-var});
+
+  &.open {
+    display: flex;
+  }
+}
+
+// ============================================
+// Dialog Base
+// ============================================
+.#{$dialog-class-name} {
+  background-color: var(#{$dialog-bg-color-var});
+  color: var(#{$dialog-color-var});
+  border: var(#{$dialog-border-width-var}) solid
+    var(#{$dialog-border-color-var});
+  border-radius: var(#{$dialog-border-radius-var});
+  box-shadow: var(#{$dialog-shadow-var});
+  width: var(#{$dialog-width-var});
+  max-width: var(#{$dialog-max-width-var});
+  max-height: var(#{$dialog-max-height-var});
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+
+  // ---- HTML <dialog> element native resets ----
+  &:is(dialog) {
+    padding: 0;
+    border: var(#{$dialog-border-width-var}) solid
+      var(#{$dialog-border-color-var});
+    // Center via fixed positioning (native <dialog> may vary; override for consistency)
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    // Cancel browser default margin: auto centering to use transform above
+    margin: 0;
+
+    &::backdrop {
+      background-color: var(#{$dialog-backdrop-color-var});
+    }
+
+    // hidden by default (native <dialog> hides via display:none when not open)
+    &:not([open]) {
+      display: none;
+    }
+  }
+
+  // ---- div-based dialog inside backdrop ----
+  .#{$dialog-backdrop-class-name} > & {
+    position: relative;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  // ============================================
+  // Header
+  // ============================================
+  > .#{$dialog-header-class-name} {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: var(#{$dialog-header-padding-var});
+    background-color: var(#{$dialog-header-bg-color-var});
+    color: var(#{$dialog-header-color-var});
+    border-bottom: var(#{$dialog-inner-border-width-var}) solid
+      var(#{$dialog-border-color-var});
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  // ============================================
+  // Body
+  // ============================================
+  > .#{$dialog-body-class-name} {
+    padding: var(#{$dialog-padding-var});
+    overflow-y: auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  // ============================================
+  // Footer
+  // ============================================
+  > .#{$dialog-footer-class-name} {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: var(#{$dialog-footer-padding-var});
+    background-color: var(#{$dialog-footer-bg-color-var});
+    color: var(#{$dialog-footer-color-var});
+    border-top: var(#{$dialog-inner-border-width-var}) solid
+      var(#{$dialog-border-color-var});
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+// ============================================
+// Size Variants
+// ============================================
+.#{$dialog-class-name}.sm {
+  #{$dialog-max-width-var}: 20rem;
+}
+
+.#{$dialog-class-name}.lg {
+  #{$dialog-max-width-var}: 48rem;
+}
+
+.#{$dialog-class-name}.xl {
+  #{$dialog-max-width-var}: 64rem;
+}
+
+.#{$dialog-class-name}.full {
+  #{$dialog-max-width-var}: calc(100vw - 2rem);
+  #{$dialog-max-height-var}: calc(100vh - 2rem);
+}
+
+// ============================================
+// Scrollable variant
+// ============================================
+.#{$dialog-class-name}.scrollable {
+  > .#{$dialog-body-class-name} {
+    overflow-y: auto;
+  }
+}

@@ -9,6 +9,7 @@
     { "title": "Card", "slug": "card" },
     { "title": "Checkbox", "slug": "checkbox" },
     { "title": "Chip", "slug": "chip" },
+    { "title": "Dialog", "slug": "dialog" },
     { "title": "Divider", "slug": "divider" },
     { "title": "Form Control", "slug": "form-control" },
     { "title": "List", "slug": "list" },

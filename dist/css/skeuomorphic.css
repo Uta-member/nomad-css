@@ -16350,115 +16350,60 @@ pre {
   border-color: var(--palette-default);
 }
 
-:root[data-theme=daisyui] {
-  --palette-hue: var(--neutral-hue);
-  --palette-saturation: var(--neutral-saturation);
-  --palette-lightness-0: var(--neutral-lightness-0);
-  --palette-color-0: var(--neutral-color-0);
-  --palette-color-0-ch: var(--neutral-color-0-ch);
-  --palette-gray-0: var(--neutral-gray-0);
-  --palette-accent-0: var(--neutral-accent-0);
-  --palette-lightness-1: var(--neutral-lightness-1);
-  --palette-color-1: var(--neutral-color-1);
-  --palette-color-1-ch: var(--neutral-color-1-ch);
-  --palette-gray-1: var(--neutral-gray-1);
-  --palette-accent-1: var(--neutral-accent-1);
-  --palette-lightness-2: var(--neutral-lightness-2);
-  --palette-color-2: var(--neutral-color-2);
-  --palette-color-2-ch: var(--neutral-color-2-ch);
-  --palette-gray-2: var(--neutral-gray-2);
-  --palette-accent-2: var(--neutral-accent-2);
-  --palette-lightness-3: var(--neutral-lightness-3);
-  --palette-color-3: var(--neutral-color-3);
-  --palette-color-3-ch: var(--neutral-color-3-ch);
-  --palette-gray-3: var(--neutral-gray-3);
-  --palette-accent-3: var(--neutral-accent-3);
-  --palette-lightness-4: var(--neutral-lightness-4);
-  --palette-color-4: var(--neutral-color-4);
-  --palette-color-4-ch: var(--neutral-color-4-ch);
-  --palette-gray-4: var(--neutral-gray-4);
-  --palette-accent-4: var(--neutral-accent-4);
-  --palette-lightness-5: var(--neutral-lightness-5);
-  --palette-color-5: var(--neutral-color-5);
-  --palette-color-5-ch: var(--neutral-color-5-ch);
-  --palette-gray-5: var(--neutral-gray-5);
-  --palette-accent-5: var(--neutral-accent-5);
-  --palette-lightness-6: var(--neutral-lightness-6);
-  --palette-color-6: var(--neutral-color-6);
-  --palette-color-6-ch: var(--neutral-color-6-ch);
-  --palette-gray-6: var(--neutral-gray-6);
-  --palette-accent-6: var(--neutral-accent-6);
-  --palette-lightness-7: var(--neutral-lightness-7);
-  --palette-color-7: var(--neutral-color-7);
-  --palette-color-7-ch: var(--neutral-color-7-ch);
-  --palette-gray-7: var(--neutral-gray-7);
-  --palette-accent-7: var(--neutral-accent-7);
-  --palette-lightness-8: var(--neutral-lightness-8);
-  --palette-color-8: var(--neutral-color-8);
-  --palette-color-8-ch: var(--neutral-color-8-ch);
-  --palette-gray-8: var(--neutral-gray-8);
-  --palette-accent-8: var(--neutral-accent-8);
-  --palette-lightness-9: var(--neutral-lightness-9);
-  --palette-color-9: var(--neutral-color-9);
-  --palette-color-9-ch: var(--neutral-color-9-ch);
-  --palette-gray-9: var(--neutral-gray-9);
-  --palette-accent-9: var(--neutral-accent-9);
-  --palette-lightness-10: var(--neutral-lightness-10);
-  --palette-color-10: var(--neutral-color-10);
-  --palette-color-10-ch: var(--neutral-color-10-ch);
-  --palette-gray-10: var(--neutral-gray-10);
-  --palette-accent-10: var(--neutral-accent-10);
-  --palette-lighter: var(--neutral-lighter);
-  --palette-accent-lighter: var(--neutral-accent-lighter);
-  --palette-lighter-ch: var(--neutral-lighter-ch);
-  --palette-light: var(--neutral-light);
-  --palette-accent-light: var(--neutral-accent-light);
-  --palette-light-ch: var(--neutral-light-ch);
-  --palette-default: var(--neutral-default);
-  --palette-accent-default: var(--neutral-accent-default);
-  --palette-default-ch: var(--neutral-default-ch);
-  --palette-dark: var(--neutral-dark);
-  --palette-accent-dark: var(--neutral-accent-dark);
-  --palette-dark-ch: var(--neutral-dark-ch);
-  --palette-darker: var(--neutral-darker);
-  --palette-accent-darker: var(--neutral-accent-darker);
-  --palette-darker-ch: var(--neutral-darker-ch);
-  --primary-hue: 220;
-  --primary-saturation: 96%;
+:root[data-theme=skeuomorphic] {
+  --neutral-hue: 30;
+  --neutral-saturation: 10%;
+  --neutral-lighter: var(--neutral-color-2);
+  --neutral-lighter-ch: var(--neutral-color-2-ch);
+  --neutral-accent-lighter: var(--neutral-accent-2);
+  --neutral-light: var(--neutral-color-3);
+  --neutral-light-ch: var(--neutral-color-3-ch);
+  --neutral-accent-light: var(--neutral-accent-3);
+  --neutral-default: var(--neutral-color-5);
+  --neutral-default-ch: var(--neutral-color-5-ch);
+  --neutral-accent-default: var(--neutral-accent-5);
+  --neutral-dark: var(--neutral-color-7);
+  --neutral-dark-ch: var(--neutral-color-7-ch);
+  --neutral-accent-dark: var(--neutral-accent-7);
+  --neutral-darker: var(--neutral-color-9);
+  --neutral-darker-ch: var(--neutral-color-9-ch);
+  --neutral-accent-darker: var(--neutral-accent-9);
+  --primary-hue: 208;
+  --primary-saturation: 100%;
   --primary-lighter: var(--primary-color-2);
   --primary-lighter-ch: var(--primary-color-2-ch);
   --primary-accent-lighter: var(--primary-accent-2);
   --primary-light: var(--primary-color-3);
   --primary-light-ch: var(--primary-color-3-ch);
   --primary-accent-light: var(--primary-accent-3);
-  --primary-default: var(--primary-color-4);
-  --primary-default-ch: var(--primary-color-4-ch);
-  --primary-accent-default: var(--primary-accent-4);
-  --primary-dark: var(--primary-color-6);
-  --primary-dark-ch: var(--primary-color-6-ch);
-  --primary-accent-dark: var(--primary-accent-6);
-  --primary-darker: var(--primary-color-7);
-  --primary-darker-ch: var(--primary-color-7-ch);
-  --primary-accent-darker: var(--primary-accent-7);
-  --secondary-hue: 270;
-  --secondary-saturation: 86%;
+  --primary-default: var(--primary-color-5);
+  --primary-default-ch: var(--primary-color-5-ch);
+  --primary-accent-default: var(--primary-accent-5);
+  --primary-dark: var(--primary-color-7);
+  --primary-dark-ch: var(--primary-color-7-ch);
+  --primary-accent-dark: var(--primary-accent-7);
+  --primary-darker: var(--primary-color-8);
+  --primary-darker-ch: var(--primary-color-8-ch);
+  --primary-accent-darker: var(--primary-accent-8);
+  --secondary-hue: 125;
+  --secondary-saturation: 60%;
   --secondary-lighter: var(--secondary-color-2);
   --secondary-lighter-ch: var(--secondary-color-2-ch);
   --secondary-accent-lighter: var(--secondary-accent-2);
   --secondary-light: var(--secondary-color-3);
   --secondary-light-ch: var(--secondary-color-3-ch);
   --secondary-accent-light: var(--secondary-accent-3);
-  --secondary-default: var(--secondary-color-4);
-  --secondary-default-ch: var(--secondary-color-4-ch);
-  --secondary-accent-default: var(--secondary-accent-4);
-  --secondary-dark: var(--secondary-color-6);
-  --secondary-dark-ch: var(--secondary-color-6-ch);
-  --secondary-accent-dark: var(--secondary-accent-6);
-  --secondary-darker: var(--secondary-color-7);
-  --secondary-darker-ch: var(--secondary-color-7-ch);
-  --secondary-accent-darker: var(--secondary-accent-7);
-  --tertiary-hue: 160;
-  --tertiary-saturation: 84%;
+  --secondary-default: var(--secondary-color-5);
+  --secondary-default-ch: var(--secondary-color-5-ch);
+  --secondary-accent-default: var(--secondary-accent-5);
+  --secondary-dark: var(--secondary-color-7);
+  --secondary-dark-ch: var(--secondary-color-7-ch);
+  --secondary-accent-dark: var(--secondary-accent-7);
+  --secondary-darker: var(--secondary-color-8);
+  --secondary-darker-ch: var(--secondary-color-8-ch);
+  --secondary-accent-darker: var(--secondary-accent-8);
+  --tertiary-hue: 300;
+  --tertiary-saturation: 50%;
   --tertiary-lighter: var(--tertiary-color-2);
   --tertiary-lighter-ch: var(--tertiary-color-2-ch);
   --tertiary-accent-lighter: var(--tertiary-accent-2);
@@ -16471,11 +16416,11 @@ pre {
   --tertiary-dark: var(--tertiary-color-7);
   --tertiary-dark-ch: var(--tertiary-color-7-ch);
   --tertiary-accent-dark: var(--tertiary-accent-7);
-  --tertiary-darker: var(--tertiary-color-8);
-  --tertiary-darker-ch: var(--tertiary-color-8-ch);
-  --tertiary-accent-darker: var(--tertiary-accent-8);
+  --tertiary-darker: var(--tertiary-color-9);
+  --tertiary-darker-ch: var(--tertiary-color-9-ch);
+  --tertiary-accent-darker: var(--tertiary-accent-9);
   --danger-hue: 0;
-  --danger-saturation: 90%;
+  --danger-saturation: 80%;
   --danger-lighter: var(--danger-color-2);
   --danger-lighter-ch: var(--danger-color-2-ch);
   --danger-accent-lighter: var(--danger-accent-2);
@@ -16491,8 +16436,8 @@ pre {
   --danger-darker: var(--danger-color-8);
   --danger-darker-ch: var(--danger-color-8-ch);
   --danger-accent-darker: var(--danger-accent-8);
-  --success-hue: 160;
-  --success-saturation: 84%;
+  --success-hue: 125;
+  --success-saturation: 65%;
   --success-lighter: var(--success-color-2);
   --success-lighter-ch: var(--success-color-2-ch);
   --success-accent-lighter: var(--success-accent-2);
@@ -16508,8 +16453,8 @@ pre {
   --success-darker: var(--success-color-8);
   --success-darker-ch: var(--success-color-8-ch);
   --success-accent-darker: var(--success-accent-8);
-  --warning-hue: 27;
-  --warning-saturation: 96%;
+  --warning-hue: 42;
+  --warning-saturation: 100%;
   --warning-lighter: var(--warning-color-2);
   --warning-lighter-ch: var(--warning-color-2-ch);
   --warning-accent-lighter: var(--warning-accent-2);
@@ -16519,214 +16464,165 @@ pre {
   --warning-default: var(--warning-color-4);
   --warning-default-ch: var(--warning-color-4-ch);
   --warning-accent-default: var(--warning-accent-4);
-  --warning-dark: var(--warning-color-6);
-  --warning-dark-ch: var(--warning-color-6-ch);
-  --warning-accent-dark: var(--warning-accent-6);
+  --warning-dark: var(--warning-color-7);
+  --warning-dark-ch: var(--warning-color-7-ch);
+  --warning-accent-dark: var(--warning-accent-7);
   --warning-darker: var(--warning-color-8);
   --warning-darker-ch: var(--warning-color-8-ch);
   --warning-accent-darker: var(--warning-accent-8);
-  --info-hue: 198;
-  --info-saturation: 100%;
+  --info-hue: 200;
+  --info-saturation: 90%;
   --info-lighter: var(--info-color-2);
   --info-lighter-ch: var(--info-color-2-ch);
   --info-accent-lighter: var(--info-accent-2);
   --info-light: var(--info-color-3);
   --info-light-ch: var(--info-color-3-ch);
   --info-accent-light: var(--info-accent-3);
-  --info-default: var(--info-color-4);
-  --info-default-ch: var(--info-color-4-ch);
-  --info-accent-default: var(--info-accent-4);
-  --info-dark: var(--info-color-6);
-  --info-dark-ch: var(--info-color-6-ch);
-  --info-accent-dark: var(--info-accent-6);
+  --info-default: var(--info-color-5);
+  --info-default-ch: var(--info-color-5-ch);
+  --info-accent-default: var(--info-accent-5);
+  --info-dark: var(--info-color-7);
+  --info-dark-ch: var(--info-color-7-ch);
+  --info-accent-dark: var(--info-accent-7);
   --info-darker: var(--info-color-8);
   --info-darker-ch: var(--info-color-8-ch);
   --info-accent-darker: var(--info-accent-8);
-  --neutral-hue: 220;
-  --neutral-saturation: 14%;
-  --neutral-lighter: var(--neutral-color-2);
-  --neutral-lighter-ch: var(--neutral-color-2-ch);
-  --neutral-accent-lighter: var(--neutral-accent-2);
-  --neutral-light: var(--neutral-color-3);
-  --neutral-light-ch: var(--neutral-color-3-ch);
-  --neutral-accent-light: var(--neutral-accent-3);
-  --neutral-default: var(--neutral-color-6);
-  --neutral-default-ch: var(--neutral-color-6-ch);
-  --neutral-accent-default: var(--neutral-accent-6);
-  --neutral-dark: var(--neutral-color-8);
-  --neutral-dark-ch: var(--neutral-color-8-ch);
-  --neutral-accent-dark: var(--neutral-accent-8);
-  --neutral-darker: var(--neutral-color-9);
-  --neutral-darker-ch: var(--neutral-color-9-ch);
-  --neutral-accent-darker: var(--neutral-accent-9);
 }
 
-:root[data-theme=daisyui],
-:root[data-theme=daisyui][data-color-scheme=light] {
-  --border-color: #e5e7eb;
-  --border-color-light: #f3f4f6;
-  --border-color-dark: #d1d5db;
-  --text-color: #1f2937;
-  --text-color-light: #6b7280;
-  --text-color-lighter: #9ca3af;
-  --text-color-dark: #111827;
-  --surface-color-lighter: #ffffff;
-  --surface-color-light: #f9fafb;
-  --surface-color: #ffffff;
-  --surface-color-dark: #f3f4f6;
-  --surface-color-darker: #e5e7eb;
+:root[data-theme=skeuomorphic],
+:root[data-theme=skeuomorphic][data-color-scheme=light] {
+  --border-color: #b8a898;
+  --text-color: #1a1a1a;
+  --text-color-muted: #6a5a4a;
+  --surface-color: #f0ebe4;
+  --surface-color-lighter: #f8f5f0;
+  --surface-color-light: #ede6dd;
+  --surface-color-dark: #ddd4c8;
+  --surface-color-darker: #c8bfb0;
 }
 
-:root[data-theme=daisyui][data-color-scheme=dark] {
-  --border-color: #374151;
-  --border-color-light: #1f2937;
-  --border-color-dark: #4b5563;
-  --text-color: #f9fafb;
-  --text-color-light: #9ca3af;
-  --text-color-lighter: #6b7280;
-  --text-color-dark: #f9fafb;
-  --surface-color-lighter: #374151;
-  --surface-color-light: #1f2937;
-  --surface-color: #1d1e26;
-  --surface-color-dark: #111827;
-  --surface-color-darker: #0f172a;
-  --primary-default: var(--primary-color-3);
-  --primary-accent-default: var(--primary-accent-3);
-  --secondary-default: var(--secondary-color-3);
-  --secondary-accent-default: var(--secondary-accent-3);
+:root[data-theme=skeuomorphic][data-color-scheme=dark] {
+  --border-color: #5a4838;
+  --text-color: #e8ddd0;
+  --text-color-muted: #a09080;
+  --surface-color: #2a2018;
+  --surface-color-lighter: #362a20;
+  --surface-color-light: #302418;
+  --surface-color-dark: #201810;
+  --surface-color-darker: #180e08;
 }
 
-:root[data-theme=daisyui] {
-  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  --font-body-size: 14px;
+:root[data-theme=skeuomorphic] {
+  --font-family: "Helvetica Neue", Helvetica, "Gill Sans MT", Arial, sans-serif;
+  --font-size-base: 14px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
 }
 
-:root[data-theme=daisyui] {
-  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --shadow-2: 0 3px 6px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.13);
-  --shadow-3: 0 10px 20px rgba(0, 0, 0, 0.09), 0 6px 6px rgba(0, 0, 0, 0.13);
-  --shadow-4: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
-  --shadow-5: 0 19px 38px rgba(0, 0, 0, 0.20), 0 15px 12px rgba(0, 0, 0, 0.14);
+:root[data-theme=skeuomorphic] {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 8px 20px rgba(0, 0, 0, 0.4), 0 16px 40px rgba(0, 0, 0, 0.3);
 }
 
-:root[data-theme=daisyui] .accordion {
-  --accordion-border-radius: 0.5rem;
-  --accordion-transition: all 0.2s ease-out;
+:root[data-theme=skeuomorphic][data-color-scheme=dark] {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 8px 20px rgba(0, 0, 0, 0.65), 0 16px 40px rgba(0, 0, 0, 0.55);
 }
 
-:root[data-theme=daisyui] .alert {
-  --alert-border-radius: 0.5rem;
-  --alert-border-width: 0px;
-  --alert-padding: 12px 16px;
-}
-
-:root[data-theme=daisyui] .button {
-  --button-border-width: 1px;
-  --button-border-radius: 0.5rem;
-  --button-padding: 8px 16px;
-  --button-gap: 8px;
+:root[data-theme=skeuomorphic] .button {
+  --button-border-radius: 10px;
   --button-font-size: 14px;
-  --button-transition: all 0.2s ease-out;
-  --button-focus-ring-width: 2px;
-  --button-focus-ring-offset-width: 2px;
-  --button-focus-ring-color: var(--primary-default);
-}
-:root[data-theme=daisyui] .button.filled {
-  --button-border-color: var(--button-bg-color);
-  --button-hover-bg-color: var(--palette-dark);
-  --button-hover-border-color: var(--palette-dark);
-  --button-active-bg-color: var(--palette-darker);
-  --button-active-border-color: var(--palette-darker);
-  --button-disabled-opacity: 0.5;
-}
-:root[data-theme=daisyui] .button.tonal {
-  --button-border-color: var(--button-bg-color);
-  --button-hover-bg-color: var(--palette-light);
-  --button-active-bg-color: var(--palette-default);
-  --button-hover-border-color: var(--button-hover-bg-color);
-  --button-active-border-color: var(--button-active-bg-color);
-}
-:root[data-theme=daisyui] .button.outlined {
-  --button-disabled-opacity: 0.5;
-}
-:root[data-theme=daisyui] .button.text {
-  --button-disabled-opacity: 0.5;
+  --button-padding-y: 8px;
+  --button-padding-x: 20px;
+  --button-border-width: 1px;
+  --button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+  --button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.45),
+    0 2px 4px rgba(0, 0, 0, 0.35);
+  --button-active-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-:root[data-theme=daisyui][data-color-scheme=dark] .button.filled {
-  --button-disabled-bg-color: rgba(255, 255, 255, 0.1);
-  --button-disabled-color: rgba(255, 255, 255, 0.4);
-  --button-disabled-border-color: transparent;
+:root[data-theme=skeuomorphic][data-color-scheme=dark] .button {
+  --button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+  --button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.65),
+    0 2px 4px rgba(0, 0, 0, 0.55);
+  --button-active-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-:root[data-theme=daisyui] .checkbox {
-  --checkbox-border-radius: 0.375rem;
-  --checkbox-border-width: 2px;
-  --checkbox-size: 20px;
-  --checkbox-label-gap: 8px;
+:root[data-theme=skeuomorphic] .accordion {
+  --accordion-border-radius: 8px;
+  --accordion-header-font-size: 14px;
 }
 
-:root[data-theme=daisyui] .chip {
-  --chip-border-radius: 100px;
-  --chip-padding: 4px 12px;
-  --chip-font-size: 14px;
-  --chip-height: 32px;
+:root[data-theme=skeuomorphic] .alert {
+  --alert-border-radius: 8px;
+  --alert-font-size: 14px;
 }
 
-:root[data-theme=daisyui] .form-control {
-  --form-control-border-radius: 0.5rem;
-  --form-control-border-width: 2px;
-  --form-control-padding: 8px 16px;
+:root[data-theme=skeuomorphic] .avatar {
+  --avatar-border-radius: 50%;
+}
+
+:root[data-theme=skeuomorphic] .badge {
+  --badge-border-radius: 10px;
+  --badge-font-size: 12px;
+}
+
+:root[data-theme=skeuomorphic] .checkbox {
+  --checkbox-border-radius: 4px;
+  --checkbox-size: 16px;
+}
+
+:root[data-theme=skeuomorphic] .chip {
+  --chip-border-radius: 14px;
+  --chip-font-size: 13px;
+}
+
+:root[data-theme=skeuomorphic] .form-control {
+  --form-control-border-radius: 8px;
   --form-control-font-size: 14px;
-  --form-control-height: 40px;
-  --form-control-sm-height: 32px;
-  --form-control-lg-height: 48px;
-  --form-control-focus-ring-width: 0px;
-  --form-control-focus-shadow: 0 0 0 2px var(--primary-default);
-  --form-control-disabled-opacity: 0.5;
+  --form-control-padding-y: 7px;
+  --form-control-padding-x: 10px;
 }
 
-:root[data-theme=daisyui] .list {
-  --list-item-padding: 8px 16px;
-  --list-border-radius: 0.5rem;
+:root[data-theme=skeuomorphic] .list {
+  --list-item-border-radius: 6px;
+  --list-font-size: 14px;
 }
 
-:root[data-theme=daisyui] .radio {
-  --radio-size: 20px;
-  --radio-border-width: 2px;
-  --radio-label-gap: 8px;
+:root[data-theme=skeuomorphic] .radio {
+  --radio-size: 16px;
 }
 
-:root[data-theme=daisyui] .select {
-  --select-border-radius: 0.5rem;
-  --select-border-width: 2px;
-  --select-padding: 8px 16px;
+:root[data-theme=skeuomorphic] .select {
+  --select-border-radius: 8px;
   --select-font-size: 14px;
-  --select-height: 40px;
+  --select-padding-y: 7px;
+  --select-padding-x: 10px;
 }
 
-:root[data-theme=daisyui] .skeleton {
-  --skeleton-border-radius: 0.5rem;
-  --skeleton-animation-duration: 1.8s;
+:root[data-theme=skeuomorphic] .skeleton {
+  --skeleton-border-radius: 8px;
 }
 
-:root[data-theme=daisyui] .spinner {
+:root[data-theme=skeuomorphic] .spinner {
   --spinner-border-width: 3px;
-  --spinner-size: 20px;
-  --spinner-animation-duration: 0.8s;
-  --spinner-color: var(--primary-default);
 }
 
-:root[data-theme=daisyui] .switch {
+:root[data-theme=skeuomorphic] .switch {
   --switch-border-radius: 100px;
-  --switch-border-width: 0px;
-  --switch-track-width: 48px;
-  --switch-track-height: 24px;
-  --switch-thumb-size: 20px;
-  --switch-thumb-margin: 2px;
-  --switch-thumb-bg-color: #ffffff;
-  --switch-checked-bg-color: var(--primary-default);
-  --switch-transition: all 0.2s ease-out;
-  --switch-disabled-opacity: 0.5;
+  --switch-width: 51px;
+  --switch-height: 31px;
 }
