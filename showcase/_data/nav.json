@@ -12,6 +12,7 @@
     { "title": "Dialog", "slug": "dialog" },
     { "title": "Divider", "slug": "divider" },
     { "title": "Form Control", "slug": "form-control" },
+    { "title": "Link Card", "slug": "link" },
     { "title": "List", "slug": "list" },
     { "title": "Pagination", "slug": "pagination" },
     { "title": "Progress", "slug": "progress" },

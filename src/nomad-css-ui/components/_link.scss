@@ -1,0 +1,159 @@
+@use "../../utilities/prefixes" as prefixes;
+@use "../utilities/palette" as palette;
+@use "../utilities/color-defines" as color-defines;
+
+// ============================================
+// Prefixes
+// ============================================
+$link-prefix: #{prefixes.$prefix}link- !default;
+
+// --------------------------------------------
+// Class Names
+// --------------------------------------------
+$link-card-class-name: link-card !default;
+$link-card-leading-class-name: link-card-leading !default;
+$link-card-content-class-name: link-card-content !default;
+$link-card-desc-class-name: link-card-desc !default;
+$link-card-trailing-class-name: link-card-trailing !default;
+
+// --------------------------------------------
+// Colors
+// --------------------------------------------
+$link-card-bg-color-var: --#{$link-prefix}card-bg-color !default;
+$link-card-color-var: --#{$link-prefix}card-color !default;
+$link-card-hover-bg-color-var: --#{$link-prefix}card-hover-bg-color !default;
+$link-card-hover-color-var: --#{$link-prefix}card-hover-color !default;
+$link-card-active-bg-color-var: --#{$link-prefix}card-active-bg-color !default;
+$link-card-active-color-var: --#{$link-prefix}card-active-color !default;
+$link-card-disabled-color-var: --#{$link-prefix}card-disabled-color !default;
+$link-card-icon-color-var: --#{$link-prefix}card-icon-color !default;
+$link-card-desc-color-var: --#{$link-prefix}card-desc-color !default;
+
+// --------------------------------------------
+// Border
+// --------------------------------------------
+$link-card-border-color-var: --#{$link-prefix}card-border-color !default;
+$link-card-border-radius-var: --#{$link-prefix}card-border-radius !default;
+$link-card-border-width-var: --#{$link-prefix}card-border-width !default;
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+$link-card-padding-var: --#{$link-prefix}card-padding !default;
+$link-card-gap-var: --#{$link-prefix}card-gap !default;
+
+// --------------------------------------------
+// Shadow (テーマ層でシャドウを与えるための拡張ポイント)
+// --------------------------------------------
+$link-card-shadow-var: --#{$link-prefix}card-shadow !default;
+
+// ============================================
+// CSS Variables
+// ============================================
+.#{$link-card-class-name} {
+  // --------------------------------------------
+  // Colors
+  // --------------------------------------------
+  #{$link-card-bg-color-var}: var(#{color-defines.$surface-color-overlay-var});
+  #{$link-card-color-var}: var(#{color-defines.$text-color-var});
+  #{$link-card-hover-bg-color-var}: var(
+    #{color-defines.$surface-color-sunken-var}
+  );
+  #{$link-card-hover-color-var}: var(#{color-defines.$text-color-var});
+  #{$link-card-active-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$link-card-active-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$link-card-disabled-color-var}: var(--neutral-default);
+  #{$link-card-icon-color-var}: var(#{color-defines.$text-color-muted-var});
+  #{$link-card-desc-color-var}: var(#{color-defines.$text-color-subtle-var});
+
+  // --------------------------------------------
+  // Border
+  // --------------------------------------------
+  #{$link-card-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$link-card-border-radius-var}: 0.375rem;
+  #{$link-card-border-width-var}: 1px;
+
+  // --------------------------------------------
+  // Layout
+  // --------------------------------------------
+  #{$link-card-padding-var}: 0.75rem 1rem;
+  #{$link-card-gap-var}: 0.75rem;
+
+  // --------------------------------------------
+  // Shadow
+  // --------------------------------------------
+  #{$link-card-shadow-var}: none;
+}
+
+// ============================================
+// .link-card — card-style navigation link
+// ============================================
+.#{$link-card-class-name} {
+  display: flex;
+  align-items: center;
+  gap: var(#{$link-card-gap-var});
+  padding: var(#{$link-card-padding-var});
+  background-color: var(#{$link-card-bg-color-var});
+  color: var(#{$link-card-color-var});
+  border: var(#{$link-card-border-width-var}) solid
+    var(#{$link-card-border-color-var});
+  border-radius: var(#{$link-card-border-radius-var});
+  box-shadow: var(#{$link-card-shadow-var});
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(#{$link-card-hover-bg-color-var});
+    color: var(#{$link-card-hover-color-var});
+  }
+
+  &.active {
+    background-color: var(#{$link-card-active-bg-color-var});
+    color: var(#{$link-card-active-color-var});
+    border-color: var(#{$link-card-active-bg-color-var});
+  }
+
+  &.disabled {
+    color: var(#{$link-card-disabled-color-var});
+    pointer-events: none;
+  }
+
+  // --------------------------------------------
+  // Leading icon slot
+  // --------------------------------------------
+  .#{$link-card-leading-class-name} {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    color: var(#{$link-card-icon-color-var});
+  }
+
+  // --------------------------------------------
+  // Content area (text + optional description)
+  // --------------------------------------------
+  .#{$link-card-content-class-name} {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  // --------------------------------------------
+  // Secondary description text
+  // --------------------------------------------
+  .#{$link-card-desc-class-name} {
+    font-size: 0.8125em;
+    color: var(#{$link-card-desc-color-var});
+  }
+
+  // --------------------------------------------
+  // Trailing icon slot
+  // --------------------------------------------
+  .#{$link-card-trailing-class-name} {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    color: var(#{$link-card-icon-color-var});
+  }
+}

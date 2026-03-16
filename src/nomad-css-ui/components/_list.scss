@@ -44,6 +44,14 @@ $list-active-border-radius-var: --#{$list-prefix}active-border-radius !default;
 // Layout
 // --------------------------------------------
 $list-padding-var: --#{$list-prefix}padding !default;
+$list-link-padding-var: --#{$list-prefix}link-padding !default;
+
+// --------------------------------------------
+// Link variant
+// --------------------------------------------
+$list-link-arrow-var: --#{$list-prefix}link-arrow !default;
+$list-link-arrow-color-var: --#{$list-prefix}link-arrow-color !default;
+$list-item-desc-color-var: --#{$list-prefix}item-desc-color !default;
 
 // ============================================
 // Process
@@ -76,6 +84,14 @@ $list-padding-var: --#{$list-prefix}padding !default;
   // Layout
   // --------------------------------------------
   #{$list-padding-var}: 0.5rem 1rem;
+  #{$list-link-padding-var}: 0.75rem 1rem;
+
+  // --------------------------------------------
+  // Link variant
+  // --------------------------------------------
+  #{$list-link-arrow-var}: "›";
+  #{$list-link-arrow-color-var}: var(#{color-defines.$text-color-muted-var});
+  #{$list-item-desc-color-var}: var(#{color-defines.$text-color-subtle-var});
 }
 
 // ============================================
@@ -147,5 +163,48 @@ $list-padding-var: --#{$list-prefix}padding !default;
   &.disabled {
     color: var(#{$list-disabled-color-var});
     pointer-events: none;
+  }
+}
+
+// ============================================
+// .list-group-item.link — navigation/disclosure style
+// ============================================
+.#{$list-group-class-name} > .#{$list-group-item-class-name}.link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: var(#{$list-link-padding-var});
+
+  // Right-arrow indicator
+  &::after {
+    content: var(#{$list-link-arrow-var});
+    margin-left: auto;
+    color: var(#{$list-link-arrow-color-var});
+    flex-shrink: 0;
+    font-size: 1.25em;
+    line-height: 1;
+  }
+
+  // Leading icon slot
+  .list-item-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    color: var(#{$list-link-arrow-color-var});
+  }
+
+  // Text + description wrapper
+  .list-item-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  // Secondary description text
+  .list-item-desc {
+    font-size: 0.8125em;
+    color: var(#{$list-item-desc-color-var});
   }
 }
