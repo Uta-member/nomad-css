@@ -184,7 +184,7 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
     color: var(#{$chip-active-color-var});
     border-color: var(#{$chip-active-border-color-var});
   }
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     background-color: var(#{$chip-focus-bg-color-var});
     color: var(#{$chip-focus-color-var});
     border-color: var(#{$chip-focus-border-color-var});

@@ -435,7 +435,7 @@
   transform: translate(-50%, -50%) scale(1);
   opacity: 0.16;
 }
-:root[data-theme=material2] .checkbox:focus-visible:not(:disabled):not(:hover):not(:active)::after {
+:root[data-theme=material2] .checkbox:focus-visible:not(:disabled)::after {
   transform: translate(-50%, -50%) scale(1);
   background-color: transparent;
   border-color: var(--neutral-default);
@@ -521,7 +521,7 @@
   transform: translate(-50%, -50%) scale(1);
   opacity: 0.16;
 }
-:root[data-theme=material2] .radio:focus-visible:not(:disabled):not(:hover):not(:active)::after {
+:root[data-theme=material2] .radio:focus-visible:not(:disabled)::after {
   transform: translate(-50%, -50%) scale(1);
   background-color: transparent;
   border-color: var(--neutral-default);
@@ -586,3 +586,5 @@
   --switch-track-disabled-bg-color: rgba(255, 255, 255, 0.1);
   --switch-thumb-disabled-bg-color: #616161;
 }
+
+/*# sourceMappingURL=material2.css.map */

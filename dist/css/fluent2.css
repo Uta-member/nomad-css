@@ -75,21 +75,23 @@
   --form-control-disabled-opacity: 0.4;
   --form-control-readonly-cursor: text;
 }
-:root[data-theme=fluent2] .form-control:focus-visible:not(:hover):not(:active) {
+:root[data-theme=fluent2] .form-control:focus-visible {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control:hover:not(:disabled):not(:read-only) {
   box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
 }
-:root[data-theme=fluent2] .form-control.filled:focus-visible:not(:hover):not(:active) {
+:root[data-theme=fluent2] .form-control.filled:focus-visible {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control.filled:hover:not(:disabled):not(:read-only) {
   box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
 }
-:root[data-theme=fluent2] .form-control.underline:focus-visible:not(:hover):not(:active) {
+:root[data-theme=fluent2] .form-control.underline:focus-visible {
   box-shadow: 0 -2px 0 0 var(--palette-default) inset;
 }
 :root[data-theme=fluent2] .form-control.underline:hover:not(:disabled):not(:read-only) {
   box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
 }
+
+/*# sourceMappingURL=fluent2.css.map */

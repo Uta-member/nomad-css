@@ -336,7 +336,7 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
     cursor: var(#{$button-disabled-cursor-var});
     box-shadow: var(#{$button-disabled-box-shadow-var});
   }
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     background-color: var(#{$button-focus-bg-color-var});
     color: var(#{$button-focus-color-var});
     border-color: var(#{$button-focus-border-color-var});

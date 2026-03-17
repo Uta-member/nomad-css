@@ -104,7 +104,9 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
   // --------------------------------------------
   #{$radio-bg-color-var}: transparent;
   #{$radio-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
-  #{$radio-active-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
+  #{$radio-active-bg-color-var}: var(
+    #{color-defines.$surface-color-sunken-var}
+  );
   #{$radio-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$radio-disabled-bg-color-var}: transparent;
   #{$radio-checked-bg-color-var}: var(#{$radio-bg-color-var});
@@ -118,11 +120,19 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
   // --------------------------------------------
   #{$radio-border-width-var}: 2px;
   #{$radio-border-radius-var}: 50%;
-  #{$radio-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$radio-hover-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$radio-active-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$radio-focus-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$radio-disabled-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$radio-border-color-var}: var(#{color-defines.$control-border-color-var});
+  #{$radio-hover-border-color-var}: var(
+    #{color-defines.$control-border-color-strong-var}
+  );
+  #{$radio-active-border-color-var}: var(
+    #{color-defines.$control-border-color-strong-var}
+  );
+  #{$radio-focus-border-color-var}: var(
+    #{color-defines.$control-border-color-strong-var}
+  );
+  #{$radio-disabled-border-color-var}: var(
+    #{color-defines.$control-border-color-subtle-var}
+  );
   #{$radio-checked-border-color-var}: var(#{palette.$palette-default-var});
   #{$radio-checked-hover-border-color-var}: var(
     #{palette.$palette-default-var}
@@ -231,7 +241,7 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
     background-color: var(#{$radio-active-bg-color-var});
     border-color: var(#{$radio-active-border-color-var});
   }
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     background-color: var(#{$radio-focus-bg-color-var});
     border-color: var(#{$radio-focus-border-color-var});
     outline-width: var(#{$radio-focus-ring-width-var});
@@ -259,7 +269,7 @@ $radio-valid-border-color-var: --#{$radio-prefix}valid-border-color !default;
       background-color: var(#{$radio-checked-active-bg-color-var});
       border-color: var(#{$radio-checked-active-border-color-var});
     }
-    &:focus-visible:not(:hover):not(:active) {
+    &:focus-visible {
       background-color: var(#{$radio-checked-focus-bg-color-var});
       border-color: var(#{$radio-checked-focus-border-color-var});
       outline-width: var(#{$radio-focus-ring-width-var});

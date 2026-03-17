@@ -127,12 +127,20 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
   // --------------------------------------------
   #{$checkbox-border-width-var}: 2px;
   #{$checkbox-border-radius-var}: 4px;
-  #{$checkbox-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$checkbox-hover-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$checkbox-active-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$checkbox-focus-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$checkbox-border-color-var}: var(
+    #{color-defines.$control-border-color-var}
+  );
+  #{$checkbox-hover-border-color-var}: var(
+    #{color-defines.$control-border-color-strong-var}
+  );
+  #{$checkbox-active-border-color-var}: var(
+    #{color-defines.$control-border-color-strong-var}
+  );
+  #{$checkbox-focus-border-color-var}: var(
+    #{color-defines.$control-border-color-strong-var}
+  );
   #{$checkbox-disabled-border-color-var}: var(
-    #{color-defines.$border-color-var}
+    #{color-defines.$control-border-color-subtle-var}
   );
   #{$checkbox-checked-border-color-var}: var(#{palette.$palette-default-var});
   #{$checkbox-checked-hover-border-color-var}: var(
@@ -242,7 +250,7 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
     background-color: var(#{$checkbox-active-bg-color-var});
     border-color: var(#{$checkbox-active-border-color-var});
   }
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     background-color: var(#{$checkbox-focus-bg-color-var});
     border-color: var(#{$checkbox-focus-border-color-var});
     outline-width: var(#{$checkbox-focus-ring-width-var});
@@ -270,7 +278,7 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
       background-color: var(#{$checkbox-checked-active-bg-color-var});
       border-color: var(#{$checkbox-checked-active-border-color-var});
     }
-    &:focus-visible:not(:hover):not(:active) {
+    &:focus-visible {
       background-color: var(#{$checkbox-checked-focus-bg-color-var});
       border-color: var(#{$checkbox-checked-focus-border-color-var});
       outline-width: var(#{$checkbox-focus-ring-width-var});

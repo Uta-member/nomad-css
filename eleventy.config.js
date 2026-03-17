@@ -12,7 +12,8 @@ module.exports = function (eleventyConfig) {
     try {
       execSync(
         [
-          "sass src/themes/default/default.scss:dist/css/default.css",
+          "sass src/nomad-css-ui/_nomad-css-ui.scss:dist/css/nomad-css-ui.css",
+          "src/themes/default/default.scss:dist/css/default.css",
           "src/themes/fluent2/fluent2.scss:dist/css/fluent2.css",
           "src/themes/material3/material3.scss:dist/css/material3.css",
           "src/themes/apple-hig/apple-hig.scss:dist/css/apple-hig.css",
@@ -36,7 +37,6 @@ module.exports = function (eleventyConfig) {
           "src/themes/neumorphism/neumorphism.scss:dist/css/neumorphism.css",
           "src/themes/glass/glass.scss:dist/css/glass.css",
           "--style=expanded",
-          "--no-source-map",
         ].join(" "),
         { stdio: "inherit" }
       );

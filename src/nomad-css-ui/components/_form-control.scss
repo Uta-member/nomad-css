@@ -144,7 +144,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   #{$form-control-active-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-focus-color-var}: var(#{color-defines.$text-color-var});
   #{$form-control-disabled-color-var}: var(
-    #{color-defines.$border-color-strong-var}
+    #{color-defines.$text-color-muted-var}
   );
   #{$form-control-readonly-color-var}: var(#{$form-control-color-var});
 
@@ -152,7 +152,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   // Placeholder Colors
   // --------------------------------------------
   #{$form-control-placeholder-color-var}: var(
-    #{color-defines.$border-color-var}
+    #{color-defines.$text-color-subtle-var}
   );
   #{$form-control-placeholder-hover-color-var}: var(
     #{$form-control-placeholder-color-var}
@@ -178,16 +178,18 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   #{$form-control-border-bottom-width-var}: 1px;
   #{$form-control-border-left-width-var}: 1px;
   #{$form-control-border-radius-var}: 4px;
-  #{$form-control-border-color-var}: var(#{color-defines.$border-color-var});
+  #{$form-control-border-color-var}: var(
+    #{color-defines.$control-border-color-var}
+  );
   #{$form-control-hover-border-color-var}: var(
-    #{color-defines.$border-color-strong-var}
+    #{color-defines.$control-border-color-strong-var}
   );
   #{$form-control-active-border-color-var}: var(
-    #{color-defines.$border-color-strong-var}
+    #{color-defines.$control-border-color-strong-var}
   );
   #{$form-control-focus-border-color-var}: var(#{palette.$palette-default-var});
   #{$form-control-disabled-border-color-var}: var(
-    #{color-defines.$border-color-subtle-var}
+    #{color-defines.$control-border-color-subtle-var}
   );
   #{$form-control-readonly-border-color-var}: var(
     #{$form-control-border-color-var}
@@ -294,7 +296,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
     }
   }
 
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     color: var(#{$form-control-focus-color-var});
     border-color: var(#{$form-control-focus-border-color-var});
     &::placeholder {
@@ -332,7 +334,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
 // ============================================
 .#{$form-control-class-name},
 .#{$form-control-class-name}.outlined {
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     outline-offset: var(#{$form-control-focus-ring-offset-width-var});
     outline-width: var(#{$form-control-focus-ring-width-var});
     outline-color: var(#{$form-control-focus-ring-color-var});
@@ -353,7 +355,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   &:active {
     background-color: var(#{$form-control-filled-active-bg-color-var});
   }
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     background-color: var(#{$form-control-filled-focus-bg-color-var});
     outline: none;
     box-shadow: 0 calc(-1 * var(#{$form-control-focus-ring-width-var})) 0 0
@@ -373,7 +375,7 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   #{$form-control-border-right-width-var}: 0;
   #{$form-control-border-left-width-var}: 0;
 
-  &:focus-visible:not(:hover):not(:active) {
+  &:focus-visible {
     outline: none;
     box-shadow: 0 calc(-1 * var(#{$form-control-focus-ring-width-var})) 0 0
       var(#{$form-control-focus-ring-color-var}) inset;

@@ -22,7 +22,9 @@
       border: 2px solid transparent;
       opacity: 0;
       pointer-events: none;
-      transition: transform 0.2s, opacity 0.2s;
+      transition:
+        transform 0.2s,
+        opacity 0.2s;
     }
 
     &:hover:not(:disabled)::after {
@@ -35,7 +37,7 @@
       opacity: 0.16;
     }
 
-    &:focus-visible:not(:disabled):not(:hover):not(:active)::after {
+    &:focus-visible:not(:disabled)::after {
       transform: translate(-50%, -50%) scale(1);
       background-color: transparent;
       border-color: var(--neutral-default);

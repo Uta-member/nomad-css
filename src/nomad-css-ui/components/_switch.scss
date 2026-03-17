@@ -245,7 +245,7 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   }
 
   // Focus visible state
-  .#{$switch-input-class-name}:focus-visible:not(:disabled):not(:hover):not(:active)
+  .#{$switch-input-class-name}:focus-visible:not(:disabled)
     ~ .#{$switch-track-class-name} {
     outline-width: var(#{$switch-track-focus-ring-width-var});
     outline-color: var(#{$switch-track-focus-ring-color-var});

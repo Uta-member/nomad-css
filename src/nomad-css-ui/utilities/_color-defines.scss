@@ -12,6 +12,13 @@ $border-color-var: --border-color;
 $border-color-subtle-var: --border-color-subtle;
 $border-color-strong-var: --border-color-strong;
 
+// --------------------------------------------
+// Control Border
+// --------------------------------------------
+$control-border-color-var: --control-border-color;
+$control-border-color-strong-var: --control-border-color-strong;
+$control-border-color-subtle-var: --control-border-color-subtle;
+
 // ---------------------------------------------
 // Text
 // ---------------------------------------------
@@ -36,18 +43,16 @@ $surface-color-deep-var: --surface-color-deep;
 // CSS Variants
 // ============================================
 :root {
-  #{$border-color-var}: var(
-    #{semantics.$neutral-default-var}
-  ); // neutral-color-5 (50%)
-  #{$border-color-subtle-var}: var(
-    #{semantics.$neutral-light-var}
-  ); // neutral-color-3 (75%)
-  #{$border-color-strong-var}: var(
-    #{semantics.$neutral-dark-var}
-  ); // neutral-color-7 (34%)
+  #{$border-color-var}: var(#{semantics.$neutral-light-var});
+  #{$border-color-subtle-var}: var(#{semantics.$neutral-lighter-var});
+  #{$border-color-strong-var}: var(#{semantics.$neutral-dark-var});
+
+  #{$control-border-color-var}: var(#{semantics.$neutral-default-var});
+  #{$control-border-color-strong-var}: var(#{semantics.$neutral-dark-var});
+  #{$control-border-color-subtle-var}: var(#{semantics.$neutral-light-var});
 
   #{$text-color-var}: var(--neutral-color-9);
-  #{$text-color-subtle-var}: var(--neutral-color-7);
+  #{$text-color-subtle-var}: var(--neutral-color-5);
   #{$text-color-muted-var}: var(--neutral-color-4);
   #{$text-color-strong-var}: var(--neutral-color-10);
 
