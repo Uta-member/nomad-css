@@ -9392,6 +9392,8 @@ h6,
   --table-hover-color: var(--text-color);
   --table-hover-row-cursor: unset;
   --table-hover-cell-cursor: unset;
+  --table-cell-padding-x: 1em;
+  --table-cell-padding-y: 0.5em;
 }
 
 .table {
@@ -9401,7 +9403,7 @@ h6,
   border-style: solid;
 }
 .table > :not(caption) > * > * {
-  padding: 0.5em;
+  padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
   border-width: 0px;
   border-style: solid;
   border-color: var(--table-border-color);

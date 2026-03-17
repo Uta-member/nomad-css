@@ -42,6 +42,12 @@ $table-hover-color-var: --#{$table-prefix}hover-color !default;
 $table-hover-row-cursor-var: --#{$table-prefix}hover-row-cursor !default;
 $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
 
+// --------------------------------------------
+// Spacing
+// --------------------------------------------
+$table-cell-padding-x-var: --#{$table-prefix}cell-padding-x !default;
+$table-cell-padding-y-var: --#{$table-prefix}cell-padding-y !default;
+
 // ============================================
 // Process
 // ============================================
@@ -54,24 +60,30 @@ $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
   // --------------------------------------------
   #{$table-border-color-var}: var(#{color-defines.$border-color-var});
   #{$table-border-width-var}: 1px;
-  
+
   // --------------------------------------------
   // Striped
   // --------------------------------------------
   #{$table-striped-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$table-striped-color-var}: var(#{color-defines.$text-color-var});
-  
+
   // --------------------------------------------
   // Hover
   // --------------------------------------------
   #{$table-hover-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$table-hover-color-var}: var(#{color-defines.$text-color-var});
-  
+
   // --------------------------------------------
   // Cursors
   // --------------------------------------------
   #{$table-hover-row-cursor-var}: unset;
   #{$table-hover-cell-cursor-var}: unset;
+
+  // --------------------------------------------
+  // Spacing
+  // --------------------------------------------
+  #{$table-cell-padding-x-var}: 1em;
+  #{$table-cell-padding-y-var}: 0.5em;
 }
 
 // ============================================
@@ -83,8 +95,8 @@ $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
   border-width: 0px;
   border-style: solid;
 
-  &>:not(caption)>*>* {
-    padding: 0.5em;
+  & > :not(caption) > * > * {
+    padding: var(#{$table-cell-padding-y-var}) var(#{$table-cell-padding-x-var});
     border-width: 0px;
     border-style: solid;
     border-color: var(#{$table-border-color-var});
@@ -96,13 +108,13 @@ $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
 // ============================================
 .#{$table-class-name} {
   &.row-bordered {
-    &>:not(caption)>*>* {
+    & > :not(caption) > * > * {
       border-top-width: var(#{$table-border-width-var});
       border-bottom-width: var(#{$table-border-width-var});
     }
   }
   &.column-bordered {
-    &>:not(caption)>*>* {
+    & > :not(caption) > * > * {
       border-left-width: var(#{$table-border-width-var});
       border-right-width: var(#{$table-border-width-var});
     }
@@ -113,12 +125,12 @@ $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
 // Striped
 // ============================================
 .#{$table-class-name} {
-  &.striped>tbody>tr:nth-of-type(odd)>* {
+  &.striped > tbody > tr:nth-of-type(odd) > * {
     background-color: var(#{$table-striped-bg-color-var});
     color: var(#{$table-striped-color-var});
   }
-  
-  &.striped-column>:not(caption)>tr>:nth-child(2n) {
+
+  &.striped-column > :not(caption) > tr > :nth-child(2n) {
     background-color: var(#{$table-striped-bg-color-var});
     color: var(#{$table-striped-color-var});
   }
@@ -128,12 +140,12 @@ $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
 // Hover
 // ============================================
 .#{$table-class-name} {
-  &.hover-row>tbody>tr:hover>* {
+  &.hover-row > tbody > tr:hover > * {
     background-color: var(#{$table-hover-bg-color-var});
     color: var(#{$table-hover-color-var});
     cursor: var(#{$table-hover-row-cursor-var});
   }
-  &.hover-cell>tbody>tr>*:hover {
+  &.hover-cell > tbody > tr > *:hover {
     background-color: var(#{$table-hover-bg-color-var});
     color: var(#{$table-hover-color-var});
     cursor: var(#{$table-hover-cell-cursor-var});
