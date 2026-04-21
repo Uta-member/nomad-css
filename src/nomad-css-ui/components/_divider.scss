@@ -1,5 +1,6 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -48,7 +49,7 @@ $divider-vertical-height-var: --#{$divider-prefix}vertical-height !default;
   // --------------------------------------------
   // Layout
   // --------------------------------------------
-  #{$divider-width-var}: 1px;
+  #{$divider-width-var}: var(#{border.$border-width-var});
   #{$divider-margin-var}: 1rem 0;
   #{$divider-vertical-height-var}: 1em;
 }

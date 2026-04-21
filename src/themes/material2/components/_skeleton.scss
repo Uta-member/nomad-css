@@ -1,8 +1,0 @@
-@use "../utilities/prefixes" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
-  .skeleton {
-    --skeleton-bg-color: #424242;
-    --skeleton-shimmer-color: #616161;
-  }
-}

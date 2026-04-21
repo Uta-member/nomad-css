@@ -12,7 +12,7 @@ $font-body-size-var: --font-body-size;
 // ============================================
 :root {
   #{$font-family-var}: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  #{$font-body-size-var}: 16px;
+  #{$font-body-size-var}: 14px;
 
   font-family: var(#{$font-family-var});
   font-size: var(#{$font-body-size-var});

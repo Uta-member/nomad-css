@@ -1,8 +1,0 @@
-@use "../utilities/prefixes" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  .list {
-    --list-item-padding: 11px 16px;
-    --list-border-radius: 0px;
-  }
-}

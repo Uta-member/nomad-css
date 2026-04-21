@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -173,10 +174,10 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
   // --------------------------------------------
   // Borders
   // --------------------------------------------
-  #{$form-control-border-top-width-var}: 1px;
-  #{$form-control-border-right-width-var}: 1px;
-  #{$form-control-border-bottom-width-var}: 1px;
-  #{$form-control-border-left-width-var}: 1px;
+  #{$form-control-border-top-width-var}: var(#{border.$border-width-var});
+  #{$form-control-border-right-width-var}: var(#{border.$border-width-var});
+  #{$form-control-border-bottom-width-var}: var(#{border.$border-width-var});
+  #{$form-control-border-left-width-var}: var(#{border.$border-width-var});
   #{$form-control-border-radius-var}: 4px;
   #{$form-control-border-color-var}: var(
     #{color-defines.$control-border-color-var}

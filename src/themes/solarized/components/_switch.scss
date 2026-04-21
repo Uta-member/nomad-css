@@ -1,9 +1,0 @@
-@use "../utilities/_prefixes.scss" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  .switch {
-    --switch-border-radius: 100px;
-    --switch-width: 40px;
-    --switch-height: 22px;
-  }
-}

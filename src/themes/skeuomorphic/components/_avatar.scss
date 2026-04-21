@@ -1,8 +1,0 @@
-@use "../utilities/_prefixes.scss" as prefixes;
-
-// Skeuomorphic avatars were often circular (like iOS contact icons)
-:root[data-theme="#{prefixes.$theme-name}"] {
-  .avatar {
-    --avatar-border-radius: 50%;
-  }
-}

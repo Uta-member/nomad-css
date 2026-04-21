@@ -1,9 +1,0 @@
-@use "../utilities/prefixes" as prefixes;
-
-// Material Design 1: skeleton loading
-:root[data-theme="#{prefixes.$theme-name}"] {
-  .skeleton {
-    --skeleton-border-radius: 2px;
-    --skeleton-animation-duration: 1.5s;
-  }
-}

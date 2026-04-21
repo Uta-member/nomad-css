@@ -1,8 +1,0 @@
-@use "./_prefixes.scss" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  --font-family: "Courier New", "Lucida Console", "Monaco", monospace;
-  --font-size-base: 14px;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-}

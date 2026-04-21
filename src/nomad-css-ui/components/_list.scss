@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -77,7 +78,7 @@ $list-item-desc-color-var: --#{$list-prefix}item-desc-color !default;
   // --------------------------------------------
   #{$list-border-color-var}: var(#{color-defines.$border-color-var});
   #{$list-border-radius-var}: 0.375rem;
-  #{$list-border-width-var}: 1px;
+  #{$list-border-width-var}: var(#{border.$border-width-var});
   #{$list-active-border-radius-var}: 0px;
 
   // --------------------------------------------

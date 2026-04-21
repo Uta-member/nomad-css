@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -96,16 +97,14 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   // --------------------------------------------
   // Track colors
   // --------------------------------------------
-  #{$switch-track-bg-color-var}: var(
-    #{color-defines.$surface-color-deep-var}
-  );
+  #{$switch-track-bg-color-var}: var(#{color-defines.$surface-color-deep-var});
   #{$switch-track-checked-bg-color-var}: var(#{palette.$palette-default-var});
   #{$switch-track-border-color-var}: var(#{color-defines.$border-color-var});
   #{$switch-track-checked-border-color-var}: var(
     #{palette.$palette-default-var}
   );
   #{$switch-track-border-radius-var}: 10rem;
-  #{$switch-track-border-width-var}: 1px;
+  #{$switch-track-border-width-var}: var(#{border.$border-width-var});
   #{$switch-track-disabled-bg-color-var}: var(
     #{color-defines.$border-color-subtle-var}
   );

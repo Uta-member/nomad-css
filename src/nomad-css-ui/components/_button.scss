@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -149,7 +150,7 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   #{$button-active-border-color-var}: transparent;
   #{$button-focus-border-color-var}: transparent;
   #{$button-disabled-border-color-var}: transparent;
-  #{$button-border-width-var}: 1px;
+  #{$button-border-width-var}: var(#{border.$border-width-var});
   #{$button-border-radius-var}: 0.25rem;
   #{$button-hover-border-radius-var}: var(#{$button-border-radius-var});
   #{$button-active-border-radius-var}: var(#{$button-border-radius-var});
@@ -463,7 +464,7 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   #{$button-focus-border-color-var}: var(#{palette.$palette-default-var});
   #{$button-disabled-border-color-var}: var(#{color-defines.$border-color-var});
   #{$button-border-radius-var}: 0.25rem;
-  #{$button-border-width-var}: 1px;
+  #{$button-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Box Shadow

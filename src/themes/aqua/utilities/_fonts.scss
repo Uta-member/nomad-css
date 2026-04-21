@@ -1,8 +1,0 @@
-@use "./_prefixes.scss" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  --font-family: "Lucida Grande", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  --font-size-base: 13px;
-  --font-weight-normal: 400;
-  --font-weight-bold: 600;
-}

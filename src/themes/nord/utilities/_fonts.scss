@@ -1,8 +1,0 @@
-@use "./_prefixes.scss" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  --font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-  --font-size-base: 14px;
-  --font-weight-normal: 400;
-  --font-weight-bold: 600;
-}

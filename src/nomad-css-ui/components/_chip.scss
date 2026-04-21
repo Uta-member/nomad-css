@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -114,7 +115,7 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   // Border
   // --------------------------------------------
   #{$chip-border-radius-var}: 10rem;
-  #{$chip-border-width-var}: 1px;
+  #{$chip-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Focus Ring

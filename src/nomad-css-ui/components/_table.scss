@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -59,7 +60,7 @@ $table-cell-padding-y-var: --#{$table-prefix}cell-padding-y !default;
   // Borders
   // --------------------------------------------
   #{$table-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$table-border-width-var}: 1px;
+  #{$table-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Striped

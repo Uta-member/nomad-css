@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -84,7 +85,7 @@ $tree-transition-var: --#{$tree-prefix}transition !default;
   #{$tree-indent-var}: 1rem;
   #{$tree-row-padding-var}: 0.2rem 0.5rem;
   #{$tree-row-gap-var}: 0.375rem;
-  #{$tree-guide-width-var}: 1px;
+  #{$tree-guide-width-var}: var(#{border.$border-width-var});
 
   // Leaf indent: aligns .tree-row text with summary label text (after toggle icon)
   #{$tree-leaf-indent-var}: calc(

@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -76,7 +77,7 @@ $pagination-gap-var: --#{$pagination-prefix}gap !default;
   // Border
   // --------------------------------------------
   #{$pagination-border-radius-var}: 0.25rem;
-  #{$pagination-border-width-var}: 1px;
+  #{$pagination-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Layout

@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -90,7 +91,7 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   // --------------------------------------------
   #{$accordion-border-color-var}: var(#{color-defines.$border-color-var});
   #{$accordion-border-radius-var}: 0.25rem;
-  #{$accordion-border-width-var}: 1px;
+  #{$accordion-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Layout
@@ -101,7 +102,10 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   // --------------------------------------------
   // Transition
   // --------------------------------------------
-  #{$accordion-transition-var}: color 0.2s, background-color 0.2s, transform 0.2s;
+  #{$accordion-transition-var}:
+    color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
 
   // --------------------------------------------
   // Icon

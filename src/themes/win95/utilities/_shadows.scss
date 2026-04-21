@@ -1,7 +1,0 @@
-@use "./_prefixes.scss" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  --shadow-sm: none;
-  --shadow-md: none;
-  --shadow-lg: none;
-}

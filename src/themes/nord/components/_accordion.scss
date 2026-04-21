@@ -1,5 +1,0 @@
-@use "../utilities/_prefixes.scss" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  .accordion { --accordion-border-radius: 4px; }
-}

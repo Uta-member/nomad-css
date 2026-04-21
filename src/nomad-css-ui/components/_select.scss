@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -150,10 +151,10 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   // --------------------------------------------
   // Borders
   // --------------------------------------------
-  #{$select-border-top-width-var}: 1px;
-  #{$select-border-right-width-var}: 1px;
-  #{$select-border-bottom-width-var}: 1px;
-  #{$select-border-left-width-var}: 1px;
+  #{$select-border-top-width-var}: var(#{border.$border-width-var});
+  #{$select-border-right-width-var}: var(#{border.$border-width-var});
+  #{$select-border-bottom-width-var}: var(#{border.$border-width-var});
+  #{$select-border-left-width-var}: var(#{border.$border-width-var});
   #{$select-border-radius-var}: 4px;
   #{$select-border-color-var}: var(#{color-defines.$control-border-color-var});
   #{$select-hover-border-color-var}: var(

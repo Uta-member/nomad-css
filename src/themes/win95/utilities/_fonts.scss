@@ -1,8 +1,0 @@
-@use "./_prefixes.scss" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  --font-family: "MS Sans Serif", Tahoma, "Segoe UI", sans-serif;
-  --font-size-base: 11px;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-}

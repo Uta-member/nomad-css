@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -74,9 +75,13 @@ $dialog-transition-var: --#{$dialog-prefix}transition !default;
   #{$dialog-bg-color-var}: var(#{color-defines.$surface-color-overlay-var});
   #{$dialog-color-var}: var(#{color-defines.$text-color-var});
   #{$dialog-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$dialog-header-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
+  #{$dialog-header-bg-color-var}: var(
+    #{color-defines.$surface-color-sunken-var}
+  );
   #{$dialog-header-color-var}: var(#{color-defines.$text-color-var});
-  #{$dialog-footer-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
+  #{$dialog-footer-bg-color-var}: var(
+    #{color-defines.$surface-color-sunken-var}
+  );
   #{$dialog-footer-color-var}: var(#{color-defines.$text-color-subtle-var});
   #{$dialog-backdrop-color-var}: rgba(0, 0, 0, 0.5);
 
@@ -84,8 +89,8 @@ $dialog-transition-var: --#{$dialog-prefix}transition !default;
   // Border
   // --------------------------------------------
   #{$dialog-border-radius-var}: 0.375rem;
-  #{$dialog-border-width-var}: 1px;
-  #{$dialog-inner-border-width-var}: 1px;
+  #{$dialog-border-width-var}: var(#{border.$border-width-var});
+  #{$dialog-inner-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Layout
