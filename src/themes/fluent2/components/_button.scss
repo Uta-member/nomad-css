@@ -1,36 +1,130 @@
 @use "../utilities/prefixes" as prefixes;
 
 :root[data-theme="#{prefixes.$theme-name}"] {
-  .button{
+  .button {
     --button-border-width: 1px;
+    --button-focus-ring-width: 2px;
+    --button-focus-ring-color: var(--text-color);
+
+    --button-focus-bg-color: var(--button-bg-color);
+    --button-focus-color: var(--button-color);
+    --button-focus-border-color: var(--button-border-color);
 
     &.filled {
       --button-border-color: var(--button-bg-color);
       --button-hover-border-color: var(--button-hover-bg-color);
       --button-active-border-color: var(--button-active-bg-color);
       --button-focus-border-color: var(--button-focus-bg-color);
-      
+
       &.secondary {
         --button-bg-color: var(--surface-color-overlay);
         --button-color: var(--text-color);
-        --button-border-color: var(--border-color);
+        --button-border-color: var(--border-color-strong);
         --button-hover-bg-color: var(--surface-color);
         --button-hover-color: var(--button-color);
-        --button-hover-border-color: var(--border-color);
+        --button-hover-border-color: var(--button-border-color);
         --button-active-bg-color: var(--surface-color-sunken);
         --button-active-color: var(--button-color);
-        --button-active-border-color: var(--border-color);
-        --button-focus-bg-color: var(--surface-color);
-        --button-focus-color: var(--button-color);
-        --button-focus-border-color: var(--border-color);
+        --button-active-border-color: var(--button-border-color);
+
+        &:disabled {
+          --button-disabled-border-color: var(--neutral-dark);
+        }
       }
     }
 
+    &.tonal {
+      --button-bg-color: transparent;
+      --button-color: var(--palette-dark);
+      --button-border-color: transparent;
+      --button-hover-bg-color: var(--palette-lighter);
+      --button-hover-color: var(--button-color);
+      --button-hover-border-color: var(--button-border-color);
+      --button-active-bg-color: var(--palette-light);
+      --button-active-color: var(--button-color);
+      --button-active-border-color: var(--button-border-color);
+    }
+
+    &.outlined {
+      --button-color: var(--palette-dark);
+      --button-border-color: var(--palette-light);
+      --button-hover-bg-color: var(--button-bg-color);
+      --button-hover-color: var(--button-color);
+      --button-hover-border-color: var(--palette-dark);
+      --button-active-bg-color: var(--button-bg-color);
+      --button-active-color: var(--button-color);
+      --button-active-border-color: var(--palette-darker);
+    }
+
+    &.text {
+      --button-color: var(--text-color);
+      --button-hover-bg-color: var(--button-bg-color);
+      --button-hover-color: var(--palette-default);
+      --button-hover-border-color: var(--button-border-color);
+      --button-active-bg-color: var(--button-bg-color);
+      --button-active-color: var(--palette-darker);
+      --button-active-border-color: var(--button-border-color);
+    }
+
     &:disabled {
-      --button-disabled-bg-color: var(--button-bg-color);
-      --button-disabled-color: var(--button-color);
-      --button-disabled-border-color: var(--button-border-color);
+      --button-disabled-bg-color: var(--neutral-light);
+      --button-disabled-color: var(--neutral-dark);
+      --button-disabled-border-color: var(--button-disabled-bg-color);
       --button-disabled-opacity: 0.5;
+    }
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .button {
+    &.filled {
+      --button-hover-bg-color: var(--palette-light);
+      --button-hover-color: var(--palette-accent-light);
+      --button-active-bg-color: var(--palette-dark);
+      --button-active-color: var(--palette-accent-dark);
+      --button-focus-bg-color: var(--button-bg-color);
+      --button-focus-color: var(--button-color);
+
+      &.secondary {
+        --button-bg-color: var(--surface-color);
+        --button-color: var(--text-color);
+        --button-border-color: var(--control-border-color);
+        --button-hover-bg-color: var(--surface-color-overlay);
+        --button-hover-color: var(--button-color);
+        --button-hover-border-color: var(--button-border-color);
+        --button-active-bg-color: var(--button-bg-color);
+        --button-active-color: var(--button-color);
+        --button-active-border-color: var(--button-border-color);
+
+        &:disabled {
+          --button-disabled-border-color: var(--neutral-light);
+        }
+      }
+    }
+
+    &.tonal {
+      --button-color: var(--palette-default);
+      --button-hover-bg-color: var(--palette-dark);
+      --button-hover-color: var(--button-color);
+      --button-active-bg-color: var(--palette-darker);
+      --button-active-color: var(--button-color);
+    }
+
+    &.outlined {
+      --button-color: var(--palette-light);
+      --button-border-color: var(--palette-default);
+      --button-hover-border-color: var(--palette-light);
+      --button-active-border-color: var(--button-border-color);
+    }
+
+    &.text {
+      --button-hover-color: var(--palette-light);
+      --button-active-color: var(--palette-default);
+    }
+
+    &:disabled {
+      --button-disabled-bg-color: var(--neutral-darker);
+      --button-disabled-color: var(--neutral-light);
     }
   }
 }
