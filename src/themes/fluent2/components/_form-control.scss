@@ -1,64 +1,34 @@
 @use "../utilities/prefixes" as prefixes;
 
-// ============================================
-// Fluent2 - form-control overrides
-// ============================================
-// Fluent2 の設計特徴:
-//   - フォーカス時: アウトラインリングなし、ボトムラインが2px アクセント色に変化
-//   - Hover時: ボトムラインが1px 濃いグレーに変化
-//   - Disabled: 0.4 の透明度（Fluent2 仕様値）
-//   - Readonly: テキストカーソル（選択・コピー可能）
-// ============================================
 :root[data-theme="#{prefixes.$theme-name}"] {
   .form-control {
-    // フォーカスリング（outline）を非表示にし、ボトムライン方式に切り替え
-    --form-control-focus-ring-width: 0px;
-
-    // フォーカス時のボーダー色はニュートラルのまま（ボトムラインで強調）
-    --form-control-focus-border-color: var(--border-color-strong);
-
-    // Fluent2 仕様: disabled は 0.4 透明度
     --form-control-disabled-opacity: 0.4;
-
-    // Readonly: テキストカーソル（選択・コピー可能なため not-allowed にしない）
     --form-control-readonly-cursor: text;
 
-    // ============================================
-    // フォーカスインジケーター: ボトム 2px アクセントライン
-    // ============================================
-    &:focus-visible {
-      box-shadow: 0 -2px 0 0 var(--palette-default) inset;
-    }
+    --form-control-filled-bg-color: var(--surface-color-overlay);
+    --form-control-filled-hover-bg-color: var(--form-control-filled-bg-color);
+    --form-control-filled-active-bg-color: var(--form-control-filled-bg-color);
+    --form-control-border-color: var(--control-border-color);
+    --form-control-hover-border-color: var(--control-border-color-strong);
+    --form-control-active-border-color: var(--control-border-color-strong);
+    --form-control-focus-border-color: var(--control-border-color-strong);
 
-    // Hover 時: ボトム 1px ダークグレーライン
-    &:hover:not(:disabled):not(:read-only) {
-      box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
-    }
-
-    // ============================================
-    // Filled バリエーション
-    // ============================================
     &.filled {
-      &:focus-visible {
-        // デフォルト（1px）より太い 2px に上書き
-        box-shadow: 0 -2px 0 0 var(--palette-default) inset;
-      }
+      --form-control-border-top-width: var(--form-control-border-bottom-width);
+      --form-control-border-left-width: var(--form-control-border-bottom-width);
+      --form-control-border-right-width: var(
+        --form-control-border-bottom-width
+      );
+      --form-control-border-color: var(--control-border-color-subtle);
+      border-bottom-left-radius: var(--form-control-border-radius);
+      border-bottom-right-radius: var(--form-control-border-radius);
+      border-bottom-color: var(--control-border-color-strong);
 
-      &:hover:not(:disabled):not(:read-only) {
-        box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
+      &.is-invalid {
+        border-bottom-color: var(--form-control-invalid-border-color);
       }
-    }
-
-    // ============================================
-    // Underline バリエーション
-    // ============================================
-    &.underline {
-      &:focus-visible {
-        box-shadow: 0 -2px 0 0 var(--palette-default) inset;
-      }
-
-      &:hover:not(:disabled):not(:read-only) {
-        box-shadow: 0 -1px 0 0 var(--border-color-strong) inset;
+      &.is-valid {
+        border-bottom-color: var(--form-control-valid-border-color);
       }
     }
   }

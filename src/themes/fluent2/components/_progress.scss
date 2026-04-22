@@ -1,0 +1,9 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .progress {
+    --progress-sm-size: 0.25rem;
+    --progress-md-size: 0.5rem;
+    --progress-lg-size: 0.75rem;
+  }
+}

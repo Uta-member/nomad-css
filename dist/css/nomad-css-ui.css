@@ -8668,9 +8668,9 @@ h6,
   --checkbox-focus-bg-color: var(--surface-color);
   --checkbox-disabled-bg-color: transparent;
   --checkbox-checked-bg-color: var(--palette-default);
-  --checkbox-checked-hover-bg-color: var(--palette-default);
-  --checkbox-checked-active-bg-color: var(--palette-default);
-  --checkbox-checked-focus-bg-color: var(--palette-default);
+  --checkbox-checked-hover-bg-color: var(--checkbox-checked-bg-color);
+  --checkbox-checked-active-bg-color: var(--checkbox-checked-bg-color);
+  --checkbox-checked-focus-bg-color: var(--checkbox-checked-bg-color);
   --checkbox-checked-disabled-bg-color: var(--border-color);
   --checkbox-border-width: 2px;
   --checkbox-border-radius: 4px;
@@ -9167,19 +9167,31 @@ h6,
 }
 
 .form-control.is-invalid {
-  --form-control-border-color: var(--form-control-invalid-border-color);
-  --form-control-hover-border-color: var(--form-control-invalid-border-color);
-  --form-control-active-border-color: var(--form-control-invalid-border-color);
-  --form-control-focus-border-color: var(--form-control-invalid-border-color);
-  --form-control-focus-ring-color: var(--form-control-invalid-focus-ring-color);
+  border-color: var(--form-control-invalid-border-color);
+}
+.form-control.is-invalid:hover {
+  border-color: var(--form-control-invalid-border-color);
+}
+.form-control.is-invalid:active {
+  border-color: var(--form-control-invalid-border-color);
+}
+.form-control.is-invalid:focus-visible {
+  border-color: var(--form-control-invalid-border-color);
+  outline-color: var(--form-control-invalid-focus-ring-color);
 }
 
 .form-control.is-valid {
-  --form-control-border-color: var(--form-control-valid-border-color);
-  --form-control-hover-border-color: var(--form-control-valid-border-color);
-  --form-control-active-border-color: var(--form-control-valid-border-color);
-  --form-control-focus-border-color: var(--form-control-valid-border-color);
-  --form-control-focus-ring-color: var(--form-control-valid-focus-ring-color);
+  border-color: var(--form-control-valid-border-color);
+}
+.form-control.is-valid:hover {
+  border-color: var(--form-control-valid-border-color);
+}
+.form-control.is-valid:active {
+  border-color: var(--form-control-valid-border-color);
+}
+.form-control.is-valid:focus-visible {
+  border-color: var(--form-control-valid-border-color);
+  outline-color: var(--form-control-valid-focus-ring-color);
 }
 
 .form-hint {

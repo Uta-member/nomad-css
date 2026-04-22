@@ -113,11 +113,15 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
   #{$checkbox-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$checkbox-disabled-bg-color-var}: transparent;
   #{$checkbox-checked-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$checkbox-checked-hover-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$checkbox-checked-active-bg-color-var}: var(
-    #{palette.$palette-default-var}
+  #{$checkbox-checked-hover-bg-color-var}: var(
+    #{$checkbox-checked-bg-color-var}
   );
-  #{$checkbox-checked-focus-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$checkbox-checked-active-bg-color-var}: var(
+    #{$checkbox-checked-bg-color-var}
+  );
+  #{$checkbox-checked-focus-bg-color-var}: var(
+    #{$checkbox-checked-bg-color-var}
+  );
   #{$checkbox-checked-disabled-bg-color-var}: var(
     #{color-defines.$border-color-var}
   );

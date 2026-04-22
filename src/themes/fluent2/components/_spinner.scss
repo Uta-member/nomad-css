@@ -1,0 +1,15 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .spinner {
+    --spinner-border-width: 4px;
+    --spinner-track-color: var(--palette-light);
+    --spinner-speed: 1s;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .spinner {
+    --spinner-track-color: var(--palette-dark);
+  }
+}

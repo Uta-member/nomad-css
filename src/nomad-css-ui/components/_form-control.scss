@@ -387,36 +387,29 @@ $form-control-valid-focus-ring-color-var: --#{$form-control-prefix}valid-focus-r
 // Validation
 // ============================================
 .#{$form-control-class-name}.is-invalid {
-  #{$form-control-border-color-var}: var(
-    #{$form-control-invalid-border-color-var}
-  );
-  #{$form-control-hover-border-color-var}: var(
-    #{$form-control-invalid-border-color-var}
-  );
-  #{$form-control-active-border-color-var}: var(
-    #{$form-control-invalid-border-color-var}
-  );
-  #{$form-control-focus-border-color-var}: var(
-    #{$form-control-invalid-border-color-var}
-  );
-  #{$form-control-focus-ring-color-var}: var(
-    #{$form-control-invalid-focus-ring-color-var}
-  );
+  border-color: var(#{$form-control-invalid-border-color-var});
+
+  &:hover {
+    border-color: var(#{$form-control-invalid-border-color-var});
+  }
+  &:active {
+    border-color: var(#{$form-control-invalid-border-color-var});
+  }
+  &:focus-visible {
+    border-color: var(#{$form-control-invalid-border-color-var});
+    outline-color: var(#{$form-control-invalid-focus-ring-color-var});
+  }
 }
 .#{$form-control-class-name}.is-valid {
-  #{$form-control-border-color-var}: var(
-    #{$form-control-valid-border-color-var}
-  );
-  #{$form-control-hover-border-color-var}: var(
-    #{$form-control-valid-border-color-var}
-  );
-  #{$form-control-active-border-color-var}: var(
-    #{$form-control-valid-border-color-var}
-  );
-  #{$form-control-focus-border-color-var}: var(
-    #{$form-control-valid-border-color-var}
-  );
-  #{$form-control-focus-ring-color-var}: var(
-    #{$form-control-valid-focus-ring-color-var}
-  );
+  border-color: var(#{$form-control-valid-border-color-var});
+  &:hover {
+    border-color: var(#{$form-control-valid-border-color-var});
+  }
+  &:active {
+    border-color: var(#{$form-control-valid-border-color-var});
+  }
+  &:focus-visible {
+    border-color: var(#{$form-control-valid-border-color-var});
+    outline-color: var(#{$form-control-valid-focus-ring-color-var});
+  }
 }

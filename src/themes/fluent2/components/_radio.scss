@@ -1,0 +1,8 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .radio {
+    --radio-mark-size: 72%;
+    --radio-border-width: 1px;
+  }
+}
