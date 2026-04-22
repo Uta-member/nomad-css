@@ -1,5 +1,5 @@
 @charset "UTF-8";
-:root[data-theme=bootstrap] {
+:root[data-theme=bootstrap5] {
   --palette-hue: var(--neutral-hue);
   --palette-saturation: var(--neutral-saturation);
   --palette-lightness-0: var(--neutral-lightness-0);
@@ -193,8 +193,8 @@
   --info-accent-darker: var(--info-accent-8);
 }
 
-:root[data-theme=bootstrap],
-:root[data-theme=bootstrap][data-color-scheme=light] {
+:root[data-theme=bootstrap5],
+:root[data-theme=bootstrap5][data-color-scheme=light] {
   --border-color: #dee2e6;
   --border-color-subtle: #e9ecef;
   --border-color-strong: #adb5bd;
@@ -209,7 +209,7 @@
   --surface-color-deep: #dee2e6;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] {
+:root[data-theme=bootstrap5][data-color-scheme=dark] {
   --border-color: #495057;
   --border-color-subtle: #343a40;
   --border-color-strong: #6c757d;
@@ -236,7 +236,7 @@
   --info-accent-default: var(--info-accent-3);
 }
 
-:root[data-theme=bootstrap] {
+:root[data-theme=bootstrap5] {
   --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-size-base: 1rem;
@@ -249,7 +249,7 @@
   --line-height-base: 1.5;
 }
 
-:root[data-theme=bootstrap] {
+:root[data-theme=bootstrap5] {
   --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
@@ -257,13 +257,13 @@
   --shadow-none: none;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] {
+:root[data-theme=bootstrap5][data-color-scheme=dark] {
   --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
   --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.6);
 }
 
-:root[data-theme=bootstrap] .button {
+:root[data-theme=bootstrap5] .button {
   --button-border-radius: 0.375rem;
   --button-border-width: 1px;
   --button-padding: 0.375rem 0.75rem;
@@ -276,39 +276,39 @@
   --button-focus-ring-offset-width: 0;
   --button-disabled-opacity: 0.65;
 }
-:root[data-theme=bootstrap] .button.sm {
+:root[data-theme=bootstrap5] .button.sm {
   --button-padding: 0.25rem 0.5rem;
   --button-font-size: 0.875rem;
   --button-border-radius: 0.25rem;
 }
-:root[data-theme=bootstrap] .button.lg {
+:root[data-theme=bootstrap5] .button.lg {
   --button-padding: 0.5rem 1rem;
   --button-font-size: 1.25rem;
   --button-border-radius: 0.5rem;
 }
-:root[data-theme=bootstrap] .button.filled {
+:root[data-theme=bootstrap5] .button.filled {
   --button-hover-bg-color: var(--palette-dark);
   --button-hover-border-color: var(--palette-dark);
   --button-active-bg-color: var(--palette-darker);
   --button-active-border-color: var(--palette-darker);
 }
-:root[data-theme=bootstrap] .button.outlined {
+:root[data-theme=bootstrap5] .button.outlined {
   --button-hover-bg-color: var(--palette-darker);
   --button-hover-color: var(--palette-accent-darker);
   --button-active-bg-color: var(--palette-dark);
   --button-active-color: var(--palette-accent-dark);
 }
-:root[data-theme=bootstrap] .button.text {
+:root[data-theme=bootstrap5] .button.text {
   --button-disabled-opacity: 0.65;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .button.filled {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .button.filled {
   --button-hover-bg-color: var(--palette-light);
   --button-hover-border-color: var(--palette-light);
   --button-active-bg-color: var(--palette-lighter);
 }
 
-:root[data-theme=bootstrap] .accordion {
+:root[data-theme=bootstrap5] .accordion {
   --accordion-border-radius: 0.375rem;
   --accordion-border-width: 1px;
   --accordion-header-padding: 1rem 1.25rem;
@@ -321,7 +321,7 @@
   --accordion-transition: transform 0.2s ease-in-out;
 }
 
-:root[data-theme=bootstrap] .alert {
+:root[data-theme=bootstrap5] .alert {
   --alert-border-radius: 0.375rem;
   --alert-border-width: 1px;
   --alert-padding: 1rem 1rem;
@@ -329,7 +329,7 @@
   --alert-icon-size: 1rem;
 }
 
-:root[data-theme=bootstrap] .checkbox {
+:root[data-theme=bootstrap5] .checkbox {
   --checkbox-border-radius: 0.25rem;
   --checkbox-border-width: 1px;
   --checkbox-size: 1em;
@@ -340,12 +340,12 @@
   --checkbox-label-gap: 0.5rem;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .checkbox {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .checkbox {
   --checkbox-border-color: #6c757d;
   --checkbox-bg-color: #343a40;
 }
 
-:root[data-theme=bootstrap] .chip {
+:root[data-theme=bootstrap5] .chip {
   --chip-border-radius: 0.375rem;
   --chip-border-width: 1px;
   --chip-padding: 0.35em 0.65em;
@@ -354,7 +354,7 @@
   --chip-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-:root[data-theme=bootstrap] .form-control {
+:root[data-theme=bootstrap5] .form-control {
   --form-control-border-radius: 0.375rem;
   --form-control-border-width: 1px;
   --form-control-padding: 0.375rem 0.75rem;
@@ -369,14 +369,14 @@
   --form-control-disabled-color: #6c757d;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .form-control {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .form-control {
   --form-control-border-color: #495057;
   --form-control-bg-color: #212529;
   --form-control-disabled-bg-color: #343a40;
   --form-control-disabled-color: #6c757d;
 }
 
-:root[data-theme=bootstrap] .list {
+:root[data-theme=bootstrap5] .list {
   --list-border-radius: 0.375rem;
   --list-border-width: 1px;
   --list-item-padding: 0.5rem 1rem;
@@ -387,12 +387,12 @@
   --list-item-active-color: #ffffff;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .list {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .list {
   --list-item-hover-bg-color: #343a40;
   --list-border-color: #495057;
 }
 
-:root[data-theme=bootstrap] .radio {
+:root[data-theme=bootstrap5] .radio {
   --radio-border-width: 1px;
   --radio-size: 1em;
   --radio-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -402,12 +402,12 @@
   --radio-label-gap: 0.5rem;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .radio {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .radio {
   --radio-border-color: #6c757d;
   --radio-bg-color: #343a40;
 }
 
-:root[data-theme=bootstrap] .select {
+:root[data-theme=bootstrap5] .select {
   --select-border-radius: 0.375rem;
   --select-border-width: 1px;
   --select-padding: 0.375rem 2.25rem 0.375rem 0.75rem;
@@ -422,32 +422,32 @@
   --select-disabled-color: #6c757d;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .select {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .select {
   --select-border-color: #495057;
   --select-bg-color: #212529;
   --select-disabled-bg-color: #343a40;
   --select-disabled-color: #6c757d;
 }
 
-:root[data-theme=bootstrap] .skeleton {
+:root[data-theme=bootstrap5] .skeleton {
   --skeleton-border-radius: 0.375rem;
   --skeleton-base-color: #e2e5e7;
   --skeleton-highlight-color: #eee;
   --skeleton-animation-duration: 1s;
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .skeleton {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .skeleton {
   --skeleton-base-color: #343a40;
   --skeleton-highlight-color: #495057;
 }
 
-:root[data-theme=bootstrap] .spinner {
+:root[data-theme=bootstrap5] .spinner {
   --spinner-border-width: 0.25em;
   --spinner-animation-duration: 0.75s;
   --spinner-color: var(--primary-default);
 }
 
-:root[data-theme=bootstrap] .switch {
+:root[data-theme=bootstrap5] .switch {
   --switch-border-radius: 0.5rem;
   --switch-border-width: 1px;
   --switch-track-width: 3em;
@@ -462,9 +462,9 @@
   --switch-focus-ring-color: color-mix(in srgb, var(--primary-default), transparent 75%);
 }
 
-:root[data-theme=bootstrap][data-color-scheme=dark] .switch {
+:root[data-theme=bootstrap5][data-color-scheme=dark] .switch {
   --switch-unchecked-bg-color: #6c757d;
   --switch-thumb-bg-color: rgba(255, 255, 255, 0.9);
 }
 
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=bootstrap5.css.map */
