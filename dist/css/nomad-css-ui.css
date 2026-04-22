@@ -8699,8 +8699,6 @@ h6,
   --checkbox-focus-ring-width: 2px;
   --checkbox-focus-ring-color: var(--palette-default);
   --checkbox-focus-ring-offset-width: 2px;
-  --checkbox-invalid-border-color: var(--danger-default);
-  --checkbox-valid-border-color: var(--success-default);
 }
 
 .checkbox {
@@ -8803,20 +8801,6 @@ h6,
   mask-image: var(--checkbox-indeterminate-mark-image);
 }
 
-.checkbox.is-invalid {
-  --checkbox-border-color: var(--checkbox-invalid-border-color);
-  --checkbox-hover-border-color: var(--checkbox-invalid-border-color);
-  --checkbox-active-border-color: var(--checkbox-invalid-border-color);
-  --checkbox-focus-border-color: var(--checkbox-invalid-border-color);
-}
-
-.checkbox.is-valid {
-  --checkbox-border-color: var(--checkbox-valid-border-color);
-  --checkbox-hover-border-color: var(--checkbox-valid-border-color);
-  --checkbox-active-border-color: var(--checkbox-valid-border-color);
-  --checkbox-focus-border-color: var(--checkbox-valid-border-color);
-}
-
 .radio {
   --radio-bg-color: transparent;
   --radio-hover-bg-color: var(--surface-color);
@@ -8854,8 +8838,6 @@ h6,
   --radio-focus-ring-width: 2px;
   --radio-focus-ring-color: var(--palette-default);
   --radio-focus-ring-offset-width: 2px;
-  --radio-invalid-border-color: var(--danger-default);
-  --radio-valid-border-color: var(--success-default);
 }
 
 .radio {
@@ -8956,20 +8938,6 @@ h6,
   background-color: var(--radio-disabled-mark-color);
 }
 
-.radio.is-invalid {
-  --radio-border-color: var(--radio-invalid-border-color);
-  --radio-hover-border-color: var(--radio-invalid-border-color);
-  --radio-active-border-color: var(--radio-invalid-border-color);
-  --radio-focus-border-color: var(--radio-invalid-border-color);
-}
-
-.radio.is-valid {
-  --radio-border-color: var(--radio-valid-border-color);
-  --radio-hover-border-color: var(--radio-valid-border-color);
-  --radio-active-border-color: var(--radio-valid-border-color);
-  --radio-focus-border-color: var(--radio-valid-border-color);
-}
-
 .range {
   --range-accent-color: var(--palette-default);
 }
@@ -9045,10 +9013,6 @@ h6,
   --form-control-disabled-cursor: not-allowed;
   --form-control-readonly-cursor: default;
   --form-control-transition: 0.2s, outline 0.05s;
-  --form-control-invalid-border-color: var(--danger-default);
-  --form-control-valid-border-color: var(--success-default);
-  --form-control-invalid-focus-ring-color: var(--danger-default);
-  --form-control-valid-focus-ring-color: var(--success-default);
 }
 
 .form-control {
@@ -9166,34 +9130,6 @@ h6,
   box-shadow: 0 calc(-1 * var(--form-control-focus-ring-width)) 0 0 var(--form-control-focus-ring-color) inset;
 }
 
-.form-control.is-invalid {
-  border-color: var(--form-control-invalid-border-color);
-}
-.form-control.is-invalid:hover {
-  border-color: var(--form-control-invalid-border-color);
-}
-.form-control.is-invalid:active {
-  border-color: var(--form-control-invalid-border-color);
-}
-.form-control.is-invalid:focus-visible {
-  border-color: var(--form-control-invalid-border-color);
-  outline-color: var(--form-control-invalid-focus-ring-color);
-}
-
-.form-control.is-valid {
-  border-color: var(--form-control-valid-border-color);
-}
-.form-control.is-valid:hover {
-  border-color: var(--form-control-valid-border-color);
-}
-.form-control.is-valid:active {
-  border-color: var(--form-control-valid-border-color);
-}
-.form-control.is-valid:focus-visible {
-  border-color: var(--form-control-valid-border-color);
-  outline-color: var(--form-control-valid-focus-ring-color);
-}
-
 .form-hint {
   --form-hint-color: var(--text-color-subtle);
   --form-hint-invalid-color: var(--danger-dark);
@@ -9254,10 +9190,6 @@ h6,
   --select-cursor: pointer;
   --select-disabled-cursor: not-allowed;
   --select-transition: 0.2s, outline 0.05s;
-  --select-invalid-border-color: var(--danger-default);
-  --select-valid-border-color: var(--success-default);
-  --select-invalid-focus-ring-color: var(--danger-default);
-  --select-valid-focus-ring-color: var(--success-default);
 }
 
 .select {
@@ -9377,22 +9309,6 @@ h6,
 .select.underline:focus-visible {
   outline: none;
   box-shadow: 0 -1px 0 0 var(--select-focus-ring-color) inset;
-}
-
-.select.is-invalid {
-  --select-border-color: var(--select-invalid-border-color);
-  --select-hover-border-color: var(--select-invalid-border-color);
-  --select-active-border-color: var(--select-invalid-border-color);
-  --select-focus-border-color: var(--select-invalid-border-color);
-  --select-focus-ring-color: var(--select-invalid-focus-ring-color);
-}
-
-.select.is-valid {
-  --select-border-color: var(--select-valid-border-color);
-  --select-hover-border-color: var(--select-valid-border-color);
-  --select-active-border-color: var(--select-valid-border-color);
-  --select-focus-border-color: var(--select-valid-border-color);
-  --select-focus-ring-color: var(--select-valid-focus-ring-color);
 }
 
 .table {
@@ -9892,6 +9808,8 @@ h6,
   --accordion-header-color: var(--text-color);
   --accordion-header-open-bg-color: var(--surface-color-sunken);
   --accordion-header-open-color: var(--text-color);
+  --accordion-header-hover-open-bg-color: var(--surface-color-deep);
+  --accordion-header-hover-open-color: var(--text-color);
   --accordion-border-color: var(--border-color);
   --accordion-border-radius: 0.25rem;
   --accordion-border-width: var(--border-width);
@@ -9954,7 +9872,8 @@ h6,
   color: var(--accordion-header-open-color);
 }
 .accordion[open] > .accordion-header:hover {
-  background-color: var(--accordion-header-hover-bg-color);
+  background-color: var(--accordion-header-hover-open-bg-color);
+  color: var(--accordion-header-hover-open-color);
 }
 .accordion[open] > .accordion-header:not(:has(.accordion-icon))::after {
   transform: rotate(var(--accordion-icon-open-rotation));

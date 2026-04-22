@@ -94,14 +94,6 @@ $select-disabled-cursor-var: --#{$select-prefix}disabled-cursor !default;
 // --------------------------------------------
 $select-transition-var: --#{$select-prefix}transition !default;
 
-// --------------------------------------------
-// Validation
-// --------------------------------------------
-$select-invalid-border-color-var: --#{$select-prefix}invalid-border-color !default;
-$select-valid-border-color-var: --#{$select-prefix}valid-border-color !default;
-$select-invalid-focus-ring-color-var: --#{$select-prefix}invalid-focus-ring-color !default;
-$select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !default;
-
 // ============================================
 // Process
 // ============================================
@@ -204,14 +196,6 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
   #{$select-transition-var}:
     0.2s,
     outline 0.05s;
-
-  // --------------------------------------------
-  // Validation
-  // --------------------------------------------
-  #{$select-invalid-border-color-var}: var(--danger-default);
-  #{$select-valid-border-color-var}: var(--success-default);
-  #{$select-invalid-focus-ring-color-var}: var(--danger-default);
-  #{$select-valid-focus-ring-color-var}: var(--success-default);
 }
 
 // ============================================
@@ -358,22 +342,4 @@ $select-valid-focus-ring-color-var: --#{$select-prefix}valid-focus-ring-color !d
     outline: none;
     box-shadow: 0 -1px 0 0 var(#{$select-focus-ring-color-var}) inset;
   }
-}
-
-// ============================================
-// Validation
-// ============================================
-.#{$select-class-name}.is-invalid {
-  #{$select-border-color-var}: var(#{$select-invalid-border-color-var});
-  #{$select-hover-border-color-var}: var(#{$select-invalid-border-color-var});
-  #{$select-active-border-color-var}: var(#{$select-invalid-border-color-var});
-  #{$select-focus-border-color-var}: var(#{$select-invalid-border-color-var});
-  #{$select-focus-ring-color-var}: var(#{$select-invalid-focus-ring-color-var});
-}
-.#{$select-class-name}.is-valid {
-  #{$select-border-color-var}: var(#{$select-valid-border-color-var});
-  #{$select-hover-border-color-var}: var(#{$select-valid-border-color-var});
-  #{$select-active-border-color-var}: var(#{$select-valid-border-color-var});
-  #{$select-focus-border-color-var}: var(#{$select-valid-border-color-var});
-  #{$select-focus-ring-color-var}: var(#{$select-valid-focus-ring-color-var});
 }

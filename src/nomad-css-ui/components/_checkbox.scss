@@ -89,12 +89,6 @@ $checkbox-focus-ring-width-var: --#{$checkbox-prefix}focus-ring-width !default;
 $checkbox-focus-ring-color-var: --#{$checkbox-prefix}focus-ring-color !default;
 $checkbox-focus-ring-offset-width-var: --#{$checkbox-prefix}focus-ring-offset-width !default;
 
-// --------------------------------------------
-// Validation
-// --------------------------------------------
-$checkbox-invalid-border-color-var: --#{$checkbox-prefix}invalid-border-color !default;
-$checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !default;
-
 // ============================================
 // Process
 // ============================================
@@ -200,12 +194,6 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
   #{$checkbox-focus-ring-width-var}: 2px;
   #{$checkbox-focus-ring-color-var}: var(#{palette.$palette-default-var});
   #{$checkbox-focus-ring-offset-width-var}: 2px;
-
-  // --------------------------------------------
-  // Validation
-  // --------------------------------------------
-  #{$checkbox-invalid-border-color-var}: var(--danger-default);
-  #{$checkbox-valid-border-color-var}: var(--success-default);
 }
 
 // ============================================
@@ -325,28 +313,4 @@ $checkbox-valid-border-color-var: --#{$checkbox-prefix}valid-border-color !defau
   &:indeterminate::before {
     mask-image: var(#{$checkbox-indeterminate-mark-image-var});
   }
-}
-
-// ============================================
-// Validation
-// ============================================
-.#{$checkbox-class-name}.is-invalid {
-  #{$checkbox-border-color-var}: var(#{$checkbox-invalid-border-color-var});
-  #{$checkbox-hover-border-color-var}: var(
-    #{$checkbox-invalid-border-color-var}
-  );
-  #{$checkbox-active-border-color-var}: var(
-    #{$checkbox-invalid-border-color-var}
-  );
-  #{$checkbox-focus-border-color-var}: var(
-    #{$checkbox-invalid-border-color-var}
-  );
-}
-.#{$checkbox-class-name}.is-valid {
-  #{$checkbox-border-color-var}: var(#{$checkbox-valid-border-color-var});
-  #{$checkbox-hover-border-color-var}: var(#{$checkbox-valid-border-color-var});
-  #{$checkbox-active-border-color-var}: var(
-    #{$checkbox-valid-border-color-var}
-  );
-  #{$checkbox-focus-border-color-var}: var(#{$checkbox-valid-border-color-var});
 }

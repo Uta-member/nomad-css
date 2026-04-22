@@ -6,11 +6,25 @@
     --checkbox-border-radius: 0.25rem;
     --checkbox-border-width: 1px;
     --checkbox-size: 1em;
-    --checkbox-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --checkbox-transition:
+      background-color 0.15s ease-in-out, background-position 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     --checkbox-focus-ring-width: 0.25rem;
     --checkbox-focus-ring-offset-width: 0;
-    --checkbox-focus-ring-color: color-mix(in srgb, var(--primary-default), transparent 75%);
+    --checkbox-focus-ring-color: color-mix(
+      in srgb,
+      var(--primary-default),
+      transparent 75%
+    );
     --checkbox-label-gap: 0.5rem;
+    --checkbox-disabled-opacity: 0.5;
+    --checkbox-disabled-bg-color: var(--checkbox-bg-color);
+    --checkbox-disabled-border-color: var(--checkbox-border-color);
+    --checkbox-disabled-mark-color: var(--checkbox-mark-color);
+    --checkbox-checked-disabled-bg-color: var(--checkbox-checked-bg-color);
+    --checkbox-checked-disabled-border-color: var(
+      --checkbox-checked-border-color
+    );
   }
 }
 

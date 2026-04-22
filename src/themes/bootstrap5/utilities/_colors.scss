@@ -5,90 +5,87 @@
 // ============================================================
 
 // ============================================================
-// Default palette mapping (to neutral)
+// Default palette mapping (to primary)
 // ============================================================
 :root[data-theme="#{prefixes.$theme-name}"] {
-  --palette-hue: var(--neutral-hue);
-  --palette-saturation: var(--neutral-saturation);
-  --palette-lightness-0: var(--neutral-lightness-0);
-  --palette-color-0: var(--neutral-color-0);
-  --palette-color-0-ch: var(--neutral-color-0-ch);
-  --palette-gray-0: var(--neutral-gray-0);
-  --palette-accent-0: var(--neutral-accent-0);
-  --palette-lightness-1: var(--neutral-lightness-1);
-  --palette-color-1: var(--neutral-color-1);
-  --palette-color-1-ch: var(--neutral-color-1-ch);
-  --palette-gray-1: var(--neutral-gray-1);
-  --palette-accent-1: var(--neutral-accent-1);
-  --palette-lightness-2: var(--neutral-lightness-2);
-  --palette-color-2: var(--neutral-color-2);
-  --palette-color-2-ch: var(--neutral-color-2-ch);
-  --palette-gray-2: var(--neutral-gray-2);
-  --palette-accent-2: var(--neutral-accent-2);
-  --palette-lightness-3: var(--neutral-lightness-3);
-  --palette-color-3: var(--neutral-color-3);
-  --palette-color-3-ch: var(--neutral-color-3-ch);
-  --palette-gray-3: var(--neutral-gray-3);
-  --palette-accent-3: var(--neutral-accent-3);
-  --palette-lightness-4: var(--neutral-lightness-4);
-  --palette-color-4: var(--neutral-color-4);
-  --palette-color-4-ch: var(--neutral-color-4-ch);
-  --palette-gray-4: var(--neutral-gray-4);
-  --palette-accent-4: var(--neutral-accent-4);
-  --palette-lightness-5: var(--neutral-lightness-5);
-  --palette-color-5: var(--neutral-color-5);
-  --palette-color-5-ch: var(--neutral-color-5-ch);
-  --palette-gray-5: var(--neutral-gray-5);
-  --palette-accent-5: var(--neutral-accent-5);
-  --palette-lightness-6: var(--neutral-lightness-6);
-  --palette-color-6: var(--neutral-color-6);
-  --palette-color-6-ch: var(--neutral-color-6-ch);
-  --palette-gray-6: var(--neutral-gray-6);
-  --palette-accent-6: var(--neutral-accent-6);
-  --palette-lightness-7: var(--neutral-lightness-7);
-  --palette-color-7: var(--neutral-color-7);
-  --palette-color-7-ch: var(--neutral-color-7-ch);
-  --palette-gray-7: var(--neutral-gray-7);
-  --palette-accent-7: var(--neutral-accent-7);
-  --palette-lightness-8: var(--neutral-lightness-8);
-  --palette-color-8: var(--neutral-color-8);
-  --palette-color-8-ch: var(--neutral-color-8-ch);
-  --palette-gray-8: var(--neutral-gray-8);
-  --palette-accent-8: var(--neutral-accent-8);
-  --palette-lightness-9: var(--neutral-lightness-9);
-  --palette-color-9: var(--neutral-color-9);
-  --palette-color-9-ch: var(--neutral-color-9-ch);
-  --palette-gray-9: var(--neutral-gray-9);
-  --palette-accent-9: var(--neutral-accent-9);
-  --palette-lightness-10: var(--neutral-lightness-10);
-  --palette-color-10: var(--neutral-color-10);
-  --palette-color-10-ch: var(--neutral-color-10-ch);
-  --palette-gray-10: var(--neutral-gray-10);
-  --palette-accent-10: var(--neutral-accent-10);
-  --palette-lighter: var(--neutral-lighter);
-  --palette-accent-lighter: var(--neutral-accent-lighter);
-  --palette-lighter-ch: var(--neutral-lighter-ch);
-  --palette-light: var(--neutral-light);
-  --palette-accent-light: var(--neutral-accent-light);
-  --palette-light-ch: var(--neutral-light-ch);
-  --palette-default: var(--neutral-default);
-  --palette-accent-default: var(--neutral-accent-default);
-  --palette-default-ch: var(--neutral-default-ch);
-  --palette-dark: var(--neutral-dark);
-  --palette-accent-dark: var(--neutral-accent-dark);
-  --palette-dark-ch: var(--neutral-dark-ch);
-  --palette-darker: var(--neutral-darker);
-  --palette-accent-darker: var(--neutral-accent-darker);
-  --palette-darker-ch: var(--neutral-darker-ch);
+  --palette-hue: var(--primary-hue);
+  --palette-saturation: var(--primary-saturation);
+  --palette-lightness-0: var(--primary-lightness-0);
+  --palette-color-0: var(--primary-color-0);
+  --palette-color-0-ch: var(--primary-color-0-ch);
+  --palette-gray-0: var(--primary-gray-0);
+  --palette-accent-0: var(--primary-accent-0);
+  --palette-lightness-1: var(--primary-lightness-1);
+  --palette-color-1: var(--primary-color-1);
+  --palette-color-1-ch: var(--primary-color-1-ch);
+  --palette-gray-1: var(--primary-gray-1);
+  --palette-accent-1: var(--primary-accent-1);
+  --palette-lightness-2: var(--primary-lightness-2);
+  --palette-color-2: var(--primary-color-2);
+  --palette-color-2-ch: var(--primary-color-2-ch);
+  --palette-gray-2: var(--primary-gray-2);
+  --palette-accent-2: var(--primary-accent-2);
+  --palette-lightness-3: var(--primary-lightness-3);
+  --palette-color-3: var(--primary-color-3);
+  --palette-color-3-ch: var(--primary-color-3-ch);
+  --palette-gray-3: var(--primary-gray-3);
+  --palette-accent-3: var(--primary-accent-3);
+  --palette-lightness-4: var(--primary-lightness-4);
+  --palette-color-4: var(--primary-color-4);
+  --palette-color-4-ch: var(--primary-color-4-ch);
+  --palette-gray-4: var(--primary-gray-4);
+  --palette-accent-4: var(--primary-accent-4);
+  --palette-lightness-5: var(--primary-lightness-5);
+  --palette-color-5: var(--primary-color-5);
+  --palette-color-5-ch: var(--primary-color-5-ch);
+  --palette-gray-5: var(--primary-gray-5);
+  --palette-accent-5: var(--primary-accent-5);
+  --palette-lightness-6: var(--primary-lightness-6);
+  --palette-color-6: var(--primary-color-6);
+  --palette-color-6-ch: var(--primary-color-6-ch);
+  --palette-gray-6: var(--primary-gray-6);
+  --palette-accent-6: var(--primary-accent-6);
+  --palette-lightness-7: var(--primary-lightness-7);
+  --palette-color-7: var(--primary-color-7);
+  --palette-color-7-ch: var(--primary-color-7-ch);
+  --palette-gray-7: var(--primary-gray-7);
+  --palette-accent-7: var(--primary-accent-7);
+  --palette-lightness-8: var(--primary-lightness-8);
+  --palette-color-8: var(--primary-color-8);
+  --palette-color-8-ch: var(--primary-color-8-ch);
+  --palette-gray-8: var(--primary-gray-8);
+  --palette-accent-8: var(--primary-accent-8);
+  --palette-lightness-9: var(--primary-lightness-9);
+  --palette-color-9: var(--primary-color-9);
+  --palette-color-9-ch: var(--primary-color-9-ch);
+  --palette-gray-9: var(--primary-gray-9);
+  --palette-accent-9: var(--primary-accent-9);
+  --palette-lightness-10: var(--primary-lightness-10);
+  --palette-color-10: var(--primary-color-10);
+  --palette-color-10-ch: var(--primary-color-10-ch);
+  --palette-gray-10: var(--primary-gray-10);
+  --palette-accent-10: var(--primary-accent-10);
+  --palette-lighter: var(--primary-lighter);
+  --palette-accent-lighter: var(--primary-accent-lighter);
+  --palette-lighter-ch: var(--primary-lighter-ch);
+  --palette-light: var(--primary-light);
+  --palette-accent-light: var(--primary-accent-light);
+  --palette-light-ch: var(--primary-light-ch);
+  --palette-default: var(--primary-default);
+  --palette-accent-default: var(--primary-accent-default);
+  --palette-default-ch: var(--primary-default-ch);
+  --palette-dark: var(--primary-dark);
+  --palette-accent-dark: var(--primary-accent-dark);
+  --palette-dark-ch: var(--primary-dark-ch);
+  --palette-darker: var(--primary-darker);
+  --palette-accent-darker: var(--primary-accent-darker);
+  --palette-darker-ch: var(--primary-darker-ch);
 
-  // ============================================================
-  // Primary — Bootstrap Blue hsl(220, 98%, 52%)
-  // ============================================================
   --primary-hue: 220;
   --primary-saturation: 98%;
-  --primary-lighter: var(--primary-color-2);
-  --primary-lighter-ch: var(--primary-color-2-ch);
-  --primary-accent-lighter: var(--primary-accent-2);
+  --primary-lighter: var(--primary-color-1);
+  --primary-lighter-ch: var(--primary-color-1-ch);
+  --primary-accent-lighter: var(--primary-accent-1);
   --primary-light: var(--primary-color-3);
   --primary-light-ch: var(--primary-color-3-ch);
   --primary-accent-light: var(--primary-accent-3);
@@ -102,14 +99,11 @@
   --primary-darker-ch: var(--primary-color-8-ch);
   --primary-accent-darker: var(--primary-accent-8);
 
-  // ============================================================
-  // Secondary — Bootstrap Gray hsl(213, 9%, 45%)
-  // ============================================================
   --secondary-hue: 213;
   --secondary-saturation: 9%;
-  --secondary-lighter: var(--secondary-color-2);
-  --secondary-lighter-ch: var(--secondary-color-2-ch);
-  --secondary-accent-lighter: var(--secondary-accent-2);
+  --secondary-lighter: var(--secondary-color-1);
+  --secondary-lighter-ch: var(--secondary-color-1-ch);
+  --secondary-accent-lighter: var(--secondary-accent-1);
   --secondary-light: var(--secondary-color-3);
   --secondary-light-ch: var(--secondary-color-3-ch);
   --secondary-accent-light: var(--secondary-accent-3);
@@ -123,14 +117,11 @@
   --secondary-darker-ch: var(--secondary-color-9-ch);
   --secondary-accent-darker: var(--secondary-accent-9);
 
-  // ============================================================
-  // Tertiary — Bootstrap Teal/Cyan hsl(186, 90%)
-  // ============================================================
   --tertiary-hue: 186;
   --tertiary-saturation: 90%;
-  --tertiary-lighter: var(--tertiary-color-2);
-  --tertiary-lighter-ch: var(--tertiary-color-2-ch);
-  --tertiary-accent-lighter: var(--tertiary-accent-2);
+  --tertiary-lighter: var(--tertiary-color-1);
+  --tertiary-lighter-ch: var(--tertiary-color-1-ch);
+  --tertiary-accent-lighter: var(--tertiary-accent-1);
   --tertiary-light: var(--tertiary-color-3);
   --tertiary-light-ch: var(--tertiary-color-3-ch);
   --tertiary-accent-light: var(--tertiary-accent-3);
@@ -144,14 +135,11 @@
   --tertiary-darker-ch: var(--tertiary-color-9-ch);
   --tertiary-accent-darker: var(--tertiary-accent-9);
 
-  // ============================================================
-  // Danger — Bootstrap Red #dc3545 hsl(354, 71%, 52%)
-  // ============================================================
   --danger-hue: 354;
   --danger-saturation: 71%;
-  --danger-lighter: var(--danger-color-2);
-  --danger-lighter-ch: var(--danger-color-2-ch);
-  --danger-accent-lighter: var(--danger-accent-2);
+  --danger-lighter: var(--danger-color-1);
+  --danger-lighter-ch: var(--danger-color-1-ch);
+  --danger-accent-lighter: var(--danger-accent-1);
   --danger-light: var(--danger-color-3);
   --danger-light-ch: var(--danger-color-3-ch);
   --danger-accent-light: var(--danger-accent-3);
@@ -165,14 +153,11 @@
   --danger-darker-ch: var(--danger-color-8-ch);
   --danger-accent-darker: var(--danger-accent-8);
 
-  // ============================================================
-  // Success — Bootstrap Green #198754 hsl(152, 68%, 32%)
-  // ============================================================
   --success-hue: 152;
   --success-saturation: 68%;
-  --success-lighter: var(--success-color-2);
-  --success-lighter-ch: var(--success-color-2-ch);
-  --success-accent-lighter: var(--success-accent-2);
+  --success-lighter: var(--success-color-1);
+  --success-lighter-ch: var(--success-color-1-ch);
+  --success-accent-lighter: var(--success-accent-1);
   --success-light: var(--success-color-3);
   --success-light-ch: var(--success-color-3-ch);
   --success-accent-light: var(--success-accent-3);
@@ -186,9 +171,6 @@
   --success-darker-ch: var(--success-color-9-ch);
   --success-accent-darker: var(--success-accent-9);
 
-  // ============================================================
-  // Warning — Bootstrap Yellow #ffc107 hsl(45, 100%, 51%)
-  // ============================================================
   --warning-hue: 45;
   --warning-saturation: 100%;
   --warning-lighter: var(--warning-color-1);
@@ -207,14 +189,11 @@
   --warning-darker-ch: var(--warning-color-8-ch);
   --warning-accent-darker: var(--warning-accent-8);
 
-  // ============================================================
-  // Info — Bootstrap Cyan #0dcaf0 hsl(192, 100%, 50%)
-  // ============================================================
   --info-hue: 192;
   --info-saturation: 100%;
-  --info-lighter: var(--info-color-2);
-  --info-lighter-ch: var(--info-color-2-ch);
-  --info-accent-lighter: var(--info-accent-2);
+  --info-lighter: var(--info-color-1);
+  --info-lighter-ch: var(--info-color-1-ch);
+  --info-accent-lighter: var(--info-accent-1);
   --info-light: var(--info-color-3);
   --info-light-ch: var(--info-color-3-ch);
   --info-accent-light: var(--info-accent-3);
@@ -270,16 +249,28 @@
   --surface-color-deep: #0f1012;
 
   --primary-default: var(--primary-color-3);
+  --primary-default-ch: var(--primary-color-3-ch);
   --primary-accent-default: var(--primary-accent-3);
   --primary-dark: var(--primary-color-4);
+  --primary-dark-ch: var(--primary-color-4-ch);
+  --primary-accent-dark: var(--primary-accent-4);
   --primary-darker: var(--primary-color-6);
+  --primary-darker-ch: var(--primary-color-6-ch);
+  --primary-accent-darker: var(--primary-accent-6);
 
   --danger-default: var(--danger-color-4);
+  --danger-default-ch: var(--danger-color-4-ch);
   --danger-accent-default: var(--danger-accent-4);
+
   --success-default: var(--success-color-5);
+  --success-default-ch: var(--success-color-5-ch);
   --success-accent-default: var(--success-accent-5);
+
   --warning-default: var(--warning-color-4);
+  --warning-default-ch: var(--warning-color-4-ch);
   --warning-accent-default: var(--warning-accent-4);
+
   --info-default: var(--info-color-3);
+  --info-default-ch: var(--info-color-3-ch);
   --info-accent-default: var(--info-accent-3);
 }

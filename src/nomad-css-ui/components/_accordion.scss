@@ -32,6 +32,8 @@ $accordion-header-hover-bg-color-var: --#{$accordion-prefix}header-hover-bg-colo
 $accordion-header-color-var: --#{$accordion-prefix}header-color !default;
 $accordion-header-open-bg-color-var: --#{$accordion-prefix}header-open-bg-color !default;
 $accordion-header-open-color-var: --#{$accordion-prefix}header-open-color !default;
+$accordion-header-hover-open-bg-color-var: --#{$accordion-prefix}header-hover-open-bg-color !default;
+$accordion-header-hover-open-color-var: --#{$accordion-prefix}header-hover-open-color !default;
 
 // --------------------------------------------
 // Border
@@ -85,6 +87,12 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
     #{color-defines.$surface-color-sunken-var}
   );
   #{$accordion-header-open-color-var}: var(#{color-defines.$text-color-var});
+  #{$accordion-header-hover-open-bg-color-var}: var(
+    #{color-defines.$surface-color-deep-var}
+  );
+  #{$accordion-header-hover-open-color-var}: var(
+    #{color-defines.$text-color-var}
+  );
 
   // --------------------------------------------
   // Border
@@ -178,7 +186,8 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
     color: var(#{$accordion-header-open-color-var});
 
     &:hover {
-      background-color: var(#{$accordion-header-hover-bg-color-var});
+      background-color: var(#{$accordion-header-hover-open-bg-color-var});
+      color: var(#{$accordion-header-hover-open-color-var});
     }
 
     &:not(:has(.#{$accordion-icon-class-name}))::after {

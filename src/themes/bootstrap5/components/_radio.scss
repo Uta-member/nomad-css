@@ -3,19 +3,24 @@
 // Bootstrap 5: radio with focus shadow
 :root[data-theme="#{prefixes.$theme-name}"] {
   .radio {
+    --radio-border-color: var(--control-border-color);
     --radio-border-width: 1px;
-    --radio-size: 1em;
-    --radio-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    --radio-focus-ring-width: 0.25rem;
-    --radio-focus-ring-offset-width: 0;
-    --radio-focus-ring-color: color-mix(in srgb, var(--primary-default), transparent 75%);
-    --radio-label-gap: 0.5rem;
-  }
-}
+    --radio-bg-color: var(--surface-color-overlay);
+    --radio-checked-bg-color: var(--palette-default);
+    --radio-checked-border-color: var(--radio-checked-bg-color);
+    --radio-checked-hover-bg-color: var(--radio-checked-bg-color);
+    --radio-checked-hover-border-color: var(--radio-checked-border-color);
+    --radio-checked-active-bg-color: var(--radio-checked-bg-color);
+    --radio-checked-active-border-color: var(--radio-checked-border-color);
+    --radio-checked-focus-bg-color: var(--radio-checked-bg-color);
+    --radio-checked-focus-border-color: var(--radio-checked-border-color);
+    --radio-mark-color: var(--surface-color-overlay);
 
-:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="dark"] {
-  .radio {
-    --radio-border-color: #6c757d;
-    --radio-bg-color: #343a40;
+    --radio-disabled-bg-color: var(--radio-bg-color);
+    --radio-checked-disabled-bg-color: var(--radio-checked-bg-color);
+    --radio-disabled-border-color: var(--radio-border-color);
+    --radio-disabled-mark-color: var(--radio-mark-color);
+
+    --radio-disabled-opacity: 0.5;
   }
 }

@@ -17,7 +17,7 @@
     "build:showcase": "eleventy --input=showcase --output=_site",
     "build": "npm run build:css && npm run build:showcase",
     "watch:css": "sass --watch src/nomad-css-ui.scss:dist/css/nomad-css-ui.css src/themes/default/default.scss:dist/css/default.css src/themes/fluent2/fluent2.scss:dist/css/fluent2.css src/themes/material3/material3.scss:dist/css/material3.css src/themes/bootstrap5/bootstrap5.scss:dist/css/bootstrap5.css src/themes/shadcn/shadcn.scss:dist/css/shadcn.css",
-    "watch": "eleventy --input=showcase --output=_site --serve",
+    "watch": "concurrently \"npm run watch:css\" \"eleventy --input=showcase --output=_site --serve\"",
     "format": "prettier --write \"**/*.{scss,html,js,json,njk}\""
   },
   "keywords": [],

@@ -10,10 +10,18 @@
     --button-font-size: 1rem;
     --button-font-weight: 400;
     --button-line-height: 1.5;
-    --button-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    --button-focus-ring-width: 0;
-    --button-focus-ring-offset-width: 0;
-    --button-disabled-opacity: 0.65;
+    --button-transition:
+      color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --button-disabled-opacity: 0.5;
+    --button-focus-ring-width: 0.25rem;
+    --button-focus-ring-color: var(--palette-light);
+    --button-focus-ring-offset: 0px;
+    --button-focus-bg-color: var(--button-hover-bg-color);
+    --button-focus-color: var(--button-hover-color);
+    --button-disabled-bg-color: var(--button-bg-color);
+    --button-disabled-border-color: var(--button-border-color);
+    --button-disabled-color: var(--button-color);
 
     &.sm {
       --button-padding: 0.25rem 0.5rem;
@@ -34,15 +42,23 @@
       --button-active-border-color: var(--palette-darker);
     }
 
+    &.tonal {
+      --button-focus-ring-color: var(--palette-lighter);
+    }
+
     &.outlined {
-      --button-hover-bg-color: var(--palette-darker);
-      --button-hover-color: var(--palette-accent-darker);
-      --button-active-bg-color: var(--palette-dark);
-      --button-active-color: var(--palette-accent-dark);
+      --button-hover-bg-color: var(--palette-default);
+      --button-hover-color: var(--palette-accent-default);
+      --button-active-bg-color: var(--button-hover-bg-color);
+      --button-active-color: var(--button-hover-color);
     }
 
     &.text {
       --button-disabled-opacity: 0.65;
+    }
+
+    &:disabled {
+      pointer-events: none;
     }
   }
 }
