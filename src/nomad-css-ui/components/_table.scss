@@ -49,6 +49,12 @@ $table-hover-cell-cursor-var: --#{$table-prefix}hover-cell-cursor !default;
 $table-cell-padding-x-var: --#{$table-prefix}cell-padding-x !default;
 $table-cell-padding-y-var: --#{$table-prefix}cell-padding-y !default;
 
+// --------------------------------------------
+// Spacing (sm)
+// --------------------------------------------
+$table-cell-padding-x-sm-var: --#{$table-prefix}cell-padding-x-sm !default;
+$table-cell-padding-y-sm-var: --#{$table-prefix}cell-padding-y-sm !default;
+
 // ============================================
 // Process
 // ============================================
@@ -85,6 +91,12 @@ $table-cell-padding-y-var: --#{$table-prefix}cell-padding-y !default;
   // --------------------------------------------
   #{$table-cell-padding-x-var}: 1em;
   #{$table-cell-padding-y-var}: 0.5em;
+
+  // --------------------------------------------
+  // Spacing (sm)
+  // --------------------------------------------
+  #{$table-cell-padding-x-sm-var}: 0.5em;
+  #{$table-cell-padding-y-sm-var}: 0.25em;
 }
 
 // ============================================
@@ -101,6 +113,16 @@ $table-cell-padding-y-var: --#{$table-prefix}cell-padding-y !default;
     border-width: 0px;
     border-style: solid;
     border-color: var(#{$table-border-color-var});
+  }
+}
+
+// ============================================
+// Size
+// ============================================
+.#{$table-class-name} {
+  &.sm > :not(caption) > * > * {
+    padding: var(#{$table-cell-padding-y-sm-var})
+      var(#{$table-cell-padding-x-sm-var});
   }
 }
 
