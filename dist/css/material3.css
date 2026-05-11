@@ -345,7 +345,6 @@
 }
 
 :root[data-theme=material3] {
-  --font-body-size: 16px;
   --font-family:
     "Roboto", "Roboto Flex", "Roboto Serif", "Roboto Mono", "Noto Sans",
     sans-serif;
