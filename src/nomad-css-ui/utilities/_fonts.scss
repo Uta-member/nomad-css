@@ -1,8 +1,26 @@
+@use "../../utilities/fonts" as fonts;
+
+// ============================================
+// Prefix
+// ============================================
+$font-size-semantic-prefix: --fs-semantic- !default;
+$font-size-semantic-class-name-prefix: fs-semantic- !default;
+
 // ============================================
 // Variants
 // ============================================
-$font-family-var: --font-family;
-$font-body-size-var: --font-body-size;
+$font-family-var: --font-family !default;
+
+// ============================================
+// Variables
+// ============================================
+$font-size-semantics: (
+  xs: var(#{fonts.$font-size-prefix}2),
+  sm: var(#{fonts.$font-size-prefix}4),
+  md: 14px,
+  lg: var(#{fonts.$font-size-prefix}6),
+  xl: var(#{fonts.$font-size-prefix}7),
+) !default;
 
 // ============================================
 // Process
@@ -12,10 +30,9 @@ $font-body-size-var: --font-body-size;
 // ============================================
 :root {
   #{$font-family-var}: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  #{$font-body-size-var}: 14px;
-
-  font-family: var(#{$font-family-var});
-  font-size: var(#{$font-body-size-var});
+  @each $key, $value in $font-size-semantics {
+    #{$font-size-semantic-prefix}#{$key}: #{$value};
+  }
 }
 
 h1,
@@ -30,4 +47,10 @@ a,
 li,
 pre {
   margin: 0;
+}
+
+@each $key, $value in $font-size-semantics {
+  .#{$font-size-semantic-class-name-prefix}#{$key} {
+    font-size: var(#{$font-size-semantic-prefix}#{$key});
+  }
 }

@@ -15,6 +15,10 @@ $font-h5-prefix: #{$font-prefix}h5-;
 $font-h6-prefix: #{$font-prefix}h6-;
 
 // Variable Names
+// font size
+$font-size-prefix: --#{$font-prefix}size-;
+$font-weight-prefix: --#{$font-prefix}weight-;
+
 // heading
 $font-h1-size-var: --#{$font-h1-prefix}size;
 $font-h2-size-var: --#{$font-h2-prefix}size;
@@ -31,6 +35,44 @@ $font-h5-weight-var: --#{$font-h5-prefix}weight;
 $font-h6-weight-var: --#{$font-h6-prefix}weight;
 
 // ============================================
+// Variables
+// ============================================
+$font-size-variations: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 0.825rem,
+  5: 1rem,
+  6: 1.25rem,
+  7: 1.5rem,
+  8: 1.75rem,
+  9: 2rem,
+  10: 2.5rem,
+) !default;
+
+$font-weight-variations: (
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+  900: 900,
+) !default;
+
+:root {
+  @each $key, $value in $font-size-variations {
+    #{$font-size-prefix}#{$key}: #{$value};
+  }
+
+  @each $key, $value in $font-weight-variations {
+    #{$font-weight-prefix}#{$key}: #{$value};
+  }
+}
+// ============================================
 // Process
 // ============================================
 // ============================================
@@ -41,25 +83,38 @@ $font-h6-weight-var: --#{$font-h6-prefix}weight;
 // ============================================
 :root {
   // Sizes
-  #{$font-h1-size-var}: 2.5rem;
-  #{$font-h2-size-var}: 2rem;
-  #{$font-h3-size-var}: 1.75rem;
-  #{$font-h4-size-var}: 1.5rem;
-  #{$font-h5-size-var}: 1.25rem;
-  #{$font-h6-size-var}: 1rem;
+  #{$font-h1-size-var}: var(#{$font-size-prefix}10);
+  #{$font-h2-size-var}: var(#{$font-size-prefix}9);
+  #{$font-h3-size-var}: var(#{$font-size-prefix}8);
+  #{$font-h4-size-var}: var(#{$font-size-prefix}7);
+  #{$font-h5-size-var}: var(#{$font-size-prefix}6);
+  #{$font-h6-size-var}: var(#{$font-size-prefix}5);
 
   // Weights
-  #{$font-h1-weight-var}: 500;
-  #{$font-h2-weight-var}: 500;
-  #{$font-h3-weight-var}: 500;
-  #{$font-h4-weight-var}: 500;
-  #{$font-h5-weight-var}: 500;
-  #{$font-h6-weight-var}: 500;
+  #{$font-h1-weight-var}: var(#{$font-weight-prefix}500);
+  #{$font-h2-weight-var}: var(#{$font-weight-prefix}500);
+  #{$font-h3-weight-var}: var(#{$font-weight-prefix}500);
+  #{$font-h4-weight-var}: var(#{$font-weight-prefix}500);
+  #{$font-h5-weight-var}: var(#{$font-weight-prefix}500);
+  #{$font-h6-weight-var}: var(#{$font-weight-prefix}500);
 }
 
 // ============================================
 // Classes
 // ============================================
+// ============================================
+// Font Size
+// ============================================
+@each $key, $value in $font-size-variations {
+  .fs-#{$key} {
+    font-size: var(#{$font-size-prefix}#{$key}) !important;
+  }
+}
+@each $key, $value in $font-weight-variations {
+  .fw-#{$key} {
+    font-weight: var(#{$font-weight-prefix}#{$key}) !important;
+  }
+}
 // ============================================
 // Heading
 // ============================================

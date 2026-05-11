@@ -14,8 +14,8 @@
 @use "./utilities/border" as theme-border;
 
 body {
-  background-color: var(--surface-color);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  font-size: var(--font-body-size);
+  background-color: var(#{color-defines.$surface-color-var});
+  color: var(#{color-defines.$text-color-var});
+  font-family: var(#{theme-fonts.$font-family-var});
+  font-size: var(#{theme-fonts.$font-size-semantic-prefix}md);
 }

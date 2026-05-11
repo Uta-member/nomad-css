@@ -398,18 +398,121 @@
 }
 
 :root {
-  --font-h1-size: 2.5rem;
-  --font-h2-size: 2rem;
-  --font-h3-size: 1.75rem;
-  --font-h4-size: 1.5rem;
-  --font-h5-size: 1.25rem;
-  --font-h6-size: 1rem;
-  --font-h1-weight: 500;
-  --font-h2-weight: 500;
-  --font-h3-weight: 500;
-  --font-h4-weight: 500;
-  --font-h5-weight: 500;
-  --font-h6-weight: 500;
+  --font-size-0: 0;
+  --font-size-1: 0.25rem;
+  --font-size-2: 0.5rem;
+  --font-size-3: 0.75rem;
+  --font-size-4: 0.825rem;
+  --font-size-5: 1rem;
+  --font-size-6: 1.25rem;
+  --font-size-7: 1.5rem;
+  --font-size-8: 1.75rem;
+  --font-size-9: 2rem;
+  --font-size-10: 2.5rem;
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+}
+
+:root {
+  --font-h1-size: var(--font-size-10);
+  --font-h2-size: var(--font-size-9);
+  --font-h3-size: var(--font-size-8);
+  --font-h4-size: var(--font-size-7);
+  --font-h5-size: var(--font-size-6);
+  --font-h6-size: var(--font-size-5);
+  --font-h1-weight: var(--font-weight-500);
+  --font-h2-weight: var(--font-weight-500);
+  --font-h3-weight: var(--font-weight-500);
+  --font-h4-weight: var(--font-weight-500);
+  --font-h5-weight: var(--font-weight-500);
+  --font-h6-weight: var(--font-weight-500);
+}
+
+.fs-0 {
+  font-size: var(--font-size-0) !important;
+}
+
+.fs-1 {
+  font-size: var(--font-size-1) !important;
+}
+
+.fs-2 {
+  font-size: var(--font-size-2) !important;
+}
+
+.fs-3 {
+  font-size: var(--font-size-3) !important;
+}
+
+.fs-4 {
+  font-size: var(--font-size-4) !important;
+}
+
+.fs-5 {
+  font-size: var(--font-size-5) !important;
+}
+
+.fs-6 {
+  font-size: var(--font-size-6) !important;
+}
+
+.fs-7 {
+  font-size: var(--font-size-7) !important;
+}
+
+.fs-8 {
+  font-size: var(--font-size-8) !important;
+}
+
+.fs-9 {
+  font-size: var(--font-size-9) !important;
+}
+
+.fs-10 {
+  font-size: var(--font-size-10) !important;
+}
+
+.fw-100 {
+  font-weight: var(--font-weight-100) !important;
+}
+
+.fw-200 {
+  font-weight: var(--font-weight-200) !important;
+}
+
+.fw-300 {
+  font-weight: var(--font-weight-300) !important;
+}
+
+.fw-400 {
+  font-weight: var(--font-weight-400) !important;
+}
+
+.fw-500 {
+  font-weight: var(--font-weight-500) !important;
+}
+
+.fw-600 {
+  font-weight: var(--font-weight-600) !important;
+}
+
+.fw-700 {
+  font-weight: var(--font-weight-700) !important;
+}
+
+.fw-800 {
+  font-weight: var(--font-weight-800) !important;
+}
+
+.fw-900 {
+  font-weight: var(--font-weight-900) !important;
 }
 
 h1,
@@ -16533,9 +16636,11 @@ span.divider.vertical,
 
 :root {
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --font-body-size: 14px;
-  font-family: var(--font-family);
-  font-size: var(--font-body-size);
+  --fs-semantic-xs: var(--font-size-2);
+  --fs-semantic-sm: var(--font-size-4);
+  --fs-semantic-md: 14px;
+  --fs-semantic-lg: var(--font-size-6);
+  --fs-semantic-xl: var(--font-size-7);
 }
 
 h1,
@@ -16552,6 +16657,26 @@ pre {
   margin: 0;
 }
 
+.fs-semantic-xs {
+  font-size: var(--fs-semantic-xs);
+}
+
+.fs-semantic-sm {
+  font-size: var(--fs-semantic-sm);
+}
+
+.fs-semantic-md {
+  font-size: var(--fs-semantic-md);
+}
+
+.fs-semantic-lg {
+  font-size: var(--fs-semantic-lg);
+}
+
+.fs-semantic-xl {
+  font-size: var(--fs-semantic-xl);
+}
+
 .border.palette {
   border-color: var(--palette-default);
 }
@@ -16560,7 +16685,7 @@ body {
   background-color: var(--surface-color);
   color: var(--text-color);
   font-family: var(--font-family);
-  font-size: var(--font-body-size);
+  font-size: var(--fs-semantic-md);
 }
 
 /*# sourceMappingURL=nomad-css-ui.css.map */
