@@ -2,6 +2,40 @@
 @use "./palette" as palette;
 
 // ============================================
+// Prefix
+// ============================================
+$border-radius-semantic-prefix: --radius-semantic- !default;
+$border-radius-semantic-class-name-prefix: rounded- !default;
+
+// ============================================
+// Variables
+// ============================================
+// セマンティック（役割）層: 角丸のtシャツ名を、プリミティブ層の数値ステップ
+// （border.$border-radius-variations）にマッピングする。
+// fonts の --fs-semantic-* と同じ考え方。
+$border-radius-semantics: (
+  sm: var(#{border.$border-radius-scale-prefix}1),
+  md: var(#{border.$border-radius-scale-prefix}2),
+  lg: var(#{border.$border-radius-scale-prefix}3),
+  xl: var(#{border.$border-radius-scale-prefix}4),
+) !default;
+
+// ============================================
+// Process
+// ============================================
+:root {
+  @each $key, $value in $border-radius-semantics {
+    #{$border-radius-semantic-prefix}#{$key}: #{$value};
+  }
+}
+
+@each $key, $value in $border-radius-semantics {
+  .#{$border-radius-semantic-class-name-prefix}#{$key} {
+    border-radius: var(#{$border-radius-semantic-prefix}#{$key});
+  }
+}
+
+// ============================================
 // Border Colors
 // ============================================
 .#{border.$border-class-name}.palette {

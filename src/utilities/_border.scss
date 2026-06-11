@@ -10,13 +10,23 @@ $border-prefix: #{prefixes.$prefix}border-;
 $border-class-name: border;
 
 // Variable Name
-$border-width-var: --#{$border-prefix}width;
-$border-style-var: --#{$border-prefix}style;
-$border-color-var: --#{$border-prefix}color;
+$border-width-var: --#{$border-prefix}width; // 既定の枠線幅
+$border-style-var: --#{$border-prefix}style; // 既定の枠線スタイル
+$border-color-var: --#{$border-prefix}color; // 枠線色（値は色層が定義）
+
+// 数値スケールの変数プレフィックス（プリミティブ参照スケール）
+$border-width-scale-prefix: --#{$border-prefix}width-;
+$border-radius-scale-prefix: --#{$border-prefix}radius-;
 
 // ============================================
 // Variables
 // ============================================
+// プリミティブ（参照）層: 数値ステップの線形スケール。
+// tシャツ名・役割名はここでは使わない。
+// 理由: 拡張性（ステップの追加・挿入が容易）と、ブレークポイント名
+// （xs/sm/md/lg/xl/xxl）との語彙衝突を避けるため。角丸のtシャツ名は
+// 層2のセマンティック層（--radius-semantic-*）で付与する。
+// see docs/design-tokens.md
 $border-width-variations: (
   0: 0,
   1: 1px,
@@ -42,9 +52,20 @@ $border-radius-variations: (
 // CSS Variables
 // ============================================
 :root {
-  #{$border-width-var}: 1px;
+  // 数値スケールを CSS 変数として公開（テーマ・利用側で上書き可能）
+  @each $key, $value in $border-width-variations {
+    #{$border-width-scale-prefix}#{$key}: #{$value};
+  }
+  @each $key, $value in $border-radius-variations {
+    #{$border-radius-scale-prefix}#{$key}: #{$value};
+  }
+
+  // 構造的な既定値
+  #{$border-width-var}: var(#{$border-width-scale-prefix}1);
   #{$border-style-var}: solid;
-  #{$border-color-var}: gray;
+  // 注: --border-color の値は色層
+  //     (nomad-css-ui/utilities/_color-defines.scss) が neutral パレットを
+  //     参照して定義する。プリミティブ層では色値を持たない。
 }
 
 // ============================================
@@ -88,7 +109,7 @@ $border-radius-variations: (
 }
 @each $size, $value in $border-width-variations {
   .#{$border-class-name}-#{$size} {
-    border-width: $value;
+    border-width: var(#{$border-width-scale-prefix}#{$size});
   }
 }
 
@@ -96,7 +117,7 @@ $border-radius-variations: (
 // Border Radius
 // ============================================
 .rounded {
-  border-radius: 4px;
+  border-radius: var(#{$border-radius-scale-prefix}1);
 }
 .rounded-circle {
   border-radius: 50%;
@@ -122,6 +143,6 @@ $border-radius-variations: (
 }
 @each $size, $value in $border-radius-variations {
   .rounded-#{$size} {
-    border-radius: $value;
+    border-radius: var(#{$border-radius-scale-prefix}#{$size});
   }
 }
