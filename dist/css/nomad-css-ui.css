@@ -16638,9 +16638,16 @@ span.divider.vertical,
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --fs-semantic-xs: var(--font-size-2);
   --fs-semantic-sm: var(--font-size-4);
-  --fs-semantic-md: 14px;
+  --fs-semantic-md: var(--font-size-5);
   --fs-semantic-lg: var(--font-size-6);
   --fs-semantic-xl: var(--font-size-7);
+  --fs-semantic-2xl: var(--font-size-9);
+  --fs-semantic-3xl: var(--font-size-10);
+  --fw-semantic-light: var(--font-weight-300);
+  --fw-semantic-regular: var(--font-weight-400);
+  --fw-semantic-medium: var(--font-weight-500);
+  --fw-semantic-semibold: var(--font-weight-600);
+  --fw-semantic-bold: var(--font-weight-700);
 }
 
 h1,
@@ -16675,6 +16682,34 @@ pre {
 
 .fs-semantic-xl {
   font-size: var(--fs-semantic-xl);
+}
+
+.fs-semantic-2xl {
+  font-size: var(--fs-semantic-2xl);
+}
+
+.fs-semantic-3xl {
+  font-size: var(--fs-semantic-3xl);
+}
+
+.fw-semantic-light {
+  font-weight: var(--fw-semantic-light);
+}
+
+.fw-semantic-regular {
+  font-weight: var(--fw-semantic-regular);
+}
+
+.fw-semantic-medium {
+  font-weight: var(--fw-semantic-medium);
+}
+
+.fw-semantic-semibold {
+  font-weight: var(--fw-semantic-semibold);
+}
+
+.fw-semantic-bold {
+  font-weight: var(--fw-semantic-bold);
 }
 
 .border.palette {

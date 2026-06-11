@@ -5,6 +5,8 @@
 // ============================================
 $font-size-semantic-prefix: --fs-semantic- !default;
 $font-size-semantic-class-name-prefix: fs-semantic- !default;
+$font-weight-semantic-prefix: --fw-semantic- !default;
+$font-weight-semantic-class-name-prefix: fw-semantic- !default;
 
 // ============================================
 // Variants
@@ -14,12 +16,25 @@ $font-family-var: --font-family !default;
 // ============================================
 // Variables
 // ============================================
+// セマンティック（役割）層: tシャツサイズ・重さ名を、プリミティブ層の
+// 数値ステップ（fonts.$font-size-variations / $font-weight-variations）に
+// マッピングする。palette の levels マップと同じ考え方。
 $font-size-semantics: (
   xs: var(#{fonts.$font-size-prefix}2),
   sm: var(#{fonts.$font-size-prefix}4),
-  md: 14px,
+  md: var(#{fonts.$font-size-prefix}5),
   lg: var(#{fonts.$font-size-prefix}6),
   xl: var(#{fonts.$font-size-prefix}7),
+  2xl: var(#{fonts.$font-size-prefix}9),
+  3xl: var(#{fonts.$font-size-prefix}10),
+) !default;
+
+$font-weight-semantics: (
+  light: var(#{fonts.$font-weight-prefix}300),
+  regular: var(#{fonts.$font-weight-prefix}400),
+  medium: var(#{fonts.$font-weight-prefix}500),
+  semibold: var(#{fonts.$font-weight-prefix}600),
+  bold: var(#{fonts.$font-weight-prefix}700),
 ) !default;
 
 // ============================================
@@ -32,6 +47,9 @@ $font-size-semantics: (
   #{$font-family-var}: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   @each $key, $value in $font-size-semantics {
     #{$font-size-semantic-prefix}#{$key}: #{$value};
+  }
+  @each $key, $value in $font-weight-semantics {
+    #{$font-weight-semantic-prefix}#{$key}: #{$value};
   }
 }
 
@@ -52,5 +70,11 @@ pre {
 @each $key, $value in $font-size-semantics {
   .#{$font-size-semantic-class-name-prefix}#{$key} {
     font-size: var(#{$font-size-semantic-prefix}#{$key});
+  }
+}
+
+@each $key, $value in $font-weight-semantics {
+  .#{$font-weight-semantic-class-name-prefix}#{$key} {
+    font-weight: var(#{$font-weight-semantic-prefix}#{$key});
   }
 }

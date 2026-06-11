@@ -48,7 +48,14 @@ nomad-css のトークン体系の設計方針と命名規則。
 
 ### フォントサイズ・スペーシング等
 
-数値ステップ（`1`〜）またはtシャツサイズ（`xs` `sm` `md` `lg` `xl`）を使う。セマンティック語は使わない。
+**数値ステップ**（`0`〜）の線形スケールで定義する。tシャツサイズ（`xs` `md` 等）やセマンティック語は参照層では使わない。
+
+理由は2つ:
+
+- **拡張性** — 数値ステップは途中への追加・挿入や段数変更が容易（色の 1〜12 と同じ考え方）。最初に `xs`〜`xl` のような固定語彙を付けると段階を増やしにくい。
+- **ブレークポイント名との衝突回避** — ブレークポイントは `xs` `sm` `md` `lg` `xl` `xxl`（[_breakpoints.scss](../src/utilities/_breakpoints.scss)）。参照層に同じtシャツ語を使うと、将来 `responsive-utilities` でレスポンシブクラスを生成したとき `.fs-md-md` のような曖昧な名前になる。数値ステップなら `.fs-md-3`（md以上で3）と一意に読める。
+
+tシャツサイズ・重さ名といった語彙は、これらの数値ステップを参照する**セマンティック層**で付与する。
 
 ---
 
@@ -132,28 +139,32 @@ nomad-css のトークン体系の設計方針と命名規則。
 
 ### フォントサイズ
 
-tシャツサイズで定義する。
+プリミティブの数値ステップ（`--font-size-0`〜`--font-size-10`）を、tシャツサイズの**セマンティック変数** `--fs-semantic-*` にマッピングする。コンポーネントやユーザーは原則 `--fs-semantic-*` を参照する。
 
 ```css
---font-size-xs
---font-size-sm
---font-size-md
---font-size-lg
---font-size-xl
---font-size-2xl
---font-size-3xl
+/* セマンティック層（プリミティブの数値ステップを参照） */
+--fs-semantic-xs   /* → --font-size-2 */
+--fs-semantic-sm   /* → --font-size-4 */
+--fs-semantic-md   /* → --font-size-5（本文の基準） */
+--fs-semantic-lg   /* → --font-size-6 */
+--fs-semantic-xl   /* → --font-size-7 */
+--fs-semantic-2xl  /* → --font-size-9 */
+--fs-semantic-3xl  /* → --font-size-10 */
 ```
+
+クラスは `.fs-semantic-md` のように生成される。ユーティリティの数値クラス `.fs-3` 等はプリミティブ層が別途提供する（こちらはレスポンシブ化に向く）。
 
 ### フォントウェイト
 
-タイポグラフィ標準の重さ名を使う。
+プリミティブの数値ステップ（`--font-weight-100`〜`--font-weight-900`）を、タイポグラフィ標準の重さ名の**セマンティック変数** `--fw-semantic-*` にマッピングする。
 
 ```css
---font-weight-light     /* 300 */
---font-weight-regular   /* 400 */
---font-weight-medium    /* 500 */
---font-weight-semibold  /* 600 */
---font-weight-bold      /* 700 */
+/* セマンティック層 */
+--fw-semantic-light     /* → --font-weight-300 */
+--fw-semantic-regular   /* → --font-weight-400 */
+--fw-semantic-medium    /* → --font-weight-500 */
+--fw-semantic-semibold  /* → --font-weight-600 */
+--fw-semantic-bold      /* → --font-weight-700 */
 ```
 
 ---
