@@ -85,7 +85,7 @@ src/nomad-css-ui/
 
 - すべてのスタイルプロパティは CSS 変数経由で定義する
 - 具体的な色値 (`hsl(210, 100%, 50%)` 等) を直接記述しない
-- セマンティックカラー変数 (`var(--palette-default)` 等) または共通カラー変数 (`var(--border-color)` 等) を参照する
+- セマンティックカラー変数 (`var(--palette-solid)` 等) または共通カラー変数 (`var(--border-color)` 等) を参照する
 
 ---
 
@@ -176,11 +176,11 @@ src/themes/
 | `--palette-saturation`                        | 彩度                                    |
 | `--palette-color-0` 〜 `--palette-color-10`   | 明度段階ごとのカラー値                  |
 | `--palette-accent-0` 〜 `--palette-accent-10` | アクセントカラー (テキスト色自動反転用) |
-| `--palette-lighter`                           | セマンティックレベル「lighter」のカラー |
-| `--palette-light`                             | セマンティックレベル「light」のカラー   |
-| `--palette-default`                           | セマンティックレベル「default」のカラー |
-| `--palette-dark`                              | セマンティックレベル「dark」のカラー    |
-| `--palette-darker`                            | セマンティックレベル「darker」のカラー  |
+| `--palette-subtle`                            | セマンティックレベル「subtle」のカラー  |
+| `--palette-tonal`                             | セマンティックレベル「tonal」のカラー   |
+| `--palette-solid`                             | セマンティックレベル「solid」のカラー   |
+| `--palette-strong`                            | セマンティックレベル「strong」のカラー  |
+| `--palette-heavy`                             | セマンティックレベル「heavy」のカラー   |
 
 ---
 

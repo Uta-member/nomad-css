@@ -40,7 +40,7 @@ $progress-lg-size-var: --#{$progress-prefix}lg-size !default;
   // --------------------------------------------
   // Accent Colors
   // --------------------------------------------
-  #{$progress-accent-color-var}: var(#{palette.$palette-default-var});
+  #{$progress-accent-color-var}: var(#{palette.$palette-solid-var});
 
   // --------------------------------------------
   // Sizes

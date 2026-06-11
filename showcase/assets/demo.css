@@ -201,20 +201,16 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.demo-box.lighter {
+.demo-box.subtle {
   background: var(--surface-color-overlay);
 }
 
-.demo-box.light {
+.demo-box.tonal {
   background: var(--surface-color-raised);
 }
 
 /* ---- Color swatches (colors page) ---- */
 
-.container-color-0 {
-  background-color: var(--palette-color-0);
-  color: var(--palette-accent-0);
-}
 .container-color-1 {
   background-color: var(--palette-color-1);
   color: var(--palette-accent-1);
@@ -255,26 +251,34 @@ body {
   background-color: var(--palette-color-10);
   color: var(--palette-accent-10);
 }
+.container-color-11 {
+  background-color: var(--palette-color-11);
+  color: var(--palette-accent-11);
+}
+.container-color-12 {
+  background-color: var(--palette-color-12);
+  color: var(--palette-accent-12);
+}
 
 .container-semantic-color {
-  background-color: var(--palette-default);
-  color: var(--palette-accent-default);
+  background-color: var(--palette-solid);
+  color: var(--palette-accent-solid);
 }
-.container-semantic-color.lighter {
-  background-color: var(--palette-lighter);
-  color: var(--palette-accent-lighter);
+.container-semantic-color.subtle {
+  background-color: var(--palette-subtle);
+  color: var(--palette-accent-subtle);
 }
-.container-semantic-color.light {
-  background-color: var(--palette-light);
-  color: var(--palette-accent-light);
+.container-semantic-color.tonal {
+  background-color: var(--palette-tonal);
+  color: var(--palette-accent-tonal);
 }
-.container-semantic-color.dark {
-  background-color: var(--palette-dark);
-  color: var(--palette-accent-dark);
+.container-semantic-color.strong {
+  background-color: var(--palette-strong);
+  color: var(--palette-accent-strong);
 }
-.container-semantic-color.darker {
-  background-color: var(--palette-darker);
-  color: var(--palette-accent-darker);
+.container-semantic-color.heavy {
+  background-color: var(--palette-heavy);
+  color: var(--palette-accent-heavy);
 }
 
 /* ---- Color utility class swatches ---- */

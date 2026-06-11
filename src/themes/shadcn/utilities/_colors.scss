@@ -12,11 +12,6 @@
   // ============================================================
   --palette-hue: var(--neutral-hue);
   --palette-saturation: var(--neutral-saturation);
-  --palette-lightness-0: var(--neutral-lightness-0);
-  --palette-color-0: var(--neutral-color-0);
-  --palette-color-0-ch: var(--neutral-color-0-ch);
-  --palette-gray-0: var(--neutral-gray-0);
-  --palette-accent-0: var(--neutral-accent-0);
   --palette-lightness-1: var(--neutral-lightness-1);
   --palette-color-1: var(--neutral-color-1);
   --palette-color-1-ch: var(--neutral-color-1-ch);
@@ -67,189 +62,199 @@
   --palette-color-10-ch: var(--neutral-color-10-ch);
   --palette-gray-10: var(--neutral-gray-10);
   --palette-accent-10: var(--neutral-accent-10);
-  --palette-lighter: var(--neutral-lighter);
-  --palette-accent-lighter: var(--neutral-accent-lighter);
-  --palette-lighter-ch: var(--neutral-lighter-ch);
-  --palette-light: var(--neutral-light);
-  --palette-accent-light: var(--neutral-accent-light);
-  --palette-light-ch: var(--neutral-light-ch);
-  --palette-default: var(--neutral-default);
-  --palette-accent-default: var(--neutral-accent-default);
-  --palette-default-ch: var(--neutral-default-ch);
-  --palette-dark: var(--neutral-dark);
-  --palette-accent-dark: var(--neutral-accent-dark);
-  --palette-dark-ch: var(--neutral-dark-ch);
-  --palette-darker: var(--neutral-darker);
-  --palette-accent-darker: var(--neutral-accent-darker);
-  --palette-darker-ch: var(--neutral-darker-ch);
+  --palette-lightness-11: var(--neutral-lightness-11);
+  --palette-color-11: var(--neutral-color-11);
+  --palette-color-11-ch: var(--neutral-color-11-ch);
+  --palette-gray-11: var(--neutral-gray-11);
+  --palette-accent-11: var(--neutral-accent-11);
+  --palette-lightness-12: var(--neutral-lightness-12);
+  --palette-color-12: var(--neutral-color-12);
+  --palette-color-12-ch: var(--neutral-color-12-ch);
+  --palette-gray-12: var(--neutral-gray-12);
+  --palette-accent-12: var(--neutral-accent-12);
+  --palette-subtle: var(--neutral-subtle);
+  --palette-accent-subtle: var(--neutral-accent-subtle);
+  --palette-subtle-ch: var(--neutral-subtle-ch);
+  --palette-tonal: var(--neutral-tonal);
+  --palette-accent-tonal: var(--neutral-accent-tonal);
+  --palette-tonal-ch: var(--neutral-tonal-ch);
+  --palette-solid: var(--neutral-solid);
+  --palette-accent-solid: var(--neutral-accent-solid);
+  --palette-solid-ch: var(--neutral-solid-ch);
+  --palette-strong: var(--neutral-strong);
+  --palette-accent-strong: var(--neutral-accent-strong);
+  --palette-strong-ch: var(--neutral-strong-ch);
+  --palette-heavy: var(--neutral-heavy);
+  --palette-accent-heavy: var(--neutral-accent-heavy);
+  --palette-heavy-ch: var(--neutral-heavy-ch);
 
   // ============================================================
   // Primary — Near-black zinc hsl(240, 5%)
   // ============================================================
   --primary-hue: 240;
   --primary-saturation: 5%;
-  --primary-lighter: var(--primary-color-2);
-  --primary-lighter-ch: var(--primary-color-2-ch);
-  --primary-accent-lighter: var(--primary-accent-2);
-  --primary-light: var(--primary-color-3);
-  --primary-light-ch: var(--primary-color-3-ch);
-  --primary-accent-light: var(--primary-accent-3);
-  --primary-default: var(--primary-color-9);
-  --primary-default-ch: var(--primary-color-9-ch);
-  --primary-accent-default: var(--primary-accent-9);
-  --primary-dark: var(--primary-color-10);
-  --primary-dark-ch: var(--primary-color-10-ch);
-  --primary-accent-dark: var(--primary-accent-10);
-  --primary-darker: var(--primary-color-10);
-  --primary-darker-ch: var(--primary-color-10-ch);
-  --primary-accent-darker: var(--primary-accent-10);
+  --primary-subtle: var(--primary-color-4);
+  --primary-subtle-ch: var(--primary-color-4-ch);
+  --primary-accent-subtle: var(--primary-accent-4);
+  --primary-tonal: var(--primary-color-5);
+  --primary-tonal-ch: var(--primary-color-5-ch);
+  --primary-accent-tonal: var(--primary-accent-5);
+  --primary-solid: var(--primary-color-11);
+  --primary-solid-ch: var(--primary-color-11-ch);
+  --primary-accent-solid: var(--primary-accent-11);
+  --primary-strong: var(--primary-color-12);
+  --primary-strong-ch: var(--primary-color-12-ch);
+  --primary-accent-strong: var(--primary-accent-12);
+  --primary-heavy: var(--primary-color-12);
+  --primary-heavy-ch: var(--primary-color-12-ch);
+  --primary-accent-heavy: var(--primary-accent-12);
 
   // ============================================================
   // Secondary — Muted zinc hsl(240, 5%)
   // ============================================================
   --secondary-hue: 240;
   --secondary-saturation: 5%;
-  --secondary-lighter: var(--secondary-color-2);
-  --secondary-lighter-ch: var(--secondary-color-2-ch);
-  --secondary-accent-lighter: var(--secondary-accent-2);
-  --secondary-light: var(--secondary-color-3);
-  --secondary-light-ch: var(--secondary-color-3-ch);
-  --secondary-accent-light: var(--secondary-accent-3);
-  --secondary-default: var(--secondary-color-2);
-  --secondary-default-ch: var(--secondary-color-2-ch);
-  --secondary-accent-default: var(--secondary-accent-2);
-  --secondary-dark: var(--secondary-color-4);
-  --secondary-dark-ch: var(--secondary-color-4-ch);
-  --secondary-accent-dark: var(--secondary-accent-4);
-  --secondary-darker: var(--secondary-color-6);
-  --secondary-darker-ch: var(--secondary-color-6-ch);
-  --secondary-accent-darker: var(--secondary-accent-6);
+  --secondary-subtle: var(--secondary-color-4);
+  --secondary-subtle-ch: var(--secondary-color-4-ch);
+  --secondary-accent-subtle: var(--secondary-accent-4);
+  --secondary-tonal: var(--secondary-color-5);
+  --secondary-tonal-ch: var(--secondary-color-5-ch);
+  --secondary-accent-tonal: var(--secondary-accent-5);
+  --secondary-solid: var(--secondary-color-4);
+  --secondary-solid-ch: var(--secondary-color-4-ch);
+  --secondary-accent-solid: var(--secondary-accent-4);
+  --secondary-strong: var(--secondary-color-6);
+  --secondary-strong-ch: var(--secondary-color-6-ch);
+  --secondary-accent-strong: var(--secondary-accent-6);
+  --secondary-heavy: var(--secondary-color-8);
+  --secondary-heavy-ch: var(--secondary-color-8-ch);
+  --secondary-accent-heavy: var(--secondary-accent-8);
 
   // ============================================================
   // Tertiary — Violet hsl(262, 80%)
   // ============================================================
   --tertiary-hue: 262;
   --tertiary-saturation: 80%;
-  --tertiary-lighter: var(--tertiary-color-2);
-  --tertiary-lighter-ch: var(--tertiary-color-2-ch);
-  --tertiary-accent-lighter: var(--tertiary-accent-2);
-  --tertiary-light: var(--tertiary-color-3);
-  --tertiary-light-ch: var(--tertiary-color-3-ch);
-  --tertiary-accent-light: var(--tertiary-accent-3);
-  --tertiary-default: var(--tertiary-color-5);
-  --tertiary-default-ch: var(--tertiary-color-5-ch);
-  --tertiary-accent-default: var(--tertiary-accent-5);
-  --tertiary-dark: var(--tertiary-color-7);
-  --tertiary-dark-ch: var(--tertiary-color-7-ch);
-  --tertiary-accent-dark: var(--tertiary-accent-7);
-  --tertiary-darker: var(--tertiary-color-8);
-  --tertiary-darker-ch: var(--tertiary-color-8-ch);
-  --tertiary-accent-darker: var(--tertiary-accent-8);
+  --tertiary-subtle: var(--tertiary-color-4);
+  --tertiary-subtle-ch: var(--tertiary-color-4-ch);
+  --tertiary-accent-subtle: var(--tertiary-accent-4);
+  --tertiary-tonal: var(--tertiary-color-5);
+  --tertiary-tonal-ch: var(--tertiary-color-5-ch);
+  --tertiary-accent-tonal: var(--tertiary-accent-5);
+  --tertiary-solid: var(--tertiary-color-7);
+  --tertiary-solid-ch: var(--tertiary-color-7-ch);
+  --tertiary-accent-solid: var(--tertiary-accent-7);
+  --tertiary-strong: var(--tertiary-color-9);
+  --tertiary-strong-ch: var(--tertiary-color-9-ch);
+  --tertiary-accent-strong: var(--tertiary-accent-9);
+  --tertiary-heavy: var(--tertiary-color-10);
+  --tertiary-heavy-ch: var(--tertiary-color-10-ch);
+  --tertiary-accent-heavy: var(--tertiary-accent-10);
 
   // ============================================================
   // Danger — Red hsl(0, 72%)
   // ============================================================
   --danger-hue: 0;
   --danger-saturation: 72%;
-  --danger-lighter: var(--danger-color-2);
-  --danger-lighter-ch: var(--danger-color-2-ch);
-  --danger-accent-lighter: var(--danger-accent-2);
-  --danger-light: var(--danger-color-3);
-  --danger-light-ch: var(--danger-color-3-ch);
-  --danger-accent-light: var(--danger-accent-3);
-  --danger-default: var(--danger-color-5);
-  --danger-default-ch: var(--danger-color-5-ch);
-  --danger-accent-default: var(--danger-accent-5);
-  --danger-dark: var(--danger-color-7);
-  --danger-dark-ch: var(--danger-color-7-ch);
-  --danger-accent-dark: var(--danger-accent-7);
-  --danger-darker: var(--danger-color-8);
-  --danger-darker-ch: var(--danger-color-8-ch);
-  --danger-accent-darker: var(--danger-accent-8);
+  --danger-subtle: var(--danger-color-4);
+  --danger-subtle-ch: var(--danger-color-4-ch);
+  --danger-accent-subtle: var(--danger-accent-4);
+  --danger-tonal: var(--danger-color-5);
+  --danger-tonal-ch: var(--danger-color-5-ch);
+  --danger-accent-tonal: var(--danger-accent-5);
+  --danger-solid: var(--danger-color-7);
+  --danger-solid-ch: var(--danger-color-7-ch);
+  --danger-accent-solid: var(--danger-accent-7);
+  --danger-strong: var(--danger-color-9);
+  --danger-strong-ch: var(--danger-color-9-ch);
+  --danger-accent-strong: var(--danger-accent-9);
+  --danger-heavy: var(--danger-color-10);
+  --danger-heavy-ch: var(--danger-color-10-ch);
+  --danger-accent-heavy: var(--danger-accent-10);
 
   // ============================================================
   // Success — Green hsl(142, 71%)
   // ============================================================
   --success-hue: 142;
   --success-saturation: 71%;
-  --success-lighter: var(--success-color-2);
-  --success-lighter-ch: var(--success-color-2-ch);
-  --success-accent-lighter: var(--success-accent-2);
-  --success-light: var(--success-color-3);
-  --success-light-ch: var(--success-color-3-ch);
-  --success-accent-light: var(--success-accent-3);
-  --success-default: var(--success-color-5);
-  --success-default-ch: var(--success-color-5-ch);
-  --success-accent-default: var(--success-accent-5);
-  --success-dark: var(--success-color-7);
-  --success-dark-ch: var(--success-color-7-ch);
-  --success-accent-dark: var(--success-accent-7);
-  --success-darker: var(--success-color-8);
-  --success-darker-ch: var(--success-color-8-ch);
-  --success-accent-darker: var(--success-accent-8);
+  --success-subtle: var(--success-color-4);
+  --success-subtle-ch: var(--success-color-4-ch);
+  --success-accent-subtle: var(--success-accent-4);
+  --success-tonal: var(--success-color-5);
+  --success-tonal-ch: var(--success-color-5-ch);
+  --success-accent-tonal: var(--success-accent-5);
+  --success-solid: var(--success-color-7);
+  --success-solid-ch: var(--success-color-7-ch);
+  --success-accent-solid: var(--success-accent-7);
+  --success-strong: var(--success-color-9);
+  --success-strong-ch: var(--success-color-9-ch);
+  --success-accent-strong: var(--success-accent-9);
+  --success-heavy: var(--success-color-10);
+  --success-heavy-ch: var(--success-color-10-ch);
+  --success-accent-heavy: var(--success-accent-10);
 
   // ============================================================
   // Warning — Amber hsl(38, 92%)
   // ============================================================
   --warning-hue: 38;
   --warning-saturation: 92%;
-  --warning-lighter: var(--warning-color-2);
-  --warning-lighter-ch: var(--warning-color-2-ch);
-  --warning-accent-lighter: var(--warning-accent-2);
-  --warning-light: var(--warning-color-3);
-  --warning-light-ch: var(--warning-color-3-ch);
-  --warning-accent-light: var(--warning-accent-3);
-  --warning-default: var(--warning-color-5);
-  --warning-default-ch: var(--warning-color-5-ch);
-  --warning-accent-default: var(--warning-accent-5);
-  --warning-dark: var(--warning-color-7);
-  --warning-dark-ch: var(--warning-color-7-ch);
-  --warning-accent-dark: var(--warning-accent-7);
-  --warning-darker: var(--warning-color-8);
-  --warning-darker-ch: var(--warning-color-8-ch);
-  --warning-accent-darker: var(--warning-accent-8);
+  --warning-subtle: var(--warning-color-4);
+  --warning-subtle-ch: var(--warning-color-4-ch);
+  --warning-accent-subtle: var(--warning-accent-4);
+  --warning-tonal: var(--warning-color-5);
+  --warning-tonal-ch: var(--warning-color-5-ch);
+  --warning-accent-tonal: var(--warning-accent-5);
+  --warning-solid: var(--warning-color-7);
+  --warning-solid-ch: var(--warning-color-7-ch);
+  --warning-accent-solid: var(--warning-accent-7);
+  --warning-strong: var(--warning-color-9);
+  --warning-strong-ch: var(--warning-color-9-ch);
+  --warning-accent-strong: var(--warning-accent-9);
+  --warning-heavy: var(--warning-color-10);
+  --warning-heavy-ch: var(--warning-color-10-ch);
+  --warning-accent-heavy: var(--warning-accent-10);
 
   // ============================================================
   // Info — Blue hsl(215, 100%)
   // ============================================================
   --info-hue: 215;
   --info-saturation: 100%;
-  --info-lighter: var(--info-color-2);
-  --info-lighter-ch: var(--info-color-2-ch);
-  --info-accent-lighter: var(--info-accent-2);
-  --info-light: var(--info-color-3);
-  --info-light-ch: var(--info-color-3-ch);
-  --info-accent-light: var(--info-accent-3);
-  --info-default: var(--info-color-5);
-  --info-default-ch: var(--info-color-5-ch);
-  --info-accent-default: var(--info-accent-5);
-  --info-dark: var(--info-color-7);
-  --info-dark-ch: var(--info-color-7-ch);
-  --info-accent-dark: var(--info-accent-7);
-  --info-darker: var(--info-color-8);
-  --info-darker-ch: var(--info-color-8-ch);
-  --info-accent-darker: var(--info-accent-8);
+  --info-subtle: var(--info-color-4);
+  --info-subtle-ch: var(--info-color-4-ch);
+  --info-accent-subtle: var(--info-accent-4);
+  --info-tonal: var(--info-color-5);
+  --info-tonal-ch: var(--info-color-5-ch);
+  --info-accent-tonal: var(--info-accent-5);
+  --info-solid: var(--info-color-7);
+  --info-solid-ch: var(--info-color-7-ch);
+  --info-accent-solid: var(--info-accent-7);
+  --info-strong: var(--info-color-9);
+  --info-strong-ch: var(--info-color-9-ch);
+  --info-accent-strong: var(--info-accent-9);
+  --info-heavy: var(--info-color-10);
+  --info-heavy-ch: var(--info-color-10-ch);
+  --info-accent-heavy: var(--info-accent-10);
 
   // ============================================================
   // Neutral — Zinc hsl(240, 5%)
   // ============================================================
   --neutral-hue: 240;
   --neutral-saturation: 5%;
-  --neutral-lighter: var(--neutral-color-2);
-  --neutral-lighter-ch: var(--neutral-color-2-ch);
-  --neutral-accent-lighter: var(--neutral-accent-2);
-  --neutral-light: var(--neutral-color-3);
-  --neutral-light-ch: var(--neutral-color-3-ch);
-  --neutral-accent-light: var(--neutral-accent-3);
-  --neutral-default: var(--neutral-color-6);
-  --neutral-default-ch: var(--neutral-color-6-ch);
-  --neutral-accent-default: var(--neutral-accent-6);
-  --neutral-dark: var(--neutral-color-8);
-  --neutral-dark-ch: var(--neutral-color-8-ch);
-  --neutral-accent-dark: var(--neutral-accent-8);
-  --neutral-darker: var(--neutral-color-9);
-  --neutral-darker-ch: var(--neutral-color-9-ch);
-  --neutral-accent-darker: var(--neutral-accent-9);
+  --neutral-subtle: var(--neutral-color-3);
+  --neutral-subtle-ch: var(--neutral-color-3-ch);
+  --neutral-accent-subtle: var(--neutral-accent-3);
+  --neutral-tonal: var(--neutral-color-4);
+  --neutral-tonal-ch: var(--neutral-color-4-ch);
+  --neutral-accent-tonal: var(--neutral-accent-4);
+  --neutral-solid: var(--neutral-color-7);
+  --neutral-solid-ch: var(--neutral-color-7-ch);
+  --neutral-accent-solid: var(--neutral-accent-7);
+  --neutral-strong: var(--neutral-color-9);
+  --neutral-strong-ch: var(--neutral-color-9-ch);
+  --neutral-accent-strong: var(--neutral-accent-9);
+  --neutral-heavy: var(--neutral-color-10);
+  --neutral-heavy-ch: var(--neutral-color-10-ch);
+  --neutral-accent-heavy: var(--neutral-accent-10);
 }
 
 // ============================================================
@@ -293,8 +298,8 @@
   --surface-color-deep: #27272a;
 
   // In dark mode, primary is near-white
-  --primary-default: var(--primary-color-1);
-  --primary-accent-default: var(--primary-accent-1);
-  --primary-dark: var(--primary-color-2);
-  --primary-darker: var(--primary-color-3);
+  --primary-solid: var(--primary-color-3);
+  --primary-accent-solid: var(--primary-accent-3);
+  --primary-strong: var(--primary-color-4);
+  --primary-heavy: var(--primary-color-5);
 }

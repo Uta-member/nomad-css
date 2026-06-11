@@ -49,9 +49,9 @@ $alert-icon-size-var: --#{$alert-prefix}icon-size !default;
   // --------------------------------------------
   // Colors (default: neutral surface)
   // --------------------------------------------
-  #{$alert-bg-color-var}: var(#{palette.$palette-lighter-var});
-  #{$alert-color-var}: var(#{palette.$palette-dark-var});
-  #{$alert-border-color-var}: var(#{palette.$palette-light-var});
+  #{$alert-bg-color-var}: var(#{palette.$palette-subtle-var});
+  #{$alert-color-var}: var(#{palette.$palette-strong-var});
+  #{$alert-border-color-var}: var(#{palette.$palette-tonal-var});
 
   // --------------------------------------------
   // Border

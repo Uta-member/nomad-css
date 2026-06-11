@@ -166,7 +166,7 @@ $select-transition-var: --#{$select-prefix}transition !default;
   // Focus Ring
   // --------------------------------------------
   #{$select-focus-ring-width-var}: 2px;
-  #{$select-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$select-focus-ring-color-var}: var(#{palette.$palette-solid-var});
 
   // --------------------------------------------
   // Opacity
@@ -290,8 +290,8 @@ $select-transition-var: --#{$select-prefix}transition !default;
     }
 
     & option:checked {
-      background-color: var(#{palette.$palette-default-var});
-      color: var(#{palette.$palette-default-accent-var});
+      background-color: var(#{palette.$palette-solid-var});
+      color: var(#{palette.$palette-solid-accent-var});
     }
   }
 }

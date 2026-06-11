@@ -179,24 +179,24 @@ $table-cell-padding-y-sm-var: --#{$table-prefix}cell-padding-y-sm !default;
 // palette
 // ============================================
 .#{$table-class-name} {
-  & .palette-default {
-    background-color: var(#{palette.$palette-default-var});
-    color: var(#{palette.$palette-default-accent-var});
+  & .palette-solid {
+    background-color: var(#{palette.$palette-solid-var});
+    color: var(#{palette.$palette-solid-accent-var});
   }
-  & .palette-light {
-    background-color: var(#{palette.$palette-light-var});
-    color: var(#{palette.$palette-light-accent-var});
+  & .palette-tonal {
+    background-color: var(#{palette.$palette-tonal-var});
+    color: var(#{palette.$palette-tonal-accent-var});
   }
-  & .palette-lighter {
-    background-color: var(#{palette.$palette-lighter-var});
-    color: var(#{palette.$palette-lighter-accent-var});
+  & .palette-subtle {
+    background-color: var(#{palette.$palette-subtle-var});
+    color: var(#{palette.$palette-subtle-accent-var});
   }
-  & .palette-dark {
-    background-color: var(#{palette.$palette-dark-var});
-    color: var(#{palette.$palette-dark-accent-var});
+  & .palette-strong {
+    background-color: var(#{palette.$palette-strong-var});
+    color: var(#{palette.$palette-strong-accent-var});
   }
-  & .palette-darker {
-    background-color: var(#{palette.$palette-darker-var});
-    color: var(#{palette.$palette-darker-accent-var});
+  & .palette-heavy {
+    background-color: var(#{palette.$palette-heavy-var});
+    color: var(#{palette.$palette-heavy-accent-var});
   }
 }

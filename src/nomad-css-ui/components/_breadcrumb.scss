@@ -48,8 +48,8 @@ $breadcrumb-font-size-var: --#{$breadcrumb-prefix}font-size !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$breadcrumb-color-var}: var(#{palette.$palette-default-var});
-  #{$breadcrumb-hover-color-var}: var(#{palette.$palette-dark-var});
+  #{$breadcrumb-color-var}: var(#{palette.$palette-solid-var});
+  #{$breadcrumb-hover-color-var}: var(#{palette.$palette-strong-var});
   #{$breadcrumb-active-color-var}: var(#{color-defines.$text-color-subtle-var});
   #{$breadcrumb-separator-color-var}: var(
     #{color-defines.$text-color-subtle-var}

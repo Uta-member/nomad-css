@@ -43,24 +43,24 @@ $surface-color-deep-var: --surface-color-deep;
 // CSS Variants
 // ============================================
 :root {
-  #{$border-color-var}: var(#{semantics.$neutral-light-var});
-  #{$border-color-subtle-var}: var(#{semantics.$neutral-lighter-var});
-  #{$border-color-strong-var}: var(#{semantics.$neutral-dark-var});
+  #{$border-color-var}: var(#{semantics.$neutral-tonal-var});
+  #{$border-color-subtle-var}: var(#{semantics.$neutral-subtle-var});
+  #{$border-color-strong-var}: var(#{semantics.$neutral-strong-var});
 
-  #{$control-border-color-var}: var(#{semantics.$neutral-default-var});
-  #{$control-border-color-strong-var}: var(#{semantics.$neutral-dark-var});
-  #{$control-border-color-subtle-var}: var(#{semantics.$neutral-light-var});
+  #{$control-border-color-var}: var(#{semantics.$neutral-solid-var});
+  #{$control-border-color-strong-var}: var(#{semantics.$neutral-strong-var});
+  #{$control-border-color-subtle-var}: var(#{semantics.$neutral-tonal-var});
 
-  #{$text-color-var}: var(--neutral-color-9);
-  #{$text-color-subtle-var}: var(--neutral-color-5);
-  #{$text-color-muted-var}: var(--neutral-color-4);
-  #{$text-color-strong-var}: var(--neutral-color-10);
+  #{$text-color-var}: var(--neutral-color-10);
+  #{$text-color-subtle-var}: var(--neutral-color-6);
+  #{$text-color-muted-var}: var(--neutral-color-5);
+  #{$text-color-strong-var}: var(--neutral-color-11);
 
   #{$surface-color-overlay-var}: var(
-    --neutral-color-0
-  ); // 97% — 最明 (ダイアログ等)
-  #{$surface-color-raised-var}: var(--neutral-color-0);
-  #{$surface-color-var}: var(--neutral-color-1);
-  #{$surface-color-sunken-var}: var(--neutral-color-2);
-  #{$surface-color-deep-var}: var(--neutral-color-3);
+    --neutral-color-1
+  ); // 99% — 最明 (ダイアログ等)
+  #{$surface-color-raised-var}: var(--neutral-color-1);
+  #{$surface-color-var}: var(--neutral-color-2);
+  #{$surface-color-sunken-var}: var(--neutral-color-3);
+  #{$surface-color-deep-var}: var(--neutral-color-4);
 }

@@ -3,10 +3,10 @@
 :root[data-theme="#{prefixes.$theme-name}"] {
   .list,
   .list-group {
-    --list-hover-bg-color: var(--palette-lighter);
-    --list-hover-color: var(--palette-accent-lighter);
-    --list-active-bg-color: var(--palette-light);
-    --list-active-color: var(--palette-accent-light);
+    --list-hover-bg-color: var(--palette-subtle);
+    --list-hover-color: var(--palette-accent-subtle);
+    --list-active-bg-color: var(--palette-tonal);
+    --list-active-color: var(--palette-accent-tonal);
     --list-disabled-color: var(--text-color-muted);
     --list-border-width: none;
     --list-active-border-radius: 0.5rem;

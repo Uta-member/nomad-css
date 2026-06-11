@@ -147,8 +147,8 @@ $dark-mode-name: "dark";
     // outlined バリエーション
     &.outlined {
       --button-bg-color: transparent;
-      --button-border-color: var(--palette-default);
-      --button-color: var(--palette-default);
+      --button-border-color: var(--palette-solid);
+      --button-color: var(--palette-solid);
     }
 
     // 無効状態
@@ -208,7 +208,7 @@ $dark-mode-name: "dark";
 | ---------------------- | ------------------------------------------------------------ |
 | `--palette-hue`        | テーマのメインカラーの色相                                   |
 | `--palette-saturation` | テーマのメインカラーの彩度                                   |
-| `--palette-default`    | デフォルト明度のカラー（通常は `var(--palette-color-5)` 等） |
+| `--palette-solid`      | solidレベルのカラー（通常は `var(--palette-color-5)` 等） |
 
 #### ボタン
 

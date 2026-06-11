@@ -1,0 +1,48 @@
+@use "../../utilities/spacing" as spacing;
+
+// ============================================
+// Prefix
+// ============================================
+$spacing-semantic-prefix: --spacing-semantic- !default;
+$spacing-semantic-class-name-prefix: spacing- !default;
+
+// ============================================
+// Variables
+// ============================================
+// セマンティック（役割）層: tシャツサイズを、プリミティブ層の
+// 数値ステップ（spacing.$spacing-values）にマッピングする。
+// fonts の --fs-semantic-* / border の --radius-semantic-* と同じ考え方。
+$spacing-semantics: (
+  xs: var(#{spacing.$spacing-scale-prefix}1),
+  sm: var(#{spacing.$spacing-scale-prefix}2),
+  md: var(#{spacing.$spacing-scale-prefix}3),
+  lg: var(#{spacing.$spacing-scale-prefix}4),
+  xl: var(#{spacing.$spacing-scale-prefix}5),
+) !default;
+
+// ============================================
+// Process
+// ============================================
+// ============================================
+// CSS Variables
+// ============================================
+:root {
+  @each $key, $value in $spacing-semantics {
+    #{$spacing-semantic-prefix}#{$key}: #{$value};
+  }
+}
+
+// ============================================
+// Semantic Utility Classes
+// ============================================
+// .spacing-xs / .spacing-sm / ... は gap / padding / margin 兼用では
+// 役割が曖昧なため、個別プロパティへの適用はコンポーネント側で行う。
+// ここでは gap 用のセマンティッククラスのみ生成する（最も汎用的）。
+@each $key, $value in $spacing-semantics {
+  .gap-#{$spacing-semantic-class-name-prefix}#{$key} {
+    gap: var(#{$spacing-semantic-prefix}#{$key});
+  }
+  .#{$spacing-semantic-class-name-prefix}#{$key} {
+    padding: var(#{$spacing-semantic-prefix}#{$key});
+  }
+}

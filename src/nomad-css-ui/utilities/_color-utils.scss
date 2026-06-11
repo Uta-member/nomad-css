@@ -8,11 +8,11 @@
 // ============================================
 // text-{color}               → color プロパティを設定
 // bg-{color}                 → background-color + color (accent) を設定
-// text-{color}-{n}           → color-{n} (0-10)
-// bg-{color}-{n}             → color-{n} (0-10) + accent-{n}
-// text-{color}-gray-{n}      → gray-{n} (0-10)
-// bg-{color}-gray-{n}        → gray-{n} (0-10) + accent-{n}
-// text-{color}-accent-{n}    → accent-{n} (0-10)
+// text-{color}-{n}           → color-{n} (1-12)
+// bg-{color}-{n}             → color-{n} (1-12) + accent-{n}
+// text-{color}-gray-{n}      → gray-{n} (1-12)
+// bg-{color}-gray-{n}        → gray-{n} (1-12) + accent-{n}
+// text-{color}-accent-{n}    → accent-{n} (1-12)
 // ============================================
 
 // --------------------------------------------
@@ -56,16 +56,16 @@
   $accent-prefix: map.get($names, palette-accent-prefix);
   $gray-prefix: map.get($names, palette-gray-prefix);
 
-  // ---- Named levels (lighter / light / default / dark / darker) ----
+  // ---- Named levels (subtle / tonal / solid / strong / heavy) ----
   .text-#{$name} {
-    color: var(--#{$level-prefix}default);
+    color: var(--#{$level-prefix}solid);
   }
   .bg-#{$name} {
-    background-color: var(--#{$level-prefix}default);
-    color: var(--#{$accent-prefix}default);
+    background-color: var(--#{$level-prefix}solid);
+    color: var(--#{$accent-prefix}solid);
   }
 
-  @each $level in (lighter, light, dark, darker) {
+  @each $level in (subtle, tonal, strong, heavy) {
     .text-#{$name}-#{$level} {
       color: var(--#{$level-prefix}#{$level});
     }
@@ -75,8 +75,8 @@
     }
   }
 
-  // ---- Numeric levels 0-10 ----
-  @for $i from 0 through 10 {
+  // ---- Numeric levels 1-12 ----
+  @for $i from 1 through 12 {
     .text-#{$name}-#{$i} {
       color: var(--#{$color-prefix}#{$i});
     }

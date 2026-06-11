@@ -7,7 +7,7 @@
     --button-transition:
       background-color 0.3s, color 0.3s, box-shadow 0.3s, opacity 0.3s,
       border-radius 0.1s;
-    --button-focus-ring-color: var(--palette-default);
+    --button-focus-ring-color: var(--palette-solid);
     --button-active-border-radius: 0.5rem;
     --button-height: 56px;
     --button-padding: 0px 24px;
@@ -36,37 +36,37 @@
       --button-hover-border-color: var(--button-hover-bg-color);
       --button-active-border-color: var(--button-active-bg-color);
       --button-focus-border-color: var(--button-focus-bg-color);
-      --button-disabled-bg-color: var(--neutral-lighter);
-      --button-disabled-border-color: var(--neutral-lighter);
+      --button-disabled-bg-color: var(--neutral-subtle);
+      --button-disabled-border-color: var(--neutral-subtle);
       --button-disabled-opacity: 1;
       --button-disabled-color: var(--text-color-subtle);
     }
 
     &.tonal {
-      --button-hover-bg-color: var(--palette-light);
+      --button-hover-bg-color: var(--palette-tonal);
       --button-active-bg-color: var(--button-hover-bg-color);
       --button-focus-bg-color: var(--button-hover-bg-color);
       --button-border-color: var(--button-bg-color);
       --button-hover-border-color: var(--button-hover-bg-color);
       --button-active-border-color: var(--button-active-bg-color);
       --button-focus-border-color: var(--button-focus-bg-color);
-      --button-disabled-bg-color: var(--neutral-lighter);
-      --button-disabled-border-color: var(--neutral-lighter);
+      --button-disabled-bg-color: var(--neutral-subtle);
+      --button-disabled-border-color: var(--neutral-subtle);
       --button-disabled-opacity: 1;
       --button-disabled-color: var(--text-color-subtle);
       --button-hover-box-shadow: var(--shadow-1);
     }
 
     &.outlined {
-      --button-disabled-bg-color: var(--neutral-lighter);
-      --button-disabled-border-color: var(--neutral-light);
+      --button-disabled-bg-color: var(--neutral-subtle);
+      --button-disabled-border-color: var(--neutral-tonal);
       --button-disabled-opacity: 1;
     }
 
     &.text {
       --button-focus-bg-color: var(--button-bg-color);
-      --button-disabled-bg-color: var(--neutral-lighter);
-      --button-disabled-border-color: var(--neutral-lighter);
+      --button-disabled-bg-color: var(--neutral-subtle);
+      --button-disabled-border-color: var(--neutral-subtle);
       --button-disabled-opacity: 1;
       --button-disabled-color: var(--text-color-subtle);
     }
@@ -76,13 +76,13 @@
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   .button {
     &.filled {
-      --button-bg-color: var(--palette-light);
-      --button-color: var(--palette-darker);
-      --button-hover-bg-color: var(--palette-lighter);
-      --button-hover-color: var(--palette-darker);
+      --button-bg-color: var(--palette-tonal);
+      --button-color: var(--palette-heavy);
+      --button-hover-bg-color: var(--palette-subtle);
+      --button-hover-color: var(--palette-heavy);
       --button-hover-opacity: 1;
-      --button-active-bg-color: var(--palette-lighter);
-      --button-active-color: var(--palette-darker);
+      --button-active-bg-color: var(--palette-subtle);
+      --button-active-color: var(--palette-heavy);
       --button-active-opacity: 0.9;
       --button-border-color: var(--button-bg-color);
       --button-hover-border-color: var(--button-hover-bg-color);
@@ -95,9 +95,9 @@
     }
 
     &.tonal {
-      --button-bg-color: var(--palette-darker);
-      --button-color: var(--palette-lighter);
-      --button-hover-bg-color: var(--palette-dark);
+      --button-bg-color: var(--palette-heavy);
+      --button-color: var(--palette-subtle);
+      --button-hover-bg-color: var(--palette-strong);
       --button-hover-color: var(--button-color);
       --button-active-bg-color: var(--button-hover-bg-color);
       --button-active-color: var(--button-color);
@@ -115,7 +115,7 @@
     }
 
     &.outlined {
-      --button-hover-bg-color: var(--palette-darker);
+      --button-hover-bg-color: var(--palette-heavy);
       --button-hover-color: var(--button-color);
       --button-active-bg-color: var(--button-hover-bg-color);
       --button-active-color: var(--button-color);
@@ -129,7 +129,7 @@
     }
 
     &.text {
-      --button-hover-bg-color: var(--palette-darker);
+      --button-hover-bg-color: var(--palette-heavy);
       --button-hover-color: var(--button-color);
       --button-active-bg-color: var(--button-hover-bg-color);
       --button-active-color: var(--button-color);

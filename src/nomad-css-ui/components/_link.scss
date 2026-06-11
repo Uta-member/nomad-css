@@ -61,9 +61,9 @@ $link-card-shadow-var: --#{$link-prefix}card-shadow !default;
     #{color-defines.$surface-color-sunken-var}
   );
   #{$link-card-hover-color-var}: var(#{color-defines.$text-color-var});
-  #{$link-card-active-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$link-card-active-color-var}: var(#{palette.$palette-default-accent-var});
-  #{$link-card-disabled-color-var}: var(--neutral-default);
+  #{$link-card-active-bg-color-var}: var(#{palette.$palette-solid-var});
+  #{$link-card-active-color-var}: var(#{palette.$palette-solid-accent-var});
+  #{$link-card-disabled-color-var}: var(--neutral-solid);
   #{$link-card-icon-color-var}: var(#{color-defines.$text-color-muted-var});
   #{$link-card-desc-color-var}: var(#{color-defines.$text-color-subtle-var});
 

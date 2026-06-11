@@ -1,28 +1,29 @@
+@use "prefixes" as prefixes;
+
 // ============================================
-// Overridable Variables
+// Prefixes
 // ============================================
+$spacing-prefix: #{prefixes.$prefix}spacing-;
+
+// Variable Name (数値スケールの変数プレフィックス)
+$spacing-scale-prefix: --#{$spacing-prefix};
+
+// Class Names
 $margin-class-name: m !default;
-$margin-values: (
-  0: 0,
-  1: 0.25rem,
-  2: 0.5rem,
-  3: 1rem,
-  4: 1.5rem,
-  5: 3rem,
-) !default;
-
 $padding-class-name: p !default;
-$padding-values: (
-  0: 0,
-  1: 0.25rem,
-  2: 0.5rem,
-  3: 1rem,
-  4: 1.5rem,
-  5: 3rem,
-) !default;
-
 $gap-class-name: gap !default;
-$gap-values: (
+
+// ============================================
+// Variables
+// ============================================
+// プリミティブ（参照）層: 数値ステップの線形スケール。
+// margin / padding / gap は同一スケールを共有する（値が等しいため）。
+// tシャツ名・役割名はここでは使わない。
+// 理由: 拡張性（ステップの追加・挿入が容易）と、ブレークポイント名
+// （xs/sm/md/lg/xl/xxl）との語彙衝突を避けるため。セマンティック名は
+// 層2のセマンティック層（--spacing-semantic-*）で付与する。
+// see docs/design-tokens.md
+$spacing-values: (
   0: 0,
   1: 0.25rem,
   2: 0.5rem,
@@ -35,74 +36,84 @@ $gap-values: (
 // Process
 // ============================================
 // ============================================
+// CSS Variables
+// ============================================
+:root {
+  // 数値スケールを CSS 変数として公開（テーマ・利用側で上書き可能）
+  @each $key, $value in $spacing-values {
+    #{$spacing-scale-prefix}#{$key}: #{$value};
+  }
+}
+
+// ============================================
 // Margin
 // ============================================
-@each $key, $value in $margin-values {
+@each $key, $value in $spacing-values {
   .#{$margin-class-name}-#{$key} {
-    margin: #{$value} !important;
+    margin: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$margin-class-name}t-#{$key} {
-    margin-top: #{$value} !important;
+    margin-top: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$margin-class-name}r-#{$key} {
-    margin-right: #{$value} !important;
+    margin-right: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$margin-class-name}b-#{$key} {
-    margin-bottom: #{$value} !important;
+    margin-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$margin-class-name}l-#{$key} {
-    margin-left: #{$value} !important;
+    margin-left: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$margin-class-name}x-#{$key} {
-    margin-left: #{$value} !important;
-    margin-right: #{$value} !important;
+    margin-left: var(#{$spacing-scale-prefix}#{$key}) !important;
+    margin-right: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$margin-class-name}y-#{$key} {
-    margin-top: #{$value} !important;
-    margin-bottom: #{$value} !important;
+    margin-top: var(#{$spacing-scale-prefix}#{$key}) !important;
+    margin-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
 }
 
 // ============================================
 // Padding
 // ============================================
-@each $key, $value in $padding-values {
+@each $key, $value in $spacing-values {
   .#{$padding-class-name}-#{$key} {
-    padding: #{$value} !important;
+    padding: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$padding-class-name}t-#{$key} {
-    padding-top: #{$value} !important;
+    padding-top: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$padding-class-name}r-#{$key} {
-    padding-right: #{$value} !important;
+    padding-right: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$padding-class-name}b-#{$key} {
-    padding-bottom: #{$value} !important;
+    padding-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$padding-class-name}l-#{$key} {
-    padding-left: #{$value} !important;
+    padding-left: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$padding-class-name}x-#{$key} {
-    padding-left: #{$value} !important;
-    padding-right: #{$value} !important;
+    padding-left: var(#{$spacing-scale-prefix}#{$key}) !important;
+    padding-right: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$padding-class-name}y-#{$key} {
-    padding-top: #{$value} !important;
-    padding-bottom: #{$value} !important;
+    padding-top: var(#{$spacing-scale-prefix}#{$key}) !important;
+    padding-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
 }
 
 // ============================================
 // Gap
 // ============================================
-@each $key, $value in $gap-values {
+@each $key, $value in $spacing-values {
   .#{$gap-class-name}-#{$key} {
-    gap: #{$value} !important;
+    gap: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$gap-class-name}x-#{$key} {
-    column-gap: #{$value} !important;
+    column-gap: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
   .#{$gap-class-name}y-#{$key} {
-    row-gap: #{$value} !important;
+    row-gap: var(#{$spacing-scale-prefix}#{$key}) !important;
   }
 }

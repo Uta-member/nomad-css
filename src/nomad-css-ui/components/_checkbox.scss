@@ -106,7 +106,7 @@ $checkbox-focus-ring-offset-width-var: --#{$checkbox-prefix}focus-ring-offset-wi
   );
   #{$checkbox-focus-bg-color-var}: var(#{color-defines.$surface-color-var});
   #{$checkbox-disabled-bg-color-var}: transparent;
-  #{$checkbox-checked-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$checkbox-checked-bg-color-var}: var(#{palette.$palette-solid-var});
   #{$checkbox-checked-hover-bg-color-var}: var(
     #{$checkbox-checked-bg-color-var}
   );
@@ -140,15 +140,15 @@ $checkbox-focus-ring-offset-width-var: --#{$checkbox-prefix}focus-ring-offset-wi
   #{$checkbox-disabled-border-color-var}: var(
     #{color-defines.$control-border-color-subtle-var}
   );
-  #{$checkbox-checked-border-color-var}: var(#{palette.$palette-default-var});
+  #{$checkbox-checked-border-color-var}: var(#{palette.$palette-solid-var});
   #{$checkbox-checked-hover-border-color-var}: var(
-    #{palette.$palette-default-var}
+    #{palette.$palette-solid-var}
   );
   #{$checkbox-checked-active-border-color-var}: var(
-    #{palette.$palette-default-var}
+    #{palette.$palette-solid-var}
   );
   #{$checkbox-checked-focus-border-color-var}: var(
-    #{palette.$palette-default-var}
+    #{palette.$palette-solid-var}
   );
   #{$checkbox-checked-disabled-border-color-var}: var(
     #{color-defines.$border-color-var}
@@ -170,7 +170,7 @@ $checkbox-focus-ring-offset-width-var: --#{$checkbox-prefix}focus-ring-offset-wi
   // --------------------------------------------
   // Check Mark
   // --------------------------------------------
-  #{$checkbox-mark-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$checkbox-mark-color-var}: var(#{palette.$palette-solid-accent-var});
   #{$checkbox-disabled-mark-color-var}: var(
     #{color-defines.$surface-color-overlay-var}
   );
@@ -192,7 +192,7 @@ $checkbox-focus-ring-offset-width-var: --#{$checkbox-prefix}focus-ring-offset-wi
   // Focus Ring
   // --------------------------------------------
   #{$checkbox-focus-ring-width-var}: 2px;
-  #{$checkbox-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$checkbox-focus-ring-color-var}: var(#{palette.$palette-solid-var});
   #{$checkbox-focus-ring-offset-width-var}: 2px;
 }
 

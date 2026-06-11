@@ -78,11 +78,11 @@ HSL カラーパレットの CSS 変数を一括生成する `generate-palette()
 /* ... --palette-color-1 〜 --palette-color-10 */
 --palette-accent-0: hsl(220, 80%, 10%); /* 暗いアクセント（明るいカラー用） */
 /* ... --palette-accent-1 〜 --palette-accent-10 */
---palette-lighter: hsl(220, 80%, 85%); /* levels の lighter = 2 に対応 */
---palette-light: hsl(220, 80%, 75%);
---palette-default: hsl(220, 80%, 50%);
---palette-dark: hsl(220, 80%, 34%);
---palette-darker: hsl(220, 80%, 18%);
+--palette-subtle: hsl(220, 80%, 85%); /* levels の subtle = 2 に対応 */
+--palette-tonal: hsl(220, 80%, 75%);
+--palette-solid: hsl(220, 80%, 50%);
+--palette-strong: hsl(220, 80%, 34%);
+--palette-heavy: hsl(220, 80%, 18%);
 --palette-gray-0: hsl(220, 5%, 97%); /* グレースケール */
 /* ... */
 ```

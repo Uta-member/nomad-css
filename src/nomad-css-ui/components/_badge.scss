@@ -62,8 +62,8 @@ $badge-lg-font-size-var: --#{$badge-prefix}lg-font-size !default;
   // --------------------------------------------
   // Colors (default: primary palette)
   // --------------------------------------------
-  #{$badge-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$badge-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$badge-bg-color-var}: var(#{palette.$palette-solid-var});
+  #{$badge-color-var}: var(#{palette.$palette-solid-accent-var});
 
   // --------------------------------------------
   // Border

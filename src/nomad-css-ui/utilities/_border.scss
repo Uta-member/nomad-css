@@ -39,5 +39,5 @@ $border-radius-semantics: (
 // Border Colors
 // ============================================
 .#{border.$border-class-name}.palette {
-  border-color: var(#{palette.$palette-default-var});
+  border-color: var(#{palette.$palette-solid-var});
 }

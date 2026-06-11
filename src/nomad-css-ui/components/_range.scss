@@ -33,7 +33,7 @@ $range-accent-color-var: --#{$range-prefix}accent-color !default;
   // --------------------------------------------
   // Accent Colors
   // --------------------------------------------
-  #{$range-accent-color-var}: var(#{palette.$palette-default-var});
+  #{$range-accent-color-var}: var(#{palette.$palette-solid-var});
 }
 
 // ============================================

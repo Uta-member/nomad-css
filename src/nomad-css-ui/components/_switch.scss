@@ -98,10 +98,10 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   // Track colors
   // --------------------------------------------
   #{$switch-track-bg-color-var}: var(#{color-defines.$surface-color-deep-var});
-  #{$switch-track-checked-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$switch-track-checked-bg-color-var}: var(#{palette.$palette-solid-var});
   #{$switch-track-border-color-var}: var(#{color-defines.$border-color-var});
   #{$switch-track-checked-border-color-var}: var(
-    #{palette.$palette-default-var}
+    #{palette.$palette-solid-var}
   );
   #{$switch-track-border-radius-var}: 10rem;
   #{$switch-track-border-width-var}: var(#{border.$border-width-var});
@@ -127,15 +127,15 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   // --------------------------------------------
   // Thumb colors
   // --------------------------------------------
-  #{$switch-thumb-bg-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$switch-thumb-bg-color-var}: var(#{palette.$palette-solid-accent-var});
   #{$switch-thumb-checked-bg-color-var}: var(
-    #{palette.$palette-default-accent-var}
+    #{palette.$palette-solid-accent-var}
   );
   #{$switch-thumb-disabled-bg-color-var}: var(
     #{color-defines.$border-color-var}
   );
   #{$switch-track-checked-disabled-bg-color-var}: var(
-    #{palette.$palette-lighter-var}
+    #{palette.$palette-subtle-var}
   );
   #{$switch-thumb-checked-disabled-bg-color-var}: var(
     #{color-defines.$border-color-subtle-var}

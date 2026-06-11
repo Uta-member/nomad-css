@@ -65,9 +65,9 @@ $pagination-gap-var: --#{$pagination-prefix}gap !default;
     #{color-defines.$surface-color-sunken-var}
   );
   #{$pagination-hover-color-var}: var(#{color-defines.$text-color-var});
-  #{$pagination-active-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$pagination-active-color-var}: var(#{palette.$palette-default-accent-var});
-  #{$pagination-active-border-color-var}: var(#{palette.$palette-default-var});
+  #{$pagination-active-bg-color-var}: var(#{palette.$palette-solid-var});
+  #{$pagination-active-color-var}: var(#{palette.$palette-solid-accent-var});
+  #{$pagination-active-border-color-var}: var(#{palette.$palette-solid-var});
   #{$pagination-disabled-color-var}: var(#{color-defines.$border-color-var});
   #{$pagination-disabled-bg-color-var}: var(
     #{color-defines.$surface-color-overlay-var}

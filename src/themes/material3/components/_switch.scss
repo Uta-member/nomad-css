@@ -2,16 +2,16 @@
 
 :root[data-theme="#{prefixes.$theme-name}"] {
   .switch {
-    --switch-track-bg-color: var(--neutral-light);
-    --switch-thumb-bg-color: var(--neutral-default);
-    --switch-track-checked-bg-color: var(--palette-default);
-    --switch-thumb-checked-bg-color: var(--neutral-lighter);
-    --switch-track-border-color: var(--neutral-default);
+    --switch-track-bg-color: var(--neutral-tonal);
+    --switch-thumb-bg-color: var(--neutral-solid);
+    --switch-track-checked-bg-color: var(--palette-solid);
+    --switch-thumb-checked-bg-color: var(--neutral-subtle);
+    --switch-track-border-color: var(--neutral-solid);
     --switch-track-border-width: 2px;
     --switch-thumb-size: 0.8rem;
     --switch-thumb-sm-size: 0.6rem;
     --switch-thumb-lg-size: 1rem;
-    --switch-track-focus-ring-color: var(--neutral-default);
+    --switch-track-focus-ring-color: var(--neutral-solid);
     --switch-track-disabled-bg-color: var(--switch-track-bg-color);
     --switch-thumb-disabled-bg-color: var(--switch-thumb-bg-color);
     --switch-track-checked-disabled-bg-color: var(

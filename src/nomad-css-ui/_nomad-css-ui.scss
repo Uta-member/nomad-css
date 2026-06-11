@@ -12,6 +12,7 @@
 @use "./utilities/color-utils" as color-utils;
 @use "./utilities/fonts" as theme-fonts;
 @use "./utilities/border" as theme-border;
+@use "./utilities/spacing" as theme-spacing;
 
 body {
   background-color: var(#{color-defines.$surface-color-var});

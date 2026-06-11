@@ -358,9 +358,9 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
-  #{$button-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$button-hover-bg-color-var}: var(#{palette.$palette-dark-var});
-  #{$button-active-bg-color-var}: var(#{palette.$palette-darker-var});
+  #{$button-bg-color-var}: var(#{palette.$palette-solid-var});
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-strong-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-heavy-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
   #{$button-disabled-bg-color-var}: var(
     #{color-defines.$border-color-subtle-var}
@@ -369,9 +369,9 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   // --------------------------------------------
   // Text Colors
   // --------------------------------------------
-  #{$button-color-var}: var(#{palette.$palette-default-accent-var});
-  #{$button-hover-color-var}: var(#{palette.$palette-dark-accent-var});
-  #{$button-active-color-var}: var(#{palette.$palette-darker-accent-var});
+  #{$button-color-var}: var(#{palette.$palette-solid-accent-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-strong-accent-var});
+  #{$button-active-color-var}: var(#{palette.$palette-heavy-accent-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
   #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 
@@ -400,18 +400,18 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   // --------------------------------------------
   // Background Colors
   // --------------------------------------------
-  #{$button-bg-color-var}: var(#{palette.$palette-lighter-var});
-  #{$button-hover-bg-color-var}: var(#{palette.$palette-light-var});
-  #{$button-active-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$button-bg-color-var}: var(#{palette.$palette-subtle-var});
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-tonal-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-solid-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
   #{$button-disabled-bg-color-var}: var(#{color-defines.$surface-color-var});
 
   // --------------------------------------------
   // Text Colors
   // --------------------------------------------
-  #{$button-color-var}: var(#{palette.$palette-dark-var});
-  #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
-  #{$button-active-color-var}: var(#{palette.$palette-darker-var});
+  #{$button-color-var}: var(#{palette.$palette-strong-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-strong-var});
+  #{$button-active-color-var}: var(#{palette.$palette-heavy-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
   #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 
@@ -441,27 +441,27 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   // Background Colors
   // --------------------------------------------
   #{$button-bg-color-var}: transparent;
-  #{$button-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
-  #{$button-active-bg-color-var}: var(#{palette.$palette-light-var});
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-subtle-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-tonal-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
   #{$button-disabled-bg-color-var}: transparent;
 
   // --------------------------------------------
   // Text Colors
   // --------------------------------------------
-  #{$button-color-var}: var(#{palette.$palette-default-var});
-  #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
-  #{$button-active-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-color-var}: var(#{palette.$palette-solid-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-strong-var});
+  #{$button-active-color-var}: var(#{palette.$palette-strong-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
   #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 
   // --------------------------------------------
   // Borders
   // --------------------------------------------
-  #{$button-border-color-var}: var(#{palette.$palette-default-var});
-  #{$button-hover-border-color-var}: var(#{palette.$palette-default-var});
-  #{$button-active-border-color-var}: var(#{palette.$palette-default-var});
-  #{$button-focus-border-color-var}: var(#{palette.$palette-default-var});
+  #{$button-border-color-var}: var(#{palette.$palette-solid-var});
+  #{$button-hover-border-color-var}: var(#{palette.$palette-solid-var});
+  #{$button-active-border-color-var}: var(#{palette.$palette-solid-var});
+  #{$button-focus-border-color-var}: var(#{palette.$palette-solid-var});
   #{$button-disabled-border-color-var}: var(#{color-defines.$border-color-var});
   #{$button-border-radius-var}: 0.25rem;
   #{$button-border-width-var}: var(#{border.$border-width-var});
@@ -481,17 +481,17 @@ $button-xl-icon-only-padding-var: --#{$button-prefix}xl-icon-only-padding !defau
   // Background Colors
   // --------------------------------------------
   #{$button-bg-color-var}: transparent;
-  #{$button-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
-  #{$button-active-bg-color-var}: var(#{palette.$palette-light-var});
+  #{$button-hover-bg-color-var}: var(#{palette.$palette-subtle-var});
+  #{$button-active-bg-color-var}: var(#{palette.$palette-tonal-var});
   #{$button-focus-bg-color-var}: var(#{$button-hover-bg-color-var});
   #{$button-disabled-bg-color-var}: transparent;
 
   // --------------------------------------------
   // Text Colors
   // --------------------------------------------
-  #{$button-color-var}: var(#{palette.$palette-default-var});
-  #{$button-hover-color-var}: var(#{palette.$palette-dark-var});
-  #{$button-active-color-var}: var(#{palette.$palette-dark-var});
+  #{$button-color-var}: var(#{palette.$palette-solid-var});
+  #{$button-hover-color-var}: var(#{palette.$palette-strong-var});
+  #{$button-active-color-var}: var(#{palette.$palette-strong-var});
   #{$button-focus-color-var}: var(#{$button-hover-color-var});
   #{$button-disabled-color-var}: var(#{color-defines.$border-color-var});
 

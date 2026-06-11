@@ -6,6 +6,36 @@ layout: layout.njk
 <section class="demo-section">
   <h1>Spacing Utilities</h1>
 
+  <!-- Primitive Scale: CSS Variables -->
+  <div class="demo-row">
+    <div class="demo-label">Primitive Scale (--spacing-0 – --spacing-5)</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: center">
+      {% for i in [0, 1, 2, 3, 4, 5] %}
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px">
+          <div style="width: var(--spacing-{{ i }}); height: 1rem; min-width: 4px; background-color: var(--primary-solid)"></div>
+          <span class="fs-3">--spacing-{{ i }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Semantic Spacing -->
+  <div class="demo-row">
+    <div class="demo-label">Semantic Spacing (--spacing-semantic-*) — .gap-spacing-* and .spacing-*</div>
+    <div class="d-flex flex-wrap" style="gap: 1rem">
+      {% for size in ["xs", "sm", "md", "lg", "xl"] %}
+        <div>
+          <p class="fs-3">gap-spacing-{{ size }}</p>
+          <div class="d-flex gap-spacing-{{ size }}" style="border: 1px dashed var(--border-color); padding: 0.5rem">
+            <span class="demo-box">A</span>
+            <span class="demo-box">B</span>
+            <span class="demo-box">C</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
   <!-- Margin -->
   <div class="demo-row">
     <div class="demo-label">Margin (.m-*)</div>

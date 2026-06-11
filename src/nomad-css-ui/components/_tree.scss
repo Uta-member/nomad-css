@@ -70,8 +70,8 @@ $tree-transition-var: --#{$tree-prefix}transition !default;
   #{$tree-color-var}: var(#{color-defines.$text-color-var});
   #{$tree-muted-color-var}: var(#{color-defines.$text-color-muted-var});
   #{$tree-hover-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
-  #{$tree-active-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$tree-active-color-var}: var(#{palette.$palette-default-accent-var});
+  #{$tree-active-bg-color-var}: var(#{palette.$palette-solid-var});
+  #{$tree-active-color-var}: var(#{palette.$palette-solid-accent-var});
   #{$tree-guide-color-var}: var(#{color-defines.$border-color-var});
 
   // --------------------------------------------

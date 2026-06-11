@@ -9,7 +9,7 @@
     --switch-thumb-size: 20px;
     --switch-thumb-margin: 2px;
     --switch-thumb-bg-color: #ffffff;
-    --switch-checked-bg-color: var(--primary-default);
+    --switch-checked-bg-color: var(--primary-solid);
     --switch-transition: all 0.15s ease;
     --switch-disabled-opacity: 0.5;
   }
@@ -19,6 +19,6 @@
   .switch {
     --switch-unchecked-bg-color: #27272a;
     --switch-thumb-bg-color: #ffffff;
-    --switch-checked-bg-color: var(--primary-default);
+    --switch-checked-bg-color: var(--primary-solid);
   }
 }

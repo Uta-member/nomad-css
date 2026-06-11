@@ -69,9 +69,9 @@ $list-item-desc-color-var: --#{$list-prefix}item-desc-color !default;
   #{$list-color-var}: var(#{color-defines.$text-color-var});
   #{$list-hover-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
   #{$list-hover-color-var}: var(#{color-defines.$text-color-var});
-  #{$list-active-bg-color-var}: var(#{palette.$palette-default-var});
-  #{$list-active-color-var}: var(#{palette.$palette-default-accent-var});
-  #{$list-disabled-color-var}: var(--neutral-default);
+  #{$list-active-bg-color-var}: var(#{palette.$palette-solid-var});
+  #{$list-active-color-var}: var(#{palette.$palette-solid-accent-var});
+  #{$list-disabled-color-var}: var(--neutral-solid);
 
   // --------------------------------------------
   // Border

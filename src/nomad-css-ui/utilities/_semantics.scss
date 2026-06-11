@@ -27,11 +27,11 @@ $semantic-primary: (
   saturation: 80%,
   accent-threshold: 50%,
   levels: (
-    lighter: 2,
-    light: 3,
-    default: 6,
-    dark: 8,
-    darker: 9,
+    subtle: 4,
+    tonal: 5,
+    solid: 8,
+    strong: 10,
+    heavy: 11,
   ),
   names: (
     palette-prefix: primary-,
@@ -48,11 +48,11 @@ $semantic-secondary: (
   saturation: 80%,
   accent-threshold: 55%,
   levels: (
-    lighter: 2,
-    light: 3,
-    default: 5,
-    dark: 7,
-    darker: 9,
+    subtle: 4,
+    tonal: 5,
+    solid: 7,
+    strong: 9,
+    heavy: 11,
   ),
   names: (
     palette-prefix: secondary-,
@@ -69,11 +69,11 @@ $semantic-tertiary: (
   saturation: 60%,
   accent-threshold: 40%,
   levels: (
-    lighter: 2,
-    light: 4,
-    default: 7,
-    dark: 9,
-    darker: 10,
+    subtle: 4,
+    tonal: 6,
+    solid: 9,
+    strong: 11,
+    heavy: 12,
   ),
   names: (
     palette-prefix: tertiary-,
@@ -90,11 +90,11 @@ $semantic-success: (
   saturation: 60%,
   accent-threshold: 45%,
   levels: (
-    lighter: 2,
-    light: 4,
-    default: 7,
-    dark: 9,
-    darker: 10,
+    subtle: 4,
+    tonal: 6,
+    solid: 9,
+    strong: 11,
+    heavy: 12,
   ),
   names: (
     palette-prefix: success-,
@@ -111,11 +111,11 @@ $semantic-warning: (
   saturation: 80%,
   accent-threshold: 45%,
   levels: (
-    lighter: 2,
-    light: 4,
-    default: 6,
-    dark: 8,
-    darker: 9,
+    subtle: 4,
+    tonal: 6,
+    solid: 8,
+    strong: 10,
+    heavy: 11,
   ),
   names: (
     palette-prefix: warning-,
@@ -132,11 +132,11 @@ $semantic-danger: (
   saturation: 80%,
   accent-threshold: 50%,
   levels: (
-    lighter: 2,
-    light: 4,
-    default: 6,
-    dark: 8,
-    darker: 9,
+    subtle: 4,
+    tonal: 6,
+    solid: 8,
+    strong: 10,
+    heavy: 11,
   ),
   names: (
     palette-prefix: danger-,
@@ -153,11 +153,11 @@ $semantic-info: (
   saturation: 80%,
   accent-threshold: 40%,
   levels: (
-    lighter: 2,
-    light: 4,
-    default: 7,
-    dark: 8,
-    darker: 9,
+    subtle: 4,
+    tonal: 6,
+    solid: 9,
+    strong: 10,
+    heavy: 11,
   ),
   names: (
     palette-prefix: info-,
@@ -174,24 +174,25 @@ $semantic-neutral: (
   saturation: 5%,
   accent-threshold: 60%,
   levels: (
-    lighter: 1,
-    light: 3,
-    default: 5,
-    dark: 7,
-    darker: 9,
+    subtle: 2,
+    tonal: 4,
+    solid: 6,
+    strong: 8,
+    heavy: 10,
   ),
   lightnesses: (
-    0: 99%,
-    1: 97%,
-    2: 94%,
-    3: 85%,
-    4: 75%,
-    5: 55%,
-    6: 35%,
-    7: 25%,
-    8: 15%,
-    9: 8%,
-    10: 4%,
+    1: 99%,
+    2: 97%,
+    3: 94%,
+    4: 85%,
+    5: 75%,
+    6: 55%,
+    7: 35%,
+    8: 25%,
+    9: 15%,
+    10: 8%,
+    11: 4%,
+    12: 2%,
   ),
   names: (
     palette-prefix: neutral-,
@@ -219,14 +220,14 @@ $semantic-colors: (
 // Neutral Palette Variant Names (theme-local)
 // These live in the theme layer only so props layer remains unchanged.
 // ============================================
-$neutral-lighter-var: --neutral-lighter;
-$neutral-light-var: --neutral-light;
-$neutral-default-var: --neutral-default;
-$neutral-dark-var: --neutral-dark;
-$neutral-darker-var: --neutral-darker;
+$neutral-subtle-var: --neutral-subtle;
+$neutral-tonal-var: --neutral-tonal;
+$neutral-solid-var: --neutral-solid;
+$neutral-strong-var: --neutral-strong;
+$neutral-heavy-var: --neutral-heavy;
 
-$neutral-lighter-accent-var: --neutral-accent-lighter;
-$neutral-light-accent-var: --neutral-accent-light;
-$neutral-default-accent-var: --neutral-accent-default;
-$neutral-dark-accent-var: --neutral-accent-dark;
-$neutral-darker-accent-var: --neutral-accent-darker;
+$neutral-subtle-accent-var: --neutral-accent-subtle;
+$neutral-tonal-accent-var: --neutral-accent-tonal;
+$neutral-solid-accent-var: --neutral-accent-solid;
+$neutral-strong-accent-var: --neutral-accent-strong;
+$neutral-heavy-accent-var: --neutral-accent-heavy;

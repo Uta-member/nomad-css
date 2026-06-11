@@ -28,6 +28,38 @@ layout: layout.njk
     <p class="h6">Class .h6</p>
   </div>
 
+  <!-- Semantic Font Size -->
+  <div class="demo-row">
+    <div class="demo-label">Semantic Font Size (.fs-semantic-*) — maps to --fs-semantic-*</div>
+    <p class="fs-semantic-xs">.fs-semantic-xs (--font-size-2 = 0.5rem)</p>
+    <p class="fs-semantic-sm">.fs-semantic-sm (--font-size-4 = 0.825rem)</p>
+    <p class="fs-semantic-md">.fs-semantic-md (--font-size-5 = 1rem, body default)</p>
+    <p class="fs-semantic-lg">.fs-semantic-lg (--font-size-6 = 1.25rem)</p>
+    <p class="fs-semantic-xl">.fs-semantic-xl (--font-size-7 = 1.5rem)</p>
+    <p class="fs-semantic-2xl">.fs-semantic-2xl (--font-size-9 = 2rem)</p>
+    <p class="fs-semantic-3xl">.fs-semantic-3xl (--font-size-10 = 2.5rem)</p>
+  </div>
+
+  <!-- Primitive Font Size Scale -->
+  <div class="demo-row">
+    <div class="demo-label">Primitive Font Size Scale (.fs-0 – .fs-10) — maps to --font-size-*</div>
+    <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: baseline">
+      {% for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] %}
+        <span class="fs-{{ i }}">.fs-{{ i }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Semantic Font Weight -->
+  <div class="demo-row">
+    <div class="demo-label">Semantic Font Weight (.fw-semantic-*) — maps to --fw-semantic-*</div>
+    <p class="fw-semantic-light">.fw-semantic-light (300)</p>
+    <p class="fw-semantic-regular">.fw-semantic-regular (400)</p>
+    <p class="fw-semantic-medium">.fw-semantic-medium (500)</p>
+    <p class="fw-semantic-semibold">.fw-semantic-semibold (600)</p>
+    <p class="fw-semantic-bold">.fw-semantic-bold (700)</p>
+  </div>
+
   <!-- Text Alignment -->
   <div class="demo-row">
     <div class="demo-label">Text Alignment</div>

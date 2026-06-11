@@ -7,17 +7,17 @@
 // Palette Prefix
 // ============================================
 // Variant Names
-$palette-lighter-var: --#{palette.$palette-prefix}lighter;
-$palette-light-var: --#{palette.$palette-prefix}light;
-$palette-default-var: --#{palette.$palette-prefix}default;
-$palette-dark-var: --#{palette.$palette-prefix}dark;
-$palette-darker-var: --#{palette.$palette-prefix}darker;
+$palette-subtle-var: --#{palette.$palette-prefix}subtle;
+$palette-tonal-var: --#{palette.$palette-prefix}tonal;
+$palette-solid-var: --#{palette.$palette-prefix}solid;
+$palette-strong-var: --#{palette.$palette-prefix}strong;
+$palette-heavy-var: --#{palette.$palette-prefix}heavy;
 
-$palette-lighter-accent-var: --#{palette.$palette-accent-prefix}lighter;
-$palette-light-accent-var: --#{palette.$palette-accent-prefix}light;
-$palette-default-accent-var: --#{palette.$palette-accent-prefix}default;
-$palette-dark-accent-var: --#{palette.$palette-accent-prefix}dark;
-$palette-darker-accent-var: --#{palette.$palette-accent-prefix}darker;
+$palette-subtle-accent-var: --#{palette.$palette-accent-prefix}subtle;
+$palette-tonal-accent-var: --#{palette.$palette-accent-prefix}tonal;
+$palette-solid-accent-var: --#{palette.$palette-accent-prefix}solid;
+$palette-strong-accent-var: --#{palette.$palette-accent-prefix}strong;
+$palette-heavy-accent-var: --#{palette.$palette-accent-prefix}heavy;
 
 // ============================================
 // Overridable Variants

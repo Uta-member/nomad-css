@@ -91,21 +91,21 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   // --------------------------------------------
   // Colors (default: tonal)
   // --------------------------------------------
-  #{$chip-bg-color-var}: var(#{palette.$palette-lighter-var});
-  #{$chip-hover-bg-color-var}: var(#{palette.$palette-light-var});
-  #{$chip-active-bg-color-var}: var(#{palette.$palette-default-var});
+  #{$chip-bg-color-var}: var(#{palette.$palette-subtle-var});
+  #{$chip-hover-bg-color-var}: var(#{palette.$palette-tonal-var});
+  #{$chip-active-bg-color-var}: var(#{palette.$palette-solid-var});
   #{$chip-focus-bg-color-var}: var(#{$chip-hover-bg-color-var});
   #{$chip-disabled-bg-color-var}: var(#{color-defines.$surface-color-var});
 
-  #{$chip-color-var}: var(#{palette.$palette-dark-var});
-  #{$chip-hover-color-var}: var(#{palette.$palette-dark-var});
-  #{$chip-active-color-var}: var(#{palette.$palette-darker-var});
+  #{$chip-color-var}: var(#{palette.$palette-strong-var});
+  #{$chip-hover-color-var}: var(#{palette.$palette-strong-var});
+  #{$chip-active-color-var}: var(#{palette.$palette-heavy-var});
   #{$chip-focus-color-var}: var(#{$chip-hover-color-var});
   #{$chip-disabled-color-var}: var(#{color-defines.$border-color-var});
 
-  #{$chip-border-color-var}: var(#{palette.$palette-lighter-var});
-  #{$chip-hover-border-color-var}: var(#{palette.$palette-light-var});
-  #{$chip-active-border-color-var}: var(#{palette.$palette-default-var});
+  #{$chip-border-color-var}: var(#{palette.$palette-subtle-var});
+  #{$chip-hover-border-color-var}: var(#{palette.$palette-tonal-var});
+  #{$chip-active-border-color-var}: var(#{palette.$palette-solid-var});
   #{$chip-focus-border-color-var}: var(#{$chip-hover-border-color-var});
   #{$chip-disabled-border-color-var}: var(
     #{color-defines.$border-color-subtle-var}
@@ -120,7 +120,7 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   // --------------------------------------------
   // Focus Ring
   // --------------------------------------------
-  #{$chip-focus-ring-color-var}: var(#{palette.$palette-default-var});
+  #{$chip-focus-ring-color-var}: var(#{palette.$palette-solid-var});
   #{$chip-focus-ring-width-var}: 2px;
   #{$chip-focus-ring-offset-var}: 2px;
 
@@ -150,7 +150,7 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   // --------------------------------------------
   // Dismiss
   // --------------------------------------------
-  #{$chip-dismiss-color-var}: var(#{palette.$palette-dark-var});
+  #{$chip-dismiss-color-var}: var(#{palette.$palette-strong-var});
 }
 
 // ============================================
@@ -222,20 +222,20 @@ $chip-dismiss-color-var: --#{$chip-prefix}dismiss-color !default;
   // Outlined: transparent background
   &.outlined {
     #{$chip-bg-color-var}: transparent;
-    #{$chip-hover-bg-color-var}: var(#{palette.$palette-lighter-var});
-    #{$chip-active-bg-color-var}: var(#{palette.$palette-light-var});
+    #{$chip-hover-bg-color-var}: var(#{palette.$palette-subtle-var});
+    #{$chip-active-bg-color-var}: var(#{palette.$palette-tonal-var});
     #{$chip-focus-bg-color-var}: var(#{$chip-hover-bg-color-var});
     #{$chip-disabled-bg-color-var}: transparent;
 
-    #{$chip-color-var}: var(#{palette.$palette-default-var});
-    #{$chip-hover-color-var}: var(#{palette.$palette-dark-var});
-    #{$chip-active-color-var}: var(#{palette.$palette-dark-var});
+    #{$chip-color-var}: var(#{palette.$palette-solid-var});
+    #{$chip-hover-color-var}: var(#{palette.$palette-strong-var});
+    #{$chip-active-color-var}: var(#{palette.$palette-strong-var});
     #{$chip-focus-color-var}: var(#{$chip-hover-color-var});
 
-    #{$chip-border-color-var}: var(#{palette.$palette-default-var});
-    #{$chip-hover-border-color-var}: var(#{palette.$palette-default-var});
-    #{$chip-active-border-color-var}: var(#{palette.$palette-default-var});
-    #{$chip-focus-border-color-var}: var(#{palette.$palette-default-var});
+    #{$chip-border-color-var}: var(#{palette.$palette-solid-var});
+    #{$chip-hover-border-color-var}: var(#{palette.$palette-solid-var});
+    #{$chip-active-border-color-var}: var(#{palette.$palette-solid-var});
+    #{$chip-focus-border-color-var}: var(#{palette.$palette-solid-var});
   }
 
   &.tonal {
