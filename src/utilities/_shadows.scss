@@ -77,15 +77,28 @@ $shadow-variations: (
     #{$shadow-blur-var}: map.get($properties, blur);
     #{$shadow-spread-var}: map.get($properties, spread);
     #{$shadow-color-var}: map.get($properties, color);
-    --#{$shadow-class-name}-#{$size}: var(#{$shadow-offset-x-var})
+    --#{$shadow-prefix}#{$size}: var(#{$shadow-offset-x-var})
       var(#{$shadow-offset-y-var})
       var(#{$shadow-blur-var})
       var(#{$shadow-spread-var})
       var(#{$shadow-color-var});
   }
 }
+
 @each $size, $properties in $shadow-variations {
   .#{$shadow-class-name}-#{$size} {
+    box-shadow: var(--#{$shadow-class-name}-#{$size});
+    &.inset {
+      box-shadow: inset var(--#{$shadow-class-name}-#{$size});
+    }
+  }
+  .hover-#{$shadow-class-name}-#{$size}:hover {
+    box-shadow: var(--#{$shadow-class-name}-#{$size});
+    &.inset {
+      box-shadow: inset var(--#{$shadow-class-name}-#{$size});
+    }
+  }
+  .active-#{$shadow-class-name}-#{$size}:active {
     box-shadow: var(--#{$shadow-class-name}-#{$size});
     &.inset {
       box-shadow: inset var(--#{$shadow-class-name}-#{$size});

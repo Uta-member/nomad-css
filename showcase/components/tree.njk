@@ -1,0 +1,296 @@
+---
+title: Tree
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Tree</h1>
+
+  <!-- Interactive file tree (details/summary) -->
+  <div class="demo-row">
+    <div class="demo-label">Interactive tree (<code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code>)</div>
+    <ul class="tree" style="max-width: 320px;">
+      <li>
+        <details open>
+          <summary>src/</summary>
+          <ul class="tree">
+            <li>
+              <details open>
+                <summary>components/</summary>
+                <ul class="tree">
+                  <li>
+                    <details>
+                      <summary>button/</summary>
+                      <ul class="tree">
+                        <li>_button.scss</li>
+                        <li>README.md</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>_accordion.scss</li>
+                  <li>_card.scss</li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>utilities/</summary>
+                <ul class="tree">
+                  <li>_palette.scss</li>
+                  <li>_spacing.scss</li>
+                </ul>
+              </details>
+            </li>
+            <li>nomad-css-ui.scss</li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>dist/</summary>
+          <ul class="tree">
+            <li>default.css</li>
+            <li>fluent2.css</li>
+            <li>material3.css</li>
+          </ul>
+        </details>
+      </li>
+      <li>package.json</li>
+      <li>README.md</li>
+    </ul>
+  </div>
+
+  <!-- With .tree-row and icons -->
+  <div class="demo-row">
+    <div class="demo-label">Rich rows with <code>.tree-row</code> / <code>.tree-icon</code> / <code>.tree-badge</code></div>
+    <ul class="tree" style="max-width: 320px;">
+      <li>
+        <details open>
+          <summary>
+            <span class="tree-icon">📁</span>
+            <span class="tree-label">nomad-css</span>
+            <span class="tree-badge">3</span>
+          </summary>
+          <ul class="tree">
+            <li>
+              <details open>
+                <summary>
+                  <span class="tree-icon">📁</span>
+                  <span class="tree-label">src</span>
+                  <span class="tree-badge">2</span>
+                </summary>
+                <ul class="tree">
+                  <li>
+                    <div class="tree-row">
+                      <span class="tree-icon">📄</span>
+                      <span class="tree-label">nomad-css-ui.scss</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tree-row">
+                      <span class="tree-icon">📄</span>
+                      <span class="tree-label">_variables.scss</span>
+                      <span class="tree-badge">M</span>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <div class="tree-row">
+                <span class="tree-icon">📄</span>
+                <span class="tree-label">package.json</span>
+              </div>
+            </li>
+            <li>
+              <div class="tree-row">
+                <span class="tree-icon">📄</span>
+                <span class="tree-label">README.md</span>
+              </div>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Navigation tree with active state -->
+  <div class="demo-row">
+    <div class="demo-label">Navigation tree with active state</div>
+    <nav style="max-width: 240px;">
+      <ul class="tree">
+        <li class="active">
+          <a class="tree-row" href="#">
+            <span class="tree-icon">🏠</span>
+            <span class="tree-label">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <details open>
+            <summary>
+              <span class="tree-icon">📊</span>
+              <span class="tree-label">Analytics</span>
+            </summary>
+            <ul class="tree">
+              <li>
+                <a class="tree-row" href="#">
+                  <span class="tree-label">Overview</span>
+                </a>
+              </li>
+              <li>
+                <a class="tree-row" href="#">
+                  <span class="tree-label">Reports</span>
+                </a>
+              </li>
+              <li>
+                <a class="tree-row" href="#">
+                  <span class="tree-label">Realtime</span>
+                </a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              <span class="tree-icon">⚙️</span>
+              <span class="tree-label">Settings</span>
+            </summary>
+            <ul class="tree">
+              <li>
+                <a class="tree-row" href="#">Profile</a>
+              </li>
+              <li>
+                <a class="tree-row" href="#">Security</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <a class="tree-row" href="#">
+            <span class="tree-icon">❓</span>
+            <span class="tree-label">Help</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Compact variant -->
+  <div class="demo-row">
+    <div class="demo-label">Compact (<code>.compact</code>) — dense data view</div>
+    <ul class="tree compact" style="max-width: 280px; font-size: 0.875rem;">
+      <li>
+        <details open>
+          <summary>
+            <span class="tree-icon">{ }</span>
+            <span class="tree-label">package.json</span>
+          </summary>
+          <ul class="tree compact">
+            <li>
+              <details open>
+                <summary>
+                  <span class="tree-label">dependencies</span>
+                </summary>
+                <ul class="tree compact">
+                  <li>
+                    <div class="tree-row">
+                      <span class="tree-label">sass</span>
+                      <span class="tree-badge">^1.77.0</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tree-row">
+                      <span class="tree-label">eleventy</span>
+                      <span class="tree-badge">^3.0.0</span>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <div class="tree-row">
+                <span class="tree-label">version</span>
+                <span class="tree-badge">"1.0.0"</span>
+              </div>
+            </li>
+            <li>
+              <div class="tree-row">
+                <span class="tree-label">name</span>
+                <span class="tree-badge">"nomad-css"</span>
+              </div>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Static hierarchy (no toggle) -->
+  <div class="demo-row">
+    <div class="demo-label">Static hierarchy (no toggle) — always-visible nesting</div>
+    <ul class="tree no-lines" style="max-width: 280px;">
+      <li>
+        Design System
+        <ul class="tree no-lines">
+          <li>
+            Foundations
+            <ul class="tree no-lines">
+              <li>Color</li>
+              <li>Typography</li>
+              <li>Spacing</li>
+            </ul>
+          </li>
+          <li>
+            Components
+            <ul class="tree no-lines">
+              <li>Button</li>
+              <li>Card</li>
+              <li>Table</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- No guide lines -->
+  <div class="demo-row">
+    <div class="demo-label">No guide lines (<code>.no-lines</code>)</div>
+    <ul class="tree no-lines" style="max-width: 280px;">
+      <li>
+        <details open>
+          <summary>
+            <span class="tree-icon">📁</span>
+            <span class="tree-label">Project</span>
+          </summary>
+          <ul class="tree no-lines">
+            <li>
+              <details open>
+                <summary>
+                  <span class="tree-icon">📁</span>
+                  <span class="tree-label">src</span>
+                </summary>
+                <ul class="tree no-lines">
+                  <li>
+                    <div class="tree-row">
+                      <span class="tree-icon">📄</span>
+                      <span class="tree-label">main.scss</span>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <div class="tree-row">
+                <span class="tree-icon">📄</span>
+                <span class="tree-label">package.json</span>
+              </div>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+
+</section>

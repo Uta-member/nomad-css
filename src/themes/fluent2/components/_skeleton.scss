@@ -1,0 +1,15 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .skeleton {
+    --skeleton-bg-color: var(--neutral-light);
+    --skeleton-shimmer-color: var(--neutral-lighter);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .skeleton {
+    --skeleton-bg-color: var(--neutral-darker);
+    --skeleton-shimmer-color: var(--neutral-dark);
+  }
+}

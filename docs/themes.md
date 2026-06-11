@@ -77,27 +77,27 @@ $dark-mode-name: "dark";
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   --text-color: #1f1f1f;
-  --text-color-light: #3f3f3f;
-  --text-color-dark: #000000;
+  --text-color-subtle: #3f3f3f;
+  --text-color-strong: #000000;
 
   --surface-color: #f0f0f0;
-  --surface-color-light: #f5f5f5;
-  --surface-color-lighter: #ffffff;
-  --surface-color-dark: #e5e5e5;
-  --surface-color-darker: #d9d9d9;
+  --surface-color-raised: #f5f5f5;
+  --surface-color-overlay: #ffffff;
+  --surface-color-sunken: #e5e5e5;
+  --surface-color-deep: #d9d9d9;
 }
 
 // ダークモードのカラー定義
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   --text-color: #f0f0f0;
-  --text-color-light: #f5f5f5;
-  --text-color-dark: #e5e5e5;
+  --text-color-subtle: #f5f5f5;
+  --text-color-strong: #e5e5e5;
 
   --surface-color: #0d0d0d;
-  --surface-color-light: #1a1a1a;
-  --surface-color-lighter: #262626;
-  --surface-color-dark: #0a0a0a;
-  --surface-color-darker: #050505;
+  --surface-color-raised: #1a1a1a;
+  --surface-color-overlay: #262626;
+  --surface-color-sunken: #0a0a0a;
+  --surface-color-deep: #050505;
 }
 ```
 
@@ -170,11 +170,11 @@ $dark-mode-name: "dark";
 
   // secondary ボタンをサーフェスカラーで表現
   .button.filled.secondary {
-    --button-bg-color: var(--surface-color-lighter);
+    --button-bg-color: var(--surface-color-overlay);
     --button-color: var(--text-color);
     --button-border-color: var(--border-color);
     --button-hover-bg-color: var(--surface-color);
-    --button-active-bg-color: var(--surface-color-dark);
+    --button-active-bg-color: var(--surface-color-sunken);
   }
 }
 ```
@@ -199,7 +199,7 @@ $dark-mode-name: "dark";
 | ------------------------- | --------------------------------------------------------- |
 | `--text-color`            | ライト/ダーク両モードで必須                               |
 | `--surface-color`         | ライト/ダーク両モードで必須                               |
-| `--surface-color-lighter` | ライト/ダーク両モードで必須                               |
+| `--surface-color-overlay` | ライト/ダーク両モードで必須                               |
 | `--border-color`          | 必要に応じて（デフォルトは neutral パレットから自動生成） |
 
 #### パレット

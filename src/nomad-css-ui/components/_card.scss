@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -58,20 +59,20 @@ $card-footer-padding-var: --#{$card-prefix}footer-padding !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$card-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$card-bg-color-var}: var(#{color-defines.$surface-color-overlay-var});
   #{$card-color-var}: var(#{color-defines.$text-color-var});
   #{$card-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$card-header-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
+  #{$card-header-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
   #{$card-header-color-var}: var(#{color-defines.$text-color-var});
-  #{$card-footer-bg-color-var}: var(#{color-defines.$surface-color-dark-var});
-  #{$card-footer-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$card-footer-bg-color-var}: var(#{color-defines.$surface-color-sunken-var});
+  #{$card-footer-color-var}: var(#{color-defines.$text-color-subtle-var});
 
   // --------------------------------------------
   // Border
   // --------------------------------------------
   #{$card-border-radius-var}: 0.375rem;
-  #{$card-outline-border-width-var}: 1px;
-  #{$card-inner-border-width-var}: 1px;
+  #{$card-outline-border-width-var}: var(#{border.$border-width-var});
+  #{$card-inner-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Layout

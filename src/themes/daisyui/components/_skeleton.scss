@@ -1,8 +1,0 @@
-@use "../utilities/prefixes" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  .skeleton {
-    --skeleton-border-radius: 0.5rem;
-    --skeleton-animation-duration: 1.8s;
-  }
-}

@@ -1,6 +1,0 @@
-@use "../utilities/prefixes" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  --font-family: "Roboto", "Noto Sans", sans-serif;
-  --font-body-size: 14px;
-}

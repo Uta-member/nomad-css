@@ -1,0 +1,35 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: form-switch style
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .switch {
+    --switch-track-height: 1.25rem;
+    --switch-track-width: 2.75rem;
+    --switch-track-sm-width: 2.25rem;
+    --switch-track-sm-height: 1rem;
+    --switch-track-lg-width: 3.25rem;
+    --switch-track-lg-height: 1.75rem;
+    --switch-track-border-color: var(--control-border-color-subtle);
+
+    --switch-thumb-size: 0.8rem;
+    --switch-thumb-sm-size: 0.6rem;
+    --switch-thumb-lg-size: 1rem;
+
+    --switch-track-bg-color: var(--surface-color-overlay);
+    --switch-thumb-bg-color: var(--switch-track-border-color);
+    --switch-track-disabled-bg-color: var(--switch-track-bg-color);
+    --switch-thumb-disabled-bg-color: var(--switch-thumb-bg-color);
+    --switch-track-checked-disabled-bg-color: var(
+      --switch-track-checked-bg-color
+    );
+    --switch-thumb-checked-disabled-bg-color: var(
+      --switch-thumb-checked-bg-color
+    );
+
+    --switch-disabled-opacity: 0.5;
+
+    --switch-track-focus-ring-color: var(--palette-lighter);
+    --switch-track-focus-ring-offset: 0;
+    --switch-track-focus-ring-width: 4px;
+  }
+}

@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -55,7 +56,7 @@ $alert-icon-size-var: --#{$alert-prefix}icon-size !default;
   // --------------------------------------------
   // Border
   // --------------------------------------------
-  #{$alert-border-width-var}: 1px;
+  #{$alert-border-width-var}: var(#{border.$border-width-var});
   #{$alert-border-radius-var}: 0.25rem;
 
   // --------------------------------------------

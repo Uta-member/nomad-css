@@ -151,19 +151,20 @@ src/themes/
 
 テーマ層から必ず上書きが想定される共通変数:
 
-| 変数                      | 用途                      |
-| ------------------------- | ------------------------- |
-| `--text-color`            | 基本テキスト色            |
-| `--text-color-light`      | 薄めのテキスト色          |
-| `--text-color-dark`       | 濃いテキスト色            |
-| `--surface-color`         | 基本背景色                |
-| `--surface-color-light`   | 薄い背景色                |
-| `--surface-color-lighter` | より薄い背景色 (白に近い) |
-| `--surface-color-dark`    | 濃い背景色                |
-| `--surface-color-darker`  | より濃い背景色            |
-| `--border-color`          | 基本ボーダー色            |
-| `--border-color-light`    | 薄いボーダー色            |
-| `--border-color-dark`     | 濃いボーダー色            |
+| 変数                      | 用途                               |
+| ------------------------- | ---------------------------------- |
+| `--text-color`            | 基本テキスト色                     |
+| `--text-color-subtle`     | 控えめなテキスト色（ヒント等）     |
+| `--text-color-muted`      | ミュートなテキスト色（disabled等） |
+| `--text-color-strong`     | 強調テキスト色                     |
+| `--surface-color`         | 基本背景色                         |
+| `--surface-color-raised`  | 浮き上がった背景色（カード等）     |
+| `--surface-color-overlay` | 最上位背景色（ダイアログ等）       |
+| `--surface-color-sunken`  | 沈んだ背景色（ホバー等）           |
+| `--surface-color-deep`    | 最低位背景色（skeleton等）         |
+| `--border-color`          | 基本ボーダー色                     |
+| `--border-color-subtle`   | 控えめなボーダー色（無効state等）  |
+| `--border-color-strong`   | 強調ボーダー色（フォーカス等）     |
 
 ### パレット変数
 

@@ -1,0 +1,21 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .list,
+  .list-group {
+    --list-hover-bg-color: var(--neutral-lighter);
+    --list-hover-color: var(--neutral-accent-lighter);
+    --list-active-bg-color: var(--neutral-light);
+    --list-active-color: var(--neutral-accent-light);
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .list,
+  .list-group {
+    --list-hover-bg-color: var(--neutral-default);
+    --list-hover-color: var(--neutral-accent-default);
+    --list-active-bg-color: var(--neutral-darker);
+    --list-active-color: var(--neutral-accent-darker);
+  }
+}

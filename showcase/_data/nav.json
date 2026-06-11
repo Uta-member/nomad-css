@@ -9,8 +9,10 @@
     { "title": "Card", "slug": "card" },
     { "title": "Checkbox", "slug": "checkbox" },
     { "title": "Chip", "slug": "chip" },
+    { "title": "Dialog", "slug": "dialog" },
     { "title": "Divider", "slug": "divider" },
     { "title": "Form Control", "slug": "form-control" },
+    { "title": "Link Card", "slug": "link" },
     { "title": "List", "slug": "list" },
     { "title": "Pagination", "slug": "pagination" },
     { "title": "Progress", "slug": "progress" },
@@ -21,7 +23,8 @@
     { "title": "Spinner", "slug": "spinner" },
     { "title": "Switch", "slug": "switch" },
     { "title": "Table", "slug": "table" },
-    { "title": "Tooltip", "slug": "tooltip" }
+    { "title": "Tooltip", "slug": "tooltip" },
+    { "title": "Tree", "slug": "tree" }
   ],
   "utilities": [
     { "title": "Typography", "slug": "typography" },

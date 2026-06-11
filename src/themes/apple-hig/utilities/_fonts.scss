@@ -1,7 +1,0 @@
-@use "../utilities/prefixes" as prefixes;
-
-:root[data-theme="#{prefixes.$theme-name}"] {
-  --font-family: -apple-system, "BlinkMacSystemFont", "SF Pro Text",
-    "SF Pro Display", "Helvetica Neue", "Arial", sans-serif;
-  --font-body-size: 17px;
-}

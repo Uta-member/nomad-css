@@ -1,0 +1,120 @@
+---
+title: Link Card
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Link Card</h1>
+
+  <!-- テキストのみ -->
+  <div class="demo-row">
+    <div class="demo-label">Text only</div>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 360px">
+      <a href="#" class="link-card">General</a>
+      <a href="#" class="link-card active">Profile (active)</a>
+      <a href="#" class="link-card">Security</a>
+      <a href="#" class="link-card disabled">Billing (disabled)</a>
+    </div>
+  </div>
+
+  <!-- trailing icon のみ -->
+  <div class="demo-row">
+    <div class="demo-label">With trailing icon</div>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 360px">
+      <a href="#" class="link-card">
+        <span class="link-card-content">General</span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-card-content">Notifications</span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-card-content">Security</span>
+        <span class="link-card-trailing">›</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- leading + content + trailing -->
+  <div class="demo-row">
+    <div class="demo-label">Leading icon + Content + Trailing icon</div>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 360px">
+      <a href="#" class="link-card">
+        <span class="link-card-leading">⚙</span>
+        <span class="link-card-content">Settings</span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-card-leading">◎</span>
+        <span class="link-card-content">Notifications</span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-card-leading">⊠</span>
+        <span class="link-card-content">Privacy &amp; Security</span>
+        <span class="link-card-trailing">›</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- leading + content（説明付き）+ trailing -->
+  <div class="demo-row">
+    <div class="demo-label">With description text</div>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px">
+      <a href="#" class="link-card">
+        <span class="link-card-leading">⚙</span>
+        <span class="link-card-content">
+          <span>Settings</span>
+          <span class="link-card-desc">Manage your account preferences</span>
+        </span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-card-leading">◎</span>
+        <span class="link-card-content">
+          <span>Notifications</span>
+          <span class="link-card-desc">Control alerts and push notifications</span>
+        </span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card active">
+        <span class="link-card-leading">⊠</span>
+        <span class="link-card-content">
+          <span>Privacy &amp; Security</span>
+          <span class="link-card-desc">Review your security settings</span>
+        </span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card disabled">
+        <span class="link-card-leading">✦</span>
+        <span class="link-card-content">
+          <span>Billing</span>
+          <span class="link-card-desc">Manage your subscription plan</span>
+        </span>
+        <span class="link-card-trailing">›</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- content（説明付き）+ trailing（leading なし） -->
+  <div class="demo-row">
+    <div class="demo-label">Content + Trailing (no leading icon)</div>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px">
+      <a href="#" class="link-card">
+        <span class="link-card-content">
+          <span>Getting Started</span>
+          <span class="link-card-desc">Introduction and setup guide</span>
+        </span>
+        <span class="link-card-trailing">›</span>
+      </a>
+      <a href="#" class="link-card">
+        <span class="link-card-content">
+          <span>Components</span>
+          <span class="link-card-desc">Browse all UI components</span>
+        </span>
+        <span class="link-card-trailing">›</span>
+      </a>
+    </div>
+  </div>
+</section>

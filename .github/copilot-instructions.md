@@ -76,38 +76,79 @@ src/
 │   ├── _border.scss        # ボーダーユーティリティクラス
 │   ├── _breakpoints.scss   # レスポンシブBreakpoint Mixin
 │   ├── _container.scss     # レイアウトユーティリティクラス (display, flex等)
-│   └── _fonts.scss         # 見出しフォントサイズ/ウェイト変数とクラス
+│   ├── _fonts.scss         # 見出しフォントサイズ/ウェイト変数とクラス
+│   ├── _shadows.scss       # シャドウ変数とユーティリティクラス (shadow-0〜5)
+│   └── _spacing.scss       # マージン・パディング・ギャップクラス (m-/p-/gap-)
 │
 ├── nomad-css-ui/           # コンポーネント層（utilitiesに依存）
 │   ├── _nomad-css-ui.scss  # エントリーポイント
-│   ├── components/         # 各コンポーネント
+│   ├── components/         # 各コンポーネント（25種）
 │   │   ├── _components.scss    # コンポーネントのエントリーポイント
 │   │   ├── _button.scss        # ボタン
 │   │   ├── _form-control.scss  # テキスト入力
+│   │   ├── _form-hint.scss     # フォームヒント
 │   │   ├── _select.scss        # セレクトボックス
 │   │   ├── _checkbox.scss      # チェックボックス
 │   │   ├── _radio.scss         # ラジオボタン
-│   │   ├── _range.scss         # レンジ
+│   │   ├── _range.scss         # レンジスライダー
 │   │   ├── _progress.scss      # プログレスバー
-│   │   └── _table.scss         # テーブル
+│   │   ├── _switch.scss        # スイッチ
+│   │   ├── _table.scss         # テーブル
+│   │   ├── _alert.scss         # アラート
+│   │   ├── _badge.scss         # バッジ
+│   │   ├── _chip.scss          # チップ
+│   │   ├── _spinner.scss       # スピナー
+│   │   ├── _skeleton.scss      # スケルトン
+│   │   ├── _accordion.scss     # アコーディオン
+│   │   ├── _tooltip.scss       # ツールチップ
+│   │   ├── _breadcrumb.scss    # パンくずリスト
+│   │   ├── _pagination.scss    # ページネーション
+│   │   ├── _card.scss          # カード
+│   │   ├── _divider.scss       # 区切り線
+│   │   ├── _dialog.scss        # ダイアログ
+│   │   ├── _avatar.scss        # アバター
+│   │   └── _list.scss          # リスト
 │   └── utilities/          # nomad-css-ui 内部ユーティリティ
 │       ├── _palette.scss       # パレット統合（HUE + セマンティック）
 │       ├── _color-defines.scss # 共通カラー変数 (border, text, surface)
+│       ├── _color-utils.scss   # テキスト/背景カラーユーティリティクラス
 │       ├── _hue-colors.scss    # HSL色相環 12色定義
 │       ├── _semantics.scss     # セマンティックカラー定義
-│       └── _fonts.scss         # nomad-css-ui フォント変数
+│       ├── _fonts.scss         # nomad-css-ui フォント変数
+│       └── _border.scss        # パレットカラーのボーダー拡張
 │
 └── themes/                 # テーマ層（nomad-css-ui の CSS変数を上書き）
-    ├── default/
-    │   └── default.scss        # デフォルトテーマ
-    ├── fluent2/
-    │   ├── fluent2.scss        # エントリーポイント
-    │   ├── utilities/          # テーマ固有の変数定義
-    │   └── components/         # コンポーネントの上書き
-    └── material3/
-        ├── material3.scss      # エントリーポイント
-        ├── utilities/
-        └── components/
+    ├── default/            # デフォルトテーマ（最小限の上書き）
+    ├── fluent2/            # Microsoft Fluent 2 風
+    ├── material3/          # Google Material 3 風
+    ├── material2/          # Google Material 2 風
+    ├── material1/          # Google Material 1 風
+    ├── ant/                # Ant Design 風
+    ├── apple-hig/          # Apple HIG 風
+    ├── bootstrap/          # Bootstrap 風
+    ├── carbon/             # IBM Carbon 風
+    ├── chakra/             # Chakra UI 風
+    ├── daisyui/            # DaisyUI 風
+    ├── primer/             # GitHub Primer 風
+    ├── shadcn/             # shadcn/ui 風
+    ├── spectrum/           # Adobe Spectrum 風
+    ├── aqua/               # macOS Aqua 風
+    ├── holo/               # Android Holo 風
+    ├── win95/              # Windows 95 風
+    ├── win7/               # Windows 7 風
+    ├── cyberpunk/          # サイバーパンク風
+    ├── terminal/           # ターミナル風
+    ├── neumorphism/        # ニューモーフィズム風
+    ├── glass/              # グラスモーフィズム風
+    ├── web20/              # Web 2.0 風
+    ├── skeuomorphic/       # スキューモーフィック風
+    ├── linear/             # Linear.app 風
+    ├── nord/               # Nord カラースキーム
+    └── solarized/          # Solarized カラースキーム
+    # 各テーマ共通構造:
+    # ├── <theme>.scss      # エントリーポイント
+    # ├── utilities/        # テーマ固有の変数定義 (_prefixes, _colors, _fonts 等)
+    # └── components/       # コンポーネントの上書き
 ```
 
 ## カラーシステム
@@ -314,10 +355,16 @@ $hues: (
 </html>
 ```
 
-### 利用可能なテーマ
+### 利用可能なテーマ（27種）
 
-- `fluent2` - Microsoft Fluent 2 風デザイン（`src/themes/fluent2/`）
-- `material3` - Google Material 3 風デザイン（`src/themes/material3/`）
+| カテゴリ         | テーマ名                                                                           |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| モダンUI         | `fluent2`, `material3`, `material2`, `material1`                                   |
+| デザインシステム | `ant`, `bootstrap`, `chakra`, `carbon`, `primer`, `shadcn`, `spectrum`, `daisyui`  |
+| OS風             | `apple-hig`, `win95`, `win7`, `aqua`, `holo`                                       |
+| ユニーク         | `cyberpunk`, `terminal`, `neumorphism`, `glass`, `web20`, `skeuomorphic`, `linear` |
+| カラー           | `nord`, `solarized`                                                                |
+| デフォルト       | `default`                                                                          |
 
 ### カスタムテーマの作成
 
@@ -391,6 +438,59 @@ $example-palette: (
 
 **ブレークポイント**: `xs(0)`, `sm(576px)`, `md(768px)`, `lg(992px)`, `xl(1200px)`, `xxl(1400px)`
 
+## 利用パターン
+
+nomad-css は 3 つのパターンで利用できます（詳細: [docs/getting-started.md](../docs/getting-started.md)）。
+
+### パターン1: ユーティリティのみ
+
+`src/utilities/` の Sass Mixin・クラスのみを使用します。コンポーネントやテーマは不要です。
+
+```scss
+@use "src/utilities/spacing";
+@use "src/utilities/border";
+@use "src/utilities/container";
+@use "src/utilities/fonts";
+@use "src/utilities/shadows";
+@use "src/utilities/palette" as palette;
+
+// パレット生成Mixinの使用例
+:root {
+  @include palette.generate-palette(
+    (
+      hue: 220,
+      saturation: 80%,
+    )
+  );
+}
+```
+
+### パターン2: nomad-css-ui（テーマなし）
+
+`src/nomad-css-ui/nomad-css-ui.scss` をインポートし、コンポーネントをデフォルトスタイルで使用します。
+またはコンパイル済みの `dist/css/default.css` を `<link>` で読み込みます。
+
+```scss
+@use "src/nomad-css-ui/nomad-css-ui.scss";
+```
+
+```html
+<!-- コンパイル済みCSSを直接使用 -->
+<link rel="stylesheet" href="dist/css/default.css" />
+<button class="button filled">Filled</button>
+```
+
+### パターン3: テーマを使用（推奨）
+
+コンパイル済みのテーマCSSを読み込み、`data-theme` 属性でテーマを指定します。
+
+```html
+<link rel="stylesheet" href="dist/css/fluent2.css" />
+<html data-theme="fluent2" data-color-scheme="light">
+  <button class="button filled primary">Primary</button>
+</html>
+```
+
 ## 開発ガイドライン
 
 ### コーディング規約
@@ -425,8 +525,24 @@ $example-palette: (
 - **CSS変数を活用**: テーマ切り替えをランタイムで実現
 - **Sassを使用**: Mixin、変数、モジュールシステムの活用
 
+## 開発コマンド
+
+```bash
+npm run build           # 全テーマビルド + ショーケース生成
+npm run build:css       # 全テーマ(27種)のSassコンパイル
+npm run build:fluent2   # 個別テーマビルド
+npm run build:showcase  # ショーケースサイト生成のみ
+npm run watch           # 開発サーバー起動 (ファイル変更を監視)
+npm run watch:css       # Sassのみ監視
+npm run format          # コードフォーマット (Prettier)
+```
+
+**ビルド成果物**: `dist/css/<theme>.css`  
+**ショーケース**: `_site/`（Eleventy により生成）
+
 ## 関連ドキュメント
 
+- [Getting Started](../docs/getting-started.md)
 - [アーキテクチャ詳細](../docs/architecture.md)
 - [ユーティリティリファレンス](../docs/utilities.md)
 - [コンポーネントリファレンス](../docs/components.md)

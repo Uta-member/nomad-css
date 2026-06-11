@@ -1,0 +1,16 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: accordion with standard border and chevron
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .accordion {
+    --accordion-border-radius: 0.5rem;
+    --accordion-header-bg-color: var(--surface-color-overlay);
+    --accordion-header-hover-bg-color: var(--accordion-header-bg-color);
+    --accordion-header-open-bg-color: var(--palette-lighter);
+    --accordion-header-open-color: var(--palette-darker);
+    --accordion-header-hover-open-bg-color: var(
+      --accordion-header-open-bg-color
+    );
+    --accordion-header-hover-open-color: var(--accordion-header-open-color);
+  }
+}

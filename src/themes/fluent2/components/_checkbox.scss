@@ -1,0 +1,34 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .checkbox {
+    --checkbox-border-radius: 2px;
+    --checkbox-border-width: 1px;
+    --checkbox-border-color: var(--control-border-color-strong);
+    --checkbox-hover-border-color: var(--checkbox-border-color);
+    --checkbox-active-border-color: var(--checkbox-border-color);
+    --checkbox-transition: 0s;
+    --checkbox-hover-bg-color: var(--checkbox-bg-color);
+    --checkbox-checked-hover-bg-color: var(--palette-dark);
+    --checkbox-checked-hover-border-color: var(
+      --checkbox-checked-hover-bg-color
+    );
+    --checkbox-checked-active-bg-color: var(--palette-darker);
+    --checkbox-checked-active-border-color: var(
+      --checkbox-checked-active-bg-color
+    );
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .checkbox {
+    --checkbox-checked-hover-bg-color: var(--palette-light);
+    --checkbox-checked-hover-border-color: var(
+      --checkbox-checked-hover-bg-color
+    );
+    --checkbox-checked-active-bg-color: var(--palette-dark);
+    --checkbox-checked-active-border-color: var(
+      --checkbox-checked-active-bg-color
+    );
+  }
+}

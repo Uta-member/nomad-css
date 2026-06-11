@@ -1,0 +1,23 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .select {
+    --select-filled-bg-color: var(--surface-color-overlay);
+    --select-filled-hover-bg-color: var(--select-filled-bg-color);
+    --select-filled-active-bg-color: var(--select-filled-bg-color);
+    --select-border-color: var(--control-border-color);
+    --select-hover-border-color: var(--control-border-color-strong);
+    --select-active-border-color: var(--control-border-color-strong);
+    --select-focus-border-color: var(--control-border-color-strong);
+
+    &.filled {
+      --select-border-top-width: var(--select-border-bottom-width);
+      --select-border-left-width: var(--select-border-bottom-width);
+      --select-border-right-width: var(--select-border-bottom-width);
+      --select-border-color: var(--control-border-color-subtle);
+      border-bottom-left-radius: var(--select-border-radius);
+      border-bottom-right-radius: var(--select-border-radius);
+      border-bottom-color: var(--control-border-color-strong);
+    }
+  }
+}

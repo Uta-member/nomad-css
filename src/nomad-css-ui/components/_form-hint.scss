@@ -37,7 +37,7 @@ $form-hint-margin-top-var: --#{$form-hint-prefix}margin-top !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$form-hint-color-var}: var(#{color-defines.$text-color-light-var});
+  #{$form-hint-color-var}: var(#{color-defines.$text-color-subtle-var});
   #{$form-hint-invalid-color-var}: var(--danger-dark);
   #{$form-hint-valid-color-var}: var(--success-dark);
 

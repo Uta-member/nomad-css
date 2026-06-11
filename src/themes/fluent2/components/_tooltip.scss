@@ -1,0 +1,12 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .tooltip {
+    --tooltip-bg-color: var(--surface-color-overlay);
+    --tooltip-color: var(--text-color);
+
+    &::after {
+      box-shadow: var(--shadow-3);
+    }
+  }
+}

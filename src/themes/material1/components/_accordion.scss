@@ -1,9 +1,0 @@
-@use "../utilities/prefixes" as prefixes;
-
-// Material Design 1: accordion / expansion panel
-:root[data-theme="#{prefixes.$theme-name}"] {
-  .accordion {
-    --accordion-border-radius: 2px;
-    --accordion-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}

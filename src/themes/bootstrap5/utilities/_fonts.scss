@@ -1,0 +1,11 @@
+@use "../utilities/prefixes" as prefixes;
+
+// Bootstrap 5: system-ui font stack, 16px base
+:root[data-theme="#{prefixes.$theme-name}"] {
+  --font-family:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fs-semantic-sm: 0.875rem;
+  --fs-semantic-lg: 1.25rem;
+}

@@ -21,30 +21,30 @@
 .text-body {
   color: var(#{color-defines.$text-color-var});
 }
-.text-body-light {
-  color: var(#{color-defines.$text-color-light-var});
+.text-body-subtle {
+  color: var(#{color-defines.$text-color-subtle-var});
 }
-.text-body-lighter {
-  color: var(#{color-defines.$text-color-lighter-var});
+.text-body-muted {
+  color: var(#{color-defines.$text-color-muted-var});
 }
-.text-body-dark {
-  color: var(#{color-defines.$text-color-dark-var});
+.text-body-strong {
+  color: var(#{color-defines.$text-color-strong-var});
 }
 
 .bg-surface {
   background-color: var(#{color-defines.$surface-color-var});
 }
-.bg-surface-light {
-  background-color: var(#{color-defines.$surface-color-light-var});
+.bg-surface-raised {
+  background-color: var(#{color-defines.$surface-color-raised-var});
 }
-.bg-surface-lighter {
-  background-color: var(#{color-defines.$surface-color-lighter-var});
+.bg-surface-overlay {
+  background-color: var(#{color-defines.$surface-color-overlay-var});
 }
-.bg-surface-dark {
-  background-color: var(#{color-defines.$surface-color-dark-var});
+.bg-surface-sunken {
+  background-color: var(#{color-defines.$surface-color-sunken-var});
 }
-.bg-surface-darker {
-  background-color: var(#{color-defines.$surface-color-darker-var});
+.bg-surface-deep {
+  background-color: var(#{color-defines.$surface-color-deep-var});
 }
 
 // --------------------------------------------

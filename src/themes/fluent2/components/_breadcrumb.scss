@@ -1,0 +1,7 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .breadcrumb {
+    --breadcrumb-separator: ">";
+  }
+}

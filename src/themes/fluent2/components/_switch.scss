@@ -1,0 +1,18 @@
+@use "../utilities/prefixes" as prefixes;
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  .switch {
+    --switch-track-bg-color: var(--surface-color-overlay);
+    --switch-track-border-color: var(--control-border-color-strong);
+    --switch-thumb-bg-color: var(--switch-track-border-color);
+    --switch-thumb-disabled-bg-color: var(--switch-thumb-bg-color);
+    --switch-thumb-checked-disabled-bg-color: var(--switch-thumb-bg-color);
+    --switch-disabled-opacity: 0.4;
+  }
+}
+
+:root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
+  .switch {
+    --switch-track-checked-disabled-bg-color: var(--surface-color-deep);
+  }
+}

@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/border" as border;
 
 // ============================================
 // Prefixes
@@ -31,6 +32,8 @@ $accordion-header-hover-bg-color-var: --#{$accordion-prefix}header-hover-bg-colo
 $accordion-header-color-var: --#{$accordion-prefix}header-color !default;
 $accordion-header-open-bg-color-var: --#{$accordion-prefix}header-open-bg-color !default;
 $accordion-header-open-color-var: --#{$accordion-prefix}header-open-color !default;
+$accordion-header-hover-open-bg-color-var: --#{$accordion-prefix}header-hover-open-bg-color !default;
+$accordion-header-hover-open-color-var: --#{$accordion-prefix}header-hover-open-color !default;
 
 // --------------------------------------------
 // Border
@@ -72,25 +75,31 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   // --------------------------------------------
   // Colors
   // --------------------------------------------
-  #{$accordion-bg-color-var}: var(#{color-defines.$surface-color-lighter-var});
+  #{$accordion-bg-color-var}: var(#{color-defines.$surface-color-overlay-var});
   #{$accordion-header-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
+    #{color-defines.$surface-color-sunken-var}
   );
   #{$accordion-header-hover-bg-color-var}: var(
-    #{color-defines.$surface-color-darker-var}
+    #{color-defines.$surface-color-deep-var}
   );
   #{$accordion-header-color-var}: var(#{color-defines.$text-color-var});
   #{$accordion-header-open-bg-color-var}: var(
-    #{color-defines.$surface-color-dark-var}
+    #{color-defines.$surface-color-sunken-var}
   );
   #{$accordion-header-open-color-var}: var(#{color-defines.$text-color-var});
+  #{$accordion-header-hover-open-bg-color-var}: var(
+    #{color-defines.$surface-color-deep-var}
+  );
+  #{$accordion-header-hover-open-color-var}: var(
+    #{color-defines.$text-color-var}
+  );
 
   // --------------------------------------------
   // Border
   // --------------------------------------------
   #{$accordion-border-color-var}: var(#{color-defines.$border-color-var});
   #{$accordion-border-radius-var}: 0.25rem;
-  #{$accordion-border-width-var}: 1px;
+  #{$accordion-border-width-var}: var(#{border.$border-width-var});
 
   // --------------------------------------------
   // Layout
@@ -101,7 +110,10 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
   // --------------------------------------------
   // Transition
   // --------------------------------------------
-  #{$accordion-transition-var}: color 0.2s, background-color 0.2s, transform 0.2s;
+  #{$accordion-transition-var}:
+    color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
 
   // --------------------------------------------
   // Icon
@@ -174,7 +186,8 @@ $accordion-icon-open-color-var: --#{$accordion-prefix}icon-open-color !default;
     color: var(#{$accordion-header-open-color-var});
 
     &:hover {
-      background-color: var(#{$accordion-header-hover-bg-color-var});
+      background-color: var(#{$accordion-header-hover-open-bg-color-var});
+      color: var(#{$accordion-header-hover-open-color-var});
     }
 
     &:not(:has(.#{$accordion-icon-class-name}))::after {
