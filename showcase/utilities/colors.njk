@@ -3,405 +3,57 @@ title: Colors
 layout: layout.njk
 ---
 
+{% set semanticNames = ["primary","secondary","tertiary","success","warning","danger","info","neutral"] %}
+{% set familyNames = ["red","orange","amber","yellow","lime","green","emerald","teal","cyan","sky","blue","indigo","violet","purple","fuchsia","pink","rose"] %}
+{% set neutralFamilyNames = ["slate","gray","zinc","stone"] %}
+
 <section class="demo-section">
   <h1>Colors</h1>
 
-  <!-- Semantic Colors -->
-  <div class="demo-row">
-    <h4>Semantic Colors</h4>
-    <div class="d-flex flex-wrap" style="gap: 20px">
-      <div class="primary" style="width: 160px">
-        <div class="demo-label">Primary</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="secondary" style="width: 160px">
-        <div class="demo-label">Secondary</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="tertiary" style="width: 160px">
-        <div class="demo-label">Tertiary</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="success" style="width: 160px">
-        <div class="demo-label">Success</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="warning" style="width: 160px">
-        <div class="demo-label">Warning</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="danger" style="width: 160px">
-        <div class="demo-label">Danger</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="info" style="width: 160px">
-        <div class="demo-label">Info</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-    </div>
-  </div>
-
   <!-- Semantic Levels -->
   <div class="demo-row">
-    <h5>Semantic Levels</h5>
+    <h4>Semantic Levels</h4>
     <div class="d-flex flex-wrap" style="gap: 20px">
-      <div class="primary" style="width: 160px">
-        <div class="demo-label">Primary</div>
-        <div class="container-semantic-color subtle">subtle</div>
-        <div class="container-semantic-color tonal">tonal</div>
-        <div class="container-semantic-color">solid</div>
-        <div class="container-semantic-color strong">strong</div>
-        <div class="container-semantic-color heavy">heavy</div>
-      </div>
-      <div class="secondary" style="width: 160px">
-        <div class="demo-label">Secondary</div>
-        <div class="container-semantic-color subtle">subtle</div>
-        <div class="container-semantic-color tonal">tonal</div>
-        <div class="container-semantic-color">solid</div>
-        <div class="container-semantic-color strong">strong</div>
-        <div class="container-semantic-color heavy">heavy</div>
-      </div>
-      <div class="tertiary" style="width: 160px">
-        <div class="demo-label">Tertiary</div>
-        <div class="container-semantic-color subtle">subtle</div>
-        <div class="container-semantic-color tonal">tonal</div>
-        <div class="container-semantic-color">solid</div>
-        <div class="container-semantic-color strong">strong</div>
-        <div class="container-semantic-color heavy">heavy</div>
-      </div>
-      <div class="success" style="width: 160px">
-        <div class="demo-label">Success</div>
-        <div class="container-semantic-color subtle">subtle</div>
-        <div class="container-semantic-color tonal">tonal</div>
-        <div class="container-semantic-color">solid</div>
-        <div class="container-semantic-color strong">strong</div>
-        <div class="container-semantic-color heavy">heavy</div>
-      </div>
-      <div class="warning" style="width: 160px">
-        <div class="demo-label">Warning</div>
-        <div class="container-semantic-color subtle">subtle</div>
-        <div class="container-semantic-color tonal">tonal</div>
-        <div class="container-semantic-color">solid</div>
-        <div class="container-semantic-color strong">strong</div>
-        <div class="container-semantic-color heavy">heavy</div>
-      </div>
-      <div class="danger" style="width: 160px">
-        <div class="demo-label">Danger</div>
-        <div class="container-semantic-color subtle">subtle</div>
-        <div class="container-semantic-color tonal">tonal</div>
-        <div class="container-semantic-color">solid</div>
-        <div class="container-semantic-color strong">strong</div>
-        <div class="container-semantic-color heavy">heavy</div>
-      </div>
-      <div class="info" style="width: 160px">
-        <div class="demo-label">Info</div>
-        <div class="container-semantic-color subtle">subtle</div>
-        <div class="container-semantic-color tonal">tonal</div>
-        <div class="container-semantic-color">solid</div>
-        <div class="container-semantic-color strong">strong</div>
-        <div class="container-semantic-color heavy">heavy</div>
-      </div>
+      {% for s in semanticNames %}
+        <div class="{{ s }}" style="width: 160px">
+          <div class="demo-label">{{ s | capitalize }}</div>
+          <div class="container-semantic-color subtle">subtle</div>
+          <div class="container-semantic-color tonal">tonal</div>
+          <div class="container-semantic-color">solid</div>
+          <div class="container-semantic-color strong">strong</div>
+          <div class="container-semantic-color heavy">heavy</div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 
-  <!-- HUE Colors -->
+  <!-- Named Scales -->
   <div class="demo-row">
-    <h4>Common HUE Colors</h4>
-    <div class="d-flex flex-wrap" style="gap: 20px">
-      <div class="red" style="width: 100px">
-        <div class="demo-label">Red</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="orange" style="width: 100px">
-        <div class="demo-label">Orange</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="yellow" style="width: 100px">
-        <div class="demo-label">Yellow</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="lime" style="width: 100px">
-        <div class="demo-label">Lime</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="green" style="width: 100px">
-        <div class="demo-label">Green</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="teal" style="width: 100px">
-        <div class="demo-label">Teal</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="cyan" style="width: 100px">
-        <div class="demo-label">Cyan</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="blue" style="width: 100px">
-        <div class="demo-label">Blue</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="indigo" style="width: 100px">
-        <div class="demo-label">Indigo</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="violet" style="width: 100px">
-        <div class="demo-label">Violet</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="purple" style="width: 100px">
-        <div class="demo-label">Purple</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="pink" style="width: 100px">
-        <div class="demo-label">Pink</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
+    <h4>Named Scales (1-12)</h4>
+    <div class="d-flex flex-wrap" style="gap: 12px">
+      {% for f in familyNames %}
+        <div style="width: 100px">
+          <div class="demo-label">{{ f | capitalize }}</div>
+          {% for n in range(1, 13) %}
+            <div class="color-util-swatch bg-{{ f }}-{{ n }}">{{ n }}</div>
+          {% endfor %}
+        </div>
+      {% endfor %}
     </div>
   </div>
 
-  <!-- Other Palettes -->
+  <!-- Neutral Scales -->
   <div class="demo-row">
-    <h4>Other Palettes</h4>
-    <div class="d-flex flex-wrap" style="gap: 20px">
-      <div style="width: 200px">
-        <div class="demo-label">Default Palette</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
-      <div class="neutral" style="width: 200px">
-        <div class="demo-label">Neutral Palette</div>
-        <div class="container-color-1">1</div>
-        <div class="container-color-2">2</div>
-        <div class="container-color-3">3</div>
-        <div class="container-color-4">4</div>
-        <div class="container-color-5">5</div>
-        <div class="container-color-6">6</div>
-        <div class="container-color-7">7</div>
-        <div class="container-color-8">8</div>
-        <div class="container-color-9">9</div>
-        <div class="container-color-10">10</div>
-        <div class="container-color-11">11</div>
-        <div class="container-color-12">12</div>
-      </div>
+    <h4>Neutral Scales (1-12)</h4>
+    <div class="d-flex flex-wrap" style="gap: 12px">
+      {% for f in neutralFamilyNames %}
+        <div style="width: 100px">
+          <div class="demo-label">{{ f | capitalize }}</div>
+          {% for n in range(1, 13) %}
+            <div class="color-util-swatch bg-{{ f }}-{{ n }}">{{ n }}</div>
+          {% endfor %}
+        </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -436,8 +88,6 @@ layout: layout.njk
   </div>
 
   {# --- Semantic bg/text named levels --- #}
-  {% set semanticNames = ["primary","secondary","tertiary","success","warning","danger","info","neutral"] %}
-
   <div class="demo-row">
     <h4>bg-{semantic} — Named Levels</h4>
     <div class="d-flex flex-wrap" style="gap: 16px">
@@ -472,13 +122,11 @@ layout: layout.njk
     </div>
   </div>
 
-  {# --- HUE bg named levels --- #}
-  {% set hueNames = ["red","orange","yellow","lime","green","teal","cyan","blue","indigo","violet","purple","pink"] %}
-
+  {# --- Family bg named levels --- #}
   <div class="demo-row">
-    <h4>bg-{hue} — Named Levels</h4>
+    <h4>bg-{family} — Named Levels</h4>
     <div class="d-flex flex-wrap" style="gap: 16px">
-      {% for h in hueNames %}
+      {% for h in familyNames %}
         <div style="min-width: 110px">
           <div class="demo-label">{{ h | capitalize }}</div>
           <div class="color-util-swatch bg-{{ h }}-subtle">subtle</div>
@@ -491,40 +139,20 @@ layout: layout.njk
     </div>
   </div>
 
-  {# --- Numeric 1-12 (primary as example) --- #}
+  {# --- Numeric 1-12 (blue as example) --- #}
   <div class="demo-row">
-    <h4>bg-{color}-{n} / bg-{color}-gray-{n} / text-{color}-{n} — Numeric Levels (primary)</h4>
+    <h4>bg-{family}-{n} / text-{family}-{n} — Numeric Steps (blue)</h4>
     <div class="d-flex flex-wrap" style="gap: 24px">
       <div>
-        <div class="demo-label">bg-primary-{n}</div>
+        <div class="demo-label">bg-blue-{n}</div>
         {% for n in range(1, 13) %}
-          <div class="color-util-swatch bg-primary-{{ n }}">bg-primary-{{ n }}</div>
-        {% endfor %}
-      </div>
-      <div>
-        <div class="demo-label">bg-primary-gray-{n}</div>
-        {% for n in range(1, 13) %}
-          <div class="color-util-swatch bg-primary-gray-{{ n }}">bg-primary-gray-{{ n }}</div>
+          <div class="color-util-swatch bg-blue-{{ n }}">bg-blue-{{ n }}</div>
         {% endfor %}
       </div>
       <div style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px">
-        <div class="demo-label" style="margin-bottom: 0.25rem">text-primary-{n}</div>
+        <div class="demo-label" style="margin-bottom: 0.25rem">text-blue-{n}</div>
         {% for n in range(1, 13) %}
-          <div class="text-primary-{{ n }}" style="font-size: 0.825rem; font-family: monospace; margin-bottom: 2px">text-primary-{{ n }}</div>
-        {% endfor %}
-      </div>
-      <div style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px">
-        <div class="demo-label" style="margin-bottom: 0.25rem">text-primary-gray-{n}</div>
-        {% for n in range(1, 13) %}
-          <div class="text-primary-gray-{{ n }}" style="font-size: 0.825rem; font-family: monospace; margin-bottom: 2px">text-primary-gray-{{ n }}</div>
-        {% endfor %}
-      </div>
-      <div style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px">
-        <div class="demo-label" style="margin-bottom: 0.25rem">text-primary-accent-{n}</div>
-        {% for n in range(1, 13) %}
-          <div class="bg-primary-{{ n }}" style="font-size: 0.825rem; font-family: monospace; padding: 2px 6px; margin-bottom: 2px">
-            <span class="text-primary-accent-{{ n }}">text-primary-accent-{{ n }}</span>
-          </div>
+          <div class="text-blue-{{ n }}" style="font-size: 0.825rem; font-family: monospace; margin-bottom: 2px">text-blue-{{ n }}</div>
         {% endfor %}
       </div>
     </div>

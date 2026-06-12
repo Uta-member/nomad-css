@@ -1,12 +1,25 @@
 @use "sass:map";
-@use "./hue-colors" as hue-colors;
 @use "./semantics" as semantics;
 @use "../../utilities/palette" as palette;
+@use "../../utilities/prefixes" as prefixes;
 
 // ============================================
-// Palette Prefix
+// Palette Emission
+// ============================================
+// :root に出力されるもの:
+//   1. accent ベース色（2変数、テーマ上書き可）
+//   2. 全名前付きスケール（--{family}-{1..12}、フラットな具体値）
+//   3. セマンティックロールトークン（--{role}-{level} + accent、1ホップ参照）
+//   4. デフォルトパレット（--palette-{level} → デフォルトロールへの参照）
+//
+// クラス:
+//   .{family} → --palette-* をそのスケールに再マッピング
+//   .{role}   → --palette-* をそのロールトークンに再マッピング
+// ============================================
+
 // ============================================
 // Variant Names
+// ============================================
 $palette-subtle-var: --#{palette.$palette-prefix}subtle;
 $palette-tonal-var: --#{palette.$palette-prefix}tonal;
 $palette-solid-var: --#{palette.$palette-prefix}solid;
@@ -22,59 +35,50 @@ $palette-heavy-accent-var: --#{palette.$palette-accent-prefix}heavy;
 // ============================================
 // Overridable Variants
 // ============================================
-$default-palette: semantics.$semantic-primary !default;
+// デフォルトパレットとして参照するロール名
+$default-role: #{semantics.$semantic-primary-class-name} !default;
 
 // ============================================
 // Process
 // ============================================
 // --------------------------------------------
-// HUEカラーごとのパレット生成
-// names を持つ場合は :root に名前付きパレットを展開し、
-// クラス内は :root 変数への参照のみ生成する
-// --------------------------------------------
-@each $name, $value in hue-colors.$hues {
-  @if map.has-key($value, names) {
-    :root {
-      @include palette.generate-palette($value);
-    }
-    .#{$name} {
-      @include palette.generate-palette-reference($value);
-    }
-  } @else {
-    .#{$name} {
-      @include palette.generate-palette($value);
-    }
-  }
-}
-
-// --------------------------------------------
-// セマンティックカラーごとのパレットクラス生成
-// names を持つ場合は :root に名前付きパレットを展開し、
-// クラス内は :root 変数への参照のみ生成する
-// --------------------------------------------
-@each $name, $value in semantics.$semantic-colors {
-  @if map.has-key($value, names) {
-    :root {
-      @include palette.generate-palette($value);
-    }
-    .#{$name} {
-      @include palette.generate-palette-reference($value);
-    }
-  } @else {
-    .#{$name} {
-      @include palette.generate-palette($value);
-    }
-  }
-}
-
-// --------------------------------------------
-// デフォルトパレットの :root 生成
-// names を持つ場合は名前付きパレットへの参照を生成する
+// :root — accent ベース色 / 全スケール / ロールトークン / デフォルトパレット
 // --------------------------------------------
 :root {
-  @if map.has-key($default-palette, names) {
-    @include palette.generate-palette-reference($default-palette);
-  } @else {
-    @include palette.generate-palette($default-palette);
+  #{palette.$accent-light-color-var}: #ffffff;
+  #{palette.$accent-dark-color-var}: var(--#{prefixes.$prefix}slate-12);
+
+  @include palette.emit-all-scales;
+
+  @each $name, $config in semantics.$semantic-colors {
+    @include palette.emit-levels(
+      #{$name}-,
+      map.get($config, family),
+      $levels: map.get($config, levels),
+      $threshold: map.get($config, accent-threshold) or
+        palette.$accent-threshold-default
+    );
+  }
+
+  @include palette.emit-palette-ref(#{$default-role}-);
+}
+
+// --------------------------------------------
+// ロールクラス（.primary, .danger, ...）
+// --palette-* をロールトークンに再マッピングする
+// --------------------------------------------
+@each $name, $config in semantics.$semantic-colors {
+  .#{$name} {
+    @include palette.emit-palette-ref(#{$name}-);
+  }
+}
+
+// --------------------------------------------
+// ファミリークラス（.red, .blue, ...）
+// --palette-* をスケールに直接マッピングする
+// --------------------------------------------
+@each $name in palette.families() {
+  .#{$name} {
+    @include palette.emit-levels(palette.$palette-prefix, $name);
   }
 }

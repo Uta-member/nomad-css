@@ -128,15 +128,9 @@ $radio-focus-ring-offset-width-var: --#{$radio-prefix}focus-ring-offset-width !d
     #{color-defines.$control-border-color-subtle-var}
   );
   #{$radio-checked-border-color-var}: var(#{palette.$palette-solid-var});
-  #{$radio-checked-hover-border-color-var}: var(
-    #{palette.$palette-solid-var}
-  );
-  #{$radio-checked-active-border-color-var}: var(
-    #{palette.$palette-solid-var}
-  );
-  #{$radio-checked-focus-border-color-var}: var(
-    #{palette.$palette-solid-var}
-  );
+  #{$radio-checked-hover-border-color-var}: var(#{palette.$palette-solid-var});
+  #{$radio-checked-active-border-color-var}: var(#{palette.$palette-solid-var});
+  #{$radio-checked-focus-border-color-var}: var(#{palette.$palette-solid-var});
   #{$radio-checked-disabled-border-color-var}: var(
     #{color-defines.$border-color-var}
   );

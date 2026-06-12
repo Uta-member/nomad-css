@@ -1,4 +1,4 @@
-@use "../utilities/prefixes" as prefixes;
+﻿@use "../utilities/prefixes" as prefixes;
 
 :root[data-theme="#{prefixes.$theme-name}"] {
   .button {
@@ -88,10 +88,10 @@
       --button-hover-border-color: var(--button-hover-bg-color);
       --button-active-border-color: var(--button-active-bg-color);
       --button-focus-border-color: var(--button-focus-bg-color);
-      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-bg-color: var(--zinc-7);
       --button-disabled-border-color: var(--button-disabled-bg-color);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--neutral-gray-5);
+      --button-disabled-color: var(--zinc-5);
     }
 
     &.tonal {
@@ -107,10 +107,10 @@
       --button-hover-border-color: var(--button-hover-bg-color);
       --button-active-border-color: var(--button-active-bg-color);
       --button-focus-border-color: var(--button-focus-bg-color);
-      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-bg-color: var(--zinc-7);
       --button-disabled-border-color: var(--button-disabled-bg-color);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--neutral-gray-5);
+      --button-disabled-color: var(--zinc-5);
       --button-hover-box-shadow: var(--shadow-1);
     }
 
@@ -121,10 +121,10 @@
       --button-active-color: var(--button-color);
       --button-focus-bg-color: var(--button-hover-bg-color);
       --button-focus-color: var(--button-color);
-      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-bg-color: var(--zinc-7);
       --button-disabled-border-color: var(--button-disabled-color);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--neutral-gray-5);
+      --button-disabled-color: var(--zinc-5);
       --button-disabled-opacity: 1;
     }
 
@@ -135,10 +135,10 @@
       --button-active-color: var(--button-color);
       --button-focus-bg-color: var(--button-hover-bg-color);
       --button-focus-color: var(--button-color);
-      --button-disabled-bg-color: var(--neutral-gray-7);
+      --button-disabled-bg-color: var(--zinc-7);
       --button-disabled-border-color: var(--button-disabled-bg-color);
       --button-disabled-opacity: 1;
-      --button-disabled-color: var(--neutral-gray-5);
+      --button-disabled-color: var(--zinc-5);
     }
   }
 }

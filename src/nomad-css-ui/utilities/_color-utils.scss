@@ -1,18 +1,19 @@
+@use "sass:list";
 @use "sass:map";
 @use "./semantics" as semantics;
-@use "./hue-colors" as hue-colors;
 @use "./color-defines" as color-defines;
+@use "../../utilities/palette" as palette;
+@use "../../utilities/prefixes" as prefixes;
 
 // ============================================
 // Color Utility Classes
 // ============================================
-// text-{color}               → color プロパティを設定
-// bg-{color}                 → background-color + color (accent) を設定
-// text-{color}-{n}           → color-{n} (1-12)
-// bg-{color}-{n}             → color-{n} (1-12) + accent-{n}
-// text-{color}-gray-{n}      → gray-{n} (1-12)
-// bg-{color}-gray-{n}        → gray-{n} (1-12) + accent-{n}
-// text-{color}-accent-{n}    → accent-{n} (1-12)
+// text-body / bg-surface 系   → color-defines ベース
+// text-{role} / bg-{role}     → ロールトークン（solid）
+// text-{role}-{level}         → ロールトークン（レベル指定）
+// text-{family} / bg-{family} → スケール（デフォルトレベル）
+// text-{family}-{n}           → スケールのステップ (1-12)
+// bg-{family}-{n}             → スケールのステップ + ビルド時確定の accent
 // ============================================
 
 // --------------------------------------------
@@ -48,71 +49,64 @@
 }
 
 // --------------------------------------------
-// Mixin: パレットカラーユーティリティ一括生成
+// セマンティックロール (primary, secondary, ...)
+// ロールトークンを参照する（テーマ・ランタイム上書きに追従）
 // --------------------------------------------
-@mixin generate-color-utils($name, $names) {
-  $level-prefix: map.get($names, palette-prefix);
-  $color-prefix: map.get($names, palette-color-prefix);
-  $accent-prefix: map.get($names, palette-accent-prefix);
-  $gray-prefix: map.get($names, palette-gray-prefix);
-
-  // ---- Named levels (subtle / tonal / solid / strong / heavy) ----
+@each $name, $config in semantics.$semantic-colors {
   .text-#{$name} {
-    color: var(--#{$level-prefix}solid);
+    color: var(--#{$name}-solid);
   }
   .bg-#{$name} {
-    background-color: var(--#{$level-prefix}solid);
-    color: var(--#{$accent-prefix}solid);
+    background-color: var(--#{$name}-solid);
+    color: var(--#{$name}-accent-solid);
   }
 
   @each $level in (subtle, tonal, strong, heavy) {
     .text-#{$name}-#{$level} {
-      color: var(--#{$level-prefix}#{$level});
+      color: var(--#{$name}-#{$level});
     }
     .bg-#{$name}-#{$level} {
-      background-color: var(--#{$level-prefix}#{$level});
-      color: var(--#{$accent-prefix}#{$level});
+      background-color: var(--#{$name}-#{$level});
+      color: var(--#{$name}-accent-#{$level});
+    }
+  }
+}
+
+// --------------------------------------------
+// 名前付きスケール (red, blue, slate, ...)
+// レベル指定はデフォルトのレベル対応、accent はビルド時に確定する
+// --------------------------------------------
+@each $name in palette.families() {
+  $scale: palette.scale($name);
+  $levels: palette.$palette-levels-default;
+
+  $solid-step: map.get($levels, solid);
+  .text-#{$name} {
+    color: var(--#{prefixes.$prefix}#{$name}-#{$solid-step});
+  }
+  .bg-#{$name} {
+    background-color: var(--#{prefixes.$prefix}#{$name}-#{$solid-step});
+    color: #{palette.step-accent-var(list.nth($scale, $solid-step))};
+  }
+
+  @each $level in (subtle, tonal, strong, heavy) {
+    $step: map.get($levels, $level);
+    .text-#{$name}-#{$level} {
+      color: var(--#{prefixes.$prefix}#{$name}-#{$step});
+    }
+    .bg-#{$name}-#{$level} {
+      background-color: var(--#{prefixes.$prefix}#{$name}-#{$step});
+      color: #{palette.step-accent-var(list.nth($scale, $step))};
     }
   }
 
-  // ---- Numeric levels 1-12 ----
-  @for $i from 1 through 12 {
+  @for $i from 1 through palette.$scale-steps {
     .text-#{$name}-#{$i} {
-      color: var(--#{$color-prefix}#{$i});
+      color: var(--#{prefixes.$prefix}#{$name}-#{$i});
     }
     .bg-#{$name}-#{$i} {
-      background-color: var(--#{$color-prefix}#{$i});
-      color: var(--#{$accent-prefix}#{$i});
+      background-color: var(--#{prefixes.$prefix}#{$name}-#{$i});
+      color: #{palette.step-accent-var(list.nth($scale, $i))};
     }
-    .text-#{$name}-gray-#{$i} {
-      color: var(--#{$gray-prefix}#{$i});
-    }
-    .bg-#{$name}-gray-#{$i} {
-      background-color: var(--#{$gray-prefix}#{$i});
-      color: var(--#{$accent-prefix}#{$i});
-    }
-    .text-#{$name}-accent-#{$i} {
-      color: var(--#{$accent-prefix}#{$i});
-    }
-  }
-}
-
-// --------------------------------------------
-// セマンティックカラー (primary, secondary, ...)
-// --------------------------------------------
-@each $name, $value in semantics.$semantic-colors {
-  $names: map.get($value, names);
-  @if $names != null {
-    @include generate-color-utils($name, $names);
-  }
-}
-
-// --------------------------------------------
-// HUEカラー (red, orange, yellow, ...)
-// --------------------------------------------
-@each $name, $value in hue-colors.$hues {
-  $names: map.get($value, names);
-  @if $names != null {
-    @include generate-color-utils($name, $names);
   }
 }

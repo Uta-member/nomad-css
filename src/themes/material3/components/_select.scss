@@ -1,4 +1,4 @@
-@use "../utilities/prefixes" as prefixes;
+﻿@use "../utilities/prefixes" as prefixes;
 
 :root[data-theme="#{prefixes.$theme-name}"] {
   .select {
@@ -7,8 +7,8 @@
     --select-focus-ring-color: var(--palette-solid);
     --select-focus-ring-opacity: 1;
     --select-focus-ring-offset-width: 0px;
-    // --select-filled-bg-color / --select-filled-hover-bg-color は
-    // ライト/ダークで異なるため下記のモード別セレクターで定義
+    // --select-filled-bg-color / --select-filled-hover-bg-color 縺ｯ
+    // 繝ｩ繧､繝・繝繝ｼ繧ｯ縺ｧ逡ｰ縺ｪ繧九◆繧∽ｸ玖ｨ倥・繝｢繝ｼ繝牙挨繧ｻ繝ｬ繧ｯ繧ｿ繝ｼ縺ｧ螳夂ｾｩ
     --select-cursor: pointer;
   }
 }
@@ -16,14 +16,14 @@
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   .select {
-    --select-filled-bg-color: var(--neutral-gray-2);
-    --select-filled-hover-bg-color: var(--neutral-gray-3);
+    --select-filled-bg-color: var(--zinc-2);
+    --select-filled-hover-bg-color: var(--zinc-3);
   }
 }
 
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   .select {
-    --select-filled-bg-color: var(--neutral-gray-8);
-    --select-filled-hover-bg-color: var(--neutral-gray-7);
+    --select-filled-bg-color: var(--zinc-8);
+    --select-filled-hover-bg-color: var(--zinc-7);
   }
 }

@@ -1,6 +1,6 @@
 @use "../../utilities/palette" as palette;
+@use "../../utilities/prefixes" as prefixes;
 @use "./semantics" as semantics;
-@use "./hue-colors" as hue-colors;
 
 // ============================================
 // Variants
@@ -51,16 +51,15 @@ $surface-color-deep-var: --surface-color-deep;
   #{$control-border-color-strong-var}: var(#{semantics.$neutral-strong-var});
   #{$control-border-color-subtle-var}: var(#{semantics.$neutral-tonal-var});
 
-  #{$text-color-var}: var(--neutral-color-10);
-  #{$text-color-subtle-var}: var(--neutral-color-6);
-  #{$text-color-muted-var}: var(--neutral-color-5);
-  #{$text-color-strong-var}: var(--neutral-color-11);
+  #{$text-color-var}: var(--#{prefixes.$prefix}slate-11);
+  #{$text-color-subtle-var}: var(--#{prefixes.$prefix}slate-6);
+  #{$text-color-muted-var}: var(--#{prefixes.$prefix}slate-5);
+  #{$text-color-strong-var}: var(--#{prefixes.$prefix}slate-12);
 
-  #{$surface-color-overlay-var}: var(
-    --neutral-color-1
-  ); // 99% — 最明 (ダイアログ等)
-  #{$surface-color-raised-var}: var(--neutral-color-1);
-  #{$surface-color-var}: var(--neutral-color-2);
-  #{$surface-color-sunken-var}: var(--neutral-color-3);
-  #{$surface-color-deep-var}: var(--neutral-color-4);
+  // 最明 (ダイアログ等)
+  #{$surface-color-overlay-var}: var(--#{prefixes.$prefix}slate-1);
+  #{$surface-color-raised-var}: var(--#{prefixes.$prefix}slate-1);
+  #{$surface-color-var}: var(--#{prefixes.$prefix}slate-2);
+  #{$surface-color-sunken-var}: var(--#{prefixes.$prefix}slate-3);
+  #{$surface-color-deep-var}: var(--#{prefixes.$prefix}slate-4);
 }

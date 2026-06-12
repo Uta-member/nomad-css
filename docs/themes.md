@@ -61,17 +61,54 @@ $dark-mode-name: "dark";
 
 ## Step 2: `_colors.scss` — カラーの定義
 
-テーマのメインカラーと共通カラー変数を定義します。
+テーマが上書きするのは2種類だけです。
+
+1. **ロールトークン** `--{role}-{level}`（+ 必要なら `--{role}-accent-{level}`）
+2. **グローバルカラー** `--text-color` / `--surface-color` / `--border-color` 系
+
+値はスケール変数への参照（`var(--blue-7)` 等）でも具体値（hex 等）でも構いません。
 
 ```scss
 // src/themes/my-theme/utilities/_colors.scss
 @use "../utilities/prefixes" as prefixes;
+@use "../../../utilities/palette" as palette;
 
-// メインパレット（primary カラー）の色相・彩度を上書き
 :root[data-theme="#{prefixes.$theme-name}"] {
-  --palette-hue: 200; // 色相（0〜360）
-  --palette-saturation: 70%; // 彩度
+  // ロールトークンの上書き（スケール参照 or 具体値）
+  --primary-subtle: var(--violet-2);
+  --primary-tonal: var(--violet-3);
+  --primary-solid: #7c3aed;
+  --primary-strong: var(--violet-8);
+  --primary-heavy: var(--violet-9);
+
+  // 明るい色を solid にした場合は accent（テキスト色）も合わせて上書きする
+  // --warning-solid: var(--amber-4);
+  // --warning-accent-solid: var(--accent-dark-color);
 }
+```
+
+### ブランドカラーからスケールを生成する
+
+ブランド固有の色がある場合は、`make-scale()` で12段階スケールをビルド時に生成できます。
+明度・彩度カーブは知覚的に調整された参照スケールから引き継がれ、ブランド色そのものが
+最も近いステップに正確に配置されます。
+
+```scss
+$brand-scale: palette.make-scale(#0078d4);
+
+:root[data-theme="#{prefixes.$theme-name}"] {
+  // --brand-1 .. --brand-12 を展開
+  @include palette.emit-scale("brand", $brand-scale);
+
+  // primary のロールトークンを brand スケールに割り当て（accent も自動判定）
+  @include palette.emit-levels(
+    primary-,
+    "brand",
+    $levels: (subtle: 2, tonal: 3, solid: 7, strong: 8, heavy: 9),
+    $scale: $brand-scale
+  );
+}
+```
 
 // ライトモードのカラー定義
 :root[data-theme="#{prefixes.$theme-name}"],
@@ -165,7 +202,8 @@ $dark-mode-name: "dark";
 :root[data-theme="#{prefixes.$theme-name}"] {
   .button.primary {
     // primary クラスが付いた場合の色は CSS 変数で制御
-    // nomad-css-ui 側の .primary セレクタで palette-hue 等を上書きしている
+    // nomad-css-ui 側の .primary セレクタが --palette-* を
+    // --primary-{level} トークンへ再マッピングしている
   }
 
   // secondary ボタンをサーフェスカラーで表現
@@ -202,13 +240,22 @@ $dark-mode-name: "dark";
 | `--surface-color-overlay` | ライト/ダーク両モードで必須                               |
 | `--border-color`          | 必要に応じて（デフォルトは neutral パレットから自動生成） |
 
-#### パレット
+#### ロールトークン
 
-| 変数                   | 説明                                                         |
-| ---------------------- | ------------------------------------------------------------ |
-| `--palette-hue`        | テーマのメインカラーの色相                                   |
-| `--palette-saturation` | テーマのメインカラーの彩度                                   |
-| `--palette-solid`      | solidレベルのカラー（通常は `var(--palette-color-5)` 等） |
+| 変数                          | 説明                                                                 |
+| ----------------------------- | -------------------------------------------------------------------- |
+| `--{role}-{level}`            | ロールの色。role: primary 〜 neutral、level: subtle/tonal/solid/strong/heavy |
+| `--{role}-accent-{level}`     | そのレベルの背景上のテキスト色。solid の明るさを変えたら合わせて上書き |
+| `--accent-light-color`        | accent の明るい側ベース色（デフォルト: 白）                          |
+| `--accent-dark-color`         | accent の暗い側ベース色（デフォルト: `var(--slate-12)`）             |
+
+#### スケール（参照用・通常は上書き不要）
+
+| 変数                 | 説明                                                          |
+| -------------------- | ------------------------------------------------------------- |
+| `--{family}-{1..12}` | 21ファミリーの12段階スケール（1 = 最明、12 = 最暗）           |
+
+デフォルトのレベル対応は subtle: 2, tonal: 3, solid: 7, strong: 8, heavy: 9（neutral のみ 2/4/6/8/10）。
 
 #### ボタン
 
@@ -226,7 +273,7 @@ $dark-mode-name: "dark";
 
 Microsoft Fluent Design System 2 に基づくデザインです。
 
-- **色相**: デフォルト（primary パレットの HUE を上書きなし）
+- **ブランドカラー**: `#0078d4` から `make-scale()` で12段階スケールを生成
 - **角丸**: `4px`（やや角ばった印象）
 - **フォント**: `'Yu Gothic UI', 'Segoe UI', sans-serif`
 - **Dark Mode**: 対応 (`--surface-color: #0d0d0d` 等)
@@ -241,7 +288,7 @@ Microsoft Fluent Design System 2 に基づくデザインです。
 
 Google Material Design 3 に基づくデザインです。
 
-- **色相**: HUE 260 (紫系)、彩度 70%
+- **キーカラー**: M3 baseline（`#6750a4` / `#625b71` / `#7d5260`）から `make-scale()` で生成
 - **角丸**: `10rem`（完全な丸みを帯びたボタン）
 - **フォント**: `'Roboto', sans-serif`
 

@@ -19,89 +19,64 @@ $prefix: "" !default; // デフォルトはプレフィックスなし
 
 ---
 
-## `_palette.scss` — パレット生成 Mixin
+## `_color-scales.scss` / `_palette.scss` — カラースケール生成
 
-HSL カラーパレットの CSS 変数を一括生成する `generate-palette()` Mixin を提供します。
+カラースケール（12段階ランプ）をビルド時に生成する基盤です。
 
-### Mixin: `generate-palette($palette)`
+- `_color-scales.scss` — 21ファミリー × 12段階の OKLCH チャンネル値（生データ）。
+  Tailwind CSS v4 のパレット（MIT License）に基づく。
+- `_palette.scss` — スケールの生成・変換・出力を行う関数と Mixin。
 
-指定したパレット定義から、明度段階カラー・アクセントカラー・グレースケール等の CSS 変数を生成します。
+設計・調整は知覚的に均一な OKLCH で行い、**出力は rgb() の具体値のみ**です。
+ランタイムの CSS には OKLCH も計算式も含まれないため、カスタムプロパティが
+動くブラウザならどこでも動作します。
 
-#### パラメーター
+### 関数
+
+| 関数                          | 説明                                                                |
+| ----------------------------- | ------------------------------------------------------------------- |
+| `families()`                  | 定義済みファミリー名のリストを返す                                  |
+| `scale($name)`                | 名前付きスケールの OKLCH トリプル12個を返す（12段目は外挿で生成）   |
+| `make-scale($color)`          | 任意の色から12段階スケールを生成（明度・彩度カーブは参照スケール由来） |
+| `step-color($triple)`         | OKLCH トリプルを sRGB 具体値へ変換（色域マッピング込み）            |
+| `step-accent-var($triple)`    | ステップの明度に応じた accent 変数参照を返す                        |
+
+### Mixin
+
+| Mixin                                       | 出力                                                       |
+| ------------------------------------------- | ----------------------------------------------------------- |
+| `emit-scale($name, $scale)`                 | `--{name}-1` 〜 `--{name}-12`（フラットな具体値）           |
+| `emit-all-scales()`                         | 全21ファミリーのスケール                                    |
+| `emit-levels($prefix, $scale-name, ...)`    | `--{prefix}{level}` + `--{prefix}accent-{level}` トークン   |
+| `emit-palette-ref($prefix)`                 | `--palette-{level}` をトークン群への参照として出力          |
+
+### 使用例（ブランドカラーからのスケール生成）
 
 ```scss
-@include palette.generate-palette(
-  (
-    hue: 220,
-    // 必須: 色相 (0〜360)
-    saturation: 80%,
-    // 必須: 彩度
-    accent-threshold: 50%,
-    // アクセント切り替え輝度（デフォルト: 50%）
-    levels: (
-        // セマンティックレベル（省略時はデフォルト値）
-        "lighter": 2,
-        "light": 3,
-        "default": 5,
-        "dark": 7,
-        "darker": 9,
-      ),
-    lightnesses: (
-      // 明度リスト（省略時はデフォルト値）
-      0: 97%,
-      1: 93%,
-      2: 85%,
-      3: 75%,
-      4: 65%,
-      5: 50%,
-      6: 42%,
-      7: 34%,
-      8: 26%,
-      9: 18%,
-      10: 10%,
-    ),
-    names: (
-      // 変数名のオーバーライド（省略可）
-      palette-prefix: "my-palette-",
-      palette-hue-var: "--my-palette-hue",
-    ),
-  )
-);
+@use "src/utilities/palette" as palette;
+
+$brand: palette.make-scale(#0078d4);
+
+:root {
+  @include palette.emit-scale("brand", $brand);
+  @include palette.emit-levels(
+    primary-,
+    "brand",
+    $levels: (subtle: 2, tonal: 3, solid: 7, strong: 8, heavy: 9),
+    $scale: $brand
+  );
+}
 ```
 
-#### 生成される CSS 変数
+### デフォルトのレベル対応
 
-```css
---palette-hue: 220;
---palette-saturation: 80%;
---palette-color-0: hsl(220, 80%, 97%);
-/* ... --palette-color-1 〜 --palette-color-10 */
---palette-accent-0: hsl(220, 80%, 10%); /* 暗いアクセント（明るいカラー用） */
-/* ... --palette-accent-1 〜 --palette-accent-10 */
---palette-subtle: hsl(220, 80%, 85%); /* levels の subtle = 2 に対応 */
---palette-tonal: hsl(220, 80%, 75%);
---palette-solid: hsl(220, 80%, 50%);
---palette-strong: hsl(220, 80%, 34%);
---palette-heavy: hsl(220, 80%, 18%);
---palette-gray-0: hsl(220, 5%, 97%); /* グレースケール */
-/* ... */
-```
-
-### デフォルト明度レベル (0〜10)
-
-| レベル | 明度             |
-| ------ | ---------------- |
-| 0      | 97% (最も明るい) |
-| 1      | 93%              |
-| 2      | 85%              |
-| 3      | 75%              |
-| 4      | 65%              |
-| 5      | 50% (中間)       |
-| 6      | 42%              |
-| 7      | 34%              |
-| 8      | 26%              |
-| 9      | 18%              |
-| 10     | 10% (最も暗い)   |
+| レベル | ステップ | 用途の目安                     |
+| ------ | -------- | ------------------------------ |
+| subtle | 2        | 淡い背景（tonal ボタンの bg）  |
+| tonal  | 3        | 淡い背景のホバー               |
+| solid  | 7        | 主たる色（filled ボタンの bg） |
+| strong | 8        | solid のホバー                 |
+| heavy  | 9        | solid のアクティブ             |
 
 ---
 

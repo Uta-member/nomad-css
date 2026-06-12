@@ -38,7 +38,8 @@ nomad-css は以下の 3 つの独立した層で構成されています。
 | ファイル            | 役割                                                            |
 | ------------------- | --------------------------------------------------------------- |
 | `_prefixes.scss`    | CSS 変数のグローバルプレフィックス (`$prefix`) を定義           |
-| `_palette.scss`     | パレット生成 Mixin `generate-palette()` を提供                  |
+| `_color-scales.scss` | 21ファミリー × 12段階の OKLCH スケールデータ（生データのみ）   |
+| `_palette.scss`     | スケール生成の関数・Mixin（OKLCH→sRGB 変換はビルド時に実行）    |
 | `_border.scss`      | `.border`, `.border-top` 等のボーダーユーティリティクラス       |
 | `_breakpoints.scss` | `media-up()`, `media-down()` 等のブレークポイント Mixin         |
 | `_container.scss`   | Display・Flex・Width・Height 等のレイアウトユーティリティクラス |
@@ -74,10 +75,9 @@ src/nomad-css-ui/
 │   ├── _progress.scss      # プログレスバー
 │   └── _table.scss         # テーブル
 └── utilities/              # nomad-css-ui 固有のユーティリティ
-    ├── _palette.scss       # HUE + セマンティックカラーのパレット統合
+    ├── _palette.scss       # スケール・ロールトークン・パレット変数の出力
     ├── _color-defines.scss # 共通カラー変数のデフォルト値設定
-    ├── _hue-colors.scss    # HSL 色相環 12 色の定義
-    ├── _semantics.scss     # セマンティックカラー (primary, danger 等) の定義
+    ├── _semantics.scss     # セマンティックロール (primary, danger 等) の定義
     └── _fonts.scss         # nomad-css-ui 固有のフォント変数
 ```
 
@@ -166,21 +166,24 @@ src/themes/
 | `--border-color-subtle`   | 控えめなボーダー色（無効state等）  |
 | `--border-color-strong`   | 強調ボーダー色（フォーカス等）     |
 
-### パレット変数
+### カラー変数の3層構造
 
-`generate-palette()` Mixin が生成する変数:
+色は「スケール → ロールトークン → ワーキング変数」の3層で構成されます。
+12段階ランプの生成・知覚補正・accent の明暗判定はすべて Sass のビルド時に
+OKLCH で行われ、出力される CSS にはフラットな具体値と1ホップの `var()` 参照
+しか含まれません（ランタイム計算なし・レガシーブラウザ互換）。
 
-| 変数                                          | 用途                                    |
-| --------------------------------------------- | --------------------------------------- |
-| `--palette-hue`                               | 色相 (0〜360)                           |
-| `--palette-saturation`                        | 彩度                                    |
-| `--palette-color-0` 〜 `--palette-color-10`   | 明度段階ごとのカラー値                  |
-| `--palette-accent-0` 〜 `--palette-accent-10` | アクセントカラー (テキスト色自動反転用) |
-| `--palette-subtle`                            | セマンティックレベル「subtle」のカラー  |
-| `--palette-tonal`                             | セマンティックレベル「tonal」のカラー   |
-| `--palette-solid`                             | セマンティックレベル「solid」のカラー   |
-| `--palette-strong`                            | セマンティックレベル「strong」のカラー  |
-| `--palette-heavy`                             | セマンティックレベル「heavy」のカラー   |
+| 層               | 変数                                       | 内容                                                         |
+| ---------------- | ------------------------------------------ | ------------------------------------------------------------ |
+| スケール         | `--{family}-{1..12}`（例 `--blue-7`）      | 21ファミリー × 12段階の具体値（:root にフラット展開）        |
+| ロールトークン   | `--{role}-{level}`（例 `--primary-solid`） | スケールへの1ホップ参照。テーマ・アプリの上書きポイント      |
+| ロール accent    | `--{role}-accent-{level}`                  | そのレベルの背景上で読めるテキスト色（ビルド時に明暗判定）   |
+| ワーキング変数   | `--palette-{level}` / `--palette-accent-{level}` | コンポーネントが消費する変数。`.{role}` / `.{family}` クラスで再マッピングされる |
+
+- family: `red` `orange` `amber` `yellow` `lime` `green` `emerald` `teal` `cyan` `sky` `blue` `indigo` `violet` `purple` `fuchsia` `pink` `rose` + `slate` `gray` `zinc` `stone`
+- role: `primary` `secondary` `tertiary` `success` `warning` `danger` `info` `neutral`
+- level: `subtle` `tonal` `solid` `strong` `heavy`
+- accent のベース色は `--accent-light-color` / `--accent-dark-color`（テーマ上書き可）
 
 ---
 

@@ -1,4 +1,4 @@
-@use "../utilities/prefixes" as prefixes;
+﻿@use "../utilities/prefixes" as prefixes;
 
 // ============================================
 // Material3 - form-control overrides
@@ -18,17 +18,17 @@
 :root[data-theme="#{prefixes.$theme-name}"],
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$light-mode-name}"] {
   .form-control {
-    --form-control-filled-bg-color: var(--neutral-gray-2);
-    --form-control-filled-hover-bg-color: var(--neutral-gray-3);
+    --form-control-filled-bg-color: var(--zinc-2);
+    --form-control-filled-hover-bg-color: var(--zinc-3);
   }
 }
 
 :root[data-theme="#{prefixes.$theme-name}"][data-color-scheme="#{prefixes.$dark-mode-name}"] {
   .form-control {
-    --form-control-filled-bg-color: var(--neutral-gray-7);
-    --form-control-filled-hover-bg-color: var(--neutral-gray-6);
-    --form-control-border-color: var(--neutral-gray-4);
-    --form-control-hover-border-color: var(--neutral-gray-5);
+    --form-control-filled-bg-color: var(--zinc-7);
+    --form-control-filled-hover-bg-color: var(--zinc-6);
+    --form-control-border-color: var(--zinc-4);
+    --form-control-hover-border-color: var(--zinc-5);
     --form-control-placeholder-color: var(--form-control-border-color);
   }
 }

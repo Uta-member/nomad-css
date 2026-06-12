@@ -1,10 +1,19 @@
-@use "sass:map";
-@use "hue-colors" as hue-colors;
+// ============================================
+// Semantic Roles
+// ============================================
+// セマンティックロールの定義。各ロールは名前付きスケール（family）と
+// レベル → ステップ対応（levels）の組で表現され、ビルド時に
+// --{role}-{level} トークンとして解決される。
+//
+// テーマは2つの方法でカスタマイズできる:
+//   1. Sass: @use ... with ($semantic-primary: (family: "violet", ...))
+//   2. CSS変数: --primary-solid 等の最終トークンを任意の色で上書き
+// ============================================
 
 // ============================================
 // Prefixes
 // ============================================
-$semantic-prefix: "";
+$semantic-prefix: "" !default;
 
 $semantic-primary-class-name: #{$semantic-prefix}primary;
 $semantic-secondary-class-name: #{$semantic-prefix}secondary;
@@ -16,192 +25,90 @@ $semantic-info-class-name: #{$semantic-prefix}info;
 $semantic-neutral-class-name: #{$semantic-prefix}neutral;
 
 // ============================================
-// Prefixes
+// Role Definitions
 // ============================================
-// ============================================
-// セマンティックカラー定義
-// threshold: アクセントカラー切り替え閾値（省略時はデフォルト）
+// family: 参照する名前付きスケール
+// levels: レベル名 → ステップ (1-12)
+// accent-threshold: accent 明暗切り替えの OKLCH 明度閾値（省略可）
 // ============================================
 $semantic-primary: (
-  hue: var(#{hue-colors.$hue-blue-var}),
-  saturation: 80%,
-  accent-threshold: 50%,
+  family: "blue",
   levels: (
-    subtle: 4,
-    tonal: 5,
-    solid: 8,
-    strong: 10,
-    heavy: 11,
-  ),
-  names: (
-    palette-prefix: primary-,
-    palette-color-prefix: primary-color-,
-    palette-accent-prefix: primary-accent-,
-    palette-gray-prefix: primary-gray-,
-    palette-lightness-prefix: primary-lightness-,
-    palette-hue-var: --primary-hue,
-    palette-saturation-var: --primary-saturation,
+    subtle: 2,
+    tonal: 3,
+    solid: 7,
+    strong: 8,
+    heavy: 9,
   ),
 ) !default;
 $semantic-secondary: (
-  hue: var(#{hue-colors.$hue-pink-var}),
-  saturation: 80%,
-  accent-threshold: 55%,
+  family: "pink",
   levels: (
-    subtle: 4,
-    tonal: 5,
+    subtle: 2,
+    tonal: 3,
     solid: 7,
-    strong: 9,
-    heavy: 11,
-  ),
-  names: (
-    palette-prefix: secondary-,
-    palette-color-prefix: secondary-color-,
-    palette-accent-prefix: secondary-accent-,
-    palette-gray-prefix: secondary-gray-,
-    palette-lightness-prefix: secondary-lightness-,
-    palette-hue-var: --secondary-hue,
-    palette-saturation-var: --secondary-saturation,
+    strong: 8,
+    heavy: 9,
   ),
 ) !default;
 $semantic-tertiary: (
-  hue: var(#{hue-colors.$hue-teal-var}),
-  saturation: 60%,
-  accent-threshold: 40%,
+  family: "teal",
   levels: (
-    subtle: 4,
-    tonal: 6,
-    solid: 9,
-    strong: 11,
-    heavy: 12,
-  ),
-  names: (
-    palette-prefix: tertiary-,
-    palette-color-prefix: tertiary-color-,
-    palette-accent-prefix: tertiary-accent-,
-    palette-gray-prefix: tertiary-gray-,
-    palette-lightness-prefix: tertiary-lightness-,
-    palette-hue-var: --tertiary-hue,
-    palette-saturation-var: --tertiary-saturation,
+    subtle: 2,
+    tonal: 3,
+    solid: 7,
+    strong: 8,
+    heavy: 9,
   ),
 ) !default;
 $semantic-success: (
-  hue: var(#{hue-colors.$hue-green-var}),
-  saturation: 60%,
-  accent-threshold: 45%,
+  family: "green",
   levels: (
-    subtle: 4,
-    tonal: 6,
-    solid: 9,
-    strong: 11,
-    heavy: 12,
-  ),
-  names: (
-    palette-prefix: success-,
-    palette-color-prefix: success-color-,
-    palette-accent-prefix: success-accent-,
-    palette-gray-prefix: success-gray-,
-    palette-lightness-prefix: success-lightness-,
-    palette-hue-var: --success-hue,
-    palette-saturation-var: --success-saturation,
+    subtle: 2,
+    tonal: 3,
+    solid: 7,
+    strong: 8,
+    heavy: 9,
   ),
 ) !default;
 $semantic-warning: (
-  hue: var(#{hue-colors.$hue-yellow-var}),
-  saturation: 80%,
-  accent-threshold: 45%,
+  family: "amber",
   levels: (
-    subtle: 4,
-    tonal: 6,
-    solid: 8,
-    strong: 10,
-    heavy: 11,
-  ),
-  names: (
-    palette-prefix: warning-,
-    palette-color-prefix: warning-color-,
-    palette-accent-prefix: warning-accent-,
-    palette-gray-prefix: warning-gray-,
-    palette-lightness-prefix: warning-lightness-,
-    palette-hue-var: --warning-hue,
-    palette-saturation-var: --warning-saturation,
+    subtle: 2,
+    tonal: 3,
+    solid: 6,
+    strong: 7,
+    heavy: 8,
   ),
 ) !default;
 $semantic-danger: (
-  hue: var(#{hue-colors.$hue-red-var}),
-  saturation: 80%,
-  accent-threshold: 50%,
+  family: "red",
   levels: (
-    subtle: 4,
-    tonal: 6,
-    solid: 8,
-    strong: 10,
-    heavy: 11,
-  ),
-  names: (
-    palette-prefix: danger-,
-    palette-color-prefix: danger-color-,
-    palette-accent-prefix: danger-accent-,
-    palette-gray-prefix: danger-gray-,
-    palette-lightness-prefix: danger-lightness-,
-    palette-hue-var: --danger-hue,
-    palette-saturation-var: --danger-saturation,
+    subtle: 2,
+    tonal: 3,
+    solid: 7,
+    strong: 8,
+    heavy: 9,
   ),
 ) !default;
 $semantic-info: (
-  hue: var(#{hue-colors.$hue-cyan-var}),
-  saturation: 80%,
-  accent-threshold: 40%,
+  family: "cyan",
   levels: (
-    subtle: 4,
-    tonal: 6,
-    solid: 9,
-    strong: 10,
-    heavy: 11,
-  ),
-  names: (
-    palette-prefix: info-,
-    palette-color-prefix: info-color-,
-    palette-accent-prefix: info-accent-,
-    palette-gray-prefix: info-gray-,
-    palette-lightness-prefix: info-lightness-,
-    palette-hue-var: --info-hue,
-    palette-saturation-var: --info-saturation,
+    subtle: 2,
+    tonal: 3,
+    solid: 7,
+    strong: 8,
+    heavy: 9,
   ),
 ) !default;
 $semantic-neutral: (
-  hue: var(#{hue-colors.$hue-blue-var}),
-  saturation: 5%,
-  accent-threshold: 60%,
+  family: "slate",
   levels: (
     subtle: 2,
     tonal: 4,
     solid: 6,
     strong: 8,
     heavy: 10,
-  ),
-  lightnesses: (
-    1: 99%,
-    2: 97%,
-    3: 94%,
-    4: 85%,
-    5: 75%,
-    6: 55%,
-    7: 35%,
-    8: 25%,
-    9: 15%,
-    10: 8%,
-    11: 4%,
-    12: 2%,
-  ),
-  names: (
-    palette-prefix: neutral-,
-    palette-color-prefix: neutral-color-,
-    palette-accent-prefix: neutral-accent-,
-    palette-gray-prefix: neutral-gray-,
-    palette-lightness-prefix: neutral-lightness-,
-    palette-hue-var: --neutral-hue,
-    palette-saturation-var: --neutral-saturation,
   ),
 ) !default;
 
@@ -217,8 +124,7 @@ $semantic-colors: (
 );
 
 // ============================================
-// Neutral Palette Variant Names (theme-local)
-// These live in the theme layer only so props layer remains unchanged.
+// Neutral Role Variant Names
 // ============================================
 $neutral-subtle-var: --neutral-subtle;
 $neutral-tonal-var: --neutral-tonal;

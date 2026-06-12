@@ -100,9 +100,7 @@ $switch-disabled-cursor-var: --#{$switch-prefix}disabled-cursor !default;
   #{$switch-track-bg-color-var}: var(#{color-defines.$surface-color-deep-var});
   #{$switch-track-checked-bg-color-var}: var(#{palette.$palette-solid-var});
   #{$switch-track-border-color-var}: var(#{color-defines.$border-color-var});
-  #{$switch-track-checked-border-color-var}: var(
-    #{palette.$palette-solid-var}
-  );
+  #{$switch-track-checked-border-color-var}: var(#{palette.$palette-solid-var});
   #{$switch-track-border-radius-var}: 10rem;
   #{$switch-track-border-width-var}: var(#{border.$border-width-var});
   #{$switch-track-disabled-bg-color-var}: var(
