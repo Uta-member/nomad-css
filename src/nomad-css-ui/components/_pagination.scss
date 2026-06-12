@@ -2,6 +2,7 @@
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
 @use "../../utilities/border" as border;
+@use "../../utilities/breakpoints" as breakpoints;
 
 // ============================================
 // Prefixes
@@ -150,5 +151,17 @@ $pagination-gap-var: --#{$pagination-prefix}gap !default;
   &.lg .#{$page-link-class-name} {
     font-size: 1.125em;
     padding: 0.5rem 1rem;
+  }
+}
+
+// ============================================
+// Responsive Auto-Adaptation
+// ============================================
+// 小画面（sm未満）でページネーションを一段コンパクト化
+@include breakpoints.media-down("sm") {
+  .#{$pagination-class-name} {
+    #{$pagination-padding-var}: 0.25rem 0.5rem;
+    #{$pagination-gap-var}: 0.125rem;
+    #{$pagination-font-size-var}: 0.875em;
   }
 }

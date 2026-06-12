@@ -1,4 +1,5 @@
 @use "../../utilities/prefixes" as prefixes;
+@use "../../utilities/breakpoints" as breakpoints;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
 @use "../../utilities/border" as border;
@@ -264,6 +265,32 @@ $dialog-transition-var: --#{$dialog-prefix}transition !default;
 .#{$dialog-class-name}.full {
   #{$dialog-max-width-var}: calc(100vw - 2rem);
   #{$dialog-max-height-var}: calc(100vh - 2rem);
+}
+
+// ============================================
+// Responsive Auto-Adaptation
+// ============================================
+// sm未満の画面でダイアログがはみ出さないように自動で広げる
+@include breakpoints.media-down("sm") {
+  .#{$dialog-class-name} {
+    #{$dialog-max-width-var}: calc(100vw - 1rem);
+    #{$dialog-max-height-var}: calc(100vh - 1rem);
+  }
+}
+
+// ============================================
+// Responsive Full Variants
+// ============================================
+// 指定ブレークポイント未満のときだけ .full と同じ挙動になる
+@each $bp-name, $bp-value in breakpoints.$breakpoints {
+  @if $bp-value > 0 {
+    @include breakpoints.media-down($bp-name) {
+      .#{$dialog-class-name}.full-#{$bp-name}-down {
+        #{$dialog-max-width-var}: calc(100vw - 2rem);
+        #{$dialog-max-height-var}: calc(100vh - 2rem);
+      }
+    }
+  }
 }
 
 // ============================================

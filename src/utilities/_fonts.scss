@@ -1,4 +1,5 @@
 @use "prefixes" as prefixes;
+@use "breakpoints" as breakpoints;
 
 // ============================================
 // Prefixes
@@ -232,4 +233,34 @@ h6,
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+// ============================================
+// Responsive Variants
+// ============================================
+@each $bp-name, $bp-value in breakpoints.$breakpoints {
+  @if $bp-value > 0 {
+    @include breakpoints.media-up($bp-name) {
+      // Font Size Responsive
+      @each $key, $value in $font-size-variations {
+        .fs-#{$bp-name}-#{$key} {
+          font-size: var(#{$font-size-prefix}#{$key}) !important;
+        }
+      }
+
+      // Text Align Responsive
+      .text-#{$bp-name}-start {
+        text-align: start;
+      }
+      .text-#{$bp-name}-end {
+        text-align: end;
+      }
+      .text-#{$bp-name}-center {
+        text-align: center;
+      }
+      .text-#{$bp-name}-justify {
+        text-align: justify;
+      }
+    }
+  }
 }

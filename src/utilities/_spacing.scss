@@ -1,4 +1,5 @@
 @use "prefixes" as prefixes;
+@use "breakpoints" as breakpoints;
 
 // ============================================
 // Prefixes
@@ -115,5 +116,82 @@ $spacing-values: (
   }
   .#{$gap-class-name}y-#{$key} {
     row-gap: var(#{$spacing-scale-prefix}#{$key}) !important;
+  }
+}
+
+// ============================================
+// Responsive Variants
+// ============================================
+// ブレークポイントごとに .m-{bp}-{key} 等のレスポンシブ変種を生成
+@each $bp-name, $bp-value in breakpoints.$breakpoints {
+  @if $bp-value > 0 {
+    @include breakpoints.media-up($bp-name) {
+      // ========== Margin ==========
+      @each $key, $value in $spacing-values {
+        .#{$margin-class-name}-#{$bp-name}-#{$key} {
+          margin: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$margin-class-name}t-#{$bp-name}-#{$key} {
+          margin-top: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$margin-class-name}r-#{$bp-name}-#{$key} {
+          margin-right: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$margin-class-name}b-#{$bp-name}-#{$key} {
+          margin-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$margin-class-name}l-#{$bp-name}-#{$key} {
+          margin-left: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$margin-class-name}x-#{$bp-name}-#{$key} {
+          margin-left: var(#{$spacing-scale-prefix}#{$key}) !important;
+          margin-right: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$margin-class-name}y-#{$bp-name}-#{$key} {
+          margin-top: var(#{$spacing-scale-prefix}#{$key}) !important;
+          margin-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+      }
+
+      // ========== Padding ==========
+      @each $key, $value in $spacing-values {
+        .#{$padding-class-name}-#{$bp-name}-#{$key} {
+          padding: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$padding-class-name}t-#{$bp-name}-#{$key} {
+          padding-top: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$padding-class-name}r-#{$bp-name}-#{$key} {
+          padding-right: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$padding-class-name}b-#{$bp-name}-#{$key} {
+          padding-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$padding-class-name}l-#{$bp-name}-#{$key} {
+          padding-left: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$padding-class-name}x-#{$bp-name}-#{$key} {
+          padding-left: var(#{$spacing-scale-prefix}#{$key}) !important;
+          padding-right: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$padding-class-name}y-#{$bp-name}-#{$key} {
+          padding-top: var(#{$spacing-scale-prefix}#{$key}) !important;
+          padding-bottom: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+      }
+
+      // ========== Gap ==========
+      @each $key, $value in $spacing-values {
+        .#{$gap-class-name}-#{$bp-name}-#{$key} {
+          gap: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$gap-class-name}x-#{$bp-name}-#{$key} {
+          column-gap: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+        .#{$gap-class-name}y-#{$bp-name}-#{$key} {
+          row-gap: var(#{$spacing-scale-prefix}#{$key}) !important;
+        }
+      }
+    }
   }
 }

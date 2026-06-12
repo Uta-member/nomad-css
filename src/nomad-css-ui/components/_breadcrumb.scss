@@ -1,6 +1,7 @@
 @use "../../utilities/prefixes" as prefixes;
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
+@use "../../utilities/breakpoints" as breakpoints;
 
 // ============================================
 // Prefixes
@@ -107,5 +108,22 @@ $breadcrumb-font-size-var: --#{$breadcrumb-prefix}font-size !default;
   // Active / current page item (no link)
   &.active {
     color: var(#{$breadcrumb-active-color-var});
+  }
+}
+
+// ============================================
+// Responsive Auto-Adaptation
+// ============================================
+// 小画面（sm未満）でブレッドクラムを横スクロール化
+@include breakpoints.media-down("sm") {
+  .#{$breadcrumb-class-name} {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .#{$breadcrumb-item-class-name} {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 }

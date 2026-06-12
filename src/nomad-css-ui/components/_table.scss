@@ -2,6 +2,7 @@
 @use "../utilities/palette" as palette;
 @use "../utilities/color-defines" as color-defines;
 @use "../../utilities/border" as border;
+@use "../../utilities/breakpoints" as breakpoints;
 
 // ============================================
 // Prefixes
@@ -15,6 +16,7 @@ $table-prefix: #{prefixes.$prefix}table- !default;
 // Class Names
 // --------------------------------------------
 $table-class-name: table !default;
+$table-responsive-class-name: table-responsive !default;
 
 // --------------------------------------------
 // Variants
@@ -198,5 +200,37 @@ $table-cell-padding-y-sm-var: --#{$table-prefix}cell-padding-y-sm !default;
   & .palette-heavy {
     background-color: var(#{palette.$palette-heavy-var});
     color: var(#{palette.$palette-heavy-accent-var});
+  }
+}
+
+// ============================================
+// Responsive Auto-Adaptation
+// ============================================
+// 小画面（sm未満）でセル余白をコンパクト値へ自動切替
+@include breakpoints.media-down("sm") {
+  .#{$table-class-name} > :not(caption) > * > * {
+    padding: var(#{$table-cell-padding-y-sm-var}) var(#{$table-cell-padding-x-sm-var});
+  }
+}
+
+// ============================================
+// Table Responsive Wrapper
+// ============================================
+// テーブルを包むラッパー要素に付与して横スクロールを可能にする
+.#{$table-responsive-class-name} {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+@each $bp-name, $bp-value in breakpoints.$breakpoints {
+  @if $bp-value > 0 {
+    @include breakpoints.media-down($bp-name) {
+      .#{$table-responsive-class-name}-#{$bp-name} {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+      }
+    }
   }
 }
