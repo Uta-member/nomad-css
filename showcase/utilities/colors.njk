@@ -13,9 +13,10 @@ layout: layout.njk
   <!-- Semantic Levels -->
   <div class="demo-row">
     <h4>Semantic Levels</h4>
-    <div class="d-flex flex-wrap" style="gap: 20px">
+    <div style="overflow-x: auto">
+    <div class="d-flex" style="gap: 20px; min-width: max-content">
       {% for s in semanticNames %}
-        <div class="{{ s }}" style="width: 160px">
+        <div class="{{ s }}" style="width: 160px; flex-shrink: 0">
           <div class="demo-label">{{ s | capitalize }}</div>
           <div class="container-semantic-color subtle">subtle</div>
           <div class="container-semantic-color tonal">tonal</div>
@@ -24,6 +25,7 @@ layout: layout.njk
           <div class="container-semantic-color heavy">heavy</div>
         </div>
       {% endfor %}
+    </div>
     </div>
   </div>
 
@@ -90,9 +92,10 @@ layout: layout.njk
   {# --- Semantic bg/text named levels --- #}
   <div class="demo-row">
     <h4>bg-{semantic} — Named Levels</h4>
-    <div class="d-flex flex-wrap" style="gap: 16px">
+    <div style="overflow-x: auto">
+    <div class="d-flex" style="gap: 16px; min-width: max-content">
       {% for s in semanticNames %}
-        <div style="min-width: 130px">
+        <div style="min-width: 130px; flex-shrink: 0">
           <div class="demo-label">{{ s | capitalize }}</div>
           <div class="color-util-swatch bg-{{ s }}-subtle">bg-{{ s }}-subtle</div>
           <div class="color-util-swatch bg-{{ s }}-tonal">bg-{{ s }}-tonal</div>
@@ -102,13 +105,15 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    </div>
   </div>
 
   <div class="demo-row">
     <h4>text-{semantic} — Named Levels</h4>
-    <div class="d-flex flex-wrap" style="gap: 16px">
+    <div style="overflow-x: auto">
+    <div class="d-flex" style="gap: 16px; min-width: max-content">
       {% for s in semanticNames %}
-        <div style="min-width: 130px">
+        <div style="min-width: 130px; flex-shrink: 0">
           <div class="demo-label">{{ s | capitalize }}</div>
           <div>
             <span class="text-{{ s }}-subtle" style="font-size: 0.825rem; display: block">text-{{ s }}-subtle</span>
@@ -119,6 +124,7 @@ layout: layout.njk
           </div>
         </div>
       {% endfor %}
+    </div>
     </div>
   </div>
 

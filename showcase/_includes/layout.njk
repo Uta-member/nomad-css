@@ -24,6 +24,15 @@
   <body>
     <header class="showcase-header">
       <div class="showcase-header-inner">
+        <button
+          type="button"
+          class="sidebar-toggle"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          onclick="toggleSidebar()"
+        >
+          ☰
+        </button>
         <a href="{{ '/' | url }}" class="showcase-logo">
           <strong>nomad-css</strong>
         </a>
@@ -51,6 +60,7 @@
     </header>
 
     <div class="showcase-layout">
+      <div class="sidebar-backdrop" onclick="closeSidebar()"></div>
       <aside class="showcase-sidebar">
         <nav>
           {% set homeUrl = '/' | url %}
@@ -109,6 +119,28 @@
       var savedScheme = localStorage.getItem("nomad-scheme") || "light";
       setTheme(savedTheme);
       setScheme(savedScheme);
+
+      function toggleSidebar() {
+        var isOpen = document.body.classList.toggle("sidebar-open");
+        var btn = document.querySelector(".sidebar-toggle");
+        if (btn) btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+
+      function closeSidebar() {
+        document.body.classList.remove("sidebar-open");
+        var btn = document.querySelector(".sidebar-toggle");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      }
+
+      // Close sidebar on nav link click (mobile)
+      var sidebarNav = document.querySelector(".showcase-sidebar nav");
+      if (sidebarNav) {
+        sidebarNav.addEventListener("click", function (e) {
+          if (e.target.closest("a")) {
+            closeSidebar();
+          }
+        });
+      }
     </script>
   </body>
 </html>

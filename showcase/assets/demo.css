@@ -240,3 +240,94 @@ body {
   font-family: monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
+
+/* ---- Mobile sidebar toggle (always defined, hidden on desktop) ---- */
+
+.sidebar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  color: inherit;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ---- Sidebar backdrop (always defined, shown only on mobile when open) ---- */
+
+.sidebar-backdrop {
+  display: none;
+}
+
+/* ---- Mobile styles (max-width: 767.98px) ---- */
+
+@media (max-width: 767.98px) {
+  /* Show toggle button */
+  .sidebar-toggle {
+    display: inline-flex;
+  }
+
+  /* Off-canvas sidebar */
+  .showcase-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: min(260px, 80vw);
+    z-index: 300;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    border-right: 1px solid var(--border-color);
+  }
+
+  body.sidebar-open .showcase-sidebar {
+    transform: translateX(0);
+  }
+
+  /* Backdrop */
+  body.sidebar-open .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 250;
+  }
+
+  /* Prevent background scroll when sidebar is open */
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  /* Header: auto height instead of fixed 54px */
+  .showcase-header {
+    height: auto;
+    min-height: var(--showcase-header-height);
+    padding: 0.5rem 1rem;
+  }
+
+  .showcase-header-inner {
+    row-gap: 0.25rem;
+  }
+
+  /* Compact controls */
+  .showcase-controls {
+    gap: 0.75rem;
+  }
+
+  .theme-switcher {
+    font-size: 0.8rem;
+  }
+
+  /* Reduce main content padding */
+  .showcase-main {
+    padding: 1rem;
+  }
+
+  .demo-section {
+    padding: 1rem;
+  }
+}
