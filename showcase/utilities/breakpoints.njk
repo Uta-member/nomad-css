@@ -1,0 +1,265 @@
+---
+title: Breakpoints
+layout: layout.njk
+---
+
+<section class="demo-section">
+  <h1>Breakpoints</h1>
+  <p>
+    nomad-css はモバイルファースト設計を採用しています。ブレークポイントはすべて
+    <code>min-width</code> 基準で定義されており、最も小さいスクリーン（xs）をベースとして記述し、
+    大きなスクリーン向けのスタイルをブレークポイント接尾辞で上書きするアプローチを取ります。
+  </p>
+
+  <!-- ブレークポイント一覧 -->
+  <div class="demo-row">
+    <div class="demo-label">ブレークポイント一覧</div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>名前</th>
+            <th>最小幅</th>
+            <th>説明</th>
+            <th>接尾辞例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>xs</code></td>
+            <td>0px</td>
+            <td>ベース（すべての幅に適用）</td>
+            <td>なし（例: <code>.d-flex</code>）</td>
+          </tr>
+          <tr>
+            <td><code>sm</code></td>
+            <td>576px</td>
+            <td>小型デバイス（大きなスマートフォンなど）</td>
+            <td><code>.d-sm-flex</code></td>
+          </tr>
+          <tr>
+            <td><code>md</code></td>
+            <td>768px</td>
+            <td>タブレット</td>
+            <td><code>.d-md-flex</code></td>
+          </tr>
+          <tr>
+            <td><code>lg</code></td>
+            <td>992px</td>
+            <td>小型デスクトップ</td>
+            <td><code>.d-lg-flex</code></td>
+          </tr>
+          <tr>
+            <td><code>xl</code></td>
+            <td>1200px</td>
+            <td>デスクトップ</td>
+            <td><code>.d-xl-flex</code></td>
+          </tr>
+          <tr>
+            <td><code>xxl</code></td>
+            <td>1400px</td>
+            <td>大型デスクトップ</td>
+            <td><code>.d-xxl-flex</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 現在のブレークポイント表示 -->
+  <div class="demo-row">
+    <div class="demo-label">現在のブレークポイント（ブラウザ幅を変えると切り替わります）</div>
+    {% demo %}
+<div class="d-flex gap-2 flex-wrap">
+  <span class="chip primary d-sm-none">xs</span>
+  <span class="chip primary d-none d-sm-inline-flex d-md-none">sm</span>
+  <span class="chip primary d-none d-md-inline-flex d-lg-none">md</span>
+  <span class="chip primary d-none d-lg-inline-flex d-xl-none">lg</span>
+  <span class="chip primary d-none d-xl-inline-flex d-xxl-none">xl</span>
+  <span class="chip primary d-none d-xxl-inline-flex">xxl</span>
+</div>
+    {% enddemo %}
+  </div>
+
+  <!-- 命名規則 -->
+  <div class="demo-row">
+    <div class="demo-label">命名規則</div>
+    <p>
+      レスポンシブ変種の命名はキーの直前にブレークポイント名を挿入します:
+    </p>
+    <ul>
+      <li><code>.d-flex</code> → <code>.d-md-flex</code>（md 以上で <code>display: flex</code>）</li>
+      <li><code>.flex-column</code> → <code>.flex-md-column</code>（md 以上で縦並び）</li>
+      <li><code>.mt-3</code> → <code>.mt-md-3</code>（md 以上でマージン上部）</li>
+      <li><code>.text-center</code> → <code>.text-md-center</code>（md 以上で中央揃え）</li>
+      <li><code>.fs-5</code> → <code>.fs-md-5</code>（md 以上でフォントサイズ）</li>
+    </ul>
+    <p>
+      xs（ベース）はブレークポイント接尾辞なしのクラスに対応します。
+      xs → sm → md → lg → xl → xxl の順に上書きされます（モバイルファースト）。
+    </p>
+  </div>
+
+  <!-- 命名規則ライブデモ -->
+  <div class="demo-row">
+    <div class="demo-label">デモ: スマートフォンで縦積み → md 以上で横並び</div>
+    {% demo %}
+<div class="d-flex flex-column flex-md-row gap-2 gap-md-4">
+  <div class="p-3 bg-primary-subtle border rounded-md">Item 1</div>
+  <div class="p-3 bg-success-subtle border rounded-md">Item 2</div>
+  <div class="p-3 bg-warning-subtle border rounded-md">Item 3</div>
+</div>
+    {% enddemo %}
+  </div>
+
+  <!-- レスポンシブ対応ユーティリティ一覧 -->
+  <div class="demo-row">
+    <div class="demo-label">レスポンシブ変種を持つユーティリティ</div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>種類</th>
+            <th>クラスパターン</th>
+            <th>キー例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Display</td>
+            <td><code>.d-{bp}-{key}</code></td>
+            <td><code>none</code> / <code>block</code> / <code>flex</code> / <code>inline-flex</code> / <code>grid</code> など</td>
+          </tr>
+          <tr>
+            <td>Flex Direction</td>
+            <td><code>.flex-{bp}-{key}</code></td>
+            <td><code>row</code> / <code>column</code> / <code>row-reverse</code> / <code>column-reverse</code></td>
+          </tr>
+          <tr>
+            <td>Flex Wrap</td>
+            <td><code>.flex-{bp}-{key}</code></td>
+            <td><code>wrap</code> / <code>nowrap</code> / <code>wrap-reverse</code></td>
+          </tr>
+          <tr>
+            <td>Flex Fill</td>
+            <td><code>.flex-{bp}-fill</code></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Justify Content</td>
+            <td><code>.justify-{bp}-{key}</code></td>
+            <td><code>start</code> / <code>end</code> / <code>center</code> / <code>between</code> / <code>around</code> / <code>evenly</code></td>
+          </tr>
+          <tr>
+            <td>Align Items</td>
+            <td><code>.align-items-{bp}-{key}</code></td>
+            <td><code>start</code> / <code>end</code> / <code>center</code> / <code>baseline</code> / <code>stretch</code></td>
+          </tr>
+          <tr>
+            <td>Align Self</td>
+            <td><code>.align-self-{bp}-{key}</code></td>
+            <td><code>start</code> / <code>end</code> / <code>center</code> / <code>baseline</code> / <code>stretch</code></td>
+          </tr>
+          <tr>
+            <td>Align Content</td>
+            <td><code>.align-content-{bp}-{key}</code></td>
+            <td><code>start</code> / <code>end</code> / <code>center</code> / <code>between</code> / <code>around</code> / <code>stretch</code></td>
+          </tr>
+          <tr>
+            <td>Margin</td>
+            <td><code>.m{side}-{bp}-{0..5}</code></td>
+            <td>side: （全方向）/ <code>t</code> / <code>r</code> / <code>b</code> / <code>l</code> / <code>x</code> / <code>y</code></td>
+          </tr>
+          <tr>
+            <td>Padding</td>
+            <td><code>.p{side}-{bp}-{0..5}</code></td>
+            <td>side: （全方向）/ <code>t</code> / <code>r</code> / <code>b</code> / <code>l</code> / <code>x</code> / <code>y</code></td>
+          </tr>
+          <tr>
+            <td>Gap</td>
+            <td><code>.gap{axis}-{bp}-{0..5}</code></td>
+            <td>axis: （全方向）/ <code>x</code> / <code>y</code></td>
+          </tr>
+          <tr>
+            <td>Text Align</td>
+            <td><code>.text-{bp}-{key}</code></td>
+            <td><code>start</code> / <code>end</code> / <code>center</code> / <code>justify</code></td>
+          </tr>
+          <tr>
+            <td>Font Size</td>
+            <td><code>.fs-{bp}-{key}</code></td>
+            <td>フォントサイズスケールのキー（例: <code>1</code>〜<code>6</code>）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- レスポンシブなテキスト -->
+  <div class="demo-row">
+    <div class="demo-label">レスポンシブなテキスト配置とフォントサイズ</div>
+    <p>
+      テキストの配置やフォントサイズもブレークポイントで切り替えられます。
+      例: <code>.text-start .text-md-center</code> は md 未満では左寄せ、md 以上で中央寄せになります。
+    </p>
+    {% demo %}
+<p class="text-start text-md-center fs-2 fs-md-5">
+  ウィンドウ幅を変えると配置とサイズが変わります
+</p>
+    {% enddemo %}
+  </div>
+
+  <!-- コンポーネントの自動適応 -->
+  <div class="demo-row">
+    <div class="demo-label">コンポーネントの自動適応</div>
+    <p>
+      以下のコンポーネントはブレークポイントに基づいて自動的にレイアウトを変更します。
+      また、クラスを使ってレスポンシブ挙動を手動で指定することもできます。
+    </p>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>コンポーネント</th>
+            <th>自動挙動</th>
+            <th>手動クラス</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="{{ '/components/dialog/' | url }}">Dialog</a></td>
+            <td>
+              sm 未満（576px 未満）で画面からはみ出さないよう最大幅・最大高さを自動拡大
+              （完全な全画面化は手動クラスで指定）
+            </td>
+            <td>
+              <code>.full-sm-down</code> / <code>.full-md-down</code> /
+              <code>.full-lg-down</code> / <code>.full-xl-down</code> /
+              <code>.full-xxl-down</code>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="{{ '/components/table/' | url }}">Table</a></td>
+            <td>sm 未満（576px 未満）でテーブルが自動的にコンパクト表示に切り替え</td>
+            <td>
+              <code>.table-responsive</code>（常に横スクロール）<br>
+              <code>.table-responsive-sm</code> / <code>-md</code> / <code>-lg</code> /
+              <code>-xl</code> / <code>-xxl</code>（各 bp 未満で横スクロール）
+            </td>
+          </tr>
+          <tr>
+            <td><a href="{{ '/components/pagination/' | url }}">Pagination</a></td>
+            <td>sm 未満（576px 未満）でページネーションが自動的にコンパクト表示に切り替え</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><a href="{{ '/components/breadcrumb/' | url }}">Breadcrumb</a></td>
+            <td>sm 未満（576px 未満）でパンくずリストが横スクロール可能に切り替え</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>

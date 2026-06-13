@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Semantic Colors -->
   <div class="demo-row">
     <div class="demo-label">Badge (Semantic Colors)</div>
+    {% demo %}
     <div
       style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center"
     >
@@ -20,21 +21,25 @@ layout: layout.njk
       <span class="badge danger">Danger</span>
       <span class="badge info">Info</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Sizes -->
   <div class="demo-row">
     <div class="demo-label">Badge Sizes</div>
+    {% demo %}
     <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap">
       <span class="badge primary sm">Small</span>
       <span class="badge primary">Default</span>
       <span class="badge primary lg">Large</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Dot Badge -->
   <div class="demo-row">
     <div class="demo-label">Badge Dot (.dot)</div>
+    {% demo %}
     <div
       style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap"
     >
@@ -45,11 +50,13 @@ layout: layout.njk
       <span class="badge danger dot"></span>
       <span class="badge info dot"></span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Overlay Badge -->
   <div class="demo-row">
     <div class="demo-label">Badge Overlay (.overlay)</div>
+    {% demo %}
     <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap">
       <div style="position: relative; display: inline-block">
         <button class="button filled primary">Messages</button>
@@ -60,5 +67,6 @@ layout: layout.njk
         <span class="badge danger dot overlay"></span>
       </div>
     </div>
+    {% enddemo %}
   </div>
 </section>

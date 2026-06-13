@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Input NotStyled -->
   <div class="demo-row">
     <div class="demo-label">Input (NotStyled)</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -19,11 +20,13 @@ layout: layout.njk
       <input type="text" placeholder="Disabled input" disabled />
       <input type="text" placeholder="Readonly input" readonly />
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Input Styled -->
   <div class="demo-row">
     <div class="demo-label">Input (.form-control)</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -36,11 +39,13 @@ layout: layout.njk
       />
       <input type="number" class="form-control" placeholder="Enter number" />
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Input States -->
   <div class="demo-row">
     <div class="demo-label">Input States</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -58,11 +63,13 @@ layout: layout.njk
         readonly
       />
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Input Sizes -->
   <div class="demo-row">
     <div class="demo-label">Input Sizes</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -70,11 +77,13 @@ layout: layout.njk
       <input type="text" class="form-control md" placeholder="Default input" />
       <input type="text" class="form-control lg" placeholder="Large input" />
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Input Variants -->
   <div class="demo-row">
     <div class="demo-label">Input Variants</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -94,11 +103,13 @@ layout: layout.njk
         placeholder="Underline variant"
       />
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Input Semantic Colors (Focus) -->
   <div class="demo-row">
     <div class="demo-label">Input Semantic Colors (focus to see)</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -208,11 +219,13 @@ layout: layout.njk
         placeholder="Info underline focus"
       />
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Textarea -->
   <div class="demo-row">
     <div class="demo-label">Textarea</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -223,5 +236,6 @@ layout: layout.njk
       ></textarea>
       <textarea class="form-control" rows="3" disabled>Disabled textarea</textarea>
     </div>
+    {% enddemo %}
   </div>
 </section>

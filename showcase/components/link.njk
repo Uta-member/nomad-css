@@ -9,17 +9,20 @@ layout: layout.njk
   <!-- テキストのみ -->
   <div class="demo-row">
     <div class="demo-label">Text only</div>
+    {% demo %}
     <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 360px">
       <a href="#" class="link-card">General</a>
       <a href="#" class="link-card active">Profile (active)</a>
       <a href="#" class="link-card">Security</a>
       <a href="#" class="link-card disabled">Billing (disabled)</a>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- trailing icon のみ -->
   <div class="demo-row">
     <div class="demo-label">With trailing icon</div>
+    {% demo %}
     <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 360px">
       <a href="#" class="link-card">
         <span class="link-card-content">General</span>
@@ -34,11 +37,13 @@ layout: layout.njk
         <span class="link-card-trailing">›</span>
       </a>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- leading + content + trailing -->
   <div class="demo-row">
     <div class="demo-label">Leading icon + Content + Trailing icon</div>
+    {% demo %}
     <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 360px">
       <a href="#" class="link-card">
         <span class="link-card-leading">⚙</span>
@@ -56,11 +61,13 @@ layout: layout.njk
         <span class="link-card-trailing">›</span>
       </a>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- leading + content（説明付き）+ trailing -->
   <div class="demo-row">
     <div class="demo-label">With description text</div>
+    {% demo %}
     <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px">
       <a href="#" class="link-card">
         <span class="link-card-leading">⚙</span>
@@ -95,11 +102,13 @@ layout: layout.njk
         <span class="link-card-trailing">›</span>
       </a>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- content（説明付き）+ trailing（leading なし） -->
   <div class="demo-row">
     <div class="demo-label">Content + Trailing (no leading icon)</div>
+    {% demo %}
     <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px">
       <a href="#" class="link-card">
         <span class="link-card-content">
@@ -116,5 +125,6 @@ layout: layout.njk
         <span class="link-card-trailing">›</span>
       </a>
     </div>
+    {% enddemo %}
   </div>
 </section>

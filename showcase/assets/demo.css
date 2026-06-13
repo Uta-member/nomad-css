@@ -331,3 +331,51 @@ body {
     padding: 1rem;
   }
 }
+
+/* ---- Demo live + code block ---- */
+
+.demo-code {
+  margin-top: 0.25rem;
+}
+
+.demo-code summary {
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: var(--text-color-subtle);
+  user-select: none;
+  width: fit-content;
+}
+
+.demo-code-wrap {
+  position: relative;
+  margin-top: 0.25rem;
+}
+
+.demo-code pre {
+  margin: 0;
+  padding: 0.75rem;
+  padding-right: 4rem;
+  background: var(--surface-color-sunken);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.demo-code code {
+  font-family: Consolas, Menlo, monospace;
+}
+
+.demo-copy {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  background: var(--surface-color-overlay);
+  color: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}

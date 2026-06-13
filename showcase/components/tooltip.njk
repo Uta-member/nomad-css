@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Placement -->
   <div class="demo-row">
     <div class="demo-label">Tooltip Placement (hover to see)</div>
+    {% demo %}
     <div style="display: flex; gap: 3rem; align-items: center; padding: 2rem; overflow-x: auto">
       <span class="tooltip" data-tooltip="Top tooltip (default)">
         <button class="button outlined primary">Top (default)</button>
@@ -23,11 +24,13 @@ layout: layout.njk
         <button class="button outlined primary">Left</button>
       </span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Tooltip on Text -->
   <div class="demo-row">
     <div class="demo-label">Tooltip on Text</div>
+    {% demo %}
     <p>
       Hover over
       <span class="tooltip" data-tooltip="This is an abbreviation explanation">
@@ -42,11 +45,13 @@ layout: layout.njk
       </span>
       to see tooltips.
     </p>
+    {% enddemo %}
   </div>
 
   <!-- Long Tooltip -->
   <div class="demo-row">
     <div class="demo-label">Long Tooltip Text</div>
+    {% demo %}
     <div style="padding-top: 3rem">
       <span
         class="tooltip"
@@ -55,5 +60,6 @@ layout: layout.njk
         <button class="button tonal info">Hover for long tooltip</button>
       </span>
     </div>
+    {% enddemo %}
   </div>
 </section>

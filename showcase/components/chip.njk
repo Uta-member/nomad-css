@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Semantic Colors -->
   <div class="demo-row">
     <div class="demo-label">Chip (Semantic Colors)</div>
+    {% demo %}
     <div
       style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
     >
@@ -20,11 +21,13 @@ layout: layout.njk
       <span class="chip danger">Danger</span>
       <span class="chip info">Info</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Variants -->
   <div class="demo-row">
     <div class="demo-label">Chip Variants</div>
+    {% demo %}
     <div
       style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
     >
@@ -32,21 +35,25 @@ layout: layout.njk
       <span class="chip primary outlined">Outlined</span>
       <span class="chip primary tonal">Tonal</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Sizes -->
   <div class="demo-row">
     <div class="demo-label">Chip Sizes</div>
+    {% demo %}
     <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap">
       <span class="chip primary sm">Small</span>
       <span class="chip primary">Default</span>
       <span class="chip primary lg">Large</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- With Icon -->
   <div class="demo-row">
     <div class="demo-label">Chip with Icon</div>
+    {% demo %}
     <div
       style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
     >
@@ -63,11 +70,13 @@ layout: layout.njk
         Alert
       </span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- With Dismiss -->
   <div class="demo-row">
     <div class="demo-label">Chip with Dismiss (.chip-dismiss)</div>
+    {% demo %}
     <div
       style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
     >
@@ -84,6 +93,7 @@ layout: layout.njk
         <button class="chip-dismiss" aria-label="Remove">✕</button>
       </span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Interactive (button element) -->
@@ -91,6 +101,7 @@ layout: layout.njk
     <div class="demo-label">
       Interactive Chip (button element — hover/active visible)
     </div>
+    {% demo %}
     <div
       style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
     >
@@ -102,11 +113,13 @@ layout: layout.njk
         Success
       </button>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Disabled -->
   <div class="demo-row">
     <div class="demo-label">Chip Disabled</div>
+    {% demo %}
     <div
       style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center"
     >
@@ -115,5 +128,6 @@ layout: layout.njk
       <button class="chip primary tonal" disabled>Tonal Disabled</button>
       <span class="chip primary" aria-disabled="true">Disabled (span)</span>
     </div>
+    {% enddemo %}
   </div>
 </section>

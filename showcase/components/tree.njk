@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Interactive file tree (details/summary) -->
   <div class="demo-row">
     <div class="demo-label">Interactive tree (<code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code>)</div>
+    {% demo %}
     <ul class="tree" style="max-width: 320px;">
       <li>
         <details open>
@@ -58,11 +59,13 @@ layout: layout.njk
       <li>package.json</li>
       <li>README.md</li>
     </ul>
+    {% enddemo %}
   </div>
 
   <!-- With .tree-row and icons -->
   <div class="demo-row">
     <div class="demo-label">Rich rows with <code>.tree-row</code> / <code>.tree-icon</code> / <code>.tree-badge</code></div>
+    {% demo %}
     <ul class="tree" style="max-width: 320px;">
       <li>
         <details open>
@@ -112,11 +115,13 @@ layout: layout.njk
         </details>
       </li>
     </ul>
+    {% enddemo %}
   </div>
 
   <!-- Navigation tree with active state -->
   <div class="demo-row">
     <div class="demo-label">Navigation tree with active state</div>
+    {% demo %}
     <nav style="max-width: 240px;">
       <ul class="tree">
         <li class="active">
@@ -174,11 +179,13 @@ layout: layout.njk
         </li>
       </ul>
     </nav>
+    {% enddemo %}
   </div>
 
   <!-- Compact variant -->
   <div class="demo-row">
     <div class="demo-label">Compact (<code>.compact</code>) — dense data view</div>
+    {% demo %}
     <ul class="tree compact" style="max-width: 280px; font-size: 0.875rem;">
       <li>
         <details open>
@@ -224,11 +231,13 @@ layout: layout.njk
         </details>
       </li>
     </ul>
+    {% enddemo %}
   </div>
 
   <!-- Static hierarchy (no toggle) -->
   <div class="demo-row">
     <div class="demo-label">Static hierarchy (no toggle) — always-visible nesting</div>
+    {% demo %}
     <ul class="tree no-lines" style="max-width: 280px;">
       <li>
         Design System
@@ -252,11 +261,13 @@ layout: layout.njk
         </ul>
       </li>
     </ul>
+    {% enddemo %}
   </div>
 
   <!-- No guide lines -->
   <div class="demo-row">
     <div class="demo-label">No guide lines (<code>.no-lines</code>)</div>
+    {% demo %}
     <ul class="tree no-lines" style="max-width: 280px;">
       <li>
         <details open>
@@ -291,6 +302,7 @@ layout: layout.njk
         </details>
       </li>
     </ul>
+    {% enddemo %}
   </div>
 
 </section>

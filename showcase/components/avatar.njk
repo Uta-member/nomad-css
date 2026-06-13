@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Basic Avatar -->
   <div class="demo-row">
     <div class="demo-label">Avatar (Text Initials)</div>
+    {% demo %}
     <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
       <span class="avatar primary">AB</span>
       <span class="avatar secondary">CD</span>
@@ -17,31 +18,37 @@ layout: layout.njk
       <span class="avatar danger">IJ</span>
       <span class="avatar info">KL</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Avatar Sizes -->
   <div class="demo-row">
     <div class="demo-label">Avatar Sizes</div>
+    {% demo %}
     <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
       <span class="avatar primary sm">AB</span>
       <span class="avatar primary">AB</span>
       <span class="avatar primary lg">AB</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Avatar Shapes -->
   <div class="demo-row">
     <div class="demo-label">Avatar Shapes</div>
+    {% demo %}
     <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
       <span class="avatar primary circle">AB</span>
       <span class="avatar primary rounded">AB</span>
       <span class="avatar primary square">AB</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Avatar with Image -->
   <div class="demo-row">
     <div class="demo-label">Avatar with Image</div>
+    {% demo %}
     <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
       <span class="avatar">
         <img src="https://i.pravatar.cc/100?img=1" alt="User 1" />
@@ -53,5 +60,6 @@ layout: layout.njk
         <img src="https://i.pravatar.cc/100?img=3" alt="User 3" />
       </span>
     </div>
+    {% enddemo %}
   </div>
 </section>

@@ -32,6 +32,34 @@ module.exports = function (eleventyConfig) {
   // showcase/assets を _site/assets/ にコピー
   eleventyConfig.addPassthroughCopy({ "showcase/assets": "assets" });
 
+  // {% demo %}...{% enddemo %}: デモをライブ表示＋コピー可能なコード表示で出力
+  const escapeHtml = (s) =>
+    s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+  eleventyConfig.addPairedShortcode("demo", function (content) {
+    const lines = content
+      .replace(/^\r?\n+/, "")
+      .replace(/\s+$/, "")
+      .split("\n");
+    const indents = lines
+      .filter((l) => l.trim())
+      .map((l) => l.match(/^[ \t]*/)[0].length);
+    const min = indents.length ? Math.min(...indents) : 0;
+    const code = lines.map((l) => l.slice(min)).join("\n");
+    return [
+      '<div class="demo-live">',
+      content,
+      "</div>",
+      '<details class="demo-code">',
+      "<summary>HTML</summary>",
+      '<div class="demo-code-wrap">',
+      '<button type="button" class="demo-copy">Copy</button>',
+      "<pre><code>" + escapeHtml(code) + "</code></pre>",
+      "</div>",
+      "</details>",
+    ].join("\n");
+  });
+
   return {
     dir: {
       input: "showcase",

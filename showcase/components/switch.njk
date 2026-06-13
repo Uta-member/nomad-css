@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Basic Switch -->
   <div class="demo-row">
     <div class="demo-label">Basic Switch (.switch)</div>
+    {% demo %}
     <div class="d-flex flex-column align-items-start" style="gap: 0.75rem">
       <label class="switch">
         <input type="checkbox" class="switch-input" />
@@ -31,11 +32,13 @@ layout: layout.njk
         <span class="switch-label">Checked Disabled</span>
       </label>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Semantic Colors -->
   <div class="demo-row">
     <div class="demo-label">Switch Semantic Colors</div>
+    {% demo %}
     <div class="d-flex flex-row flex-wrap" style="gap: 1rem">
       <label class="switch primary">
         <input type="checkbox" class="switch-input" checked />
@@ -68,11 +71,13 @@ layout: layout.njk
         <span class="switch-label">Info</span>
       </label>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Sizes -->
   <div class="demo-row">
     <div class="demo-label">Switch Sizes</div>
+    {% demo %}
     <div class="d-flex flex-row align-items-center flex-wrap"
       style="gap: 1.5rem;"
     >
@@ -92,5 +97,6 @@ layout: layout.njk
         <span class="switch-label">Large</span>
       </label>
     </div>
+    {% enddemo %}
   </div>
 </section>

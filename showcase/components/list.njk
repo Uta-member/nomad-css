@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Plain List -->
   <div class="demo-row">
     <div class="demo-label">Plain List (.list)</div>
+    {% demo %}
     <ul class="list" style="max-width: 300px">
       <li class="list-item">List Item 1</li>
       <li class="list-item">List Item 2</li>
@@ -16,11 +17,13 @@ layout: layout.njk
       <li class="list-item">List Item 4</li>
       <li class="list-item disabled">Disabled Item</li>
     </ul>
+    {% enddemo %}
   </div>
 
   <!-- List Group -->
   <div class="demo-row">
     <div class="demo-label">List Group (.list-group)</div>
+    {% demo %}
     <ul class="list-group shadow-3" style="max-width: 300px">
       <li class="list-group-item">Group Item 1</li>
       <li class="list-group-item">Group Item 2</li>
@@ -28,33 +31,39 @@ layout: layout.njk
       <li class="list-group-item">Group Item 4</li>
       <li class="list-group-item disabled">Disabled Item</li>
     </ul>
+    {% enddemo %}
   </div>
 
   <!-- List Group with Links -->
   <div class="demo-row">
     <div class="demo-label">List Group with Links</div>
+    {% demo %}
     <div class="list-group shadow-3" style="max-width: 300px">
       <a href="#" class="list-group-item">Clickable Item 1</a>
       <a href="#" class="list-group-item active">Active Clickable</a>
       <a href="#" class="list-group-item">Clickable Item 3</a>
       <a href="#" class="list-group-item disabled">Disabled</a>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Link Group (navigation/disclosure style) -->
   <div class="demo-row">
     <div class="demo-label">Link Group (.link)</div>
+    {% demo %}
     <div class="list-group shadow-3" style="max-width: 300px">
       <a href="#" class="list-group-item link">General</a>
       <a href="#" class="list-group-item link active">Profile</a>
       <a href="#" class="list-group-item link">Security</a>
       <a href="#" class="list-group-item link disabled">Billing (Disabled)</a>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Link Group with Icon and Description -->
   <div class="demo-row">
     <div class="demo-label">Link Group with Icon &amp; Description</div>
+    {% demo %}
     <div class="list-group shadow-3" style="max-width: 360px">
       <a href="#" class="list-group-item link">
         <span class="list-item-icon">⚙</span>
@@ -85,5 +94,6 @@ layout: layout.njk
         </span>
       </a>
     </div>
+    {% enddemo %}
   </div>
 </section>

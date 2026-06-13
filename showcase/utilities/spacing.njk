@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Primitive Scale: CSS Variables -->
   <div class="demo-row">
     <div class="demo-label">Primitive Scale (--spacing-0 – --spacing-5)</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: center">
       {% for i in [0, 1, 2, 3, 4, 5] %}
         <div style="display: flex; flex-direction: column; align-items: center; gap: 4px">
@@ -17,11 +18,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Semantic Spacing -->
   <div class="demo-row">
     <div class="demo-label">Semantic Spacing (--spacing-semantic-*) — .gap-spacing-* and .spacing-*</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       {% for size in ["xs", "sm", "md", "lg", "xl"] %}
         <div>
@@ -34,11 +37,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Margin -->
   <div class="demo-row">
     <div class="demo-label">Margin (.m-*)</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
       {% for i in [0, 1, 2, 3, 4, 5] %}
         <div class="spacing-wrap">
@@ -46,11 +51,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Margin X / Y -->
   <div class="demo-row">
     <div class="demo-label">Margin X / Y</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
       {% for i in [1, 2, 3, 4, 5] %}
         <div class="spacing-wrap">
@@ -63,11 +70,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Margin Sides -->
   <div class="demo-row">
     <div class="demo-label">Margin Sides (level 3)</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
       <div class="spacing-wrap">
         <div class="mt-3 demo-box spacing-inner">.mt-3</div>
@@ -82,11 +91,13 @@ layout: layout.njk
         <div class="ml-3 demo-box spacing-inner">.ml-3</div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Padding -->
   <div class="demo-row">
     <div class="demo-label">Padding (.p-*)</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
       {% for i in [0, 1, 2, 3, 4, 5] %}
         <div class="spacing-pad-box p-{{ i }}">
@@ -94,11 +105,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Padding X / Y -->
   <div class="demo-row">
     <div class="demo-label">Padding X / Y</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
       {% for i in [1, 2, 3, 4, 5] %}
         <div class="spacing-pad-box px-{{ i }}">
@@ -111,22 +124,26 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Padding Sides -->
   <div class="demo-row">
     <div class="demo-label">Padding Sides (level 3)</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: flex-start">
       <div class="spacing-pad-box pt-3"><span>.pt-3</span></div>
       <div class="spacing-pad-box pr-3"><span>.pr-3</span></div>
       <div class="spacing-pad-box pb-3"><span>.pb-3</span></div>
       <div class="spacing-pad-box pl-3"><span>.pl-3</span></div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Gap -->
   <div class="demo-row">
     <div class="demo-label">Gap (.gap-*)</div>
+    {% demo %}
     <div class="d-flex flex-column" style="gap: 0.75rem">
       {% for i in [0, 1, 2, 3, 4, 5] %}
         <div>
@@ -139,11 +156,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Gap X / Y -->
   <div class="demo-row">
     <div class="demo-label">Gap X / Y</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 2rem; align-items: flex-start">
       <div>
         <p class="small">.gapx-3 (column-gap)</p>
@@ -162,6 +181,7 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
 </section>

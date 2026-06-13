@@ -13,6 +13,7 @@ layout: layout.njk
   <!-- Semantic Levels -->
   <div class="demo-row">
     <h4>Semantic Levels</h4>
+    {% demo %}
     <div style="overflow-x: auto">
     <div class="d-flex" style="gap: 20px; min-width: max-content">
       {% for s in semanticNames %}
@@ -27,11 +28,13 @@ layout: layout.njk
       {% endfor %}
     </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Named Scales -->
   <div class="demo-row">
     <h4>Named Scales (1-12)</h4>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 12px">
       {% for f in familyNames %}
         <div style="width: 100px">
@@ -42,11 +45,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Neutral Scales -->
   <div class="demo-row">
     <h4>Neutral Scales (1-12)</h4>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 12px">
       {% for f in neutralFamilyNames %}
         <div style="width: 100px">
@@ -57,6 +62,7 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   {# ============================================ #}
@@ -68,6 +74,7 @@ layout: layout.njk
   {# --- Surface & Body Text --- #}
   <div class="demo-row">
     <h4>Surface &amp; Body Text</h4>
+    {% demo %}
     <div style="margin-bottom: 0.75rem">
       <p class="demo-label">bg-surface-*</p>
       <div class="d-flex flex-wrap" style="gap: 4px">
@@ -87,11 +94,13 @@ layout: layout.njk
         <span class="text-body-strong">text-body-strong</span>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   {# --- Semantic bg/text named levels --- #}
   <div class="demo-row">
     <h4>bg-{semantic} — Named Levels</h4>
+    {% demo %}
     <div style="overflow-x: auto">
     <div class="d-flex" style="gap: 16px; min-width: max-content">
       {% for s in semanticNames %}
@@ -106,10 +115,12 @@ layout: layout.njk
       {% endfor %}
     </div>
     </div>
+    {% enddemo %}
   </div>
 
   <div class="demo-row">
     <h4>text-{semantic} — Named Levels</h4>
+    {% demo %}
     <div style="overflow-x: auto">
     <div class="d-flex" style="gap: 16px; min-width: max-content">
       {% for s in semanticNames %}
@@ -126,11 +137,13 @@ layout: layout.njk
       {% endfor %}
     </div>
     </div>
+    {% enddemo %}
   </div>
 
   {# --- Family bg named levels --- #}
   <div class="demo-row">
     <h4>bg-{family} — Named Levels</h4>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 16px">
       {% for h in familyNames %}
         <div style="min-width: 110px">
@@ -143,11 +156,13 @@ layout: layout.njk
         </div>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   {# --- Numeric 1-12 (blue as example) --- #}
   <div class="demo-row">
     <h4>bg-{family}-{n} / text-{family}-{n} — Numeric Steps (blue)</h4>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 24px">
       <div>
         <div class="demo-label">bg-blue-{n}</div>
@@ -162,5 +177,6 @@ layout: layout.njk
         {% endfor %}
       </div>
     </div>
+    {% enddemo %}
   </div>
 </section>

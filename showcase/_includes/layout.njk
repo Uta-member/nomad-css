@@ -141,6 +141,32 @@
           }
         });
       }
+
+      // Copy button (event delegation)
+      document.addEventListener("click", function (e) {
+        var btn = e.target.closest(".demo-copy");
+        if (!btn) return;
+        var codeEl = btn.parentElement.querySelector("code");
+        if (!codeEl) return;
+        var text = codeEl.textContent;
+        function done() {
+          btn.textContent = "Copied!";
+          setTimeout(function () {
+            btn.textContent = "Copy";
+          }, 1200);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done);
+        } else {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          done();
+        }
+      });
     </script>
   </body>
 </html>

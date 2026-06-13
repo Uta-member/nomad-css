@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Checkbox NotStyled -->
   <div class="demo-row">
     <div class="demo-label">Checkbox (NotStyled)</div>
+    {% demo %}
     <div style="display: flex; gap: 2rem; flex-wrap: wrap">
       <label><input type="checkbox" /> Unchecked</label>
       <label><input type="checkbox" checked /> Checked</label>
@@ -29,6 +30,7 @@ layout: layout.njk
         Indeterminate Disabled</label
       >
     </div>
+    {% enddemo %}
     <script>
       document.getElementById("not-styled-indeterminate").indeterminate = true;
       document.getElementById(
@@ -40,6 +42,7 @@ layout: layout.njk
   <!-- Checkbox Styled -->
   <div class="demo-row">
     <div class="demo-label">Checkbox (.checkbox)</div>
+    {% demo %}
     <div style="display: flex; gap: 2rem; flex-wrap: wrap">
       <label class="form-check"
         ><input type="checkbox" class="checkbox" /> Unchecked</label
@@ -73,6 +76,7 @@ layout: layout.njk
         Indeterminate Disabled</label
       >
     </div>
+    {% enddemo %}
     <script>
       document.getElementById("styled-indeterminate").indeterminate = true;
       document.getElementById(
@@ -84,6 +88,7 @@ layout: layout.njk
   <!-- Checkbox Semantic Colors -->
   <div class="demo-row">
     <div class="demo-label">Checkbox Semantic Colors</div>
+    {% demo %}
     <div style="display: flex; gap: 2rem; flex-wrap: wrap">
       <label
         ><input type="checkbox" class="checkbox primary" checked />
@@ -114,11 +119,13 @@ layout: layout.njk
         Info</label
       >
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Checkbox Sizes -->
   <div class="demo-row">
     <div class="demo-label">Checkbox Sizes</div>
+    {% demo %}
     <div style="display: flex; gap: 2rem; flex-wrap: wrap">
       <label
         ><input type="checkbox" class="checkbox sm" checked /> Small</label
@@ -130,6 +137,7 @@ layout: layout.njk
         ><input type="checkbox" class="checkbox lg" checked /> Large</label
       >
     </div>
+    {% enddemo %}
   </div>
 
 </section>

@@ -9,28 +9,33 @@ layout: layout.njk
   <!-- Headings -->
   <div class="demo-row">
     <div class="demo-label">Heading Elements (h1-h6) NotStyled</div>
+    {% demo %}
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
     <h4>Heading 4</h4>
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
+    {% enddemo %}
   </div>
 
   <!-- Heading Classes -->
   <div class="demo-row">
     <div class="demo-label">Heading Classes (.h1-.h6)</div>
+    {% demo %}
     <p class="h1">Class .h1</p>
     <p class="h2">Class .h2</p>
     <p class="h3">Class .h3</p>
     <p class="h4">Class .h4</p>
     <p class="h5">Class .h5</p>
     <p class="h6">Class .h6</p>
+    {% enddemo %}
   </div>
 
   <!-- Semantic Font Size -->
   <div class="demo-row">
     <div class="demo-label">Semantic Font Size (.fs-semantic-*) — maps to --fs-semantic-*</div>
+    {% demo %}
     <p class="fs-semantic-xs">.fs-semantic-xs (--font-size-2 = 0.5rem)</p>
     <p class="fs-semantic-sm">.fs-semantic-sm (--font-size-4 = 0.825rem)</p>
     <p class="fs-semantic-md">.fs-semantic-md (--font-size-5 = 1rem, body default)</p>
@@ -38,31 +43,37 @@ layout: layout.njk
     <p class="fs-semantic-xl">.fs-semantic-xl (--font-size-7 = 1.5rem)</p>
     <p class="fs-semantic-2xl">.fs-semantic-2xl (--font-size-9 = 2rem)</p>
     <p class="fs-semantic-3xl">.fs-semantic-3xl (--font-size-10 = 2.5rem)</p>
+    {% enddemo %}
   </div>
 
   <!-- Primitive Font Size Scale -->
   <div class="demo-row">
     <div class="demo-label">Primitive Font Size Scale (.fs-0 – .fs-10) — maps to --font-size-*</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 0.5rem; align-items: baseline">
       {% for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] %}
         <span class="fs-{{ i }}">.fs-{{ i }}</span>
       {% endfor %}
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Semantic Font Weight -->
   <div class="demo-row">
     <div class="demo-label">Semantic Font Weight (.fw-semantic-*) — maps to --fw-semantic-*</div>
+    {% demo %}
     <p class="fw-semantic-light">.fw-semantic-light (300)</p>
     <p class="fw-semantic-regular">.fw-semantic-regular (400)</p>
     <p class="fw-semantic-medium">.fw-semantic-medium (500)</p>
     <p class="fw-semantic-semibold">.fw-semantic-semibold (600)</p>
     <p class="fw-semantic-bold">.fw-semantic-bold (700)</p>
+    {% enddemo %}
   </div>
 
   <!-- Text Alignment -->
   <div class="demo-row">
     <div class="demo-label">Text Alignment</div>
+    {% demo %}
     <p class="text-start demo-box">.text-start - Left aligned text</p>
     <p class="text-center demo-box">.text-center - Center aligned text</p>
     <p class="text-end demo-box">.text-end - Right aligned text</p>
@@ -70,34 +81,42 @@ layout: layout.njk
       .text-justify - Justified text. Lorem ipsum dolor sit amet, consectetur
       adipiscing elit.
     </p>
+    {% enddemo %}
   </div>
 
   <!-- Text Transform -->
   <div class="demo-row">
     <div class="demo-label">Text Transform</div>
+    {% demo %}
     <p class="text-lowercase">.text-lowercase - LOWERCASED TEXT</p>
     <p class="text-uppercase">.text-uppercase - uppercased text</p>
     <p class="text-capitalize">.text-capitalize - capitalized text example</p>
+    {% enddemo %}
   </div>
 
   <!-- Font Style -->
   <div class="demo-row">
     <div class="demo-label">Font Style</div>
+    {% demo %}
     <p class="fst-italic">.fst-italic - Italic text</p>
     <p class="fst-normal">.fst-normal - Normal text</p>
+    {% enddemo %}
   </div>
 
   <!-- Text Decoration -->
   <div class="demo-row">
     <div class="demo-label">Text Decoration</div>
+    {% demo %}
     <p class="text-decoration-underline">.text-decoration-underline</p>
     <p class="text-decoration-line-through">.text-decoration-line-through</p>
     <a href="#" class="text-decoration-none">.text-decoration-none (link)</a>
+    {% enddemo %}
   </div>
 
   <!-- Text Wrap -->
   <div class="demo-row">
     <div class="demo-label">Text Wrap &amp; Overflow</div>
+    {% demo %}
     <p
       class="text-wrap-nowrap demo-box"
       style="width: 200px; overflow: hidden"
@@ -107,5 +126,6 @@ layout: layout.njk
     <p class="text-truncate demo-box" style="width: 200px">
       .text-truncate - This text will be truncated with ellipsis
     </p>
+    {% enddemo %}
   </div>
 </section>

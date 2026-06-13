@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Border Sides -->
   <div class="demo-row">
     <div class="demo-label">Border</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <span class="border demo-box">.border</span>
       <span class="border-top demo-box">.border-top</span>
@@ -16,11 +17,13 @@ layout: layout.njk
       <span class="border-bottom demo-box">.border-bottom</span>
       <span class="border-start demo-box">.border-start</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Border with Semantic Colors -->
   <div class="demo-row">
     <div class="demo-label">Border with Semantic Colors</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <span class="border palette primary demo-box"
         >.border.palette.primary</span
@@ -37,11 +40,13 @@ layout: layout.njk
       <span class="border palette danger demo-box">.border.palette.danger</span>
       <span class="border palette info demo-box">.border.palette.info</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Border Width -->
   <div class="demo-row">
     <div class="demo-label">Border Width</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <span class="border border-1 demo-box">.border-1</span>
       <span class="border border-2 demo-box">.border-2</span>
@@ -49,11 +54,13 @@ layout: layout.njk
       <span class="border border-4 demo-box">.border-4</span>
       <span class="border border-5 demo-box">.border-5</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Border Radius -->
   <div class="demo-row">
     <div class="demo-label">Border Radius</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <span class="border rounded-0 demo-box">.rounded-0</span>
       <span class="border rounded-1 demo-box">.rounded-1</span>
@@ -62,22 +69,26 @@ layout: layout.njk
       <span class="border rounded-4 demo-box">.rounded-4</span>
       <span class="border rounded-5 demo-box">.rounded-5</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Semantic Border Radius -->
   <div class="demo-row">
     <div class="demo-label">Semantic Border Radius (.rounded-sm/md/lg/xl) — maps to --radius-semantic-*</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <span class="border rounded-sm demo-box">.rounded-sm (--border-radius-1 = 4px)</span>
       <span class="border rounded-md demo-box">.rounded-md (--border-radius-2 = 8px)</span>
       <span class="border rounded-lg demo-box">.rounded-lg (--border-radius-3 = 12px)</span>
       <span class="border rounded-xl demo-box">.rounded-xl (--border-radius-4 = 16px)</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Special Border Radius -->
   <div class="demo-row">
     <div class="demo-label">Special Border Radius</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <span class="border rounded demo-box">.rounded</span>
       <span
@@ -95,11 +106,13 @@ layout: layout.njk
         >.rounded-pill</span
       >
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Directional Border Radius -->
   <div class="demo-row">
     <div class="demo-label">Directional Border Radius</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <span class="border rounded-5 rounded-bottom-0 demo-box"
         >.rounded-bottom-0</span
@@ -114,5 +127,6 @@ layout: layout.njk
         >.rounded-end-0</span
       >
     </div>
+    {% enddemo %}
   </div>
 </section>

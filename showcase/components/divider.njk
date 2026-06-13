@@ -9,21 +9,26 @@ layout: layout.njk
   <!-- Horizontal Divider -->
   <div class="demo-row">
     <div class="demo-label">Horizontal Divider (hr.divider)</div>
+    {% demo %}
     <p>Content above</p>
     <hr class="divider" />
     <p>Content below</p>
+    {% enddemo %}
   </div>
 
   <!-- Text Divider -->
   <div class="demo-row">
     <div class="demo-label">Text Divider (div.divider)</div>
+    {% demo %}
     <div class="divider">Section Title</div>
     <div class="divider">OR</div>
+    {% enddemo %}
   </div>
 
   <!-- Vertical Divider -->
   <div class="demo-row">
     <div class="demo-label">Vertical Divider (span.divider.vertical)</div>
+    {% demo %}
     <div style="display: flex; align-items: center; overflow-x: auto">
       <span>Left Content</span>
       <span class="divider vertical"></span>
@@ -31,5 +36,6 @@ layout: layout.njk
       <span class="divider vertical"></span>
       <span>Right Content</span>
     </div>
+    {% enddemo %}
   </div>
 </section>

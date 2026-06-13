@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Select NotStyled -->
   <div class="demo-row">
     <div class="demo-label">Select (NotStyled)</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -22,11 +23,13 @@ layout: layout.njk
         <option>Disabled select</option>
       </select>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Select Basic -->
   <div class="demo-row">
     <div class="demo-label">Select (.select)</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -40,11 +43,13 @@ layout: layout.njk
         <option>Disabled select</option>
       </select>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Select with Optgroup -->
   <div class="demo-row">
     <div class="demo-label">Select with Optgroup</div>
+    {% demo %}
     <div style="max-width: 400px">
       <select class="select">
         <option value="">Select a fruit or vegetable</option>
@@ -60,11 +65,13 @@ layout: layout.njk
         </optgroup>
       </select>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Select Sizes -->
   <div class="demo-row">
     <div class="demo-label">Select Sizes</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -81,11 +88,13 @@ layout: layout.njk
         <option value="1">Option 1</option>
       </select>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Select Variants -->
   <div class="demo-row">
     <div class="demo-label">Select Variants</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -102,11 +111,13 @@ layout: layout.njk
         <option value="1">Option 1</option>
       </select>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Select Semantic Colors -->
   <div class="demo-row">
     <div class="demo-label">Select Semantic Colors (focus to see)</div>
+    {% demo %}
     <div
       style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px"
     >
@@ -139,11 +150,13 @@ layout: layout.njk
         <option value="1">Option 1</option>
       </select>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Multiple Select -->
   <div class="demo-row">
     <div class="demo-label">Multiple Select</div>
+    {% demo %}
     <div style="max-width: 400px">
       <select class="select" multiple size="5">
         <option value="1">Option 1</option>
@@ -157,5 +170,6 @@ layout: layout.njk
         Ctrl+クリックで複数選択できます
       </p>
     </div>
+    {% enddemo %}
   </div>
 </section>

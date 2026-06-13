@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Basic Card -->
   <div class="demo-row">
     <div class="demo-label">Basic Card (.card)</div>
+    {% demo %}
     <div style="max-width: 320px">
       <div class="card">
         <div class="card-body">
@@ -16,11 +17,13 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Card with Header and Footer -->
   <div class="demo-row">
     <div class="demo-label">Card with Header &amp; Footer</div>
+    {% demo %}
     <div style="max-width: 320px">
       <div class="card">
         <div class="card-header">Card Header</div>
@@ -33,11 +36,13 @@ layout: layout.njk
         <div class="card-footer">Card Footer</div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Card with Image -->
   <div class="demo-row">
     <div class="demo-label">Card with Image (.card-img)</div>
+    {% demo %}
     <div style="max-width: 320px">
       <div class="card">
         <img
@@ -52,11 +57,13 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Multiple Cards -->
   <div class="demo-row">
     <div class="demo-label">Multiple Cards</div>
+    {% demo %}
     <div style="display: flex; gap: 1rem; flex-wrap: wrap">
       <div class="card" style="width: 200px">
         <div class="card-header">Card 1</div>
@@ -71,11 +78,13 @@ layout: layout.njk
         <div class="card-body">Content for card 3.</div>
       </div>
     </div>
+    {% enddemo %}
   </div>
-  
+
   <!-- Variant -->
   <div class="demo-row">
     <div class="demo-label">Elevated</div>
+    {% demo %}
     <div style="display: flex; gap: 1rem; flex-wrap: wrap">
       <div class="card shadow-0" style="width: 200px">
         <div class="card-body">.shadow-0</div>
@@ -96,5 +105,6 @@ layout: layout.njk
         <div class="card-body">.shadow-5</div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 </section>

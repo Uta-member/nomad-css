@@ -14,6 +14,7 @@ layout: layout.njk
   <!-- Basic -->
   <div class="demo-row">
     <div class="demo-label">Basic Dialog</div>
+    {% demo %}
     <button class="button filled" onclick="document.getElementById('dialog-basic').showModal()">
       Open Dialog
     </button>
@@ -31,11 +32,13 @@ layout: layout.njk
         <button class="button filled" onclick="document.getElementById('dialog-basic').close()">OK</button>
       </div>
     </dialog>
+    {% enddemo %}
   </div>
 
   <!-- Small -->
   <div class="demo-row">
     <div class="demo-label">Small (.sm)</div>
+    {% demo %}
     <button class="button filled" onclick="document.getElementById('dialog-sm').showModal()">
       Open Small Dialog
     </button>
@@ -51,11 +54,13 @@ layout: layout.njk
         <button class="button filled" onclick="document.getElementById('dialog-sm').close()">Close</button>
       </div>
     </dialog>
+    {% enddemo %}
   </div>
 
   <!-- Large -->
   <div class="demo-row">
     <div class="demo-label">Large (.lg)</div>
+    {% demo %}
     <button class="button filled" onclick="document.getElementById('dialog-lg').showModal()">
       Open Large Dialog
     </button>
@@ -72,11 +77,13 @@ layout: layout.njk
         <button class="button filled" onclick="document.getElementById('dialog-lg').close()">Confirm</button>
       </div>
     </dialog>
+    {% enddemo %}
   </div>
 
   <!-- Full -->
   <div class="demo-row">
     <div class="demo-label">Full (.full)</div>
+    {% demo %}
     <button class="button filled" onclick="document.getElementById('dialog-full').showModal()">
       Open Full Dialog
     </button>
@@ -92,11 +99,13 @@ layout: layout.njk
         <button class="button filled" onclick="document.getElementById('dialog-full').close()">Close</button>
       </div>
     </dialog>
+    {% enddemo %}
   </div>
 
   <!-- Scrollable body -->
   <div class="demo-row">
     <div class="demo-label">Scrollable Body (.scrollable)</div>
+    {% demo %}
     <button class="button filled" onclick="document.getElementById('dialog-scroll').showModal()">
       Open Scrollable Dialog
     </button>
@@ -121,11 +130,13 @@ layout: layout.njk
         <button class="button filled" onclick="document.getElementById('dialog-scroll').close()">Close</button>
       </div>
     </dialog>
+    {% enddemo %}
   </div>
 
   <!-- No header / No footer -->
   <div class="demo-row">
     <div class="demo-label">Body Only (no header/footer)</div>
+    {% demo %}
     <button class="button filled" onclick="document.getElementById('dialog-body-only').showModal()">
       Open Body-only Dialog
     </button>
@@ -137,6 +148,7 @@ layout: layout.njk
         </div>
       </div>
     </dialog>
+    {% enddemo %}
   </div>
 
   <!-- ============================================================
@@ -153,6 +165,7 @@ layout: layout.njk
   <!-- Basic (div) -->
   <div class="demo-row">
     <div class="demo-label">Basic (div-based)</div>
+    {% demo %}
     <button class="button filled" onclick="openLegacyDialog('div-dialog-basic')">
       Open Dialog (div)
     </button>
@@ -172,11 +185,13 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Small (div) -->
   <div class="demo-row">
     <div class="demo-label">Small (.sm, div-based)</div>
+    {% demo %}
     <button class="button filled" onclick="openLegacyDialog('div-dialog-sm')">
       Open Small Dialog (div)
     </button>
@@ -194,11 +209,13 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Scrollable (div) -->
   <div class="demo-row">
     <div class="demo-label">Scrollable Body (div-based)</div>
+    {% demo %}
     <button class="button filled" onclick="openLegacyDialog('div-dialog-scroll')">
       Open Scrollable Dialog (div)
     </button>
@@ -225,11 +242,13 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Backdrop click to close (div) -->
   <div class="demo-row">
     <div class="demo-label">Backdrop click to close (div-based)</div>
+    {% demo %}
     <button class="button filled" onclick="openLegacyDialog('div-dialog-backdrop')">
       Open Dialog
     </button>
@@ -249,6 +268,7 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- ============================================================
@@ -258,6 +278,7 @@ layout: layout.njk
 
   <div class="demo-row">
     <div class="demo-label">Custom styled dialog</div>
+    {% demo %}
     <button class="button filled" onclick="document.getElementById('dialog-custom').showModal()">
       Open Custom Dialog
     </button>
@@ -284,6 +305,7 @@ layout: layout.njk
         <button class="button filled" onclick="document.getElementById('dialog-custom').close()">Close</button>
       </div>
     </dialog>
+    {% enddemo %}
   </div>
 </section>
 

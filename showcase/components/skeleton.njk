@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Text Skeleton -->
   <div class="demo-row">
     <div class="demo-label">Text Skeleton (.skeleton.text)</div>
+    {% demo %}
     <div
       style="max-width: 400px; display: flex; flex-direction: column; gap: 0.5rem"
     >
@@ -16,22 +17,26 @@ layout: layout.njk
       <span class="skeleton text" style="width: 75%"></span>
       <span class="skeleton text" style="width: 60%"></span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Rect Skeleton -->
   <div class="demo-row">
     <div class="demo-label">Rectangle Skeleton (.skeleton.rect)</div>
+    {% demo %}
     <div style="max-width: 400px">
       <span
         class="skeleton rect"
         style="display: block; width: 100%; height: 120px"
       ></span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Circle Skeleton -->
   <div class="demo-row">
     <div class="demo-label">Circle Skeleton (.skeleton.circle)</div>
+    {% demo %}
     <div style="display: flex; gap: 0.75rem; align-items: center">
       <span
         class="skeleton circle"
@@ -46,11 +51,13 @@ layout: layout.njk
         style="display: inline-block; width: 6rem; height: 6rem"
       ></span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Card Skeleton -->
   <div class="demo-row">
     <div class="demo-label">Card Skeleton (Composition)</div>
+    {% demo %}
     <div
       style="max-width: 320px; display: flex; gap: 0.75rem; align-items: flex-start"
     >
@@ -69,5 +76,6 @@ layout: layout.njk
         ></span>
       </div>
     </div>
+    {% enddemo %}
   </div>
 </section>

@@ -8,6 +8,7 @@ layout: layout.njk
 
   <div class="demo-row">
     <div class="demo-label">Shadow</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1.5rem; padding: 1rem">
       <span class="shadow-0 demo-box subtle" style="padding: 1rem"
         >.shadow-0</span
@@ -18,10 +19,12 @@ layout: layout.njk
       <span class="shadow-4 demo-box subtle" style="padding: 1rem">.shadow-4</span>
       <span class="shadow-5 demo-box subtle" style="padding: 1rem">.shadow-5</span>
     </div>
+    {% enddemo %}
   </div>
 
   <div class="demo-row">
     <div class="demo-label">Inset Shadow</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1.5rem; padding: 1rem">
       <span class="shadow-1 inset demo-box" style="padding: 1rem"
         >.shadow-1.inset</span
@@ -39,5 +42,6 @@ layout: layout.njk
         >.shadow-5.inset</span
       >
     </div>
+    {% enddemo %}
   </div>
 </section>

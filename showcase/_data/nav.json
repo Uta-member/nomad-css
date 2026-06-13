@@ -32,6 +32,7 @@
     { "title": "Layout", "slug": "layout" },
     { "title": "Borders", "slug": "borders" },
     { "title": "Shadows", "slug": "shadows" },
-    { "title": "Spacing", "slug": "spacing" }
+    { "title": "Spacing", "slug": "spacing" },
+    { "title": "Breakpoints", "slug": "breakpoints" }
   ]
 }

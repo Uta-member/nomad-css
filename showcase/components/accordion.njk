@@ -9,6 +9,7 @@ layout: layout.njk
   <!-- Single Accordion -->
   <div class="demo-row">
     <div class="demo-label">Single Accordion</div>
+    {% demo %}
     <details class="accordion">
       <summary class="accordion-header">
         Accordion Header 1
@@ -29,11 +30,13 @@ layout: layout.njk
         collapse it.
       </div>
     </details>
+    {% enddemo %}
   </div>
 
   <!-- Accordion Group -->
   <div class="demo-row">
     <div class="demo-label">Accordion Group (.accordion-group)</div>
+    {% demo %}
     <div class="accordion-group">
       <details class="accordion">
         <summary class="accordion-header">
@@ -57,5 +60,6 @@ layout: layout.njk
         <div class="accordion-body">Content for section 3.</div>
       </details>
     </div>
+    {% enddemo %}
   </div>
 </section>

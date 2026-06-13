@@ -9,24 +9,29 @@ layout: layout.njk
   <!-- Display -->
   <div class="demo-row">
     <div class="demo-label">Display</div>
+    {% demo %}
     <span class="d-block demo-box">.d-block</span>
     <span class="d-inline demo-box">.d-inline</span>
     <span class="d-inline-block demo-box">.d-inline-block</span>
+    {% enddemo %}
   </div>
 
   <!-- Flexbox -->
   <div class="demo-row">
     <div class="demo-label">Flexbox (.d-flex)</div>
+    {% demo %}
     <div class="d-flex demo-box" style="gap: 0.5rem">
       <div class="demo-box">Item 1</div>
       <div class="demo-box">Item 2</div>
       <div class="demo-box">Item 3</div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Flex Direction -->
   <div class="demo-row">
     <div class="demo-label">Flex Direction</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <div>
         <p class="small">.flex-row</p>
@@ -43,11 +48,13 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Justify Content -->
   <div class="demo-row">
     <div class="demo-label">Justify Content</div>
+    {% demo %}
     <p class="small">.justify-start</p>
     <div class="d-flex justify-start demo-box" style="gap: 4px">
       <span class="demo-box">1</span><span class="demo-box">2</span
@@ -68,11 +75,13 @@ layout: layout.njk
       <span class="demo-box">1</span><span class="demo-box">2</span
       ><span class="demo-box">3</span>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Align Items -->
   <div class="demo-row">
     <div class="demo-label">Align Items</div>
+    {% demo %}
     <div class="d-flex flex-wrap" style="gap: 1rem">
       <div>
         <p class="small">.align-items-start</p>
@@ -108,15 +117,18 @@ layout: layout.njk
         </div>
       </div>
     </div>
+    {% enddemo %}
   </div>
 
   <!-- Flex Wrap -->
   <div class="demo-row">
     <div class="demo-label">Flex Wrap (.flex-wrap)</div>
+    {% demo %}
     <div class="d-flex flex-wrap demo-box" style="width: 300px; max-width: 100%; gap: 4px">
       <span class="demo-box">Item 1</span><span class="demo-box">Item 2</span
       ><span class="demo-box">Item 3</span>
       <span class="demo-box">Item 4</span><span class="demo-box">Item 5</span>
     </div>
+    {% enddemo %}
   </div>
 </section>
